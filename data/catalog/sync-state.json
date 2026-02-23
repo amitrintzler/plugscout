@@ -1,17 +1,17 @@
 {
   "registries": {
     "community-skills-index": {
-      "lastSuccessfulSyncAt": "2026-02-22T04:19:39.097Z"
+      "lastSuccessfulSyncAt": "2026-02-23T04:26:21.400Z"
     },
     "public-mcp-directory": {
-      "lastSuccessfulSyncAt": "2026-02-22T04:19:39.099Z",
-      "lastUpdatedSince": "2026-02-22T04:19:33.975Z"
+      "lastSuccessfulSyncAt": "2026-02-23T04:26:21.401Z",
+      "lastUpdatedSince": "2026-02-23T04:26:16.179Z"
     },
     "official-claude-plugins": {
-      "lastSuccessfulSyncAt": "2026-02-22T04:19:39.100Z"
+      "lastSuccessfulSyncAt": "2026-02-23T04:26:21.402Z"
     },
     "official-copilot-extensions": {
-      "lastSuccessfulSyncAt": "2026-02-22T04:19:39.100Z"
+      "lastSuccessfulSyncAt": "2026-02-23T04:26:21.404Z"
     }
   }
 }
