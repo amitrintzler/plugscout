@@ -1,6 +1,7 @@
 <h1 align="center">Toolkit</h1>
 
 <p align="center">
+  <a href="https://github.com/amitrintzler/skills-and-mcps/releases/latest"><img alt="Release" src="https://img.shields.io/github/v/release/amitrintzler/skills-and-mcps?display_name=tag&label=release" /></a>
   <a href="https://github.com/amitrintzler/skills-and-mcps/actions/workflows/ci.yml"><img alt="CI" src="https://github.com/amitrintzler/skills-and-mcps/actions/workflows/ci.yml/badge.svg?branch=main" /></a>
   <a href="https://github.com/amitrintzler/skills-and-mcps/actions/workflows/daily-security.yml"><img alt="Daily Security" src="https://github.com/amitrintzler/skills-and-mcps/actions/workflows/daily-security.yml/badge.svg?branch=main" /></a>
   <a href="https://github.com/amitrintzler/skills-and-mcps/actions/workflows/security-codeql.yml"><img alt="Security / CodeQL" src="https://github.com/amitrintzler/skills-and-mcps/actions/workflows/security-codeql.yml/badge.svg?branch=main" /></a>
@@ -27,6 +28,7 @@
 </p>
 
 <p align="center">
+  <a href="#install-toolkit-v020">Install</a> •
   <a href="#quick-start">Quick Start</a> •
   <a href="#prerequisites">Prerequisites</a> •
   <a href="#how-to-use-this-cli">How To Use</a> •
@@ -149,6 +151,27 @@ flowchart LR
   class G1,G2,G3,G4 policy;
   class U1,U2,U3,U4,U5 ux;
   class C1,C2,C3,C4 ci;
+```
+
+---
+
+## Install Toolkit (v0.2.0)
+
+Latest release: [`v0.2.0`](https://github.com/amitrintzler/skills-and-mcps/releases/tag/v0.2.0)
+
+```bash
+git clone https://github.com/amitrintzler/skills-and-mcps.git toolkit
+cd toolkit
+git checkout v0.2.0
+npm install
+npm run init
+npm run doctor
+```
+
+To install the newest available release instead of pinning `v0.2.0`:
+
+```bash
+git checkout $(git describe --tags --abbrev=0)
 ```
 
 ---
