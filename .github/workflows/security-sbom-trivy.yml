@@ -35,7 +35,7 @@ jobs:
           output-file: sbom.spdx.json
 
       - name: Run Trivy (SARIF, blocking)
-        uses: aquasecurity/trivy-action@0.24.0
+        uses: aquasecurity/trivy-action@0.34.1
         with:
           scan-type: fs
           scan-ref: .
@@ -47,7 +47,7 @@ jobs:
 
       - name: Run Trivy (JSON report)
         if: always()
-        uses: aquasecurity/trivy-action@0.24.0
+        uses: aquasecurity/trivy-action@0.34.1
         with:
           scan-type: fs
           scan-ref: .
