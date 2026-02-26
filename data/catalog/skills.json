@@ -33,7 +33,11 @@
       "exfiltrationSignals": 0,
       "integrityAlerts": 0
     },
-    "metadata": {}
+    "metadata": {
+      "sourceRegistryId": "community-skills-index",
+      "sourceType": "community-list",
+      "sourceConfidence": "vetted-curated"
+    }
   },
   {
     "id": "skill:cloudflare-deploy",
@@ -47,12 +51,12 @@
     "compatibility": [
       "general"
     ],
-    "source": "openai-skills-curated",
+    "source": "community-skills-index",
     "lastSeenAt": "2026-02-26",
     "install": {
-      "kind": "manual",
-      "instructions": "Install with skill-installer from openai/skills path skills/.curated/cloudflare-deploy",
-      "url": "https://github.com/openai/skills/tree/main/skills/.curated/cloudflare-deploy"
+      "kind": "skill.sh",
+      "target": "Cloudflare Deploy",
+      "args": []
     },
     "adoptionSignal": 72,
     "maintenanceSignal": 82,
@@ -66,6 +70,9 @@
       "integrityAlerts": 0
     },
     "metadata": {
+      "sourceRegistryId": "openai-skills-curated",
+      "sourceType": "vendor-feed",
+      "sourceConfidence": "official",
       "githubPath": "skills/.curated/cloudflare-deploy",
       "githubUrl": "https://github.com/openai/skills/tree/main/skills/.curated/cloudflare-deploy"
     }
@@ -83,12 +90,12 @@
       "general",
       "node"
     ],
-    "source": "openai-skills-curated",
+    "source": "community-skills-index",
     "lastSeenAt": "2026-02-26",
     "install": {
-      "kind": "manual",
-      "instructions": "Install with skill-installer from openai/skills path skills/.curated/develop-web-game",
-      "url": "https://github.com/openai/skills/tree/main/skills/.curated/develop-web-game"
+      "kind": "skill.sh",
+      "target": "Develop Web Game",
+      "args": []
     },
     "adoptionSignal": 72,
     "maintenanceSignal": 82,
@@ -102,6 +109,9 @@
       "integrityAlerts": 0
     },
     "metadata": {
+      "sourceRegistryId": "openai-skills-curated",
+      "sourceType": "vendor-feed",
+      "sourceConfidence": "official",
       "githubPath": "skills/.curated/develop-web-game",
       "githubUrl": "https://github.com/openai/skills/tree/main/skills/.curated/develop-web-game"
     }
@@ -118,12 +128,12 @@
     "compatibility": [
       "general"
     ],
-    "source": "openai-skills-curated",
+    "source": "community-skills-index",
     "lastSeenAt": "2026-02-26",
     "install": {
-      "kind": "manual",
-      "instructions": "Install with skill-installer from openai/skills path skills/.curated/doc",
-      "url": "https://github.com/openai/skills/tree/main/skills/.curated/doc"
+      "kind": "skill.sh",
+      "target": "Doc",
+      "args": []
     },
     "adoptionSignal": 72,
     "maintenanceSignal": 82,
@@ -137,6 +147,9 @@
       "integrityAlerts": 0
     },
     "metadata": {
+      "sourceRegistryId": "openai-skills-curated",
+      "sourceType": "vendor-feed",
+      "sourceConfidence": "official",
       "githubPath": "skills/.curated/doc",
       "githubUrl": "https://github.com/openai/skills/tree/main/skills/.curated/doc"
     }
@@ -175,7 +188,11 @@
       "exfiltrationSignals": 0,
       "integrityAlerts": 0
     },
-    "metadata": {}
+    "metadata": {
+      "sourceRegistryId": "community-skills-index",
+      "sourceType": "community-list",
+      "sourceConfidence": "vetted-curated"
+    }
   },
   {
     "id": "skill:fast-web-scrape",
@@ -208,7 +225,11 @@
       "exfiltrationSignals": 0,
       "integrityAlerts": 0
     },
-    "metadata": {}
+    "metadata": {
+      "sourceRegistryId": "community-skills-index",
+      "sourceType": "community-list",
+      "sourceConfidence": "vetted-curated"
+    }
   },
   {
     "id": "skill:figma",
@@ -222,12 +243,12 @@
     "compatibility": [
       "general"
     ],
-    "source": "openai-skills-curated",
+    "source": "community-skills-index",
     "lastSeenAt": "2026-02-26",
     "install": {
-      "kind": "manual",
-      "instructions": "Install with skill-installer from openai/skills path skills/.curated/figma",
-      "url": "https://github.com/openai/skills/tree/main/skills/.curated/figma"
+      "kind": "skill.sh",
+      "target": "Figma",
+      "args": []
     },
     "adoptionSignal": 72,
     "maintenanceSignal": 82,
@@ -241,6 +262,9 @@
       "integrityAlerts": 0
     },
     "metadata": {
+      "sourceRegistryId": "openai-skills-curated",
+      "sourceType": "vendor-feed",
+      "sourceConfidence": "official",
       "githubPath": "skills/.curated/figma",
       "githubUrl": "https://github.com/openai/skills/tree/main/skills/.curated/figma"
     }
@@ -257,12 +281,12 @@
     "compatibility": [
       "general"
     ],
-    "source": "openai-skills-curated",
+    "source": "community-skills-index",
     "lastSeenAt": "2026-02-26",
     "install": {
-      "kind": "manual",
-      "instructions": "Install with skill-installer from openai/skills path skills/.curated/figma-implement-design",
-      "url": "https://github.com/openai/skills/tree/main/skills/.curated/figma-implement-design"
+      "kind": "skill.sh",
+      "target": "Figma Implement Design",
+      "args": []
     },
     "adoptionSignal": 72,
     "maintenanceSignal": 82,
@@ -276,6 +300,9 @@
       "integrityAlerts": 0
     },
     "metadata": {
+      "sourceRegistryId": "openai-skills-curated",
+      "sourceType": "vendor-feed",
+      "sourceConfidence": "official",
       "githubPath": "skills/.curated/figma-implement-design",
       "githubUrl": "https://github.com/openai/skills/tree/main/skills/.curated/figma-implement-design"
     }
@@ -293,12 +320,12 @@
       "general",
       "github"
     ],
-    "source": "openai-skills-curated",
+    "source": "community-skills-index",
     "lastSeenAt": "2026-02-26",
     "install": {
-      "kind": "manual",
-      "instructions": "Install with skill-installer from openai/skills path skills/.curated/gh-address-comments",
-      "url": "https://github.com/openai/skills/tree/main/skills/.curated/gh-address-comments"
+      "kind": "skill.sh",
+      "target": "Gh Address Comments",
+      "args": []
     },
     "adoptionSignal": 72,
     "maintenanceSignal": 82,
@@ -312,6 +339,9 @@
       "integrityAlerts": 0
     },
     "metadata": {
+      "sourceRegistryId": "openai-skills-curated",
+      "sourceType": "vendor-feed",
+      "sourceConfidence": "official",
       "githubPath": "skills/.curated/gh-address-comments",
       "githubUrl": "https://github.com/openai/skills/tree/main/skills/.curated/gh-address-comments"
     }
@@ -329,12 +359,12 @@
       "general",
       "github"
     ],
-    "source": "openai-skills-curated",
+    "source": "community-skills-index",
     "lastSeenAt": "2026-02-26",
     "install": {
-      "kind": "manual",
-      "instructions": "Install with skill-installer from openai/skills path skills/.curated/gh-fix-ci",
-      "url": "https://github.com/openai/skills/tree/main/skills/.curated/gh-fix-ci"
+      "kind": "skill.sh",
+      "target": "Gh Fix Ci",
+      "args": []
     },
     "adoptionSignal": 72,
     "maintenanceSignal": 82,
@@ -348,6 +378,9 @@
       "integrityAlerts": 0
     },
     "metadata": {
+      "sourceRegistryId": "openai-skills-curated",
+      "sourceType": "vendor-feed",
+      "sourceConfidence": "official",
       "githubPath": "skills/.curated/gh-fix-ci",
       "githubUrl": "https://github.com/openai/skills/tree/main/skills/.curated/gh-fix-ci"
     }
@@ -364,12 +397,12 @@
     "compatibility": [
       "general"
     ],
-    "source": "openai-skills-curated",
+    "source": "community-skills-index",
     "lastSeenAt": "2026-02-26",
     "install": {
-      "kind": "manual",
-      "instructions": "Install with skill-installer from openai/skills path skills/.curated/imagegen",
-      "url": "https://github.com/openai/skills/tree/main/skills/.curated/imagegen"
+      "kind": "skill.sh",
+      "target": "Imagegen",
+      "args": []
     },
     "adoptionSignal": 72,
     "maintenanceSignal": 82,
@@ -383,6 +416,9 @@
       "integrityAlerts": 0
     },
     "metadata": {
+      "sourceRegistryId": "openai-skills-curated",
+      "sourceType": "vendor-feed",
+      "sourceConfidence": "official",
       "githubPath": "skills/.curated/imagegen",
       "githubUrl": "https://github.com/openai/skills/tree/main/skills/.curated/imagegen"
     }
@@ -399,12 +435,12 @@
     "compatibility": [
       "general"
     ],
-    "source": "openai-skills-curated",
+    "source": "community-skills-index",
     "lastSeenAt": "2026-02-26",
     "install": {
-      "kind": "manual",
-      "instructions": "Install with skill-installer from openai/skills path skills/.curated/jupyter-notebook",
-      "url": "https://github.com/openai/skills/tree/main/skills/.curated/jupyter-notebook"
+      "kind": "skill.sh",
+      "target": "Jupyter Notebook",
+      "args": []
     },
     "adoptionSignal": 72,
     "maintenanceSignal": 82,
@@ -418,6 +454,9 @@
       "integrityAlerts": 0
     },
     "metadata": {
+      "sourceRegistryId": "openai-skills-curated",
+      "sourceType": "vendor-feed",
+      "sourceConfidence": "official",
       "githubPath": "skills/.curated/jupyter-notebook",
       "githubUrl": "https://github.com/openai/skills/tree/main/skills/.curated/jupyter-notebook"
     }
@@ -435,12 +474,12 @@
       "general",
       "linear"
     ],
-    "source": "openai-skills-curated",
+    "source": "community-skills-index",
     "lastSeenAt": "2026-02-26",
     "install": {
-      "kind": "manual",
-      "instructions": "Install with skill-installer from openai/skills path skills/.curated/linear",
-      "url": "https://github.com/openai/skills/tree/main/skills/.curated/linear"
+      "kind": "skill.sh",
+      "target": "Linear",
+      "args": []
     },
     "adoptionSignal": 72,
     "maintenanceSignal": 82,
@@ -454,6 +493,9 @@
       "integrityAlerts": 0
     },
     "metadata": {
+      "sourceRegistryId": "openai-skills-curated",
+      "sourceType": "vendor-feed",
+      "sourceConfidence": "official",
       "githubPath": "skills/.curated/linear",
       "githubUrl": "https://github.com/openai/skills/tree/main/skills/.curated/linear"
     }
@@ -470,12 +512,12 @@
     "compatibility": [
       "general"
     ],
-    "source": "openai-skills-curated",
+    "source": "community-skills-index",
     "lastSeenAt": "2026-02-26",
     "install": {
-      "kind": "manual",
-      "instructions": "Install with skill-installer from openai/skills path skills/.curated/netlify-deploy",
-      "url": "https://github.com/openai/skills/tree/main/skills/.curated/netlify-deploy"
+      "kind": "skill.sh",
+      "target": "Netlify Deploy",
+      "args": []
     },
     "adoptionSignal": 72,
     "maintenanceSignal": 82,
@@ -489,6 +531,9 @@
       "integrityAlerts": 0
     },
     "metadata": {
+      "sourceRegistryId": "openai-skills-curated",
+      "sourceType": "vendor-feed",
+      "sourceConfidence": "official",
       "githubPath": "skills/.curated/netlify-deploy",
       "githubUrl": "https://github.com/openai/skills/tree/main/skills/.curated/netlify-deploy"
     }
@@ -506,12 +551,12 @@
       "general",
       "notion"
     ],
-    "source": "openai-skills-curated",
+    "source": "community-skills-index",
     "lastSeenAt": "2026-02-26",
     "install": {
-      "kind": "manual",
-      "instructions": "Install with skill-installer from openai/skills path skills/.curated/notion-knowledge-capture",
-      "url": "https://github.com/openai/skills/tree/main/skills/.curated/notion-knowledge-capture"
+      "kind": "skill.sh",
+      "target": "Notion Knowledge Capture",
+      "args": []
     },
     "adoptionSignal": 72,
     "maintenanceSignal": 82,
@@ -525,6 +570,9 @@
       "integrityAlerts": 0
     },
     "metadata": {
+      "sourceRegistryId": "openai-skills-curated",
+      "sourceType": "vendor-feed",
+      "sourceConfidence": "official",
       "githubPath": "skills/.curated/notion-knowledge-capture",
       "githubUrl": "https://github.com/openai/skills/tree/main/skills/.curated/notion-knowledge-capture"
     }
@@ -542,12 +590,12 @@
       "general",
       "notion"
     ],
-    "source": "openai-skills-curated",
+    "source": "community-skills-index",
     "lastSeenAt": "2026-02-26",
     "install": {
-      "kind": "manual",
-      "instructions": "Install with skill-installer from openai/skills path skills/.curated/notion-meeting-intelligence",
-      "url": "https://github.com/openai/skills/tree/main/skills/.curated/notion-meeting-intelligence"
+      "kind": "skill.sh",
+      "target": "Notion Meeting Intelligence",
+      "args": []
     },
     "adoptionSignal": 72,
     "maintenanceSignal": 82,
@@ -561,6 +609,9 @@
       "integrityAlerts": 0
     },
     "metadata": {
+      "sourceRegistryId": "openai-skills-curated",
+      "sourceType": "vendor-feed",
+      "sourceConfidence": "official",
       "githubPath": "skills/.curated/notion-meeting-intelligence",
       "githubUrl": "https://github.com/openai/skills/tree/main/skills/.curated/notion-meeting-intelligence"
     }
@@ -578,12 +629,12 @@
       "general",
       "notion"
     ],
-    "source": "openai-skills-curated",
+    "source": "community-skills-index",
     "lastSeenAt": "2026-02-26",
     "install": {
-      "kind": "manual",
-      "instructions": "Install with skill-installer from openai/skills path skills/.curated/notion-research-documentation",
-      "url": "https://github.com/openai/skills/tree/main/skills/.curated/notion-research-documentation"
+      "kind": "skill.sh",
+      "target": "Notion Research Documentation",
+      "args": []
     },
     "adoptionSignal": 72,
     "maintenanceSignal": 82,
@@ -597,6 +648,9 @@
       "integrityAlerts": 0
     },
     "metadata": {
+      "sourceRegistryId": "openai-skills-curated",
+      "sourceType": "vendor-feed",
+      "sourceConfidence": "official",
       "githubPath": "skills/.curated/notion-research-documentation",
       "githubUrl": "https://github.com/openai/skills/tree/main/skills/.curated/notion-research-documentation"
     }
@@ -614,12 +668,12 @@
       "general",
       "notion"
     ],
-    "source": "openai-skills-curated",
+    "source": "community-skills-index",
     "lastSeenAt": "2026-02-26",
     "install": {
-      "kind": "manual",
-      "instructions": "Install with skill-installer from openai/skills path skills/.curated/notion-spec-to-implementation",
-      "url": "https://github.com/openai/skills/tree/main/skills/.curated/notion-spec-to-implementation"
+      "kind": "skill.sh",
+      "target": "Notion Spec To Implementation",
+      "args": []
     },
     "adoptionSignal": 72,
     "maintenanceSignal": 82,
@@ -633,6 +687,9 @@
       "integrityAlerts": 0
     },
     "metadata": {
+      "sourceRegistryId": "openai-skills-curated",
+      "sourceType": "vendor-feed",
+      "sourceConfidence": "official",
       "githubPath": "skills/.curated/notion-spec-to-implementation",
       "githubUrl": "https://github.com/openai/skills/tree/main/skills/.curated/notion-spec-to-implementation"
     }
@@ -649,12 +706,12 @@
     "compatibility": [
       "general"
     ],
-    "source": "openai-skills-curated",
+    "source": "community-skills-index",
     "lastSeenAt": "2026-02-26",
     "install": {
-      "kind": "manual",
-      "instructions": "Install with skill-installer from openai/skills path skills/.curated/openai-docs",
-      "url": "https://github.com/openai/skills/tree/main/skills/.curated/openai-docs"
+      "kind": "skill.sh",
+      "target": "Openai Docs",
+      "args": []
     },
     "adoptionSignal": 72,
     "maintenanceSignal": 82,
@@ -668,6 +725,9 @@
       "integrityAlerts": 0
     },
     "metadata": {
+      "sourceRegistryId": "openai-skills-curated",
+      "sourceType": "vendor-feed",
+      "sourceConfidence": "official",
       "githubPath": "skills/.curated/openai-docs",
       "githubUrl": "https://github.com/openai/skills/tree/main/skills/.curated/openai-docs"
     }
@@ -684,12 +744,12 @@
     "compatibility": [
       "general"
     ],
-    "source": "openai-skills-curated",
+    "source": "community-skills-index",
     "lastSeenAt": "2026-02-26",
     "install": {
-      "kind": "manual",
-      "instructions": "Install with skill-installer from openai/skills path skills/.curated/pdf",
-      "url": "https://github.com/openai/skills/tree/main/skills/.curated/pdf"
+      "kind": "skill.sh",
+      "target": "Pdf",
+      "args": []
     },
     "adoptionSignal": 72,
     "maintenanceSignal": 82,
@@ -703,6 +763,9 @@
       "integrityAlerts": 0
     },
     "metadata": {
+      "sourceRegistryId": "openai-skills-curated",
+      "sourceType": "vendor-feed",
+      "sourceConfidence": "official",
       "githubPath": "skills/.curated/pdf",
       "githubUrl": "https://github.com/openai/skills/tree/main/skills/.curated/pdf"
     }
@@ -720,12 +783,12 @@
       "general",
       "node"
     ],
-    "source": "openai-skills-curated",
+    "source": "community-skills-index",
     "lastSeenAt": "2026-02-26",
     "install": {
-      "kind": "manual",
-      "instructions": "Install with skill-installer from openai/skills path skills/.curated/playwright",
-      "url": "https://github.com/openai/skills/tree/main/skills/.curated/playwright"
+      "kind": "skill.sh",
+      "target": "Playwright",
+      "args": []
     },
     "adoptionSignal": 72,
     "maintenanceSignal": 82,
@@ -739,6 +802,9 @@
       "integrityAlerts": 0
     },
     "metadata": {
+      "sourceRegistryId": "openai-skills-curated",
+      "sourceType": "vendor-feed",
+      "sourceConfidence": "official",
       "githubPath": "skills/.curated/playwright",
       "githubUrl": "https://github.com/openai/skills/tree/main/skills/.curated/playwright"
     }
@@ -777,7 +843,11 @@
       "exfiltrationSignals": 0,
       "integrityAlerts": 0
     },
-    "metadata": {}
+    "metadata": {
+      "sourceRegistryId": "community-skills-index",
+      "sourceType": "community-list",
+      "sourceConfidence": "vetted-curated"
+    }
   },
   {
     "id": "skill:render-deploy",
@@ -791,12 +861,12 @@
     "compatibility": [
       "general"
     ],
-    "source": "openai-skills-curated",
+    "source": "community-skills-index",
     "lastSeenAt": "2026-02-26",
     "install": {
-      "kind": "manual",
-      "instructions": "Install with skill-installer from openai/skills path skills/.curated/render-deploy",
-      "url": "https://github.com/openai/skills/tree/main/skills/.curated/render-deploy"
+      "kind": "skill.sh",
+      "target": "Render Deploy",
+      "args": []
     },
     "adoptionSignal": 72,
     "maintenanceSignal": 82,
@@ -810,6 +880,9 @@
       "integrityAlerts": 0
     },
     "metadata": {
+      "sourceRegistryId": "openai-skills-curated",
+      "sourceType": "vendor-feed",
+      "sourceConfidence": "official",
       "githubPath": "skills/.curated/render-deploy",
       "githubUrl": "https://github.com/openai/skills/tree/main/skills/.curated/render-deploy"
     }
@@ -826,12 +899,12 @@
     "compatibility": [
       "general"
     ],
-    "source": "openai-skills-curated",
+    "source": "community-skills-index",
     "lastSeenAt": "2026-02-26",
     "install": {
-      "kind": "manual",
-      "instructions": "Install with skill-installer from openai/skills path skills/.curated/screenshot",
-      "url": "https://github.com/openai/skills/tree/main/skills/.curated/screenshot"
+      "kind": "skill.sh",
+      "target": "Screenshot",
+      "args": []
     },
     "adoptionSignal": 72,
     "maintenanceSignal": 82,
@@ -845,6 +918,9 @@
       "integrityAlerts": 0
     },
     "metadata": {
+      "sourceRegistryId": "openai-skills-curated",
+      "sourceType": "vendor-feed",
+      "sourceConfidence": "official",
       "githubPath": "skills/.curated/screenshot",
       "githubUrl": "https://github.com/openai/skills/tree/main/skills/.curated/screenshot"
     }
@@ -883,7 +959,11 @@
       "exfiltrationSignals": 0,
       "integrityAlerts": 0
     },
-    "metadata": {}
+    "metadata": {
+      "sourceRegistryId": "community-skills-index",
+      "sourceType": "community-list",
+      "sourceConfidence": "vetted-curated"
+    }
   },
   {
     "id": "skill:security-best-practices",
@@ -897,12 +977,12 @@
     "compatibility": [
       "general"
     ],
-    "source": "openai-skills-curated",
+    "source": "community-skills-index",
     "lastSeenAt": "2026-02-26",
     "install": {
-      "kind": "manual",
-      "instructions": "Install with skill-installer from openai/skills path skills/.curated/security-best-practices",
-      "url": "https://github.com/openai/skills/tree/main/skills/.curated/security-best-practices"
+      "kind": "skill.sh",
+      "target": "Security Best Practices",
+      "args": []
     },
     "adoptionSignal": 72,
     "maintenanceSignal": 82,
@@ -916,6 +996,9 @@
       "integrityAlerts": 0
     },
     "metadata": {
+      "sourceRegistryId": "openai-skills-curated",
+      "sourceType": "vendor-feed",
+      "sourceConfidence": "official",
       "githubPath": "skills/.curated/security-best-practices",
       "githubUrl": "https://github.com/openai/skills/tree/main/skills/.curated/security-best-practices"
     }
@@ -932,12 +1015,12 @@
     "compatibility": [
       "general"
     ],
-    "source": "openai-skills-curated",
+    "source": "community-skills-index",
     "lastSeenAt": "2026-02-26",
     "install": {
-      "kind": "manual",
-      "instructions": "Install with skill-installer from openai/skills path skills/.curated/security-ownership-map",
-      "url": "https://github.com/openai/skills/tree/main/skills/.curated/security-ownership-map"
+      "kind": "skill.sh",
+      "target": "Security Ownership Map",
+      "args": []
     },
     "adoptionSignal": 72,
     "maintenanceSignal": 82,
@@ -951,6 +1034,9 @@
       "integrityAlerts": 0
     },
     "metadata": {
+      "sourceRegistryId": "openai-skills-curated",
+      "sourceType": "vendor-feed",
+      "sourceConfidence": "official",
       "githubPath": "skills/.curated/security-ownership-map",
       "githubUrl": "https://github.com/openai/skills/tree/main/skills/.curated/security-ownership-map"
     }
@@ -967,12 +1053,12 @@
     "compatibility": [
       "general"
     ],
-    "source": "openai-skills-curated",
+    "source": "community-skills-index",
     "lastSeenAt": "2026-02-26",
     "install": {
-      "kind": "manual",
-      "instructions": "Install with skill-installer from openai/skills path skills/.curated/security-threat-model",
-      "url": "https://github.com/openai/skills/tree/main/skills/.curated/security-threat-model"
+      "kind": "skill.sh",
+      "target": "Security Threat Model",
+      "args": []
     },
     "adoptionSignal": 72,
     "maintenanceSignal": 82,
@@ -986,6 +1072,9 @@
       "integrityAlerts": 0
     },
     "metadata": {
+      "sourceRegistryId": "openai-skills-curated",
+      "sourceType": "vendor-feed",
+      "sourceConfidence": "official",
       "githubPath": "skills/.curated/security-threat-model",
       "githubUrl": "https://github.com/openai/skills/tree/main/skills/.curated/security-threat-model"
     }
@@ -1002,12 +1091,12 @@
     "compatibility": [
       "general"
     ],
-    "source": "openai-skills-curated",
+    "source": "community-skills-index",
     "lastSeenAt": "2026-02-26",
     "install": {
-      "kind": "manual",
-      "instructions": "Install with skill-installer from openai/skills path skills/.curated/sentry",
-      "url": "https://github.com/openai/skills/tree/main/skills/.curated/sentry"
+      "kind": "skill.sh",
+      "target": "Sentry",
+      "args": []
     },
     "adoptionSignal": 72,
     "maintenanceSignal": 82,
@@ -1021,6 +1110,9 @@
       "integrityAlerts": 0
     },
     "metadata": {
+      "sourceRegistryId": "openai-skills-curated",
+      "sourceType": "vendor-feed",
+      "sourceConfidence": "official",
       "githubPath": "skills/.curated/sentry",
       "githubUrl": "https://github.com/openai/skills/tree/main/skills/.curated/sentry"
     }
@@ -1037,12 +1129,12 @@
     "compatibility": [
       "general"
     ],
-    "source": "openai-skills-curated",
+    "source": "community-skills-index",
     "lastSeenAt": "2026-02-26",
     "install": {
-      "kind": "manual",
-      "instructions": "Install with skill-installer from openai/skills path skills/.curated/sora",
-      "url": "https://github.com/openai/skills/tree/main/skills/.curated/sora"
+      "kind": "skill.sh",
+      "target": "Sora",
+      "args": []
     },
     "adoptionSignal": 72,
     "maintenanceSignal": 82,
@@ -1056,6 +1148,9 @@
       "integrityAlerts": 0
     },
     "metadata": {
+      "sourceRegistryId": "openai-skills-curated",
+      "sourceType": "vendor-feed",
+      "sourceConfidence": "official",
       "githubPath": "skills/.curated/sora",
       "githubUrl": "https://github.com/openai/skills/tree/main/skills/.curated/sora"
     }
@@ -1072,12 +1167,12 @@
     "compatibility": [
       "general"
     ],
-    "source": "openai-skills-curated",
+    "source": "community-skills-index",
     "lastSeenAt": "2026-02-26",
     "install": {
-      "kind": "manual",
-      "instructions": "Install with skill-installer from openai/skills path skills/.curated/speech",
-      "url": "https://github.com/openai/skills/tree/main/skills/.curated/speech"
+      "kind": "skill.sh",
+      "target": "Speech",
+      "args": []
     },
     "adoptionSignal": 72,
     "maintenanceSignal": 82,
@@ -1091,6 +1186,9 @@
       "integrityAlerts": 0
     },
     "metadata": {
+      "sourceRegistryId": "openai-skills-curated",
+      "sourceType": "vendor-feed",
+      "sourceConfidence": "official",
       "githubPath": "skills/.curated/speech",
       "githubUrl": "https://github.com/openai/skills/tree/main/skills/.curated/speech"
     }
@@ -1107,12 +1205,12 @@
     "compatibility": [
       "general"
     ],
-    "source": "openai-skills-curated",
+    "source": "community-skills-index",
     "lastSeenAt": "2026-02-26",
     "install": {
-      "kind": "manual",
-      "instructions": "Install with skill-installer from openai/skills path skills/.curated/spreadsheet",
-      "url": "https://github.com/openai/skills/tree/main/skills/.curated/spreadsheet"
+      "kind": "skill.sh",
+      "target": "Spreadsheet",
+      "args": []
     },
     "adoptionSignal": 72,
     "maintenanceSignal": 82,
@@ -1126,6 +1224,9 @@
       "integrityAlerts": 0
     },
     "metadata": {
+      "sourceRegistryId": "openai-skills-curated",
+      "sourceType": "vendor-feed",
+      "sourceConfidence": "official",
       "githubPath": "skills/.curated/spreadsheet",
       "githubUrl": "https://github.com/openai/skills/tree/main/skills/.curated/spreadsheet"
     }
@@ -1164,7 +1265,11 @@
       "exfiltrationSignals": 0,
       "integrityAlerts": 0
     },
-    "metadata": {}
+    "metadata": {
+      "sourceRegistryId": "community-skills-index",
+      "sourceType": "community-list",
+      "sourceConfidence": "vetted-curated"
+    }
   },
   {
     "id": "skill:transcribe",
@@ -1178,12 +1283,12 @@
     "compatibility": [
       "general"
     ],
-    "source": "openai-skills-curated",
+    "source": "community-skills-index",
     "lastSeenAt": "2026-02-26",
     "install": {
-      "kind": "manual",
-      "instructions": "Install with skill-installer from openai/skills path skills/.curated/transcribe",
-      "url": "https://github.com/openai/skills/tree/main/skills/.curated/transcribe"
+      "kind": "skill.sh",
+      "target": "Transcribe",
+      "args": []
     },
     "adoptionSignal": 72,
     "maintenanceSignal": 82,
@@ -1197,6 +1302,9 @@
       "integrityAlerts": 0
     },
     "metadata": {
+      "sourceRegistryId": "openai-skills-curated",
+      "sourceType": "vendor-feed",
+      "sourceConfidence": "official",
       "githubPath": "skills/.curated/transcribe",
       "githubUrl": "https://github.com/openai/skills/tree/main/skills/.curated/transcribe"
     }
@@ -1213,12 +1321,12 @@
     "compatibility": [
       "general"
     ],
-    "source": "openai-skills-curated",
+    "source": "community-skills-index",
     "lastSeenAt": "2026-02-26",
     "install": {
-      "kind": "manual",
-      "instructions": "Install with skill-installer from openai/skills path skills/.curated/vercel-deploy",
-      "url": "https://github.com/openai/skills/tree/main/skills/.curated/vercel-deploy"
+      "kind": "skill.sh",
+      "target": "Vercel Deploy",
+      "args": []
     },
     "adoptionSignal": 72,
     "maintenanceSignal": 82,
@@ -1232,6 +1340,9 @@
       "integrityAlerts": 0
     },
     "metadata": {
+      "sourceRegistryId": "openai-skills-curated",
+      "sourceType": "vendor-feed",
+      "sourceConfidence": "official",
       "githubPath": "skills/.curated/vercel-deploy",
       "githubUrl": "https://github.com/openai/skills/tree/main/skills/.curated/vercel-deploy"
     }
@@ -1248,12 +1359,12 @@
     "compatibility": [
       "general"
     ],
-    "source": "openai-skills-curated",
+    "source": "community-skills-index",
     "lastSeenAt": "2026-02-26",
     "install": {
-      "kind": "manual",
-      "instructions": "Install with skill-installer from openai/skills path skills/.curated/yeet",
-      "url": "https://github.com/openai/skills/tree/main/skills/.curated/yeet"
+      "kind": "skill.sh",
+      "target": "Yeet",
+      "args": []
     },
     "adoptionSignal": 72,
     "maintenanceSignal": 82,
@@ -1267,6 +1378,9 @@
       "integrityAlerts": 0
     },
     "metadata": {
+      "sourceRegistryId": "openai-skills-curated",
+      "sourceType": "vendor-feed",
+      "sourceConfidence": "official",
       "githubPath": "skills/.curated/yeet",
       "githubUrl": "https://github.com/openai/skills/tree/main/skills/.curated/yeet"
     }
