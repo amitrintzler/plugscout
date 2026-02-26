@@ -136,7 +136,7 @@ describe('update check', () => {
   });
 
   it('returns up-to-date when release matches current version', async () => {
-    vi.stubGlobal('fetch', vi.fn().mockResolvedValue(mockResponse(200, { tag_name: 'v0.2.0' })));
+    vi.stubGlobal('fetch', vi.fn().mockResolvedValue(mockResponse(200, { tag_name: 'v0.3.0' })));
 
     const result = await checkForUpdateNow();
     expect(result.status).toBe('up-to-date');

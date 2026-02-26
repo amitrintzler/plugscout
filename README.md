@@ -46,12 +46,12 @@ You can:
 - npm
 - `skill.sh` (required for setup/doctor flows)
 
-## Install Toolkit (v0.2.0)
+## Install Toolkit (v0.3.0)
 
 ```bash
 git clone https://github.com/amitrintzler/skills-and-mcps.git toolkit
 cd toolkit
-git checkout v0.2.0
+git checkout v0.3.0
 npm install
 npm run init
 npm run doctor
@@ -60,7 +60,7 @@ npm run doctor
 `init` now defaults kinds to all ecosystems: `skill`, `mcp`, `claude-plugin`, and `copilot-extension`.
 When you choose `riskPosture: strict`, `list` and `recommend` default to safe-only output.
 
-Install newest release tag instead of pinning `v0.2.0`:
+Install newest release tag instead of pinning `v0.3.0`:
 
 ```bash
 git checkout $(git describe --tags --abbrev=0)

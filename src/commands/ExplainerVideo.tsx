@@ -208,7 +208,7 @@ const SceneIntro: React.FC = () => (
       <TerminalBlock
         command="npm run about"
         lines={[
-          'toolkit v0.2.0',
+          'toolkit v0.3.0',
           'Toolkit: Skills + MCP + Plugin security intelligence framework',
           'Scope: skills, MCP servers, Claude plugins, Copilot extensions',
           'Ranking: trust-first (fit + trust - risk penalties + freshness bonus)',

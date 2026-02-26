@@ -223,12 +223,12 @@ describe('cli ux behaviors', () => {
 
     vi.stubGlobal('fetch', vi.fn().mockResolvedValue(mockResponse(200, { tag_name: 'v9.9.9' })));
     await runCli(['upgrade', 'check']);
-    expect(output.joined()).toContain('New Toolkit version available: v0.2.0 -> v9.9.9');
+    expect(output.joined()).toContain('New Toolkit version available: v0.3.0 -> v9.9.9');
 
     output.spy.mockClear();
-    vi.stubGlobal('fetch', vi.fn().mockResolvedValue(mockResponse(200, { tag_name: 'v0.2.0' })));
+    vi.stubGlobal('fetch', vi.fn().mockResolvedValue(mockResponse(200, { tag_name: 'v0.3.0' })));
     await runCli(['upgrade', 'check']);
-    expect(output.joined()).toContain('Toolkit is up to date (v0.2.0).');
+    expect(output.joined()).toContain('Toolkit is up to date (v0.3.0).');
 
     output.spy.mockClear();
     vi.stubGlobal('fetch', vi.fn().mockResolvedValue(mockResponse(404, {})));
