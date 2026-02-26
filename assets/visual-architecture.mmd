@@ -1,0 +1,81 @@
+flowchart LR
+  %% SOURCE LAYER
+  subgraph S["Source Layer"]
+    R1["Official Provider Feeds"]
+    R2["Community Sources (Opt-in)"]
+    R3["Local Fallback Entries"]
+  end
+
+  %% INGESTION + INTELLIGENCE LAYER
+  subgraph I["Ingestion + Intelligence Layer"]
+    I1["Remote Fetch + Incremental Cursor"]
+    I2["Adapter Mapping (provider-specific)"]
+    I3["Schema Validation (Zod)"]
+    I4["Normalization + Merge (deterministic)"]
+    I5["Unified Catalog Store\n(data/catalog/items.json)"]
+    I6["Trust-First Ranking Engine"]
+    I7["Risk Assessment Engine"]
+  end
+
+  %% POLICY + GOVERNANCE LAYER
+  subgraph G["Policy + Governance Layer"]
+    G1["Security Policy Gates\n(low/medium/high/critical)"]
+    G2["Whitelist Verification"]
+    G3["Quarantine State"]
+    G4["Install Audit Logs"]
+  end
+
+  %% USER EXPERIENCE LAYER
+  subgraph U["CLI Experience Layer"]
+    U1["Init + Doctor"]
+    U2["List / Search / Show / Top"]
+    U3["Recommend + Export (table/json/csv/md)"]
+    U4["Assess + Install"]
+    U5["Status + Sync"]
+  end
+
+  %% CI / CONTINUOUS TRUST LAYER
+  subgraph C["Continuous Trust (GitHub Actions)"]
+    C1["CI (lint/test/build/reproducibility)"]
+    C2["CodeQL / Dependency Review / Secrets / Trivy+SBOM"]
+    C3["Daily Security + Quarantine PR"]
+    C4["Daily Catalog Sync"]
+  end
+
+  R1 --> I1
+  R2 --> I1
+  R3 --> I4
+
+  I1 --> I2 --> I3 --> I4 --> I5
+  I5 --> I6
+  I5 --> I7
+
+  I6 --> U3
+  I7 --> U4
+  I5 --> U2
+  I5 --> U5
+  U1 --> U5
+
+  I7 --> G1
+  G1 --> U4
+  G1 --> G2
+  G2 --> G3
+  U4 --> G4
+  G3 --> I5
+
+  C1 --> I5
+  C2 --> G1
+  C3 --> G3
+  C4 --> I5
+
+  classDef source fill:#0f172a,stroke:#38bdf8,color:#e2e8f0,stroke-width:1px;
+  classDef engine fill:#0b1a14,stroke:#22c55e,color:#dcfce7,stroke-width:1px;
+  classDef policy fill:#1f1313,stroke:#ef4444,color:#fee2e2,stroke-width:1px;
+  classDef ux fill:#1a1633,stroke:#a78bfa,color:#ede9fe,stroke-width:1px;
+  classDef ci fill:#1a2230,stroke:#f59e0b,color:#fef3c7,stroke-width:1px;
+
+  class R1,R2,R3 source;
+  class I1,I2,I3,I4,I5,I6,I7 engine;
+  class G1,G2,G3,G4 policy;
+  class U1,U2,U3,U4,U5 ux;
+  class C1,C2,C3,C4 ci;

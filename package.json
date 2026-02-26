@@ -12,6 +12,7 @@
     "build": "tsc -p tsconfig.json",
     "lint": "eslint . --ext .ts",
     "test": "vitest run",
+    "verify:claims": "vitest run tests/integration/functionality-claims.spec.ts tests/unit/workflow-contracts.spec.ts tests/integration/cli-flow.spec.ts tests/unit/recommendation.spec.ts tests/unit/project-analysis.spec.ts",
     "test:watch": "vitest",
     "validate:data": "TS_NODE_TRANSPILE_ONLY=1 node --loader ts-node/esm src/commands/validate-data.ts",
     "ingest:skills": "TS_NODE_TRANSPILE_ONLY=1 node --loader ts-node/esm src/commands/ingest.ts --kind skill",
