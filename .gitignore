@@ -2,6 +2,7 @@ node_modules/
 dist/
 .DS_Store
 coverage/
+.toolkit/
 data/security-reports/*
 !data/security-reports/.gitkeep
 !data/security-reports/audits/
