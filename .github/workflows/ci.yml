@@ -50,6 +50,8 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 20
     needs: compatibility
+    env:
+      TOOLKIT_HOME: ${{ github.workspace }}
 
     steps:
       - name: Checkout

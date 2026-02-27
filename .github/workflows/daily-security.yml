@@ -16,6 +16,8 @@ jobs:
   daily-scan:
     runs-on: ubuntu-latest
     timeout-minutes: 25
+    env:
+      TOOLKIT_HOME: ${{ github.workspace }}
     permissions:
       contents: write
       pull-requests: write
@@ -42,13 +44,25 @@ jobs:
 
       - name: Apply quarantine from latest report
         run: |
-          REPORT=$(ls -1t data/security-reports/*/report.json | head -n 1)
+          REPORT=$(ls -1t data/security-reports/*/report.json 2>/dev/null | head -n 1 || true)
+          if [ -z "$REPORT" ]; then
+            echo "No security report found; skipping quarantine apply."
+            exit 0
+          fi
           echo "Latest report: $REPORT"
           npm run quarantine:apply -- --report "$REPORT"
 
       - name: Daily security summary
         run: |
-          REPORT=$(ls -1t data/security-reports/*/report.json | head -n 1)
+          REPORT=$(ls -1t data/security-reports/*/report.json 2>/dev/null | head -n 1 || true)
+          if [ -z "$REPORT" ]; then
+            {
+              echo "## Daily Security Summary"
+              echo "- Report: none found"
+              echo "- Note: whitelist verification did not emit a report in data/security-reports."
+            } >> "$GITHUB_STEP_SUMMARY"
+            exit 0
+          fi
           node -e '
             const fs=require("fs");
             const report=JSON.parse(fs.readFileSync(process.argv[1],"utf8"));

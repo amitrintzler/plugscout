@@ -16,6 +16,8 @@ jobs:
   sync:
     runs-on: ubuntu-latest
     timeout-minutes: 25
+    env:
+      TOOLKIT_HOME: ${{ github.workspace }}
     permissions:
       contents: write
 
