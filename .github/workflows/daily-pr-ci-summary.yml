@@ -165,21 +165,51 @@ jobs:
 
             const body = lines.join('\n');
             const issueTitle = 'Daily PR/CI Summary';
-            const openIssues = await github.paginate(github.rest.issues.listForRepo, {
+            const isCleanRepoState =
+              openPrs.length === 0 &&
+              failingPrs.length === 0 &&
+              recentFailedRuns.length === 0;
+
+            const issues = await github.paginate(github.rest.issues.listForRepo, {
               owner,
               repo,
-              state: 'open',
+              state: 'all',
               per_page: 100
             });
 
-            const existing = openIssues.find(
+            const existing = issues.find(
               (issue) =>
                 !issue.pull_request &&
                 issue.title === issueTitle &&
                 issue.user?.login === 'github-actions[bot]'
             );
 
+            if (isCleanRepoState) {
+              if (existing && existing.state === 'open') {
+                await github.rest.issues.update({
+                  owner,
+                  repo,
+                  issue_number: existing.number,
+                  body,
+                  state: 'closed',
+                  state_reason: 'completed'
+                });
+                core.info(`Closed summary issue #${existing.number}; no open PR/failure items.`);
+              } else {
+                core.info('Repo state is clean; no summary issue created.');
+              }
+              return;
+            }
+
             if (existing) {
+              if (existing.state === 'closed') {
+                await github.rest.issues.update({
+                  owner,
+                  repo,
+                  issue_number: existing.number,
+                  state: 'open'
+                });
+              }
               await github.rest.issues.update({
                 owner,
                 repo,
