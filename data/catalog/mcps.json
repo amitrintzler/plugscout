@@ -27325,7 +27325,7 @@
     "adoptionSignal": 50,
     "maintenanceSignal": 65,
     "provenanceSignal": 90,
-    "freshnessSignal": 95,
+    "freshnessSignal": 85,
     "securitySignals": {
       "knownVulnerabilities": 0,
       "suspiciousPatterns": 0,
@@ -45612,7 +45612,7 @@
     "adoptionSignal": 50,
     "maintenanceSignal": 65,
     "provenanceSignal": 90,
-    "freshnessSignal": 95,
+    "freshnessSignal": 85,
     "securitySignals": {
       "knownVulnerabilities": 0,
       "suspiciousPatterns": 0,
@@ -90921,6 +90921,45 @@
     }
   },
   {
+    "id": "mcp:io.github.sparkvibe-io/memorymesh",
+    "kind": "mcp",
+    "name": "io.github.sparkvibe-io/memorymesh",
+    "description": "Persistent, zero-dependency AI memory using SQLite. Local-first, cross-tool portable.",
+    "provider": "mcp",
+    "capabilities": [],
+    "compatibility": [
+      "general",
+      "python"
+    ],
+    "source": "public-mcp-directory",
+    "lastSeenAt": "2026-02-28",
+    "transport": "stdio",
+    "authModel": "none",
+    "install": {
+      "kind": "skill.sh",
+      "target": "memorymesh",
+      "args": []
+    },
+    "adoptionSignal": 50,
+    "maintenanceSignal": 65,
+    "provenanceSignal": 90,
+    "freshnessSignal": 95,
+    "securitySignals": {
+      "knownVulnerabilities": 0,
+      "suspiciousPatterns": 0,
+      "injectionFindings": 0,
+      "exfiltrationSignals": 0,
+      "integrityAlerts": 0
+    },
+    "metadata": {
+      "version": "4.1.0",
+      "publishedAt": "2026-02-28T03:58:23.83133Z",
+      "sourceRegistryId": "public-mcp-directory",
+      "sourceType": "public-index",
+      "sourceConfidence": "official"
+    }
+  },
+  {
     "id": "mcp:io.github.SpecLeft/specleft",
     "kind": "mcp",
     "name": "SpecLeft",
@@ -104428,7 +104467,7 @@
     "id": "mcp:io.mockd/mockd",
     "kind": "mcp",
     "name": "mockd",
-    "description": "Mock HTTP, GraphQL, gRPC, WebSocket, MQTT, SSE, and SOAP APIs with 16 AI tools.",
+    "description": "Multi-protocol API mock server: HTTP, GraphQL, gRPC, WebSocket, MQTT, SSE, SOAP.",
     "provider": "mcp",
     "capabilities": [],
     "compatibility": [
@@ -104457,8 +104496,8 @@
     "metadata": {
       "websiteUrl": "https://mockd.io",
       "repositoryUrl": "https://github.com/getmockd/mockd",
-      "version": "0.4.4",
-      "publishedAt": "2026-02-27T03:55:54.891304Z",
+      "version": "0.4.6",
+      "publishedAt": "2026-02-28T04:09:41.309201Z",
       "sourceRegistryId": "public-mcp-directory",
       "sourceType": "public-index",
       "sourceConfidence": "official"
