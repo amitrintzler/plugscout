@@ -11,12 +11,12 @@
     "compatibility": [
       "general"
     ],
-    "source": "openai-skills-curated",
-    "lastSeenAt": "2026-03-05",
+    "source": "community-skills-index",
+    "lastSeenAt": "2026-03-06",
     "install": {
-      "kind": "manual",
-      "instructions": "Install with skill-installer from openai/skills path skills/.curated/aspnet-core",
-      "url": "https://github.com/openai/skills/tree/main/skills/.curated/aspnet-core"
+      "kind": "skill.sh",
+      "target": "Aspnet Core",
+      "args": []
     },
     "adoptionSignal": 72,
     "maintenanceSignal": 82,
@@ -30,11 +30,11 @@
       "integrityAlerts": 0
     },
     "metadata": {
-      "githubPath": "skills/.curated/aspnet-core",
-      "githubUrl": "https://github.com/openai/skills/tree/main/skills/.curated/aspnet-core",
       "sourceRegistryId": "openai-skills-curated",
       "sourceType": "vendor-feed",
-      "sourceConfidence": "official"
+      "sourceConfidence": "official",
+      "githubPath": "skills/.curated/aspnet-core",
+      "githubUrl": "https://github.com/openai/skills/tree/main/skills/.curated/aspnet-core"
     }
   },
   {
@@ -50,7 +50,7 @@
       "general"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-05",
+    "lastSeenAt": "2026-03-06",
     "install": {
       "kind": "skill.sh",
       "target": "Chatgpt Apps",
@@ -92,7 +92,7 @@
       "node"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-05",
+    "lastSeenAt": "2026-03-06",
     "install": {
       "kind": "skill.sh",
       "target": "ci-hardening",
@@ -128,7 +128,7 @@
       "general"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-05",
+    "lastSeenAt": "2026-03-06",
     "install": {
       "kind": "skill.sh",
       "target": "Cloudflare Deploy",
@@ -167,7 +167,7 @@
       "node"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-05",
+    "lastSeenAt": "2026-03-06",
     "install": {
       "kind": "skill.sh",
       "target": "Develop Web Game",
@@ -205,7 +205,7 @@
       "general"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-05",
+    "lastSeenAt": "2026-03-06",
     "install": {
       "kind": "skill.sh",
       "target": "Doc",
@@ -247,7 +247,7 @@
       "python"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-05",
+    "lastSeenAt": "2026-03-06",
     "install": {
       "kind": "skill.sh",
       "target": "docs-automation",
@@ -284,7 +284,7 @@
       "node"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-05",
+    "lastSeenAt": "2026-03-06",
     "install": {
       "kind": "skill.sh",
       "target": "fast-web-scrape",
@@ -320,7 +320,7 @@
       "general"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-05",
+    "lastSeenAt": "2026-03-06",
     "install": {
       "kind": "skill.sh",
       "target": "Figma",
@@ -358,7 +358,7 @@
       "general"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-05",
+    "lastSeenAt": "2026-03-06",
     "install": {
       "kind": "skill.sh",
       "target": "Figma Implement Design",
@@ -397,7 +397,7 @@
       "github"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-05",
+    "lastSeenAt": "2026-03-06",
     "install": {
       "kind": "skill.sh",
       "target": "Gh Address Comments",
@@ -436,7 +436,7 @@
       "github"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-05",
+    "lastSeenAt": "2026-03-06",
     "install": {
       "kind": "skill.sh",
       "target": "Gh Fix Ci",
@@ -474,7 +474,7 @@
       "general"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-05",
+    "lastSeenAt": "2026-03-06",
     "install": {
       "kind": "skill.sh",
       "target": "Imagegen",
@@ -512,7 +512,7 @@
       "general"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-05",
+    "lastSeenAt": "2026-03-06",
     "install": {
       "kind": "skill.sh",
       "target": "Jupyter Notebook",
@@ -551,7 +551,7 @@
       "linear"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-05",
+    "lastSeenAt": "2026-03-06",
     "install": {
       "kind": "skill.sh",
       "target": "Linear",
@@ -589,7 +589,7 @@
       "general"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-05",
+    "lastSeenAt": "2026-03-06",
     "install": {
       "kind": "skill.sh",
       "target": "Netlify Deploy",
@@ -628,7 +628,7 @@
       "notion"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-05",
+    "lastSeenAt": "2026-03-06",
     "install": {
       "kind": "skill.sh",
       "target": "Notion Knowledge Capture",
@@ -667,7 +667,7 @@
       "notion"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-05",
+    "lastSeenAt": "2026-03-06",
     "install": {
       "kind": "skill.sh",
       "target": "Notion Meeting Intelligence",
@@ -706,7 +706,7 @@
       "notion"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-05",
+    "lastSeenAt": "2026-03-06",
     "install": {
       "kind": "skill.sh",
       "target": "Notion Research Documentation",
@@ -745,7 +745,7 @@
       "notion"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-05",
+    "lastSeenAt": "2026-03-06",
     "install": {
       "kind": "skill.sh",
       "target": "Notion Spec To Implementation",
@@ -783,7 +783,7 @@
       "general"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-05",
+    "lastSeenAt": "2026-03-06",
     "install": {
       "kind": "skill.sh",
       "target": "Openai Docs",
@@ -821,7 +821,7 @@
       "general"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-05",
+    "lastSeenAt": "2026-03-06",
     "install": {
       "kind": "skill.sh",
       "target": "Pdf",
@@ -860,7 +860,7 @@
       "node"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-05",
+    "lastSeenAt": "2026-03-06",
     "install": {
       "kind": "skill.sh",
       "target": "Playwright",
@@ -886,6 +886,45 @@
     }
   },
   {
+    "id": "skill:playwright-interactive",
+    "kind": "skill",
+    "name": "Playwright Interactive",
+    "description": "OpenAI curated Codex skill: playwright-interactive.",
+    "provider": "openai",
+    "capabilities": [
+      "browser-control"
+    ],
+    "compatibility": [
+      "general",
+      "node"
+    ],
+    "source": "openai-skills-curated",
+    "lastSeenAt": "2026-03-06",
+    "install": {
+      "kind": "manual",
+      "instructions": "Install with skill-installer from openai/skills path skills/.curated/playwright-interactive",
+      "url": "https://github.com/openai/skills/tree/main/skills/.curated/playwright-interactive"
+    },
+    "adoptionSignal": 72,
+    "maintenanceSignal": 82,
+    "provenanceSignal": 96,
+    "freshnessSignal": 80,
+    "securitySignals": {
+      "knownVulnerabilities": 0,
+      "suspiciousPatterns": 0,
+      "injectionFindings": 0,
+      "exfiltrationSignals": 0,
+      "integrityAlerts": 0
+    },
+    "metadata": {
+      "githubPath": "skills/.curated/playwright-interactive",
+      "githubUrl": "https://github.com/openai/skills/tree/main/skills/.curated/playwright-interactive",
+      "sourceRegistryId": "openai-skills-curated",
+      "sourceType": "vendor-feed",
+      "sourceConfidence": "official"
+    }
+  },
+  {
     "id": "skill:release-readiness",
     "kind": "skill",
     "name": "Release Readiness",
@@ -902,7 +941,7 @@
       "node"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-05",
+    "lastSeenAt": "2026-03-06",
     "install": {
       "kind": "skill.sh",
       "target": "release-readiness",
@@ -938,7 +977,7 @@
       "general"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-05",
+    "lastSeenAt": "2026-03-06",
     "install": {
       "kind": "skill.sh",
       "target": "Render Deploy",
@@ -976,7 +1015,7 @@
       "general"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-05",
+    "lastSeenAt": "2026-03-06",
     "install": {
       "kind": "skill.sh",
       "target": "Screenshot",
@@ -1018,7 +1057,7 @@
       "python"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-05",
+    "lastSeenAt": "2026-03-06",
     "install": {
       "kind": "skill.sh",
       "target": "secure-prompting",
@@ -1054,7 +1093,7 @@
       "general"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-05",
+    "lastSeenAt": "2026-03-06",
     "install": {
       "kind": "skill.sh",
       "target": "Security Best Practices",
@@ -1092,7 +1131,7 @@
       "general"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-05",
+    "lastSeenAt": "2026-03-06",
     "install": {
       "kind": "skill.sh",
       "target": "Security Ownership Map",
@@ -1130,7 +1169,7 @@
       "general"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-05",
+    "lastSeenAt": "2026-03-06",
     "install": {
       "kind": "skill.sh",
       "target": "Security Threat Model",
@@ -1168,7 +1207,7 @@
       "general"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-05",
+    "lastSeenAt": "2026-03-06",
     "install": {
       "kind": "skill.sh",
       "target": "Sentry",
@@ -1194,6 +1233,44 @@
     }
   },
   {
+    "id": "skill:slides",
+    "kind": "skill",
+    "name": "Slides",
+    "description": "OpenAI curated Codex skill: slides.",
+    "provider": "openai",
+    "capabilities": [
+      "automation"
+    ],
+    "compatibility": [
+      "general"
+    ],
+    "source": "openai-skills-curated",
+    "lastSeenAt": "2026-03-06",
+    "install": {
+      "kind": "manual",
+      "instructions": "Install with skill-installer from openai/skills path skills/.curated/slides",
+      "url": "https://github.com/openai/skills/tree/main/skills/.curated/slides"
+    },
+    "adoptionSignal": 72,
+    "maintenanceSignal": 82,
+    "provenanceSignal": 96,
+    "freshnessSignal": 80,
+    "securitySignals": {
+      "knownVulnerabilities": 0,
+      "suspiciousPatterns": 0,
+      "injectionFindings": 0,
+      "exfiltrationSignals": 0,
+      "integrityAlerts": 0
+    },
+    "metadata": {
+      "githubPath": "skills/.curated/slides",
+      "githubUrl": "https://github.com/openai/skills/tree/main/skills/.curated/slides",
+      "sourceRegistryId": "openai-skills-curated",
+      "sourceType": "vendor-feed",
+      "sourceConfidence": "official"
+    }
+  },
+  {
     "id": "skill:sora",
     "kind": "skill",
     "name": "Sora",
@@ -1206,7 +1283,7 @@
       "general"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-05",
+    "lastSeenAt": "2026-03-06",
     "install": {
       "kind": "skill.sh",
       "target": "Sora",
@@ -1244,7 +1321,7 @@
       "general"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-05",
+    "lastSeenAt": "2026-03-06",
     "install": {
       "kind": "skill.sh",
       "target": "Speech",
@@ -1282,7 +1359,7 @@
       "general"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-05",
+    "lastSeenAt": "2026-03-06",
     "install": {
       "kind": "skill.sh",
       "target": "Spreadsheet",
@@ -1324,7 +1401,7 @@
       "python"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-05",
+    "lastSeenAt": "2026-03-06",
     "install": {
       "kind": "skill.sh",
       "target": "threat-modeling-lite",
@@ -1360,7 +1437,7 @@
       "general"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-05",
+    "lastSeenAt": "2026-03-06",
     "install": {
       "kind": "skill.sh",
       "target": "Transcribe",
@@ -1398,7 +1475,7 @@
       "general"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-05",
+    "lastSeenAt": "2026-03-06",
     "install": {
       "kind": "skill.sh",
       "target": "Vercel Deploy",
@@ -1435,12 +1512,12 @@
     "compatibility": [
       "general"
     ],
-    "source": "openai-skills-curated",
-    "lastSeenAt": "2026-03-05",
+    "source": "community-skills-index",
+    "lastSeenAt": "2026-03-06",
     "install": {
-      "kind": "manual",
-      "instructions": "Install with skill-installer from openai/skills path skills/.curated/winui-app",
-      "url": "https://github.com/openai/skills/tree/main/skills/.curated/winui-app"
+      "kind": "skill.sh",
+      "target": "Winui App",
+      "args": []
     },
     "adoptionSignal": 72,
     "maintenanceSignal": 82,
@@ -1454,11 +1531,11 @@
       "integrityAlerts": 0
     },
     "metadata": {
-      "githubPath": "skills/.curated/winui-app",
-      "githubUrl": "https://github.com/openai/skills/tree/main/skills/.curated/winui-app",
       "sourceRegistryId": "openai-skills-curated",
       "sourceType": "vendor-feed",
-      "sourceConfidence": "official"
+      "sourceConfidence": "official",
+      "githubPath": "skills/.curated/winui-app",
+      "githubUrl": "https://github.com/openai/skills/tree/main/skills/.curated/winui-app"
     }
   },
   {
@@ -1474,7 +1551,7 @@
       "general"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-05",
+    "lastSeenAt": "2026-03-06",
     "install": {
       "kind": "skill.sh",
       "target": "Yeet",
