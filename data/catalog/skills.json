@@ -12,7 +12,7 @@
       "general"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-07",
+    "lastSeenAt": "2026-03-08",
     "install": {
       "kind": "skill.sh",
       "target": "Aspnet Core",
@@ -50,7 +50,7 @@
       "general"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-07",
+    "lastSeenAt": "2026-03-08",
     "install": {
       "kind": "skill.sh",
       "target": "Chatgpt Apps",
@@ -92,7 +92,7 @@
       "node"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-07",
+    "lastSeenAt": "2026-03-08",
     "install": {
       "kind": "skill.sh",
       "target": "ci-hardening",
@@ -128,7 +128,7 @@
       "general"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-07",
+    "lastSeenAt": "2026-03-08",
     "install": {
       "kind": "skill.sh",
       "target": "Cloudflare Deploy",
@@ -167,7 +167,7 @@
       "node"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-07",
+    "lastSeenAt": "2026-03-08",
     "install": {
       "kind": "skill.sh",
       "target": "Develop Web Game",
@@ -205,7 +205,7 @@
       "general"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-07",
+    "lastSeenAt": "2026-03-08",
     "install": {
       "kind": "skill.sh",
       "target": "Doc",
@@ -247,7 +247,7 @@
       "python"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-07",
+    "lastSeenAt": "2026-03-08",
     "install": {
       "kind": "skill.sh",
       "target": "docs-automation",
@@ -284,7 +284,7 @@
       "node"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-07",
+    "lastSeenAt": "2026-03-08",
     "install": {
       "kind": "skill.sh",
       "target": "fast-web-scrape",
@@ -320,7 +320,7 @@
       "general"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-07",
+    "lastSeenAt": "2026-03-08",
     "install": {
       "kind": "skill.sh",
       "target": "Figma",
@@ -358,7 +358,7 @@
       "general"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-07",
+    "lastSeenAt": "2026-03-08",
     "install": {
       "kind": "skill.sh",
       "target": "Figma Implement Design",
@@ -397,7 +397,7 @@
       "github"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-07",
+    "lastSeenAt": "2026-03-08",
     "install": {
       "kind": "skill.sh",
       "target": "Gh Address Comments",
@@ -436,7 +436,7 @@
       "github"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-07",
+    "lastSeenAt": "2026-03-08",
     "install": {
       "kind": "skill.sh",
       "target": "Gh Fix Ci",
@@ -474,7 +474,7 @@
       "general"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-07",
+    "lastSeenAt": "2026-03-08",
     "install": {
       "kind": "skill.sh",
       "target": "Imagegen",
@@ -512,7 +512,7 @@
       "general"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-07",
+    "lastSeenAt": "2026-03-08",
     "install": {
       "kind": "skill.sh",
       "target": "Jupyter Notebook",
@@ -551,7 +551,7 @@
       "linear"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-07",
+    "lastSeenAt": "2026-03-08",
     "install": {
       "kind": "skill.sh",
       "target": "Linear",
@@ -589,7 +589,7 @@
       "general"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-07",
+    "lastSeenAt": "2026-03-08",
     "install": {
       "kind": "skill.sh",
       "target": "Netlify Deploy",
@@ -628,7 +628,7 @@
       "notion"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-07",
+    "lastSeenAt": "2026-03-08",
     "install": {
       "kind": "skill.sh",
       "target": "Notion Knowledge Capture",
@@ -667,7 +667,7 @@
       "notion"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-07",
+    "lastSeenAt": "2026-03-08",
     "install": {
       "kind": "skill.sh",
       "target": "Notion Meeting Intelligence",
@@ -706,7 +706,7 @@
       "notion"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-07",
+    "lastSeenAt": "2026-03-08",
     "install": {
       "kind": "skill.sh",
       "target": "Notion Research Documentation",
@@ -745,7 +745,7 @@
       "notion"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-07",
+    "lastSeenAt": "2026-03-08",
     "install": {
       "kind": "skill.sh",
       "target": "Notion Spec To Implementation",
@@ -783,7 +783,7 @@
       "general"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-07",
+    "lastSeenAt": "2026-03-08",
     "install": {
       "kind": "skill.sh",
       "target": "Openai Docs",
@@ -821,7 +821,7 @@
       "general"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-07",
+    "lastSeenAt": "2026-03-08",
     "install": {
       "kind": "skill.sh",
       "target": "Pdf",
@@ -860,7 +860,7 @@
       "node"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-07",
+    "lastSeenAt": "2026-03-08",
     "install": {
       "kind": "skill.sh",
       "target": "Playwright",
@@ -899,7 +899,7 @@
       "node"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-07",
+    "lastSeenAt": "2026-03-08",
     "install": {
       "kind": "skill.sh",
       "target": "Playwright Interactive",
@@ -941,7 +941,7 @@
       "node"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-07",
+    "lastSeenAt": "2026-03-08",
     "install": {
       "kind": "skill.sh",
       "target": "release-readiness",
@@ -977,7 +977,7 @@
       "general"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-07",
+    "lastSeenAt": "2026-03-08",
     "install": {
       "kind": "skill.sh",
       "target": "Render Deploy",
@@ -1015,7 +1015,7 @@
       "general"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-07",
+    "lastSeenAt": "2026-03-08",
     "install": {
       "kind": "skill.sh",
       "target": "Screenshot",
@@ -1057,7 +1057,7 @@
       "python"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-07",
+    "lastSeenAt": "2026-03-08",
     "install": {
       "kind": "skill.sh",
       "target": "secure-prompting",
@@ -1093,7 +1093,7 @@
       "general"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-07",
+    "lastSeenAt": "2026-03-08",
     "install": {
       "kind": "skill.sh",
       "target": "Security Best Practices",
@@ -1131,7 +1131,7 @@
       "general"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-07",
+    "lastSeenAt": "2026-03-08",
     "install": {
       "kind": "skill.sh",
       "target": "Security Ownership Map",
@@ -1169,7 +1169,7 @@
       "general"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-07",
+    "lastSeenAt": "2026-03-08",
     "install": {
       "kind": "skill.sh",
       "target": "Security Threat Model",
@@ -1207,7 +1207,7 @@
       "general"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-07",
+    "lastSeenAt": "2026-03-08",
     "install": {
       "kind": "skill.sh",
       "target": "Sentry",
@@ -1245,7 +1245,7 @@
       "general"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-07",
+    "lastSeenAt": "2026-03-08",
     "install": {
       "kind": "skill.sh",
       "target": "Slides",
@@ -1283,7 +1283,7 @@
       "general"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-07",
+    "lastSeenAt": "2026-03-08",
     "install": {
       "kind": "skill.sh",
       "target": "Sora",
@@ -1321,7 +1321,7 @@
       "general"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-07",
+    "lastSeenAt": "2026-03-08",
     "install": {
       "kind": "skill.sh",
       "target": "Speech",
@@ -1359,7 +1359,7 @@
       "general"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-07",
+    "lastSeenAt": "2026-03-08",
     "install": {
       "kind": "skill.sh",
       "target": "Spreadsheet",
@@ -1401,7 +1401,7 @@
       "python"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-07",
+    "lastSeenAt": "2026-03-08",
     "install": {
       "kind": "skill.sh",
       "target": "threat-modeling-lite",
@@ -1437,7 +1437,7 @@
       "general"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-07",
+    "lastSeenAt": "2026-03-08",
     "install": {
       "kind": "skill.sh",
       "target": "Transcribe",
@@ -1475,7 +1475,7 @@
       "general"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-07",
+    "lastSeenAt": "2026-03-08",
     "install": {
       "kind": "skill.sh",
       "target": "Vercel Deploy",
@@ -1513,7 +1513,7 @@
       "general"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-07",
+    "lastSeenAt": "2026-03-08",
     "install": {
       "kind": "skill.sh",
       "target": "Winui App",
@@ -1551,7 +1551,7 @@
       "general"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-07",
+    "lastSeenAt": "2026-03-08",
     "install": {
       "kind": "skill.sh",
       "target": "Yeet",
