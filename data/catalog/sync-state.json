@@ -1,29 +1,29 @@
 {
   "registries": {
     "community-skills-index": {
-      "lastSuccessfulSyncAt": "2026-03-11T04:11:16.782Z"
+      "lastSuccessfulSyncAt": "2026-03-12T04:14:50.062Z"
     },
     "public-mcp-directory": {
-      "lastSuccessfulSyncAt": "2026-03-11T04:11:23.115Z",
+      "lastSuccessfulSyncAt": "2026-03-12T04:14:55.671Z",
       "lastUpdatedSince": "2026-02-25T14:46:42.122Z"
     },
     "official-claude-plugins": {
-      "lastSuccessfulSyncAt": "2026-03-11T04:11:23.195Z"
+      "lastSuccessfulSyncAt": "2026-03-12T04:14:55.723Z"
     },
     "official-copilot-extensions": {
-      "lastSuccessfulSyncAt": "2026-03-11T04:11:23.195Z"
+      "lastSuccessfulSyncAt": "2026-03-12T04:14:55.724Z"
     },
     "openai-skills-curated": {
-      "lastSuccessfulSyncAt": "2026-03-11T04:11:23.194Z"
+      "lastSuccessfulSyncAt": "2026-03-12T04:14:55.723Z"
     },
     "github-copilot-plugins-official": {
-      "lastSuccessfulSyncAt": "2026-03-11T04:11:23.223Z"
+      "lastSuccessfulSyncAt": "2026-03-12T04:14:55.740Z"
     },
     "github-awesome-copilot-marketplace": {
-      "lastSuccessfulSyncAt": "2026-03-11T04:11:23.234Z"
+      "lastSuccessfulSyncAt": "2026-03-12T04:14:55.751Z"
     },
     "anthropic-claude-connectors-scrape": {
-      "lastSuccessfulSyncAt": "2026-03-11T04:11:23.385Z"
+      "lastSuccessfulSyncAt": "2026-03-12T04:14:55.845Z"
     }
   }
 }
