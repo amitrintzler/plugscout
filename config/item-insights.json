@@ -49,6 +49,54 @@
       "usageNotes": ["Use only where source terms allow scraping"]
     },
     {
+      "id": "skill:docker-container-ops",
+      "benefitSummary": "Improves container build reliability, image hygiene, and local-to-CI consistency.",
+      "bestFor": ["Containerized services", "CI pipelines", "Developer platform teams"],
+      "whenToUse": ["When Dockerfiles grow complex", "When image size or startup time matters"],
+      "tradeoffs": ["Can require base image and workflow changes", "Hardening may slow builds initially"],
+      "usageNotes": ["Use with dependency scanning and least-privilege container defaults"]
+    },
+    {
+      "id": "skill:kubernetes-ops",
+      "benefitSummary": "Reduces rollout risk by improving Kubernetes config review, debugging, and operational safety.",
+      "bestFor": ["Platform teams", "Multi-service deployments", "Container orchestration"],
+      "whenToUse": ["When manifests or Helm charts change", "When incidents involve rollout or networking issues"],
+      "tradeoffs": ["Cluster behavior can vary by environment", "Requires strong config discipline"],
+      "usageNotes": ["Pair with policy checks and progressive delivery where possible"]
+    },
+    {
+      "id": "skill:terraform-guardrails",
+      "benefitSummary": "Adds safer infrastructure changes with plan review, policy checks, and drift-aware workflows.",
+      "bestFor": ["Infrastructure as code", "Multi-environment cloud estates", "Platform governance"],
+      "whenToUse": ["Before apply", "During IAM/networking changes", "When reviewing drift-prone stacks"],
+      "tradeoffs": ["More checks can slow urgent changes", "Requires shared policy conventions"],
+      "usageNotes": ["Use with separate plan/apply stages and reviewed state backends"]
+    },
+    {
+      "id": "skill:aws-platform-ops",
+      "benefitSummary": "Speeds AWS delivery and troubleshooting across IAM, networking, compute, and serverless workflows.",
+      "bestFor": ["AWS-heavy teams", "Application platforms", "Cloud operations"],
+      "whenToUse": ["When launching new workloads", "When debugging permissions, scaling, or runtime issues"],
+      "tradeoffs": ["AWS service sprawl can increase context load", "Environment parity matters"],
+      "usageNotes": ["Keep environment-specific settings explicit and review IAM changes carefully"]
+    },
+    {
+      "id": "skill:postgres-ops",
+      "benefitSummary": "Improves database reliability through better query analysis, migration review, and indexing decisions.",
+      "bestFor": ["Transactional backends", "Data-heavy apps", "Teams running PostgreSQL in production"],
+      "whenToUse": ["When queries regress", "Before schema migrations", "When latency or lock contention rises"],
+      "tradeoffs": ["Tuning can require production-specific context", "Indexing choices can increase write cost"],
+      "usageNotes": ["Validate with explain plans and staged migration rollouts"]
+    },
+    {
+      "id": "skill:observability-incident-response",
+      "benefitSummary": "Shortens time-to-understanding during incidents by correlating logs, metrics, traces, and timelines.",
+      "bestFor": ["On-call teams", "SRE/platform groups", "Production services with telemetry"],
+      "whenToUse": ["During incidents", "For noisy regressions", "Before writing postmortems"],
+      "tradeoffs": ["Signal quality depends on telemetry coverage", "Too many dashboards can slow triage"],
+      "usageNotes": ["Prefer a small set of trusted dashboards and preserve incident notes as you investigate"]
+    },
+    {
       "id": "mcp:filesystem",
       "benefitSummary": "Safe local file operations for analysis, diffing, and controlled write workflows.",
       "bestFor": ["Local development", "Refactor support", "Repository maintenance"],
@@ -105,6 +153,46 @@
       "usageNotes": ["Currently high-risk in this policy setup; requires explicit override"]
     },
     {
+      "id": "mcp:io.github.github/github-mcp-server",
+      "benefitSummary": "Brings first-party GitHub repository, issue, and PR workflows directly into agent tooling.",
+      "bestFor": ["GitHub-centric teams", "Code review workflows", "Repository automation"],
+      "whenToUse": ["When triaging issues or PRs", "When automating repository maintenance"],
+      "tradeoffs": ["Requires careful token scoping", "Can create noisy automation if overused"],
+      "usageNotes": ["Prefer least-privilege GitHub auth and explicit write approvals"]
+    },
+    {
+      "id": "mcp:io.github.grafana/mcp-grafana",
+      "benefitSummary": "Makes dashboards, metrics, and incident context queryable from the same workflow as code changes.",
+      "bestFor": ["SRE teams", "On-call engineers", "Platform observability workflows"],
+      "whenToUse": ["During incident triage", "When validating production impact of a change"],
+      "tradeoffs": ["Signal quality depends on dashboard hygiene", "Access control must match production sensitivity"],
+      "usageNotes": ["Use with a small set of trusted dashboards and alert entry points"]
+    },
+    {
+      "id": "mcp:io.github.browserbase/mcp-server-browserbase",
+      "benefitSummary": "Adds reliable cloud browser automation for login-heavy or dynamic product flows.",
+      "bestFor": ["QA automation", "Customer workflow validation", "Browser-based data collection"],
+      "whenToUse": ["When APIs are insufficient", "When reproducing browser-only failures"],
+      "tradeoffs": ["Browser automation is slower and costlier than API checks", "Needs secret handling discipline"],
+      "usageNotes": ["Use for high-value user flows, not every validation path"]
+    },
+    {
+      "id": "mcp:com.cloudflare.mcp/mcp",
+      "benefitSummary": "Connects code changes to Cloudflare deployment, routing, storage, and edge configuration workflows.",
+      "bestFor": ["Edge apps", "Workers deployments", "Platform teams using Cloudflare"],
+      "whenToUse": ["When debugging edge behavior", "When rolling out infra or platform changes"],
+      "tradeoffs": ["Environment drift can hide configuration mistakes", "Write access should be tightly scoped"],
+      "usageNotes": ["Pair with explicit environment targeting and change review"]
+    },
+    {
+      "id": "mcp:io.github.upstash/context7",
+      "benefitSummary": "Supplies up-to-date technical documentation context without depending on stale model memory.",
+      "bestFor": ["Library-heavy projects", "Framework migrations", "Agent-assisted coding"],
+      "whenToUse": ["When working across fast-moving libraries", "When docs accuracy matters more than speed"],
+      "tradeoffs": ["Adds a docs lookup hop", "Coverage depends on upstream indexing"],
+      "usageNotes": ["Prefer it for framework and SDK questions before relying on memory"]
+    },
+    {
       "id": "claude-plugin:workspace-ops",
       "benefitSummary": "Speeds internal operations by letting teams query docs/tasks from Claude.",
       "bestFor": ["Knowledge-heavy orgs", "Ops workflows"],
@@ -137,6 +225,30 @@
       "usageNotes": ["Store outputs in immutable audit artifacts"]
     },
     {
+      "id": "claude-plugin:mcp-toolkit",
+      "benefitSummary": "Lets Claude Code reach containerized MCP servers through Docker's gateway tooling instead of bespoke local setup.",
+      "bestFor": ["Teams standardizing on Docker Desktop", "Cross-platform local development", "MCP-heavy workflows"],
+      "whenToUse": ["When local MCP setup is fragmented", "When you want repeatable dev environments"],
+      "tradeoffs": ["Adds Docker Desktop as a dependency", "Container mediation can hide low-level issues"],
+      "usageNotes": ["Best fit when your team already uses Docker as the local platform standard"]
+    },
+    {
+      "id": "claude-plugin:chrome-devtools-mcp",
+      "benefitSummary": "Gives Claude Code high-fidelity browser debugging for performance, DOM, and runtime inspection tasks.",
+      "bestFor": ["Frontend engineering", "Web debugging", "Performance troubleshooting"],
+      "whenToUse": ["When browser issues are hard to reproduce from logs alone", "When inspecting live UI state matters"],
+      "tradeoffs": ["Can be slower than unit-level validation", "Needs care around pages with sensitive content"],
+      "usageNotes": ["Use it selectively for interactive debugging and regression validation"]
+    },
+    {
+      "id": "claude-plugin:firebase",
+      "benefitSummary": "Connects app development workflows to a widely used backend platform for faster iteration on auth, data, and hosting.",
+      "bestFor": ["Product teams using Firebase", "Rapid app development", "Mobile and web backends"],
+      "whenToUse": ["When your stack depends on Firebase services", "When debugging app/backend integration issues"],
+      "tradeoffs": ["Tight platform coupling can reduce portability", "Environment separation matters"],
+      "usageNotes": ["Keep project and environment targeting explicit to avoid accidental production changes"]
+    },
+    {
       "id": "copilot-extension:repo-security",
       "benefitSummary": "Brings dependency and code-scan findings directly into developer workflows.",
       "bestFor": ["GitHub-native teams", "Shift-left security adoption"],
@@ -167,6 +279,38 @@
       "whenToUse": ["Before release publish", "Before tag creation"],
       "tradeoffs": ["Can block urgent releases", "Needs calibrated policy exceptions"],
       "usageNotes": ["Define emergency override process upfront"]
+    },
+    {
+      "id": "skill:open-source-maintainer",
+      "benefitSummary": "Systematizes GitHub maintenance workflows across issues, PRs, contributor activity, and release hygiene.",
+      "bestFor": ["Open-source maintainers", "Engineering leads", "Busy repository owners"],
+      "whenToUse": ["When project maintenance starts consuming too much ad hoc time", "Before release or backlog cleanup cycles"],
+      "tradeoffs": ["Can formalize workflows that were previously lightweight", "Still needs human judgment on community interactions"],
+      "usageNotes": ["Use it with a clear triage policy and issue/PR labeling scheme"]
+    },
+    {
+      "id": "skill:orchestration",
+      "benefitSummary": "Improves complex task execution by structuring decomposition, delegation, and multi-step coordination.",
+      "bestFor": ["Agentic workflows", "Large refactors", "Parallelizable engineering work"],
+      "whenToUse": ["When a task spans multiple domains", "When one pass of a single agent is insufficient"],
+      "tradeoffs": ["Coordination overhead can outweigh benefits on simple tasks", "Bad task boundaries create churn"],
+      "usageNotes": ["Use for genuinely multi-step work, not routine single-file edits"]
+    },
+    {
+      "id": "skill:engineering-workflow-skills",
+      "benefitSummary": "Bundles practical software delivery skills like planning, test fixing, and code review execution into one reusable workflow layer.",
+      "bestFor": ["General software engineering", "Teams with repeatable coding workflows", "Maintainers juggling multiple tasks"],
+      "whenToUse": ["When work repeatedly follows the same engineering loop", "When consistency matters across contributors"],
+      "tradeoffs": ["Broad workflow bundles can be less opinionated than specialized skills", "May overlap with local team conventions"],
+      "usageNotes": ["Use as a default engineering baseline, then layer narrower skills as needed"]
+    },
+    {
+      "id": "skill:neon-plugin",
+      "benefitSummary": "Specializes database development around Neon, Postgres, auth, and modern serverless data workflows.",
+      "bestFor": ["Neon-backed apps", "Serverless Postgres stacks", "Teams using Drizzle or modern TS backends"],
+      "whenToUse": ["When schema, auth, or query workflows are tied to Neon", "When app and database changes move together"],
+      "tradeoffs": ["Strong vendor coupling", "Less useful outside the Neon ecosystem"],
+      "usageNotes": ["Best fit when Neon is an explicit platform dependency, not a hypothetical future option"]
     }
   ]
 }

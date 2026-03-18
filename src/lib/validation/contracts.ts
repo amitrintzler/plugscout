@@ -5,7 +5,7 @@ const isoDate = z
   .regex(/^(19|20|21)\d{2}-[01]\d-[0-3]\d$/, 'Expected ISO date (YYYY-MM-DD)');
 
 export const RiskTierSchema = z.enum(['low', 'medium', 'high', 'critical']);
-export const CatalogKindSchema = z.enum(['skill', 'mcp', 'claude-plugin', 'copilot-extension']);
+export const CatalogKindSchema = z.enum(['skill', 'mcp', 'claude-plugin', 'claude-connector', 'copilot-extension']);
 
 const SecuritySignalsSchema = z
   .object({
@@ -106,7 +106,7 @@ export const InstallAuditSchema = z.object({
   requestedAt: z.string().datetime(),
   policyDecision: z.enum(['allowed', 'blocked', 'override-allowed']),
   overrideUsed: z.boolean(),
-  installer: z.enum(['skill.sh', 'gh-cli', 'manual']),
+  installer: z.enum(['skill.sh', 'gh-cli', 'manual', 'skills', 'npm', 'docker']),
   exitCode: z.number().int()
 });
 
@@ -144,6 +144,8 @@ export const RegistrySchema = z.object({
       'openai-skills-v1',
       'openai-skills-github-v1',
       'claude-plugins-v0.1',
+      'claude-plugins-scrape-v1',
+      'claude-code-marketplace-v1',
       'copilot-extensions-v0.1',
       'copilot-plugin-marketplace-v1',
       'claude-connectors-scrape-v1'

@@ -4,6 +4,7 @@
   <a href="https://github.com/amitrintzler/skills-and-mcps/releases/latest"><img alt="Release" src="https://img.shields.io/github/v/release/amitrintzler/skills-and-mcps?display_name=tag&label=release" /></a>
   <a href="https://github.com/amitrintzler/skills-and-mcps/actions/workflows/ci.yml"><img alt="CI" src="https://github.com/amitrintzler/skills-and-mcps/actions/workflows/ci.yml/badge.svg?branch=main" /></a>
   <a href="https://nodejs.org/"><img alt="Node >=18.17" src="https://img.shields.io/badge/node-%3E%3D18.17-339933?logo=node.js&logoColor=white" /></a>
+  <a href="https://www.linkedin.com/in/amit-rintzler-94444535/"><img alt="LinkedIn Amit Rintzler" src="https://img.shields.io/badge/LinkedIn-Amit%20Rintzler-0A66C2?logo=linkedin&logoColor=white" /></a>
 </p>
 
 <p align="center">
@@ -15,7 +16,11 @@
   <a href="https://github.com/amitrintzler/skills-and-mcps/actions/workflows/catalog-sync.yml"><img alt="Catalog Sync (Scheduled)" src="https://img.shields.io/badge/catalog%20sync-scheduled-0ea5e9" /></a>
 </p>
 
-Toolkit helps teams discover, score, and safely install Claude plugins, Copilot extensions, Skills, and MCP servers with policy-aware risk controls.
+Toolkit helps teams discover, score, and safely install Claude plugins, Claude connectors, Copilot extensions, Skills, and MCP servers with policy-aware risk controls.
+
+Written by Amit Rintzler.
+
+License: MIT. Copyright (c) 2026 Amit Rintzler. Reuse is allowed, but redistributed copies must keep the copyright and license notice.
 
 Quick links:
 - [Install](#install-toolkit-v020)
@@ -29,7 +34,7 @@ Quick links:
 Toolkit is a Node.js CLI that unifies multiple AI tooling ecosystems into one searchable catalog and applies trust/risk policy before installation.
 
 You can:
-- Discover Claude plugins, Copilot extensions, Skills, and MCP servers from one place.
+- Discover Claude plugins, Claude connectors, Copilot extensions, Skills, and MCP servers from one place.
 - Score candidates using trust-first ranking.
 - Enforce install gates using whitelist + quarantine policy.
 - Run continuous checks in CI and scheduled workflows.
@@ -44,7 +49,8 @@ You can:
 
 - Node.js `>=18.17`
 - npm
-- `skill.sh` (required for setup/doctor flows)
+- `skills` CLI or `npx` for modern skill installs
+- `skill.sh` is optional and only needed for some legacy `skill.sh`-style installs
 
 ## Install Toolkit (v0.3.0)
 
@@ -54,10 +60,10 @@ cd toolkit
 git checkout v0.3.0
 npm install
 npm run init
-npm run doctor
+npm run doctor -- --install-deps
 ```
 
-`init` now defaults kinds to all ecosystems: `skill`, `mcp`, `claude-plugin`, and `copilot-extension`.
+`init` now defaults kinds to all catalog types: `skill`, `mcp`, `claude-plugin`, `claude-connector`, and `copilot-extension`.
 When you choose `riskPosture: strict`, `list` and `recommend` default to safe-only output.
 
 Install newest release tag instead of pinning `v0.3.0`:
@@ -71,7 +77,7 @@ git checkout $(git describe --tags --abbrev=0)
 ```bash
 npm install
 npm run init
-npm run doctor
+npm run doctor -- --install-deps
 npm run scan -- --project . --format table
 npm run recommend -- --project . --only-safe --sort trust --limit 10
 npm run recommend -- --project . --only-safe --sort trust --limit 10 --details
@@ -79,7 +85,20 @@ npm run recommend -- --project . --only-safe --sort trust --limit 10 --details
 
 If installed as a CLI package, run `toolkit` with no args to open a branded home screen.
 
+Important: `top` and `recommend` are repo-aware rankings, not global popularity charts. A higher score means a better match for the current repository under the active policy, using `fit + trust + freshness - security - blocked`. Review each suggestion before installing, and do not install blindly from rank alone.
+
+Installs are now review-gated: run `show --id <catalog-id>` or `assess --id <catalog-id>` before `install`. Use `--override-review` only when you intentionally want to bypass that safeguard.
+
+If you want Toolkit to bootstrap the supported install dependency for you, run `toolkit doctor --install-deps` or add `--install-deps` to `toolkit install`.
+
+For supported legacy MCP entries, Toolkit now prefers direct installers when the target is unambiguous:
+- npm package targets install through `npm install -g`
+- container targets install through `docker pull`
+- ambiguous or binary-asset installs remain explicit/manual
+
 Toolkit also performs a daily interactive update check against GitHub Releases and prints a download hint when a newer release is available.
+
+Video preview/render commands are optional maintainer tooling. They are kept in `devDependencies` and are not required to install or run the CLI package.
 
 ## Typical Workflow
 
@@ -109,7 +128,7 @@ skill:ci-hardening                skill               openai      low(0)    fals
 | --- | --- |
 | `npm run about` | Show version and framework scope |
 | `npm run init` | Create project defaults and setup local config |
-| `npm run doctor` | Validate runtime prerequisites and environment health |
+| `npm run doctor -- --install-deps` | Validate runtime prerequisites and bootstrap the supported `skills` CLI when missing |
 | `npm run sync` | Refresh catalog data from configured registries |
 | `npm run scan -- --project . --format table` | Analyze repository capabilities/archetype |
 | `npm run top -- --project . --limit 5` | Show top-ranked items for the current context |
@@ -117,7 +136,7 @@ skill:ci-hardening                skill               openai      low(0)    fals
 | `npm run recommend -- --project . --only-safe --sort trust --limit 10` | Generate policy-aware recommendations |
 | `npm run recommend -- --project . --only-safe --sort trust --limit 10 --details` | Include per-item acceptance evidence (provenance, reasons, tradeoffs) |
 | `npm run assess -- --id <catalog-id>` | Evaluate risk for one candidate before install |
-| `npm run install:item -- --id <catalog-id> --yes` | Install a candidate if policy allows |
+| `npm run install:item -- --id <catalog-id> --yes --install-deps` | Install a candidate if policy allows and bootstrap supported install deps when requested |
 | `npm run status -- --verbose` | Report catalog health, staleness, and policy status |
 | `node dist/cli.js web --open` | Generate readable HTML report with score legend and decision cards |
 
@@ -150,9 +169,13 @@ Whitelist and quarantine state are enforced in recommendation and install flows,
 
 Security deep-dive: [`docs/security/README.md`](docs/security/README.md)
 
-## Plugin Catalog Sources
+## Plugin and Connector Catalog Sources
 
+- Claude plugins: `https://claude.com/plugins` (scraped with sanitization + host allowlist guards)
 - Claude connectors: `https://claude.com/connectors` (scraped with sanitization + host allowlist guards)
+- Anthropic GitHub plugin manifests: `anthropics/claude-plugins-official`, `anthropics/knowledge-work-plugins`, `anthropics/financial-services-plugins`
+- GitHub skills marketplaces: `numman-ali/n-skills`, `mhattingpete/claude-skills-marketplace`, `neondatabase-labs/ai-rules`
+- GitHub Claude Code plugin marketplaces: `docker/claude-plugins`, `pleaseai/claude-code-plugins`
 - Copilot plugins (official): `https://raw.githubusercontent.com/github/copilot-plugins/main/.github/plugin/marketplace.json`
 - Copilot plugins (curated): `https://raw.githubusercontent.com/github/awesome-copilot/main/.github/plugin/marketplace.json`
 
@@ -189,4 +212,4 @@ npm run build
 
 ## License
 
-This repository currently does not include a root `LICENSE` file.
+This repository does not yet include a root `LICENSE` file. Choose and add one before publishing for third-party reuse.

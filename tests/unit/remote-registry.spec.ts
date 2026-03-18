@@ -124,6 +124,16 @@ describe('resolveRegistryEntries', () => {
     expect(parsed).toEqual([{ id: 'claude-plugin:a' }]);
   });
 
+  it('resolves default key for connector kinds in catalog-json format', () => {
+    const parsed = extractEntries(
+      { connectors: [{ id: 'claude-connector:a' }] },
+      'catalog-json',
+      undefined,
+      'claude-connector'
+    );
+    expect(parsed).toEqual([{ id: 'claude-connector:a' }]);
+  });
+
   it('supports html remote payload extraction', () => {
     const parsed = extractEntries('<html><body>ok</body></html>', 'html', undefined, 'claude-plugin');
     expect(parsed).toEqual(['<html><body>ok</body></html>']);

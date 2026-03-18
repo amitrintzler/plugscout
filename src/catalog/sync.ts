@@ -67,7 +67,7 @@ export async function syncCatalogs(
 
   const kindCounts = countByKind(mergedItems);
   logger.info(
-    `Synced ${mergedItems.length} items (${kindCounts.skill} skills, ${kindCounts.mcp} MCPs, ${kindCounts['claude-plugin']} Claude plugins, ${kindCounts['copilot-extension']} Copilot extensions)`
+    `Synced ${mergedItems.length} items (${kindCounts.skill} skills, ${kindCounts.mcp} MCPs, ${kindCounts['claude-plugin']} Claude plugins, ${kindCounts['claude-connector']} Claude connectors, ${kindCounts['copilot-extension']} Copilot extensions)`
   );
 
   const staleRegistries = getStaleRegistries(syncState);
@@ -122,6 +122,7 @@ function normalizeId(id: string, kind: CatalogKind): string {
     skill: 'skill',
     mcp: 'mcp',
     'claude-plugin': 'claude-plugin',
+    'claude-connector': 'claude-connector',
     'copilot-extension': 'copilot-extension'
   };
 
@@ -133,6 +134,9 @@ function inferProviderFromKind(kind: CatalogKind): string {
     return 'mcp';
   }
   if (kind === 'claude-plugin') {
+    return 'anthropic';
+  }
+  if (kind === 'claude-connector') {
     return 'anthropic';
   }
   if (kind === 'copilot-extension') {
@@ -186,6 +190,7 @@ function countByKind(items: CatalogItem[]): Record<CatalogKind, number> {
       skill: 0,
       mcp: 0,
       'claude-plugin': 0,
+      'claude-connector': 0,
       'copilot-extension': 0
     }
   );

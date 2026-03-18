@@ -8,7 +8,7 @@ describe('RegistrySchema', () => {
       id: 'official-claude-plugins',
       kind: 'claude-plugin',
       sourceType: 'vendor-feed',
-      adapter: 'claude-plugins-v0.1',
+      adapter: 'claude-plugins-scrape-v1',
       enabled: true,
       entries: []
     });
@@ -33,9 +33,18 @@ describe('RegistrySchema', () => {
 
     const claudeConnectors = RegistrySchema.parse({
       id: 'anthropic-claude-connectors-scrape',
-      kind: 'claude-plugin',
+      kind: 'claude-connector',
       sourceType: 'vendor-feed',
       adapter: 'claude-connectors-scrape-v1',
+      enabled: true,
+      entries: []
+    });
+
+    const githubMarketplace = RegistrySchema.parse({
+      id: 'github-n-skills-marketplace',
+      kind: 'skill',
+      sourceType: 'community-list',
+      adapter: 'claude-code-marketplace-v1',
       enabled: true,
       entries: []
     });
@@ -43,7 +52,10 @@ describe('RegistrySchema', () => {
     expect(claude.kind).toBe('claude-plugin');
     expect(copilot.kind).toBe('copilot-extension');
     expect(copilotMarketplace.adapter).toBe('copilot-plugin-marketplace-v1');
+    expect(claude.adapter).toBe('claude-plugins-scrape-v1');
+    expect(claudeConnectors.kind).toBe('claude-connector');
     expect(claudeConnectors.adapter).toBe('claude-connectors-scrape-v1');
+    expect(githubMarketplace.adapter).toBe('claude-code-marketplace-v1');
   });
 });
 

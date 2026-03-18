@@ -124,10 +124,10 @@ describe('integration flow', () => {
     process.env.SKILLS_MCPS_INSTALL_DRY_RUN = '1';
 
     await expect(
-      installWithSkillSh({ id: 'mcp:remote-browser', overrideRisk: false, yes: true })
+      installWithSkillSh({ id: 'mcp:remote-browser', overrideRisk: false, overrideReview: true, yes: true })
     ).rejects.toThrow('Blocked by security policy');
 
-    const audit = await installWithSkillSh({ id: 'mcp:remote-browser', overrideRisk: true, yes: true });
+    const audit = await installWithSkillSh({ id: 'mcp:remote-browser', overrideRisk: true, overrideReview: true, yes: true });
     expect(audit.policyDecision).toBe('override-allowed');
   });
 

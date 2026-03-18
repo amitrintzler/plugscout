@@ -2,7 +2,7 @@
 
 All commands are exposed as npm scripts and run through `src/cli.ts`.
 
-Toolkit scope order is: Claude plugins, Copilot extensions, Skills, MCP servers.
+Toolkit scope order is: Claude plugins, Claude connectors, Copilot extensions, Skills, MCP servers.
 
 Packaged CLI behavior:
 
@@ -15,19 +15,23 @@ Packaged CLI behavior:
 
 - `npm run about`
 - `npm run status [-- --verbose]`
-- `npm run sync [-- --kind skill,mcp,claude-plugin,copilot-extension] [-- --dry-run]`
+- `npm run sync [-- --kind skill,mcp,claude-plugin,claude-connector,copilot-extension] [-- --dry-run]`
 
 ## Guided Setup and Diagnostics
 
 - `npm run init [-- --project .]`
 - `npm run doctor [-- --project .]`
-- `init` default kinds include `skill,mcp,claude-plugin,copilot-extension`
+- `npm run doctor -- --project . --install-deps`
+- `init` default kinds include `skill,mcp,claude-plugin,claude-connector,copilot-extension`
 - `riskPosture=strict` makes `list` and `recommend` default to safe-only views
+- `doctor --install-deps` bootstraps the supported `skills` CLI when it is missing
+- supported legacy MCP installs now prefer direct `npm install -g` or `docker pull` when the target is unambiguous
 
 ## Catalog Discovery and Inspection
 
 - `npm run list -- --kind mcp --limit 10`
 - `npm run list -- --kind claude-plugin --limit 20` (includes source, catalog type, confidence columns)
+- `npm run list -- --kind claude-connector --limit 20` (separate Claude Connectors catalog)
 - `npm run list -- --kind claude-plugin --limit 20 --readable` (wrapped wide table mode)
 - `npm run list -- --kind claude-plugin --limit 10 --details` (per-item decision evidence: trust/risk/provenance/install)
 - `npm run search -- security`
@@ -36,7 +40,7 @@ Packaged CLI behavior:
 - `npm run scan -- --project . --format table`
 - `npm run scan -- --project . --format json --out scan-report.json`
 - `npm run show -- --id mcp:filesystem`
-- `npm run show -- --id claude-plugin:asana` (prints provenance source/sourcePage when present)
+- `npm run show -- --id claude-connector:asana` (prints provenance source/sourcePage when present)
 - `npm run top -- --project . --limit 5`
 - `npm run top -- --project . --limit 5 --details` (score equation + block reason + install hint per item)
 
@@ -52,8 +56,9 @@ Packaged CLI behavior:
 ## Risk and Installation Controls
 
 - `npm run assess -- --id mcp:remote-browser`
-- `npm run install:item -- --id mcp:filesystem --yes`
+- `npm run install:item -- --id mcp:filesystem --yes --install-deps`
 - `npm run install:item -- --id mcp:remote-browser --yes --override-risk`
+- `npm run install:item -- --id skill:playwright --yes --install-deps`
 
 ## Security Operations
 
@@ -69,7 +74,7 @@ Packaged CLI behavior:
 ## Web Report
 
 - `toolkit web --out .toolkit/report.html`
-- `toolkit web --kind claude-plugin --limit 200 --open` (includes score legend + decision cards per item)
+- `toolkit web --kind claude-connector --limit 200 --open` (includes score legend + decision cards per item)
 
 ## Legacy Ingestion and Validation
 

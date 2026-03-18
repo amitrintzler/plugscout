@@ -68,5 +68,107 @@
       "Practitioner"
     ],
     "lastValidated": "2024-05-20"
+  },
+  {
+    "id": "skill:docker-container-ops",
+    "name": "Docker Container Ops",
+    "description": "Build, debug, optimize, and harden containerized services for local and CI workflows.",
+    "taxonomyPath": [
+      "Platform",
+      "Containers"
+    ],
+    "aliases": [
+      "Docker Operations"
+    ],
+    "proficiencyLevels": [
+      "Practitioner",
+      "Expert"
+    ],
+    "lastValidated": "2026-03-10"
+  },
+  {
+    "id": "skill:kubernetes-ops",
+    "name": "Kubernetes Ops",
+    "description": "Operate, troubleshoot, and secure Kubernetes workloads, manifests, and rollout workflows.",
+    "taxonomyPath": [
+      "Platform",
+      "Orchestration"
+    ],
+    "aliases": [
+      "K8s Operations"
+    ],
+    "proficiencyLevels": [
+      "Practitioner",
+      "Expert"
+    ],
+    "lastValidated": "2026-03-10"
+  },
+  {
+    "id": "skill:terraform-guardrails",
+    "name": "Terraform Guardrails",
+    "description": "Plan, review, and enforce policy around Terraform-based infrastructure changes.",
+    "taxonomyPath": [
+      "Platform",
+      "Infrastructure as Code"
+    ],
+    "aliases": [
+      "Terraform Governance"
+    ],
+    "proficiencyLevels": [
+      "Practitioner",
+      "Expert"
+    ],
+    "lastValidated": "2026-03-10"
+  },
+  {
+    "id": "skill:aws-platform-ops",
+    "name": "AWS Platform Ops",
+    "description": "Deploy, review, and troubleshoot AWS application and platform configurations across environments.",
+    "taxonomyPath": [
+      "Cloud",
+      "Operations"
+    ],
+    "aliases": [
+      "AWS Ops"
+    ],
+    "proficiencyLevels": [
+      "Practitioner",
+      "Expert"
+    ],
+    "lastValidated": "2026-03-10"
+  },
+  {
+    "id": "skill:postgres-ops",
+    "name": "Postgres Ops",
+    "description": "Tune queries, review migrations, and improve reliability for PostgreSQL-backed systems.",
+    "taxonomyPath": [
+      "Data",
+      "Database"
+    ],
+    "aliases": [
+      "PostgreSQL Operations"
+    ],
+    "proficiencyLevels": [
+      "Practitioner",
+      "Expert"
+    ],
+    "lastValidated": "2026-03-10"
+  },
+  {
+    "id": "skill:observability-incident-response",
+    "name": "Observability Incident Response",
+    "description": "Investigate incidents with logs, metrics, traces, dashboards, and postmortem-ready timelines.",
+    "taxonomyPath": [
+      "Reliability",
+      "Observability"
+    ],
+    "aliases": [
+      "Telemetry Triage"
+    ],
+    "proficiencyLevels": [
+      "Practitioner",
+      "Expert"
+    ],
+    "lastValidated": "2026-03-10"
   }
 ]

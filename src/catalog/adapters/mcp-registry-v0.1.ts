@@ -99,6 +99,9 @@ function mapMcpRegistryEntry(sourceId: string, entry: unknown): Record<string, u
     metadata: {
       websiteUrl: readString(server, ['websiteUrl']),
       repositoryUrl: readNestedString(server, ['repository', 'url']),
+      packageIdentifier: readNestedString(firstPackage, ['identifier']) ?? readNestedString(firstPackage, ['name']),
+      packageRegistryType: readString(firstPackage, ['registryType']),
+      packageRuntime: readString(firstPackage, ['runtime']),
       version: readString(server, ['version']),
       publishedAt
     }

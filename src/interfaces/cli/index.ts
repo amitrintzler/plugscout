@@ -8,7 +8,9 @@ import { loadItemInsights, loadRegistries, loadSecurityPolicy } from '../../conf
 import { syncCatalogs } from '../../catalog/sync.js';
 import { getStaleRegistries, loadSyncState } from '../../catalog/sync-state.js';
 import { loadCatalogItemById, loadCatalogItems, loadQuarantine, loadWhitelist } from '../../catalog/repository.js';
+import { installToolkitDependencies } from '../../install/dependencies.js';
 import { installWithSkillSh } from '../../install/skillsh.js';
+import { recordItemReview } from '../../install/review-state.js';
 import { logger } from '../../lib/logger.js';
 import { getPackagePath } from '../../lib/paths.js';
 import { CatalogKindSchema, type CatalogItem, type CatalogKind, type Recommendation } from '../../lib/validation/contracts.js';
@@ -42,10 +44,47 @@ interface LocalCliConfig {
   initializedAt: string;
 }
 
+const COMMAND_ALIASES: Record<string, string> = {
+  home: 'home',
+  about: 'about',
+  status: 'status',
+  init: 'init',
+  doctor: 'doctor',
+  list: 'list',
+  ls: 'list',
+  show: 'show',
+  inspect: 'show',
+  info: 'show',
+  details: 'show',
+  search: 'search',
+  find: 'search',
+  explain: 'explain',
+  why: 'explain',
+  scan: 'scan',
+  top: 'top',
+  sync: 'sync',
+  recommend: 'recommend',
+  rec: 'recommend',
+  reco: 'recommend',
+  web: 'web',
+  assess: 'assess',
+  install: 'install',
+  whitelist: 'whitelist',
+  quarantine: 'quarantine',
+  upgrade: 'upgrade',
+  help: 'help'
+};
+
 export async function runCli(argv: string[]): Promise<void> {
   const noUpdateCheck = hasFlag(argv, '--no-update-check');
   const filtered = argv.filter((arg) => arg !== '--no-update-check');
-  const [command = 'home', ...rest] = filtered;
+  const [rawCommand = 'home', ...rest] = filtered;
+  const command = normalizeCommand(rawCommand);
+
+  if (!command) {
+    printUnknownCommand(rawCommand);
+    return;
+  }
 
   switch (command) {
     case 'home':
@@ -125,14 +164,20 @@ async function handleHome(): Promise<void> {
 
 async function handleAbout(): Promise<void> {
   const packageRaw = await fs.readFile(getPackagePath('package.json'), 'utf8');
-  const pkg = JSON.parse(packageRaw) as { name?: string; version?: string; description?: string };
+  const pkg = JSON.parse(packageRaw) as { name?: string; version?: string; description?: string; author?: string };
 
   console.log(`${pkg.name ?? 'toolkit'} v${pkg.version ?? '0.0.0'}`);
   if (pkg.description) {
     console.log(pkg.description);
   }
-  console.log('Scope: Claude plugins, Copilot extensions, Skills, MCP servers');
+  if (pkg.author) {
+    console.log(`Author: ${pkg.author}`);
+  }
+  console.log('Scope: Claude plugins, Claude connectors, Copilot extensions, Skills, MCP servers');
   console.log('Ranking: trust-first (fit + trust - risk penalties + freshness bonus)');
+  console.log('Meaning: top/recommend output is repo-aware guidance, not a global popularity leaderboard.');
+  console.log('Install discipline: review each suggestion, check provenance and risk, and do not install blindly from rank alone.');
+  console.log('Install gate: install requires a recent `show` or `assess` for the same item, unless --override-review is used.');
   console.log('Sources: official-first provider registries with local fallback');
 }
 
@@ -156,7 +201,7 @@ async function handleStatus(args: string[]): Promise<void> {
   console.log('Catalog Status');
   console.log(`Items: ${items.length}`);
   console.log(
-    `Kinds: skill=${kindCounts.get('skill') ?? 0}, mcp=${kindCounts.get('mcp') ?? 0}, claude-plugin=${kindCounts.get('claude-plugin') ?? 0}, copilot-extension=${kindCounts.get('copilot-extension') ?? 0}`
+    `Kinds: skill=${kindCounts.get('skill') ?? 0}, mcp=${kindCounts.get('mcp') ?? 0}, claude-plugin=${kindCounts.get('claude-plugin') ?? 0}, claude-connector=${kindCounts.get('claude-connector') ?? 0}, copilot-extension=${kindCounts.get('copilot-extension') ?? 0}`
   );
   console.log(
     `Providers: ${Array.from(providerCounts.entries())
@@ -169,6 +214,9 @@ async function handleStatus(args: string[]): Promise<void> {
 
   const stale = getStaleRegistries(syncState);
   console.log(`Stale registries (>48h): ${stale.length === 0 ? 'none' : stale.join(', ')}`);
+  if (items.length === 0) {
+    printHint('Catalog is empty. Run `toolkit sync` or `npm run sync` to fetch the latest entries.');
+  }
 
   if (verbose) {
     console.log('\nRegistry Sync State');
@@ -200,7 +248,7 @@ async function handleInit(args: string[]): Promise<void> {
   const [items, policy] = await Promise.all([loadCatalogItems(), loadSecurityPolicy()]);
   const providers = Array.from(new Set(items.map((item) => item.provider))).sort((a, b) => a.localeCompare(b));
 
-  const defaultKinds: CatalogKind[] = ['skill', 'mcp', 'claude-plugin', 'copilot-extension'];
+  const defaultKinds: CatalogKind[] = ['skill', 'mcp', 'claude-plugin', 'claude-connector', 'copilot-extension'];
 
   const defaults: LocalCliConfig = {
     defaultKinds,
@@ -263,11 +311,22 @@ async function handleInit(args: string[]): Promise<void> {
   console.log(
     `Risk posture "${defaults.riskPosture}": ${describeRiskPosture(defaults.riskPosture)}`
   );
-  printHint('Run `npm run dev -- doctor` to verify local setup.');
+  printHint('Next: run `npm run doctor`, then `npm run recommend -- --project . --only-safe --limit 10`.');
 }
 
 async function handleDoctor(args: string[]): Promise<void> {
   const project = readFlag(args, '--project') ?? '.';
+  const installDeps = hasFlag(args, '--install-deps');
+
+  if (installDeps) {
+    const installed = await installToolkitDependencies();
+    if (installed.length === 0) {
+      console.log('Dependency bootstrap: nothing to install.');
+    } else {
+      console.log(`Dependency bootstrap installed: ${installed.join(', ')}`);
+    }
+  }
+
   const checks = await runDoctorChecks(project);
 
   const table = renderTable(
@@ -359,6 +418,12 @@ async function handleList(args: string[]): Promise<void> {
 
   filtered = sortCatalogRows(filtered, sort).slice(0, limit ?? 50);
 
+  if (filtered.length === 0) {
+    console.log('No catalog items matched your filters.');
+    printHint('Try a broader query, remove `--blocked/--risk-tier`, or use `toolkit search <term>`.');
+    return;
+  }
+
   if (format === 'json') {
     printJson(
       filtered.map((entry) => ({
@@ -425,7 +490,7 @@ async function handleShow(args: string[]): Promise<void> {
     loadItemInsights()
   ]);
   if (!item) {
-    throw new Error(`Catalog item not found: ${id}`);
+    throw new Error(await buildCatalogItemNotFoundMessage(id));
   }
 
   const assessment = await assessRisk(item);
@@ -445,8 +510,10 @@ async function handleShow(args: string[]): Promise<void> {
       quarantined: isQuarantined
     }
   });
+  await recordItemReview(item.id, 'show');
 
   printHint(`Install with: toolkit install --id ${item.id} --yes`);
+  printHint('Review provenance, risk, and capabilities first. Do not install blindly from a suggestion or score.');
   console.log(
     `Provenance: source=${item.source} catalogType=${getCatalogType(item)} confidence=${getSourceConfidence(item)}`
   );
@@ -478,6 +545,7 @@ async function handleSearch(args: string[]): Promise<void> {
 
   if (matches.length === 0) {
     console.log(`No matches for "${query}".`);
+    printHint('Try a broader term or browse by kind with `toolkit list --kind connectors`, `toolkit list --kind plugins`, or `toolkit list --kind mcp`.');
     return;
   }
 
@@ -640,6 +708,9 @@ async function handleTop(args: string[]): Promise<void> {
   const safe = ranked.filter((entry) => !entry.blocked).slice(0, limit);
 
   renderRecommendationsTable(safe, 'table', readable);
+  printHint('Ranking meaning: these are the best safe matches for this repo, not the globally most popular tools.');
+  printHint('Score formula: fit + trust + freshness - security - blocked.');
+  printHint('Review each suggestion before installing. Do not install blindly from rank alone.');
   printHint(`Risk scale (lower is safer): ${formatRiskScale(policy)}`);
   printHint('Use `show --id <catalog-id>` or `assess --id <catalog-id>` for deep inspection.');
   if (details) {
@@ -742,6 +813,9 @@ async function handleRecommend(args: string[]): Promise<void> {
     console.log(renderJson(ranked));
   } else {
     renderRecommendationsTable(ranked, format, readable);
+    printHint('Ranking meaning: these are the best matches for this repo under the current policy, not a global leaderboard.');
+    printHint('Score formula: fit + trust + freshness - security - blocked.');
+    printHint('Review each suggestion before installing. Do not install blindly from rank alone.');
     printHint(`Risk scale (lower is safer): ${formatRiskScale(policy)}`);
     if (details) {
       const [catalogItems, insights] = await Promise.all([loadCatalogItems(), loadItemInsights()]);
@@ -797,11 +871,12 @@ async function handleAssess(args: string[]): Promise<void> {
 
   const found = await loadCatalogItemById(id);
   if (!found) {
-    throw new Error(`Catalog item not found: ${id}`);
+    throw new Error(await buildCatalogItemNotFoundMessage(id));
   }
 
   const [assessment, policy] = await Promise.all([assessRisk(found), loadSecurityPolicy()]);
   console.log(renderJson(assessment));
+  await recordItemReview(found.id, 'assess');
   printHint(`Risk scale (lower is safer): ${formatRiskScale(policy)}`);
 }
 
@@ -812,10 +887,26 @@ async function handleInstall(args: string[]): Promise<void> {
   }
 
   const overrideRisk = hasFlag(args, '--override-risk');
+  const overrideReview = hasFlag(args, '--override-review');
+  const installDeps = hasFlag(args, '--install-deps');
   const yes = hasFlag(args, '--yes');
+  const found = await loadCatalogItemById(id);
+  if (!found) {
+    throw new Error(await buildCatalogItemNotFoundMessage(id));
+  }
 
-  const audit = await installWithSkillSh({ id, overrideRisk, yes });
+  if (installDeps) {
+    const installed = await installToolkitDependencies();
+    if (installed.length > 0) {
+      console.log(`Dependency bootstrap installed: ${installed.join(', ')}`);
+    }
+  }
+
+  const audit = await installWithSkillSh({ id, overrideRisk, overrideReview, yes });
   console.log(renderJson(audit));
+  printHint('Need ranking context? `top` and `recommend` are repo-aware suggestions, not global popularity charts.');
+  printHint('Always review the item with `show` or `assess` first. Do not install blindly from a score.');
+  printHint('Use `top --project . --details` to see score math for this repository.');
 }
 
 async function handleWhitelist(args: string[]): Promise<void> {
@@ -1026,27 +1117,53 @@ function computeSearchScore(item: CatalogItem, query: string): number {
 }
 
 function printHelp(): void {
-  console.log('Commands:');
-  console.log('  about');
+  console.log('Toolkit commands');
+  console.log('');
+  console.log('Start here');
   console.log('  init [--project .]');
-  console.log('  doctor [--project .]');
+  console.log('  doctor [--project .] [--install-deps]');
   console.log('  status [--verbose]');
-  console.log('  sync [--kind skill,mcp,claude-plugin,copilot-extension] [--dry-run]');
+  console.log('  sync [--kind skill,mcp,claude-plugin,claude-connector,copilot-extension] [--dry-run]');
+  console.log('');
+  console.log('Explore');
   console.log('  list [--kind ...] [--provider ...] [--risk-tier low|medium|high|critical] [--blocked true|false] [--search q] [--limit n] [--sort name|risk|trust] [--format json|table] [--readable] [--details]');
   console.log('  search <query>');
-  console.log('  explain [--kind ...] [--provider ...] [--limit n] [--format json|table]');
-  console.log('  scan [--project .] [--format table|json] [--out scan-report.json] [--llm]');
   console.log('  show --id <catalog-id>');
+  console.log('  explain [--kind ...] [--provider ...] [--limit n] [--format json|table]');
+  console.log('');
+  console.log('Recommend');
+  console.log('  scan [--project .] [--format table|json] [--out scan-report.json] [--llm]');
   console.log('  top [--project .] [--requirements requirements.yml] [--kind ...] [--limit n] [--llm] [--readable] [--details]');
   console.log('  recommend --project . --requirements requirements.yml --format json|table [--kind ...] [--provider ...] [--limit n] [--sort score|trust|risk|fit|name] [--only-safe] [--explain-scan] [--llm] [--export csv|md --out file] [--readable] [--details]');
-  console.log('  web [--out .toolkit/report.html] [--kind ...] [--limit n] [--open]');
+  console.log('  note: top/recommend are repo-aware rankings, not global popularity charts');
+  console.log('  note: review each suggestion before install; do not install blindly from rank alone');
+  console.log('  note: install requires recent `show` or `assess`, unless you pass --override-review');
+  console.log('');
+  console.log('Install and policy');
   console.log('  assess --id <catalog-id>');
-  console.log('  install --id <catalog-id> [--yes] [--override-risk]');
+  console.log('  install --id <catalog-id> [--yes] [--override-risk] [--override-review] [--install-deps]');
   console.log('  whitelist verify');
   console.log('  quarantine apply --report <path>');
-  console.log('  upgrade check');
   console.log('');
-  console.log('Global options:');
+  console.log('Other');
+  console.log('  about');
+  console.log('  web [--out .toolkit/report.html] [--kind ...] [--limit n] [--open]');
+  console.log('  upgrade check');
+  console.log('  help');
+  console.log('');
+  console.log('Kind aliases');
+  console.log('  skills -> skill');
+  console.log('  mcps, servers -> mcp');
+  console.log('  plugins -> claude-plugin');
+  console.log('  connectors -> claude-connector');
+  console.log('  extensions, copilot -> copilot-extension');
+  console.log('');
+  console.log('Examples');
+  console.log('  toolkit recommend --project . --only-safe --limit 10');
+  console.log('  toolkit list --kind connectors --limit 10');
+  console.log('  toolkit show --id claude-connector:asana');
+  console.log('');
+  console.log('Global options');
   console.log('  --no-update-check');
 }
 
@@ -1060,7 +1177,7 @@ async function loadLocalCliConfig(projectRoot: string): Promise<LocalCliConfig |
     }
 
     return {
-      defaultKinds: Array.isArray(parsed.defaultKinds) ? parsed.defaultKinds : ['skill', 'mcp', 'claude-plugin', 'copilot-extension'],
+      defaultKinds: Array.isArray(parsed.defaultKinds) ? parsed.defaultKinds : ['skill', 'mcp', 'claude-plugin', 'claude-connector', 'copilot-extension'],
       defaultProviders: Array.isArray(parsed.defaultProviders) ? parsed.defaultProviders : [],
       riskPosture: parsed.riskPosture,
       outputStyle: parsed.outputStyle === 'json' ? 'json' : 'rich-table',
@@ -1086,6 +1203,114 @@ function describeRiskPosture(posture: LocalCliConfig['riskPosture']): string {
   }
 
   return 'show full catalog/recommendation set, including blocked items with flags.';
+}
+
+function normalizeCommand(raw: string): string | null {
+  const normalized = raw.trim().toLowerCase();
+  return COMMAND_ALIASES[normalized] ?? null;
+}
+
+function printUnknownCommand(command: string): void {
+  console.log(`Unknown command: ${command}`);
+  const suggestions = suggestClosestCommandNames(command);
+  if (suggestions.length > 0) {
+    console.log(`Did you mean: ${suggestions.join(', ')}`);
+  }
+  console.log('');
+  printHelp();
+}
+
+function suggestClosestCommandNames(value: string): string[] {
+  const needle = value.trim().toLowerCase();
+  if (!needle) {
+    return [];
+  }
+
+  return Array.from(new Set(Object.values(COMMAND_ALIASES)))
+    .map((command) => ({ command, score: computeTextMatchScore(command, needle) }))
+    .filter((entry) => entry.score > 0)
+    .sort((a, b) => b.score - a.score || a.command.localeCompare(b.command))
+    .slice(0, 3)
+    .map((entry) => entry.command);
+}
+
+async function buildCatalogItemNotFoundMessage(id: string): Promise<string> {
+  const items = await loadCatalogItems();
+  const suggestions = suggestCatalogItems(items, id);
+  if (suggestions.length === 0) {
+    return `Catalog item not found: ${id}. Try \`toolkit search ${id}\` or \`toolkit list --kind connectors\`.`;
+  }
+
+  return `Catalog item not found: ${id}. Similar IDs: ${suggestions.join(', ')}.`;
+}
+
+function suggestCatalogItems(items: CatalogItem[], query: string): string[] {
+  const needle = query.trim().toLowerCase();
+  if (!needle) {
+    return [];
+  }
+
+  return items
+    .map((item) => ({ id: item.id, score: computeCatalogSuggestionScore(item, needle) }))
+    .filter((entry) => entry.score > 0)
+    .sort((a, b) => b.score - a.score || a.id.localeCompare(b.id))
+    .slice(0, 4)
+    .map((entry) => entry.id);
+}
+
+function computeCatalogSuggestionScore(item: CatalogItem, query: string): number {
+  const id = item.id.toLowerCase();
+  const name = item.name.toLowerCase();
+  const suffix = id.includes(':') ? id.split(':').slice(1).join(':') : id;
+  let score = 0;
+
+  if (id === query) {
+    return 1000;
+  }
+  if (suffix === query) {
+    score += 300;
+  }
+  if (id.startsWith(query)) {
+    score += 200;
+  }
+  if (id.includes(query)) {
+    score += 120;
+  }
+  if (name.includes(query)) {
+    score += 90;
+  }
+  if (query.includes(':') && suffix.includes(query.split(':').slice(1).join(':'))) {
+    score += 60;
+  }
+
+  return score;
+}
+
+function computeTextMatchScore(candidate: string, query: string): number {
+  const value = candidate.toLowerCase();
+  if (value === query) {
+    return 1000;
+  }
+  if (value.startsWith(query)) {
+    return 200;
+  }
+  if (value.includes(query) || query.includes(value)) {
+    return 120;
+  }
+  const sharedPrefix = longestSharedPrefixLength(value, query);
+  if (sharedPrefix >= 2) {
+    return sharedPrefix * 20;
+  }
+  return 0;
+}
+
+function longestSharedPrefixLength(left: string, right: string): number {
+  const max = Math.min(left.length, right.length);
+  let index = 0;
+  while (index < max && left[index] === right[index]) {
+    index += 1;
+  }
+  return index;
 }
 
 function renderCatalogDecisionDetails(

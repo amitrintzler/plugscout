@@ -20,7 +20,7 @@ const TOOLKIT_HOME = path.resolve(
 type FileSnapshot = { exists: boolean; content: string };
 const snapshots = new Map<string, FileSnapshot>();
 
-const REQUIRED_KINDS: CatalogKind[] = ['skill', 'mcp', 'claude-plugin', 'copilot-extension'];
+const REQUIRED_KINDS: CatalogKind[] = ['skill', 'mcp', 'claude-plugin', 'claude-connector', 'copilot-extension'];
 const PROJECT_FIXTURE = 'tests/fixtures/project-node';
 const REQUIREMENTS_FIXTURE = 'tests/fixtures/requirements.yml';
 
@@ -137,7 +137,7 @@ afterAll(async () => {
 });
 
 describe('functionality claims', () => {
-  it('discovers all four ecosystems and supports filtering by kind', async () => {
+  it('discovers all catalog kinds and supports filtering by kind', async () => {
     const registries = await loadRegistries();
     const availableKinds = new Set(registries.map((registry) => registry.kind));
 
@@ -180,10 +180,10 @@ describe('functionality claims', () => {
 
   it('blocks high-risk install unless override is provided', async () => {
     await expect(
-      installWithSkillSh({ id: 'mcp:remote-browser', overrideRisk: false, yes: true })
+      installWithSkillSh({ id: 'mcp:remote-browser', overrideRisk: false, overrideReview: true, yes: true })
     ).rejects.toThrow('Blocked by security policy');
 
-    const audit = await installWithSkillSh({ id: 'mcp:remote-browser', overrideRisk: true, yes: true });
+    const audit = await installWithSkillSh({ id: 'mcp:remote-browser', overrideRisk: true, overrideReview: true, yes: true });
     expect(audit.policyDecision).toBe('override-allowed');
   });
 

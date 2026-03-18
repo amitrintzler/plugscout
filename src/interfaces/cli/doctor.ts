@@ -4,17 +4,23 @@ import fs from 'node:fs/promises';
 
 import { getStaleRegistries, loadSyncState } from '../../catalog/sync-state.js';
 import { loadCatalogItems } from '../../catalog/repository.js';
+import { hasLegacySkillSh, resolveSkillsRuntime } from '../../install/dependencies.js';
 import type { DoctorCheckResult } from './types.js';
 
 export async function runDoctorChecks(projectPath = '.'): Promise<DoctorCheckResult[]> {
   const checks: DoctorCheckResult[] = [];
 
+  checks.push(checkSkillsRuntime());
   checks.push(
-    checkBinary('skill.sh', {
-      required: true,
-      suggestion:
-        'Install skill.sh and verify with: skill.sh --version'
-    })
+    hasLegacySkillSh()
+      ? { name: 'Legacy skill.sh', status: 'pass', message: 'skill.sh available' }
+      : {
+          name: 'Legacy skill.sh',
+          status: 'warn',
+          message: 'skill.sh not found',
+          suggestion:
+            'Optional: some legacy MCP installs still expect skill.sh. Official skills can install through the modern skills CLI.'
+        }
   );
   checks.push(checkBinary('gh'));
 
@@ -69,6 +75,24 @@ export async function runDoctorChecks(projectPath = '.'): Promise<DoctorCheckRes
   }
 
   return checks;
+}
+
+function checkSkillsRuntime(): DoctorCheckResult {
+  const runtime = resolveSkillsRuntime();
+  if (runtime) {
+    return {
+      name: 'Skills CLI',
+      status: 'pass',
+      message: `${runtime.label} available`
+    };
+  }
+
+  return {
+    name: 'Skills CLI',
+    status: 'fail',
+    message: 'skills CLI not found',
+    suggestion: 'Run: toolkit doctor --install-deps'
+  };
 }
 
 function checkBinary(

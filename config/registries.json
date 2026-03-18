@@ -130,6 +130,244 @@
             "exfiltrationSignals": 0,
             "integrityAlerts": 0
           }
+        },
+        {
+          "id": "skill:docker-container-ops",
+          "name": "Docker Container Ops",
+          "description": "Build, debug, optimize, and harden containerized services for local and CI workflows.",
+          "capabilities": ["automation", "security", "guardrails"],
+          "compatibility": ["container", "node", "python", "general"],
+          "install": { "kind": "skill.sh", "target": "docker-container-ops", "args": [] },
+          "adoptionSignal": 88,
+          "maintenanceSignal": 84,
+          "provenanceSignal": 72,
+          "freshnessSignal": 82,
+          "securitySignals": {
+            "knownVulnerabilities": 0,
+            "suspiciousPatterns": 0,
+            "injectionFindings": 0,
+            "exfiltrationSignals": 0,
+            "integrityAlerts": 0
+          }
+        },
+        {
+          "id": "skill:kubernetes-ops",
+          "name": "Kubernetes Ops",
+          "description": "Operate, troubleshoot, and secure Kubernetes workloads, manifests, and rollout workflows.",
+          "capabilities": ["automation", "guardrails", "security"],
+          "compatibility": ["container", "kubernetes", "cloud", "general"],
+          "install": { "kind": "skill.sh", "target": "kubernetes-ops", "args": [] },
+          "adoptionSignal": 86,
+          "maintenanceSignal": 83,
+          "provenanceSignal": 72,
+          "freshnessSignal": 84,
+          "securitySignals": {
+            "knownVulnerabilities": 0,
+            "suspiciousPatterns": 0,
+            "injectionFindings": 0,
+            "exfiltrationSignals": 0,
+            "integrityAlerts": 0
+          }
+        },
+        {
+          "id": "skill:terraform-guardrails",
+          "name": "Terraform Guardrails",
+          "description": "Plan, review, and enforce policy around Terraform-based infrastructure changes.",
+          "capabilities": ["automation", "guardrails", "security"],
+          "compatibility": ["cloud", "aws", "azure", "gcp", "general"],
+          "install": { "kind": "skill.sh", "target": "terraform-guardrails", "args": [] },
+          "adoptionSignal": 81,
+          "maintenanceSignal": 84,
+          "provenanceSignal": 74,
+          "freshnessSignal": 83,
+          "securitySignals": {
+            "knownVulnerabilities": 0,
+            "suspiciousPatterns": 0,
+            "injectionFindings": 0,
+            "exfiltrationSignals": 0,
+            "integrityAlerts": 0
+          }
+        },
+        {
+          "id": "skill:aws-platform-ops",
+          "name": "AWS Platform Ops",
+          "description": "Deploy, review, and troubleshoot AWS application and platform configurations across environments.",
+          "capabilities": ["automation", "security", "search"],
+          "compatibility": ["aws", "cloud", "serverless", "general"],
+          "install": { "kind": "skill.sh", "target": "aws-platform-ops", "args": [] },
+          "adoptionSignal": 87,
+          "maintenanceSignal": 82,
+          "provenanceSignal": 76,
+          "freshnessSignal": 80,
+          "securitySignals": {
+            "knownVulnerabilities": 0,
+            "suspiciousPatterns": 0,
+            "injectionFindings": 0,
+            "exfiltrationSignals": 0,
+            "integrityAlerts": 0
+          }
+        },
+        {
+          "id": "skill:postgres-ops",
+          "name": "Postgres Ops",
+          "description": "Tune queries, review migrations, and improve reliability for PostgreSQL-backed systems.",
+          "capabilities": ["automation", "guardrails", "search"],
+          "compatibility": ["postgresql", "node", "python", "general"],
+          "install": { "kind": "skill.sh", "target": "postgres-ops", "args": [] },
+          "adoptionSignal": 85,
+          "maintenanceSignal": 84,
+          "provenanceSignal": 78,
+          "freshnessSignal": 82,
+          "securitySignals": {
+            "knownVulnerabilities": 0,
+            "suspiciousPatterns": 0,
+            "injectionFindings": 0,
+            "exfiltrationSignals": 0,
+            "integrityAlerts": 0
+          }
+        },
+        {
+          "id": "skill:observability-incident-response",
+          "name": "Observability Incident Response",
+          "description": "Investigate incidents with logs, metrics, traces, dashboards, and postmortem-ready timelines.",
+          "capabilities": ["automation", "search", "security"],
+          "compatibility": ["cloud", "container", "node", "python", "general"],
+          "install": { "kind": "skill.sh", "target": "observability-incident-response", "args": [] },
+          "adoptionSignal": 79,
+          "maintenanceSignal": 81,
+          "provenanceSignal": 73,
+          "freshnessSignal": 81,
+          "securitySignals": {
+            "knownVulnerabilities": 0,
+            "suspiciousPatterns": 0,
+            "injectionFindings": 0,
+            "exfiltrationSignals": 0,
+            "integrityAlerts": 0
+          }
+        }
+      ]
+    },
+    {
+      "id": "github-curated-industry-skills",
+      "kind": "skill",
+      "sourceType": "community-list",
+      "adapter": "direct",
+      "enabled": true,
+      "officialOnly": false,
+      "entries": [
+        {
+          "id": "skill:docker-container-ops",
+          "name": "Docker Container Ops",
+          "description": "Build, debug, optimize, and harden containerized services for local and CI workflows.",
+          "capabilities": ["automation", "security", "guardrails"],
+          "compatibility": ["container", "node", "python", "general"],
+          "install": { "kind": "skill.sh", "target": "docker-container-ops", "args": [] },
+          "adoptionSignal": 88,
+          "maintenanceSignal": 84,
+          "provenanceSignal": 72,
+          "freshnessSignal": 82,
+          "securitySignals": {
+            "knownVulnerabilities": 0,
+            "suspiciousPatterns": 0,
+            "injectionFindings": 0,
+            "exfiltrationSignals": 0,
+            "integrityAlerts": 0
+          }
+        },
+        {
+          "id": "skill:kubernetes-ops",
+          "name": "Kubernetes Ops",
+          "description": "Operate, troubleshoot, and secure Kubernetes workloads, manifests, and rollout workflows.",
+          "capabilities": ["automation", "guardrails", "security"],
+          "compatibility": ["container", "kubernetes", "cloud", "general"],
+          "install": { "kind": "skill.sh", "target": "kubernetes-ops", "args": [] },
+          "adoptionSignal": 86,
+          "maintenanceSignal": 83,
+          "provenanceSignal": 72,
+          "freshnessSignal": 84,
+          "securitySignals": {
+            "knownVulnerabilities": 0,
+            "suspiciousPatterns": 0,
+            "injectionFindings": 0,
+            "exfiltrationSignals": 0,
+            "integrityAlerts": 0
+          }
+        },
+        {
+          "id": "skill:terraform-guardrails",
+          "name": "Terraform Guardrails",
+          "description": "Plan, review, and enforce policy around Terraform-based infrastructure changes.",
+          "capabilities": ["automation", "guardrails", "security"],
+          "compatibility": ["cloud", "aws", "azure", "gcp", "general"],
+          "install": { "kind": "skill.sh", "target": "terraform-guardrails", "args": [] },
+          "adoptionSignal": 81,
+          "maintenanceSignal": 84,
+          "provenanceSignal": 74,
+          "freshnessSignal": 83,
+          "securitySignals": {
+            "knownVulnerabilities": 0,
+            "suspiciousPatterns": 0,
+            "injectionFindings": 0,
+            "exfiltrationSignals": 0,
+            "integrityAlerts": 0
+          }
+        },
+        {
+          "id": "skill:aws-platform-ops",
+          "name": "AWS Platform Ops",
+          "description": "Deploy, review, and troubleshoot AWS application and platform configurations across environments.",
+          "capabilities": ["automation", "security", "search"],
+          "compatibility": ["aws", "cloud", "serverless", "general"],
+          "install": { "kind": "skill.sh", "target": "aws-platform-ops", "args": [] },
+          "adoptionSignal": 87,
+          "maintenanceSignal": 82,
+          "provenanceSignal": 76,
+          "freshnessSignal": 80,
+          "securitySignals": {
+            "knownVulnerabilities": 0,
+            "suspiciousPatterns": 0,
+            "injectionFindings": 0,
+            "exfiltrationSignals": 0,
+            "integrityAlerts": 0
+          }
+        },
+        {
+          "id": "skill:postgres-ops",
+          "name": "Postgres Ops",
+          "description": "Tune queries, review migrations, and improve reliability for PostgreSQL-backed systems.",
+          "capabilities": ["automation", "guardrails", "search"],
+          "compatibility": ["postgresql", "node", "python", "general"],
+          "install": { "kind": "skill.sh", "target": "postgres-ops", "args": [] },
+          "adoptionSignal": 85,
+          "maintenanceSignal": 84,
+          "provenanceSignal": 78,
+          "freshnessSignal": 82,
+          "securitySignals": {
+            "knownVulnerabilities": 0,
+            "suspiciousPatterns": 0,
+            "injectionFindings": 0,
+            "exfiltrationSignals": 0,
+            "integrityAlerts": 0
+          }
+        },
+        {
+          "id": "skill:observability-incident-response",
+          "name": "Observability Incident Response",
+          "description": "Investigate incidents with logs, metrics, traces, dashboards, and postmortem-ready timelines.",
+          "capabilities": ["automation", "search", "security"],
+          "compatibility": ["cloud", "container", "node", "python", "general"],
+          "install": { "kind": "skill.sh", "target": "observability-incident-response", "args": [] },
+          "adoptionSignal": 79,
+          "maintenanceSignal": 81,
+          "provenanceSignal": 73,
+          "freshnessSignal": 81,
+          "securitySignals": {
+            "knownVulnerabilities": 0,
+            "suspiciousPatterns": 0,
+            "injectionFindings": 0,
+            "exfiltrationSignals": 0,
+            "integrityAlerts": 0
+          }
         }
       ]
     },
@@ -328,12 +566,117 @@
       "entries": []
     },
     {
+      "id": "anthropic-skills",
+      "kind": "skill",
+      "sourceType": "vendor-feed",
+      "adapter": "claude-code-marketplace-v1",
+      "enabled": true,
+      "officialOnly": true,
+      "remote": {
+        "url": "https://raw.githubusercontent.com/anthropics/skills/main/.claude-plugin/marketplace.json",
+        "format": "catalog-json",
+        "entryPath": "plugins",
+        "timeoutMs": 12000,
+        "fallbackToLocal": true,
+        "provider": "anthropic",
+        "official": true,
+        "licenseHint": "vendor"
+      },
+      "entries": []
+    },
+    {
+      "id": "github-n-skills-marketplace",
+      "kind": "skill",
+      "sourceType": "community-list",
+      "adapter": "claude-code-marketplace-v1",
+      "enabled": true,
+      "officialOnly": false,
+      "remote": {
+        "url": "https://raw.githubusercontent.com/numman-ali/n-skills/main/.claude-plugin/marketplace.json",
+        "format": "catalog-json",
+        "entryPath": "plugins",
+        "timeoutMs": 12000,
+        "fallbackToLocal": true,
+        "provider": "github",
+        "official": false,
+        "licenseHint": "community"
+      },
+      "entries": []
+    },
+    {
+      "id": "trailofbits-skills-marketplace",
+      "kind": "skill",
+      "sourceType": "community-list",
+      "adapter": "claude-code-marketplace-v1",
+      "enabled": true,
+      "officialOnly": false,
+      "remote": {
+        "url": "https://raw.githubusercontent.com/trailofbits/skills/main/.claude-plugin/marketplace.json",
+        "format": "catalog-json",
+        "entryPath": "plugins",
+        "timeoutMs": 12000,
+        "fallbackToLocal": true,
+        "provider": "github",
+        "official": false,
+        "licenseHint": "community"
+      },
+      "entries": []
+    },
+    {
+      "id": "github-mhattingpete-claude-skills",
+      "kind": "skill",
+      "sourceType": "community-list",
+      "adapter": "claude-code-marketplace-v1",
+      "enabled": true,
+      "officialOnly": false,
+      "remote": {
+        "url": "https://raw.githubusercontent.com/mhattingpete/claude-skills-marketplace/main/.claude-plugin/marketplace.json",
+        "format": "catalog-json",
+        "entryPath": "plugins",
+        "timeoutMs": 12000,
+        "fallbackToLocal": true,
+        "provider": "github",
+        "official": false,
+        "licenseHint": "community"
+      },
+      "entries": []
+    },
+    {
+      "id": "github-neon-ai-rules",
+      "kind": "skill",
+      "sourceType": "vendor-feed",
+      "adapter": "claude-code-marketplace-v1",
+      "enabled": true,
+      "officialOnly": true,
+      "remote": {
+        "url": "https://raw.githubusercontent.com/neondatabase-labs/ai-rules/main/.claude-plugin/marketplace.json",
+        "format": "catalog-json",
+        "entryPath": "plugins",
+        "timeoutMs": 12000,
+        "fallbackToLocal": true,
+        "provider": "github",
+        "official": true,
+        "licenseHint": "vendor"
+      },
+      "entries": []
+    },
+    {
       "id": "official-claude-plugins",
       "kind": "claude-plugin",
       "sourceType": "vendor-feed",
-      "adapter": "claude-plugins-v0.1",
+      "adapter": "claude-plugins-scrape-v1",
       "enabled": true,
       "officialOnly": true,
+      "remote": {
+        "url": "https://claude.com/plugins",
+        "format": "html",
+        "supportsUpdatedSince": false,
+        "timeoutMs": 12000,
+        "fallbackToLocal": true,
+        "provider": "anthropic",
+        "official": true,
+        "licenseHint": "vendor"
+      },
       "entries": [
         {
           "id": "claude-plugin:workspace-ops",
@@ -412,6 +755,101 @@
           }
         }
       ]
+    },
+    {
+      "id": "anthropic-claude-plugins-official-github",
+      "kind": "claude-plugin",
+      "sourceType": "vendor-feed",
+      "adapter": "claude-code-marketplace-v1",
+      "enabled": true,
+      "officialOnly": true,
+      "remote": {
+        "url": "https://raw.githubusercontent.com/anthropics/claude-plugins-official/main/.claude-plugin/marketplace.json",
+        "format": "catalog-json",
+        "entryPath": "plugins",
+        "timeoutMs": 12000,
+        "fallbackToLocal": true,
+        "provider": "anthropic",
+        "official": true,
+        "licenseHint": "vendor"
+      },
+      "entries": []
+    },
+    {
+      "id": "anthropic-knowledge-work-plugins",
+      "kind": "claude-plugin",
+      "sourceType": "vendor-feed",
+      "adapter": "claude-code-marketplace-v1",
+      "enabled": true,
+      "officialOnly": true,
+      "remote": {
+        "url": "https://raw.githubusercontent.com/anthropics/knowledge-work-plugins/main/.claude-plugin/marketplace.json",
+        "format": "catalog-json",
+        "entryPath": "plugins",
+        "timeoutMs": 12000,
+        "fallbackToLocal": true,
+        "provider": "anthropic",
+        "official": true,
+        "licenseHint": "vendor"
+      },
+      "entries": []
+    },
+    {
+      "id": "anthropic-financial-services-plugins",
+      "kind": "claude-plugin",
+      "sourceType": "vendor-feed",
+      "adapter": "claude-code-marketplace-v1",
+      "enabled": true,
+      "officialOnly": true,
+      "remote": {
+        "url": "https://raw.githubusercontent.com/anthropics/financial-services-plugins/main/.claude-plugin/marketplace.json",
+        "format": "catalog-json",
+        "entryPath": "plugins",
+        "timeoutMs": 12000,
+        "fallbackToLocal": true,
+        "provider": "anthropic",
+        "official": true,
+        "licenseHint": "vendor"
+      },
+      "entries": []
+    },
+    {
+      "id": "github-docker-claude-plugins",
+      "kind": "claude-plugin",
+      "sourceType": "vendor-feed",
+      "adapter": "claude-code-marketplace-v1",
+      "enabled": true,
+      "officialOnly": true,
+      "remote": {
+        "url": "https://raw.githubusercontent.com/docker/claude-plugins/main/.claude-plugin/marketplace.json",
+        "format": "catalog-json",
+        "entryPath": "plugins",
+        "timeoutMs": 12000,
+        "fallbackToLocal": true,
+        "provider": "github",
+        "official": true,
+        "licenseHint": "vendor"
+      },
+      "entries": []
+    },
+    {
+      "id": "github-pleaseai-claude-code-plugins",
+      "kind": "claude-plugin",
+      "sourceType": "community-list",
+      "adapter": "claude-code-marketplace-v1",
+      "enabled": true,
+      "officialOnly": false,
+      "remote": {
+        "url": "https://raw.githubusercontent.com/pleaseai/claude-code-plugins/main/.claude-plugin/marketplace.json",
+        "format": "catalog-json",
+        "entryPath": "plugins",
+        "timeoutMs": 12000,
+        "fallbackToLocal": true,
+        "provider": "github",
+        "official": false,
+        "licenseHint": "community"
+      },
+      "entries": []
     },
     {
       "id": "official-copilot-extensions",
@@ -541,7 +979,7 @@
     },
     {
       "id": "anthropic-claude-connectors-scrape",
-      "kind": "claude-plugin",
+      "kind": "claude-connector",
       "sourceType": "vendor-feed",
       "adapter": "claude-connectors-scrape-v1",
       "enabled": true,
@@ -556,7 +994,92 @@
         "official": true,
         "licenseHint": "vendor"
       },
-      "entries": []
+      "entries": [
+        {
+          "id": "claude-connector:asana",
+          "name": "Asana",
+          "description": "Connect Claude to Asana tasks, projects, and workspace context.",
+          "capabilities": ["tickets", "automation"],
+          "compatibility": ["claude", "mcp"],
+          "install": {
+            "kind": "manual",
+            "instructions": "Enable this connector from Claude Connectors.",
+            "url": "https://claude.com/connectors/asana"
+          },
+          "adoptionSignal": 60,
+          "maintenanceSignal": 68,
+          "provenanceSignal": 86,
+          "freshnessSignal": 70,
+          "securitySignals": {
+            "knownVulnerabilities": 0,
+            "suspiciousPatterns": 0,
+            "injectionFindings": 0,
+            "exfiltrationSignals": 0,
+            "integrityAlerts": 0
+          },
+          "metadata": {
+            "catalogType": "connector",
+            "sourcePage": "https://claude.com/connectors",
+            "sourceConfidence": "official"
+          }
+        },
+        {
+          "id": "claude-connector:atlassian",
+          "name": "Atlassian",
+          "description": "Connect Claude to Atlassian tools for docs, tickets, and team knowledge.",
+          "capabilities": ["docs", "tickets", "automation"],
+          "compatibility": ["claude", "mcp"],
+          "install": {
+            "kind": "manual",
+            "instructions": "Enable this connector from Claude Connectors.",
+            "url": "https://claude.com/connectors/atlassian"
+          },
+          "adoptionSignal": 62,
+          "maintenanceSignal": 69,
+          "provenanceSignal": 86,
+          "freshnessSignal": 70,
+          "securitySignals": {
+            "knownVulnerabilities": 0,
+            "suspiciousPatterns": 0,
+            "injectionFindings": 0,
+            "exfiltrationSignals": 0,
+            "integrityAlerts": 0
+          },
+          "metadata": {
+            "catalogType": "connector",
+            "sourcePage": "https://claude.com/connectors",
+            "sourceConfidence": "official"
+          }
+        },
+        {
+          "id": "claude-connector:box",
+          "name": "Box",
+          "description": "Connect Claude to Box content and files for enterprise document retrieval.",
+          "capabilities": ["docs", "search", "automation"],
+          "compatibility": ["claude", "mcp"],
+          "install": {
+            "kind": "manual",
+            "instructions": "Enable this connector from Claude Connectors.",
+            "url": "https://claude.com/connectors/box"
+          },
+          "adoptionSignal": 58,
+          "maintenanceSignal": 66,
+          "provenanceSignal": 85,
+          "freshnessSignal": 69,
+          "securitySignals": {
+            "knownVulnerabilities": 0,
+            "suspiciousPatterns": 0,
+            "injectionFindings": 0,
+            "exfiltrationSignals": 0,
+            "integrityAlerts": 0
+          },
+          "metadata": {
+            "catalogType": "connector",
+            "sourcePage": "https://claude.com/connectors",
+            "sourceConfidence": "official"
+          }
+        }
+      ]
     }
   ]
 }

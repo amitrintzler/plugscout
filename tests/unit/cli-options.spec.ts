@@ -5,6 +5,12 @@ import { readCsvList, readKinds, readLimit, readSort } from '../../src/interface
 describe('cli options', () => {
   it('parses kinds and csv flags', () => {
     expect(readKinds(['--kind', 'skill,mcp'])).toEqual(['skill', 'mcp']);
+    expect(readKinds(['--kind', 'claude-plugin,claude-connector'])).toEqual(['claude-plugin', 'claude-connector']);
+    expect(readKinds(['--kind', 'plugins,connectors,extensions'])).toEqual([
+      'claude-plugin',
+      'claude-connector',
+      'copilot-extension'
+    ]);
     expect(readCsvList(['--provider', 'openai,github'], '--provider')).toEqual(['openai', 'github']);
   });
 
@@ -16,5 +22,6 @@ describe('cli options', () => {
   it('throws on invalid sort and limit', () => {
     expect(() => readSort(['--sort', 'weird'])).toThrow();
     expect(() => readLimit(['--limit', '0'])).toThrow();
+    expect(() => readKinds(['--kind', 'weird'])).toThrow('Invalid --kind value');
   });
 });

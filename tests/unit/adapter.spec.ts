@@ -162,6 +162,32 @@ describe('adaptRegistryEntries', () => {
     ]);
   });
 
+  it('maps Claude plugin entries scraped from plugins page HTML', () => {
+    const registry = RegistrySchema.parse({
+      id: 'official-claude-plugins',
+      kind: 'claude-plugin',
+      sourceType: 'vendor-feed',
+      adapter: 'claude-plugins-scrape-v1',
+      enabled: true,
+      entries: []
+    });
+
+    const html = '<a href="/plugins/playwright"><span>Playwright</span></a>';
+    const result = adaptRegistryEntries(registry, [html]);
+
+    expect(result).toEqual([
+      expect.objectContaining({
+        id: 'claude-plugin:playwright',
+        kind: 'claude-plugin',
+        provider: 'anthropic',
+        metadata: expect.objectContaining({
+          catalogType: 'plugin',
+          sourceConfidence: 'scraped'
+        })
+      })
+    ]);
+  });
+
   it('maps copilot extension entries', () => {
     const registry = RegistrySchema.parse({
       id: 'official-copilot-extensions',
@@ -227,7 +253,7 @@ describe('adaptRegistryEntries', () => {
   it('maps Claude connector entries scraped from connectors page HTML', () => {
     const registry = RegistrySchema.parse({
       id: 'anthropic-claude-connectors-scrape',
-      kind: 'claude-plugin',
+      kind: 'claude-connector',
       sourceType: 'vendor-feed',
       adapter: 'claude-connectors-scrape-v1',
       enabled: true,
@@ -239,12 +265,148 @@ describe('adaptRegistryEntries', () => {
 
     expect(result).toEqual([
       expect.objectContaining({
-        id: 'claude-plugin:asana',
-        kind: 'claude-plugin',
+        id: 'claude-connector:asana',
+        kind: 'claude-connector',
         provider: 'anthropic',
         metadata: expect.objectContaining({
           catalogType: 'connector',
           sourceConfidence: 'scraped'
+        })
+      })
+    ]);
+  });
+
+  it('maps GitHub marketplace skill entries', () => {
+    const registry = RegistrySchema.parse({
+      id: 'github-neon-ai-rules',
+      kind: 'skill',
+      sourceType: 'vendor-feed',
+      adapter: 'claude-code-marketplace-v1',
+      enabled: true,
+      remote: {
+        url: 'https://raw.githubusercontent.com/neondatabase-labs/ai-rules/main/.claude-plugin/marketplace.json',
+        format: 'catalog-json',
+        entryPath: 'plugins'
+      },
+      entries: []
+    });
+
+    const result = adaptRegistryEntries(registry, [
+      {
+        name: 'neon-plugin',
+        description: 'Neon database development skills including authentication and Drizzle ORM.',
+        version: '1.1.0',
+        keywords: ['neon', 'postgres', 'database', 'auth'],
+        source: './neon-plugin'
+      }
+    ]);
+
+    expect(result).toEqual([
+      expect.objectContaining({
+        id: 'skill:neon-plugin',
+        kind: 'skill',
+        provider: 'github',
+        compatibility: expect.arrayContaining(['database', 'general']),
+        install: expect.objectContaining({
+          kind: 'manual',
+          url: 'https://github.com/neondatabase-labs/ai-rules/tree/main/neon-plugin'
+        }),
+        metadata: expect.objectContaining({
+          catalogType: 'skill',
+          sourceConfidence: 'official'
+        })
+      })
+    ]);
+  });
+
+  it('expands bundled skill marketplace entries into individual skills', () => {
+    const registry = RegistrySchema.parse({
+      id: 'anthropic-skills',
+      kind: 'skill',
+      sourceType: 'vendor-feed',
+      adapter: 'claude-code-marketplace-v1',
+      enabled: true,
+      remote: {
+        url: 'https://raw.githubusercontent.com/anthropics/skills/main/.claude-plugin/marketplace.json',
+        format: 'catalog-json',
+        entryPath: 'plugins',
+        provider: 'anthropic'
+      },
+      entries: []
+    });
+
+    const result = adaptRegistryEntries(registry, [
+      {
+        name: 'document-skills',
+        description: 'Collection of document processing suite.',
+        source: './',
+        skills: ['./skills/xlsx', './skills/docx']
+      }
+    ]);
+
+    expect(result).toEqual([
+      expect.objectContaining({
+        id: 'skill:docx',
+        kind: 'skill',
+        provider: 'anthropic',
+        metadata: expect.objectContaining({
+          bundledSkillPath: 'skills/docx',
+          marketplacePlugin: 'document-skills'
+        })
+      }),
+      expect.objectContaining({
+        id: 'skill:xlsx',
+        kind: 'skill',
+        provider: 'anthropic',
+        metadata: expect.objectContaining({
+          bundledSkillPath: 'skills/xlsx',
+          marketplacePlugin: 'document-skills'
+        })
+      })
+    ]);
+  });
+
+  it('maps GitHub marketplace Claude plugin entries', () => {
+    const registry = RegistrySchema.parse({
+      id: 'github-pleaseai-claude-code-plugins',
+      kind: 'claude-plugin',
+      sourceType: 'community-list',
+      adapter: 'claude-code-marketplace-v1',
+      enabled: true,
+      remote: {
+        url: 'https://raw.githubusercontent.com/pleaseai/claude-code-plugins/main/.claude-plugin/marketplace.json',
+        format: 'catalog-json',
+        entryPath: 'plugins'
+      },
+      entries: []
+    });
+
+    const result = adaptRegistryEntries(registry, [
+      {
+        name: 'chrome-devtools-mcp',
+        description: 'Control and inspect a live Chrome browser through MCP.',
+        category: 'browser',
+        keywords: ['chrome', 'devtools', 'browser', 'debugging'],
+        source: {
+          source: 'github',
+          repo: 'ChromeDevTools/chrome-devtools-mcp'
+        }
+      }
+    ]);
+
+    expect(result).toEqual([
+      expect.objectContaining({
+        id: 'claude-plugin:chrome-devtools-mcp',
+        kind: 'claude-plugin',
+        provider: 'github',
+        capabilities: expect.arrayContaining(['browser-control']),
+        install: expect.objectContaining({
+          kind: 'manual',
+          url: 'https://github.com/ChromeDevTools/chrome-devtools-mcp'
+        }),
+        metadata: expect.objectContaining({
+          catalogType: 'plugin',
+          sourceConfidence: 'vetted-curated'
         })
       })
     ]);

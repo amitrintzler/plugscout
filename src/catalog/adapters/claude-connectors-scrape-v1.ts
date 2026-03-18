@@ -14,7 +14,7 @@ export function adaptClaudeConnectorsScrapeEntries(sourceId: string, entries: un
   const seen = new Set<string>();
 
   for (const slug of connectorSlugs) {
-    const id = `claude-plugin:${slug}`;
+    const id = `claude-connector:${slug}`;
     if (seen.has(id)) {
       continue;
     }
@@ -30,7 +30,7 @@ export function adaptClaudeConnectorsScrapeEntries(sourceId: string, entries: un
     seen.add(id);
     mapped.push({
       id,
-      kind: 'claude-plugin',
+      kind: 'claude-connector',
       provider: 'anthropic',
       name: sanitizeText(name, 120),
       description: sanitizeText(

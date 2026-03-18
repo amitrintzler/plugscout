@@ -40,7 +40,11 @@
 
 Current plugin source-of-truth configuration:
 
+- Claude plugins scrape: `https://claude.com/plugins`
 - Claude connectors scrape: `https://claude.com/connectors`
+- Anthropic GitHub plugin manifests: `https://raw.githubusercontent.com/anthropics/claude-plugins-official/main/.claude-plugin/marketplace.json`, `https://raw.githubusercontent.com/anthropics/knowledge-work-plugins/main/.claude-plugin/marketplace.json`, `https://raw.githubusercontent.com/anthropics/financial-services-plugins/main/.claude-plugin/marketplace.json`
+- GitHub skills marketplaces: `https://raw.githubusercontent.com/numman-ali/n-skills/main/.claude-plugin/marketplace.json`, `https://raw.githubusercontent.com/mhattingpete/claude-skills-marketplace/main/.claude-plugin/marketplace.json`, `https://raw.githubusercontent.com/neondatabase-labs/ai-rules/main/.claude-plugin/marketplace.json`
+- GitHub Claude Code plugin marketplaces: `https://raw.githubusercontent.com/docker/claude-plugins/main/.claude-plugin/marketplace.json`, `https://raw.githubusercontent.com/pleaseai/claude-code-plugins/main/.claude-plugin/marketplace.json`
 - Copilot marketplace (official): `https://raw.githubusercontent.com/github/copilot-plugins/main/.github/plugin/marketplace.json`
 - Copilot marketplace (curated): `https://raw.githubusercontent.com/github/awesome-copilot/main/.github/plugin/marketplace.json`
 
@@ -55,7 +59,7 @@ Supported `remote.format` values:
 - `catalog-json`
 - `html`
 
-Safety controls for plugin/MCP remotes:
+Safety controls for plugin/connector/MCP remotes:
 
 - HTTPS-only endpoints.
 - Host allowlist for plugin/MCP sync: `claude.com`, `www.anthropic.com`, `raw.githubusercontent.com`, `github.com`, `registry.modelcontextprotocol.io`.

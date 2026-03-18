@@ -70,6 +70,7 @@ function renderHtml(
 ): string {
   const kindCounts = countByKind(rows.map((entry) => entry.item));
   const topClaude = rows.filter((entry) => entry.item.kind === 'claude-plugin').slice(0, 15);
+  const topConnectors = rows.filter((entry) => entry.item.kind === 'claude-connector').slice(0, 15);
   const topCopilot = rows.filter((entry) => entry.item.kind === 'copilot-extension').slice(0, 15);
   const allRows = rows.slice(0, 120);
   const detailRows = rows.slice(0, 80);
@@ -211,10 +212,11 @@ function renderHtml(
 <body>
   <div class="wrap">
     <h1>Toolkit Web Report</h1>
-    <p class="sub">Readable catalog view for Claude plugins, Copilot extensions, Skills, and MCP servers.</p>
+    <p class="sub">Readable catalog view for Claude plugins, Claude connectors, Copilot extensions, Skills, and MCP servers.</p>
     <div class="cards">
       <div class="card"><div class="k">Items</div><div class="v">${stats.totalItems}</div></div>
       <div class="card"><div class="k">Claude Plugins</div><div class="v">${kindCounts['claude-plugin']}</div></div>
+      <div class="card"><div class="k">Claude Connectors</div><div class="v">${kindCounts['claude-connector']}</div></div>
       <div class="card"><div class="k">Copilot Extensions</div><div class="v">${kindCounts['copilot-extension']}</div></div>
       <div class="card"><div class="k">Skills</div><div class="v">${kindCounts.skill}</div></div>
       <div class="card"><div class="k">MCP Servers</div><div class="v">${kindCounts.mcp}</div></div>
@@ -229,6 +231,7 @@ function renderHtml(
       </div>
     </section>
     ${renderTableSection('Top Claude Plugins', topClaude)}
+    ${renderTableSection('Top Claude Connectors', topConnectors)}
     ${renderTableSection('Top Copilot Extensions', topCopilot)}
     ${renderTableSection('Catalog Snapshot', allRows)}
     ${renderDetailSection('Decision details per item', detailRows, policy)}
@@ -462,6 +465,7 @@ function countByKind(items: CatalogItem[]): Record<CatalogKind, number> {
       skill: 0,
       mcp: 0,
       'claude-plugin': 0,
+      'claude-connector': 0,
       'copilot-extension': 0
     }
   );

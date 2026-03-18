@@ -8,6 +8,7 @@ import { colors } from '../formatters/colors.js';
 interface PackageMeta {
   name?: string;
   version?: string;
+  author?: string;
 }
 
 export async function renderHomeScreen(): Promise<string> {
@@ -23,11 +24,14 @@ export async function renderHomeScreen(): Promise<string> {
   lines.push(colorIfTty(logo.trimEnd(), colors.cyan));
   lines.push('');
   lines.push(colorIfTty(`${displayName} v${pkg.version ?? '0.0.0'}`, colors.bold));
-  lines.push('Discover and safely install Claude plugins, Copilot extensions, Skills, and MCP servers.');
+  if (pkg.author) {
+    lines.push(`Written by ${pkg.author}.`);
+  }
+  lines.push('Discover and safely install Claude plugins, Claude connectors, Copilot extensions, Skills, and MCP servers.');
   lines.push('');
   lines.push(colorIfTty('Catalog', colors.bold));
   lines.push(
-    `- items=${catalogStats.items} skill=${catalogStats.skill} mcp=${catalogStats.mcp} claude-plugin=${catalogStats.claudePlugin} copilot-extension=${catalogStats.copilotExtension}`
+    `- items=${catalogStats.items} skill=${catalogStats.skill} mcp=${catalogStats.mcp} claude-plugin=${catalogStats.claudePlugin} claude-connector=${catalogStats.claudeConnector} copilot-extension=${catalogStats.copilotExtension}`
   );
   lines.push(
     `- stale-registries=${runtimeStats.staleRegistries} whitelist=${runtimeStats.whitelist} quarantined=${runtimeStats.quarantined}`
@@ -39,6 +43,20 @@ export async function renderHomeScreen(): Promise<string> {
   lines.push('- toolkit recommend --project . --only-safe --limit 10');
   lines.push('- toolkit sync --dry-run');
   lines.push('- toolkit help');
+  lines.push('');
+  lines.push(colorIfTty('Examples', colors.bold));
+  lines.push('- toolkit list --kind connectors --limit 10');
+  lines.push('- toolkit search github');
+  lines.push('- toolkit show --id claude-connector:asana');
+  lines.push('');
+  lines.push(colorIfTty('Kind aliases', colors.bold));
+  lines.push('- skills, mcps, plugins, connectors, extensions');
+  lines.push('');
+  lines.push(colorIfTty('Ranking meaning', colors.bold));
+  lines.push('- `top` and `recommend` are repo-aware suggestions, not global popularity charts.');
+  lines.push('- score = fit + trust + freshness - security - blocked');
+  lines.push('- higher score means a better match for this repo under current policy');
+  lines.push('- review each suggestion before installing; do not install blindly from rank alone');
 
   return lines.join('\n');
 }
@@ -65,12 +83,14 @@ async function readCatalogStats(): Promise<{
   skill: number;
   mcp: number;
   claudePlugin: number;
+  claudeConnector: number;
   copilotExtension: number;
 }> {
   const items = await loadCatalogItems();
   let skill = 0;
   let mcp = 0;
   let claudePlugin = 0;
+  let claudeConnector = 0;
   let copilotExtension = 0;
 
   items.forEach((item) => {
@@ -89,6 +109,11 @@ async function readCatalogStats(): Promise<{
       return;
     }
 
+    if (item.kind === 'claude-connector') {
+      claudeConnector += 1;
+      return;
+    }
+
     copilotExtension += 1;
   });
 
@@ -97,6 +122,7 @@ async function readCatalogStats(): Promise<{
     skill,
     mcp,
     claudePlugin,
+    claudeConnector,
     copilotExtension
   };
 }

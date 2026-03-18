@@ -2,6 +2,34 @@ import { CatalogKindSchema, type CatalogKind } from '../../lib/validation/contra
 
 export type SortKey = 'score' | 'trust' | 'risk' | 'fit' | 'name';
 
+const KIND_ALIASES: Record<string, CatalogKind> = {
+  skill: 'skill',
+  skills: 'skill',
+  mcp: 'mcp',
+  mcps: 'mcp',
+  server: 'mcp',
+  servers: 'mcp',
+  'claude-plugin': 'claude-plugin',
+  'claude-plugins': 'claude-plugin',
+  'claude plugin': 'claude-plugin',
+  'claude plugins': 'claude-plugin',
+  plugin: 'claude-plugin',
+  plugins: 'claude-plugin',
+  'claude-connector': 'claude-connector',
+  'claude-connectors': 'claude-connector',
+  'claude connector': 'claude-connector',
+  'claude connectors': 'claude-connector',
+  connector: 'claude-connector',
+  connectors: 'claude-connector',
+  'copilot-extension': 'copilot-extension',
+  'copilot-extensions': 'copilot-extension',
+  'copilot extension': 'copilot-extension',
+  'copilot extensions': 'copilot-extension',
+  extension: 'copilot-extension',
+  extensions: 'copilot-extension',
+  copilot: 'copilot-extension'
+};
+
 export function readFlag(args: string[], flag: string): string | undefined {
   const index = args.indexOf(flag);
   if (index === -1) {
@@ -24,7 +52,23 @@ export function readKinds(args: string[]): CatalogKind[] | undefined {
     .split(',')
     .map((segment) => segment.trim())
     .filter((segment) => segment.length > 0)
-    .map((kind) => CatalogKindSchema.parse(kind));
+    .map((kind) => normalizeKind(kind));
+}
+
+export function normalizeKind(raw: string): CatalogKind {
+  const normalized = raw.trim().toLowerCase();
+  const alias = KIND_ALIASES[normalized];
+  if (alias) {
+    return alias;
+  }
+
+  try {
+    return CatalogKindSchema.parse(normalized);
+  } catch {
+    throw new Error(
+      `Invalid --kind value: ${raw}. Expected one of: skill, mcp, claude-plugin, claude-connector, copilot-extension. Aliases also supported: skills, mcps, plugins, connectors, extensions.`
+    );
+  }
 }
 
 export function readCsvList(args: string[], flag: string): string[] | undefined {

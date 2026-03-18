@@ -1,9 +1,31 @@
 {
   "name": "toolkit",
   "version": "0.3.0",
-  "description": "Toolkit: Claude plugins + Copilot extensions + Skills + MCP security intelligence framework",
+  "description": "Claude plugins + Claude connectors + Copilot extensions + Skills + MCP security intelligence framework",
   "private": false,
   "type": "module",
+  "license": "MIT",
+  "author": "Amit Rintzler",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/amitrintzler/skills-and-mcps.git"
+  },
+  "bugs": {
+    "url": "https://github.com/amitrintzler/skills-and-mcps/issues"
+  },
+  "homepage": "https://github.com/amitrintzler/skills-and-mcps#readme",
+  "keywords": [
+    "cli",
+    "skills",
+    "mcp",
+    "claude-plugin",
+    "copilot-extension",
+    "security",
+    "recommendation"
+  ],
+  "overrides": {
+    "terser-webpack-plugin": "5.3.17"
+  },
   "bin": {
     "toolkit": "dist/cli.js"
   },
@@ -54,24 +76,23 @@
     "quarantine:apply": "TS_NODE_TRANSPILE_ONLY=1 node --loader ts-node/esm src/cli.ts quarantine apply"
   },
   "dependencies": {
-    "@remotion/cli": "4.0.427",
-    "@types/react": "^19.2.14",
     "fs-extra": "^11.2.0",
-    "globby": "^16.1.1",
-    "react": "^19.2.4",
-    "react-dom": "^19.2.4",
-    "remotion": "4.0.427",
     "semver": "^7.7.4",
     "zod": "^3.23.8"
   },
   "devDependencies": {
     "@types/node": "^25.3.0",
+    "@types/react": "^19.2.14",
+    "@remotion/cli": "4.0.427",
     "@types/semver": "^7.7.1",
     "@typescript-eslint/eslint-plugin": "^7.10.0",
     "@typescript-eslint/parser": "^7.10.0",
     "eslint": "^8.57.0",
     "eslint-config-prettier": "^9.1.0",
     "prettier": "^3.2.5",
+    "react": "^19.2.4",
+    "react-dom": "^19.2.4",
+    "remotion": "4.0.427",
     "ts-node": "^10.9.2",
     "tsx": "^4.7.1",
     "typescript": "^5.4.5",
