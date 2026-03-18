@@ -72,6 +72,7 @@ const COMMAND_ALIASES: Record<string, string> = {
   whitelist: 'whitelist',
   quarantine: 'quarantine',
   upgrade: 'upgrade',
+  setup: 'setup',
   help: 'help'
 };
 
@@ -143,6 +144,9 @@ export async function runCli(argv: string[]): Promise<void> {
       break;
     case 'upgrade':
       await handleUpgrade(rest);
+      break;
+    case 'setup':
+      await handleSetup(rest);
       break;
     case 'help':
       printHelp();
@@ -312,6 +316,72 @@ async function handleInit(args: string[]): Promise<void> {
     `Risk posture "${defaults.riskPosture}": ${describeRiskPosture(defaults.riskPosture)}`
   );
   printHint('Next: run `npm run doctor`, then `npm run recommend -- --project . --only-safe --limit 10`.');
+}
+
+async function handleSetup(args: string[]): Promise<void> {
+  const project = readFlag(args, '--project') ?? '.';
+  const root = path.resolve(project);
+
+  console.log('Toolkit setup');
+  console.log('');
+
+  // Step 1: install dependencies
+  console.log('Step 1/3: Installing prerequisites...');
+  const installed = await installToolkitDependencies();
+  if (installed.length === 0) {
+    console.log('  Prerequisites already satisfied.');
+  } else {
+    console.log(`  Installed: ${installed.join(', ')}`);
+  }
+  console.log('');
+
+  // Step 2: write default config (non-interactive)
+  console.log('Step 2/3: Initializing local config...');
+  const [items, policy] = await Promise.all([loadCatalogItems(), loadSecurityPolicy()]);
+  const providers = Array.from(new Set(items.map((item) => item.provider))).sort((a, b) => a.localeCompare(b));
+  const defaultKinds: CatalogKind[] = ['skill', 'mcp', 'claude-plugin', 'claude-connector', 'copilot-extension'];
+  const defaults = {
+    defaultKinds,
+    defaultProviders: providers,
+    riskPosture: 'balanced' as const,
+    outputStyle: 'rich-table' as const,
+    initializedAt: new Date().toISOString()
+  };
+  const configFile = path.join(root, '.skills-mcps.json');
+  await fs.writeFile(configFile, `${JSON.stringify(defaults, null, 2)}\n`, 'utf8');
+  console.log(`  Config written: ${configFile}`);
+  console.log(`  Risk posture: ${defaults.riskPosture} — ${describeRiskPosture(defaults.riskPosture)}`);
+  console.log(`  Risk scale: ${formatRiskScale(policy)}`);
+  console.log('');
+
+  // Step 3: sync catalogs
+  console.log('Step 3/3: Syncing catalogs...');
+  const result = await syncCatalogs();
+  console.log(`  Synced ${result.items.length} items.`);
+  if (result.staleRegistries.length > 0) {
+    logger.warn(`  Stale registries: ${result.staleRegistries.join(', ')}`);
+  }
+  console.log('');
+
+  // Doctor summary
+  console.log('Health check:');
+  const checks = await runDoctorChecks(project);
+  const failed = checks.filter((c) => c.status === 'fail');
+  const warnings = checks.filter((c) => c.status === 'warn');
+  checks.forEach((c) => {
+    const icon = c.status === 'pass' ? '✓' : c.status === 'warn' ? '⚠' : '✗';
+    console.log(`  ${icon} ${c.name}: ${c.message}`);
+  });
+  console.log('');
+
+  if (failed.length > 0) {
+    console.log(`Setup complete with ${failed.length} issue(s). Run \`toolkit doctor\` for details.`);
+  } else if (warnings.length > 0) {
+    console.log('Setup complete. Some warnings above — run `toolkit doctor` for details.');
+  } else {
+    console.log('Setup complete. You\'re ready to go!');
+  }
+  printHint('Next: toolkit recommend --project . --only-safe --limit 10');
 }
 
 async function handleDoctor(args: string[]): Promise<void> {
@@ -1120,6 +1190,7 @@ function printHelp(): void {
   console.log('Toolkit commands');
   console.log('');
   console.log('Start here');
+  console.log('  setup [--project .]        one-step: install deps + init + sync');
   console.log('  init [--project .]');
   console.log('  doctor [--project .] [--install-deps]');
   console.log('  status [--verbose]');
