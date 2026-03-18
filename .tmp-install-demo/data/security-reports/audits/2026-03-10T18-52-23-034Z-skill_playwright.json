@@ -1,0 +1,8 @@
+{
+  "id": "skill:playwright",
+  "requestedAt": "2026-03-10T18:52:23.034Z",
+  "policyDecision": "allowed",
+  "overrideUsed": false,
+  "installer": "skill.sh",
+  "exitCode": 0
+}
