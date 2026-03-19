@@ -54,17 +54,24 @@ You can:
 
 ## Install Toolkit (v0.3.0)
 
+**Global install (recommended):**
+
+```bash
+npm install -g toolkit
+toolkit setup
+```
+
+`toolkit setup` is a single command that installs prerequisites, writes default config, and syncs all catalogs. No extra steps needed.
+
+**From source:**
+
 ```bash
 git clone https://github.com/amitrintzler/skills-and-mcps.git toolkit
 cd toolkit
 git checkout v0.3.0
 npm install
-npm run init
-npm run doctor -- --install-deps
+npm run setup
 ```
-
-`init` now defaults kinds to all catalog types: `skill`, `mcp`, `claude-plugin`, `claude-connector`, and `copilot-extension`.
-When you choose `riskPosture: strict`, `list` and `recommend` default to safe-only output.
 
 Install newest release tag instead of pinning `v0.3.0`:
 
@@ -75,21 +82,25 @@ git checkout $(git describe --tags --abbrev=0)
 ## Quick Start (2-minute path)
 
 ```bash
-npm install
-npm run init
-npm run doctor -- --install-deps
+npm install -g toolkit
+toolkit setup
+toolkit scan --project . --format table
+toolkit recommend --project . --only-safe --sort trust --limit 10
+```
+
+Or from source:
+
+```bash
+npm install && npm run setup
 npm run scan -- --project . --format table
-npm run recommend -- --project . --only-safe --sort trust --limit 10
 npm run recommend -- --project . --only-safe --sort trust --limit 10 --details
 ```
 
-If installed as a CLI package, run `toolkit` with no args to open a branded home screen.
+Run `toolkit` with no args to open the home screen.
 
 Important: `top` and `recommend` are repo-aware rankings, not global popularity charts. A higher score means a better match for the current repository under the active policy, using `fit + trust + freshness - security - blocked`. Review each suggestion before installing, and do not install blindly from rank alone.
 
 Installs are now review-gated: run `show --id <catalog-id>` or `assess --id <catalog-id>` before `install`. Use `--override-review` only when you intentionally want to bypass that safeguard.
-
-If you want Toolkit to bootstrap the supported install dependency for you, run `toolkit doctor --install-deps` or add `--install-deps` to `toolkit install`.
 
 For supported legacy MCP entries, Toolkit now prefers direct installers when the target is unambiguous:
 - npm package targets install through `npm install -g`
@@ -126,9 +137,10 @@ skill:ci-hardening                skill               openai      low(0)    fals
 
 | Command | Purpose |
 | --- | --- |
+| `npm run setup` | **One-step setup**: install prerequisites + init config + sync catalogs |
 | `npm run about` | Show version and framework scope |
-| `npm run init` | Create project defaults and setup local config |
-| `npm run doctor -- --install-deps` | Validate runtime prerequisites and bootstrap the supported `skills` CLI when missing |
+| `npm run init` | Create project defaults and setup local config (interactive) |
+| `npm run doctor -- --install-deps` | Validate runtime prerequisites and bootstrap the `skills` CLI when missing |
 | `npm run sync` | Refresh catalog data from configured registries |
 | `npm run scan -- --project . --format table` | Analyze repository capabilities/archetype |
 | `npm run top -- --project . --limit 5` | Show top-ranked items for the current context |
@@ -142,6 +154,7 @@ skill:ci-hardening                skill               openai      low(0)    fals
 
 Packaged CLI-only commands:
 
+- `toolkit setup` (**first-time setup**: prerequisites + config + sync in one step)
 - `toolkit` (home screen)
 - `toolkit upgrade check`
 - `toolkit web --open` (readable browser report)

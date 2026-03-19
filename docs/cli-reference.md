@@ -19,9 +19,11 @@ Packaged CLI behavior:
 
 ## Guided Setup and Diagnostics
 
-- `npm run init [-- --project .]`
+- `npm run setup` — one-step: install prerequisites + write default config + sync all catalogs
+- `npm run init [-- --project .]` — interactive config init only
 - `npm run doctor [-- --project .]`
 - `npm run doctor -- --project . --install-deps`
+- `setup` is the recommended first command after installing the package; it calls `init` non-interactively and runs an initial sync
 - `init` default kinds include `skill,mcp,claude-plugin,claude-connector,copilot-extension`
 - `riskPosture=strict` makes `list` and `recommend` default to safe-only views
 - `doctor --install-deps` bootstraps the supported `skills` CLI when it is missing
