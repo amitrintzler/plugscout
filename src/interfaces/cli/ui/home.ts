@@ -23,10 +23,10 @@ export async function renderHomeScreen(): Promise<string> {
   const displayName = (pkg.name ?? 'plugscout') === 'plugscout' ? 'PlugScout' : (pkg.name ?? 'plugscout');
   const version = pkg.version ?? '0.0.0';
   const author = pkg.author ?? '';
-  const metaLine = author
-    ? `         v${version}  ·  maintained by ${author}`
-    : `         v${version}`;
-  lines.push(colorIfTty(logo.trimEnd() + '\n' + metaLine, colors.cyan));
+  const renderedLogo = logo
+    .replace('{{version}}', `v${version}`)
+    .replace('{{author}}', author || 'unknown');
+  lines.push(colorIfTty(renderedLogo.trimEnd(), colors.cyan));
   lines.push('');
   lines.push('Discover and safely install Claude plugins, Claude connectors, Copilot extensions, Skills, and MCP servers.');
   lines.push('');
