@@ -49,8 +49,10 @@ export async function syncCatalogs(
 
     const resolved = await resolveRegistryEntries(registry, { updatedSince });
     const adaptedEntries = resolved.source === 'remote' ? adaptRegistryEntries(registry, resolved.entries) : resolved.entries;
+    // Always include curated local entries so they persist even when remote succeeds
+    const curatedEntries = resolved.source === 'remote' ? registry.entries : [];
 
-    allItems.push(...normalizeItems(adaptedEntries, registry, effectiveToday));
+    allItems.push(...normalizeItems([...adaptedEntries, ...curatedEntries], registry, effectiveToday));
 
     const nowStamp = new Date().toISOString();
     syncState = setSuccessfulSync(syncState, registry.id, nowStamp);

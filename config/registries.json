@@ -244,6 +244,120 @@
             "exfiltrationSignals": 0,
             "integrityAlerts": 0
           }
+        },
+        {
+          "id": "skill:deep-research",
+          "name": "Deep Research",
+          "description": "Execute multi-step autonomous research tasks using web search, synthesis, and source citation. One of the most-installed Claude Code skills in 2026.",
+          "capabilities": ["search", "automation", "prompting"],
+          "compatibility": ["claude-code", "general"],
+          "install": { "kind": "skill.sh", "target": "deep-research", "args": [] },
+          "adoptionSignal": 88,
+          "maintenanceSignal": 84,
+          "provenanceSignal": 78,
+          "freshnessSignal": 82,
+          "securitySignals": {
+            "knownVulnerabilities": 0,
+            "suspiciousPatterns": 0,
+            "injectionFindings": 0,
+            "exfiltrationSignals": 0,
+            "integrityAlerts": 0
+          }
+        },
+        {
+          "id": "skill:test-driven-development",
+          "name": "Test-Driven Development",
+          "description": "Enforce red-green-refactor TDD discipline: write failing tests first, implement minimally, then refactor. Prevents writing implementation before tests.",
+          "capabilities": ["automation", "guardrails", "prompting"],
+          "compatibility": ["claude-code", "node", "python", "general"],
+          "install": { "kind": "skill.sh", "target": "test-driven-development", "args": [] },
+          "adoptionSignal": 91,
+          "maintenanceSignal": 88,
+          "provenanceSignal": 84,
+          "freshnessSignal": 86,
+          "securitySignals": {
+            "knownVulnerabilities": 0,
+            "suspiciousPatterns": 0,
+            "injectionFindings": 0,
+            "exfiltrationSignals": 0,
+            "integrityAlerts": 0
+          }
+        },
+        {
+          "id": "skill:prompt-engineering",
+          "name": "Prompt Engineering",
+          "description": "Apply Anthropic's official prompting best practices: chain-of-thought, few-shot examples, structured output, and effective system prompt design.",
+          "capabilities": ["prompting", "automation", "guardrails"],
+          "compatibility": ["claude-code", "general"],
+          "install": { "kind": "skill.sh", "target": "prompt-engineering", "args": [] },
+          "adoptionSignal": 86,
+          "maintenanceSignal": 90,
+          "provenanceSignal": 96,
+          "freshnessSignal": 84,
+          "securitySignals": {
+            "knownVulnerabilities": 0,
+            "suspiciousPatterns": 0,
+            "injectionFindings": 0,
+            "exfiltrationSignals": 0,
+            "integrityAlerts": 0
+          }
+        },
+        {
+          "id": "skill:google-workspace-skills",
+          "name": "Google Workspace",
+          "description": "Automate tasks across Gmail, Google Calendar, Google Docs, Sheets, Slides, and Drive from within Claude Code.",
+          "capabilities": ["automation", "docs", "productivity", "scheduling"],
+          "compatibility": ["claude-code", "general"],
+          "install": { "kind": "skill.sh", "target": "google-workspace-skills", "args": [] },
+          "adoptionSignal": 82,
+          "maintenanceSignal": 78,
+          "provenanceSignal": 76,
+          "freshnessSignal": 80,
+          "securitySignals": {
+            "knownVulnerabilities": 0,
+            "suspiciousPatterns": 0,
+            "injectionFindings": 0,
+            "exfiltrationSignals": 0,
+            "integrityAlerts": 0
+          }
+        },
+        {
+          "id": "skill:n8n-skills",
+          "name": "n8n Workflow Automation",
+          "description": "Design, trigger, and debug n8n automation workflows. Connect Claude to n8n's visual workflow engine for multi-step task orchestration.",
+          "capabilities": ["automation", "search"],
+          "compatibility": ["claude-code", "node", "general"],
+          "install": { "kind": "skill.sh", "target": "n8n-skills", "args": [] },
+          "adoptionSignal": 72,
+          "maintenanceSignal": 75,
+          "provenanceSignal": 70,
+          "freshnessSignal": 74,
+          "securitySignals": {
+            "knownVulnerabilities": 0,
+            "suspiciousPatterns": 0,
+            "injectionFindings": 0,
+            "exfiltrationSignals": 0,
+            "integrityAlerts": 0
+          }
+        },
+        {
+          "id": "skill:remotion",
+          "name": "Remotion Video",
+          "description": "Generate correct, idiomatic Remotion code for programmatic video: animations, timing, audio sync, captions, 3D, and composition patterns.",
+          "capabilities": ["automation", "docs"],
+          "compatibility": ["claude-code", "node"],
+          "install": { "kind": "skill.sh", "target": "remotion", "args": [] },
+          "adoptionSignal": 78,
+          "maintenanceSignal": 80,
+          "provenanceSignal": 74,
+          "freshnessSignal": 82,
+          "securitySignals": {
+            "knownVulnerabilities": 0,
+            "suspiciousPatterns": 0,
+            "injectionFindings": 0,
+            "exfiltrationSignals": 0,
+            "integrityAlerts": 0
+          }
         }
       ]
     },
@@ -1066,6 +1180,230 @@
           "maintenanceSignal": 66,
           "provenanceSignal": 85,
           "freshnessSignal": 69,
+          "securitySignals": {
+            "knownVulnerabilities": 0,
+            "suspiciousPatterns": 0,
+            "injectionFindings": 0,
+            "exfiltrationSignals": 0,
+            "integrityAlerts": 0
+          },
+          "metadata": {
+            "catalogType": "connector",
+            "sourcePage": "https://claude.com/connectors",
+            "sourceConfidence": "official"
+          }
+        },
+        {
+          "id": "claude-connector:google-calendar",
+          "name": "Google Calendar",
+          "description": "Connect Claude to Google Calendar for scheduling, meeting management, and calendar automation.",
+          "capabilities": ["automation", "productivity", "scheduling"],
+          "compatibility": ["claude", "mcp"],
+          "install": {
+            "kind": "manual",
+            "instructions": "Enable this connector from Claude Connectors.",
+            "url": "https://claude.com/connectors/google-calendar"
+          },
+          "adoptionSignal": 78,
+          "maintenanceSignal": 82,
+          "provenanceSignal": 92,
+          "freshnessSignal": 80,
+          "securitySignals": {
+            "knownVulnerabilities": 0,
+            "suspiciousPatterns": 0,
+            "injectionFindings": 0,
+            "exfiltrationSignals": 0,
+            "integrityAlerts": 0
+          },
+          "metadata": {
+            "catalogType": "connector",
+            "sourcePage": "https://claude.com/connectors",
+            "sourceConfidence": "official"
+          }
+        },
+        {
+          "id": "claude-connector:google-drive",
+          "name": "Google Drive",
+          "description": "Connect Claude to Google Drive for document retrieval, search, and file management across your workspace.",
+          "capabilities": ["docs", "search", "automation"],
+          "compatibility": ["claude", "mcp"],
+          "install": {
+            "kind": "manual",
+            "instructions": "Enable this connector from Claude Connectors.",
+            "url": "https://claude.com/connectors/google-drive"
+          },
+          "adoptionSignal": 80,
+          "maintenanceSignal": 84,
+          "provenanceSignal": 92,
+          "freshnessSignal": 82,
+          "securitySignals": {
+            "knownVulnerabilities": 0,
+            "suspiciousPatterns": 0,
+            "injectionFindings": 0,
+            "exfiltrationSignals": 0,
+            "integrityAlerts": 0
+          },
+          "metadata": {
+            "catalogType": "connector",
+            "sourcePage": "https://claude.com/connectors",
+            "sourceConfidence": "official"
+          }
+        },
+        {
+          "id": "claude-connector:docusign",
+          "name": "DocuSign",
+          "description": "Connect Claude to DocuSign for eSignature workflows, envelope tracking, and document agreement automation.",
+          "capabilities": ["automation", "docs"],
+          "compatibility": ["claude", "mcp"],
+          "install": {
+            "kind": "manual",
+            "instructions": "Enable this connector from Claude Connectors.",
+            "url": "https://claude.com/connectors/docusign"
+          },
+          "adoptionSignal": 65,
+          "maintenanceSignal": 70,
+          "provenanceSignal": 88,
+          "freshnessSignal": 72,
+          "securitySignals": {
+            "knownVulnerabilities": 0,
+            "suspiciousPatterns": 0,
+            "injectionFindings": 0,
+            "exfiltrationSignals": 0,
+            "integrityAlerts": 0
+          },
+          "metadata": {
+            "catalogType": "connector",
+            "sourcePage": "https://claude.com/connectors",
+            "sourceConfidence": "official"
+          }
+        },
+        {
+          "id": "claude-connector:clay",
+          "name": "Clay",
+          "description": "Connect Claude to Clay for data enrichment, prospecting, and go-to-market workflow automation.",
+          "capabilities": ["automation", "search", "sales"],
+          "compatibility": ["claude", "mcp"],
+          "install": {
+            "kind": "manual",
+            "instructions": "Enable this connector from Claude Connectors.",
+            "url": "https://claude.com/connectors/clay"
+          },
+          "adoptionSignal": 62,
+          "maintenanceSignal": 68,
+          "provenanceSignal": 84,
+          "freshnessSignal": 72,
+          "securitySignals": {
+            "knownVulnerabilities": 0,
+            "suspiciousPatterns": 0,
+            "injectionFindings": 0,
+            "exfiltrationSignals": 0,
+            "integrityAlerts": 0
+          },
+          "metadata": {
+            "catalogType": "connector",
+            "sourcePage": "https://claude.com/connectors",
+            "sourceConfidence": "official"
+          }
+        },
+        {
+          "id": "claude-connector:outreach",
+          "name": "Outreach",
+          "description": "Connect Claude to Outreach for sales engagement, sequence management, and pipeline automation.",
+          "capabilities": ["automation", "sales"],
+          "compatibility": ["claude", "mcp"],
+          "install": {
+            "kind": "manual",
+            "instructions": "Enable this connector from Claude Connectors.",
+            "url": "https://claude.com/connectors/outreach"
+          },
+          "adoptionSignal": 60,
+          "maintenanceSignal": 66,
+          "provenanceSignal": 84,
+          "freshnessSignal": 70,
+          "securitySignals": {
+            "knownVulnerabilities": 0,
+            "suspiciousPatterns": 0,
+            "injectionFindings": 0,
+            "exfiltrationSignals": 0,
+            "integrityAlerts": 0
+          },
+          "metadata": {
+            "catalogType": "connector",
+            "sourcePage": "https://claude.com/connectors",
+            "sourceConfidence": "official"
+          }
+        },
+        {
+          "id": "claude-connector:factset",
+          "name": "FactSet",
+          "description": "Connect Claude to FactSet for financial data, market intelligence, and investment research workflows.",
+          "capabilities": ["search", "data", "financial"],
+          "compatibility": ["claude", "mcp"],
+          "install": {
+            "kind": "manual",
+            "instructions": "Enable this connector from Claude Connectors.",
+            "url": "https://claude.com/connectors/factset"
+          },
+          "adoptionSignal": 58,
+          "maintenanceSignal": 65,
+          "provenanceSignal": 86,
+          "freshnessSignal": 68,
+          "securitySignals": {
+            "knownVulnerabilities": 0,
+            "suspiciousPatterns": 0,
+            "injectionFindings": 0,
+            "exfiltrationSignals": 0,
+            "integrityAlerts": 0
+          },
+          "metadata": {
+            "catalogType": "connector",
+            "sourcePage": "https://claude.com/connectors",
+            "sourceConfidence": "official"
+          }
+        },
+        {
+          "id": "claude-connector:wordpress",
+          "name": "WordPress",
+          "description": "Connect Claude to WordPress for content creation, post management, and CMS workflow automation.",
+          "capabilities": ["automation", "docs", "content"],
+          "compatibility": ["claude", "mcp"],
+          "install": {
+            "kind": "manual",
+            "instructions": "Enable this connector from Claude Connectors.",
+            "url": "https://claude.com/connectors/wordpress"
+          },
+          "adoptionSignal": 63,
+          "maintenanceSignal": 68,
+          "provenanceSignal": 84,
+          "freshnessSignal": 70,
+          "securitySignals": {
+            "knownVulnerabilities": 0,
+            "suspiciousPatterns": 1,
+            "injectionFindings": 0,
+            "exfiltrationSignals": 0,
+            "integrityAlerts": 0
+          },
+          "metadata": {
+            "catalogType": "connector",
+            "sourcePage": "https://claude.com/connectors",
+            "sourceConfidence": "official"
+          }
+        },
+        {
+          "id": "claude-connector:harvey",
+          "name": "Harvey",
+          "description": "Connect Claude to Harvey AI for legal document drafting, contract review, and legal research workflows.",
+          "capabilities": ["automation", "docs", "legal"],
+          "compatibility": ["claude", "mcp"],
+          "install": {
+            "kind": "manual",
+            "instructions": "Enable this connector from Claude Connectors.",
+            "url": "https://claude.com/connectors/harvey"
+          },
+          "adoptionSignal": 56,
+          "maintenanceSignal": 64,
+          "provenanceSignal": 84,
+          "freshnessSignal": 68,
           "securitySignals": {
             "knownVulnerabilities": 0,
             "suspiciousPatterns": 0,
