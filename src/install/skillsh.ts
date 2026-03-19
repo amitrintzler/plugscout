@@ -270,7 +270,7 @@ async function executeCommand(binary: string, args: string[], label: string): Pr
     ensureBinaryAvailable('npm', 'npm is required for Node package installs. Install Node.js and verify with: npm --version');
   }
   if (binary === 'skills') {
-    ensureBinaryAvailable('skills', 'skills CLI is required. Run `toolkit doctor --install-deps` to install it.');
+    ensureBinaryAvailable('skills', 'skills CLI is required. Run `plugscout doctor --install-deps` to install it.');
   }
 
   return new Promise<number>((resolve, reject) => {
@@ -308,7 +308,7 @@ function ensureLegacySkillShAvailable(id: string): void {
   }
 
   throw new Error(
-    `skill.sh is not available in PATH. This item (${id}) still requires the legacy skill.sh installer. Run \`toolkit doctor --install-deps\` to bootstrap the modern skills CLI for supported skill installs, or install skill.sh manually for legacy skill.sh items.`
+    `skill.sh is not available in PATH. This item (${id}) still requires the legacy skill.sh installer. Run \`plugscout doctor --install-deps\` to bootstrap the modern skills CLI for supported skill installs, or install skill.sh manually for legacy skill.sh items.`
   );
 }
 

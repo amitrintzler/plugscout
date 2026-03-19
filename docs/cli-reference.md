@@ -2,13 +2,13 @@
 
 All commands are exposed as npm scripts and run through `src/cli.ts`.
 
-Toolkit scope order is: Claude plugins, Claude connectors, Copilot extensions, Skills, MCP servers.
+PlugScout scope order is: Claude plugins, Claude connectors, Copilot extensions, Skills, MCP servers.
 
 Packaged CLI behavior:
 
-- `toolkit` with no arguments opens the home screen.
-- `toolkit upgrade check` performs a release check against GitHub Releases.
-- `toolkit web --open` writes a readable browser report and opens it.
+- `plugscout` with no arguments opens the home screen.
+- `plugscout upgrade check` performs a release check against GitHub Releases.
+- `plugscout web --open` writes a readable browser report and opens it.
 - `--no-update-check` disables the daily automatic update check for the current command run.
 
 ## Core Operations
@@ -69,14 +69,14 @@ Packaged CLI behavior:
 
 ## Version and Upgrade Checks
 
-- `toolkit upgrade check`
-- `toolkit recommend --project . --no-update-check`
-- `toolkit status --no-update-check`
+- `plugscout upgrade check`
+- `plugscout recommend --project . --no-update-check`
+- `plugscout status --no-update-check`
 
 ## Web Report
 
-- `toolkit web --out .toolkit/report.html`
-- `toolkit web --kind claude-connector --limit 200 --open` (includes score legend + decision cards per item)
+- `plugscout web --out .plugscout/report.html`
+- `plugscout web --kind claude-connector --limit 200 --open` (includes score legend + decision cards per item)
 
 ## Legacy Ingestion and Validation
 

@@ -31,12 +31,12 @@ describe('cli ux behaviors', () => {
   let previousTTY: unknown;
 
   beforeEach(async () => {
-    toolkitHome = await fs.mkdtemp(path.join(os.tmpdir(), 'toolkit-cli-ux-'));
-    testProject = await fs.mkdtemp(path.join(os.tmpdir(), 'toolkit-cli-project-'));
+    toolkitHome = await fs.mkdtemp(path.join(os.tmpdir(), 'plugscout-cli-ux-'));
+    testProject = await fs.mkdtemp(path.join(os.tmpdir(), 'plugscout-cli-project-'));
     previousCwd = process.cwd();
-    previousToolkitHome = process.env.TOOLKIT_HOME;
+    previousToolkitHome = process.env.PLUGSCOUT_HOME;
     previousTTY = (process.stdout as { isTTY?: unknown }).isTTY;
-    process.env.TOOLKIT_HOME = toolkitHome;
+    process.env.PLUGSCOUT_HOME = toolkitHome;
 
     Object.defineProperty(process.stdout, 'isTTY', {
       configurable: true,
@@ -57,9 +57,9 @@ describe('cli ux behaviors', () => {
     });
 
     if (previousToolkitHome === undefined) {
-      delete process.env.TOOLKIT_HOME;
+      delete process.env.PLUGSCOUT_HOME;
     } else {
-      process.env.TOOLKIT_HOME = previousToolkitHome;
+      process.env.PLUGSCOUT_HOME = previousToolkitHome;
     }
 
     await fs.rm(getReviewStatePath(), { force: true });
@@ -76,8 +76,8 @@ describe('cli ux behaviors', () => {
     const logs = output.joined();
     expect(logs).toContain('Quick actions');
     expect(logs).toContain('Examples');
-    expect(logs).toContain('Toolkit v');
-    expect(logs).toContain('toolkit doctor');
+    expect(logs).toContain('PlugScout v');
+    expect(logs).toContain('plugscout doctor');
     expect(logs).toContain('Ranking meaning');
     expect(logs).toContain('repo-aware suggestions');
     expect(logs).toContain('do not install blindly from rank alone');
@@ -89,11 +89,11 @@ describe('cli ux behaviors', () => {
     await runCli(['help']);
 
     const logs = output.joined();
-    expect(logs).toContain('Toolkit commands');
+    expect(logs).toContain('PlugScout commands');
     expect(logs).toContain('Kind aliases');
     expect(logs).toContain('repo-aware rankings');
     expect(logs).toContain('do not install blindly from rank alone');
-    expect(logs).toContain('toolkit list --kind connectors --limit 10');
+    expect(logs).toContain('plugscout list --kind connectors --limit 10');
     expect(logs).not.toContain('[INFO]');
   });
 
@@ -244,7 +244,7 @@ describe('cli ux behaviors', () => {
     await runCli(['show', '--id', 'claude-plugin:repo-threat-review']);
 
     const logs = output.joined();
-    expect(logs).toContain('Hint: Install with: toolkit install --id claude-plugin:repo-threat-review --yes');
+    expect(logs).toContain('Hint: Install with: plugscout install --id claude-plugin:repo-threat-review --yes');
     expect(logs).toContain('Hint: Review provenance, risk, and capabilities first.');
     expect(logs).toContain('Provenance: source=');
   });
@@ -277,7 +277,7 @@ describe('cli ux behaviors', () => {
     const logs = output.joined();
     expect(logs).toContain('Decision details');
     expect(logs).toContain('Why use:');
-    expect(logs).toContain('Install: toolkit install --id');
+    expect(logs).toContain('Install: plugscout install --id');
   });
 
   it('renders recommendation score explanation in top details view', async () => {
@@ -324,13 +324,13 @@ describe('cli ux behaviors', () => {
 
   it('writes web report html', async () => {
     const output = captureConsoleLogs();
-    const reportPath = path.join(testProject, 'toolkit-report.html');
+    const reportPath = path.join(testProject, 'plugscout-report.html');
 
     await runCli(['web', '--out', reportPath, '--kind', 'claude-plugin', '--limit', '20']);
 
     const html = await fs.readFile(reportPath, 'utf8');
     expect(output.joined()).toContain('Web report written:');
-    expect(html).toContain('Toolkit Web Report');
+    expect(html).toContain('PlugScout Web Report');
     expect(html).toContain('Top Claude Plugins');
     expect(html).toContain('Top Claude Connectors');
     expect(html).toContain('How to read scores');
@@ -342,12 +342,12 @@ describe('cli ux behaviors', () => {
 
     vi.stubGlobal('fetch', vi.fn().mockResolvedValue(mockResponse(200, { tag_name: 'v9.9.9' })));
     await runCli(['upgrade', 'check']);
-    expect(output.joined()).toContain('New Toolkit version available: v0.3.0 -> v9.9.9');
+    expect(output.joined()).toContain('New PlugScout version available: v0.3.1 -> v9.9.9');
 
     output.spy.mockClear();
-    vi.stubGlobal('fetch', vi.fn().mockResolvedValue(mockResponse(200, { tag_name: 'v0.3.0' })));
+    vi.stubGlobal('fetch', vi.fn().mockResolvedValue(mockResponse(200, { tag_name: 'v0.3.1' })));
     await runCli(['upgrade', 'check']);
-    expect(output.joined()).toContain('Toolkit is up to date (v0.3.0).');
+    expect(output.joined()).toContain('PlugScout is up to date (v0.3.1).');
 
     output.spy.mockClear();
     vi.stubGlobal('fetch', vi.fn().mockResolvedValue(mockResponse(404, {})));

@@ -44,7 +44,7 @@ export async function assertRecentReview(id: string): Promise<void> {
   }
 
   throw new Error(
-    `Review required before install for ${id}. Run \`toolkit show --id ${id}\` or \`toolkit assess --id ${id}\`, then retry. Use --override-review only if you intentionally want to bypass this safeguard.`
+    `Review required before install for ${id}. Run \`plugscout show --id ${id}\` or \`plugscout assess --id ${id}\`, then retry. Use --override-review only if you intentionally want to bypass this safeguard.`
   );
 }
 

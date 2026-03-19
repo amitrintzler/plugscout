@@ -13,7 +13,7 @@
 ## Runtime State
 
 - `TOOLKIT_HOME` (optional): overrides the writable runtime state root.
-- Default runtime state root: `~/.toolkit`.
+- Default runtime state root: `~/.plugscout`.
 - State files created under this root include:
   - `data/catalog/items.json`
   - `data/catalog/sync-state.json`
@@ -21,7 +21,7 @@
   - `data/quarantine/quarantined.json`
   - `data/security-reports/**`
   - `data/system/update-check.json`
-- Default web report output (when using `toolkit web`): `.toolkit/report.html` in current working directory.
+- Default web report output (when using `plugscout web`): `.plugscout/report.html` in current working directory.
 - Set `TOOLKIT_DISABLE_UPDATE_CHECK=1` to disable automatic daily update checks.
 - Local `riskPosture` behavior:
   - `balanced`: standard list/recommend behavior.

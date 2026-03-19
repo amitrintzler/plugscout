@@ -1,5 +1,5 @@
 {
-  "name": "toolkit",
+  "name": "plugscout",
   "version": "0.3.1",
   "description": "Claude plugins + Claude connectors + Copilot extensions + Skills + MCP security intelligence framework",
   "private": false,
@@ -27,7 +27,7 @@
     "terser-webpack-plugin": "5.3.17"
   },
   "bin": {
-    "toolkit": "dist/cli.js"
+    "plugscout": "dist/cli.js"
   },
   "files": [
     "dist",

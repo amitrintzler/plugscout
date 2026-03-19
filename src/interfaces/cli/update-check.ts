@@ -78,7 +78,7 @@ export function isUpdateCheckDisabled(options: { disableAutoCheck?: boolean }): 
     return true;
   }
 
-  if (process.env.TOOLKIT_DISABLE_UPDATE_CHECK === '1') {
+  if (process.env.PLUGSCOUT_DISABLE_UPDATE_CHECK === '1' || process.env.TOOLKIT_DISABLE_UPDATE_CHECK === '1') {
     return true;
   }
 
@@ -128,7 +128,7 @@ export async function maybeNotifyAboutUpdate(options: { disableAutoCheck?: boole
     return;
   }
 
-  console.log(`New Toolkit version available: v${currentVersion} -> v${state.latestVersion}`);
+  console.log(`New PlugScout version available: v${currentVersion} -> v${state.latestVersion}`);
   console.log(`Download: ${RELEASE_DOWNLOAD_URL}`);
 
   await saveUpdateCheckState({
@@ -181,7 +181,7 @@ async function lookupLatestReleaseVersion(): Promise<ReleaseLookupResult> {
       signal: controller.signal,
       headers: {
         Accept: 'application/vnd.github+json',
-        'User-Agent': 'toolkit-cli'
+        'User-Agent': 'plugscout-cli'
       }
     });
 

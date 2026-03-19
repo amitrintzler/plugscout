@@ -170,7 +170,7 @@ async function handleAbout(): Promise<void> {
   const packageRaw = await fs.readFile(getPackagePath('package.json'), 'utf8');
   const pkg = JSON.parse(packageRaw) as { name?: string; version?: string; description?: string; author?: string };
 
-  console.log(`${pkg.name ?? 'toolkit'} v${pkg.version ?? '0.0.0'}`);
+  console.log(`${pkg.name ?? 'plugscout'} v${pkg.version ?? '0.0.0'}`);
   if (pkg.description) {
     console.log(pkg.description);
   }
@@ -219,7 +219,7 @@ async function handleStatus(args: string[]): Promise<void> {
   const stale = getStaleRegistries(syncState);
   console.log(`Stale registries (>48h): ${stale.length === 0 ? 'none' : stale.join(', ')}`);
   if (items.length === 0) {
-    printHint('Catalog is empty. Run `toolkit sync` or `npm run sync` to fetch the latest entries.');
+    printHint('Catalog is empty. Run `plugscout sync` or `npm run sync` to fetch the latest entries.');
   }
 
   if (verbose) {
@@ -322,7 +322,7 @@ async function handleSetup(args: string[]): Promise<void> {
   const project = readFlag(args, '--project') ?? '.';
   const root = path.resolve(project);
 
-  console.log('Toolkit setup');
+  console.log('PlugScout setup');
   console.log('');
 
   // Step 1: install dependencies
@@ -375,13 +375,13 @@ async function handleSetup(args: string[]): Promise<void> {
   console.log('');
 
   if (failed.length > 0) {
-    console.log(`Setup complete with ${failed.length} issue(s). Run \`toolkit doctor\` for details.`);
+    console.log(`Setup complete with ${failed.length} issue(s). Run \`plugscout doctor\` for details.`);
   } else if (warnings.length > 0) {
-    console.log('Setup complete. Some warnings above — run `toolkit doctor` for details.');
+    console.log('Setup complete. Some warnings above — run `plugscout doctor` for details.');
   } else {
     console.log('Setup complete. You\'re ready to go!');
   }
-  printHint('Next: toolkit recommend --project . --only-safe --limit 10');
+  printHint('Next: plugscout recommend --project . --only-safe --limit 10');
 }
 
 async function handleDoctor(args: string[]): Promise<void> {
@@ -490,7 +490,7 @@ async function handleList(args: string[]): Promise<void> {
 
   if (filtered.length === 0) {
     console.log('No catalog items matched your filters.');
-    printHint('Try a broader query, remove `--blocked/--risk-tier`, or use `toolkit search <term>`.');
+    printHint('Try a broader query, remove `--blocked/--risk-tier`, or use `plugscout search <term>`.');
     return;
   }
 
@@ -582,7 +582,7 @@ async function handleShow(args: string[]): Promise<void> {
   });
   await recordItemReview(item.id, 'show');
 
-  printHint(`Install with: toolkit install --id ${item.id} --yes`);
+  printHint(`Install with: plugscout install --id ${item.id} --yes`);
   printHint('Review provenance, risk, and capabilities first. Do not install blindly from a suggestion or score.');
   console.log(
     `Provenance: source=${item.source} catalogType=${getCatalogType(item)} confidence=${getSourceConfidence(item)}`
@@ -615,7 +615,7 @@ async function handleSearch(args: string[]): Promise<void> {
 
   if (matches.length === 0) {
     console.log(`No matches for "${query}".`);
-    printHint('Try a broader term or browse by kind with `toolkit list --kind connectors`, `toolkit list --kind plugins`, or `toolkit list --kind mcp`.');
+    printHint('Try a broader term or browse by kind with `plugscout list --kind connectors`, `plugscout list --kind plugins`, or `plugscout list --kind mcp`.');
     return;
   }
 
@@ -910,7 +910,7 @@ async function handleRecommend(args: string[]): Promise<void> {
 }
 
 async function handleWeb(args: string[]): Promise<void> {
-  const out = readFlag(args, '--out') ?? '.toolkit/report.html';
+  const out = readFlag(args, '--out') ?? '.plugscout/report.html';
   const limit = readLimit(args, 400) ?? 400;
   const kinds = readKinds(args);
   const open = hasFlag(args, '--open');
@@ -1038,13 +1038,13 @@ function renderUpgradeResult(result: UpdateCheckResult): void {
   }
 
   if (result.status === 'up-to-date') {
-    console.log(`Toolkit is up to date (v${result.currentVersion}).`);
+    console.log(`PlugScout is up to date (v${result.currentVersion}).`);
     console.log(`Latest release: v${result.latestVersion}`);
     console.log(`Releases: ${RELEASE_DOWNLOAD_URL}`);
     return;
   }
 
-  console.log(`New Toolkit version available: v${result.currentVersion} -> v${result.latestVersion}`);
+  console.log(`New PlugScout version available: v${result.currentVersion} -> v${result.latestVersion}`);
   console.log(`Download: ${RELEASE_DOWNLOAD_URL}`);
 }
 
@@ -1187,7 +1187,7 @@ function computeSearchScore(item: CatalogItem, query: string): number {
 }
 
 function printHelp(): void {
-  console.log('Toolkit commands');
+  console.log('PlugScout commands');
   console.log('');
   console.log('Start here');
   console.log('  setup [--project .]        one-step: install deps + init + sync');
@@ -1218,7 +1218,7 @@ function printHelp(): void {
   console.log('');
   console.log('Other');
   console.log('  about');
-  console.log('  web [--out .toolkit/report.html] [--kind ...] [--limit n] [--open]');
+  console.log('  web [--out .plugscout/report.html] [--kind ...] [--limit n] [--open]');
   console.log('  upgrade check');
   console.log('  help');
   console.log('');
@@ -1230,9 +1230,9 @@ function printHelp(): void {
   console.log('  extensions, copilot -> copilot-extension');
   console.log('');
   console.log('Examples');
-  console.log('  toolkit recommend --project . --only-safe --limit 10');
-  console.log('  toolkit list --kind connectors --limit 10');
-  console.log('  toolkit show --id claude-connector:asana');
+  console.log('  plugscout recommend --project . --only-safe --limit 10');
+  console.log('  plugscout list --kind connectors --limit 10');
+  console.log('  plugscout show --id claude-connector:asana');
   console.log('');
   console.log('Global options');
   console.log('  --no-update-check');
@@ -1309,7 +1309,7 @@ async function buildCatalogItemNotFoundMessage(id: string): Promise<string> {
   const items = await loadCatalogItems();
   const suggestions = suggestCatalogItems(items, id);
   if (suggestions.length === 0) {
-    return `Catalog item not found: ${id}. Try \`toolkit search ${id}\` or \`toolkit list --kind connectors\`.`;
+    return `Catalog item not found: ${id}. Try \`plugscout search ${id}\` or \`plugscout list --kind connectors\`.`;
   }
 
   return `Catalog item not found: ${id}. Similar IDs: ${suggestions.join(', ')}.`;
@@ -1418,7 +1418,7 @@ function renderCatalogDecisionDetails(
     lines.push(`   Risk reasons: ${entry.assessment.reasons.join('; ')}`);
     lines.push(`   Best for: ${bestFor}`);
     lines.push(`   Tradeoffs: ${tradeoffs}`);
-    lines.push(`   Install: toolkit install --id ${entry.item.id} --yes`);
+    lines.push(`   Install: plugscout install --id ${entry.item.id} --yes`);
   });
 
   return lines.join('\n');
@@ -1457,7 +1457,7 @@ function renderRecommendationDecisionDetails(
     if (insight?.tradeoffs.length) {
       lines.push(`   Tradeoffs: ${insight.tradeoffs.join('; ')}`);
     }
-    lines.push(`   Install: toolkit install --id ${entry.id} --yes`);
+    lines.push(`   Install: plugscout install --id ${entry.id} --yes`);
   });
 
   return lines.join('\n');

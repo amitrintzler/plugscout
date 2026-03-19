@@ -20,7 +20,7 @@ export async function renderHomeScreen(): Promise<string> {
   ]);
 
   const lines: string[] = [];
-  const displayName = (pkg.name ?? 'toolkit') === 'toolkit' ? 'Toolkit' : (pkg.name ?? 'toolkit');
+  const displayName = (pkg.name ?? 'plugscout') === 'plugscout' ? 'PlugScout' : (pkg.name ?? 'plugscout');
   lines.push(colorIfTty(logo.trimEnd(), colors.cyan));
   lines.push('');
   lines.push(colorIfTty(`${displayName} v${pkg.version ?? '0.0.0'}`, colors.bold));
@@ -38,16 +38,16 @@ export async function renderHomeScreen(): Promise<string> {
   );
   lines.push('');
   lines.push(colorIfTty('Quick actions', colors.bold));
-  lines.push('- toolkit doctor');
-  lines.push('- toolkit status --verbose');
-  lines.push('- toolkit recommend --project . --only-safe --limit 10');
-  lines.push('- toolkit sync --dry-run');
-  lines.push('- toolkit help');
+  lines.push('- plugscout doctor');
+  lines.push('- plugscout status --verbose');
+  lines.push('- plugscout recommend --project . --only-safe --limit 10');
+  lines.push('- plugscout sync --dry-run');
+  lines.push('- plugscout help');
   lines.push('');
   lines.push(colorIfTty('Examples', colors.bold));
-  lines.push('- toolkit list --kind connectors --limit 10');
-  lines.push('- toolkit search github');
-  lines.push('- toolkit show --id claude-connector:asana');
+  lines.push('- plugscout list --kind connectors --limit 10');
+  lines.push('- plugscout search github');
+  lines.push('- plugscout show --id claude-connector:asana');
   lines.push('');
   lines.push(colorIfTty('Kind aliases', colors.bold));
   lines.push('- skills, mcps, plugins, connectors, extensions');
@@ -65,7 +65,7 @@ async function readLogo(): Promise<string> {
   try {
     return await fs.readFile(getPackagePath('assets/cli/logo.txt'), 'utf8');
   } catch {
-    return 'Toolkit';
+    return 'PlugScout';
   }
 }
 
@@ -74,7 +74,7 @@ async function readPackageMeta(): Promise<PackageMeta> {
     const raw = await fs.readFile(getPackagePath('package.json'), 'utf8');
     return JSON.parse(raw) as PackageMeta;
   } catch {
-    return { name: 'toolkit', version: '0.0.0' };
+    return { name: 'plugscout', version: '0.0.0' };
   }
 }
 

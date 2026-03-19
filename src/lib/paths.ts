@@ -14,7 +14,7 @@ export function getPackagePath(...segments: string[]): string {
 }
 
 export function getToolkitHome(): string {
-  const root = process.env.TOOLKIT_HOME ?? path.join(os.homedir(), '.toolkit');
+  const root = process.env.PLUGSCOUT_HOME ?? process.env.TOOLKIT_HOME ?? path.join(os.homedir(), '.plugscout');
   return path.resolve(root);
 }
 

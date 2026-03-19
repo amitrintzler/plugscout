@@ -1,4 +1,4 @@
-<h1 align="center">Toolkit</h1>
+<h1 align="center">PlugScout</h1>
 
 <p align="center">
   <a href="https://github.com/amitrintzler/skills-and-mcps/releases/latest"><img alt="Release" src="https://img.shields.io/github/v/release/amitrintzler/skills-and-mcps?display_name=tag&label=release" /></a>
@@ -16,22 +16,22 @@
   <a href="https://github.com/amitrintzler/skills-and-mcps/actions/workflows/catalog-sync.yml"><img alt="Catalog Sync (Scheduled)" src="https://img.shields.io/badge/catalog%20sync-scheduled-0ea5e9" /></a>
 </p>
 
-Toolkit helps teams discover, score, and safely install Claude plugins, Claude connectors, Copilot extensions, Skills, and MCP servers with policy-aware risk controls.
+PlugScout helps teams discover, score, and safely install Claude plugins, Claude connectors, Copilot extensions, Skills, and MCP servers with policy-aware risk controls.
 
 Written by Amit Rintzler.
 
 License: MIT. Copyright (c) 2026 Amit Rintzler. Reuse is allowed, but redistributed copies must keep the copyright and license notice.
 
 Quick links:
-- [Install](#install-toolkit-v020)
+- [Install](#install-plugscout-v020)
 - [Quick Start](#quick-start-2-minute-path)
 - [Core Commands](#core-commands)
 - [Safety Model](#safety-model)
 - [Docs](#where-to-go-next)
 
-## What is Toolkit?
+## What is PlugScout?
 
-Toolkit is a Node.js CLI that unifies multiple AI tooling ecosystems into one searchable catalog and applies trust/risk policy before installation.
+PlugScout is a Node.js CLI that unifies multiple AI tooling ecosystems into one searchable catalog and applies trust/risk policy before installation.
 
 You can:
 - Discover Claude plugins, Claude connectors, Copilot extensions, Skills, and MCP servers from one place.
@@ -52,22 +52,22 @@ You can:
 - `skills` CLI or `npx` for modern skill installs
 - `skill.sh` is optional and only needed for some legacy `skill.sh`-style installs
 
-## Install Toolkit (v0.3.1)
+## Install PlugScout (v0.3.1)
 
 **Global install (recommended):**
 
 ```bash
-npm install -g toolkit
-toolkit setup
+npm install -g plugscout
+plugscout setup
 ```
 
-`toolkit setup` is a single command that installs prerequisites, writes default config, and syncs all catalogs. No extra steps needed.
+`plugscout setup` is a single command that installs prerequisites, writes default config, and syncs all catalogs. No extra steps needed.
 
 **From source:**
 
 ```bash
-git clone https://github.com/amitrintzler/skills-and-mcps.git toolkit
-cd toolkit
+git clone https://github.com/amitrintzler/skills-and-mcps.git plugscout
+cd plugscout
 git checkout v0.3.1
 npm install
 npm run setup
@@ -82,10 +82,10 @@ git checkout $(git describe --tags --abbrev=0)
 ## Quick Start (2-minute path)
 
 ```bash
-npm install -g toolkit
-toolkit setup
-toolkit scan --project . --format table
-toolkit recommend --project . --only-safe --sort trust --limit 10
+npm install -g plugscout
+plugscout setup
+plugscout scan --project . --format table
+plugscout recommend --project . --only-safe --sort trust --limit 10
 ```
 
 Or from source:
@@ -96,18 +96,18 @@ npm run scan -- --project . --format table
 npm run recommend -- --project . --only-safe --sort trust --limit 10 --details
 ```
 
-Run `toolkit` with no args to open the home screen.
+Run `plugscout` with no args to open the home screen.
 
 Important: `top` and `recommend` are repo-aware rankings, not global popularity charts. A higher score means a better match for the current repository under the active policy, using `fit + trust + freshness - security - blocked`. Review each suggestion before installing, and do not install blindly from rank alone.
 
 Installs are now review-gated: run `show --id <catalog-id>` or `assess --id <catalog-id>` before `install`. Use `--override-review` only when you intentionally want to bypass that safeguard.
 
-For supported legacy MCP entries, Toolkit now prefers direct installers when the target is unambiguous:
+For supported legacy MCP entries, PlugScout now prefers direct installers when the target is unambiguous:
 - npm package targets install through `npm install -g`
 - container targets install through `docker pull`
 - ambiguous or binary-asset installs remain explicit/manual
 
-Toolkit also performs a daily interactive update check against GitHub Releases and prints a download hint when a newer release is available.
+PlugScout also performs a daily interactive update check against GitHub Releases and prints a download hint when a newer release is available.
 
 Video preview/render commands are optional maintainer tooling. They are kept in `devDependencies` and are not required to install or run the CLI package.
 
@@ -154,17 +154,17 @@ skill:ci-hardening                skill               openai      low(0)    fals
 
 Packaged CLI-only commands:
 
-- `toolkit setup` (**first-time setup**: prerequisites + config + sync in one step)
-- `toolkit` (home screen)
-- `toolkit upgrade check`
-- `toolkit web --open` (readable browser report)
-- `toolkit <command> --no-update-check` (skip daily auto-check for the current run)
+- `plugscout setup` (**first-time setup**: prerequisites + config + sync in one step)
+- `plugscout` (home screen)
+- `plugscout upgrade check`
+- `plugscout web --open` (readable browser report)
+- `plugscout <command> --no-update-check` (skip daily auto-check for the current run)
 
 Full command reference: [`docs/cli-reference.md`](docs/cli-reference.md)
 
 ## Safety Model
 
-Toolkit blocks high-risk and critical installs by default.
+PlugScout blocks high-risk and critical installs by default.
 
 | Tier | Score | Default install policy |
 | --- | --- | --- |

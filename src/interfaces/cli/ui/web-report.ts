@@ -81,7 +81,7 @@ function renderHtml(
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Toolkit Web Report</title>
+  <title>PlugScout Web Report</title>
   <style>
     :root {
       color-scheme: dark;
@@ -211,7 +211,7 @@ function renderHtml(
 </head>
 <body>
   <div class="wrap">
-    <h1>Toolkit Web Report</h1>
+    <h1>PlugScout Web Report</h1>
     <p class="sub">Readable catalog view for Claude plugins, Claude connectors, Copilot extensions, Skills, and MCP servers.</p>
     <div class="cards">
       <div class="card"><div class="k">Items</div><div class="v">${stats.totalItems}</div></div>

@@ -43,21 +43,21 @@ async function main() {
   const tarballName = parsePackJson(pack.stdout);
   const tarballPath = path.join(REPO_ROOT, tarballName);
 
-  const tempProject = await mkdtemp(path.join(tmpdir(), 'toolkit-smoke-'));
-  const toolkitHome = path.join(tempProject, '.toolkit-home');
+  const tempProject = await mkdtemp(path.join(tmpdir(), 'plugscout-smoke-'));
+  const toolkitHome = path.join(tempProject, '.plugscout-home');
 
   try {
     run('npm', ['init', '-y'], { env: {}, capture: false, cwd: tempProject });
     run('npm', ['install', tarballPath], { env: {}, capture: false, cwd: tempProject });
 
-    const execOptions = { cwd: tempProject, env: { TOOLKIT_HOME: toolkitHome } };
-    run('npm', ['exec', '--', 'toolkit'], execOptions);
-    run('npm', ['exec', '--', 'toolkit', 'help'], execOptions);
-    run('npm', ['exec', '--', 'toolkit', 'about'], execOptions);
-    run('npm', ['exec', '--', 'toolkit', 'upgrade', 'check', '--no-update-check'], execOptions);
-    run('npm', ['exec', '--', 'toolkit', 'status'], execOptions);
-    run('npm', ['exec', '--', 'toolkit', 'recommend', '--kind', 'claude-plugin', '--limit', '5', '--format', 'json'], execOptions);
-    run('npm', ['exec', '--', 'toolkit', 'recommend', '--kind', 'copilot-extension', '--limit', '5', '--format', 'json'], execOptions);
+    const execOptions = { cwd: tempProject, env: { PLUGSCOUT_HOME: toolkitHome } };
+    run('npm', ['exec', '--', 'plugscout'], execOptions);
+    run('npm', ['exec', '--', 'plugscout', 'help'], execOptions);
+    run('npm', ['exec', '--', 'plugscout', 'about'], execOptions);
+    run('npm', ['exec', '--', 'plugscout', 'upgrade', 'check', '--no-update-check'], execOptions);
+    run('npm', ['exec', '--', 'plugscout', 'status'], execOptions);
+    run('npm', ['exec', '--', 'plugscout', 'recommend', '--kind', 'claude-plugin', '--limit', '5', '--format', 'json'], execOptions);
+    run('npm', ['exec', '--', 'plugscout', 'recommend', '--kind', 'copilot-extension', '--limit', '5', '--format', 'json'], execOptions);
 
     console.log('smoke pack checks passed');
   } finally {

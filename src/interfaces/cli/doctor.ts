@@ -91,7 +91,7 @@ function checkSkillsRuntime(): DoctorCheckResult {
     name: 'Skills CLI',
     status: 'fail',
     message: 'skills CLI not found',
-    suggestion: 'Run: toolkit doctor --install-deps'
+    suggestion: 'Run: plugscout doctor --install-deps'
   };
 }
 
