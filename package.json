@@ -1,6 +1,6 @@
 {
   "name": "toolkit",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "description": "Claude plugins + Claude connectors + Copilot extensions + Skills + MCP security intelligence framework",
   "private": false,
   "type": "module",

@@ -52,7 +52,7 @@ You can:
 - `skills` CLI or `npx` for modern skill installs
 - `skill.sh` is optional and only needed for some legacy `skill.sh`-style installs
 
-## Install Toolkit (v0.3.0)
+## Install Toolkit (v0.3.1)
 
 **Global install (recommended):**
 
@@ -68,12 +68,12 @@ toolkit setup
 ```bash
 git clone https://github.com/amitrintzler/skills-and-mcps.git toolkit
 cd toolkit
-git checkout v0.3.0
+git checkout v0.3.1
 npm install
 npm run setup
 ```
 
-Install newest release tag instead of pinning `v0.3.0`:
+Install newest release tag instead of pinning `v0.3.1`:
 
 ```bash
 git checkout $(git describe --tags --abbrev=0)
