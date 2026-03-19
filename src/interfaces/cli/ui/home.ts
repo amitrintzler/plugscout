@@ -21,12 +21,13 @@ export async function renderHomeScreen(): Promise<string> {
 
   const lines: string[] = [];
   const displayName = (pkg.name ?? 'plugscout') === 'plugscout' ? 'PlugScout' : (pkg.name ?? 'plugscout');
-  lines.push(colorIfTty(logo.trimEnd(), colors.cyan));
+  const version = pkg.version ?? '0.0.0';
+  const author = pkg.author ?? '';
+  const metaLine = author
+    ? `         v${version}  ·  maintained by ${author}`
+    : `         v${version}`;
+  lines.push(colorIfTty(logo.trimEnd() + '\n' + metaLine, colors.cyan));
   lines.push('');
-  lines.push(colorIfTty(`${displayName} v${pkg.version ?? '0.0.0'}`, colors.bold));
-  if (pkg.author) {
-    lines.push(`Written by ${pkg.author}.`);
-  }
   lines.push('Discover and safely install Claude plugins, Claude connectors, Copilot extensions, Skills, and MCP servers.');
   lines.push('');
   lines.push(colorIfTty('Catalog', colors.bold));

@@ -76,7 +76,7 @@ describe('cli ux behaviors', () => {
     const logs = output.joined();
     expect(logs).toContain('Quick actions');
     expect(logs).toContain('Examples');
-    expect(logs).toContain('PlugScout v');
+    expect(logs).toContain('maintained by');
     expect(logs).toContain('plugscout doctor');
     expect(logs).toContain('Ranking meaning');
     expect(logs).toContain('repo-aware suggestions');
