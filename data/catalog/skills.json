@@ -4,7 +4,7 @@
     "kind": "skill",
     "name": "agentic-actions-auditor",
     "description": "Audits GitHub Actions workflows for security vulnerabilities in AI agent integrations (Claude Code Action, Gemini CLI, OpenAI Codex, GitHub AI Inference)",
-    "provider": "github",
+    "provider": "openai",
     "capabilities": [
       "automation",
       "security"
@@ -16,12 +16,12 @@
       "github",
       "node"
     ],
-    "source": "trailofbits-skills-marketplace",
-    "lastSeenAt": "2026-03-19",
+    "source": "community-skills-index",
+    "lastSeenAt": "2026-03-20",
     "install": {
-      "kind": "manual",
-      "instructions": "Review the linked GitHub skill and follow its repository installation instructions.",
-      "url": "https://github.com/trailofbits/skills/tree/main/plugins/agentic-actions-auditor"
+      "kind": "skill.sh",
+      "target": "agentic-actions-auditor",
+      "args": []
     },
     "adoptionSignal": 58,
     "maintenanceSignal": 78,
@@ -35,14 +35,14 @@
       "integrityAlerts": 0
     },
     "metadata": {
+      "sourceRegistryId": "trailofbits-skills-marketplace",
+      "sourceType": "community-list",
+      "sourceConfidence": "vetted-curated",
       "catalogType": "skill",
       "marketplaceRegistry": "trailofbits-skills-marketplace",
       "marketplaceSource": "github",
       "rawVersion": "1.2.0",
-      "sourceConfidence": "vetted-curated",
-      "githubUrl": "https://github.com/trailofbits/skills/tree/main/plugins/agentic-actions-auditor",
-      "sourceRegistryId": "trailofbits-skills-marketplace",
-      "sourceType": "community-list"
+      "githubUrl": "https://github.com/trailofbits/skills/tree/main/plugins/agentic-actions-auditor"
     }
   },
   {
@@ -50,7 +50,7 @@
     "kind": "skill",
     "name": "algorithmic-art",
     "description": "Collection of example skills demonstrating various capabilities including skill creation, MCP building, visual design, algorithmic art, internal communications, web testing, artifact building, Slack GIFs, and theme styling",
-    "provider": "anthropic",
+    "provider": "openai",
     "capabilities": [
       "automation",
       "guardrails",
@@ -73,12 +73,12 @@
       "general",
       "node"
     ],
-    "source": "anthropic-skills",
-    "lastSeenAt": "2026-03-19",
+    "source": "community-skills-index",
+    "lastSeenAt": "2026-03-20",
     "install": {
-      "kind": "manual",
-      "instructions": "Review the linked GitHub skill and follow its repository installation instructions.",
-      "url": "https://github.com/anthropics/skills/tree/main/skills/algorithmic-art"
+      "kind": "skill.sh",
+      "target": "algorithmic-art",
+      "args": []
     },
     "adoptionSignal": 66,
     "maintenanceSignal": 70,
@@ -92,16 +92,16 @@
       "integrityAlerts": 0
     },
     "metadata": {
+      "sourceRegistryId": "anthropic-skills",
+      "sourceType": "vendor-feed",
+      "sourceConfidence": "official",
       "catalogType": "skill",
       "marketplacePlugin": "example-skills",
       "marketplaceRegistry": "anthropic-skills",
       "marketplaceSource": "github",
       "rawVersion": "unknown",
-      "sourceConfidence": "official",
       "bundledSkillPath": "skills/algorithmic-art",
-      "githubUrl": "https://github.com/anthropics/skills/tree/main/skills/algorithmic-art",
-      "sourceRegistryId": "anthropic-skills",
-      "sourceType": "vendor-feed"
+      "githubUrl": "https://github.com/anthropics/skills/tree/main/skills/algorithmic-art"
     }
   },
   {
@@ -109,7 +109,7 @@
     "kind": "skill",
     "name": "ask-questions-if-underspecified",
     "description": "Clarify ambiguous requirements by asking questions before implementing. Only when invoked explicitly.",
-    "provider": "github",
+    "provider": "openai",
     "capabilities": [
       "automation"
     ],
@@ -119,12 +119,12 @@
       "general",
       "node"
     ],
-    "source": "trailofbits-skills-marketplace",
-    "lastSeenAt": "2026-03-19",
+    "source": "community-skills-index",
+    "lastSeenAt": "2026-03-20",
     "install": {
-      "kind": "manual",
-      "instructions": "Review the linked GitHub skill and follow its repository installation instructions.",
-      "url": "https://github.com/trailofbits/skills/tree/main/plugins/ask-questions-if-underspecified"
+      "kind": "skill.sh",
+      "target": "ask-questions-if-underspecified",
+      "args": []
     },
     "adoptionSignal": 58,
     "maintenanceSignal": 78,
@@ -138,14 +138,14 @@
       "integrityAlerts": 0
     },
     "metadata": {
+      "sourceRegistryId": "trailofbits-skills-marketplace",
+      "sourceType": "community-list",
+      "sourceConfidence": "vetted-curated",
       "catalogType": "skill",
       "marketplaceRegistry": "trailofbits-skills-marketplace",
       "marketplaceSource": "github",
       "rawVersion": "1.0.1",
-      "sourceConfidence": "vetted-curated",
-      "githubUrl": "https://github.com/trailofbits/skills/tree/main/plugins/ask-questions-if-underspecified",
-      "sourceRegistryId": "trailofbits-skills-marketplace",
-      "sourceType": "community-list"
+      "githubUrl": "https://github.com/trailofbits/skills/tree/main/plugins/ask-questions-if-underspecified"
     }
   },
   {
@@ -161,7 +161,7 @@
       "general"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-19",
+    "lastSeenAt": "2026-03-20",
     "install": {
       "kind": "skill.sh",
       "target": "Aspnet Core",
@@ -191,7 +191,7 @@
     "kind": "skill",
     "name": "audit-context-building",
     "description": "Build deep architectural context through ultra-granular code analysis before vulnerability hunting",
-    "provider": "github",
+    "provider": "openai",
     "capabilities": [
       "automation",
       "security"
@@ -203,12 +203,12 @@
       "github",
       "node"
     ],
-    "source": "trailofbits-skills-marketplace",
-    "lastSeenAt": "2026-03-19",
+    "source": "community-skills-index",
+    "lastSeenAt": "2026-03-20",
     "install": {
-      "kind": "manual",
-      "instructions": "Review the linked GitHub skill and follow its repository installation instructions.",
-      "url": "https://github.com/trailofbits/skills/tree/main/plugins/audit-context-building"
+      "kind": "skill.sh",
+      "target": "audit-context-building",
+      "args": []
     },
     "adoptionSignal": 58,
     "maintenanceSignal": 78,
@@ -222,14 +222,14 @@
       "integrityAlerts": 0
     },
     "metadata": {
+      "sourceRegistryId": "trailofbits-skills-marketplace",
+      "sourceType": "community-list",
+      "sourceConfidence": "vetted-curated",
       "catalogType": "skill",
       "marketplaceRegistry": "trailofbits-skills-marketplace",
       "marketplaceSource": "github",
       "rawVersion": "1.1.0",
-      "sourceConfidence": "vetted-curated",
-      "githubUrl": "https://github.com/trailofbits/skills/tree/main/plugins/audit-context-building",
-      "sourceRegistryId": "trailofbits-skills-marketplace",
-      "sourceType": "community-list"
+      "githubUrl": "https://github.com/trailofbits/skills/tree/main/plugins/audit-context-building"
     }
   },
   {
@@ -240,17 +240,17 @@
     "provider": "openai",
     "capabilities": [
       "automation",
-      "security",
-      "search"
+      "search",
+      "security"
     ],
     "compatibility": [
       "aws",
       "cloud",
-      "serverless",
-      "general"
+      "general",
+      "serverless"
     ],
-    "source": "github-curated-industry-skills",
-    "lastSeenAt": "2026-03-19",
+    "source": "community-skills-index",
+    "lastSeenAt": "2026-03-20",
     "install": {
       "kind": "skill.sh",
       "target": "aws-platform-ops",
@@ -278,7 +278,7 @@
     "kind": "skill",
     "name": "brand-guidelines",
     "description": "Collection of example skills demonstrating various capabilities including skill creation, MCP building, visual design, algorithmic art, internal communications, web testing, artifact building, Slack GIFs, and theme styling",
-    "provider": "anthropic",
+    "provider": "openai",
     "capabilities": [
       "automation",
       "guardrails",
@@ -301,12 +301,12 @@
       "general",
       "node"
     ],
-    "source": "anthropic-skills",
-    "lastSeenAt": "2026-03-19",
+    "source": "community-skills-index",
+    "lastSeenAt": "2026-03-20",
     "install": {
-      "kind": "manual",
-      "instructions": "Review the linked GitHub skill and follow its repository installation instructions.",
-      "url": "https://github.com/anthropics/skills/tree/main/skills/brand-guidelines"
+      "kind": "skill.sh",
+      "target": "brand-guidelines",
+      "args": []
     },
     "adoptionSignal": 66,
     "maintenanceSignal": 70,
@@ -320,16 +320,16 @@
       "integrityAlerts": 0
     },
     "metadata": {
+      "sourceRegistryId": "anthropic-skills",
+      "sourceType": "vendor-feed",
+      "sourceConfidence": "official",
       "catalogType": "skill",
       "marketplacePlugin": "example-skills",
       "marketplaceRegistry": "anthropic-skills",
       "marketplaceSource": "github",
       "rawVersion": "unknown",
-      "sourceConfidence": "official",
       "bundledSkillPath": "skills/brand-guidelines",
-      "githubUrl": "https://github.com/anthropics/skills/tree/main/skills/brand-guidelines",
-      "sourceRegistryId": "anthropic-skills",
-      "sourceType": "vendor-feed"
+      "githubUrl": "https://github.com/anthropics/skills/tree/main/skills/brand-guidelines"
     }
   },
   {
@@ -337,7 +337,7 @@
     "kind": "skill",
     "name": "building-secure-contracts",
     "description": "Comprehensive smart contract security toolkit based on Trail of Bits' Building Secure Contracts framework. Includes vulnerability scanners for 6 blockchains and 5 development guideline assistants.",
-    "provider": "github",
+    "provider": "openai",
     "capabilities": [
       "automation",
       "security"
@@ -349,12 +349,12 @@
       "github",
       "node"
     ],
-    "source": "trailofbits-skills-marketplace",
-    "lastSeenAt": "2026-03-19",
+    "source": "community-skills-index",
+    "lastSeenAt": "2026-03-20",
     "install": {
-      "kind": "manual",
-      "instructions": "Review the linked GitHub skill and follow its repository installation instructions.",
-      "url": "https://github.com/trailofbits/skills/tree/main/plugins/building-secure-contracts"
+      "kind": "skill.sh",
+      "target": "building-secure-contracts",
+      "args": []
     },
     "adoptionSignal": 58,
     "maintenanceSignal": 78,
@@ -368,14 +368,14 @@
       "integrityAlerts": 0
     },
     "metadata": {
+      "sourceRegistryId": "trailofbits-skills-marketplace",
+      "sourceType": "community-list",
+      "sourceConfidence": "vetted-curated",
       "catalogType": "skill",
       "marketplaceRegistry": "trailofbits-skills-marketplace",
       "marketplaceSource": "github",
       "rawVersion": "1.0.1",
-      "sourceConfidence": "vetted-curated",
-      "githubUrl": "https://github.com/trailofbits/skills/tree/main/plugins/building-secure-contracts",
-      "sourceRegistryId": "trailofbits-skills-marketplace",
-      "sourceType": "community-list"
+      "githubUrl": "https://github.com/trailofbits/skills/tree/main/plugins/building-secure-contracts"
     }
   },
   {
@@ -383,7 +383,7 @@
     "kind": "skill",
     "name": "burpsuite-project-parser",
     "description": "Search and extract data from Burp Suite project files (.burp) for security analysis",
-    "provider": "github",
+    "provider": "openai",
     "capabilities": [
       "security"
     ],
@@ -393,12 +393,12 @@
       "general",
       "github"
     ],
-    "source": "trailofbits-skills-marketplace",
-    "lastSeenAt": "2026-03-19",
+    "source": "community-skills-index",
+    "lastSeenAt": "2026-03-20",
     "install": {
-      "kind": "manual",
-      "instructions": "Review the linked GitHub skill and follow its repository installation instructions.",
-      "url": "https://github.com/trailofbits/skills/tree/main/plugins/burpsuite-project-parser"
+      "kind": "skill.sh",
+      "target": "burpsuite-project-parser",
+      "args": []
     },
     "adoptionSignal": 58,
     "maintenanceSignal": 78,
@@ -412,14 +412,14 @@
       "integrityAlerts": 0
     },
     "metadata": {
+      "sourceRegistryId": "trailofbits-skills-marketplace",
+      "sourceType": "community-list",
+      "sourceConfidence": "vetted-curated",
       "catalogType": "skill",
       "marketplaceRegistry": "trailofbits-skills-marketplace",
       "marketplaceSource": "github",
       "rawVersion": "1.0.0",
-      "sourceConfidence": "vetted-curated",
-      "githubUrl": "https://github.com/trailofbits/skills/tree/main/plugins/burpsuite-project-parser",
-      "sourceRegistryId": "trailofbits-skills-marketplace",
-      "sourceType": "community-list"
+      "githubUrl": "https://github.com/trailofbits/skills/tree/main/plugins/burpsuite-project-parser"
     }
   },
   {
@@ -427,7 +427,7 @@
     "kind": "skill",
     "name": "canvas-design",
     "description": "Collection of example skills demonstrating various capabilities including skill creation, MCP building, visual design, algorithmic art, internal communications, web testing, artifact building, Slack GIFs, and theme styling",
-    "provider": "anthropic",
+    "provider": "openai",
     "capabilities": [
       "automation",
       "guardrails",
@@ -450,12 +450,12 @@
       "general",
       "node"
     ],
-    "source": "anthropic-skills",
-    "lastSeenAt": "2026-03-19",
+    "source": "community-skills-index",
+    "lastSeenAt": "2026-03-20",
     "install": {
-      "kind": "manual",
-      "instructions": "Review the linked GitHub skill and follow its repository installation instructions.",
-      "url": "https://github.com/anthropics/skills/tree/main/skills/canvas-design"
+      "kind": "skill.sh",
+      "target": "canvas-design",
+      "args": []
     },
     "adoptionSignal": 66,
     "maintenanceSignal": 70,
@@ -469,16 +469,16 @@
       "integrityAlerts": 0
     },
     "metadata": {
+      "sourceRegistryId": "anthropic-skills",
+      "sourceType": "vendor-feed",
+      "sourceConfidence": "official",
       "catalogType": "skill",
       "marketplacePlugin": "example-skills",
       "marketplaceRegistry": "anthropic-skills",
       "marketplaceSource": "github",
       "rawVersion": "unknown",
-      "sourceConfidence": "official",
       "bundledSkillPath": "skills/canvas-design",
-      "githubUrl": "https://github.com/anthropics/skills/tree/main/skills/canvas-design",
-      "sourceRegistryId": "anthropic-skills",
-      "sourceType": "vendor-feed"
+      "githubUrl": "https://github.com/anthropics/skills/tree/main/skills/canvas-design"
     }
   },
   {
@@ -494,7 +494,7 @@
       "general"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-19",
+    "lastSeenAt": "2026-03-20",
     "install": {
       "kind": "skill.sh",
       "target": "Chatgpt Apps",
@@ -536,7 +536,7 @@
       "node"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-19",
+    "lastSeenAt": "2026-03-20",
     "install": {
       "kind": "skill.sh",
       "target": "ci-hardening",
@@ -564,7 +564,7 @@
     "kind": "skill",
     "name": "claude-api",
     "description": "Claude API and SDK documentation skill for building LLM-powered applications",
-    "provider": "anthropic",
+    "provider": "openai",
     "capabilities": [
       "automation",
       "docs",
@@ -576,12 +576,12 @@
       "general",
       "node"
     ],
-    "source": "anthropic-skills",
-    "lastSeenAt": "2026-03-19",
+    "source": "community-skills-index",
+    "lastSeenAt": "2026-03-20",
     "install": {
-      "kind": "manual",
-      "instructions": "Review the linked GitHub skill and follow its repository installation instructions.",
-      "url": "https://github.com/anthropics/skills/tree/main/skills/claude-api"
+      "kind": "skill.sh",
+      "target": "claude-api",
+      "args": []
     },
     "adoptionSignal": 66,
     "maintenanceSignal": 70,
@@ -595,16 +595,16 @@
       "integrityAlerts": 0
     },
     "metadata": {
+      "sourceRegistryId": "anthropic-skills",
+      "sourceType": "vendor-feed",
+      "sourceConfidence": "official",
       "catalogType": "skill",
       "marketplacePlugin": "claude-api",
       "marketplaceRegistry": "anthropic-skills",
       "marketplaceSource": "github",
       "rawVersion": "unknown",
-      "sourceConfidence": "official",
       "bundledSkillPath": "skills/claude-api",
-      "githubUrl": "https://github.com/anthropics/skills/tree/main/skills/claude-api",
-      "sourceRegistryId": "anthropic-skills",
-      "sourceType": "vendor-feed"
+      "githubUrl": "https://github.com/anthropics/skills/tree/main/skills/claude-api"
     }
   },
   {
@@ -612,7 +612,7 @@
     "kind": "skill",
     "name": "claude-in-chrome-troubleshooting",
     "description": "Diagnose and fix Claude in Chrome MCP extension connectivity issues",
-    "provider": "github",
+    "provider": "openai",
     "capabilities": [
       "automation"
     ],
@@ -622,12 +622,12 @@
       "general",
       "node"
     ],
-    "source": "trailofbits-skills-marketplace",
-    "lastSeenAt": "2026-03-19",
+    "source": "community-skills-index",
+    "lastSeenAt": "2026-03-20",
     "install": {
-      "kind": "manual",
-      "instructions": "Review the linked GitHub skill and follow its repository installation instructions.",
-      "url": "https://github.com/trailofbits/skills/tree/main/plugins/claude-in-chrome-troubleshooting"
+      "kind": "skill.sh",
+      "target": "claude-in-chrome-troubleshooting",
+      "args": []
     },
     "adoptionSignal": 58,
     "maintenanceSignal": 78,
@@ -641,14 +641,14 @@
       "integrityAlerts": 0
     },
     "metadata": {
+      "sourceRegistryId": "trailofbits-skills-marketplace",
+      "sourceType": "community-list",
+      "sourceConfidence": "vetted-curated",
       "catalogType": "skill",
       "marketplaceRegistry": "trailofbits-skills-marketplace",
       "marketplaceSource": "github",
       "rawVersion": "1.0.0",
-      "sourceConfidence": "vetted-curated",
-      "githubUrl": "https://github.com/trailofbits/skills/tree/main/plugins/claude-in-chrome-troubleshooting",
-      "sourceRegistryId": "trailofbits-skills-marketplace",
-      "sourceType": "community-list"
+      "githubUrl": "https://github.com/trailofbits/skills/tree/main/plugins/claude-in-chrome-troubleshooting"
     }
   },
   {
@@ -664,7 +664,7 @@
       "general"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-19",
+    "lastSeenAt": "2026-03-20",
     "install": {
       "kind": "skill.sh",
       "target": "Cloudflare Deploy",
@@ -694,7 +694,7 @@
     "kind": "skill",
     "name": "code-operations-skills",
     "description": "High-precision code manipulation operations including line-based insertion, bulk refactoring, and file analysis - converted from code-copy-mcp",
-    "provider": "github",
+    "provider": "openai",
     "capabilities": [
       "automation"
     ],
@@ -704,12 +704,12 @@
       "general",
       "node"
     ],
-    "source": "github-mhattingpete-claude-skills",
-    "lastSeenAt": "2026-03-19",
+    "source": "community-skills-index",
+    "lastSeenAt": "2026-03-20",
     "install": {
-      "kind": "manual",
-      "instructions": "Review the linked GitHub skill and follow its repository installation instructions.",
-      "url": "https://github.com/mhattingpete/claude-skills-marketplace/tree/main/code-operations-plugin"
+      "kind": "skill.sh",
+      "target": "code-operations-skills",
+      "args": []
     },
     "adoptionSignal": 58,
     "maintenanceSignal": 78,
@@ -723,14 +723,14 @@
       "integrityAlerts": 0
     },
     "metadata": {
+      "sourceRegistryId": "github-mhattingpete-claude-skills",
+      "sourceType": "community-list",
+      "sourceConfidence": "vetted-curated",
       "catalogType": "skill",
       "marketplaceRegistry": "github-mhattingpete-claude-skills",
       "marketplaceSource": "github",
       "rawVersion": "1.0.0",
-      "sourceConfidence": "vetted-curated",
-      "githubUrl": "https://github.com/mhattingpete/claude-skills-marketplace/tree/main/code-operations-plugin",
-      "sourceRegistryId": "github-mhattingpete-claude-skills",
-      "sourceType": "community-list"
+      "githubUrl": "https://github.com/mhattingpete/claude-skills-marketplace/tree/main/code-operations-plugin"
     }
   },
   {
@@ -738,7 +738,7 @@
     "kind": "skill",
     "name": "constant-time-analysis",
     "description": "Detect compiler-induced timing side-channels in cryptographic code",
-    "provider": "github",
+    "provider": "openai",
     "capabilities": [
       "automation"
     ],
@@ -748,12 +748,12 @@
       "general",
       "node"
     ],
-    "source": "trailofbits-skills-marketplace",
-    "lastSeenAt": "2026-03-19",
+    "source": "community-skills-index",
+    "lastSeenAt": "2026-03-20",
     "install": {
-      "kind": "manual",
-      "instructions": "Review the linked GitHub skill and follow its repository installation instructions.",
-      "url": "https://github.com/trailofbits/skills/tree/main/plugins/constant-time-analysis"
+      "kind": "skill.sh",
+      "target": "constant-time-analysis",
+      "args": []
     },
     "adoptionSignal": 58,
     "maintenanceSignal": 78,
@@ -767,14 +767,14 @@
       "integrityAlerts": 0
     },
     "metadata": {
+      "sourceRegistryId": "trailofbits-skills-marketplace",
+      "sourceType": "community-list",
+      "sourceConfidence": "vetted-curated",
       "catalogType": "skill",
       "marketplaceRegistry": "trailofbits-skills-marketplace",
       "marketplaceSource": "github",
       "rawVersion": "0.1.0",
-      "sourceConfidence": "vetted-curated",
-      "githubUrl": "https://github.com/trailofbits/skills/tree/main/plugins/constant-time-analysis",
-      "sourceRegistryId": "trailofbits-skills-marketplace",
-      "sourceType": "community-list"
+      "githubUrl": "https://github.com/trailofbits/skills/tree/main/plugins/constant-time-analysis"
     }
   },
   {
@@ -782,7 +782,7 @@
     "kind": "skill",
     "name": "culture-index",
     "description": "Interprets Culture Index survey results for individuals and teams",
-    "provider": "github",
+    "provider": "openai",
     "capabilities": [
       "automation"
     ],
@@ -792,12 +792,12 @@
       "general",
       "node"
     ],
-    "source": "trailofbits-skills-marketplace",
-    "lastSeenAt": "2026-03-19",
+    "source": "community-skills-index",
+    "lastSeenAt": "2026-03-20",
     "install": {
-      "kind": "manual",
-      "instructions": "Review the linked GitHub skill and follow its repository installation instructions.",
-      "url": "https://github.com/trailofbits/skills/tree/main/plugins/culture-index"
+      "kind": "skill.sh",
+      "target": "culture-index",
+      "args": []
     },
     "adoptionSignal": 58,
     "maintenanceSignal": 78,
@@ -811,14 +811,14 @@
       "integrityAlerts": 0
     },
     "metadata": {
+      "sourceRegistryId": "trailofbits-skills-marketplace",
+      "sourceType": "community-list",
+      "sourceConfidence": "vetted-curated",
       "catalogType": "skill",
       "marketplaceRegistry": "trailofbits-skills-marketplace",
       "marketplaceSource": "github",
       "rawVersion": "1.1.0",
-      "sourceConfidence": "vetted-curated",
-      "githubUrl": "https://github.com/trailofbits/skills/tree/main/plugins/culture-index",
-      "sourceRegistryId": "trailofbits-skills-marketplace",
-      "sourceType": "community-list"
+      "githubUrl": "https://github.com/trailofbits/skills/tree/main/plugins/culture-index"
     }
   },
   {
@@ -826,7 +826,7 @@
     "kind": "skill",
     "name": "debug-buttercup",
     "description": "Debug Buttercup Kubernetes deployments",
-    "provider": "github",
+    "provider": "openai",
     "capabilities": [
       "automation"
     ],
@@ -836,12 +836,12 @@
       "general",
       "node"
     ],
-    "source": "trailofbits-skills-marketplace",
-    "lastSeenAt": "2026-03-19",
+    "source": "community-skills-index",
+    "lastSeenAt": "2026-03-20",
     "install": {
-      "kind": "manual",
-      "instructions": "Review the linked GitHub skill and follow its repository installation instructions.",
-      "url": "https://github.com/trailofbits/skills/tree/main/plugins/debug-buttercup"
+      "kind": "skill.sh",
+      "target": "debug-buttercup",
+      "args": []
     },
     "adoptionSignal": 58,
     "maintenanceSignal": 78,
@@ -855,14 +855,53 @@
       "integrityAlerts": 0
     },
     "metadata": {
+      "sourceRegistryId": "trailofbits-skills-marketplace",
+      "sourceType": "community-list",
+      "sourceConfidence": "vetted-curated",
       "catalogType": "skill",
       "marketplaceRegistry": "trailofbits-skills-marketplace",
       "marketplaceSource": "github",
       "rawVersion": "1.0.0",
-      "sourceConfidence": "vetted-curated",
-      "githubUrl": "https://github.com/trailofbits/skills/tree/main/plugins/debug-buttercup",
-      "sourceRegistryId": "trailofbits-skills-marketplace",
-      "sourceType": "community-list"
+      "githubUrl": "https://github.com/trailofbits/skills/tree/main/plugins/debug-buttercup"
+    }
+  },
+  {
+    "id": "skill:deep-research",
+    "kind": "skill",
+    "name": "Deep Research",
+    "description": "Execute multi-step autonomous research tasks using web search, synthesis, and source citation. One of the most-installed Claude Code skills in 2026.",
+    "provider": "openai",
+    "capabilities": [
+      "search",
+      "automation",
+      "prompting"
+    ],
+    "compatibility": [
+      "claude-code",
+      "general"
+    ],
+    "source": "community-skills-index",
+    "lastSeenAt": "2026-03-20",
+    "install": {
+      "kind": "skill.sh",
+      "target": "deep-research",
+      "args": []
+    },
+    "adoptionSignal": 88,
+    "maintenanceSignal": 84,
+    "provenanceSignal": 78,
+    "freshnessSignal": 82,
+    "securitySignals": {
+      "knownVulnerabilities": 0,
+      "suspiciousPatterns": 0,
+      "injectionFindings": 0,
+      "exfiltrationSignals": 0,
+      "integrityAlerts": 0
+    },
+    "metadata": {
+      "sourceRegistryId": "community-skills-index",
+      "sourceType": "community-list",
+      "sourceConfidence": "vetted-curated"
     }
   },
   {
@@ -870,7 +909,7 @@
     "kind": "skill",
     "name": "dev-browser",
     "description": "Browser automation with persistent page state. Use when users ask to navigate websites, fill forms, take screenshots, extract web data, test web apps, or automate browser workflows.",
-    "provider": "github",
+    "provider": "openai",
     "capabilities": [
       "automation",
       "browser-control"
@@ -881,12 +920,12 @@
       "general",
       "node"
     ],
-    "source": "github-n-skills-marketplace",
-    "lastSeenAt": "2026-03-19",
+    "source": "community-skills-index",
+    "lastSeenAt": "2026-03-20",
     "install": {
-      "kind": "manual",
-      "instructions": "Review the linked GitHub skill and follow its repository installation instructions.",
-      "url": "https://github.com/numman-ali/n-skills/tree/main/skills/automation/dev-browser"
+      "kind": "skill.sh",
+      "target": "dev-browser",
+      "args": []
     },
     "adoptionSignal": 58,
     "maintenanceSignal": 70,
@@ -900,14 +939,14 @@
       "integrityAlerts": 0
     },
     "metadata": {
+      "sourceRegistryId": "github-n-skills-marketplace",
+      "sourceType": "community-list",
+      "sourceConfidence": "vetted-curated",
       "catalogType": "skill",
       "marketplaceRegistry": "github-n-skills-marketplace",
       "marketplaceSource": "github",
       "rawVersion": "unknown",
-      "sourceConfidence": "vetted-curated",
-      "githubUrl": "https://github.com/numman-ali/n-skills/tree/main/skills/automation/dev-browser",
-      "sourceRegistryId": "github-n-skills-marketplace",
-      "sourceType": "community-list"
+      "githubUrl": "https://github.com/numman-ali/n-skills/tree/main/skills/automation/dev-browser"
     }
   },
   {
@@ -915,7 +954,7 @@
     "kind": "skill",
     "name": "devcontainer-setup",
     "description": "Create pre-configured devcontainers with Claude Code and language-specific tooling",
-    "provider": "github",
+    "provider": "openai",
     "capabilities": [
       "automation"
     ],
@@ -925,12 +964,12 @@
       "general",
       "node"
     ],
-    "source": "trailofbits-skills-marketplace",
-    "lastSeenAt": "2026-03-19",
+    "source": "community-skills-index",
+    "lastSeenAt": "2026-03-20",
     "install": {
-      "kind": "manual",
-      "instructions": "Review the linked GitHub skill and follow its repository installation instructions.",
-      "url": "https://github.com/trailofbits/skills/tree/main/plugins/devcontainer-setup"
+      "kind": "skill.sh",
+      "target": "devcontainer-setup",
+      "args": []
     },
     "adoptionSignal": 58,
     "maintenanceSignal": 78,
@@ -944,14 +983,14 @@
       "integrityAlerts": 0
     },
     "metadata": {
+      "sourceRegistryId": "trailofbits-skills-marketplace",
+      "sourceType": "community-list",
+      "sourceConfidence": "vetted-curated",
       "catalogType": "skill",
       "marketplaceRegistry": "trailofbits-skills-marketplace",
       "marketplaceSource": "github",
       "rawVersion": "0.1.0",
-      "sourceConfidence": "vetted-curated",
-      "githubUrl": "https://github.com/trailofbits/skills/tree/main/plugins/devcontainer-setup",
-      "sourceRegistryId": "trailofbits-skills-marketplace",
-      "sourceType": "community-list"
+      "githubUrl": "https://github.com/trailofbits/skills/tree/main/plugins/devcontainer-setup"
     }
   },
   {
@@ -968,7 +1007,7 @@
       "node"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-19",
+    "lastSeenAt": "2026-03-20",
     "install": {
       "kind": "skill.sh",
       "target": "Develop Web Game",
@@ -998,7 +1037,7 @@
     "kind": "skill",
     "name": "differential-review",
     "description": "Security-focused differential review of code changes with git history analysis and blast radius estimation",
-    "provider": "github",
+    "provider": "openai",
     "capabilities": [
       "guardrails",
       "security"
@@ -1009,12 +1048,12 @@
       "general",
       "github"
     ],
-    "source": "trailofbits-skills-marketplace",
-    "lastSeenAt": "2026-03-19",
+    "source": "community-skills-index",
+    "lastSeenAt": "2026-03-20",
     "install": {
-      "kind": "manual",
-      "instructions": "Review the linked GitHub skill and follow its repository installation instructions.",
-      "url": "https://github.com/trailofbits/skills/tree/main/plugins/differential-review"
+      "kind": "skill.sh",
+      "target": "differential-review",
+      "args": []
     },
     "adoptionSignal": 58,
     "maintenanceSignal": 78,
@@ -1028,14 +1067,14 @@
       "integrityAlerts": 0
     },
     "metadata": {
+      "sourceRegistryId": "trailofbits-skills-marketplace",
+      "sourceType": "community-list",
+      "sourceConfidence": "vetted-curated",
       "catalogType": "skill",
       "marketplaceRegistry": "trailofbits-skills-marketplace",
       "marketplaceSource": "github",
       "rawVersion": "1.0.0",
-      "sourceConfidence": "vetted-curated",
-      "githubUrl": "https://github.com/trailofbits/skills/tree/main/plugins/differential-review",
-      "sourceRegistryId": "trailofbits-skills-marketplace",
-      "sourceType": "community-list"
+      "githubUrl": "https://github.com/trailofbits/skills/tree/main/plugins/differential-review"
     }
   },
   {
@@ -1051,7 +1090,7 @@
       "general"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-19",
+    "lastSeenAt": "2026-03-20",
     "install": {
       "kind": "skill.sh",
       "target": "Doc",
@@ -1081,7 +1120,7 @@
     "kind": "skill",
     "name": "doc-coauthoring",
     "description": "Collection of example skills demonstrating various capabilities including skill creation, MCP building, visual design, algorithmic art, internal communications, web testing, artifact building, Slack GIFs, and theme styling",
-    "provider": "anthropic",
+    "provider": "openai",
     "capabilities": [
       "automation",
       "guardrails",
@@ -1106,12 +1145,12 @@
       "github",
       "node"
     ],
-    "source": "anthropic-skills",
-    "lastSeenAt": "2026-03-19",
+    "source": "community-skills-index",
+    "lastSeenAt": "2026-03-20",
     "install": {
-      "kind": "manual",
-      "instructions": "Review the linked GitHub skill and follow its repository installation instructions.",
-      "url": "https://github.com/anthropics/skills/tree/main/skills/doc-coauthoring"
+      "kind": "skill.sh",
+      "target": "doc-coauthoring",
+      "args": []
     },
     "adoptionSignal": 66,
     "maintenanceSignal": 70,
@@ -1125,16 +1164,16 @@
       "integrityAlerts": 0
     },
     "metadata": {
+      "sourceRegistryId": "anthropic-skills",
+      "sourceType": "vendor-feed",
+      "sourceConfidence": "official",
       "catalogType": "skill",
       "marketplacePlugin": "example-skills",
       "marketplaceRegistry": "anthropic-skills",
       "marketplaceSource": "github",
       "rawVersion": "unknown",
-      "sourceConfidence": "official",
       "bundledSkillPath": "skills/doc-coauthoring",
-      "githubUrl": "https://github.com/anthropics/skills/tree/main/skills/doc-coauthoring",
-      "sourceRegistryId": "anthropic-skills",
-      "sourceType": "vendor-feed"
+      "githubUrl": "https://github.com/anthropics/skills/tree/main/skills/doc-coauthoring"
     }
   },
   {
@@ -1145,17 +1184,17 @@
     "provider": "openai",
     "capabilities": [
       "automation",
-      "security",
-      "guardrails"
+      "guardrails",
+      "security"
     ],
     "compatibility": [
       "container",
+      "general",
       "node",
-      "python",
-      "general"
+      "python"
     ],
-    "source": "github-curated-industry-skills",
-    "lastSeenAt": "2026-03-19",
+    "source": "community-skills-index",
+    "lastSeenAt": "2026-03-20",
     "install": {
       "kind": "skill.sh",
       "target": "docker-container-ops",
@@ -1195,7 +1234,7 @@
       "python"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-19",
+    "lastSeenAt": "2026-03-20",
     "install": {
       "kind": "skill.sh",
       "target": "docs-automation",
@@ -1223,7 +1262,7 @@
     "kind": "skill",
     "name": "docx",
     "description": "Collection of document processing suite including Excel, Word, PowerPoint, and PDF capabilities",
-    "provider": "anthropic",
+    "provider": "openai",
     "capabilities": [
       "automation",
       "skills/docx",
@@ -1237,12 +1276,12 @@
       "general",
       "node"
     ],
-    "source": "anthropic-skills",
-    "lastSeenAt": "2026-03-19",
+    "source": "community-skills-index",
+    "lastSeenAt": "2026-03-20",
     "install": {
-      "kind": "manual",
-      "instructions": "Review the linked GitHub skill and follow its repository installation instructions.",
-      "url": "https://github.com/anthropics/skills/tree/main/skills/docx"
+      "kind": "skill.sh",
+      "target": "docx",
+      "args": []
     },
     "adoptionSignal": 66,
     "maintenanceSignal": 70,
@@ -1256,16 +1295,16 @@
       "integrityAlerts": 0
     },
     "metadata": {
+      "sourceRegistryId": "anthropic-skills",
+      "sourceType": "vendor-feed",
+      "sourceConfidence": "official",
       "catalogType": "skill",
       "marketplacePlugin": "document-skills",
       "marketplaceRegistry": "anthropic-skills",
       "marketplaceSource": "github",
       "rawVersion": "unknown",
-      "sourceConfidence": "official",
       "bundledSkillPath": "skills/docx",
-      "githubUrl": "https://github.com/anthropics/skills/tree/main/skills/docx",
-      "sourceRegistryId": "anthropic-skills",
-      "sourceType": "vendor-feed"
+      "githubUrl": "https://github.com/anthropics/skills/tree/main/skills/docx"
     }
   },
   {
@@ -1273,7 +1312,7 @@
     "kind": "skill",
     "name": "dwarf-expert",
     "description": "Interact with and understand the DWARF debugging format",
-    "provider": "github",
+    "provider": "openai",
     "capabilities": [
       "automation"
     ],
@@ -1283,12 +1322,12 @@
       "general",
       "node"
     ],
-    "source": "trailofbits-skills-marketplace",
-    "lastSeenAt": "2026-03-19",
+    "source": "community-skills-index",
+    "lastSeenAt": "2026-03-20",
     "install": {
-      "kind": "manual",
-      "instructions": "Review the linked GitHub skill and follow its repository installation instructions.",
-      "url": "https://github.com/trailofbits/skills/tree/main/plugins/dwarf-expert"
+      "kind": "skill.sh",
+      "target": "dwarf-expert",
+      "args": []
     },
     "adoptionSignal": 58,
     "maintenanceSignal": 78,
@@ -1302,14 +1341,14 @@
       "integrityAlerts": 0
     },
     "metadata": {
+      "sourceRegistryId": "trailofbits-skills-marketplace",
+      "sourceType": "community-list",
+      "sourceConfidence": "vetted-curated",
       "catalogType": "skill",
       "marketplaceRegistry": "trailofbits-skills-marketplace",
       "marketplaceSource": "github",
       "rawVersion": "1.0.0",
-      "sourceConfidence": "vetted-curated",
-      "githubUrl": "https://github.com/trailofbits/skills/tree/main/plugins/dwarf-expert",
-      "sourceRegistryId": "trailofbits-skills-marketplace",
-      "sourceType": "community-list"
+      "githubUrl": "https://github.com/trailofbits/skills/tree/main/plugins/dwarf-expert"
     }
   },
   {
@@ -1317,7 +1356,7 @@
     "kind": "skill",
     "name": "engineering-workflow-skills",
     "description": "Skills for common software engineering workflows including git operations, test fixing, code review implementation, and feature planning with plan-implementer agent",
-    "provider": "github",
+    "provider": "openai",
     "capabilities": [
       "automation",
       "guardrails"
@@ -1328,12 +1367,12 @@
       "general",
       "node"
     ],
-    "source": "github-mhattingpete-claude-skills",
-    "lastSeenAt": "2026-03-19",
+    "source": "community-skills-index",
+    "lastSeenAt": "2026-03-20",
     "install": {
-      "kind": "manual",
-      "instructions": "Review the linked GitHub skill and follow its repository installation instructions.",
-      "url": "https://github.com/mhattingpete/claude-skills-marketplace/tree/main/engineering-workflow-plugin"
+      "kind": "skill.sh",
+      "target": "engineering-workflow-skills",
+      "args": []
     },
     "adoptionSignal": 58,
     "maintenanceSignal": 78,
@@ -1347,14 +1386,14 @@
       "integrityAlerts": 0
     },
     "metadata": {
+      "sourceRegistryId": "github-mhattingpete-claude-skills",
+      "sourceType": "community-list",
+      "sourceConfidence": "vetted-curated",
       "catalogType": "skill",
       "marketplaceRegistry": "github-mhattingpete-claude-skills",
       "marketplaceSource": "github",
       "rawVersion": "1.1.0",
-      "sourceConfidence": "vetted-curated",
-      "githubUrl": "https://github.com/mhattingpete/claude-skills-marketplace/tree/main/engineering-workflow-plugin",
-      "sourceRegistryId": "github-mhattingpete-claude-skills",
-      "sourceType": "community-list"
+      "githubUrl": "https://github.com/mhattingpete/claude-skills-marketplace/tree/main/engineering-workflow-plugin"
     }
   },
   {
@@ -1362,7 +1401,7 @@
     "kind": "skill",
     "name": "entry-point-analyzer",
     "description": "Analyzes smart contract codebases to identify state-changing entry points for security auditing. Detects externally callable functions that modify state, categorizes them by access level, and generates structured audit reports.",
-    "provider": "github",
+    "provider": "openai",
     "capabilities": [
       "security"
     ],
@@ -1372,12 +1411,12 @@
       "general",
       "github"
     ],
-    "source": "trailofbits-skills-marketplace",
-    "lastSeenAt": "2026-03-19",
+    "source": "community-skills-index",
+    "lastSeenAt": "2026-03-20",
     "install": {
-      "kind": "manual",
-      "instructions": "Review the linked GitHub skill and follow its repository installation instructions.",
-      "url": "https://github.com/trailofbits/skills/tree/main/plugins/entry-point-analyzer"
+      "kind": "skill.sh",
+      "target": "entry-point-analyzer",
+      "args": []
     },
     "adoptionSignal": 58,
     "maintenanceSignal": 78,
@@ -1391,14 +1430,14 @@
       "integrityAlerts": 0
     },
     "metadata": {
+      "sourceRegistryId": "trailofbits-skills-marketplace",
+      "sourceType": "community-list",
+      "sourceConfidence": "vetted-curated",
       "catalogType": "skill",
       "marketplaceRegistry": "trailofbits-skills-marketplace",
       "marketplaceSource": "github",
       "rawVersion": "1.0.0",
-      "sourceConfidence": "vetted-curated",
-      "githubUrl": "https://github.com/trailofbits/skills/tree/main/plugins/entry-point-analyzer",
-      "sourceRegistryId": "trailofbits-skills-marketplace",
-      "sourceType": "community-list"
+      "githubUrl": "https://github.com/trailofbits/skills/tree/main/plugins/entry-point-analyzer"
     }
   },
   {
@@ -1415,7 +1454,7 @@
       "node"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-19",
+    "lastSeenAt": "2026-03-20",
     "install": {
       "kind": "skill.sh",
       "target": "fast-web-scrape",
@@ -1451,7 +1490,7 @@
       "general"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-19",
+    "lastSeenAt": "2026-03-20",
     "install": {
       "kind": "skill.sh",
       "target": "Figma",
@@ -1489,7 +1528,7 @@
       "general"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-19",
+    "lastSeenAt": "2026-03-20",
     "install": {
       "kind": "skill.sh",
       "target": "Figma Implement Design",
@@ -1519,7 +1558,7 @@
     "kind": "skill",
     "name": "firebase-apk-scanner",
     "description": "Scan Android APKs for Firebase security misconfigurations including open databases, storage buckets, authentication issues, and exposed cloud functions. For authorized security research only.",
-    "provider": "github",
+    "provider": "openai",
     "capabilities": [
       "data",
       "guardrails",
@@ -1532,12 +1571,12 @@
       "general",
       "github"
     ],
-    "source": "trailofbits-skills-marketplace",
-    "lastSeenAt": "2026-03-19",
+    "source": "community-skills-index",
+    "lastSeenAt": "2026-03-20",
     "install": {
-      "kind": "manual",
-      "instructions": "Review the linked GitHub skill and follow its repository installation instructions.",
-      "url": "https://github.com/trailofbits/skills/tree/main/plugins/firebase-apk-scanner"
+      "kind": "skill.sh",
+      "target": "firebase-apk-scanner",
+      "args": []
     },
     "adoptionSignal": 58,
     "maintenanceSignal": 78,
@@ -1551,14 +1590,14 @@
       "integrityAlerts": 0
     },
     "metadata": {
+      "sourceRegistryId": "trailofbits-skills-marketplace",
+      "sourceType": "community-list",
+      "sourceConfidence": "vetted-curated",
       "catalogType": "skill",
       "marketplaceRegistry": "trailofbits-skills-marketplace",
       "marketplaceSource": "github",
       "rawVersion": "2.1.0",
-      "sourceConfidence": "vetted-curated",
-      "githubUrl": "https://github.com/trailofbits/skills/tree/main/plugins/firebase-apk-scanner",
-      "sourceRegistryId": "trailofbits-skills-marketplace",
-      "sourceType": "community-list"
+      "githubUrl": "https://github.com/trailofbits/skills/tree/main/plugins/firebase-apk-scanner"
     }
   },
   {
@@ -1566,7 +1605,7 @@
     "kind": "skill",
     "name": "fp-check",
     "description": "Systematic false positive verification for security bug analysis with mandatory gate reviews",
-    "provider": "github",
+    "provider": "openai",
     "capabilities": [
       "guardrails",
       "security"
@@ -1577,12 +1616,12 @@
       "general",
       "github"
     ],
-    "source": "trailofbits-skills-marketplace",
-    "lastSeenAt": "2026-03-19",
+    "source": "community-skills-index",
+    "lastSeenAt": "2026-03-20",
     "install": {
-      "kind": "manual",
-      "instructions": "Review the linked GitHub skill and follow its repository installation instructions.",
-      "url": "https://github.com/trailofbits/skills/tree/main/plugins/fp-check"
+      "kind": "skill.sh",
+      "target": "fp-check",
+      "args": []
     },
     "adoptionSignal": 58,
     "maintenanceSignal": 78,
@@ -1596,14 +1635,14 @@
       "integrityAlerts": 0
     },
     "metadata": {
+      "sourceRegistryId": "trailofbits-skills-marketplace",
+      "sourceType": "community-list",
+      "sourceConfidence": "vetted-curated",
       "catalogType": "skill",
       "marketplaceRegistry": "trailofbits-skills-marketplace",
       "marketplaceSource": "github",
       "rawVersion": "1.0.0",
-      "sourceConfidence": "vetted-curated",
-      "githubUrl": "https://github.com/trailofbits/skills/tree/main/plugins/fp-check",
-      "sourceRegistryId": "trailofbits-skills-marketplace",
-      "sourceType": "community-list"
+      "githubUrl": "https://github.com/trailofbits/skills/tree/main/plugins/fp-check"
     }
   },
   {
@@ -1611,7 +1650,7 @@
     "kind": "skill",
     "name": "frontend-design",
     "description": "Collection of example skills demonstrating various capabilities including skill creation, MCP building, visual design, algorithmic art, internal communications, web testing, artifact building, Slack GIFs, and theme styling",
-    "provider": "anthropic",
+    "provider": "openai",
     "capabilities": [
       "automation",
       "guardrails",
@@ -1634,12 +1673,12 @@
       "general",
       "node"
     ],
-    "source": "anthropic-skills",
-    "lastSeenAt": "2026-03-19",
+    "source": "community-skills-index",
+    "lastSeenAt": "2026-03-20",
     "install": {
-      "kind": "manual",
-      "instructions": "Review the linked GitHub skill and follow its repository installation instructions.",
-      "url": "https://github.com/anthropics/skills/tree/main/skills/frontend-design"
+      "kind": "skill.sh",
+      "target": "frontend-design",
+      "args": []
     },
     "adoptionSignal": 66,
     "maintenanceSignal": 70,
@@ -1653,16 +1692,16 @@
       "integrityAlerts": 0
     },
     "metadata": {
+      "sourceRegistryId": "anthropic-skills",
+      "sourceType": "vendor-feed",
+      "sourceConfidence": "official",
       "catalogType": "skill",
       "marketplacePlugin": "example-skills",
       "marketplaceRegistry": "anthropic-skills",
       "marketplaceSource": "github",
       "rawVersion": "unknown",
-      "sourceConfidence": "official",
       "bundledSkillPath": "skills/frontend-design",
-      "githubUrl": "https://github.com/anthropics/skills/tree/main/skills/frontend-design",
-      "sourceRegistryId": "anthropic-skills",
-      "sourceType": "vendor-feed"
+      "githubUrl": "https://github.com/anthropics/skills/tree/main/skills/frontend-design"
     }
   },
   {
@@ -1670,7 +1709,7 @@
     "kind": "skill",
     "name": "gastown",
     "description": "Multi-agent orchestrator for Claude Code. Use when user mentions gastown, gas town, gt commands, convoys, polecats, rigs, slinging work, multi-agent coordination.",
-    "provider": "github",
+    "provider": "openai",
     "capabilities": [
       "automation",
       "tools"
@@ -1681,12 +1720,12 @@
       "general",
       "node"
     ],
-    "source": "github-n-skills-marketplace",
-    "lastSeenAt": "2026-03-19",
+    "source": "community-skills-index",
+    "lastSeenAt": "2026-03-20",
     "install": {
-      "kind": "manual",
-      "instructions": "Review the linked GitHub skill and follow its repository installation instructions.",
-      "url": "https://github.com/numman-ali/n-skills/tree/main/skills/tools/gastown"
+      "kind": "skill.sh",
+      "target": "gastown",
+      "args": []
     },
     "adoptionSignal": 58,
     "maintenanceSignal": 70,
@@ -1700,14 +1739,14 @@
       "integrityAlerts": 0
     },
     "metadata": {
+      "sourceRegistryId": "github-n-skills-marketplace",
+      "sourceType": "community-list",
+      "sourceConfidence": "vetted-curated",
       "catalogType": "skill",
       "marketplaceRegistry": "github-n-skills-marketplace",
       "marketplaceSource": "github",
       "rawVersion": "unknown",
-      "sourceConfidence": "vetted-curated",
-      "githubUrl": "https://github.com/numman-ali/n-skills/tree/main/skills/tools/gastown",
-      "sourceRegistryId": "github-n-skills-marketplace",
-      "sourceType": "community-list"
+      "githubUrl": "https://github.com/numman-ali/n-skills/tree/main/skills/tools/gastown"
     }
   },
   {
@@ -1724,7 +1763,7 @@
       "github"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-19",
+    "lastSeenAt": "2026-03-20",
     "install": {
       "kind": "skill.sh",
       "target": "Gh Address Comments",
@@ -1754,7 +1793,7 @@
     "kind": "skill",
     "name": "gh-cli",
     "description": "Intercepts GitHub URL fetches and curl/wget commands, redirecting to the authenticated gh CLI.",
-    "provider": "github",
+    "provider": "openai",
     "capabilities": [
       "automation",
       "security"
@@ -1766,12 +1805,12 @@
       "github",
       "node"
     ],
-    "source": "trailofbits-skills-marketplace",
-    "lastSeenAt": "2026-03-19",
+    "source": "community-skills-index",
+    "lastSeenAt": "2026-03-20",
     "install": {
-      "kind": "manual",
-      "instructions": "Review the linked GitHub skill and follow its repository installation instructions.",
-      "url": "https://github.com/trailofbits/skills/tree/main/plugins/gh-cli"
+      "kind": "skill.sh",
+      "target": "gh-cli",
+      "args": []
     },
     "adoptionSignal": 58,
     "maintenanceSignal": 78,
@@ -1785,14 +1824,14 @@
       "integrityAlerts": 0
     },
     "metadata": {
+      "sourceRegistryId": "trailofbits-skills-marketplace",
+      "sourceType": "community-list",
+      "sourceConfidence": "vetted-curated",
       "catalogType": "skill",
       "marketplaceRegistry": "trailofbits-skills-marketplace",
       "marketplaceSource": "github",
       "rawVersion": "1.4.0",
-      "sourceConfidence": "vetted-curated",
-      "githubUrl": "https://github.com/trailofbits/skills/tree/main/plugins/gh-cli",
-      "sourceRegistryId": "trailofbits-skills-marketplace",
-      "sourceType": "community-list"
+      "githubUrl": "https://github.com/trailofbits/skills/tree/main/plugins/gh-cli"
     }
   },
   {
@@ -1809,7 +1848,7 @@
       "github"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-19",
+    "lastSeenAt": "2026-03-20",
     "install": {
       "kind": "skill.sh",
       "target": "Gh Fix Ci",
@@ -1839,7 +1878,7 @@
     "kind": "skill",
     "name": "git-cleanup",
     "description": "Safely analyzes and cleans up local git branches and worktrees by categorizing them as merged, squash-merged, superseded, or active work.",
-    "provider": "github",
+    "provider": "openai",
     "capabilities": [
       "automation"
     ],
@@ -1849,12 +1888,12 @@
       "general",
       "node"
     ],
-    "source": "trailofbits-skills-marketplace",
-    "lastSeenAt": "2026-03-19",
+    "source": "community-skills-index",
+    "lastSeenAt": "2026-03-20",
     "install": {
-      "kind": "manual",
-      "instructions": "Review the linked GitHub skill and follow its repository installation instructions.",
-      "url": "https://github.com/trailofbits/skills/tree/main/plugins/git-cleanup"
+      "kind": "skill.sh",
+      "target": "git-cleanup",
+      "args": []
     },
     "adoptionSignal": 58,
     "maintenanceSignal": 78,
@@ -1868,14 +1907,54 @@
       "integrityAlerts": 0
     },
     "metadata": {
+      "sourceRegistryId": "trailofbits-skills-marketplace",
+      "sourceType": "community-list",
+      "sourceConfidence": "vetted-curated",
       "catalogType": "skill",
       "marketplaceRegistry": "trailofbits-skills-marketplace",
       "marketplaceSource": "github",
       "rawVersion": "1.0.0",
-      "sourceConfidence": "vetted-curated",
-      "githubUrl": "https://github.com/trailofbits/skills/tree/main/plugins/git-cleanup",
-      "sourceRegistryId": "trailofbits-skills-marketplace",
-      "sourceType": "community-list"
+      "githubUrl": "https://github.com/trailofbits/skills/tree/main/plugins/git-cleanup"
+    }
+  },
+  {
+    "id": "skill:google-workspace-skills",
+    "kind": "skill",
+    "name": "Google Workspace",
+    "description": "Automate tasks across Gmail, Google Calendar, Google Docs, Sheets, Slides, and Drive from within Claude Code.",
+    "provider": "openai",
+    "capabilities": [
+      "automation",
+      "docs",
+      "productivity",
+      "scheduling"
+    ],
+    "compatibility": [
+      "claude-code",
+      "general"
+    ],
+    "source": "community-skills-index",
+    "lastSeenAt": "2026-03-20",
+    "install": {
+      "kind": "skill.sh",
+      "target": "google-workspace-skills",
+      "args": []
+    },
+    "adoptionSignal": 82,
+    "maintenanceSignal": 78,
+    "provenanceSignal": 76,
+    "freshnessSignal": 80,
+    "securitySignals": {
+      "knownVulnerabilities": 0,
+      "suspiciousPatterns": 0,
+      "injectionFindings": 0,
+      "exfiltrationSignals": 0,
+      "integrityAlerts": 0
+    },
+    "metadata": {
+      "sourceRegistryId": "community-skills-index",
+      "sourceType": "community-list",
+      "sourceConfidence": "vetted-curated"
     }
   },
   {
@@ -1891,7 +1970,7 @@
       "general"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-19",
+    "lastSeenAt": "2026-03-20",
     "install": {
       "kind": "skill.sh",
       "target": "Imagegen",
@@ -1921,7 +2000,7 @@
     "kind": "skill",
     "name": "insecure-defaults",
     "description": "Detects insecure default configurations including hardcoded credentials, fallback secrets, weak authentication defaults, and dangerous values in production",
-    "provider": "github",
+    "provider": "openai",
     "capabilities": [
       "security"
     ],
@@ -1931,12 +2010,12 @@
       "general",
       "github"
     ],
-    "source": "trailofbits-skills-marketplace",
-    "lastSeenAt": "2026-03-19",
+    "source": "community-skills-index",
+    "lastSeenAt": "2026-03-20",
     "install": {
-      "kind": "manual",
-      "instructions": "Review the linked GitHub skill and follow its repository installation instructions.",
-      "url": "https://github.com/trailofbits/skills/tree/main/plugins/insecure-defaults"
+      "kind": "skill.sh",
+      "target": "insecure-defaults",
+      "args": []
     },
     "adoptionSignal": 58,
     "maintenanceSignal": 78,
@@ -1950,14 +2029,14 @@
       "integrityAlerts": 0
     },
     "metadata": {
+      "sourceRegistryId": "trailofbits-skills-marketplace",
+      "sourceType": "community-list",
+      "sourceConfidence": "vetted-curated",
       "catalogType": "skill",
       "marketplaceRegistry": "trailofbits-skills-marketplace",
       "marketplaceSource": "github",
       "rawVersion": "1.0.0",
-      "sourceConfidence": "vetted-curated",
-      "githubUrl": "https://github.com/trailofbits/skills/tree/main/plugins/insecure-defaults",
-      "sourceRegistryId": "trailofbits-skills-marketplace",
-      "sourceType": "community-list"
+      "githubUrl": "https://github.com/trailofbits/skills/tree/main/plugins/insecure-defaults"
     }
   },
   {
@@ -1965,7 +2044,7 @@
     "kind": "skill",
     "name": "internal-comms",
     "description": "Collection of example skills demonstrating various capabilities including skill creation, MCP building, visual design, algorithmic art, internal communications, web testing, artifact building, Slack GIFs, and theme styling",
-    "provider": "anthropic",
+    "provider": "openai",
     "capabilities": [
       "automation",
       "guardrails",
@@ -1988,12 +2067,12 @@
       "general",
       "node"
     ],
-    "source": "anthropic-skills",
-    "lastSeenAt": "2026-03-19",
+    "source": "community-skills-index",
+    "lastSeenAt": "2026-03-20",
     "install": {
-      "kind": "manual",
-      "instructions": "Review the linked GitHub skill and follow its repository installation instructions.",
-      "url": "https://github.com/anthropics/skills/tree/main/skills/internal-comms"
+      "kind": "skill.sh",
+      "target": "internal-comms",
+      "args": []
     },
     "adoptionSignal": 66,
     "maintenanceSignal": 70,
@@ -2007,16 +2086,16 @@
       "integrityAlerts": 0
     },
     "metadata": {
+      "sourceRegistryId": "anthropic-skills",
+      "sourceType": "vendor-feed",
+      "sourceConfidence": "official",
       "catalogType": "skill",
       "marketplacePlugin": "example-skills",
       "marketplaceRegistry": "anthropic-skills",
       "marketplaceSource": "github",
       "rawVersion": "unknown",
-      "sourceConfidence": "official",
       "bundledSkillPath": "skills/internal-comms",
-      "githubUrl": "https://github.com/anthropics/skills/tree/main/skills/internal-comms",
-      "sourceRegistryId": "anthropic-skills",
-      "sourceType": "vendor-feed"
+      "githubUrl": "https://github.com/anthropics/skills/tree/main/skills/internal-comms"
     }
   },
   {
@@ -2032,7 +2111,7 @@
       "general"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-19",
+    "lastSeenAt": "2026-03-20",
     "install": {
       "kind": "skill.sh",
       "target": "Jupyter Notebook",
@@ -2069,13 +2148,13 @@
       "security"
     ],
     "compatibility": [
-      "container",
-      "kubernetes",
       "cloud",
-      "general"
+      "container",
+      "general",
+      "kubernetes"
     ],
-    "source": "github-curated-industry-skills",
-    "lastSeenAt": "2026-03-19",
+    "source": "community-skills-index",
+    "lastSeenAt": "2026-03-20",
     "install": {
       "kind": "skill.sh",
       "target": "kubernetes-ops",
@@ -2103,7 +2182,7 @@
     "kind": "skill",
     "name": "let-fate-decide",
     "description": "Draws Tarot cards using cryptographic randomness to add entropy to vague or underspecified planning. Interprets the spread to guide next steps. Use when feeling lucky, invoking heart-of-the-cards energy, or when prompts are ambiguous.",
-    "provider": "github",
+    "provider": "openai",
     "capabilities": [
       "automation",
       "guardrails"
@@ -2114,12 +2193,12 @@
       "general",
       "node"
     ],
-    "source": "trailofbits-skills-marketplace",
-    "lastSeenAt": "2026-03-19",
+    "source": "community-skills-index",
+    "lastSeenAt": "2026-03-20",
     "install": {
-      "kind": "manual",
-      "instructions": "Review the linked GitHub skill and follow its repository installation instructions.",
-      "url": "https://github.com/trailofbits/skills/tree/main/plugins/let-fate-decide"
+      "kind": "skill.sh",
+      "target": "let-fate-decide",
+      "args": []
     },
     "adoptionSignal": 58,
     "maintenanceSignal": 78,
@@ -2133,14 +2212,14 @@
       "integrityAlerts": 0
     },
     "metadata": {
+      "sourceRegistryId": "trailofbits-skills-marketplace",
+      "sourceType": "community-list",
+      "sourceConfidence": "vetted-curated",
       "catalogType": "skill",
       "marketplaceRegistry": "trailofbits-skills-marketplace",
       "marketplaceSource": "github",
       "rawVersion": "1.0.0",
-      "sourceConfidence": "vetted-curated",
-      "githubUrl": "https://github.com/trailofbits/skills/tree/main/plugins/let-fate-decide",
-      "sourceRegistryId": "trailofbits-skills-marketplace",
-      "sourceType": "community-list"
+      "githubUrl": "https://github.com/trailofbits/skills/tree/main/plugins/let-fate-decide"
     }
   },
   {
@@ -2157,7 +2236,7 @@
       "linear"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-19",
+    "lastSeenAt": "2026-03-20",
     "install": {
       "kind": "skill.sh",
       "target": "Linear",
@@ -2187,7 +2266,7 @@
     "kind": "skill",
     "name": "mcp-builder",
     "description": "Collection of example skills demonstrating various capabilities including skill creation, MCP building, visual design, algorithmic art, internal communications, web testing, artifact building, Slack GIFs, and theme styling",
-    "provider": "anthropic",
+    "provider": "openai",
     "capabilities": [
       "automation",
       "guardrails",
@@ -2210,12 +2289,12 @@
       "general",
       "node"
     ],
-    "source": "anthropic-skills",
-    "lastSeenAt": "2026-03-19",
+    "source": "community-skills-index",
+    "lastSeenAt": "2026-03-20",
     "install": {
-      "kind": "manual",
-      "instructions": "Review the linked GitHub skill and follow its repository installation instructions.",
-      "url": "https://github.com/anthropics/skills/tree/main/skills/mcp-builder"
+      "kind": "skill.sh",
+      "target": "mcp-builder",
+      "args": []
     },
     "adoptionSignal": 66,
     "maintenanceSignal": 70,
@@ -2229,16 +2308,16 @@
       "integrityAlerts": 0
     },
     "metadata": {
+      "sourceRegistryId": "anthropic-skills",
+      "sourceType": "vendor-feed",
+      "sourceConfidence": "official",
       "catalogType": "skill",
       "marketplacePlugin": "example-skills",
       "marketplaceRegistry": "anthropic-skills",
       "marketplaceSource": "github",
       "rawVersion": "unknown",
-      "sourceConfidence": "official",
       "bundledSkillPath": "skills/mcp-builder",
-      "githubUrl": "https://github.com/anthropics/skills/tree/main/skills/mcp-builder",
-      "sourceRegistryId": "anthropic-skills",
-      "sourceType": "vendor-feed"
+      "githubUrl": "https://github.com/anthropics/skills/tree/main/skills/mcp-builder"
     }
   },
   {
@@ -2246,7 +2325,7 @@
     "kind": "skill",
     "name": "modern-python",
     "description": "Modern Python best practices. Use when creating new Python projects, and writing Python scripts, or migrating existing projects from legacy tools.",
-    "provider": "github",
+    "provider": "openai",
     "capabilities": [
       "automation"
     ],
@@ -2256,12 +2335,12 @@
       "general",
       "node"
     ],
-    "source": "trailofbits-skills-marketplace",
-    "lastSeenAt": "2026-03-19",
+    "source": "community-skills-index",
+    "lastSeenAt": "2026-03-20",
     "install": {
-      "kind": "manual",
-      "instructions": "Review the linked GitHub skill and follow its repository installation instructions.",
-      "url": "https://github.com/trailofbits/skills/tree/main/plugins/modern-python"
+      "kind": "skill.sh",
+      "target": "modern-python",
+      "args": []
     },
     "adoptionSignal": 58,
     "maintenanceSignal": 78,
@@ -2275,14 +2354,53 @@
       "integrityAlerts": 0
     },
     "metadata": {
+      "sourceRegistryId": "trailofbits-skills-marketplace",
+      "sourceType": "community-list",
+      "sourceConfidence": "vetted-curated",
       "catalogType": "skill",
       "marketplaceRegistry": "trailofbits-skills-marketplace",
       "marketplaceSource": "github",
       "rawVersion": "1.5.0",
-      "sourceConfidence": "vetted-curated",
-      "githubUrl": "https://github.com/trailofbits/skills/tree/main/plugins/modern-python",
-      "sourceRegistryId": "trailofbits-skills-marketplace",
-      "sourceType": "community-list"
+      "githubUrl": "https://github.com/trailofbits/skills/tree/main/plugins/modern-python"
+    }
+  },
+  {
+    "id": "skill:n8n-skills",
+    "kind": "skill",
+    "name": "n8n Workflow Automation",
+    "description": "Design, trigger, and debug n8n automation workflows. Connect Claude to n8n's visual workflow engine for multi-step task orchestration.",
+    "provider": "openai",
+    "capabilities": [
+      "automation",
+      "search"
+    ],
+    "compatibility": [
+      "claude-code",
+      "node",
+      "general"
+    ],
+    "source": "community-skills-index",
+    "lastSeenAt": "2026-03-20",
+    "install": {
+      "kind": "skill.sh",
+      "target": "n8n-skills",
+      "args": []
+    },
+    "adoptionSignal": 72,
+    "maintenanceSignal": 75,
+    "provenanceSignal": 70,
+    "freshnessSignal": 74,
+    "securitySignals": {
+      "knownVulnerabilities": 0,
+      "suspiciousPatterns": 0,
+      "injectionFindings": 0,
+      "exfiltrationSignals": 0,
+      "integrityAlerts": 0
+    },
+    "metadata": {
+      "sourceRegistryId": "community-skills-index",
+      "sourceType": "community-list",
+      "sourceConfidence": "vetted-curated"
     }
   },
   {
@@ -2290,7 +2408,7 @@
     "kind": "skill",
     "name": "neon-plugin",
     "description": "Neon database development skills including authentication, Drizzle ORM, serverless drivers, and toolkit utilities",
-    "provider": "github",
+    "provider": "openai",
     "capabilities": [
       "auth",
       "data",
@@ -2309,12 +2427,12 @@
       "general",
       "github"
     ],
-    "source": "github-neon-ai-rules",
-    "lastSeenAt": "2026-03-19",
+    "source": "community-skills-index",
+    "lastSeenAt": "2026-03-20",
     "install": {
-      "kind": "manual",
-      "instructions": "Review the linked GitHub skill and follow its repository installation instructions.",
-      "url": "https://github.com/neondatabase-labs/ai-rules/tree/main/neon-plugin"
+      "kind": "skill.sh",
+      "target": "neon-plugin",
+      "args": []
     },
     "adoptionSignal": 66,
     "maintenanceSignal": 78,
@@ -2328,14 +2446,14 @@
       "integrityAlerts": 0
     },
     "metadata": {
+      "sourceRegistryId": "github-neon-ai-rules",
+      "sourceType": "vendor-feed",
+      "sourceConfidence": "official",
       "catalogType": "skill",
       "marketplaceRegistry": "github-neon-ai-rules",
       "marketplaceSource": "github",
       "rawVersion": "1.1.0",
-      "sourceConfidence": "official",
-      "githubUrl": "https://github.com/neondatabase-labs/ai-rules/tree/main/neon-plugin",
-      "sourceRegistryId": "github-neon-ai-rules",
-      "sourceType": "vendor-feed"
+      "githubUrl": "https://github.com/neondatabase-labs/ai-rules/tree/main/neon-plugin"
     }
   },
   {
@@ -2351,7 +2469,7 @@
       "general"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-19",
+    "lastSeenAt": "2026-03-20",
     "install": {
       "kind": "skill.sh",
       "target": "Netlify Deploy",
@@ -2390,7 +2508,7 @@
       "notion"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-19",
+    "lastSeenAt": "2026-03-20",
     "install": {
       "kind": "skill.sh",
       "target": "Notion Knowledge Capture",
@@ -2429,7 +2547,7 @@
       "notion"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-19",
+    "lastSeenAt": "2026-03-20",
     "install": {
       "kind": "skill.sh",
       "target": "Notion Meeting Intelligence",
@@ -2468,7 +2586,7 @@
       "notion"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-19",
+    "lastSeenAt": "2026-03-20",
     "install": {
       "kind": "skill.sh",
       "target": "Notion Research Documentation",
@@ -2507,7 +2625,7 @@
       "notion"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-19",
+    "lastSeenAt": "2026-03-20",
     "install": {
       "kind": "skill.sh",
       "target": "Notion Spec To Implementation",
@@ -2546,12 +2664,12 @@
     "compatibility": [
       "cloud",
       "container",
+      "general",
       "node",
-      "python",
-      "general"
+      "python"
     ],
-    "source": "github-curated-industry-skills",
-    "lastSeenAt": "2026-03-19",
+    "source": "community-skills-index",
+    "lastSeenAt": "2026-03-20",
     "install": {
       "kind": "skill.sh",
       "target": "observability-incident-response",
@@ -2579,7 +2697,7 @@
     "kind": "skill",
     "name": "open-source-maintainer",
     "description": "End-to-end GitHub repository maintenance for open-source projects. Use when asked to triage issues, review PRs, analyze contributor activity, generate maintenance reports, or maintain a repository.",
-    "provider": "github",
+    "provider": "openai",
     "capabilities": [
       "automation",
       "guardrails",
@@ -2591,12 +2709,12 @@
       "general",
       "node"
     ],
-    "source": "github-n-skills-marketplace",
-    "lastSeenAt": "2026-03-19",
+    "source": "community-skills-index",
+    "lastSeenAt": "2026-03-20",
     "install": {
-      "kind": "manual",
-      "instructions": "Review the linked GitHub skill and follow its repository installation instructions.",
-      "url": "https://github.com/numman-ali/n-skills/tree/main/skills/workflow/open-source-maintainer"
+      "kind": "skill.sh",
+      "target": "open-source-maintainer",
+      "args": []
     },
     "adoptionSignal": 58,
     "maintenanceSignal": 70,
@@ -2610,14 +2728,14 @@
       "integrityAlerts": 0
     },
     "metadata": {
+      "sourceRegistryId": "github-n-skills-marketplace",
+      "sourceType": "community-list",
+      "sourceConfidence": "vetted-curated",
       "catalogType": "skill",
       "marketplaceRegistry": "github-n-skills-marketplace",
       "marketplaceSource": "github",
       "rawVersion": "unknown",
-      "sourceConfidence": "vetted-curated",
-      "githubUrl": "https://github.com/numman-ali/n-skills/tree/main/skills/workflow/open-source-maintainer",
-      "sourceRegistryId": "github-n-skills-marketplace",
-      "sourceType": "community-list"
+      "githubUrl": "https://github.com/numman-ali/n-skills/tree/main/skills/workflow/open-source-maintainer"
     }
   },
   {
@@ -2633,7 +2751,7 @@
       "general"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-19",
+    "lastSeenAt": "2026-03-20",
     "install": {
       "kind": "skill.sh",
       "target": "Openai Docs",
@@ -2663,7 +2781,7 @@
     "kind": "skill",
     "name": "orchestration",
     "description": "Multi-agent orchestration for complex tasks using cc-mirror tasks and TodoWrite. Use when tasks require parallel work, multiple agents, sophisticated coordination, or decomposition into parallel subtasks.",
-    "provider": "github",
+    "provider": "openai",
     "capabilities": [
       "automation",
       "workflow"
@@ -2674,12 +2792,12 @@
       "general",
       "node"
     ],
-    "source": "github-n-skills-marketplace",
-    "lastSeenAt": "2026-03-19",
+    "source": "community-skills-index",
+    "lastSeenAt": "2026-03-20",
     "install": {
-      "kind": "manual",
-      "instructions": "Review the linked GitHub skill and follow its repository installation instructions.",
-      "url": "https://github.com/numman-ali/n-skills/tree/main/skills/workflow/orchestration"
+      "kind": "skill.sh",
+      "target": "orchestration",
+      "args": []
     },
     "adoptionSignal": 58,
     "maintenanceSignal": 70,
@@ -2693,14 +2811,14 @@
       "integrityAlerts": 0
     },
     "metadata": {
+      "sourceRegistryId": "github-n-skills-marketplace",
+      "sourceType": "community-list",
+      "sourceConfidence": "vetted-curated",
       "catalogType": "skill",
       "marketplaceRegistry": "github-n-skills-marketplace",
       "marketplaceSource": "github",
       "rawVersion": "unknown",
-      "sourceConfidence": "vetted-curated",
-      "githubUrl": "https://github.com/numman-ali/n-skills/tree/main/skills/workflow/orchestration",
-      "sourceRegistryId": "github-n-skills-marketplace",
-      "sourceType": "community-list"
+      "githubUrl": "https://github.com/numman-ali/n-skills/tree/main/skills/workflow/orchestration"
     }
   },
   {
@@ -2724,7 +2842,7 @@
       "node"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-19",
+    "lastSeenAt": "2026-03-20",
     "install": {
       "kind": "skill.sh",
       "target": "Pdf",
@@ -2769,7 +2887,7 @@
       "node"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-19",
+    "lastSeenAt": "2026-03-20",
     "install": {
       "kind": "skill.sh",
       "target": "Playwright",
@@ -2808,7 +2926,7 @@
       "node"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-19",
+    "lastSeenAt": "2026-03-20",
     "install": {
       "kind": "skill.sh",
       "target": "Playwright Interactive",
@@ -2845,13 +2963,13 @@
       "search"
     ],
     "compatibility": [
-      "postgresql",
+      "general",
       "node",
-      "python",
-      "general"
+      "postgresql",
+      "python"
     ],
-    "source": "github-curated-industry-skills",
-    "lastSeenAt": "2026-03-19",
+    "source": "community-skills-index",
+    "lastSeenAt": "2026-03-20",
     "install": {
       "kind": "skill.sh",
       "target": "postgres-ops",
@@ -2879,7 +2997,7 @@
     "kind": "skill",
     "name": "pptx",
     "description": "Collection of document processing suite including Excel, Word, PowerPoint, and PDF capabilities",
-    "provider": "anthropic",
+    "provider": "openai",
     "capabilities": [
       "automation",
       "skills/docx",
@@ -2893,12 +3011,12 @@
       "general",
       "node"
     ],
-    "source": "anthropic-skills",
-    "lastSeenAt": "2026-03-19",
+    "source": "community-skills-index",
+    "lastSeenAt": "2026-03-20",
     "install": {
-      "kind": "manual",
-      "instructions": "Review the linked GitHub skill and follow its repository installation instructions.",
-      "url": "https://github.com/anthropics/skills/tree/main/skills/pptx"
+      "kind": "skill.sh",
+      "target": "pptx",
+      "args": []
     },
     "adoptionSignal": 66,
     "maintenanceSignal": 70,
@@ -2912,16 +3030,16 @@
       "integrityAlerts": 0
     },
     "metadata": {
+      "sourceRegistryId": "anthropic-skills",
+      "sourceType": "vendor-feed",
+      "sourceConfidence": "official",
       "catalogType": "skill",
       "marketplacePlugin": "document-skills",
       "marketplaceRegistry": "anthropic-skills",
       "marketplaceSource": "github",
       "rawVersion": "unknown",
-      "sourceConfidence": "official",
       "bundledSkillPath": "skills/pptx",
-      "githubUrl": "https://github.com/anthropics/skills/tree/main/skills/pptx",
-      "sourceRegistryId": "anthropic-skills",
-      "sourceType": "vendor-feed"
+      "githubUrl": "https://github.com/anthropics/skills/tree/main/skills/pptx"
     }
   },
   {
@@ -2929,7 +3047,7 @@
     "kind": "skill",
     "name": "productivity-skills",
     "description": "Productivity and workflow optimization skills for analyzing usage patterns, auditing code, bootstrapping projects, and generating documentation",
-    "provider": "github",
+    "provider": "openai",
     "capabilities": [
       "automation",
       "docs",
@@ -2942,12 +3060,12 @@
       "github",
       "node"
     ],
-    "source": "github-mhattingpete-claude-skills",
-    "lastSeenAt": "2026-03-19",
+    "source": "community-skills-index",
+    "lastSeenAt": "2026-03-20",
     "install": {
-      "kind": "manual",
-      "instructions": "Review the linked GitHub skill and follow its repository installation instructions.",
-      "url": "https://github.com/mhattingpete/claude-skills-marketplace/tree/main/productivity-skills-plugin"
+      "kind": "skill.sh",
+      "target": "productivity-skills",
+      "args": []
     },
     "adoptionSignal": 58,
     "maintenanceSignal": 78,
@@ -2961,14 +3079,53 @@
       "integrityAlerts": 0
     },
     "metadata": {
+      "sourceRegistryId": "github-mhattingpete-claude-skills",
+      "sourceType": "community-list",
+      "sourceConfidence": "vetted-curated",
       "catalogType": "skill",
       "marketplaceRegistry": "github-mhattingpete-claude-skills",
       "marketplaceSource": "github",
       "rawVersion": "1.0.0",
-      "sourceConfidence": "vetted-curated",
-      "githubUrl": "https://github.com/mhattingpete/claude-skills-marketplace/tree/main/productivity-skills-plugin",
-      "sourceRegistryId": "github-mhattingpete-claude-skills",
-      "sourceType": "community-list"
+      "githubUrl": "https://github.com/mhattingpete/claude-skills-marketplace/tree/main/productivity-skills-plugin"
+    }
+  },
+  {
+    "id": "skill:prompt-engineering",
+    "kind": "skill",
+    "name": "Prompt Engineering",
+    "description": "Apply Anthropic's official prompting best practices: chain-of-thought, few-shot examples, structured output, and effective system prompt design.",
+    "provider": "openai",
+    "capabilities": [
+      "prompting",
+      "automation",
+      "guardrails"
+    ],
+    "compatibility": [
+      "claude-code",
+      "general"
+    ],
+    "source": "community-skills-index",
+    "lastSeenAt": "2026-03-20",
+    "install": {
+      "kind": "skill.sh",
+      "target": "prompt-engineering",
+      "args": []
+    },
+    "adoptionSignal": 86,
+    "maintenanceSignal": 90,
+    "provenanceSignal": 96,
+    "freshnessSignal": 84,
+    "securitySignals": {
+      "knownVulnerabilities": 0,
+      "suspiciousPatterns": 0,
+      "injectionFindings": 0,
+      "exfiltrationSignals": 0,
+      "integrityAlerts": 0
+    },
+    "metadata": {
+      "sourceRegistryId": "community-skills-index",
+      "sourceType": "community-list",
+      "sourceConfidence": "vetted-curated"
     }
   },
   {
@@ -2976,7 +3133,7 @@
     "kind": "skill",
     "name": "property-based-testing",
     "description": "Property-based testing guidance for multiple languages and smart contracts",
-    "provider": "github",
+    "provider": "openai",
     "capabilities": [
       "guardrails"
     ],
@@ -2985,12 +3142,12 @@
       "codex",
       "general"
     ],
-    "source": "trailofbits-skills-marketplace",
-    "lastSeenAt": "2026-03-19",
+    "source": "community-skills-index",
+    "lastSeenAt": "2026-03-20",
     "install": {
-      "kind": "manual",
-      "instructions": "Review the linked GitHub skill and follow its repository installation instructions.",
-      "url": "https://github.com/trailofbits/skills/tree/main/plugins/property-based-testing"
+      "kind": "skill.sh",
+      "target": "property-based-testing",
+      "args": []
     },
     "adoptionSignal": 58,
     "maintenanceSignal": 78,
@@ -3004,14 +3161,14 @@
       "integrityAlerts": 0
     },
     "metadata": {
+      "sourceRegistryId": "trailofbits-skills-marketplace",
+      "sourceType": "community-list",
+      "sourceConfidence": "vetted-curated",
       "catalogType": "skill",
       "marketplaceRegistry": "trailofbits-skills-marketplace",
       "marketplaceSource": "github",
       "rawVersion": "1.1.0",
-      "sourceConfidence": "vetted-curated",
-      "githubUrl": "https://github.com/trailofbits/skills/tree/main/plugins/property-based-testing",
-      "sourceRegistryId": "trailofbits-skills-marketplace",
-      "sourceType": "community-list"
+      "githubUrl": "https://github.com/trailofbits/skills/tree/main/plugins/property-based-testing"
     }
   },
   {
@@ -3031,7 +3188,7 @@
       "node"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-19",
+    "lastSeenAt": "2026-03-20",
     "install": {
       "kind": "skill.sh",
       "target": "release-readiness",
@@ -3041,6 +3198,44 @@
     "maintenanceSignal": 80,
     "provenanceSignal": 66,
     "freshnessSignal": 72,
+    "securitySignals": {
+      "knownVulnerabilities": 0,
+      "suspiciousPatterns": 0,
+      "injectionFindings": 0,
+      "exfiltrationSignals": 0,
+      "integrityAlerts": 0
+    },
+    "metadata": {
+      "sourceRegistryId": "community-skills-index",
+      "sourceType": "community-list",
+      "sourceConfidence": "vetted-curated"
+    }
+  },
+  {
+    "id": "skill:remotion",
+    "kind": "skill",
+    "name": "Remotion Video",
+    "description": "Generate correct, idiomatic Remotion code for programmatic video: animations, timing, audio sync, captions, 3D, and composition patterns.",
+    "provider": "openai",
+    "capabilities": [
+      "automation",
+      "docs"
+    ],
+    "compatibility": [
+      "claude-code",
+      "node"
+    ],
+    "source": "community-skills-index",
+    "lastSeenAt": "2026-03-20",
+    "install": {
+      "kind": "skill.sh",
+      "target": "remotion",
+      "args": []
+    },
+    "adoptionSignal": 78,
+    "maintenanceSignal": 80,
+    "provenanceSignal": 74,
+    "freshnessSignal": 82,
     "securitySignals": {
       "knownVulnerabilities": 0,
       "suspiciousPatterns": 0,
@@ -3067,7 +3262,7 @@
       "general"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-19",
+    "lastSeenAt": "2026-03-20",
     "install": {
       "kind": "skill.sh",
       "target": "Render Deploy",
@@ -3105,7 +3300,7 @@
       "general"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-19",
+    "lastSeenAt": "2026-03-20",
     "install": {
       "kind": "skill.sh",
       "target": "Screenshot",
@@ -3135,7 +3330,7 @@
     "kind": "skill",
     "name": "seatbelt-sandboxer",
     "description": "Generate minimal macOS Seatbelt sandbox configurations for applications",
-    "provider": "github",
+    "provider": "openai",
     "capabilities": [
       "automation"
     ],
@@ -3145,12 +3340,12 @@
       "general",
       "node"
     ],
-    "source": "trailofbits-skills-marketplace",
-    "lastSeenAt": "2026-03-19",
+    "source": "community-skills-index",
+    "lastSeenAt": "2026-03-20",
     "install": {
-      "kind": "manual",
-      "instructions": "Review the linked GitHub skill and follow its repository installation instructions.",
-      "url": "https://github.com/trailofbits/skills/tree/main/plugins/seatbelt-sandboxer"
+      "kind": "skill.sh",
+      "target": "seatbelt-sandboxer",
+      "args": []
     },
     "adoptionSignal": 58,
     "maintenanceSignal": 78,
@@ -3164,14 +3359,14 @@
       "integrityAlerts": 0
     },
     "metadata": {
+      "sourceRegistryId": "trailofbits-skills-marketplace",
+      "sourceType": "community-list",
+      "sourceConfidence": "vetted-curated",
       "catalogType": "skill",
       "marketplaceRegistry": "trailofbits-skills-marketplace",
       "marketplaceSource": "github",
       "rawVersion": "1.0.0",
-      "sourceConfidence": "vetted-curated",
-      "githubUrl": "https://github.com/trailofbits/skills/tree/main/plugins/seatbelt-sandboxer",
-      "sourceRegistryId": "trailofbits-skills-marketplace",
-      "sourceType": "community-list"
+      "githubUrl": "https://github.com/trailofbits/skills/tree/main/plugins/seatbelt-sandboxer"
     }
   },
   {
@@ -3179,7 +3374,7 @@
     "kind": "skill",
     "name": "second-opinion",
     "description": "Runs code reviews using external LLM CLIs (OpenAI Codex, Google Gemini) on uncommitted changes, branch diffs, or specific commits. Bundles Codex's built-in MCP server for direct tool access.",
-    "provider": "github",
+    "provider": "openai",
     "capabilities": [
       "automation",
       "guardrails"
@@ -3190,12 +3385,12 @@
       "general",
       "node"
     ],
-    "source": "trailofbits-skills-marketplace",
-    "lastSeenAt": "2026-03-19",
+    "source": "community-skills-index",
+    "lastSeenAt": "2026-03-20",
     "install": {
-      "kind": "manual",
-      "instructions": "Review the linked GitHub skill and follow its repository installation instructions.",
-      "url": "https://github.com/trailofbits/skills/tree/main/plugins/second-opinion"
+      "kind": "skill.sh",
+      "target": "second-opinion",
+      "args": []
     },
     "adoptionSignal": 58,
     "maintenanceSignal": 78,
@@ -3209,14 +3404,14 @@
       "integrityAlerts": 0
     },
     "metadata": {
+      "sourceRegistryId": "trailofbits-skills-marketplace",
+      "sourceType": "community-list",
+      "sourceConfidence": "vetted-curated",
       "catalogType": "skill",
       "marketplaceRegistry": "trailofbits-skills-marketplace",
       "marketplaceSource": "github",
       "rawVersion": "1.6.0",
-      "sourceConfidence": "vetted-curated",
-      "githubUrl": "https://github.com/trailofbits/skills/tree/main/plugins/second-opinion",
-      "sourceRegistryId": "trailofbits-skills-marketplace",
-      "sourceType": "community-list"
+      "githubUrl": "https://github.com/trailofbits/skills/tree/main/plugins/second-opinion"
     }
   },
   {
@@ -3236,7 +3431,7 @@
       "python"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-19",
+    "lastSeenAt": "2026-03-20",
     "install": {
       "kind": "skill.sh",
       "target": "secure-prompting",
@@ -3272,7 +3467,7 @@
       "general"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-19",
+    "lastSeenAt": "2026-03-20",
     "install": {
       "kind": "skill.sh",
       "target": "Security Best Practices",
@@ -3310,7 +3505,7 @@
       "general"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-19",
+    "lastSeenAt": "2026-03-20",
     "install": {
       "kind": "skill.sh",
       "target": "Security Ownership Map",
@@ -3348,7 +3543,7 @@
       "general"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-19",
+    "lastSeenAt": "2026-03-20",
     "install": {
       "kind": "skill.sh",
       "target": "Security Threat Model",
@@ -3378,7 +3573,7 @@
     "kind": "skill",
     "name": "semgrep-rule-creator",
     "description": "Create custom Semgrep rules for detecting bug patterns and security vulnerabilities",
-    "provider": "github",
+    "provider": "openai",
     "capabilities": [
       "security"
     ],
@@ -3388,12 +3583,12 @@
       "general",
       "github"
     ],
-    "source": "trailofbits-skills-marketplace",
-    "lastSeenAt": "2026-03-19",
+    "source": "community-skills-index",
+    "lastSeenAt": "2026-03-20",
     "install": {
-      "kind": "manual",
-      "instructions": "Review the linked GitHub skill and follow its repository installation instructions.",
-      "url": "https://github.com/trailofbits/skills/tree/main/plugins/semgrep-rule-creator"
+      "kind": "skill.sh",
+      "target": "semgrep-rule-creator",
+      "args": []
     },
     "adoptionSignal": 58,
     "maintenanceSignal": 78,
@@ -3407,14 +3602,14 @@
       "integrityAlerts": 0
     },
     "metadata": {
+      "sourceRegistryId": "trailofbits-skills-marketplace",
+      "sourceType": "community-list",
+      "sourceConfidence": "vetted-curated",
       "catalogType": "skill",
       "marketplaceRegistry": "trailofbits-skills-marketplace",
       "marketplaceSource": "github",
       "rawVersion": "1.2.0",
-      "sourceConfidence": "vetted-curated",
-      "githubUrl": "https://github.com/trailofbits/skills/tree/main/plugins/semgrep-rule-creator",
-      "sourceRegistryId": "trailofbits-skills-marketplace",
-      "sourceType": "community-list"
+      "githubUrl": "https://github.com/trailofbits/skills/tree/main/plugins/semgrep-rule-creator"
     }
   },
   {
@@ -3422,7 +3617,7 @@
     "kind": "skill",
     "name": "semgrep-rule-variant-creator",
     "description": "Creates language variants of existing Semgrep rules with proper applicability analysis and test-driven validation",
-    "provider": "github",
+    "provider": "openai",
     "capabilities": [
       "automation"
     ],
@@ -3432,12 +3627,12 @@
       "general",
       "node"
     ],
-    "source": "trailofbits-skills-marketplace",
-    "lastSeenAt": "2026-03-19",
+    "source": "community-skills-index",
+    "lastSeenAt": "2026-03-20",
     "install": {
-      "kind": "manual",
-      "instructions": "Review the linked GitHub skill and follow its repository installation instructions.",
-      "url": "https://github.com/trailofbits/skills/tree/main/plugins/semgrep-rule-variant-creator"
+      "kind": "skill.sh",
+      "target": "semgrep-rule-variant-creator",
+      "args": []
     },
     "adoptionSignal": 58,
     "maintenanceSignal": 78,
@@ -3451,14 +3646,14 @@
       "integrityAlerts": 0
     },
     "metadata": {
+      "sourceRegistryId": "trailofbits-skills-marketplace",
+      "sourceType": "community-list",
+      "sourceConfidence": "vetted-curated",
       "catalogType": "skill",
       "marketplaceRegistry": "trailofbits-skills-marketplace",
       "marketplaceSource": "github",
       "rawVersion": "1.0.0",
-      "sourceConfidence": "vetted-curated",
-      "githubUrl": "https://github.com/trailofbits/skills/tree/main/plugins/semgrep-rule-variant-creator",
-      "sourceRegistryId": "trailofbits-skills-marketplace",
-      "sourceType": "community-list"
+      "githubUrl": "https://github.com/trailofbits/skills/tree/main/plugins/semgrep-rule-variant-creator"
     }
   },
   {
@@ -3474,7 +3669,7 @@
       "general"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-19",
+    "lastSeenAt": "2026-03-20",
     "install": {
       "kind": "skill.sh",
       "target": "Sentry",
@@ -3504,7 +3699,7 @@
     "kind": "skill",
     "name": "sharp-edges",
     "description": "Identify error-prone APIs, dangerous configurations, and footgun designs that enable security mistakes",
-    "provider": "github",
+    "provider": "openai",
     "capabilities": [
       "security"
     ],
@@ -3514,12 +3709,12 @@
       "general",
       "github"
     ],
-    "source": "trailofbits-skills-marketplace",
-    "lastSeenAt": "2026-03-19",
+    "source": "community-skills-index",
+    "lastSeenAt": "2026-03-20",
     "install": {
-      "kind": "manual",
-      "instructions": "Review the linked GitHub skill and follow its repository installation instructions.",
-      "url": "https://github.com/trailofbits/skills/tree/main/plugins/sharp-edges"
+      "kind": "skill.sh",
+      "target": "sharp-edges",
+      "args": []
     },
     "adoptionSignal": 58,
     "maintenanceSignal": 78,
@@ -3533,14 +3728,14 @@
       "integrityAlerts": 0
     },
     "metadata": {
+      "sourceRegistryId": "trailofbits-skills-marketplace",
+      "sourceType": "community-list",
+      "sourceConfidence": "vetted-curated",
       "catalogType": "skill",
       "marketplaceRegistry": "trailofbits-skills-marketplace",
       "marketplaceSource": "github",
       "rawVersion": "1.0.0",
-      "sourceConfidence": "vetted-curated",
-      "githubUrl": "https://github.com/trailofbits/skills/tree/main/plugins/sharp-edges",
-      "sourceRegistryId": "trailofbits-skills-marketplace",
-      "sourceType": "community-list"
+      "githubUrl": "https://github.com/trailofbits/skills/tree/main/plugins/sharp-edges"
     }
   },
   {
@@ -3548,7 +3743,7 @@
     "kind": "skill",
     "name": "skill-creator",
     "description": "Collection of example skills demonstrating various capabilities including skill creation, MCP building, visual design, algorithmic art, internal communications, web testing, artifact building, Slack GIFs, and theme styling",
-    "provider": "anthropic",
+    "provider": "openai",
     "capabilities": [
       "automation",
       "guardrails",
@@ -3571,12 +3766,12 @@
       "general",
       "node"
     ],
-    "source": "anthropic-skills",
-    "lastSeenAt": "2026-03-19",
+    "source": "community-skills-index",
+    "lastSeenAt": "2026-03-20",
     "install": {
-      "kind": "manual",
-      "instructions": "Review the linked GitHub skill and follow its repository installation instructions.",
-      "url": "https://github.com/anthropics/skills/tree/main/skills/skill-creator"
+      "kind": "skill.sh",
+      "target": "skill-creator",
+      "args": []
     },
     "adoptionSignal": 66,
     "maintenanceSignal": 70,
@@ -3590,16 +3785,16 @@
       "integrityAlerts": 0
     },
     "metadata": {
+      "sourceRegistryId": "anthropic-skills",
+      "sourceType": "vendor-feed",
+      "sourceConfidence": "official",
       "catalogType": "skill",
       "marketplacePlugin": "example-skills",
       "marketplaceRegistry": "anthropic-skills",
       "marketplaceSource": "github",
       "rawVersion": "unknown",
-      "sourceConfidence": "official",
       "bundledSkillPath": "skills/skill-creator",
-      "githubUrl": "https://github.com/anthropics/skills/tree/main/skills/skill-creator",
-      "sourceRegistryId": "anthropic-skills",
-      "sourceType": "vendor-feed"
+      "githubUrl": "https://github.com/anthropics/skills/tree/main/skills/skill-creator"
     }
   },
   {
@@ -3607,7 +3802,7 @@
     "kind": "skill",
     "name": "skill-improver",
     "description": "Automatically reviews and fixes Claude Code skills through iterative refinement until they meet quality standards. Requires plugin-dev plugin.",
-    "provider": "github",
+    "provider": "openai",
     "capabilities": [
       "guardrails"
     ],
@@ -3616,12 +3811,12 @@
       "codex",
       "general"
     ],
-    "source": "trailofbits-skills-marketplace",
-    "lastSeenAt": "2026-03-19",
+    "source": "community-skills-index",
+    "lastSeenAt": "2026-03-20",
     "install": {
-      "kind": "manual",
-      "instructions": "Review the linked GitHub skill and follow its repository installation instructions.",
-      "url": "https://github.com/trailofbits/skills/tree/main/plugins/skill-improver"
+      "kind": "skill.sh",
+      "target": "skill-improver",
+      "args": []
     },
     "adoptionSignal": 58,
     "maintenanceSignal": 78,
@@ -3635,14 +3830,14 @@
       "integrityAlerts": 0
     },
     "metadata": {
+      "sourceRegistryId": "trailofbits-skills-marketplace",
+      "sourceType": "community-list",
+      "sourceConfidence": "vetted-curated",
       "catalogType": "skill",
       "marketplaceRegistry": "trailofbits-skills-marketplace",
       "marketplaceSource": "github",
       "rawVersion": "1.0.1",
-      "sourceConfidence": "vetted-curated",
-      "githubUrl": "https://github.com/trailofbits/skills/tree/main/plugins/skill-improver",
-      "sourceRegistryId": "trailofbits-skills-marketplace",
-      "sourceType": "community-list"
+      "githubUrl": "https://github.com/trailofbits/skills/tree/main/plugins/skill-improver"
     }
   },
   {
@@ -3650,7 +3845,7 @@
     "kind": "skill",
     "name": "slack-gif-creator",
     "description": "Collection of example skills demonstrating various capabilities including skill creation, MCP building, visual design, algorithmic art, internal communications, web testing, artifact building, Slack GIFs, and theme styling",
-    "provider": "anthropic",
+    "provider": "openai",
     "capabilities": [
       "automation",
       "guardrails",
@@ -3673,12 +3868,12 @@
       "general",
       "node"
     ],
-    "source": "anthropic-skills",
-    "lastSeenAt": "2026-03-19",
+    "source": "community-skills-index",
+    "lastSeenAt": "2026-03-20",
     "install": {
-      "kind": "manual",
-      "instructions": "Review the linked GitHub skill and follow its repository installation instructions.",
-      "url": "https://github.com/anthropics/skills/tree/main/skills/slack-gif-creator"
+      "kind": "skill.sh",
+      "target": "slack-gif-creator",
+      "args": []
     },
     "adoptionSignal": 66,
     "maintenanceSignal": 70,
@@ -3692,16 +3887,16 @@
       "integrityAlerts": 0
     },
     "metadata": {
+      "sourceRegistryId": "anthropic-skills",
+      "sourceType": "vendor-feed",
+      "sourceConfidence": "official",
       "catalogType": "skill",
       "marketplacePlugin": "example-skills",
       "marketplaceRegistry": "anthropic-skills",
       "marketplaceSource": "github",
       "rawVersion": "unknown",
-      "sourceConfidence": "official",
       "bundledSkillPath": "skills/slack-gif-creator",
-      "githubUrl": "https://github.com/anthropics/skills/tree/main/skills/slack-gif-creator",
-      "sourceRegistryId": "anthropic-skills",
-      "sourceType": "vendor-feed"
+      "githubUrl": "https://github.com/anthropics/skills/tree/main/skills/slack-gif-creator"
     }
   },
   {
@@ -3717,7 +3912,7 @@
       "general"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-19",
+    "lastSeenAt": "2026-03-20",
     "install": {
       "kind": "skill.sh",
       "target": "Slides",
@@ -3755,7 +3950,7 @@
       "general"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-19",
+    "lastSeenAt": "2026-03-20",
     "install": {
       "kind": "skill.sh",
       "target": "Sora",
@@ -3785,7 +3980,7 @@
     "kind": "skill",
     "name": "spec-to-code-compliance",
     "description": "Specification-to-code compliance checker for blockchain audits with evidence-based alignment analysis",
-    "provider": "github",
+    "provider": "openai",
     "capabilities": [
       "automation",
       "security"
@@ -3797,12 +3992,12 @@
       "github",
       "node"
     ],
-    "source": "trailofbits-skills-marketplace",
-    "lastSeenAt": "2026-03-19",
+    "source": "community-skills-index",
+    "lastSeenAt": "2026-03-20",
     "install": {
-      "kind": "manual",
-      "instructions": "Review the linked GitHub skill and follow its repository installation instructions.",
-      "url": "https://github.com/trailofbits/skills/tree/main/plugins/spec-to-code-compliance"
+      "kind": "skill.sh",
+      "target": "spec-to-code-compliance",
+      "args": []
     },
     "adoptionSignal": 58,
     "maintenanceSignal": 78,
@@ -3816,14 +4011,14 @@
       "integrityAlerts": 0
     },
     "metadata": {
+      "sourceRegistryId": "trailofbits-skills-marketplace",
+      "sourceType": "community-list",
+      "sourceConfidence": "vetted-curated",
       "catalogType": "skill",
       "marketplaceRegistry": "trailofbits-skills-marketplace",
       "marketplaceSource": "github",
       "rawVersion": "1.1.0",
-      "sourceConfidence": "vetted-curated",
-      "githubUrl": "https://github.com/trailofbits/skills/tree/main/plugins/spec-to-code-compliance",
-      "sourceRegistryId": "trailofbits-skills-marketplace",
-      "sourceType": "community-list"
+      "githubUrl": "https://github.com/trailofbits/skills/tree/main/plugins/spec-to-code-compliance"
     }
   },
   {
@@ -3839,7 +4034,7 @@
       "general"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-19",
+    "lastSeenAt": "2026-03-20",
     "install": {
       "kind": "skill.sh",
       "target": "Speech",
@@ -3877,7 +4072,7 @@
       "general"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-19",
+    "lastSeenAt": "2026-03-20",
     "install": {
       "kind": "skill.sh",
       "target": "Spreadsheet",
@@ -3907,7 +4102,7 @@
     "kind": "skill",
     "name": "static-analysis",
     "description": "Static analysis toolkit with CodeQL, Semgrep, and SARIF parsing for security vulnerability detection",
-    "provider": "github",
+    "provider": "openai",
     "capabilities": [
       "security"
     ],
@@ -3917,12 +4112,12 @@
       "general",
       "github"
     ],
-    "source": "trailofbits-skills-marketplace",
-    "lastSeenAt": "2026-03-19",
+    "source": "community-skills-index",
+    "lastSeenAt": "2026-03-20",
     "install": {
-      "kind": "manual",
-      "instructions": "Review the linked GitHub skill and follow its repository installation instructions.",
-      "url": "https://github.com/trailofbits/skills/tree/main/plugins/static-analysis"
+      "kind": "skill.sh",
+      "target": "static-analysis",
+      "args": []
     },
     "adoptionSignal": 58,
     "maintenanceSignal": 78,
@@ -3936,14 +4131,14 @@
       "integrityAlerts": 0
     },
     "metadata": {
+      "sourceRegistryId": "trailofbits-skills-marketplace",
+      "sourceType": "community-list",
+      "sourceConfidence": "vetted-curated",
       "catalogType": "skill",
       "marketplaceRegistry": "trailofbits-skills-marketplace",
       "marketplaceSource": "github",
       "rawVersion": "1.2.0",
-      "sourceConfidence": "vetted-curated",
-      "githubUrl": "https://github.com/trailofbits/skills/tree/main/plugins/static-analysis",
-      "sourceRegistryId": "trailofbits-skills-marketplace",
-      "sourceType": "community-list"
+      "githubUrl": "https://github.com/trailofbits/skills/tree/main/plugins/static-analysis"
     }
   },
   {
@@ -3951,7 +4146,7 @@
     "kind": "skill",
     "name": "supply-chain-risk-auditor",
     "description": "Audit supply-chain threat landscape of project dependencies for exploitation or takeover risk",
-    "provider": "github",
+    "provider": "openai",
     "capabilities": [
       "automation",
       "security"
@@ -3963,12 +4158,12 @@
       "github",
       "node"
     ],
-    "source": "trailofbits-skills-marketplace",
-    "lastSeenAt": "2026-03-19",
+    "source": "community-skills-index",
+    "lastSeenAt": "2026-03-20",
     "install": {
-      "kind": "manual",
-      "instructions": "Review the linked GitHub skill and follow its repository installation instructions.",
-      "url": "https://github.com/trailofbits/skills/tree/main/plugins/supply-chain-risk-auditor"
+      "kind": "skill.sh",
+      "target": "supply-chain-risk-auditor",
+      "args": []
     },
     "adoptionSignal": 58,
     "maintenanceSignal": 78,
@@ -3982,14 +4177,14 @@
       "integrityAlerts": 0
     },
     "metadata": {
+      "sourceRegistryId": "trailofbits-skills-marketplace",
+      "sourceType": "community-list",
+      "sourceConfidence": "vetted-curated",
       "catalogType": "skill",
       "marketplaceRegistry": "trailofbits-skills-marketplace",
       "marketplaceSource": "github",
       "rawVersion": "1.0.0",
-      "sourceConfidence": "vetted-curated",
-      "githubUrl": "https://github.com/trailofbits/skills/tree/main/plugins/supply-chain-risk-auditor",
-      "sourceRegistryId": "trailofbits-skills-marketplace",
-      "sourceType": "community-list"
+      "githubUrl": "https://github.com/trailofbits/skills/tree/main/plugins/supply-chain-risk-auditor"
     }
   },
   {
@@ -4004,14 +4199,14 @@
       "security"
     ],
     "compatibility": [
-      "cloud",
       "aws",
       "azure",
+      "cloud",
       "gcp",
       "general"
     ],
-    "source": "github-curated-industry-skills",
-    "lastSeenAt": "2026-03-19",
+    "source": "community-skills-index",
+    "lastSeenAt": "2026-03-20",
     "install": {
       "kind": "skill.sh",
       "target": "terraform-guardrails",
@@ -4035,11 +4230,52 @@
     }
   },
   {
+    "id": "skill:test-driven-development",
+    "kind": "skill",
+    "name": "Test-Driven Development",
+    "description": "Enforce red-green-refactor TDD discipline: write failing tests first, implement minimally, then refactor. Prevents writing implementation before tests.",
+    "provider": "openai",
+    "capabilities": [
+      "automation",
+      "guardrails",
+      "prompting"
+    ],
+    "compatibility": [
+      "claude-code",
+      "node",
+      "python",
+      "general"
+    ],
+    "source": "community-skills-index",
+    "lastSeenAt": "2026-03-20",
+    "install": {
+      "kind": "skill.sh",
+      "target": "test-driven-development",
+      "args": []
+    },
+    "adoptionSignal": 91,
+    "maintenanceSignal": 88,
+    "provenanceSignal": 84,
+    "freshnessSignal": 86,
+    "securitySignals": {
+      "knownVulnerabilities": 0,
+      "suspiciousPatterns": 0,
+      "injectionFindings": 0,
+      "exfiltrationSignals": 0,
+      "integrityAlerts": 0
+    },
+    "metadata": {
+      "sourceRegistryId": "community-skills-index",
+      "sourceType": "community-list",
+      "sourceConfidence": "vetted-curated"
+    }
+  },
+  {
     "id": "skill:testing-handbook-skills",
     "kind": "skill",
     "name": "testing-handbook-skills",
     "description": "Skills from the Trail of Bits Application Security Testing Handbook (appsec.guide)",
-    "provider": "github",
+    "provider": "openai",
     "capabilities": [
       "guardrails",
       "security"
@@ -4050,12 +4286,12 @@
       "general",
       "github"
     ],
-    "source": "trailofbits-skills-marketplace",
-    "lastSeenAt": "2026-03-19",
+    "source": "community-skills-index",
+    "lastSeenAt": "2026-03-20",
     "install": {
-      "kind": "manual",
-      "instructions": "Review the linked GitHub skill and follow its repository installation instructions.",
-      "url": "https://github.com/trailofbits/skills/tree/main/plugins/testing-handbook-skills"
+      "kind": "skill.sh",
+      "target": "testing-handbook-skills",
+      "args": []
     },
     "adoptionSignal": 58,
     "maintenanceSignal": 78,
@@ -4069,14 +4305,14 @@
       "integrityAlerts": 0
     },
     "metadata": {
+      "sourceRegistryId": "trailofbits-skills-marketplace",
+      "sourceType": "community-list",
+      "sourceConfidence": "vetted-curated",
       "catalogType": "skill",
       "marketplaceRegistry": "trailofbits-skills-marketplace",
       "marketplaceSource": "github",
       "rawVersion": "1.0.1",
-      "sourceConfidence": "vetted-curated",
-      "githubUrl": "https://github.com/trailofbits/skills/tree/main/plugins/testing-handbook-skills",
-      "sourceRegistryId": "trailofbits-skills-marketplace",
-      "sourceType": "community-list"
+      "githubUrl": "https://github.com/trailofbits/skills/tree/main/plugins/testing-handbook-skills"
     }
   },
   {
@@ -4084,7 +4320,7 @@
     "kind": "skill",
     "name": "theme-factory",
     "description": "Collection of example skills demonstrating various capabilities including skill creation, MCP building, visual design, algorithmic art, internal communications, web testing, artifact building, Slack GIFs, and theme styling",
-    "provider": "anthropic",
+    "provider": "openai",
     "capabilities": [
       "automation",
       "guardrails",
@@ -4107,12 +4343,12 @@
       "general",
       "node"
     ],
-    "source": "anthropic-skills",
-    "lastSeenAt": "2026-03-19",
+    "source": "community-skills-index",
+    "lastSeenAt": "2026-03-20",
     "install": {
-      "kind": "manual",
-      "instructions": "Review the linked GitHub skill and follow its repository installation instructions.",
-      "url": "https://github.com/anthropics/skills/tree/main/skills/theme-factory"
+      "kind": "skill.sh",
+      "target": "theme-factory",
+      "args": []
     },
     "adoptionSignal": 66,
     "maintenanceSignal": 70,
@@ -4126,16 +4362,16 @@
       "integrityAlerts": 0
     },
     "metadata": {
+      "sourceRegistryId": "anthropic-skills",
+      "sourceType": "vendor-feed",
+      "sourceConfidence": "official",
       "catalogType": "skill",
       "marketplacePlugin": "example-skills",
       "marketplaceRegistry": "anthropic-skills",
       "marketplaceSource": "github",
       "rawVersion": "unknown",
-      "sourceConfidence": "official",
       "bundledSkillPath": "skills/theme-factory",
-      "githubUrl": "https://github.com/anthropics/skills/tree/main/skills/theme-factory",
-      "sourceRegistryId": "anthropic-skills",
-      "sourceType": "vendor-feed"
+      "githubUrl": "https://github.com/anthropics/skills/tree/main/skills/theme-factory"
     }
   },
   {
@@ -4155,7 +4391,7 @@
       "python"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-19",
+    "lastSeenAt": "2026-03-20",
     "install": {
       "kind": "skill.sh",
       "target": "threat-modeling-lite",
@@ -4191,7 +4427,7 @@
       "general"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-19",
+    "lastSeenAt": "2026-03-20",
     "install": {
       "kind": "skill.sh",
       "target": "Transcribe",
@@ -4221,7 +4457,7 @@
     "kind": "skill",
     "name": "variant-analysis",
     "description": "Find similar vulnerabilities and bugs across codebases using pattern-based analysis",
-    "provider": "github",
+    "provider": "openai",
     "capabilities": [
       "automation"
     ],
@@ -4231,12 +4467,12 @@
       "general",
       "node"
     ],
-    "source": "trailofbits-skills-marketplace",
-    "lastSeenAt": "2026-03-19",
+    "source": "community-skills-index",
+    "lastSeenAt": "2026-03-20",
     "install": {
-      "kind": "manual",
-      "instructions": "Review the linked GitHub skill and follow its repository installation instructions.",
-      "url": "https://github.com/trailofbits/skills/tree/main/plugins/variant-analysis"
+      "kind": "skill.sh",
+      "target": "variant-analysis",
+      "args": []
     },
     "adoptionSignal": 58,
     "maintenanceSignal": 78,
@@ -4250,14 +4486,14 @@
       "integrityAlerts": 0
     },
     "metadata": {
+      "sourceRegistryId": "trailofbits-skills-marketplace",
+      "sourceType": "community-list",
+      "sourceConfidence": "vetted-curated",
       "catalogType": "skill",
       "marketplaceRegistry": "trailofbits-skills-marketplace",
       "marketplaceSource": "github",
       "rawVersion": "1.0.0",
-      "sourceConfidence": "vetted-curated",
-      "githubUrl": "https://github.com/trailofbits/skills/tree/main/plugins/variant-analysis",
-      "sourceRegistryId": "trailofbits-skills-marketplace",
-      "sourceType": "community-list"
+      "githubUrl": "https://github.com/trailofbits/skills/tree/main/plugins/variant-analysis"
     }
   },
   {
@@ -4273,7 +4509,7 @@
       "general"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-19",
+    "lastSeenAt": "2026-03-20",
     "install": {
       "kind": "skill.sh",
       "target": "Vercel Deploy",
@@ -4303,7 +4539,7 @@
     "kind": "skill",
     "name": "visual-documentation-skills",
     "description": "Skills for creating stunning visual HTML documentation with modern UI design, SVG diagrams, flowcharts, dashboards, timelines, and technical documentation",
-    "provider": "github",
+    "provider": "openai",
     "capabilities": [
       "docs"
     ],
@@ -4312,12 +4548,12 @@
       "codex",
       "general"
     ],
-    "source": "github-mhattingpete-claude-skills",
-    "lastSeenAt": "2026-03-19",
+    "source": "community-skills-index",
+    "lastSeenAt": "2026-03-20",
     "install": {
-      "kind": "manual",
-      "instructions": "Review the linked GitHub skill and follow its repository installation instructions.",
-      "url": "https://github.com/mhattingpete/claude-skills-marketplace/tree/main/visual-documentation-plugin"
+      "kind": "skill.sh",
+      "target": "visual-documentation-skills",
+      "args": []
     },
     "adoptionSignal": 58,
     "maintenanceSignal": 78,
@@ -4331,14 +4567,14 @@
       "integrityAlerts": 0
     },
     "metadata": {
+      "sourceRegistryId": "github-mhattingpete-claude-skills",
+      "sourceType": "community-list",
+      "sourceConfidence": "vetted-curated",
       "catalogType": "skill",
       "marketplaceRegistry": "github-mhattingpete-claude-skills",
       "marketplaceSource": "github",
       "rawVersion": "1.0.0",
-      "sourceConfidence": "vetted-curated",
-      "githubUrl": "https://github.com/mhattingpete/claude-skills-marketplace/tree/main/visual-documentation-plugin",
-      "sourceRegistryId": "github-mhattingpete-claude-skills",
-      "sourceType": "community-list"
+      "githubUrl": "https://github.com/mhattingpete/claude-skills-marketplace/tree/main/visual-documentation-plugin"
     }
   },
   {
@@ -4346,7 +4582,7 @@
     "kind": "skill",
     "name": "web-artifacts-builder",
     "description": "Collection of example skills demonstrating various capabilities including skill creation, MCP building, visual design, algorithmic art, internal communications, web testing, artifact building, Slack GIFs, and theme styling",
-    "provider": "anthropic",
+    "provider": "openai",
     "capabilities": [
       "automation",
       "guardrails",
@@ -4369,12 +4605,12 @@
       "general",
       "node"
     ],
-    "source": "anthropic-skills",
-    "lastSeenAt": "2026-03-19",
+    "source": "community-skills-index",
+    "lastSeenAt": "2026-03-20",
     "install": {
-      "kind": "manual",
-      "instructions": "Review the linked GitHub skill and follow its repository installation instructions.",
-      "url": "https://github.com/anthropics/skills/tree/main/skills/web-artifacts-builder"
+      "kind": "skill.sh",
+      "target": "web-artifacts-builder",
+      "args": []
     },
     "adoptionSignal": 66,
     "maintenanceSignal": 70,
@@ -4388,16 +4624,16 @@
       "integrityAlerts": 0
     },
     "metadata": {
+      "sourceRegistryId": "anthropic-skills",
+      "sourceType": "vendor-feed",
+      "sourceConfidence": "official",
       "catalogType": "skill",
       "marketplacePlugin": "example-skills",
       "marketplaceRegistry": "anthropic-skills",
       "marketplaceSource": "github",
       "rawVersion": "unknown",
-      "sourceConfidence": "official",
       "bundledSkillPath": "skills/web-artifacts-builder",
-      "githubUrl": "https://github.com/anthropics/skills/tree/main/skills/web-artifacts-builder",
-      "sourceRegistryId": "anthropic-skills",
-      "sourceType": "vendor-feed"
+      "githubUrl": "https://github.com/anthropics/skills/tree/main/skills/web-artifacts-builder"
     }
   },
   {
@@ -4405,7 +4641,7 @@
     "kind": "skill",
     "name": "webapp-testing",
     "description": "Collection of example skills demonstrating various capabilities including skill creation, MCP building, visual design, algorithmic art, internal communications, web testing, artifact building, Slack GIFs, and theme styling",
-    "provider": "anthropic",
+    "provider": "openai",
     "capabilities": [
       "automation",
       "guardrails",
@@ -4428,12 +4664,12 @@
       "general",
       "node"
     ],
-    "source": "anthropic-skills",
-    "lastSeenAt": "2026-03-19",
+    "source": "community-skills-index",
+    "lastSeenAt": "2026-03-20",
     "install": {
-      "kind": "manual",
-      "instructions": "Review the linked GitHub skill and follow its repository installation instructions.",
-      "url": "https://github.com/anthropics/skills/tree/main/skills/webapp-testing"
+      "kind": "skill.sh",
+      "target": "webapp-testing",
+      "args": []
     },
     "adoptionSignal": 66,
     "maintenanceSignal": 70,
@@ -4447,16 +4683,16 @@
       "integrityAlerts": 0
     },
     "metadata": {
+      "sourceRegistryId": "anthropic-skills",
+      "sourceType": "vendor-feed",
+      "sourceConfidence": "official",
       "catalogType": "skill",
       "marketplacePlugin": "example-skills",
       "marketplaceRegistry": "anthropic-skills",
       "marketplaceSource": "github",
       "rawVersion": "unknown",
-      "sourceConfidence": "official",
       "bundledSkillPath": "skills/webapp-testing",
-      "githubUrl": "https://github.com/anthropics/skills/tree/main/skills/webapp-testing",
-      "sourceRegistryId": "anthropic-skills",
-      "sourceType": "vendor-feed"
+      "githubUrl": "https://github.com/anthropics/skills/tree/main/skills/webapp-testing"
     }
   },
   {
@@ -4472,7 +4708,7 @@
       "general"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-19",
+    "lastSeenAt": "2026-03-20",
     "install": {
       "kind": "skill.sh",
       "target": "Winui App",
@@ -4502,7 +4738,7 @@
     "kind": "skill",
     "name": "workflow-skill-design",
     "description": "Teaches design patterns for workflow-based Claude Code skills and provides a review agent for auditing existing skills",
-    "provider": "github",
+    "provider": "openai",
     "capabilities": [
       "automation",
       "guardrails",
@@ -4515,12 +4751,12 @@
       "github",
       "node"
     ],
-    "source": "trailofbits-skills-marketplace",
-    "lastSeenAt": "2026-03-19",
+    "source": "community-skills-index",
+    "lastSeenAt": "2026-03-20",
     "install": {
-      "kind": "manual",
-      "instructions": "Review the linked GitHub skill and follow its repository installation instructions.",
-      "url": "https://github.com/trailofbits/skills/tree/main/plugins/workflow-skill-design"
+      "kind": "skill.sh",
+      "target": "workflow-skill-design",
+      "args": []
     },
     "adoptionSignal": 58,
     "maintenanceSignal": 78,
@@ -4534,14 +4770,14 @@
       "integrityAlerts": 0
     },
     "metadata": {
+      "sourceRegistryId": "trailofbits-skills-marketplace",
+      "sourceType": "community-list",
+      "sourceConfidence": "vetted-curated",
       "catalogType": "skill",
       "marketplaceRegistry": "trailofbits-skills-marketplace",
       "marketplaceSource": "github",
       "rawVersion": "1.0.1",
-      "sourceConfidence": "vetted-curated",
-      "githubUrl": "https://github.com/trailofbits/skills/tree/main/plugins/workflow-skill-design",
-      "sourceRegistryId": "trailofbits-skills-marketplace",
-      "sourceType": "community-list"
+      "githubUrl": "https://github.com/trailofbits/skills/tree/main/plugins/workflow-skill-design"
     }
   },
   {
@@ -4549,7 +4785,7 @@
     "kind": "skill",
     "name": "xlsx",
     "description": "Collection of document processing suite including Excel, Word, PowerPoint, and PDF capabilities",
-    "provider": "anthropic",
+    "provider": "openai",
     "capabilities": [
       "automation",
       "skills/docx",
@@ -4563,12 +4799,12 @@
       "general",
       "node"
     ],
-    "source": "anthropic-skills",
-    "lastSeenAt": "2026-03-19",
+    "source": "community-skills-index",
+    "lastSeenAt": "2026-03-20",
     "install": {
-      "kind": "manual",
-      "instructions": "Review the linked GitHub skill and follow its repository installation instructions.",
-      "url": "https://github.com/anthropics/skills/tree/main/skills/xlsx"
+      "kind": "skill.sh",
+      "target": "xlsx",
+      "args": []
     },
     "adoptionSignal": 66,
     "maintenanceSignal": 70,
@@ -4582,16 +4818,16 @@
       "integrityAlerts": 0
     },
     "metadata": {
+      "sourceRegistryId": "anthropic-skills",
+      "sourceType": "vendor-feed",
+      "sourceConfidence": "official",
       "catalogType": "skill",
       "marketplacePlugin": "document-skills",
       "marketplaceRegistry": "anthropic-skills",
       "marketplaceSource": "github",
       "rawVersion": "unknown",
-      "sourceConfidence": "official",
       "bundledSkillPath": "skills/xlsx",
-      "githubUrl": "https://github.com/anthropics/skills/tree/main/skills/xlsx",
-      "sourceRegistryId": "anthropic-skills",
-      "sourceType": "vendor-feed"
+      "githubUrl": "https://github.com/anthropics/skills/tree/main/skills/xlsx"
     }
   },
   {
@@ -4599,7 +4835,7 @@
     "kind": "skill",
     "name": "yara-authoring",
     "description": "YARA-X detection rule authoring with linting and quality analysis",
-    "provider": "github",
+    "provider": "openai",
     "capabilities": [
       "security"
     ],
@@ -4609,12 +4845,12 @@
       "general",
       "github"
     ],
-    "source": "trailofbits-skills-marketplace",
-    "lastSeenAt": "2026-03-19",
+    "source": "community-skills-index",
+    "lastSeenAt": "2026-03-20",
     "install": {
-      "kind": "manual",
-      "instructions": "Review the linked GitHub skill and follow its repository installation instructions.",
-      "url": "https://github.com/trailofbits/skills/tree/main/plugins/yara-authoring"
+      "kind": "skill.sh",
+      "target": "yara-authoring",
+      "args": []
     },
     "adoptionSignal": 58,
     "maintenanceSignal": 78,
@@ -4628,14 +4864,14 @@
       "integrityAlerts": 0
     },
     "metadata": {
+      "sourceRegistryId": "trailofbits-skills-marketplace",
+      "sourceType": "community-list",
+      "sourceConfidence": "vetted-curated",
       "catalogType": "skill",
       "marketplaceRegistry": "trailofbits-skills-marketplace",
       "marketplaceSource": "github",
       "rawVersion": "2.0.0",
-      "sourceConfidence": "vetted-curated",
-      "githubUrl": "https://github.com/trailofbits/skills/tree/main/plugins/yara-authoring",
-      "sourceRegistryId": "trailofbits-skills-marketplace",
-      "sourceType": "community-list"
+      "githubUrl": "https://github.com/trailofbits/skills/tree/main/plugins/yara-authoring"
     }
   },
   {
@@ -4651,7 +4887,7 @@
       "general"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-19",
+    "lastSeenAt": "2026-03-20",
     "install": {
       "kind": "skill.sh",
       "target": "Yeet",
@@ -4681,7 +4917,7 @@
     "kind": "skill",
     "name": "zai-cli",
     "description": "Z.AI vision, search, reader, and GitHub exploration via MCP",
-    "provider": "github",
+    "provider": "openai",
     "capabilities": [
       "automation",
       "tools"
@@ -4692,12 +4928,12 @@
       "general",
       "node"
     ],
-    "source": "github-n-skills-marketplace",
-    "lastSeenAt": "2026-03-19",
+    "source": "community-skills-index",
+    "lastSeenAt": "2026-03-20",
     "install": {
-      "kind": "manual",
-      "instructions": "Review the linked GitHub skill and follow its repository installation instructions.",
-      "url": "https://github.com/numman-ali/n-skills/tree/main/skills/tools/zai-cli"
+      "kind": "skill.sh",
+      "target": "zai-cli",
+      "args": []
     },
     "adoptionSignal": 58,
     "maintenanceSignal": 70,
@@ -4711,14 +4947,14 @@
       "integrityAlerts": 0
     },
     "metadata": {
+      "sourceRegistryId": "github-n-skills-marketplace",
+      "sourceType": "community-list",
+      "sourceConfidence": "vetted-curated",
       "catalogType": "skill",
       "marketplaceRegistry": "github-n-skills-marketplace",
       "marketplaceSource": "github",
       "rawVersion": "unknown",
-      "sourceConfidence": "vetted-curated",
-      "githubUrl": "https://github.com/numman-ali/n-skills/tree/main/skills/tools/zai-cli",
-      "sourceRegistryId": "github-n-skills-marketplace",
-      "sourceType": "community-list"
+      "githubUrl": "https://github.com/numman-ali/n-skills/tree/main/skills/tools/zai-cli"
     }
   },
   {
@@ -4726,7 +4962,7 @@
     "kind": "skill",
     "name": "zeroize-audit",
     "description": "Detects missing or compiler-optimized zeroization of sensitive data with assembly and control-flow analysis",
-    "provider": "github",
+    "provider": "openai",
     "capabilities": [
       "security"
     ],
@@ -4736,12 +4972,12 @@
       "general",
       "github"
     ],
-    "source": "trailofbits-skills-marketplace",
-    "lastSeenAt": "2026-03-19",
+    "source": "community-skills-index",
+    "lastSeenAt": "2026-03-20",
     "install": {
-      "kind": "manual",
-      "instructions": "Review the linked GitHub skill and follow its repository installation instructions.",
-      "url": "https://github.com/trailofbits/skills/tree/main/plugins/zeroize-audit"
+      "kind": "skill.sh",
+      "target": "zeroize-audit",
+      "args": []
     },
     "adoptionSignal": 58,
     "maintenanceSignal": 78,
@@ -4755,14 +4991,14 @@
       "integrityAlerts": 0
     },
     "metadata": {
+      "sourceRegistryId": "trailofbits-skills-marketplace",
+      "sourceType": "community-list",
+      "sourceConfidence": "vetted-curated",
       "catalogType": "skill",
       "marketplaceRegistry": "trailofbits-skills-marketplace",
       "marketplaceSource": "github",
       "rawVersion": "0.1.0",
-      "sourceConfidence": "vetted-curated",
-      "githubUrl": "https://github.com/trailofbits/skills/tree/main/plugins/zeroize-audit",
-      "sourceRegistryId": "trailofbits-skills-marketplace",
-      "sourceType": "community-list"
+      "githubUrl": "https://github.com/trailofbits/skills/tree/main/plugins/zeroize-audit"
     }
   }
 ]
