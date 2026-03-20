@@ -1,24 +1,24 @@
 <h1 align="center">PlugScout</h1>
 
 <p align="center">
-  <a href="https://github.com/amitrintzler/skills-and-mcps/releases/latest"><img alt="Release" src="https://img.shields.io/github/v/release/amitrintzler/skills-and-mcps?display_name=tag&label=release" /></a>
-  <a href="https://github.com/amitrintzler/skills-and-mcps/actions/workflows/ci.yml"><img alt="CI" src="https://github.com/amitrintzler/skills-and-mcps/actions/workflows/ci.yml/badge.svg?branch=main" /></a>
+  <a href="https://github.com/amitrintzler/plugscout/releases/latest"><img alt="Release" src="https://img.shields.io/github/v/release/amitrintzler/plugscout?display_name=tag&label=release" /></a>
+  <a href="https://github.com/amitrintzler/plugscout/actions/workflows/ci.yml"><img alt="CI" src="https://github.com/amitrintzler/plugscout/actions/workflows/ci.yml/badge.svg?branch=main" /></a>
   <a href="https://nodejs.org/"><img alt="Node >=18.17" src="https://img.shields.io/badge/node-%3E%3D18.17-339933?logo=node.js&logoColor=white" /></a>
   <a href="https://www.linkedin.com/in/amit-rintzler-94444535/"><img alt="LinkedIn Amit Rintzler" src="https://img.shields.io/badge/LinkedIn-Amit%20Rintzler-0A66C2?logo=linkedin&logoColor=white" /></a>
 </p>
 
 <p align="center">
-  <a href="https://github.com/amitrintzler/skills-and-mcps/actions/workflows/daily-security.yml"><img alt="Daily Security" src="https://github.com/amitrintzler/skills-and-mcps/actions/workflows/daily-security.yml/badge.svg?branch=main" /></a>
-  <a href="https://github.com/amitrintzler/skills-and-mcps/actions/workflows/security-codeql.yml"><img alt="Security / CodeQL" src="https://github.com/amitrintzler/skills-and-mcps/actions/workflows/security-codeql.yml/badge.svg?branch=main" /></a>
-  <a href="https://github.com/amitrintzler/skills-and-mcps/actions/workflows/security-dependency-review.yml"><img alt="Dependency Review (PR)" src="https://img.shields.io/badge/dependency%20review-PR%20only-2563eb" /></a>
-  <a href="https://github.com/amitrintzler/skills-and-mcps/actions/workflows/security-secrets.yml"><img alt="Secrets Scan" src="https://img.shields.io/badge/secrets-gitleaks-ef4444" /></a>
-  <a href="https://github.com/amitrintzler/skills-and-mcps/actions/workflows/security-sbom-trivy.yml"><img alt="SBOM + Trivy" src="https://img.shields.io/badge/SBOM%20%2B%20Trivy-enabled-0ea5e9" /></a>
-  <a href="https://github.com/amitrintzler/skills-and-mcps/actions/workflows/catalog-sync.yml"><img alt="Catalog Sync (Scheduled)" src="https://img.shields.io/badge/catalog%20sync-scheduled-0ea5e9" /></a>
+  <a href="https://github.com/amitrintzler/plugscout/actions/workflows/daily-security.yml"><img alt="Daily Security" src="https://github.com/amitrintzler/plugscout/actions/workflows/daily-security.yml/badge.svg?branch=main" /></a>
+  <a href="https://github.com/amitrintzler/plugscout/actions/workflows/security-codeql.yml"><img alt="Security / CodeQL" src="https://github.com/amitrintzler/plugscout/actions/workflows/security-codeql.yml/badge.svg?branch=main" /></a>
+  <a href="https://github.com/amitrintzler/plugscout/actions/workflows/security-dependency-review.yml"><img alt="Dependency Review (PR)" src="https://img.shields.io/badge/dependency%20review-PR%20only-2563eb" /></a>
+  <a href="https://github.com/amitrintzler/plugscout/actions/workflows/security-secrets.yml"><img alt="Secrets Scan" src="https://img.shields.io/badge/secrets-gitleaks-ef4444" /></a>
+  <a href="https://github.com/amitrintzler/plugscout/actions/workflows/security-sbom-trivy.yml"><img alt="SBOM + Trivy" src="https://img.shields.io/badge/SBOM%20%2B%20Trivy-enabled-0ea5e9" /></a>
+  <a href="https://github.com/amitrintzler/plugscout/actions/workflows/catalog-sync.yml"><img alt="Catalog Sync (Scheduled)" src="https://img.shields.io/badge/catalog%20sync-scheduled-0ea5e9" /></a>
 </p>
 
 PlugScout helps teams discover, score, and safely install Claude plugins, Claude connectors, Copilot extensions, Skills, and MCP servers with policy-aware risk controls.
 
-Written by Amit Rintzler.
+Developed by Amit Rintzler.
 
 License: MIT. Copyright (c) 2026 Amit Rintzler. Reuse is allowed, but redistributed copies must keep the copyright and license notice.
 
@@ -52,7 +52,7 @@ You can:
 - `skills` CLI or `npx` for modern skill installs
 - `skill.sh` is optional and only needed for some legacy `skill.sh`-style installs
 
-## Install PlugScout (v0.3.1)
+## Install PlugScout (v0.3.3)
 
 **Global install (recommended):**
 
@@ -66,14 +66,14 @@ plugscout setup
 **From source:**
 
 ```bash
-git clone https://github.com/amitrintzler/skills-and-mcps.git plugscout
+git clone https://github.com/amitrintzler/plugscout.git plugscout
 cd plugscout
-git checkout v0.3.1
+git checkout v0.3.3
 npm install
 npm run setup
 ```
 
-Install newest release tag instead of pinning `v0.3.1`:
+Install newest release tag instead of pinning `v0.3.3`:
 
 ```bash
 git checkout $(git describe --tags --abbrev=0)

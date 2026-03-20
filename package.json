@@ -1,6 +1,6 @@
 {
-  "name": "plugscout",
-  "version": "0.3.1",
+  "name": "@shnitzel/plugscout",
+  "version": "0.3.3",
   "description": "Claude plugins + Claude connectors + Copilot extensions + Skills + MCP security intelligence framework",
   "private": false,
   "type": "module",
@@ -8,12 +8,12 @@
   "author": "Amit Rintzler",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/amitrintzler/skills-and-mcps.git"
+    "url": "git+https://github.com/amitrintzler/plugscout.git"
   },
   "bugs": {
-    "url": "https://github.com/amitrintzler/skills-and-mcps/issues"
+    "url": "https://github.com/amitrintzler/plugscout/issues"
   },
-  "homepage": "https://github.com/amitrintzler/skills-and-mcps#readme",
+  "homepage": "https://github.com/amitrintzler/plugscout#readme",
   "keywords": [
     "cli",
     "skills",

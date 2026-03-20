@@ -135,3 +135,58 @@ jobs:
             echo "- Semver validation: checked"
             echo "- Conventional commit style: warning-only"
           } >> "$GITHUB_STEP_SUMMARY"
+
+  publish:
+    name: Publish to npm
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    needs: build
+    if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+          registry-url: https://registry.npmjs.org
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build
+        run: npm run build
+
+      - name: Check if version already published
+        id: check
+        run: |
+          VERSION=$(node -p "require('./package.json').version")
+          NAME=$(node -p "require('./package.json').name")
+          if npm view "${NAME}@${VERSION}" version >/dev/null 2>&1; then
+            echo "already_published=true" >> "$GITHUB_OUTPUT"
+            echo "Version ${VERSION} already on npm — skipping publish."
+          else
+            echo "already_published=false" >> "$GITHUB_OUTPUT"
+            echo "Version ${VERSION} not yet published — will publish."
+          fi
+
+      - name: Publish
+        if: steps.check.outputs.already_published == 'false'
+        run: npm publish --access public
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+      - name: Workflow summary
+        run: |
+          VERSION=$(node -p "require('./package.json').version")
+          {
+            echo "## Publish"
+            if [ "${{ steps.check.outputs.already_published }}" = "true" ]; then
+              echo "- Version ${VERSION} already published — skipped"
+            else
+              echo "- Published ${VERSION} to npm"
+            fi
+          } >> "$GITHUB_STEP_SUMMARY"
