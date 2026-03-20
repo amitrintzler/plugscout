@@ -77,14 +77,14 @@
     "quarantine:apply": "TS_NODE_TRANSPILE_ONLY=1 node --loader ts-node/esm src/cli.ts quarantine apply"
   },
   "dependencies": {
-    "fs-extra": "^11.2.0",
+    "fs-extra": "^11.3.4",
     "semver": "^7.7.4",
     "zod": "^3.23.8"
   },
   "devDependencies": {
-    "@types/node": "^25.3.0",
+    "@types/node": "^25.5.0",
     "@types/react": "^19.2.14",
-    "@remotion/cli": "4.0.427",
+    "@remotion/cli": "4.0.438",
     "@types/semver": "^7.7.1",
     "@typescript-eslint/eslint-plugin": "^7.10.0",
     "@typescript-eslint/parser": "^7.10.0",
@@ -93,7 +93,7 @@
     "prettier": "^3.2.5",
     "react": "^19.2.4",
     "react-dom": "^19.2.4",
-    "remotion": "4.0.427",
+    "remotion": "4.0.438",
     "ts-node": "^10.9.2",
     "tsx": "^4.7.1",
     "typescript": "^5.4.5",
