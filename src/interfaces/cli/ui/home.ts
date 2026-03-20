@@ -20,7 +20,6 @@ export async function renderHomeScreen(): Promise<string> {
   ]);
 
   const lines: string[] = [];
-  const displayName = (pkg.name ?? 'plugscout') === 'plugscout' ? 'PlugScout' : (pkg.name ?? 'plugscout');
   const version = pkg.version ?? '0.0.0';
   const author = pkg.author ?? '';
   const renderedLogo = logo
