@@ -342,12 +342,12 @@ describe('cli ux behaviors', () => {
 
     vi.stubGlobal('fetch', vi.fn().mockResolvedValue(mockResponse(200, { tag_name: 'v9.9.9' })));
     await runCli(['upgrade', 'check']);
-    expect(output.joined()).toContain('New PlugScout version available: v0.3.1 -> v9.9.9');
+    expect(output.joined()).toContain('New PlugScout version available: v0.3.3 -> v9.9.9');
 
     output.spy.mockClear();
-    vi.stubGlobal('fetch', vi.fn().mockResolvedValue(mockResponse(200, { tag_name: 'v0.3.1' })));
+    vi.stubGlobal('fetch', vi.fn().mockResolvedValue(mockResponse(200, { tag_name: 'v0.3.3' })));
     await runCli(['upgrade', 'check']);
-    expect(output.joined()).toContain('PlugScout is up to date (v0.3.1).');
+    expect(output.joined()).toContain('PlugScout is up to date (v0.3.3).');
 
     output.spy.mockClear();
     vi.stubGlobal('fetch', vi.fn().mockResolvedValue(mockResponse(404, {})));
