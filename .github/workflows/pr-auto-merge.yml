@@ -44,7 +44,7 @@ jobs:
             const prResp = await github.rest.pulls.get({ owner, repo, pull_number: prNumber });
             const pr = prResp.data;
             const author = pr.user?.login || '';
-            const isBotPr = author.includes('dependabot') || author.includes('github-actions');
+            const isBotPr = author.includes('dependabot') || author.includes('github-actions') || pr.head.ref === 'chore/daily-security-quarantine';
 
             if (!isBotPr) {
               core.info(`Skipping non-bot PR #${prNumber} by ${author}.`);
