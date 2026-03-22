@@ -17,7 +17,7 @@
       "node"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-21",
+    "lastSeenAt": "2026-03-22",
     "install": {
       "kind": "skill.sh",
       "target": "agentic-actions-auditor",
@@ -74,7 +74,7 @@
       "node"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-21",
+    "lastSeenAt": "2026-03-22",
     "install": {
       "kind": "skill.sh",
       "target": "algorithmic-art",
@@ -120,7 +120,7 @@
       "node"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-21",
+    "lastSeenAt": "2026-03-22",
     "install": {
       "kind": "skill.sh",
       "target": "ask-questions-if-underspecified",
@@ -161,7 +161,7 @@
       "general"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-21",
+    "lastSeenAt": "2026-03-22",
     "install": {
       "kind": "skill.sh",
       "target": "Aspnet Core",
@@ -204,7 +204,7 @@
       "node"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-21",
+    "lastSeenAt": "2026-03-22",
     "install": {
       "kind": "skill.sh",
       "target": "audit-context-building",
@@ -250,7 +250,7 @@
       "serverless"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-21",
+    "lastSeenAt": "2026-03-22",
     "install": {
       "kind": "skill.sh",
       "target": "aws-platform-ops",
@@ -302,7 +302,7 @@
       "node"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-21",
+    "lastSeenAt": "2026-03-22",
     "install": {
       "kind": "skill.sh",
       "target": "brand-guidelines",
@@ -350,7 +350,7 @@
       "node"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-21",
+    "lastSeenAt": "2026-03-22",
     "install": {
       "kind": "skill.sh",
       "target": "building-secure-contracts",
@@ -394,7 +394,7 @@
       "github"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-21",
+    "lastSeenAt": "2026-03-22",
     "install": {
       "kind": "skill.sh",
       "target": "burpsuite-project-parser",
@@ -451,7 +451,7 @@
       "node"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-21",
+    "lastSeenAt": "2026-03-22",
     "install": {
       "kind": "skill.sh",
       "target": "canvas-design",
@@ -494,7 +494,7 @@
       "general"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-21",
+    "lastSeenAt": "2026-03-22",
     "install": {
       "kind": "skill.sh",
       "target": "Chatgpt Apps",
@@ -536,7 +536,7 @@
       "node"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-21",
+    "lastSeenAt": "2026-03-22",
     "install": {
       "kind": "skill.sh",
       "target": "ci-hardening",
@@ -577,7 +577,7 @@
       "node"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-21",
+    "lastSeenAt": "2026-03-22",
     "install": {
       "kind": "skill.sh",
       "target": "claude-api",
@@ -623,7 +623,7 @@
       "node"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-21",
+    "lastSeenAt": "2026-03-22",
     "install": {
       "kind": "skill.sh",
       "target": "claude-in-chrome-troubleshooting",
@@ -664,7 +664,7 @@
       "general"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-21",
+    "lastSeenAt": "2026-03-22",
     "install": {
       "kind": "skill.sh",
       "target": "Cloudflare Deploy",
@@ -705,7 +705,7 @@
       "node"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-21",
+    "lastSeenAt": "2026-03-22",
     "install": {
       "kind": "skill.sh",
       "target": "code-operations-skills",
@@ -749,7 +749,7 @@
       "node"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-21",
+    "lastSeenAt": "2026-03-22",
     "install": {
       "kind": "skill.sh",
       "target": "constant-time-analysis",
@@ -793,7 +793,7 @@
       "node"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-21",
+    "lastSeenAt": "2026-03-22",
     "install": {
       "kind": "skill.sh",
       "target": "culture-index",
@@ -837,7 +837,7 @@
       "node"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-21",
+    "lastSeenAt": "2026-03-22",
     "install": {
       "kind": "skill.sh",
       "target": "debug-buttercup",
@@ -872,16 +872,16 @@
     "description": "Execute multi-step autonomous research tasks using web search, synthesis, and source citation. One of the most-installed Claude Code skills in 2026.",
     "provider": "openai",
     "capabilities": [
-      "search",
       "automation",
-      "prompting"
+      "prompting",
+      "search"
     ],
     "compatibility": [
       "claude-code",
       "general"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-21",
+    "lastSeenAt": "2026-03-22",
     "install": {
       "kind": "skill.sh",
       "target": "deep-research",
@@ -921,7 +921,7 @@
       "node"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-21",
+    "lastSeenAt": "2026-03-22",
     "install": {
       "kind": "skill.sh",
       "target": "dev-browser",
@@ -965,7 +965,7 @@
       "node"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-21",
+    "lastSeenAt": "2026-03-22",
     "install": {
       "kind": "skill.sh",
       "target": "devcontainer-setup",
@@ -1007,7 +1007,7 @@
       "node"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-21",
+    "lastSeenAt": "2026-03-22",
     "install": {
       "kind": "skill.sh",
       "target": "Develop Web Game",
@@ -1049,7 +1049,7 @@
       "github"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-21",
+    "lastSeenAt": "2026-03-22",
     "install": {
       "kind": "skill.sh",
       "target": "differential-review",
@@ -1090,7 +1090,7 @@
       "general"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-21",
+    "lastSeenAt": "2026-03-22",
     "install": {
       "kind": "skill.sh",
       "target": "Doc",
@@ -1146,7 +1146,7 @@
       "node"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-21",
+    "lastSeenAt": "2026-03-22",
     "install": {
       "kind": "skill.sh",
       "target": "doc-coauthoring",
@@ -1194,7 +1194,7 @@
       "python"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-21",
+    "lastSeenAt": "2026-03-22",
     "install": {
       "kind": "skill.sh",
       "target": "docker-container-ops",
@@ -1234,7 +1234,7 @@
       "python"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-21",
+    "lastSeenAt": "2026-03-22",
     "install": {
       "kind": "skill.sh",
       "target": "docs-automation",
@@ -1277,7 +1277,7 @@
       "node"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-21",
+    "lastSeenAt": "2026-03-22",
     "install": {
       "kind": "skill.sh",
       "target": "docx",
@@ -1323,7 +1323,7 @@
       "node"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-21",
+    "lastSeenAt": "2026-03-22",
     "install": {
       "kind": "skill.sh",
       "target": "dwarf-expert",
@@ -1368,7 +1368,7 @@
       "node"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-21",
+    "lastSeenAt": "2026-03-22",
     "install": {
       "kind": "skill.sh",
       "target": "engineering-workflow-skills",
@@ -1412,7 +1412,7 @@
       "github"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-21",
+    "lastSeenAt": "2026-03-22",
     "install": {
       "kind": "skill.sh",
       "target": "entry-point-analyzer",
@@ -1454,7 +1454,7 @@
       "node"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-21",
+    "lastSeenAt": "2026-03-22",
     "install": {
       "kind": "skill.sh",
       "target": "fast-web-scrape",
@@ -1490,7 +1490,7 @@
       "general"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-21",
+    "lastSeenAt": "2026-03-22",
     "install": {
       "kind": "skill.sh",
       "target": "Figma",
@@ -1528,7 +1528,7 @@
       "general"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-21",
+    "lastSeenAt": "2026-03-22",
     "install": {
       "kind": "skill.sh",
       "target": "Figma Implement Design",
@@ -1572,7 +1572,7 @@
       "github"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-21",
+    "lastSeenAt": "2026-03-22",
     "install": {
       "kind": "skill.sh",
       "target": "firebase-apk-scanner",
@@ -1617,7 +1617,7 @@
       "github"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-21",
+    "lastSeenAt": "2026-03-22",
     "install": {
       "kind": "skill.sh",
       "target": "fp-check",
@@ -1674,7 +1674,7 @@
       "node"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-21",
+    "lastSeenAt": "2026-03-22",
     "install": {
       "kind": "skill.sh",
       "target": "frontend-design",
@@ -1716,12 +1716,12 @@
     "compatibility": [
       "general"
     ],
-    "source": "openai-skills-curated",
-    "lastSeenAt": "2026-03-21",
+    "source": "community-skills-index",
+    "lastSeenAt": "2026-03-22",
     "install": {
-      "kind": "manual",
-      "instructions": "Install with skill-installer from openai/skills path skills/.curated/frontend-skill",
-      "url": "https://github.com/openai/skills/tree/main/skills/.curated/frontend-skill"
+      "kind": "skill.sh",
+      "target": "Frontend Skill",
+      "args": []
     },
     "adoptionSignal": 72,
     "maintenanceSignal": 82,
@@ -1735,11 +1735,11 @@
       "integrityAlerts": 0
     },
     "metadata": {
-      "githubPath": "skills/.curated/frontend-skill",
-      "githubUrl": "https://github.com/openai/skills/tree/main/skills/.curated/frontend-skill",
       "sourceRegistryId": "openai-skills-curated",
       "sourceType": "vendor-feed",
-      "sourceConfidence": "official"
+      "sourceConfidence": "official",
+      "githubPath": "skills/.curated/frontend-skill",
+      "githubUrl": "https://github.com/openai/skills/tree/main/skills/.curated/frontend-skill"
     }
   },
   {
@@ -1759,7 +1759,7 @@
       "node"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-21",
+    "lastSeenAt": "2026-03-22",
     "install": {
       "kind": "skill.sh",
       "target": "gastown",
@@ -1801,7 +1801,7 @@
       "github"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-21",
+    "lastSeenAt": "2026-03-22",
     "install": {
       "kind": "skill.sh",
       "target": "Gh Address Comments",
@@ -1844,7 +1844,7 @@
       "node"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-21",
+    "lastSeenAt": "2026-03-22",
     "install": {
       "kind": "skill.sh",
       "target": "gh-cli",
@@ -1886,7 +1886,7 @@
       "github"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-21",
+    "lastSeenAt": "2026-03-22",
     "install": {
       "kind": "skill.sh",
       "target": "Gh Fix Ci",
@@ -1927,7 +1927,7 @@
       "node"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-21",
+    "lastSeenAt": "2026-03-22",
     "install": {
       "kind": "skill.sh",
       "target": "git-cleanup",
@@ -1972,7 +1972,7 @@
       "general"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-21",
+    "lastSeenAt": "2026-03-22",
     "install": {
       "kind": "skill.sh",
       "target": "google-workspace-skills",
@@ -2008,7 +2008,7 @@
       "general"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-21",
+    "lastSeenAt": "2026-03-22",
     "install": {
       "kind": "skill.sh",
       "target": "Imagegen",
@@ -2049,7 +2049,7 @@
       "github"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-21",
+    "lastSeenAt": "2026-03-22",
     "install": {
       "kind": "skill.sh",
       "target": "insecure-defaults",
@@ -2106,7 +2106,7 @@
       "node"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-21",
+    "lastSeenAt": "2026-03-22",
     "install": {
       "kind": "skill.sh",
       "target": "internal-comms",
@@ -2149,7 +2149,7 @@
       "general"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-21",
+    "lastSeenAt": "2026-03-22",
     "install": {
       "kind": "skill.sh",
       "target": "Jupyter Notebook",
@@ -2192,7 +2192,7 @@
       "kubernetes"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-21",
+    "lastSeenAt": "2026-03-22",
     "install": {
       "kind": "skill.sh",
       "target": "kubernetes-ops",
@@ -2232,7 +2232,7 @@
       "node"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-21",
+    "lastSeenAt": "2026-03-22",
     "install": {
       "kind": "skill.sh",
       "target": "let-fate-decide",
@@ -2274,7 +2274,7 @@
       "linear"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-21",
+    "lastSeenAt": "2026-03-22",
     "install": {
       "kind": "skill.sh",
       "target": "Linear",
@@ -2328,7 +2328,7 @@
       "node"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-21",
+    "lastSeenAt": "2026-03-22",
     "install": {
       "kind": "skill.sh",
       "target": "mcp-builder",
@@ -2374,7 +2374,7 @@
       "node"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-21",
+    "lastSeenAt": "2026-03-22",
     "install": {
       "kind": "skill.sh",
       "target": "modern-python",
@@ -2414,11 +2414,11 @@
     ],
     "compatibility": [
       "claude-code",
-      "node",
-      "general"
+      "general",
+      "node"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-21",
+    "lastSeenAt": "2026-03-22",
     "install": {
       "kind": "skill.sh",
       "target": "n8n-skills",
@@ -2466,7 +2466,7 @@
       "github"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-21",
+    "lastSeenAt": "2026-03-22",
     "install": {
       "kind": "skill.sh",
       "target": "neon-plugin",
@@ -2507,7 +2507,7 @@
       "general"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-21",
+    "lastSeenAt": "2026-03-22",
     "install": {
       "kind": "skill.sh",
       "target": "Netlify Deploy",
@@ -2546,7 +2546,7 @@
       "notion"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-21",
+    "lastSeenAt": "2026-03-22",
     "install": {
       "kind": "skill.sh",
       "target": "Notion Knowledge Capture",
@@ -2585,7 +2585,7 @@
       "notion"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-21",
+    "lastSeenAt": "2026-03-22",
     "install": {
       "kind": "skill.sh",
       "target": "Notion Meeting Intelligence",
@@ -2624,7 +2624,7 @@
       "notion"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-21",
+    "lastSeenAt": "2026-03-22",
     "install": {
       "kind": "skill.sh",
       "target": "Notion Research Documentation",
@@ -2663,7 +2663,7 @@
       "notion"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-21",
+    "lastSeenAt": "2026-03-22",
     "install": {
       "kind": "skill.sh",
       "target": "Notion Spec To Implementation",
@@ -2707,7 +2707,7 @@
       "python"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-21",
+    "lastSeenAt": "2026-03-22",
     "install": {
       "kind": "skill.sh",
       "target": "observability-incident-response",
@@ -2748,7 +2748,7 @@
       "node"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-21",
+    "lastSeenAt": "2026-03-22",
     "install": {
       "kind": "skill.sh",
       "target": "open-source-maintainer",
@@ -2789,7 +2789,7 @@
       "general"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-21",
+    "lastSeenAt": "2026-03-22",
     "install": {
       "kind": "skill.sh",
       "target": "Openai Docs",
@@ -2831,7 +2831,7 @@
       "node"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-21",
+    "lastSeenAt": "2026-03-22",
     "install": {
       "kind": "skill.sh",
       "target": "orchestration",
@@ -2880,7 +2880,7 @@
       "node"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-21",
+    "lastSeenAt": "2026-03-22",
     "install": {
       "kind": "skill.sh",
       "target": "Pdf",
@@ -2925,7 +2925,7 @@
       "node"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-21",
+    "lastSeenAt": "2026-03-22",
     "install": {
       "kind": "skill.sh",
       "target": "Playwright",
@@ -2964,7 +2964,7 @@
       "node"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-21",
+    "lastSeenAt": "2026-03-22",
     "install": {
       "kind": "skill.sh",
       "target": "Playwright Interactive",
@@ -3007,7 +3007,7 @@
       "python"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-21",
+    "lastSeenAt": "2026-03-22",
     "install": {
       "kind": "skill.sh",
       "target": "postgres-ops",
@@ -3050,7 +3050,7 @@
       "node"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-21",
+    "lastSeenAt": "2026-03-22",
     "install": {
       "kind": "skill.sh",
       "target": "pptx",
@@ -3099,7 +3099,7 @@
       "node"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-21",
+    "lastSeenAt": "2026-03-22",
     "install": {
       "kind": "skill.sh",
       "target": "productivity-skills",
@@ -3134,16 +3134,16 @@
     "description": "Apply Anthropic's official prompting best practices: chain-of-thought, few-shot examples, structured output, and effective system prompt design.",
     "provider": "openai",
     "capabilities": [
-      "prompting",
       "automation",
-      "guardrails"
+      "guardrails",
+      "prompting"
     ],
     "compatibility": [
       "claude-code",
       "general"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-21",
+    "lastSeenAt": "2026-03-22",
     "install": {
       "kind": "skill.sh",
       "target": "prompt-engineering",
@@ -3181,7 +3181,7 @@
       "general"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-21",
+    "lastSeenAt": "2026-03-22",
     "install": {
       "kind": "skill.sh",
       "target": "property-based-testing",
@@ -3226,7 +3226,7 @@
       "node"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-21",
+    "lastSeenAt": "2026-03-22",
     "install": {
       "kind": "skill.sh",
       "target": "release-readiness",
@@ -3264,7 +3264,7 @@
       "node"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-21",
+    "lastSeenAt": "2026-03-22",
     "install": {
       "kind": "skill.sh",
       "target": "remotion",
@@ -3300,7 +3300,7 @@
       "general"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-21",
+    "lastSeenAt": "2026-03-22",
     "install": {
       "kind": "skill.sh",
       "target": "Render Deploy",
@@ -3338,7 +3338,7 @@
       "general"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-21",
+    "lastSeenAt": "2026-03-22",
     "install": {
       "kind": "skill.sh",
       "target": "Screenshot",
@@ -3379,7 +3379,7 @@
       "node"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-21",
+    "lastSeenAt": "2026-03-22",
     "install": {
       "kind": "skill.sh",
       "target": "seatbelt-sandboxer",
@@ -3424,7 +3424,7 @@
       "node"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-21",
+    "lastSeenAt": "2026-03-22",
     "install": {
       "kind": "skill.sh",
       "target": "second-opinion",
@@ -3469,7 +3469,7 @@
       "python"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-21",
+    "lastSeenAt": "2026-03-22",
     "install": {
       "kind": "skill.sh",
       "target": "secure-prompting",
@@ -3505,7 +3505,7 @@
       "general"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-21",
+    "lastSeenAt": "2026-03-22",
     "install": {
       "kind": "skill.sh",
       "target": "Security Best Practices",
@@ -3543,7 +3543,7 @@
       "general"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-21",
+    "lastSeenAt": "2026-03-22",
     "install": {
       "kind": "skill.sh",
       "target": "Security Ownership Map",
@@ -3581,7 +3581,7 @@
       "general"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-21",
+    "lastSeenAt": "2026-03-22",
     "install": {
       "kind": "skill.sh",
       "target": "Security Threat Model",
@@ -3622,7 +3622,7 @@
       "github"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-21",
+    "lastSeenAt": "2026-03-22",
     "install": {
       "kind": "skill.sh",
       "target": "semgrep-rule-creator",
@@ -3666,7 +3666,7 @@
       "node"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-21",
+    "lastSeenAt": "2026-03-22",
     "install": {
       "kind": "skill.sh",
       "target": "semgrep-rule-variant-creator",
@@ -3707,7 +3707,7 @@
       "general"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-21",
+    "lastSeenAt": "2026-03-22",
     "install": {
       "kind": "skill.sh",
       "target": "Sentry",
@@ -3748,7 +3748,7 @@
       "github"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-21",
+    "lastSeenAt": "2026-03-22",
     "install": {
       "kind": "skill.sh",
       "target": "sharp-edges",
@@ -3805,7 +3805,7 @@
       "node"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-21",
+    "lastSeenAt": "2026-03-22",
     "install": {
       "kind": "skill.sh",
       "target": "skill-creator",
@@ -3850,7 +3850,7 @@
       "general"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-21",
+    "lastSeenAt": "2026-03-22",
     "install": {
       "kind": "skill.sh",
       "target": "skill-improver",
@@ -3907,7 +3907,7 @@
       "node"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-21",
+    "lastSeenAt": "2026-03-22",
     "install": {
       "kind": "skill.sh",
       "target": "slack-gif-creator",
@@ -3950,7 +3950,7 @@
       "general"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-21",
+    "lastSeenAt": "2026-03-22",
     "install": {
       "kind": "skill.sh",
       "target": "Slides",
@@ -3988,7 +3988,7 @@
       "general"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-21",
+    "lastSeenAt": "2026-03-22",
     "install": {
       "kind": "skill.sh",
       "target": "Sora",
@@ -4031,7 +4031,7 @@
       "node"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-21",
+    "lastSeenAt": "2026-03-22",
     "install": {
       "kind": "skill.sh",
       "target": "spec-to-code-compliance",
@@ -4072,7 +4072,7 @@
       "general"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-21",
+    "lastSeenAt": "2026-03-22",
     "install": {
       "kind": "skill.sh",
       "target": "Speech",
@@ -4110,7 +4110,7 @@
       "general"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-21",
+    "lastSeenAt": "2026-03-22",
     "install": {
       "kind": "skill.sh",
       "target": "Spreadsheet",
@@ -4151,7 +4151,7 @@
       "github"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-21",
+    "lastSeenAt": "2026-03-22",
     "install": {
       "kind": "skill.sh",
       "target": "static-analysis",
@@ -4197,7 +4197,7 @@
       "node"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-21",
+    "lastSeenAt": "2026-03-22",
     "install": {
       "kind": "skill.sh",
       "target": "supply-chain-risk-auditor",
@@ -4244,7 +4244,7 @@
       "general"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-21",
+    "lastSeenAt": "2026-03-22",
     "install": {
       "kind": "skill.sh",
       "target": "terraform-guardrails",
@@ -4280,12 +4280,12 @@
     ],
     "compatibility": [
       "claude-code",
+      "general",
       "node",
-      "python",
-      "general"
+      "python"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-21",
+    "lastSeenAt": "2026-03-22",
     "install": {
       "kind": "skill.sh",
       "target": "test-driven-development",
@@ -4325,7 +4325,7 @@
       "github"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-21",
+    "lastSeenAt": "2026-03-22",
     "install": {
       "kind": "skill.sh",
       "target": "testing-handbook-skills",
@@ -4382,7 +4382,7 @@
       "node"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-21",
+    "lastSeenAt": "2026-03-22",
     "install": {
       "kind": "skill.sh",
       "target": "theme-factory",
@@ -4429,7 +4429,7 @@
       "python"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-21",
+    "lastSeenAt": "2026-03-22",
     "install": {
       "kind": "skill.sh",
       "target": "threat-modeling-lite",
@@ -4465,7 +4465,7 @@
       "general"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-21",
+    "lastSeenAt": "2026-03-22",
     "install": {
       "kind": "skill.sh",
       "target": "Transcribe",
@@ -4506,7 +4506,7 @@
       "node"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-21",
+    "lastSeenAt": "2026-03-22",
     "install": {
       "kind": "skill.sh",
       "target": "variant-analysis",
@@ -4547,7 +4547,7 @@
       "general"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-21",
+    "lastSeenAt": "2026-03-22",
     "install": {
       "kind": "skill.sh",
       "target": "Vercel Deploy",
@@ -4587,7 +4587,7 @@
       "general"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-21",
+    "lastSeenAt": "2026-03-22",
     "install": {
       "kind": "skill.sh",
       "target": "visual-documentation-skills",
@@ -4644,7 +4644,7 @@
       "node"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-21",
+    "lastSeenAt": "2026-03-22",
     "install": {
       "kind": "skill.sh",
       "target": "web-artifacts-builder",
@@ -4703,7 +4703,7 @@
       "node"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-21",
+    "lastSeenAt": "2026-03-22",
     "install": {
       "kind": "skill.sh",
       "target": "webapp-testing",
@@ -4746,7 +4746,7 @@
       "general"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-21",
+    "lastSeenAt": "2026-03-22",
     "install": {
       "kind": "skill.sh",
       "target": "Winui App",
@@ -4790,7 +4790,7 @@
       "node"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-21",
+    "lastSeenAt": "2026-03-22",
     "install": {
       "kind": "skill.sh",
       "target": "workflow-skill-design",
@@ -4838,7 +4838,7 @@
       "node"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-21",
+    "lastSeenAt": "2026-03-22",
     "install": {
       "kind": "skill.sh",
       "target": "xlsx",
@@ -4884,7 +4884,7 @@
       "github"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-21",
+    "lastSeenAt": "2026-03-22",
     "install": {
       "kind": "skill.sh",
       "target": "yara-authoring",
@@ -4925,7 +4925,7 @@
       "general"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-21",
+    "lastSeenAt": "2026-03-22",
     "install": {
       "kind": "skill.sh",
       "target": "Yeet",
@@ -4967,7 +4967,7 @@
       "node"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-21",
+    "lastSeenAt": "2026-03-22",
     "install": {
       "kind": "skill.sh",
       "target": "zai-cli",
@@ -5011,7 +5011,7 @@
       "github"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-21",
+    "lastSeenAt": "2026-03-22",
     "install": {
       "kind": "skill.sh",
       "target": "zeroize-audit",
