@@ -6,6 +6,7 @@
   <a href="https://github.com/amitrintzler/plugscout/actions/workflows/ci.yml"><img alt="CI" src="https://github.com/amitrintzler/plugscout/actions/workflows/ci.yml/badge.svg?branch=main" /></a>
   <a href="https://nodejs.org/"><img alt="Node >=18.17" src="https://img.shields.io/badge/node-%3E%3D18.17-339933?logo=node.js&logoColor=white" /></a>
   <a href="https://www.linkedin.com/in/amit-rintzler-94444535/"><img alt="LinkedIn Amit Rintzler" src="https://img.shields.io/badge/LinkedIn-Amit%20Rintzler-0A66C2?logo=linkedin&logoColor=white" /></a>
+  <a href="https://github.com/amitrintzler/plugscout/blob/main/LICENSE"><img alt="License: MIT" src="https://img.shields.io/badge/License-MIT-yellow.svg" /></a>
 </p>
 
 <p align="center">

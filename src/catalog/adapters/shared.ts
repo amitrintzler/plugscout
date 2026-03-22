@@ -87,12 +87,25 @@ export function slugify(value: string): string {
 }
 
 export function stripHtml(value: string, maxLength = 240): string {
-  // Use a pattern that handles quoted attribute values containing '>' to avoid the
-  // js/bad-tag-filter weakness in the naive /<[^>]+>/g approach.
-  const withoutTags = value
-    .replace(/<script\b[^>]*>[\s\S]*?<\/script>/gi, ' ')
-    .replace(/<(?:[^>"']|"[^"]*"|'[^']*')*>/g, ' ');
-  const normalized = withoutTags.replace(/&nbsp;/g, ' ').replace(/\s+/g, ' ').trim();
+  // State-machine approach avoids regex-based tag matching (js/bad-tag-filter).
+  const lower = value.toLowerCase();
+  let result = '';
+  let i = 0;
+  while (i < value.length) {
+    if (lower.startsWith('<script', i)) {
+      const end = lower.indexOf('</script>', i);
+      i = end === -1 ? value.length : end + '</script>'.length;
+      result += ' ';
+    } else if (value[i] === '<') {
+      const end = value.indexOf('>', i);
+      i = end === -1 ? value.length : end + 1;
+      result += ' ';
+    } else {
+      result += value[i];
+      i++;
+    }
+  }
+  const normalized = result.replace(/&nbsp;/g, ' ').replace(/\s+/g, ' ').trim();
   return normalized.slice(0, maxLength);
 }
 
