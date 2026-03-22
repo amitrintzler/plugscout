@@ -1,6 +1,10 @@
 import fs from 'node:fs/promises';
 import os from 'node:os';
 import path from 'node:path';
+import { createRequire } from 'node:module';
+
+const require = createRequire(import.meta.url);
+const PKG_VERSION: string = require('../../package.json').version;
 
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 
@@ -342,12 +346,12 @@ describe('cli ux behaviors', () => {
 
     vi.stubGlobal('fetch', vi.fn().mockResolvedValue(mockResponse(200, { tag_name: 'v9.9.9' })));
     await runCli(['upgrade', 'check']);
-    expect(output.joined()).toContain('New PlugScout version available: v0.3.3 -> v9.9.9');
+    expect(output.joined()).toContain(`New PlugScout version available: v${PKG_VERSION} -> v9.9.9`);
 
     output.spy.mockClear();
-    vi.stubGlobal('fetch', vi.fn().mockResolvedValue(mockResponse(200, { tag_name: 'v0.3.3' })));
+    vi.stubGlobal('fetch', vi.fn().mockResolvedValue(mockResponse(200, { tag_name: `v${PKG_VERSION}` })));
     await runCli(['upgrade', 'check']);
-    expect(output.joined()).toContain('PlugScout is up to date (v0.3.3).');
+    expect(output.joined()).toContain(`PlugScout is up to date (v${PKG_VERSION}).`);
 
     output.spy.mockClear();
     vi.stubGlobal('fetch', vi.fn().mockResolvedValue(mockResponse(404, {})));
