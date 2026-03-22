@@ -44,10 +44,16 @@ jobs:
             const prResp = await github.rest.pulls.get({ owner, repo, pull_number: prNumber });
             const pr = prResp.data;
             const author = pr.user?.login || '';
-            const isBotPr = author.includes('dependabot') || author.includes('github-actions') || pr.head.ref === 'chore/daily-security-quarantine' || pr.head.ref === 'chore/catalog-sync';
+            const repoOwner = owner.toLowerCase();
+            const isEligible =
+              author.includes('dependabot') ||
+              author.includes('github-actions') ||
+              author.toLowerCase() === repoOwner ||
+              pr.head.ref === 'chore/daily-security-quarantine' ||
+              pr.head.ref === 'chore/catalog-sync';
 
-            if (!isBotPr) {
-              core.info(`Skipping non-bot PR #${prNumber} by ${author}.`);
+            if (!isEligible) {
+              core.info(`Skipping PR #${prNumber} by ${author} (not owner or known bot).`);
               return;
             }
 
