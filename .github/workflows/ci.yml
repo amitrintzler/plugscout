@@ -7,7 +7,7 @@ on:
     branches: ["main"]
 
 permissions:
-  contents: read
+  contents: write
 
 concurrency:
   group: ci-${{ github.workflow }}-${{ github.ref }}
@@ -179,6 +179,17 @@ jobs:
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
+      - name: Create GitHub release
+        if: steps.check.outputs.already_published == 'false'
+        env:
+          GH_TOKEN: ${{ secrets.GH_PAT }}
+        run: |
+          VERSION=$(node -p "require('./package.json').version")
+          gh release create "v${VERSION}" \
+            --title "v${VERSION}" \
+            --notes "See [CHANGELOG](https://github.com/${{ github.repository }}/commits/main) for details." \
+            --latest
+
       - name: Workflow summary
         run: |
           VERSION=$(node -p "require('./package.json').version")
@@ -187,6 +198,7 @@ jobs:
             if [ "${{ steps.check.outputs.already_published }}" = "true" ]; then
               echo "- Version ${VERSION} already published — skipped"
             else
-              echo "- Published ${VERSION} to npm"
+              echo "- Published v${VERSION} to npm"
+              echo "- Created GitHub release v${VERSION}"
             fi
           } >> "$GITHUB_STEP_SUMMARY"
