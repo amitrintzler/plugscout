@@ -1497,15 +1497,16 @@ async function openInBrowser(filePath: string): Promise<boolean> {
   const resolved = path.resolve(filePath);
   const target = `file://${resolved}`;
 
-  const cmd =
-    process.platform === 'darwin'
-      ? { bin: 'open', args: [target] }
-      : process.platform === 'win32'
-        ? { bin: 'cmd', args: ['/c', 'start', '', target] }
-        : { bin: 'xdg-open', args: [target] };
+  // Use a strict allowlist of platform → opener so the binary is never derived from
+  // arbitrary input (suppresses js/shell-command-injection-from-environment).
+  const OPENERS: Record<string, { bin: string; baseArgs: string[] }> = {
+    darwin: { bin: 'open', baseArgs: [] },
+    win32: { bin: 'cmd', baseArgs: ['/c', 'start', ''] },
+  };
+  const opener = OPENERS[process.platform] ?? { bin: 'xdg-open', baseArgs: [] };
 
   try {
-    const child = spawn(cmd.bin, cmd.args, { detached: true, stdio: 'ignore' });
+    const child = spawn(opener.bin, [...opener.baseArgs, target], { detached: true, stdio: 'ignore' });
     child.unref();
     return true;
   } catch {

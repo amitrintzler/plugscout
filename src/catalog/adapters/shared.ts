@@ -87,7 +87,11 @@ export function slugify(value: string): string {
 }
 
 export function stripHtml(value: string, maxLength = 240): string {
-  const withoutTags = value.replace(/<script[\s\S]*?<\/script>/gi, ' ').replace(/<[^>]+>/g, ' ');
+  // Use a pattern that handles quoted attribute values containing '>' to avoid the
+  // js/bad-tag-filter weakness in the naive /<[^>]+>/g approach.
+  const withoutTags = value
+    .replace(/<script\b[^>]*>[\s\S]*?<\/script>/gi, ' ')
+    .replace(/<(?:[^>"']|"[^"]*"|'[^']*')*>/g, ' ');
   const normalized = withoutTags.replace(/&nbsp;/g, ' ').replace(/\s+/g, ' ').trim();
   return normalized.slice(0, maxLength);
 }

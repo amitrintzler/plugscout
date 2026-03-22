@@ -7,6 +7,7 @@ on:
 
 permissions:
   contents: read
+  security-events: read
 
 concurrency:
   group: daily-security-${{ github.ref }}
@@ -101,3 +102,37 @@ jobs:
             echo "- Outcome: ${{ steps.create_pr.outcome }}"
             echo "- Note: If this is \`failure\`, enable 'Allow GitHub Actions to create and approve pull requests' in repo settings."
           } >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Check code scanning alerts
+        env:
+          GH_TOKEN: ${{ secrets.GH_PAT }}
+        run: |
+          ALERTS=$(gh api repos/${{ github.repository }}/code-scanning/alerts \
+            --jq '[.[] | select(.state == "open")] | length' 2>/dev/null || echo "0")
+
+          CRITICAL=$(gh api repos/${{ github.repository }}/code-scanning/alerts \
+            --jq '[.[] | select(.state == "open" and (.rule.severity == "error" or .rule.severity == "critical"))] | length' 2>/dev/null || echo "0")
+
+          DETAILS=$(gh api repos/${{ github.repository }}/code-scanning/alerts \
+            --jq '[.[] | select(.state == "open") | "- [\(.rule.severity)] \(.rule.id): \(.rule.description) (\(.most_recent_instance.location.path):\(.most_recent_instance.location.start_line))"] | join("\n")' 2>/dev/null || echo "")
+
+          {
+            echo "## Code Scanning Alerts"
+            echo "- Open alerts: ${ALERTS}"
+            echo "- Critical/error severity: ${CRITICAL}"
+            if [ -n "$DETAILS" ]; then
+              echo ""
+              echo "$DETAILS"
+            fi
+          } >> "$GITHUB_STEP_SUMMARY"
+
+          if [ "$CRITICAL" -gt "0" ]; then
+            echo "❌ ${CRITICAL} critical/error code scanning alert(s) require immediate attention."
+            exit 1
+          fi
+
+          if [ "$ALERTS" -gt "0" ]; then
+            echo "⚠️ ${ALERTS} open code scanning alert(s) found. Review at: https://github.com/${{ github.repository }}/security/code-scanning"
+          else
+            echo "✅ No open code scanning alerts."
+          fi
