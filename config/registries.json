@@ -8,7 +8,7 @@
       "enabled": true,
       "officialOnly": false,
       "remote": {
-        "url": "https://raw.githubusercontent.com/amitrintzler/skills-and-mcps/main/data/catalog/skills.json",
+        "url": "https://raw.githubusercontent.com/amitrintzler/plugscout/main/data/catalog/skills.json",
         "format": "json-array",
         "timeoutMs": 10000,
         "fallbackToLocal": true,

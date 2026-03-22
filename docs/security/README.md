@@ -1,12 +1,12 @@
 # Security Notes
 
 <p>
-  <a href="https://github.com/amitrintzler/skills-and-mcps/actions/workflows/daily-security.yml"><img alt="Daily Security" src="https://github.com/amitrintzler/skills-and-mcps/actions/workflows/daily-security.yml/badge.svg?branch=main" /></a>
-  <a href="https://github.com/amitrintzler/skills-and-mcps/actions/workflows/security-codeql.yml"><img alt="Security / CodeQL" src="https://github.com/amitrintzler/skills-and-mcps/actions/workflows/security-codeql.yml/badge.svg?branch=main" /></a>
-  <a href="https://github.com/amitrintzler/skills-and-mcps/actions/workflows/security-dependency-review.yml"><img alt="Dependency Review" src="https://img.shields.io/badge/dependency%20review-PR%20only-2563eb" /></a>
-  <a href="https://github.com/amitrintzler/skills-and-mcps/actions/workflows/security-secrets.yml"><img alt="Secrets Scan" src="https://img.shields.io/badge/secrets-gitleaks-ef4444" /></a>
-  <a href="https://github.com/amitrintzler/skills-and-mcps/actions/workflows/security-sbom-trivy.yml"><img alt="SBOM + Trivy" src="https://img.shields.io/badge/SBOM%20%2B%20Trivy-enabled-0ea5e9" /></a>
-  <a href="https://github.com/amitrintzler/skills-and-mcps/actions/workflows/catalog-sync.yml"><img alt="Catalog Sync" src="https://img.shields.io/badge/catalog%20sync-scheduled-0ea5e9" /></a>
+  <a href="https://github.com/amitrintzler/plugscout/actions/workflows/daily-security.yml"><img alt="Daily Security" src="https://github.com/amitrintzler/plugscout/actions/workflows/daily-security.yml/badge.svg?branch=main" /></a>
+  <a href="https://github.com/amitrintzler/plugscout/actions/workflows/security-codeql.yml"><img alt="Security / CodeQL" src="https://github.com/amitrintzler/plugscout/actions/workflows/security-codeql.yml/badge.svg?branch=main" /></a>
+  <a href="https://github.com/amitrintzler/plugscout/actions/workflows/security-dependency-review.yml"><img alt="Dependency Review" src="https://img.shields.io/badge/dependency%20review-PR%20only-2563eb" /></a>
+  <a href="https://github.com/amitrintzler/plugscout/actions/workflows/security-secrets.yml"><img alt="Secrets Scan" src="https://img.shields.io/badge/secrets-gitleaks-ef4444" /></a>
+  <a href="https://github.com/amitrintzler/plugscout/actions/workflows/security-sbom-trivy.yml"><img alt="SBOM + Trivy" src="https://img.shields.io/badge/SBOM%20%2B%20Trivy-enabled-0ea5e9" /></a>
+  <a href="https://github.com/amitrintzler/plugscout/actions/workflows/catalog-sync.yml"><img alt="Catalog Sync" src="https://img.shields.io/badge/catalog%20sync-scheduled-0ea5e9" /></a>
 </p>
 
 Toolkit enforces a trust-first model with policy gates, whitelist verification, and quarantine controls.

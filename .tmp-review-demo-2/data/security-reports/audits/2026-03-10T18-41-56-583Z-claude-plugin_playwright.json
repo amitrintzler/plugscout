@@ -1,8 +1,0 @@
-{
-  "id": "claude-plugin:playwright",
-  "requestedAt": "2026-03-10T18:41:56.583Z",
-  "policyDecision": "allowed",
-  "overrideUsed": false,
-  "installer": "manual",
-  "exitCode": 0
-}

@@ -8,7 +8,7 @@ import { getPackagePath, getStatePath } from '../../lib/paths.js';
 const UPDATE_CHECK_TTL_MS = 24 * 60 * 60 * 1000;
 const FETCH_TIMEOUT_MS = 2500;
 
-const RELEASE_REPO = 'amitrintzler/skills-and-mcps';
+const RELEASE_REPO = 'amitrintzler/plugscout';
 export const RELEASE_API_URL = `https://api.github.com/repos/${RELEASE_REPO}/releases/latest`;
 export const RELEASE_DOWNLOAD_URL = `https://github.com/${RELEASE_REPO}/releases/latest`;
 

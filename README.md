@@ -226,4 +226,4 @@ npm run build
 
 ## License
 
-This repository does not yet include a root `LICENSE` file. Choose and add one before publishing for third-party reuse.
+MIT. Copyright (c) 2026 Amit Rintzler. Reuse is allowed, but redistributed copies must keep the copyright and license notice.
