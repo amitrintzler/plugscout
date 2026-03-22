@@ -134,7 +134,7 @@ const SceneShell: React.FC<{
           <div style={{ fontSize: 16, color: palette.accent, fontWeight: 700 }}>
             {`Walkthrough ${sceneNumber}/${sceneCount}`}
           </div>
-          <div style={{ fontSize: 15, color: palette.muted }}>{'toolkit | skills + mcp + plugin security intelligence'}</div>
+          <div style={{ fontSize: 15, color: palette.muted }}>{'PlugScout | AI plugin & MCP security intelligence'}</div>
         </div>
         <div style={{ height: 8, borderRadius: 999, backgroundColor: '#1e293b', overflow: 'hidden' }}>
           <div
@@ -202,15 +202,15 @@ const SceneIntro: React.FC = () => (
   <SceneShell
     sceneNumber={1}
     title="Live CLI Session: Verified End-to-End"
-    subtitle="Real commands and outputs captured from this repository runtime"
+    subtitle="Install once, run everywhere — npm install -g @shnitzel/plugscout"
     kpis={['about ✓', 'doctor ✓/fail gate', 'recommend ✓', 'sync dry-run ✓']}
     left={
       <TerminalBlock
         command="npm run about"
         lines={[
-          'toolkit v0.3.0',
-          'Toolkit: Skills + MCP + Plugin security intelligence framework',
-          'Scope: skills, MCP servers, Claude plugins, Copilot extensions',
+          'plugscout v0.3.4',
+          'PlugScout: Discover, score, and safely install AI plugins, MCP servers, and Copilot extensions',
+          'Scope: skills, MCP servers, Claude plugins, Copilot extensions, connectors',
           'Ranking: trust-first (fit + trust - risk penalties + freshness bonus)',
           'Sources: official-first provider registries with local fallback'
         ]}
@@ -220,7 +220,7 @@ const SceneIntro: React.FC = () => (
       <BulletBlock
         title="Session proof points"
         items={[
-          'Catalog status reports 6 loaded items across 4 kinds.',
+          'One-step setup: plugscout setup installs deps, writes config, and syncs catalogs.',
           'Doctor now hard-fails when skill.sh is not installed.',
           'Recommendations return trust/risk tables and safe filters.',
           'Risk assessment correctly blocks high-risk installs.'
@@ -234,18 +234,18 @@ const SceneIntro: React.FC = () => (
 const SceneInit: React.FC = () => (
   <SceneShell
     sceneNumber={2}
-    title="1) First-Run Init Wizard"
+    title="1) One-Step Setup"
     subtitle="Local project defaults are generated automatically"
     kpis={['Writes .skills-mcps.json', 'Provider defaults', 'Risk posture preset', 'Optional initial sync']}
     left={
       <TerminalBlock
-        command="npm run init -- --project ."
+        command="plugscout setup"
         tone="success"
         lines={[
-          '? kinds: skill,mcp,claude-plugin,copilot-extension',
-          '? providers: anthropic,github,mcp,openai',
-          '? risk posture: strict',
-          'Created .skills-mcps.json and initialized onboarding stamp'
+          'Installing prerequisites...',
+          'Writing default config...',
+          'Syncing catalogs...',
+          'Setup complete. Run: plugscout scan --project .'
         ]}
       />
     }
@@ -535,11 +535,11 @@ const SceneOutro: React.FC = () => (
         command="Operator flow (real session)"
         tone="success"
         lines={[
-          '1) npm run about',
-          '2) npm run doctor',
-          '3) npm run list/search/show',
-          '4) npm run recommend',
-          '5) npm run dev -- assess/install'
+          '1) plugscout setup',
+          '2) plugscout scan --project . --format table',
+          '3) plugscout recommend --project . --only-safe --limit 5',
+          '4) plugscout assess --id <id>',
+          '5) plugscout install --id <id> --yes'
         ]}
       />
     }
@@ -555,7 +555,7 @@ const SceneOutro: React.FC = () => (
         tone="info"
       />
     }
-    footer={['Repository: github.com/amitrintzler/skills-and-mcps', 'Use README quick links for full command map', 'Toolkit: built for speed + safety']}
+    footer={['Repository: github.com/amitrintzler/plugscout', 'Use README quick links for full command map', 'Toolkit: built for speed + safety']}
   />
 );
 
