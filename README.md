@@ -27,10 +27,8 @@ PlugScout helps teams discover, score, and safely install Claude plugins, Claude
   <a href="https://github.com/amitrintzler/plugscout/releases/download/v0.3.4/framework-walkthrough.mp4">Watch walkthrough video</a>
 </video>
 
-License: MIT. Copyright (c) 2026 Amit Rintzler. Reuse is allowed, but redistributed copies must keep the copyright and license notice.
-
 Quick links:
-- [Install](#install-plugscout-v020)
+- [Install](#install-plugscout-v034)
 - [Quick Start](#quick-start-2-minute-path)
 - [Core Commands](#core-commands)
 - [Safety Model](#safety-model)
