@@ -19,7 +19,13 @@
 
 PlugScout helps teams discover, score, and safely install Claude plugins, Claude connectors, Copilot extensions, Skills, and MCP servers with policy-aware risk controls.
 
-Developed by Amit Rintzler.
+## See PlugScout in action
+
+<video src="https://github.com/amitrintzler/plugscout/releases/download/v0.3.4/framework-walkthrough.mp4"
+       controls
+       width="100%">
+  <a href="https://github.com/amitrintzler/plugscout/releases/download/v0.3.4/framework-walkthrough.mp4">Watch walkthrough video</a>
+</video>
 
 License: MIT. Copyright (c) 2026 Amit Rintzler. Reuse is allowed, but redistributed copies must keep the copyright and license notice.
 
@@ -79,6 +85,25 @@ Install newest release tag instead of pinning `v0.3.4`:
 ```bash
 git checkout $(git describe --tags --abbrev=0)
 ```
+
+## Your first scan (30 seconds)
+
+```bash
+plugscout setup                                         # install deps, write config, sync catalogs
+plugscout scan --project . --format table               # analyze your repo
+plugscout recommend --project . --only-safe --limit 5   # top safe picks for your stack
+```
+
+Expected output:
+
+```text
+ID                                TYPE                PROVIDER    RISK      BLOCKED
+mcp:filesystem                    mcp                 mcp         low(10)   false
+copilot-extension:repo-security   copilot-extension   github      low(0)    false
+skill:secure-prompting            skill               openai      low(0)    false
+```
+
+Review any result with `plugscout show --id <id>`, then install with `plugscout install --id <id> --yes`.
 
 ## Quick Start (2-minute path)
 
