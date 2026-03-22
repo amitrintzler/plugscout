@@ -1,6 +1,7 @@
 <h1 align="center">PlugScout</h1>
 
 <p align="center">
+  <a href="https://www.npmjs.com/package/@shnitzel/plugscout"><img alt="npm" src="https://img.shields.io/npm/v/%40shnitzel%2Fplugscout?label=npm" /></a>
   <a href="https://github.com/amitrintzler/plugscout/releases/latest"><img alt="Release" src="https://img.shields.io/github/v/release/amitrintzler/plugscout?display_name=tag&label=release" /></a>
   <a href="https://github.com/amitrintzler/plugscout/actions/workflows/ci.yml"><img alt="CI" src="https://github.com/amitrintzler/plugscout/actions/workflows/ci.yml/badge.svg?branch=main" /></a>
   <a href="https://nodejs.org/"><img alt="Node >=18.17" src="https://img.shields.io/badge/node-%3E%3D18.17-339933?logo=node.js&logoColor=white" /></a>
@@ -57,7 +58,7 @@ You can:
 **Global install (recommended):**
 
 ```bash
-npm install -g plugscout
+npm install -g @shnitzel/plugscout
 plugscout setup
 ```
 
@@ -82,7 +83,7 @@ git checkout $(git describe --tags --abbrev=0)
 ## Quick Start (2-minute path)
 
 ```bash
-npm install -g plugscout
+npm install -g @shnitzel/plugscout
 plugscout setup
 plugscout scan --project . --format table
 plugscout recommend --project . --only-safe --sort trust --limit 10
