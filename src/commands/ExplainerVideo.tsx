@@ -206,7 +206,7 @@ const SceneIntro: React.FC = () => (
     kpis={['about ✓', 'doctor ✓/fail gate', 'recommend ✓', 'sync dry-run ✓']}
     left={
       <TerminalBlock
-        command="npm run about"
+        command="plugscout about"
         lines={[
           'plugscout v0.3.4',
           'PlugScout: Discover, score, and safely install AI plugins, MCP servers, and Copilot extensions',
