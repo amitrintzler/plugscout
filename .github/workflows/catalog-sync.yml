@@ -63,15 +63,22 @@ jobs:
             fs.appendFileSync(process.env.GITHUB_STEP_SUMMARY, lines.join("\\n") + "\\n");
           '
 
-      - name: Commit updated catalog artifacts
-        run: |
-          if git diff --quiet -- data/catalog data/quarantine data/whitelist; then
-            echo "No catalog updates to commit."
-            exit 0
-          fi
-
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/catalog data/quarantine data/whitelist
-          git commit -m "chore(catalog): daily sync refresh"
-          git push
+      - name: Create catalog sync PR
+        id: create_pr
+        continue-on-error: true
+        uses: peter-evans/create-pull-request@v6
+        with:
+          token: ${{ secrets.GH_PAT }}
+          commit-message: "chore(catalog): daily sync refresh"
+          title: "chore(catalog): daily sync refresh"
+          body: |
+            Automated daily catalog sync updated data artifacts.
+            - Synced all registries
+            - Validated policy and data
+          branch: chore/catalog-sync
+          base: main
+          delete-branch: true
+          add-paths: |
+            data/catalog
+            data/quarantine
+            data/whitelist
