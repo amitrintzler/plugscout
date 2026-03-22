@@ -1,4 +1,5 @@
 import type { Registry } from '../lib/validation/contracts.js';
+import { adaptAwesomeClaudeCodeEntries } from './adapters/awesome-claude-code-v1.js';
 import { adaptClaudeConnectorsScrapeEntries } from './adapters/claude-connectors-scrape-v1.js';
 import { adaptClaudeCodeMarketplaceEntries } from './adapters/claude-code-marketplace-v1.js';
 import { adaptClaudePluginsEntries } from './adapters/claude-plugins-v0.1.js';
@@ -44,6 +45,10 @@ export function adaptRegistryEntries(registry: Registry, entries: unknown[]): un
 
   if (registry.adapter === 'claude-connectors-scrape-v1') {
     return adaptClaudeConnectorsScrapeEntries(registry.id, entries);
+  }
+
+  if (registry.adapter === 'awesome-claude-code-v1') {
+    return adaptAwesomeClaudeCodeEntries(registry.id, entries);
   }
 
   return entries;

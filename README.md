@@ -52,7 +52,7 @@ You can:
 - `skills` CLI or `npx` for modern skill installs
 - `skill.sh` is optional and only needed for some legacy `skill.sh`-style installs
 
-## Install PlugScout (v0.3.3)
+## Install PlugScout (v0.3.4)
 
 **Global install (recommended):**
 
@@ -68,12 +68,12 @@ plugscout setup
 ```bash
 git clone https://github.com/amitrintzler/plugscout.git plugscout
 cd plugscout
-git checkout v0.3.3
+git checkout v0.3.4
 npm install
 npm run setup
 ```
 
-Install newest release tag instead of pinning `v0.3.3`:
+Install newest release tag instead of pinning `v0.3.4`:
 
 ```bash
 git checkout $(git describe --tags --abbrev=0)

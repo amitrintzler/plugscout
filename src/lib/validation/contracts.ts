@@ -148,7 +148,8 @@ export const RegistrySchema = z.object({
       'claude-code-marketplace-v1',
       'copilot-extensions-v0.1',
       'copilot-plugin-marketplace-v1',
-      'claude-connectors-scrape-v1'
+      'claude-connectors-scrape-v1',
+      'awesome-claude-code-v1'
     ])
     .default('direct'),
   enabled: z.boolean().default(true),

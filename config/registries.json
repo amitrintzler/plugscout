@@ -21,9 +21,21 @@
           "id": "skill:secure-prompting",
           "name": "Secure Prompting",
           "description": "Prompt hardening patterns for high-safety agent workloads.",
-          "capabilities": ["prompting", "security", "guardrails"],
-          "compatibility": ["node", "python", "general"],
-          "install": { "kind": "skill.sh", "target": "secure-prompting", "args": [] },
+          "capabilities": [
+            "prompting",
+            "security",
+            "guardrails"
+          ],
+          "compatibility": [
+            "node",
+            "python",
+            "general"
+          ],
+          "install": {
+            "kind": "skill.sh",
+            "target": "secure-prompting",
+            "args": []
+          },
           "adoptionSignal": 78,
           "maintenanceSignal": 83,
           "provenanceSignal": 75,
@@ -40,9 +52,21 @@
           "id": "skill:ci-hardening",
           "name": "CI Hardening",
           "description": "Best-practice workflow hardening patterns for GitHub Actions and policy gates.",
-          "capabilities": ["automation", "security", "code-scanning"],
-          "compatibility": ["node", "github", "general"],
-          "install": { "kind": "skill.sh", "target": "ci-hardening", "args": [] },
+          "capabilities": [
+            "automation",
+            "security",
+            "code-scanning"
+          ],
+          "compatibility": [
+            "node",
+            "github",
+            "general"
+          ],
+          "install": {
+            "kind": "skill.sh",
+            "target": "ci-hardening",
+            "args": []
+          },
           "adoptionSignal": 82,
           "maintenanceSignal": 85,
           "provenanceSignal": 72,
@@ -59,9 +83,21 @@
           "id": "skill:threat-modeling-lite",
           "name": "Threat Modeling Lite",
           "description": "Fast threat modeling workflow for repo-level security reviews.",
-          "capabilities": ["security", "guardrails", "dependency-audit"],
-          "compatibility": ["node", "python", "general"],
-          "install": { "kind": "skill.sh", "target": "threat-modeling-lite", "args": [] },
+          "capabilities": [
+            "security",
+            "guardrails",
+            "dependency-audit"
+          ],
+          "compatibility": [
+            "node",
+            "python",
+            "general"
+          ],
+          "install": {
+            "kind": "skill.sh",
+            "target": "threat-modeling-lite",
+            "args": []
+          },
           "adoptionSignal": 70,
           "maintenanceSignal": 79,
           "provenanceSignal": 68,
@@ -78,9 +114,21 @@
           "id": "skill:release-readiness",
           "name": "Release Readiness",
           "description": "Release checklist automation with semver, changelog, and quality gates.",
-          "capabilities": ["automation", "guardrails", "search"],
-          "compatibility": ["node", "github", "general"],
-          "install": { "kind": "skill.sh", "target": "release-readiness", "args": [] },
+          "capabilities": [
+            "automation",
+            "guardrails",
+            "search"
+          ],
+          "compatibility": [
+            "node",
+            "github",
+            "general"
+          ],
+          "install": {
+            "kind": "skill.sh",
+            "target": "release-readiness",
+            "args": []
+          },
           "adoptionSignal": 74,
           "maintenanceSignal": 80,
           "provenanceSignal": 66,
@@ -97,9 +145,21 @@
           "id": "skill:docs-automation",
           "name": "Docs Automation",
           "description": "Generate and maintain technical docs from code and runtime outputs.",
-          "capabilities": ["automation", "search", "prompting"],
-          "compatibility": ["node", "python", "general"],
-          "install": { "kind": "skill.sh", "target": "docs-automation", "args": [] },
+          "capabilities": [
+            "automation",
+            "search",
+            "prompting"
+          ],
+          "compatibility": [
+            "node",
+            "python",
+            "general"
+          ],
+          "install": {
+            "kind": "skill.sh",
+            "target": "docs-automation",
+            "args": []
+          },
           "adoptionSignal": 67,
           "maintenanceSignal": 76,
           "provenanceSignal": 60,
@@ -116,9 +176,18 @@
           "id": "skill:fast-web-scrape",
           "name": "Fast Web Scrape",
           "description": "High-throughput data extraction helpers for websites.",
-          "capabilities": ["scraping", "automation"],
-          "compatibility": ["node"],
-          "install": { "kind": "skill.sh", "target": "fast-web-scrape", "args": [] },
+          "capabilities": [
+            "scraping",
+            "automation"
+          ],
+          "compatibility": [
+            "node"
+          ],
+          "install": {
+            "kind": "skill.sh",
+            "target": "fast-web-scrape",
+            "args": []
+          },
           "adoptionSignal": 62,
           "maintenanceSignal": 55,
           "provenanceSignal": 40,
@@ -135,9 +204,22 @@
           "id": "skill:docker-container-ops",
           "name": "Docker Container Ops",
           "description": "Build, debug, optimize, and harden containerized services for local and CI workflows.",
-          "capabilities": ["automation", "security", "guardrails"],
-          "compatibility": ["container", "node", "python", "general"],
-          "install": { "kind": "skill.sh", "target": "docker-container-ops", "args": [] },
+          "capabilities": [
+            "automation",
+            "security",
+            "guardrails"
+          ],
+          "compatibility": [
+            "container",
+            "node",
+            "python",
+            "general"
+          ],
+          "install": {
+            "kind": "skill.sh",
+            "target": "docker-container-ops",
+            "args": []
+          },
           "adoptionSignal": 88,
           "maintenanceSignal": 84,
           "provenanceSignal": 72,
@@ -154,9 +236,22 @@
           "id": "skill:kubernetes-ops",
           "name": "Kubernetes Ops",
           "description": "Operate, troubleshoot, and secure Kubernetes workloads, manifests, and rollout workflows.",
-          "capabilities": ["automation", "guardrails", "security"],
-          "compatibility": ["container", "kubernetes", "cloud", "general"],
-          "install": { "kind": "skill.sh", "target": "kubernetes-ops", "args": [] },
+          "capabilities": [
+            "automation",
+            "guardrails",
+            "security"
+          ],
+          "compatibility": [
+            "container",
+            "kubernetes",
+            "cloud",
+            "general"
+          ],
+          "install": {
+            "kind": "skill.sh",
+            "target": "kubernetes-ops",
+            "args": []
+          },
           "adoptionSignal": 86,
           "maintenanceSignal": 83,
           "provenanceSignal": 72,
@@ -173,9 +268,23 @@
           "id": "skill:terraform-guardrails",
           "name": "Terraform Guardrails",
           "description": "Plan, review, and enforce policy around Terraform-based infrastructure changes.",
-          "capabilities": ["automation", "guardrails", "security"],
-          "compatibility": ["cloud", "aws", "azure", "gcp", "general"],
-          "install": { "kind": "skill.sh", "target": "terraform-guardrails", "args": [] },
+          "capabilities": [
+            "automation",
+            "guardrails",
+            "security"
+          ],
+          "compatibility": [
+            "cloud",
+            "aws",
+            "azure",
+            "gcp",
+            "general"
+          ],
+          "install": {
+            "kind": "skill.sh",
+            "target": "terraform-guardrails",
+            "args": []
+          },
           "adoptionSignal": 81,
           "maintenanceSignal": 84,
           "provenanceSignal": 74,
@@ -192,9 +301,22 @@
           "id": "skill:aws-platform-ops",
           "name": "AWS Platform Ops",
           "description": "Deploy, review, and troubleshoot AWS application and platform configurations across environments.",
-          "capabilities": ["automation", "security", "search"],
-          "compatibility": ["aws", "cloud", "serverless", "general"],
-          "install": { "kind": "skill.sh", "target": "aws-platform-ops", "args": [] },
+          "capabilities": [
+            "automation",
+            "security",
+            "search"
+          ],
+          "compatibility": [
+            "aws",
+            "cloud",
+            "serverless",
+            "general"
+          ],
+          "install": {
+            "kind": "skill.sh",
+            "target": "aws-platform-ops",
+            "args": []
+          },
           "adoptionSignal": 87,
           "maintenanceSignal": 82,
           "provenanceSignal": 76,
@@ -211,9 +333,22 @@
           "id": "skill:postgres-ops",
           "name": "Postgres Ops",
           "description": "Tune queries, review migrations, and improve reliability for PostgreSQL-backed systems.",
-          "capabilities": ["automation", "guardrails", "search"],
-          "compatibility": ["postgresql", "node", "python", "general"],
-          "install": { "kind": "skill.sh", "target": "postgres-ops", "args": [] },
+          "capabilities": [
+            "automation",
+            "guardrails",
+            "search"
+          ],
+          "compatibility": [
+            "postgresql",
+            "node",
+            "python",
+            "general"
+          ],
+          "install": {
+            "kind": "skill.sh",
+            "target": "postgres-ops",
+            "args": []
+          },
           "adoptionSignal": 85,
           "maintenanceSignal": 84,
           "provenanceSignal": 78,
@@ -230,9 +365,23 @@
           "id": "skill:observability-incident-response",
           "name": "Observability Incident Response",
           "description": "Investigate incidents with logs, metrics, traces, dashboards, and postmortem-ready timelines.",
-          "capabilities": ["automation", "search", "security"],
-          "compatibility": ["cloud", "container", "node", "python", "general"],
-          "install": { "kind": "skill.sh", "target": "observability-incident-response", "args": [] },
+          "capabilities": [
+            "automation",
+            "search",
+            "security"
+          ],
+          "compatibility": [
+            "cloud",
+            "container",
+            "node",
+            "python",
+            "general"
+          ],
+          "install": {
+            "kind": "skill.sh",
+            "target": "observability-incident-response",
+            "args": []
+          },
           "adoptionSignal": 79,
           "maintenanceSignal": 81,
           "provenanceSignal": 73,
@@ -249,9 +398,20 @@
           "id": "skill:deep-research",
           "name": "Deep Research",
           "description": "Execute multi-step autonomous research tasks using web search, synthesis, and source citation. One of the most-installed Claude Code skills in 2026.",
-          "capabilities": ["search", "automation", "prompting"],
-          "compatibility": ["claude-code", "general"],
-          "install": { "kind": "skill.sh", "target": "deep-research", "args": [] },
+          "capabilities": [
+            "search",
+            "automation",
+            "prompting"
+          ],
+          "compatibility": [
+            "claude-code",
+            "general"
+          ],
+          "install": {
+            "kind": "skill.sh",
+            "target": "deep-research",
+            "args": []
+          },
           "adoptionSignal": 88,
           "maintenanceSignal": 84,
           "provenanceSignal": 78,
@@ -268,9 +428,22 @@
           "id": "skill:test-driven-development",
           "name": "Test-Driven Development",
           "description": "Enforce red-green-refactor TDD discipline: write failing tests first, implement minimally, then refactor. Prevents writing implementation before tests.",
-          "capabilities": ["automation", "guardrails", "prompting"],
-          "compatibility": ["claude-code", "node", "python", "general"],
-          "install": { "kind": "skill.sh", "target": "test-driven-development", "args": [] },
+          "capabilities": [
+            "automation",
+            "guardrails",
+            "prompting"
+          ],
+          "compatibility": [
+            "claude-code",
+            "node",
+            "python",
+            "general"
+          ],
+          "install": {
+            "kind": "skill.sh",
+            "target": "test-driven-development",
+            "args": []
+          },
           "adoptionSignal": 91,
           "maintenanceSignal": 88,
           "provenanceSignal": 84,
@@ -287,9 +460,20 @@
           "id": "skill:prompt-engineering",
           "name": "Prompt Engineering",
           "description": "Apply Anthropic's official prompting best practices: chain-of-thought, few-shot examples, structured output, and effective system prompt design.",
-          "capabilities": ["prompting", "automation", "guardrails"],
-          "compatibility": ["claude-code", "general"],
-          "install": { "kind": "skill.sh", "target": "prompt-engineering", "args": [] },
+          "capabilities": [
+            "prompting",
+            "automation",
+            "guardrails"
+          ],
+          "compatibility": [
+            "claude-code",
+            "general"
+          ],
+          "install": {
+            "kind": "skill.sh",
+            "target": "prompt-engineering",
+            "args": []
+          },
           "adoptionSignal": 86,
           "maintenanceSignal": 90,
           "provenanceSignal": 96,
@@ -306,9 +490,21 @@
           "id": "skill:google-workspace-skills",
           "name": "Google Workspace",
           "description": "Automate tasks across Gmail, Google Calendar, Google Docs, Sheets, Slides, and Drive from within Claude Code.",
-          "capabilities": ["automation", "docs", "productivity", "scheduling"],
-          "compatibility": ["claude-code", "general"],
-          "install": { "kind": "skill.sh", "target": "google-workspace-skills", "args": [] },
+          "capabilities": [
+            "automation",
+            "docs",
+            "productivity",
+            "scheduling"
+          ],
+          "compatibility": [
+            "claude-code",
+            "general"
+          ],
+          "install": {
+            "kind": "skill.sh",
+            "target": "google-workspace-skills",
+            "args": []
+          },
           "adoptionSignal": 82,
           "maintenanceSignal": 78,
           "provenanceSignal": 76,
@@ -325,9 +521,20 @@
           "id": "skill:n8n-skills",
           "name": "n8n Workflow Automation",
           "description": "Design, trigger, and debug n8n automation workflows. Connect Claude to n8n's visual workflow engine for multi-step task orchestration.",
-          "capabilities": ["automation", "search"],
-          "compatibility": ["claude-code", "node", "general"],
-          "install": { "kind": "skill.sh", "target": "n8n-skills", "args": [] },
+          "capabilities": [
+            "automation",
+            "search"
+          ],
+          "compatibility": [
+            "claude-code",
+            "node",
+            "general"
+          ],
+          "install": {
+            "kind": "skill.sh",
+            "target": "n8n-skills",
+            "args": []
+          },
           "adoptionSignal": 72,
           "maintenanceSignal": 75,
           "provenanceSignal": 70,
@@ -344,9 +551,19 @@
           "id": "skill:remotion",
           "name": "Remotion Video",
           "description": "Generate correct, idiomatic Remotion code for programmatic video: animations, timing, audio sync, captions, 3D, and composition patterns.",
-          "capabilities": ["automation", "docs"],
-          "compatibility": ["claude-code", "node"],
-          "install": { "kind": "skill.sh", "target": "remotion", "args": [] },
+          "capabilities": [
+            "automation",
+            "docs"
+          ],
+          "compatibility": [
+            "claude-code",
+            "node"
+          ],
+          "install": {
+            "kind": "skill.sh",
+            "target": "remotion",
+            "args": []
+          },
           "adoptionSignal": 78,
           "maintenanceSignal": 80,
           "provenanceSignal": 74,
@@ -373,9 +590,22 @@
           "id": "skill:docker-container-ops",
           "name": "Docker Container Ops",
           "description": "Build, debug, optimize, and harden containerized services for local and CI workflows.",
-          "capabilities": ["automation", "security", "guardrails"],
-          "compatibility": ["container", "node", "python", "general"],
-          "install": { "kind": "skill.sh", "target": "docker-container-ops", "args": [] },
+          "capabilities": [
+            "automation",
+            "security",
+            "guardrails"
+          ],
+          "compatibility": [
+            "container",
+            "node",
+            "python",
+            "general"
+          ],
+          "install": {
+            "kind": "skill.sh",
+            "target": "docker-container-ops",
+            "args": []
+          },
           "adoptionSignal": 88,
           "maintenanceSignal": 84,
           "provenanceSignal": 72,
@@ -392,9 +622,22 @@
           "id": "skill:kubernetes-ops",
           "name": "Kubernetes Ops",
           "description": "Operate, troubleshoot, and secure Kubernetes workloads, manifests, and rollout workflows.",
-          "capabilities": ["automation", "guardrails", "security"],
-          "compatibility": ["container", "kubernetes", "cloud", "general"],
-          "install": { "kind": "skill.sh", "target": "kubernetes-ops", "args": [] },
+          "capabilities": [
+            "automation",
+            "guardrails",
+            "security"
+          ],
+          "compatibility": [
+            "container",
+            "kubernetes",
+            "cloud",
+            "general"
+          ],
+          "install": {
+            "kind": "skill.sh",
+            "target": "kubernetes-ops",
+            "args": []
+          },
           "adoptionSignal": 86,
           "maintenanceSignal": 83,
           "provenanceSignal": 72,
@@ -411,9 +654,23 @@
           "id": "skill:terraform-guardrails",
           "name": "Terraform Guardrails",
           "description": "Plan, review, and enforce policy around Terraform-based infrastructure changes.",
-          "capabilities": ["automation", "guardrails", "security"],
-          "compatibility": ["cloud", "aws", "azure", "gcp", "general"],
-          "install": { "kind": "skill.sh", "target": "terraform-guardrails", "args": [] },
+          "capabilities": [
+            "automation",
+            "guardrails",
+            "security"
+          ],
+          "compatibility": [
+            "cloud",
+            "aws",
+            "azure",
+            "gcp",
+            "general"
+          ],
+          "install": {
+            "kind": "skill.sh",
+            "target": "terraform-guardrails",
+            "args": []
+          },
           "adoptionSignal": 81,
           "maintenanceSignal": 84,
           "provenanceSignal": 74,
@@ -430,9 +687,22 @@
           "id": "skill:aws-platform-ops",
           "name": "AWS Platform Ops",
           "description": "Deploy, review, and troubleshoot AWS application and platform configurations across environments.",
-          "capabilities": ["automation", "security", "search"],
-          "compatibility": ["aws", "cloud", "serverless", "general"],
-          "install": { "kind": "skill.sh", "target": "aws-platform-ops", "args": [] },
+          "capabilities": [
+            "automation",
+            "security",
+            "search"
+          ],
+          "compatibility": [
+            "aws",
+            "cloud",
+            "serverless",
+            "general"
+          ],
+          "install": {
+            "kind": "skill.sh",
+            "target": "aws-platform-ops",
+            "args": []
+          },
           "adoptionSignal": 87,
           "maintenanceSignal": 82,
           "provenanceSignal": 76,
@@ -449,9 +719,22 @@
           "id": "skill:postgres-ops",
           "name": "Postgres Ops",
           "description": "Tune queries, review migrations, and improve reliability for PostgreSQL-backed systems.",
-          "capabilities": ["automation", "guardrails", "search"],
-          "compatibility": ["postgresql", "node", "python", "general"],
-          "install": { "kind": "skill.sh", "target": "postgres-ops", "args": [] },
+          "capabilities": [
+            "automation",
+            "guardrails",
+            "search"
+          ],
+          "compatibility": [
+            "postgresql",
+            "node",
+            "python",
+            "general"
+          ],
+          "install": {
+            "kind": "skill.sh",
+            "target": "postgres-ops",
+            "args": []
+          },
           "adoptionSignal": 85,
           "maintenanceSignal": 84,
           "provenanceSignal": 78,
@@ -468,9 +751,23 @@
           "id": "skill:observability-incident-response",
           "name": "Observability Incident Response",
           "description": "Investigate incidents with logs, metrics, traces, dashboards, and postmortem-ready timelines.",
-          "capabilities": ["automation", "search", "security"],
-          "compatibility": ["cloud", "container", "node", "python", "general"],
-          "install": { "kind": "skill.sh", "target": "observability-incident-response", "args": [] },
+          "capabilities": [
+            "automation",
+            "search",
+            "security"
+          ],
+          "compatibility": [
+            "cloud",
+            "container",
+            "node",
+            "python",
+            "general"
+          ],
+          "install": {
+            "kind": "skill.sh",
+            "target": "observability-incident-response",
+            "args": []
+          },
           "adoptionSignal": 79,
           "maintenanceSignal": 81,
           "provenanceSignal": 73,
@@ -518,9 +815,24 @@
           "description": "Access local files in read/write mode.",
           "transport": "stdio",
           "authModel": "none",
-          "capabilities": ["file-read", "file-write", "search"],
-          "compatibility": ["node", "python", "container"],
-          "install": { "kind": "skill.sh", "target": "mcp-filesystem", "args": ["--transport", "stdio"] },
+          "capabilities": [
+            "file-read",
+            "file-write",
+            "search"
+          ],
+          "compatibility": [
+            "node",
+            "python",
+            "container"
+          ],
+          "install": {
+            "kind": "skill.sh",
+            "target": "mcp-filesystem",
+            "args": [
+              "--transport",
+              "stdio"
+            ]
+          },
           "adoptionSignal": 84,
           "maintenanceSignal": 81,
           "provenanceSignal": 95,
@@ -539,9 +851,24 @@
           "description": "Audit workflow permissions, unsafe patterns, and missing security controls.",
           "transport": "http",
           "authModel": "api_key",
-          "capabilities": ["security", "code-scanning", "automation"],
-          "compatibility": ["node", "github", "general"],
-          "install": { "kind": "skill.sh", "target": "mcp-gha-auditor", "args": ["--transport", "http"] },
+          "capabilities": [
+            "security",
+            "code-scanning",
+            "automation"
+          ],
+          "compatibility": [
+            "node",
+            "github",
+            "general"
+          ],
+          "install": {
+            "kind": "skill.sh",
+            "target": "mcp-gha-auditor",
+            "args": [
+              "--transport",
+              "http"
+            ]
+          },
           "adoptionSignal": 77,
           "maintenanceSignal": 82,
           "provenanceSignal": 93,
@@ -560,9 +887,24 @@
           "description": "Correlate package vulnerabilities, advisories, and upgrade guidance.",
           "transport": "http",
           "authModel": "api_key",
-          "capabilities": ["dependency-audit", "security", "search"],
-          "compatibility": ["node", "python", "general"],
-          "install": { "kind": "skill.sh", "target": "mcp-dependency-intel", "args": ["--transport", "http"] },
+          "capabilities": [
+            "dependency-audit",
+            "security",
+            "search"
+          ],
+          "compatibility": [
+            "node",
+            "python",
+            "general"
+          ],
+          "install": {
+            "kind": "skill.sh",
+            "target": "mcp-dependency-intel",
+            "args": [
+              "--transport",
+              "http"
+            ]
+          },
           "adoptionSignal": 79,
           "maintenanceSignal": 84,
           "provenanceSignal": 92,
@@ -581,9 +923,24 @@
           "description": "Evaluate policy bundles against CI/CD and repository configuration.",
           "transport": "stdio",
           "authModel": "none",
-          "capabilities": ["guardrails", "security", "automation"],
-          "compatibility": ["node", "container", "general"],
-          "install": { "kind": "skill.sh", "target": "mcp-policy-as-code", "args": ["--transport", "stdio"] },
+          "capabilities": [
+            "guardrails",
+            "security",
+            "automation"
+          ],
+          "compatibility": [
+            "node",
+            "container",
+            "general"
+          ],
+          "install": {
+            "kind": "skill.sh",
+            "target": "mcp-policy-as-code",
+            "args": [
+              "--transport",
+              "stdio"
+            ]
+          },
           "adoptionSignal": 73,
           "maintenanceSignal": 80,
           "provenanceSignal": 90,
@@ -602,9 +959,24 @@
           "description": "Check release readiness, versioning alignment, and changelog integrity.",
           "transport": "stdio",
           "authModel": "none",
-          "capabilities": ["guardrails", "automation", "search"],
-          "compatibility": ["node", "github", "general"],
-          "install": { "kind": "skill.sh", "target": "mcp-release-governance", "args": ["--transport", "stdio"] },
+          "capabilities": [
+            "guardrails",
+            "automation",
+            "search"
+          ],
+          "compatibility": [
+            "node",
+            "github",
+            "general"
+          ],
+          "install": {
+            "kind": "skill.sh",
+            "target": "mcp-release-governance",
+            "args": [
+              "--transport",
+              "stdio"
+            ]
+          },
           "adoptionSignal": 71,
           "maintenanceSignal": 78,
           "provenanceSignal": 89,
@@ -623,9 +995,24 @@
           "description": "Track quality, reliability, and security trends from repo events.",
           "transport": "http",
           "authModel": "api_key",
-          "capabilities": ["search", "automation", "security"],
-          "compatibility": ["node", "github", "general"],
-          "install": { "kind": "skill.sh", "target": "mcp-repo-observability", "args": ["--transport", "http"] },
+          "capabilities": [
+            "search",
+            "automation",
+            "security"
+          ],
+          "compatibility": [
+            "node",
+            "github",
+            "general"
+          ],
+          "install": {
+            "kind": "skill.sh",
+            "target": "mcp-repo-observability",
+            "args": [
+              "--transport",
+              "http"
+            ]
+          },
           "adoptionSignal": 69,
           "maintenanceSignal": 76,
           "provenanceSignal": 88,
@@ -644,9 +1031,21 @@
           "description": "Remote browser automation via network transport.",
           "transport": "http",
           "authModel": "api_key",
-          "capabilities": ["browser-control", "automation"],
-          "compatibility": ["node"],
-          "install": { "kind": "skill.sh", "target": "mcp-remote-browser", "args": ["--transport", "http"] },
+          "capabilities": [
+            "browser-control",
+            "automation"
+          ],
+          "compatibility": [
+            "node"
+          ],
+          "install": {
+            "kind": "skill.sh",
+            "target": "mcp-remote-browser",
+            "args": [
+              "--transport",
+              "http"
+            ]
+          },
           "adoptionSignal": 66,
           "maintenanceSignal": 58,
           "provenanceSignal": 88,
@@ -796,9 +1195,19 @@
           "id": "claude-plugin:workspace-ops",
           "name": "Workspace Ops",
           "description": "Manage internal docs and tickets from Claude.",
-          "capabilities": ["tickets", "docs", "search"],
-          "compatibility": ["claude", "general"],
-          "install": { "kind": "manual", "instructions": "Enable from Claude plugin catalog." },
+          "capabilities": [
+            "tickets",
+            "docs",
+            "search"
+          ],
+          "compatibility": [
+            "claude",
+            "general"
+          ],
+          "install": {
+            "kind": "manual",
+            "instructions": "Enable from Claude plugin catalog."
+          },
           "adoptionSignal": 58,
           "maintenanceSignal": 72,
           "provenanceSignal": 96,
@@ -815,9 +1224,20 @@
           "id": "claude-plugin:repo-threat-review",
           "name": "Repo Threat Review",
           "description": "Threat-centric review assistant for pull requests and workflows.",
-          "capabilities": ["security", "guardrails", "code-scanning"],
-          "compatibility": ["claude", "github", "node"],
-          "install": { "kind": "manual", "instructions": "Enable from Claude plugin catalog." },
+          "capabilities": [
+            "security",
+            "guardrails",
+            "code-scanning"
+          ],
+          "compatibility": [
+            "claude",
+            "github",
+            "node"
+          ],
+          "install": {
+            "kind": "manual",
+            "instructions": "Enable from Claude plugin catalog."
+          },
           "adoptionSignal": 72,
           "maintenanceSignal": 81,
           "provenanceSignal": 97,
@@ -834,9 +1254,19 @@
           "id": "claude-plugin:incident-summarizer",
           "name": "Incident Summarizer",
           "description": "Build incident timelines and postmortem-ready summaries.",
-          "capabilities": ["search", "automation", "docs"],
-          "compatibility": ["claude", "general"],
-          "install": { "kind": "manual", "instructions": "Enable from Claude plugin catalog." },
+          "capabilities": [
+            "search",
+            "automation",
+            "docs"
+          ],
+          "compatibility": [
+            "claude",
+            "general"
+          ],
+          "install": {
+            "kind": "manual",
+            "instructions": "Enable from Claude plugin catalog."
+          },
           "adoptionSignal": 68,
           "maintenanceSignal": 77,
           "provenanceSignal": 95,
@@ -853,9 +1283,19 @@
           "id": "claude-plugin:compliance-evidence",
           "name": "Compliance Evidence Collector",
           "description": "Collect reproducible evidence for audits and security attestations.",
-          "capabilities": ["security", "dependency-audit", "automation"],
-          "compatibility": ["claude", "general"],
-          "install": { "kind": "manual", "instructions": "Enable from Claude plugin catalog." },
+          "capabilities": [
+            "security",
+            "dependency-audit",
+            "automation"
+          ],
+          "compatibility": [
+            "claude",
+            "general"
+          ],
+          "install": {
+            "kind": "manual",
+            "instructions": "Enable from Claude plugin catalog."
+          },
           "adoptionSignal": 70,
           "maintenanceSignal": 79,
           "provenanceSignal": 96,
@@ -977,9 +1417,25 @@
           "id": "copilot-extension:repo-security",
           "name": "Repo Security Insights",
           "description": "Surface dependency, code scanning, and secret findings inside Copilot.",
-          "capabilities": ["security", "dependency-audit", "code-scanning"],
-          "compatibility": ["copilot", "github", "node", "python"],
-          "install": { "kind": "gh-cli", "target": "copilot-extension", "args": ["install", "repo-security"] },
+          "capabilities": [
+            "security",
+            "dependency-audit",
+            "code-scanning"
+          ],
+          "compatibility": [
+            "copilot",
+            "github",
+            "node",
+            "python"
+          ],
+          "install": {
+            "kind": "gh-cli",
+            "target": "copilot-extension",
+            "args": [
+              "install",
+              "repo-security"
+            ]
+          },
           "adoptionSignal": 64,
           "maintenanceSignal": 75,
           "provenanceSignal": 97,
@@ -996,9 +1452,24 @@
           "id": "copilot-extension:actions-guardian",
           "name": "Actions Guardian",
           "description": "Review workflows for least privilege, pinning, and dangerous patterns.",
-          "capabilities": ["security", "code-scanning", "automation"],
-          "compatibility": ["copilot", "github", "node"],
-          "install": { "kind": "gh-cli", "target": "copilot-extension", "args": ["install", "actions-guardian"] },
+          "capabilities": [
+            "security",
+            "code-scanning",
+            "automation"
+          ],
+          "compatibility": [
+            "copilot",
+            "github",
+            "node"
+          ],
+          "install": {
+            "kind": "gh-cli",
+            "target": "copilot-extension",
+            "args": [
+              "install",
+              "actions-guardian"
+            ]
+          },
           "adoptionSignal": 79,
           "maintenanceSignal": 84,
           "provenanceSignal": 98,
@@ -1015,9 +1486,25 @@
           "id": "copilot-extension:sbom-advisor",
           "name": "SBOM Advisor",
           "description": "Generate SBOM action plans and remediation tasks from dependency risk.",
-          "capabilities": ["dependency-audit", "security", "search"],
-          "compatibility": ["copilot", "github", "node", "python"],
-          "install": { "kind": "gh-cli", "target": "copilot-extension", "args": ["install", "sbom-advisor"] },
+          "capabilities": [
+            "dependency-audit",
+            "security",
+            "search"
+          ],
+          "compatibility": [
+            "copilot",
+            "github",
+            "node",
+            "python"
+          ],
+          "install": {
+            "kind": "gh-cli",
+            "target": "copilot-extension",
+            "args": [
+              "install",
+              "sbom-advisor"
+            ]
+          },
           "adoptionSignal": 76,
           "maintenanceSignal": 82,
           "provenanceSignal": 98,
@@ -1034,9 +1521,24 @@
           "id": "copilot-extension:release-gatekeeper",
           "name": "Release Gatekeeper",
           "description": "Automate release gate checks and version policy compliance.",
-          "capabilities": ["guardrails", "automation", "search"],
-          "compatibility": ["copilot", "github", "node"],
-          "install": { "kind": "gh-cli", "target": "copilot-extension", "args": ["install", "release-gatekeeper"] },
+          "capabilities": [
+            "guardrails",
+            "automation",
+            "search"
+          ],
+          "compatibility": [
+            "copilot",
+            "github",
+            "node"
+          ],
+          "install": {
+            "kind": "gh-cli",
+            "target": "copilot-extension",
+            "args": [
+              "install",
+              "release-gatekeeper"
+            ]
+          },
           "adoptionSignal": 74,
           "maintenanceSignal": 80,
           "provenanceSignal": 97,
@@ -1113,8 +1615,14 @@
           "id": "claude-connector:asana",
           "name": "Asana",
           "description": "Connect Claude to Asana tasks, projects, and workspace context.",
-          "capabilities": ["tickets", "automation"],
-          "compatibility": ["claude", "mcp"],
+          "capabilities": [
+            "tickets",
+            "automation"
+          ],
+          "compatibility": [
+            "claude",
+            "mcp"
+          ],
           "install": {
             "kind": "manual",
             "instructions": "Enable this connector from Claude Connectors.",
@@ -1141,8 +1649,15 @@
           "id": "claude-connector:atlassian",
           "name": "Atlassian",
           "description": "Connect Claude to Atlassian tools for docs, tickets, and team knowledge.",
-          "capabilities": ["docs", "tickets", "automation"],
-          "compatibility": ["claude", "mcp"],
+          "capabilities": [
+            "docs",
+            "tickets",
+            "automation"
+          ],
+          "compatibility": [
+            "claude",
+            "mcp"
+          ],
           "install": {
             "kind": "manual",
             "instructions": "Enable this connector from Claude Connectors.",
@@ -1169,8 +1684,15 @@
           "id": "claude-connector:box",
           "name": "Box",
           "description": "Connect Claude to Box content and files for enterprise document retrieval.",
-          "capabilities": ["docs", "search", "automation"],
-          "compatibility": ["claude", "mcp"],
+          "capabilities": [
+            "docs",
+            "search",
+            "automation"
+          ],
+          "compatibility": [
+            "claude",
+            "mcp"
+          ],
           "install": {
             "kind": "manual",
             "instructions": "Enable this connector from Claude Connectors.",
@@ -1197,8 +1719,15 @@
           "id": "claude-connector:google-calendar",
           "name": "Google Calendar",
           "description": "Connect Claude to Google Calendar for scheduling, meeting management, and calendar automation.",
-          "capabilities": ["automation", "productivity", "scheduling"],
-          "compatibility": ["claude", "mcp"],
+          "capabilities": [
+            "automation",
+            "productivity",
+            "scheduling"
+          ],
+          "compatibility": [
+            "claude",
+            "mcp"
+          ],
           "install": {
             "kind": "manual",
             "instructions": "Enable this connector from Claude Connectors.",
@@ -1225,8 +1754,15 @@
           "id": "claude-connector:google-drive",
           "name": "Google Drive",
           "description": "Connect Claude to Google Drive for document retrieval, search, and file management across your workspace.",
-          "capabilities": ["docs", "search", "automation"],
-          "compatibility": ["claude", "mcp"],
+          "capabilities": [
+            "docs",
+            "search",
+            "automation"
+          ],
+          "compatibility": [
+            "claude",
+            "mcp"
+          ],
           "install": {
             "kind": "manual",
             "instructions": "Enable this connector from Claude Connectors.",
@@ -1253,8 +1789,14 @@
           "id": "claude-connector:docusign",
           "name": "DocuSign",
           "description": "Connect Claude to DocuSign for eSignature workflows, envelope tracking, and document agreement automation.",
-          "capabilities": ["automation", "docs"],
-          "compatibility": ["claude", "mcp"],
+          "capabilities": [
+            "automation",
+            "docs"
+          ],
+          "compatibility": [
+            "claude",
+            "mcp"
+          ],
           "install": {
             "kind": "manual",
             "instructions": "Enable this connector from Claude Connectors.",
@@ -1281,8 +1823,15 @@
           "id": "claude-connector:clay",
           "name": "Clay",
           "description": "Connect Claude to Clay for data enrichment, prospecting, and go-to-market workflow automation.",
-          "capabilities": ["automation", "search", "sales"],
-          "compatibility": ["claude", "mcp"],
+          "capabilities": [
+            "automation",
+            "search",
+            "sales"
+          ],
+          "compatibility": [
+            "claude",
+            "mcp"
+          ],
           "install": {
             "kind": "manual",
             "instructions": "Enable this connector from Claude Connectors.",
@@ -1309,8 +1858,14 @@
           "id": "claude-connector:outreach",
           "name": "Outreach",
           "description": "Connect Claude to Outreach for sales engagement, sequence management, and pipeline automation.",
-          "capabilities": ["automation", "sales"],
-          "compatibility": ["claude", "mcp"],
+          "capabilities": [
+            "automation",
+            "sales"
+          ],
+          "compatibility": [
+            "claude",
+            "mcp"
+          ],
           "install": {
             "kind": "manual",
             "instructions": "Enable this connector from Claude Connectors.",
@@ -1337,8 +1892,15 @@
           "id": "claude-connector:factset",
           "name": "FactSet",
           "description": "Connect Claude to FactSet for financial data, market intelligence, and investment research workflows.",
-          "capabilities": ["search", "data", "financial"],
-          "compatibility": ["claude", "mcp"],
+          "capabilities": [
+            "search",
+            "data",
+            "financial"
+          ],
+          "compatibility": [
+            "claude",
+            "mcp"
+          ],
           "install": {
             "kind": "manual",
             "instructions": "Enable this connector from Claude Connectors.",
@@ -1365,8 +1927,15 @@
           "id": "claude-connector:wordpress",
           "name": "WordPress",
           "description": "Connect Claude to WordPress for content creation, post management, and CMS workflow automation.",
-          "capabilities": ["automation", "docs", "content"],
-          "compatibility": ["claude", "mcp"],
+          "capabilities": [
+            "automation",
+            "docs",
+            "content"
+          ],
+          "compatibility": [
+            "claude",
+            "mcp"
+          ],
           "install": {
             "kind": "manual",
             "instructions": "Enable this connector from Claude Connectors.",
@@ -1393,8 +1962,15 @@
           "id": "claude-connector:harvey",
           "name": "Harvey",
           "description": "Connect Claude to Harvey AI for legal document drafting, contract review, and legal research workflows.",
-          "capabilities": ["automation", "docs", "legal"],
-          "compatibility": ["claude", "mcp"],
+          "capabilities": [
+            "automation",
+            "docs",
+            "legal"
+          ],
+          "compatibility": [
+            "claude",
+            "mcp"
+          ],
           "install": {
             "kind": "manual",
             "instructions": "Enable this connector from Claude Connectors.",
@@ -1418,6 +1994,22 @@
           }
         }
       ]
+    },
+    {
+      "id": "awesome-claude-code",
+      "kind": "skill",
+      "sourceType": "community-list",
+      "adapter": "awesome-claude-code-v1",
+      "enabled": true,
+      "officialOnly": false,
+      "entries": [],
+      "remote": {
+        "url": "https://raw.githubusercontent.com/hesreallyhim/awesome-claude-code/main/THE_RESOURCES_TABLE.csv",
+        "format": "html",
+        "provider": "github",
+        "timeoutMs": 15000,
+        "fallbackToLocal": true
+      }
     }
   ]
 }
