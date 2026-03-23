@@ -49,9 +49,9 @@ You can:
 
 ## Prerequisites
 
-- Node.js `>=18.17` and npm
+- Node.js `>=18.17` and npm — that's it.
 
-Everything else (skills CLI, config, catalogs) is installed automatically by `plugscout setup`.
+**No manual setup required.** Run `plugscout setup` once and it takes care of everything else: installs required CLI dependencies, writes your config, and syncs all catalogs. You don't need to install or configure anything by hand.
 
 ## Install PlugScout (v0.3.4)
 
