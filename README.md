@@ -22,11 +22,7 @@ PlugScout helps teams discover, score, and safely install Claude plugins, Claude
 
 ## See PlugScout in action
 
-<video src="https://github.com/amitrintzler/plugscout/releases/download/v0.3.4/framework-walkthrough.mp4"
-       controls
-       width="100%">
-  <a href="https://github.com/amitrintzler/plugscout/releases/download/v0.3.4/framework-walkthrough.mp4">Watch walkthrough video</a>
-</video>
+[![Watch the PlugScout walkthrough](https://github.com/amitrintzler/plugscout/releases/download/v0.3.4/framework-walkthrough-preview.gif)](https://github.com/amitrintzler/plugscout/releases/download/v0.3.4/framework-walkthrough.mp4)
 
 Quick links:
 - [Install](#install-plugscout-v034)
