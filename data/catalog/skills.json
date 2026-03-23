@@ -17,7 +17,7 @@
       "node"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-22",
+    "lastSeenAt": "2026-03-23",
     "install": {
       "kind": "skill.sh",
       "target": "agentic-actions-auditor",
@@ -43,6 +43,135 @@
       "marketplaceSource": "github",
       "rawVersion": "1.2.0",
       "githubUrl": "https://github.com/trailofbits/skills/tree/main/plugins/agentic-actions-auditor"
+    }
+  },
+  {
+    "id": "skill:agentic-workflow-patterns",
+    "kind": "skill",
+    "name": "Agentic Workflow Patterns",
+    "description": "A comprehensive and well-documented collection of agentic patterns from Anthropic docs, with colorful Mermaid diagrams and code examples for each pattern. Covers Subagent Orchestration, Progressive Skills, Parallel Tool Calling, Master-Clone Architecture, Wizard Workflows, and more. Also compatible with other providers",
+    "provider": "github",
+    "capabilities": [
+      "automation",
+      "docs",
+      "frontend",
+      "orchestration"
+    ],
+    "compatibility": [
+      "claude-code"
+    ],
+    "source": "awesome-claude-code",
+    "lastSeenAt": "2026-03-23",
+    "install": {
+      "kind": "manual",
+      "instructions": "Visit the linked repository and follow its installation instructions.",
+      "url": "https://github.com/ThibautMelen/agentic-workflow-patterns"
+    },
+    "adoptionSignal": 72,
+    "maintenanceSignal": 70,
+    "provenanceSignal": 82,
+    "freshnessSignal": 72,
+    "securitySignals": {
+      "knownVulnerabilities": 0,
+      "suspiciousPatterns": 0,
+      "injectionFindings": 0,
+      "exfiltrationSignals": 0,
+      "integrityAlerts": 0
+    },
+    "metadata": {
+      "catalogType": "skill",
+      "sourceConfidence": "vetted-curated",
+      "awesomeClaudeCodeId": "wf-7d4f4706",
+      "awesomeClaudeCodeCategory": "Workflows & Knowledge Guides",
+      "authorName": "ThibautMelen",
+      "license": "NOT_FOUND",
+      "sourceRegistryId": "awesome-claude-code",
+      "sourceType": "community-list"
+    }
+  },
+  {
+    "id": "skill:agentsys",
+    "kind": "skill",
+    "name": "AgentSys",
+    "description": "Workflow automation system for Claude with a group of useful plugins, agents, and skills. Automates task-to-production workflows, PR management, code cleanup, performance investigation, drift detection, and multi-agent code review. Includes [agnix](https://github.com/avifenesh/agnix) for linting agent configurations. B",
+    "provider": "github",
+    "capabilities": [
+      "automation",
+      "frontend",
+      "guardrails",
+      "orchestration"
+    ],
+    "compatibility": [
+      "claude-code"
+    ],
+    "source": "awesome-claude-code",
+    "lastSeenAt": "2026-03-23",
+    "install": {
+      "kind": "manual",
+      "instructions": "Visit the linked repository and follow its installation instructions.",
+      "url": "https://github.com/avifenesh/agentsys"
+    },
+    "adoptionSignal": 72,
+    "maintenanceSignal": 78,
+    "provenanceSignal": 82,
+    "freshnessSignal": 72,
+    "securitySignals": {
+      "knownVulnerabilities": 0,
+      "suspiciousPatterns": 0,
+      "injectionFindings": 0,
+      "exfiltrationSignals": 0,
+      "integrityAlerts": 0
+    },
+    "metadata": {
+      "catalogType": "skill",
+      "sourceConfidence": "vetted-curated",
+      "awesomeClaudeCodeId": "skill-ca8cbc21",
+      "awesomeClaudeCodeCategory": "Agent Skills",
+      "authorName": "avifenesh",
+      "license": "MIT",
+      "releaseVersion": "v5.4.1",
+      "sourceRegistryId": "awesome-claude-code",
+      "sourceType": "community-list"
+    }
+  },
+  {
+    "id": "skill:ai-agent-ai-spy",
+    "kind": "skill",
+    "name": "AI Agent, AI Spy",
+    "description": "Members from the Signal Foundation with some really great tips and tricks on how to turn your operating system into an instrument of total surveillance, and why some companies are doing this really awesome thing. [warning: YouTube link]",
+    "provider": "github",
+    "capabilities": [
+      "orchestration"
+    ],
+    "compatibility": [
+      "claude-code"
+    ],
+    "source": "awesome-claude-code",
+    "lastSeenAt": "2026-03-23",
+    "install": {
+      "kind": "manual",
+      "instructions": "Visit the linked repository and follow its installation instructions."
+    },
+    "adoptionSignal": 72,
+    "maintenanceSignal": 62,
+    "provenanceSignal": 82,
+    "freshnessSignal": 60,
+    "securitySignals": {
+      "knownVulnerabilities": 0,
+      "suspiciousPatterns": 0,
+      "injectionFindings": 0,
+      "exfiltrationSignals": 0,
+      "integrityAlerts": 0
+    },
+    "metadata": {
+      "catalogType": "skill",
+      "sourceConfidence": "vetted-curated",
+      "awesomeClaudeCodeId": "skill-bd56dc67",
+      "awesomeClaudeCodeCategory": "Agent Skills",
+      "authorName": "Whittaker & Tiwari",
+      "license": "No License / Not Specified",
+      "sourceRegistryId": "awesome-claude-code",
+      "sourceType": "community-list"
     }
   },
   {
@@ -74,7 +203,7 @@
       "node"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-22",
+    "lastSeenAt": "2026-03-23",
     "install": {
       "kind": "skill.sh",
       "target": "algorithmic-art",
@@ -105,6 +234,133 @@
     }
   },
   {
+    "id": "skill:analyze-issue",
+    "kind": "skill",
+    "name": "/analyze-issue",
+    "description": "Fetches GitHub issue details to create comprehensive implementation specifications, analyzing requirements and planning structured approach with clear implementation steps.",
+    "provider": "github",
+    "capabilities": [
+      "automation",
+      "frontend"
+    ],
+    "compatibility": [
+      "claude-code"
+    ],
+    "source": "awesome-claude-code",
+    "lastSeenAt": "2026-03-23",
+    "install": {
+      "kind": "manual",
+      "instructions": "Visit the linked repository and follow its installation instructions.",
+      "url": "https://github.com/jerseycheese/Narraitor/blob/feature/issue-227-ai-suggestions/.claude/commands/analyze-issue.md"
+    },
+    "adoptionSignal": 72,
+    "maintenanceSignal": 70,
+    "provenanceSignal": 82,
+    "freshnessSignal": 72,
+    "securitySignals": {
+      "knownVulnerabilities": 0,
+      "suspiciousPatterns": 0,
+      "injectionFindings": 0,
+      "exfiltrationSignals": 0,
+      "integrityAlerts": 0
+    },
+    "metadata": {
+      "catalogType": "skill",
+      "sourceConfidence": "vetted-curated",
+      "awesomeClaudeCodeId": "cmd-9d234db1",
+      "awesomeClaudeCodeCategory": "Slash-Commands",
+      "authorName": "jerseycheese",
+      "license": "MIT",
+      "sourceRegistryId": "awesome-claude-code",
+      "sourceType": "community-list"
+    }
+  },
+  {
+    "id": "skill:anthropic-documentation",
+    "kind": "skill",
+    "name": "Anthropic Documentation",
+    "description": "The official documentation for Claude Code, including installation instructions, usage guidelines, API references, tutorials, examples, loads of information that I won't list individually. Like Claude Code, the documentation is frequently updated.",
+    "provider": "github",
+    "capabilities": [
+      "automation",
+      "docs",
+      "frontend"
+    ],
+    "compatibility": [
+      "claude-code"
+    ],
+    "source": "awesome-claude-code",
+    "lastSeenAt": "2026-03-23",
+    "install": {
+      "kind": "manual",
+      "instructions": "Visit the linked repository and follow its installation instructions."
+    },
+    "adoptionSignal": 72,
+    "maintenanceSignal": 62,
+    "provenanceSignal": 82,
+    "freshnessSignal": 60,
+    "securitySignals": {
+      "knownVulnerabilities": 0,
+      "suspiciousPatterns": 0,
+      "injectionFindings": 0,
+      "exfiltrationSignals": 0,
+      "integrityAlerts": 0
+    },
+    "metadata": {
+      "catalogType": "skill",
+      "sourceConfidence": "vetted-curated",
+      "awesomeClaudeCodeId": "doc-93f22142",
+      "awesomeClaudeCodeCategory": "Official Documentation",
+      "authorName": "Anthropic",
+      "license": "&copy;",
+      "sourceRegistryId": "awesome-claude-code",
+      "sourceType": "community-list"
+    }
+  },
+  {
+    "id": "skill:anthropic-quickstarts",
+    "kind": "skill",
+    "name": "Anthropic Quickstarts",
+    "description": "Offers comprehensive development guides for three distinct AI-powered demo projects with standardized workflows, strict code style guidelines, and containerization instructions.",
+    "provider": "github",
+    "capabilities": [
+      "automation",
+      "docs",
+      "frontend"
+    ],
+    "compatibility": [
+      "claude-code"
+    ],
+    "source": "awesome-claude-code",
+    "lastSeenAt": "2026-03-23",
+    "install": {
+      "kind": "manual",
+      "instructions": "Visit the linked repository and follow its installation instructions.",
+      "url": "https://github.com/anthropics/claude-quickstarts"
+    },
+    "adoptionSignal": 72,
+    "maintenanceSignal": 70,
+    "provenanceSignal": 82,
+    "freshnessSignal": 72,
+    "securitySignals": {
+      "knownVulnerabilities": 0,
+      "suspiciousPatterns": 0,
+      "injectionFindings": 0,
+      "exfiltrationSignals": 0,
+      "integrityAlerts": 0
+    },
+    "metadata": {
+      "catalogType": "skill",
+      "sourceConfidence": "vetted-curated",
+      "awesomeClaudeCodeId": "doc-b71240b4",
+      "awesomeClaudeCodeCategory": "Official Documentation",
+      "authorName": "Anthropic",
+      "license": "MIT",
+      "sourceRegistryId": "awesome-claude-code",
+      "sourceType": "community-list"
+    }
+  },
+  {
     "id": "skill:ask-questions-if-underspecified",
     "kind": "skill",
     "name": "ask-questions-if-underspecified",
@@ -120,7 +376,7 @@
       "node"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-22",
+    "lastSeenAt": "2026-03-23",
     "install": {
       "kind": "skill.sh",
       "target": "ask-questions-if-underspecified",
@@ -161,7 +417,7 @@
       "general"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-22",
+    "lastSeenAt": "2026-03-23",
     "install": {
       "kind": "skill.sh",
       "target": "Aspnet Core",
@@ -204,7 +460,7 @@
       "node"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-22",
+    "lastSeenAt": "2026-03-23",
     "install": {
       "kind": "skill.sh",
       "target": "audit-context-building",
@@ -233,6 +489,137 @@
     }
   },
   {
+    "id": "skill:auto-claude",
+    "kind": "skill",
+    "name": "Auto-Claude",
+    "description": "Autonomous multi-agent coding framework for Claude Code (Claude Agent SDK) that integrates the full SDLC - \"plans, builds, and validates software for you\". Features a slick kanban-style UI and a well-designed but not over-engineered agent orchestration system.",
+    "provider": "github",
+    "capabilities": [
+      "frontend",
+      "orchestration"
+    ],
+    "compatibility": [
+      "claude-code"
+    ],
+    "source": "awesome-claude-code",
+    "lastSeenAt": "2026-03-23",
+    "install": {
+      "kind": "manual",
+      "instructions": "Visit the linked repository and follow its installation instructions.",
+      "url": "https://github.com/AndyMik90/Auto-Claude"
+    },
+    "adoptionSignal": 72,
+    "maintenanceSignal": 78,
+    "provenanceSignal": 82,
+    "freshnessSignal": 72,
+    "securitySignals": {
+      "knownVulnerabilities": 0,
+      "suspiciousPatterns": 0,
+      "injectionFindings": 0,
+      "exfiltrationSignals": 0,
+      "integrityAlerts": 0
+    },
+    "metadata": {
+      "catalogType": "skill",
+      "sourceConfidence": "vetted-curated",
+      "awesomeClaudeCodeId": "tool-8d6f8d23",
+      "awesomeClaudeCodeCategory": "Tooling",
+      "authorName": "AndyMik90",
+      "license": "AGPL-3.0",
+      "releaseVersion": "v2.7.6",
+      "sourceRegistryId": "awesome-claude-code",
+      "sourceType": "community-list"
+    }
+  },
+  {
+    "id": "skill:awesome-ralph",
+    "kind": "skill",
+    "name": "awesome-ralph",
+    "description": "A curated list of resources about Ralph, the AI coding technique that runs AI coding agents in automated loops until specifications are fulfilled.",
+    "provider": "github",
+    "capabilities": [
+      "automation",
+      "docs",
+      "frontend",
+      "orchestration"
+    ],
+    "compatibility": [
+      "claude-code"
+    ],
+    "source": "awesome-claude-code",
+    "lastSeenAt": "2026-03-23",
+    "install": {
+      "kind": "manual",
+      "instructions": "Visit the linked repository and follow its installation instructions.",
+      "url": "https://github.com/snwfdhmp/awesome-ralph"
+    },
+    "adoptionSignal": 72,
+    "maintenanceSignal": 70,
+    "provenanceSignal": 82,
+    "freshnessSignal": 72,
+    "securitySignals": {
+      "knownVulnerabilities": 0,
+      "suspiciousPatterns": 0,
+      "injectionFindings": 0,
+      "exfiltrationSignals": 0,
+      "integrityAlerts": 0
+    },
+    "metadata": {
+      "catalogType": "skill",
+      "sourceConfidence": "vetted-curated",
+      "awesomeClaudeCodeId": "wf-61bd7b69",
+      "awesomeClaudeCodeCategory": "Workflows & Knowledge Guides",
+      "authorName": "Martin Joly",
+      "license": "NOT_FOUND",
+      "sourceRegistryId": "awesome-claude-code",
+      "sourceType": "community-list"
+    }
+  },
+  {
+    "id": "skill:aws-mcp-server",
+    "kind": "skill",
+    "name": "AWS MCP Server",
+    "description": "Features multiple Python environment setup options with detailed code style guidelines, comprehensive error handling recommendations, and security considerations for AWS CLI interactions.",
+    "provider": "github",
+    "capabilities": [
+      "docs",
+      "frontend",
+      "security"
+    ],
+    "compatibility": [
+      "claude-code"
+    ],
+    "source": "awesome-claude-code",
+    "lastSeenAt": "2026-03-23",
+    "install": {
+      "kind": "manual",
+      "instructions": "Visit the linked repository and follow its installation instructions.",
+      "url": "https://github.com/alexei-led/aws-mcp-server/blob/main/CLAUDE.md"
+    },
+    "adoptionSignal": 72,
+    "maintenanceSignal": 78,
+    "provenanceSignal": 82,
+    "freshnessSignal": 72,
+    "securitySignals": {
+      "knownVulnerabilities": 0,
+      "suspiciousPatterns": 0,
+      "injectionFindings": 0,
+      "exfiltrationSignals": 0,
+      "integrityAlerts": 0
+    },
+    "metadata": {
+      "catalogType": "skill",
+      "sourceConfidence": "vetted-curated",
+      "awesomeClaudeCodeId": "claude-bbaa0c15",
+      "awesomeClaudeCodeCategory": "CLAUDE.md Files",
+      "authorName": "alexei-led",
+      "license": "MIT",
+      "releaseVersion": "v1.7.0",
+      "sourceRegistryId": "awesome-claude-code",
+      "sourceType": "community-list"
+    }
+  },
+  {
     "id": "skill:aws-platform-ops",
     "kind": "skill",
     "name": "AWS Platform Ops",
@@ -250,7 +637,7 @@
       "serverless"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-22",
+    "lastSeenAt": "2026-03-23",
     "install": {
       "kind": "skill.sh",
       "target": "aws-platform-ops",
@@ -271,6 +658,133 @@
       "sourceRegistryId": "github-curated-industry-skills",
       "sourceType": "community-list",
       "sourceConfidence": "vetted-curated"
+    }
+  },
+  {
+    "id": "skill:basic-memory",
+    "kind": "skill",
+    "name": "Basic Memory",
+    "description": "Presents an innovative AI-human collaboration framework with Model Context Protocol for bidirectional LLM-markdown communication and flexible knowledge structure for complex projects.",
+    "provider": "github",
+    "capabilities": [
+      "docs"
+    ],
+    "compatibility": [
+      "claude-code"
+    ],
+    "source": "awesome-claude-code",
+    "lastSeenAt": "2026-03-23",
+    "install": {
+      "kind": "manual",
+      "instructions": "Visit the linked repository and follow its installation instructions.",
+      "url": "https://github.com/basicmachines-co/basic-memory/blob/main/CLAUDE.md"
+    },
+    "adoptionSignal": 72,
+    "maintenanceSignal": 78,
+    "provenanceSignal": 82,
+    "freshnessSignal": 72,
+    "securitySignals": {
+      "knownVulnerabilities": 0,
+      "suspiciousPatterns": 0,
+      "injectionFindings": 0,
+      "exfiltrationSignals": 0,
+      "integrityAlerts": 0
+    },
+    "metadata": {
+      "catalogType": "skill",
+      "sourceConfidence": "vetted-curated",
+      "awesomeClaudeCodeId": "claude-14f59511",
+      "awesomeClaudeCodeCategory": "CLAUDE.md Files",
+      "authorName": "basicmachines-co",
+      "license": "AGPL-3.0",
+      "releaseVersion": "v0.20.2",
+      "sourceRegistryId": "awesome-claude-code",
+      "sourceType": "community-list"
+    }
+  },
+  {
+    "id": "skill:blogging-platform-instructions",
+    "kind": "skill",
+    "name": "Blogging Platform Instructions",
+    "description": "Provides a well-structured set of commands for publishing and maintaining a blogging platform, including commands for creating posts, managing categories, and handling media files.",
+    "provider": "github",
+    "capabilities": [
+      "automation",
+      "docs",
+      "frontend"
+    ],
+    "compatibility": [
+      "claude-code"
+    ],
+    "source": "awesome-claude-code",
+    "lastSeenAt": "2026-03-23",
+    "install": {
+      "kind": "manual",
+      "instructions": "Visit the linked repository and follow its installation instructions.",
+      "url": "https://github.com/cloudartisan/cloudartisan.github.io/tree/main/.claude/commands"
+    },
+    "adoptionSignal": 72,
+    "maintenanceSignal": 70,
+    "provenanceSignal": 82,
+    "freshnessSignal": 72,
+    "securitySignals": {
+      "knownVulnerabilities": 0,
+      "suspiciousPatterns": 0,
+      "injectionFindings": 0,
+      "exfiltrationSignals": 0,
+      "integrityAlerts": 0
+    },
+    "metadata": {
+      "catalogType": "skill",
+      "sourceConfidence": "vetted-curated",
+      "awesomeClaudeCodeId": "wf-8376d518",
+      "awesomeClaudeCodeCategory": "Workflows & Knowledge Guides",
+      "authorName": "cloudartisan",
+      "license": "CC-BY-SA-4.0",
+      "sourceRegistryId": "awesome-claude-code",
+      "sourceType": "community-list"
+    }
+  },
+  {
+    "id": "skill:book-factory",
+    "kind": "skill",
+    "name": "Book Factory",
+    "description": "A comprehensive pipeline of Skills that replicates traditional publishing infrastructure for nonfiction book creation using specialized Claude skills.",
+    "provider": "github",
+    "capabilities": [
+      "automation",
+      "orchestration"
+    ],
+    "compatibility": [
+      "claude-code"
+    ],
+    "source": "awesome-claude-code",
+    "lastSeenAt": "2026-03-23",
+    "install": {
+      "kind": "manual",
+      "instructions": "Visit the linked repository and follow its installation instructions.",
+      "url": "https://github.com/robertguss/claude-skills"
+    },
+    "adoptionSignal": 72,
+    "maintenanceSignal": 70,
+    "provenanceSignal": 82,
+    "freshnessSignal": 72,
+    "securitySignals": {
+      "knownVulnerabilities": 0,
+      "suspiciousPatterns": 0,
+      "injectionFindings": 0,
+      "exfiltrationSignals": 0,
+      "integrityAlerts": 0
+    },
+    "metadata": {
+      "catalogType": "skill",
+      "sourceConfidence": "vetted-curated",
+      "awesomeClaudeCodeId": "skill-35039a54",
+      "awesomeClaudeCodeCategory": "Agent Skills",
+      "authorName": "Robert Guss",
+      "license": "MIT",
+      "sourceRegistryId": "awesome-claude-code",
+      "sourceType": "community-list"
     }
   },
   {
@@ -302,7 +816,7 @@
       "node"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-22",
+    "lastSeenAt": "2026-03-23",
     "install": {
       "kind": "skill.sh",
       "target": "brand-guidelines",
@@ -333,6 +847,48 @@
     }
   },
   {
+    "id": "skill:britfix",
+    "kind": "skill",
+    "name": "Britfix",
+    "description": "Claude outputs American spellings by default, which can have an impact on: professional credibility, compliance, documentation, and more. Britfix converts to British English, with a Claude Code hook for automatic conversion as files are written. Context-aware: handles code files intelligently by only converting comment",
+    "provider": "github",
+    "capabilities": [
+      "docs",
+      "security"
+    ],
+    "compatibility": [
+      "claude-code"
+    ],
+    "source": "awesome-claude-code",
+    "lastSeenAt": "2026-03-23",
+    "install": {
+      "kind": "manual",
+      "instructions": "Visit the linked repository and follow its installation instructions.",
+      "url": "https://github.com/Talieisin/britfix"
+    },
+    "adoptionSignal": 72,
+    "maintenanceSignal": 70,
+    "provenanceSignal": 82,
+    "freshnessSignal": 72,
+    "securitySignals": {
+      "knownVulnerabilities": 0,
+      "suspiciousPatterns": 0,
+      "injectionFindings": 0,
+      "exfiltrationSignals": 0,
+      "integrityAlerts": 0
+    },
+    "metadata": {
+      "catalogType": "skill",
+      "sourceConfidence": "vetted-curated",
+      "awesomeClaudeCodeId": "hook-73da34c7",
+      "awesomeClaudeCodeCategory": "Hooks",
+      "authorName": "Talieisin",
+      "license": "MIT",
+      "sourceRegistryId": "awesome-claude-code",
+      "sourceType": "community-list"
+    }
+  },
+  {
     "id": "skill:building-secure-contracts",
     "kind": "skill",
     "name": "building-secure-contracts",
@@ -350,7 +906,7 @@
       "node"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-22",
+    "lastSeenAt": "2026-03-23",
     "install": {
       "kind": "skill.sh",
       "target": "building-secure-contracts",
@@ -394,7 +950,7 @@
       "github"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-22",
+    "lastSeenAt": "2026-03-23",
     "install": {
       "kind": "skill.sh",
       "target": "burpsuite-project-parser",
@@ -451,7 +1007,7 @@
       "node"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-22",
+    "lastSeenAt": "2026-03-23",
     "install": {
       "kind": "skill.sh",
       "target": "canvas-design",
@@ -482,6 +1038,259 @@
     }
   },
   {
+    "id": "skill:cc-devops-skills",
+    "kind": "skill",
+    "name": "cc-devops-skills",
+    "description": "Immensely detailed set of skills for DevOps Engineers (or anyone who has to deploy code, really). Works with validations, generators, shell scripts and CLI tools to create high quality IaC code for about any platform you've ever struggled painfully to work with. Worth downloading even just as a source of documentation.",
+    "provider": "github",
+    "capabilities": [
+      "automation",
+      "docs",
+      "orchestration"
+    ],
+    "compatibility": [
+      "claude-code"
+    ],
+    "source": "awesome-claude-code",
+    "lastSeenAt": "2026-03-23",
+    "install": {
+      "kind": "manual",
+      "instructions": "Visit the linked repository and follow its installation instructions.",
+      "url": "https://github.com/akin-ozer/cc-devops-skills"
+    },
+    "adoptionSignal": 72,
+    "maintenanceSignal": 78,
+    "provenanceSignal": 82,
+    "freshnessSignal": 72,
+    "securitySignals": {
+      "knownVulnerabilities": 0,
+      "suspiciousPatterns": 0,
+      "injectionFindings": 0,
+      "exfiltrationSignals": 0,
+      "integrityAlerts": 0
+    },
+    "metadata": {
+      "catalogType": "skill",
+      "sourceConfidence": "vetted-curated",
+      "awesomeClaudeCodeId": "skill-a9ada349",
+      "awesomeClaudeCodeCategory": "Agent Skills",
+      "authorName": "akin-ozer",
+      "license": "Apache-2.0",
+      "releaseVersion": "v1.0.0",
+      "sourceRegistryId": "awesome-claude-code",
+      "sourceType": "community-list"
+    }
+  },
+  {
+    "id": "skill:cc-tools",
+    "kind": "skill",
+    "name": "cc-tools",
+    "description": "High-performance Go implementation of Claude Code hooks and utilities. Provides smart linting, testing, and statusline generation with minimal overhead.",
+    "provider": "github",
+    "capabilities": [
+      "guardrails"
+    ],
+    "compatibility": [
+      "claude-code"
+    ],
+    "source": "awesome-claude-code",
+    "lastSeenAt": "2026-03-23",
+    "install": {
+      "kind": "manual",
+      "instructions": "Visit the linked repository and follow its installation instructions.",
+      "url": "https://github.com/Veraticus/cc-tools"
+    },
+    "adoptionSignal": 72,
+    "maintenanceSignal": 70,
+    "provenanceSignal": 82,
+    "freshnessSignal": 72,
+    "securitySignals": {
+      "knownVulnerabilities": 0,
+      "suspiciousPatterns": 0,
+      "injectionFindings": 0,
+      "exfiltrationSignals": 0,
+      "integrityAlerts": 0
+    },
+    "metadata": {
+      "catalogType": "skill",
+      "sourceConfidence": "vetted-curated",
+      "awesomeClaudeCodeId": "hook-edd83641",
+      "awesomeClaudeCodeCategory": "Tooling",
+      "authorName": "Josh Symonds",
+      "license": "NOT_FOUND",
+      "sourceRegistryId": "awesome-claude-code",
+      "sourceType": "community-list"
+    }
+  },
+  {
+    "id": "skill:cc-usage",
+    "kind": "skill",
+    "name": "CC Usage",
+    "description": "Handy CLI tool for managing and analyzing Claude Code usage, based on analyzing local Claude Code logs. Presents a nice dashboard regarding cost information, token consumption, etc.",
+    "provider": "github",
+    "capabilities": [
+      "automation"
+    ],
+    "compatibility": [
+      "claude-code"
+    ],
+    "source": "awesome-claude-code",
+    "lastSeenAt": "2026-03-23",
+    "install": {
+      "kind": "manual",
+      "instructions": "Visit the linked repository and follow its installation instructions.",
+      "url": "https://github.com/ryoppippi/ccusage"
+    },
+    "adoptionSignal": 72,
+    "maintenanceSignal": 78,
+    "provenanceSignal": 82,
+    "freshnessSignal": 72,
+    "securitySignals": {
+      "knownVulnerabilities": 0,
+      "suspiciousPatterns": 0,
+      "injectionFindings": 0,
+      "exfiltrationSignals": 0,
+      "integrityAlerts": 0
+    },
+    "metadata": {
+      "catalogType": "skill",
+      "sourceConfidence": "vetted-curated",
+      "awesomeClaudeCodeId": "tool-631dbe0f",
+      "awesomeClaudeCodeCategory": "Tooling",
+      "authorName": "ryoppippi",
+      "license": "NOASSERTION",
+      "releaseVersion": "v18.0.10",
+      "sourceRegistryId": "awesome-claude-code",
+      "sourceType": "community-list"
+    }
+  },
+  {
+    "id": "skill:ccflare-better-ccflare",
+    "kind": "skill",
+    "name": "ccflare -> **better-ccflare**",
+    "description": "A well-maintained and feature-enhanced fork of the glorious `ccflare` usage dashboard by @snipeship (which at the time of writing has not had an update in a few months). `better-ccflare` builds on this foundation with some performance enhancements, extended provider support, bug fixes, Docker deployment, and more.",
+    "provider": "github",
+    "capabilities": [
+      "automation",
+      "frontend"
+    ],
+    "compatibility": [
+      "claude-code"
+    ],
+    "source": "awesome-claude-code",
+    "lastSeenAt": "2026-03-23",
+    "install": {
+      "kind": "manual",
+      "instructions": "Visit the linked repository and follow its installation instructions.",
+      "url": "https://github.com/tombii/better-ccflare/"
+    },
+    "adoptionSignal": 72,
+    "maintenanceSignal": 78,
+    "provenanceSignal": 82,
+    "freshnessSignal": 72,
+    "securitySignals": {
+      "knownVulnerabilities": 0,
+      "suspiciousPatterns": 0,
+      "injectionFindings": 0,
+      "exfiltrationSignals": 0,
+      "integrityAlerts": 0
+    },
+    "metadata": {
+      "catalogType": "skill",
+      "sourceConfidence": "vetted-curated",
+      "awesomeClaudeCodeId": "tool-fe142d2f",
+      "awesomeClaudeCodeCategory": "Tooling",
+      "authorName": "tombii",
+      "license": "MIT",
+      "releaseVersion": "v3.3.10",
+      "sourceRegistryId": "awesome-claude-code",
+      "sourceType": "community-list"
+    }
+  },
+  {
+    "id": "skill:ccometixline-claude-code-statusline",
+    "kind": "skill",
+    "name": "CCometixLine - Claude Code Statusline",
+    "description": "A high-performance Claude Code statusline tool written in Rust with Git integration, usage tracking, interactive TUI configuration, and Claude Code enhancement utilities.",
+    "provider": "github",
+    "capabilities": [
+      "frontend"
+    ],
+    "compatibility": [
+      "claude-code"
+    ],
+    "source": "awesome-claude-code",
+    "lastSeenAt": "2026-03-23",
+    "install": {
+      "kind": "manual",
+      "instructions": "Visit the linked repository and follow its installation instructions.",
+      "url": "https://github.com/Haleclipse/CCometixLine"
+    },
+    "adoptionSignal": 72,
+    "maintenanceSignal": 78,
+    "provenanceSignal": 82,
+    "freshnessSignal": 72,
+    "securitySignals": {
+      "knownVulnerabilities": 0,
+      "suspiciousPatterns": 0,
+      "injectionFindings": 0,
+      "exfiltrationSignals": 0,
+      "integrityAlerts": 0
+    },
+    "metadata": {
+      "catalogType": "skill",
+      "sourceConfidence": "vetted-curated",
+      "awesomeClaudeCodeId": "status-d69e91f3",
+      "awesomeClaudeCodeCategory": "Status Lines",
+      "authorName": "Haleclipse",
+      "license": "NOT_FOUND",
+      "releaseVersion": "v1.1.2",
+      "sourceRegistryId": "awesome-claude-code",
+      "sourceType": "community-list"
+    }
+  },
+  {
+    "id": "skill:ccstatusline",
+    "kind": "skill",
+    "name": "ccstatusline",
+    "description": "A highly customizable status line formatter for Claude Code CLI that displays model info, git branch, token usage, and other metrics in your terminal.",
+    "provider": "github",
+    "capabilities": [
+      "automation"
+    ],
+    "compatibility": [
+      "claude-code"
+    ],
+    "source": "awesome-claude-code",
+    "lastSeenAt": "2026-03-23",
+    "install": {
+      "kind": "manual",
+      "instructions": "Visit the linked repository and follow its installation instructions.",
+      "url": "https://github.com/sirmalloc/ccstatusline"
+    },
+    "adoptionSignal": 72,
+    "maintenanceSignal": 70,
+    "provenanceSignal": 82,
+    "freshnessSignal": 72,
+    "securitySignals": {
+      "knownVulnerabilities": 0,
+      "suspiciousPatterns": 0,
+      "injectionFindings": 0,
+      "exfiltrationSignals": 0,
+      "integrityAlerts": 0
+    },
+    "metadata": {
+      "catalogType": "skill",
+      "sourceConfidence": "vetted-curated",
+      "awesomeClaudeCodeId": "status-4e8a47cf",
+      "awesomeClaudeCodeCategory": "Status Lines",
+      "authorName": "sirmalloc",
+      "license": "MIT",
+      "sourceRegistryId": "awesome-claude-code",
+      "sourceType": "community-list"
+    }
+  },
+  {
     "id": "skill:chatgpt-apps",
     "kind": "skill",
     "name": "Chatgpt Apps",
@@ -494,7 +1303,7 @@
       "general"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-22",
+    "lastSeenAt": "2026-03-23",
     "install": {
       "kind": "skill.sh",
       "target": "Chatgpt Apps",
@@ -536,7 +1345,7 @@
       "node"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-22",
+    "lastSeenAt": "2026-03-23",
     "install": {
       "kind": "skill.sh",
       "target": "ci-hardening",
@@ -560,6 +1369,50 @@
     }
   },
   {
+    "id": "skill:claudable",
+    "kind": "skill",
+    "name": "Claudable",
+    "description": "Claudable is an open-source web builder that leverages local CLI agents, such as Claude Code and Cursor Agent, to build and deploy products effortlessly.",
+    "provider": "github",
+    "capabilities": [
+      "automation",
+      "frontend",
+      "orchestration"
+    ],
+    "compatibility": [
+      "claude-code"
+    ],
+    "source": "awesome-claude-code",
+    "lastSeenAt": "2026-03-23",
+    "install": {
+      "kind": "manual",
+      "instructions": "Visit the linked repository and follow its installation instructions.",
+      "url": "https://github.com/opactorai/Claudable"
+    },
+    "adoptionSignal": 72,
+    "maintenanceSignal": 78,
+    "provenanceSignal": 82,
+    "freshnessSignal": 72,
+    "securitySignals": {
+      "knownVulnerabilities": 0,
+      "suspiciousPatterns": 0,
+      "injectionFindings": 0,
+      "exfiltrationSignals": 0,
+      "integrityAlerts": 0
+    },
+    "metadata": {
+      "catalogType": "skill",
+      "sourceConfidence": "vetted-curated",
+      "awesomeClaudeCodeId": "client-5cae6333",
+      "awesomeClaudeCodeCategory": "Alternative Clients",
+      "authorName": "Ethan Park",
+      "license": "MIT",
+      "releaseVersion": "v1.0.0",
+      "sourceRegistryId": "awesome-claude-code",
+      "sourceType": "community-list"
+    }
+  },
+  {
     "id": "skill:claude-api",
     "kind": "skill",
     "name": "claude-api",
@@ -577,7 +1430,7 @@
       "node"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-22",
+    "lastSeenAt": "2026-03-23",
     "install": {
       "kind": "skill.sh",
       "target": "claude-api",
@@ -608,6 +1461,953 @@
     }
   },
   {
+    "id": "skill:claude-code-agents",
+    "kind": "skill",
+    "name": "Claude Code Agents",
+    "description": "Comprehensive E2E development workflow with helpful Claude Code subagent prompts for solo devs. Run multiple auditors in parallel, automate fix cycles with micro-checkpoint protocols, and do browser-based QA. Includes strict protocols to prevent AI going rogue.",
+    "provider": "github",
+    "capabilities": [
+      "automation",
+      "guardrails",
+      "orchestration",
+      "security"
+    ],
+    "compatibility": [
+      "claude-code"
+    ],
+    "source": "awesome-claude-code",
+    "lastSeenAt": "2026-03-23",
+    "install": {
+      "kind": "manual",
+      "instructions": "Visit the linked repository and follow its installation instructions.",
+      "url": "https://github.com/undeadlist/claude-code-agents"
+    },
+    "adoptionSignal": 72,
+    "maintenanceSignal": 70,
+    "provenanceSignal": 82,
+    "freshnessSignal": 72,
+    "securitySignals": {
+      "knownVulnerabilities": 0,
+      "suspiciousPatterns": 0,
+      "injectionFindings": 0,
+      "exfiltrationSignals": 0,
+      "integrityAlerts": 0
+    },
+    "metadata": {
+      "catalogType": "skill",
+      "sourceConfidence": "vetted-curated",
+      "awesomeClaudeCodeId": "skill-448a4572",
+      "awesomeClaudeCodeCategory": "Agent Skills",
+      "authorName": "Paul - UndeadList",
+      "license": "MIT",
+      "sourceRegistryId": "awesome-claude-code",
+      "sourceType": "community-list"
+    }
+  },
+  {
+    "id": "skill:claude-code-chat",
+    "kind": "skill",
+    "name": "Claude Code Chat",
+    "description": "An elegant and user-friendly Claude Code chat interface for VS Code.",
+    "provider": "github",
+    "capabilities": [
+      "automation"
+    ],
+    "compatibility": [
+      "claude-code"
+    ],
+    "source": "awesome-claude-code",
+    "lastSeenAt": "2026-03-23",
+    "install": {
+      "kind": "manual",
+      "instructions": "Visit the linked repository and follow its installation instructions."
+    },
+    "adoptionSignal": 72,
+    "maintenanceSignal": 62,
+    "provenanceSignal": 82,
+    "freshnessSignal": 60,
+    "securitySignals": {
+      "knownVulnerabilities": 0,
+      "suspiciousPatterns": 0,
+      "injectionFindings": 0,
+      "exfiltrationSignals": 0,
+      "integrityAlerts": 0
+    },
+    "metadata": {
+      "catalogType": "skill",
+      "sourceConfidence": "vetted-curated",
+      "awesomeClaudeCodeId": "tool-984936a7",
+      "awesomeClaudeCodeCategory": "Tooling",
+      "authorName": "andrepimenta",
+      "license": "&copy;",
+      "sourceRegistryId": "awesome-claude-code",
+      "sourceType": "community-list"
+    }
+  },
+  {
+    "id": "skill:claude-code-docs",
+    "kind": "skill",
+    "name": "claude-code-docs",
+    "description": "A mirror of the Anthropic&copy; PBC documentation site for Claude/Code, but with bonus features like full-text search and query-time updates - a nice companion to `claude-code-docs` for up-to-the-minute, fully-indexed information so that Claude Code can read about itself.",
+    "provider": "github",
+    "capabilities": [
+      "automation",
+      "docs",
+      "frontend"
+    ],
+    "compatibility": [
+      "claude-code"
+    ],
+    "source": "awesome-claude-code",
+    "lastSeenAt": "2026-03-23",
+    "install": {
+      "kind": "manual",
+      "instructions": "Visit the linked repository and follow its installation instructions.",
+      "url": "https://github.com/costiash/claude-code-docs"
+    },
+    "adoptionSignal": 72,
+    "maintenanceSignal": 78,
+    "provenanceSignal": 82,
+    "freshnessSignal": 72,
+    "securitySignals": {
+      "knownVulnerabilities": 0,
+      "suspiciousPatterns": 0,
+      "injectionFindings": 0,
+      "exfiltrationSignals": 0,
+      "integrityAlerts": 0
+    },
+    "metadata": {
+      "catalogType": "skill",
+      "sourceConfidence": "vetted-curated",
+      "awesomeClaudeCodeId": "wf-dfd3f3db",
+      "awesomeClaudeCodeCategory": "Workflows & Knowledge Guides",
+      "authorName": "Constantin Shafranski",
+      "license": "MIT",
+      "releaseVersion": "v0.6.0",
+      "sourceRegistryId": "awesome-claude-code",
+      "sourceType": "community-list"
+    }
+  },
+  {
+    "id": "skill:claude-code-documentation-mirror",
+    "kind": "skill",
+    "name": "Claude Code Documentation Mirror",
+    "description": "A mirror of the Anthropic &copy; PBC documentation pages for Claude Code, updated every few hours. Can come in handy when trying to stay on top of the ever-expanding feature-set of Dr. Claw D. Code, Ph.D.",
+    "provider": "github",
+    "capabilities": [
+      "automation",
+      "docs",
+      "frontend"
+    ],
+    "compatibility": [
+      "claude-code"
+    ],
+    "source": "awesome-claude-code",
+    "lastSeenAt": "2026-03-23",
+    "install": {
+      "kind": "manual",
+      "instructions": "Visit the linked repository and follow its installation instructions.",
+      "url": "https://github.com/ericbuess/claude-code-docs"
+    },
+    "adoptionSignal": 72,
+    "maintenanceSignal": 78,
+    "provenanceSignal": 82,
+    "freshnessSignal": 72,
+    "securitySignals": {
+      "knownVulnerabilities": 0,
+      "suspiciousPatterns": 0,
+      "injectionFindings": 0,
+      "exfiltrationSignals": 0,
+      "integrityAlerts": 0
+    },
+    "metadata": {
+      "catalogType": "skill",
+      "sourceConfidence": "vetted-curated",
+      "awesomeClaudeCodeId": "wf-af6dda20",
+      "awesomeClaudeCodeCategory": "Workflows & Knowledge Guides",
+      "authorName": "Eric Buess",
+      "license": "NOASSERTION",
+      "releaseVersion": "v0.3.3",
+      "sourceRegistryId": "awesome-claude-code",
+      "sourceType": "community-list"
+    }
+  },
+  {
+    "id": "skill:claude-code-el",
+    "kind": "skill",
+    "name": "claude-code.el",
+    "description": "An Emacs interface for Claude Code CLI.",
+    "provider": "github",
+    "capabilities": [
+      "automation"
+    ],
+    "compatibility": [
+      "claude-code"
+    ],
+    "source": "awesome-claude-code",
+    "lastSeenAt": "2026-03-23",
+    "install": {
+      "kind": "manual",
+      "instructions": "Visit the linked repository and follow its installation instructions.",
+      "url": "https://github.com/stevemolitor/claude-code.el"
+    },
+    "adoptionSignal": 72,
+    "maintenanceSignal": 70,
+    "provenanceSignal": 82,
+    "freshnessSignal": 72,
+    "securitySignals": {
+      "knownVulnerabilities": 0,
+      "suspiciousPatterns": 0,
+      "injectionFindings": 0,
+      "exfiltrationSignals": 0,
+      "integrityAlerts": 0
+    },
+    "metadata": {
+      "catalogType": "skill",
+      "sourceConfidence": "vetted-curated",
+      "awesomeClaudeCodeId": "tool-941ef941",
+      "awesomeClaudeCodeCategory": "Tooling",
+      "authorName": "stevemolitor",
+      "license": "Apache-2.0",
+      "sourceRegistryId": "awesome-claude-code",
+      "sourceType": "community-list"
+    }
+  },
+  {
+    "id": "skill:claude-code-flow",
+    "kind": "skill",
+    "name": "Claude Code Flow",
+    "description": "This mode serves as a code-first orchestration layer, enabling Claude to write, edit, test, and optimize code autonomously across recursive agent cycles.",
+    "provider": "github",
+    "capabilities": [
+      "guardrails",
+      "orchestration"
+    ],
+    "compatibility": [
+      "claude-code"
+    ],
+    "source": "awesome-claude-code",
+    "lastSeenAt": "2026-03-23",
+    "install": {
+      "kind": "manual",
+      "instructions": "Visit the linked repository and follow its installation instructions.",
+      "url": "https://github.com/ruvnet/claude-code-flow"
+    },
+    "adoptionSignal": 72,
+    "maintenanceSignal": 78,
+    "provenanceSignal": 82,
+    "freshnessSignal": 72,
+    "securitySignals": {
+      "knownVulnerabilities": 0,
+      "suspiciousPatterns": 0,
+      "injectionFindings": 0,
+      "exfiltrationSignals": 0,
+      "integrityAlerts": 0
+    },
+    "metadata": {
+      "catalogType": "skill",
+      "sourceConfidence": "vetted-curated",
+      "awesomeClaudeCodeId": "tool-3b3bedca",
+      "awesomeClaudeCodeCategory": "Tooling",
+      "authorName": "ruvnet",
+      "license": "MIT",
+      "releaseVersion": "v3.5.15",
+      "sourceRegistryId": "awesome-claude-code",
+      "sourceType": "community-list"
+    }
+  },
+  {
+    "id": "skill:claude-code-github-actions",
+    "kind": "skill",
+    "name": "Claude Code GitHub Actions",
+    "description": "Official GitHub Actions integration for Claude Code with examples and documentation for automating AI-powered workflows in CI/CD pipelines.",
+    "provider": "github",
+    "capabilities": [
+      "automation",
+      "docs"
+    ],
+    "compatibility": [
+      "claude-code"
+    ],
+    "source": "awesome-claude-code",
+    "lastSeenAt": "2026-03-23",
+    "install": {
+      "kind": "manual",
+      "instructions": "Visit the linked repository and follow its installation instructions.",
+      "url": "https://github.com/anthropics/claude-code-action/tree/main/examples"
+    },
+    "adoptionSignal": 72,
+    "maintenanceSignal": 78,
+    "provenanceSignal": 82,
+    "freshnessSignal": 72,
+    "securitySignals": {
+      "knownVulnerabilities": 0,
+      "suspiciousPatterns": 0,
+      "injectionFindings": 0,
+      "exfiltrationSignals": 0,
+      "integrityAlerts": 0
+    },
+    "metadata": {
+      "catalogType": "skill",
+      "sourceConfidence": "vetted-curated",
+      "awesomeClaudeCodeId": "doc-9703ea36",
+      "awesomeClaudeCodeCategory": "Official Documentation",
+      "authorName": "Anthropic",
+      "license": "MIT",
+      "releaseVersion": "v1",
+      "sourceRegistryId": "awesome-claude-code",
+      "sourceType": "community-list"
+    }
+  },
+  {
+    "id": "skill:claude-code-handbook",
+    "kind": "skill",
+    "name": "Claude Code Handbook",
+    "description": "Collection of best practices, tips, and techniques for Claude Code development workflows, enhanced with distributable plugins",
+    "provider": "github",
+    "capabilities": [
+      "automation",
+      "docs",
+      "frontend"
+    ],
+    "compatibility": [
+      "claude-code"
+    ],
+    "source": "awesome-claude-code",
+    "lastSeenAt": "2026-03-23",
+    "install": {
+      "kind": "manual",
+      "instructions": "Visit the linked repository and follow its installation instructions."
+    },
+    "adoptionSignal": 72,
+    "maintenanceSignal": 62,
+    "provenanceSignal": 82,
+    "freshnessSignal": 60,
+    "securitySignals": {
+      "knownVulnerabilities": 0,
+      "suspiciousPatterns": 0,
+      "injectionFindings": 0,
+      "exfiltrationSignals": 0,
+      "integrityAlerts": 0
+    },
+    "metadata": {
+      "catalogType": "skill",
+      "sourceConfidence": "vetted-curated",
+      "awesomeClaudeCodeId": "wf-fd5a0e6b",
+      "awesomeClaudeCodeCategory": "Workflows & Knowledge Guides",
+      "authorName": "nikiforovall",
+      "license": "MIT",
+      "sourceRegistryId": "awesome-claude-code",
+      "sourceType": "community-list"
+    }
+  },
+  {
+    "id": "skill:claude-code-hook-comms-hcom",
+    "kind": "skill",
+    "name": "Claude Code Hook Comms (HCOM)",
+    "description": "Lightweight CLI tool for real-time communication between Claude Code sub agents using hooks. Enables multi-agent collaboration with @-mention targeting, live dashboard monitoring, and zero-dependency implementation. [NOTE: At the time of posting, this resource is a little unstable - I'm sharing it anyway, because I thi",
+    "provider": "github",
+    "capabilities": [
+      "orchestration"
+    ],
+    "compatibility": [
+      "claude-code"
+    ],
+    "source": "awesome-claude-code",
+    "lastSeenAt": "2026-03-23",
+    "install": {
+      "kind": "manual",
+      "instructions": "Visit the linked repository and follow its installation instructions.",
+      "url": "https://github.com/aannoo/claude-hook-comms"
+    },
+    "adoptionSignal": 72,
+    "maintenanceSignal": 78,
+    "provenanceSignal": 82,
+    "freshnessSignal": 72,
+    "securitySignals": {
+      "knownVulnerabilities": 0,
+      "suspiciousPatterns": 0,
+      "injectionFindings": 0,
+      "exfiltrationSignals": 0,
+      "integrityAlerts": 0
+    },
+    "metadata": {
+      "catalogType": "skill",
+      "sourceConfidence": "vetted-curated",
+      "awesomeClaudeCodeId": "hook-4b08835a",
+      "awesomeClaudeCodeCategory": "Hooks",
+      "authorName": "aannoo",
+      "license": "MIT",
+      "releaseVersion": "v0.7.4",
+      "sourceRegistryId": "awesome-claude-code",
+      "sourceType": "community-list"
+    }
+  },
+  {
+    "id": "skill:claude-code-hooks-sdk",
+    "kind": "skill",
+    "name": "claude-code-hooks-sdk",
+    "description": "A Laravel-inspired PHP SDK for building Claude Code hook responses with a clean, fluent API. This SDK makes it easy to create structured JSON responses for Claude Code hooks using an expressive, chainable interface.",
+    "provider": "github",
+    "capabilities": [
+      "frontend"
+    ],
+    "compatibility": [
+      "claude-code"
+    ],
+    "source": "awesome-claude-code",
+    "lastSeenAt": "2026-03-23",
+    "install": {
+      "kind": "manual",
+      "instructions": "Visit the linked repository and follow its installation instructions.",
+      "url": "https://github.com/beyondcode/claude-hooks-sdk"
+    },
+    "adoptionSignal": 72,
+    "maintenanceSignal": 78,
+    "provenanceSignal": 82,
+    "freshnessSignal": 72,
+    "securitySignals": {
+      "knownVulnerabilities": 0,
+      "suspiciousPatterns": 0,
+      "injectionFindings": 0,
+      "exfiltrationSignals": 0,
+      "integrityAlerts": 0
+    },
+    "metadata": {
+      "catalogType": "skill",
+      "sourceConfidence": "vetted-curated",
+      "awesomeClaudeCodeId": "hook-61fc561a",
+      "awesomeClaudeCodeCategory": "Hooks",
+      "authorName": "beyondcode",
+      "license": "MIT",
+      "releaseVersion": "0.1.0",
+      "sourceRegistryId": "awesome-claude-code",
+      "sourceType": "community-list"
+    }
+  },
+  {
+    "id": "skill:claude-code-ide-el",
+    "kind": "skill",
+    "name": "claude-code-ide.el",
+    "description": "claude-code-ide.el integrates Claude Code with Emacs, like Anthropic’s VS Code/IntelliJ extensions. It shows ediff-based code suggestions, pulls LSP/flymake/flycheck diagnostics, and tracks buffer context. It adds an extensible MCP tool support for symbol refs/defs, project metadata, and tree-sitter AST queries.",
+    "provider": "github",
+    "capabilities": [
+      "automation"
+    ],
+    "compatibility": [
+      "claude-code"
+    ],
+    "source": "awesome-claude-code",
+    "lastSeenAt": "2026-03-23",
+    "install": {
+      "kind": "manual",
+      "instructions": "Visit the linked repository and follow its installation instructions.",
+      "url": "https://github.com/manzaltu/claude-code-ide.el"
+    },
+    "adoptionSignal": 72,
+    "maintenanceSignal": 70,
+    "provenanceSignal": 82,
+    "freshnessSignal": 72,
+    "securitySignals": {
+      "knownVulnerabilities": 0,
+      "suspiciousPatterns": 0,
+      "injectionFindings": 0,
+      "exfiltrationSignals": 0,
+      "integrityAlerts": 0
+    },
+    "metadata": {
+      "catalogType": "skill",
+      "sourceConfidence": "vetted-curated",
+      "awesomeClaudeCodeId": "tool-5ab1a854",
+      "awesomeClaudeCodeCategory": "Tooling",
+      "authorName": "manzaltu",
+      "license": "GPL-3.0",
+      "sourceRegistryId": "awesome-claude-code",
+      "sourceType": "community-list"
+    }
+  },
+  {
+    "id": "skill:claude-code-nvim",
+    "kind": "skill",
+    "name": "claude-code.nvim",
+    "description": "A seamless integration between Claude Code AI assistant and Neovim.",
+    "provider": "github",
+    "capabilities": [
+      "automation"
+    ],
+    "compatibility": [
+      "claude-code"
+    ],
+    "source": "awesome-claude-code",
+    "lastSeenAt": "2026-03-23",
+    "install": {
+      "kind": "manual",
+      "instructions": "Visit the linked repository and follow its installation instructions.",
+      "url": "https://github.com/greggh/claude-code.nvim"
+    },
+    "adoptionSignal": 72,
+    "maintenanceSignal": 78,
+    "provenanceSignal": 82,
+    "freshnessSignal": 72,
+    "securitySignals": {
+      "knownVulnerabilities": 0,
+      "suspiciousPatterns": 0,
+      "injectionFindings": 0,
+      "exfiltrationSignals": 0,
+      "integrityAlerts": 0
+    },
+    "metadata": {
+      "catalogType": "skill",
+      "sourceConfidence": "vetted-curated",
+      "awesomeClaudeCodeId": "tool-0607ef06",
+      "awesomeClaudeCodeCategory": "Tooling",
+      "authorName": "greggh",
+      "license": "MIT",
+      "releaseVersion": "v0.4.3",
+      "sourceRegistryId": "awesome-claude-code",
+      "sourceType": "community-list"
+    }
+  },
+  {
+    "id": "skill:claude-code-repos-index",
+    "kind": "skill",
+    "name": "Claude Code Repos Index",
+    "description": "This is either the work of a prolific genius, or a very clever bot (or both), although it hardly matters because the quality is so good - an index of 75+ Claude Code repositories published by the author - and I'm not talking about slop. CMS, system design, deep research, IoT, agentic workflows, server management, perso",
+    "provider": "github",
+    "capabilities": [
+      "automation",
+      "docs",
+      "frontend",
+      "orchestration"
+    ],
+    "compatibility": [
+      "claude-code"
+    ],
+    "source": "awesome-claude-code",
+    "lastSeenAt": "2026-03-23",
+    "install": {
+      "kind": "manual",
+      "instructions": "Visit the linked repository and follow its installation instructions.",
+      "url": "https://github.com/danielrosehill/Claude-Code-Repos-Index"
+    },
+    "adoptionSignal": 72,
+    "maintenanceSignal": 70,
+    "provenanceSignal": 82,
+    "freshnessSignal": 72,
+    "securitySignals": {
+      "knownVulnerabilities": 0,
+      "suspiciousPatterns": 0,
+      "injectionFindings": 0,
+      "exfiltrationSignals": 0,
+      "integrityAlerts": 0
+    },
+    "metadata": {
+      "catalogType": "skill",
+      "sourceConfidence": "vetted-curated",
+      "awesomeClaudeCodeId": "wf-fc9e9c97",
+      "awesomeClaudeCodeCategory": "Workflows & Knowledge Guides",
+      "authorName": "Daniel Rosehill",
+      "license": "NOT_FOUND",
+      "sourceRegistryId": "awesome-claude-code",
+      "sourceType": "community-list"
+    }
+  },
+  {
+    "id": "skill:claude-code-statusline",
+    "kind": "skill",
+    "name": "claude-code-statusline",
+    "description": "Enhanced 4-line statusline for Claude Code with themes, cost tracking, and MCP server monitoring",
+    "provider": "github",
+    "capabilities": [
+      "automation"
+    ],
+    "compatibility": [
+      "claude-code"
+    ],
+    "source": "awesome-claude-code",
+    "lastSeenAt": "2026-03-23",
+    "install": {
+      "kind": "manual",
+      "instructions": "Visit the linked repository and follow its installation instructions.",
+      "url": "https://github.com/rz1989s/claude-code-statusline"
+    },
+    "adoptionSignal": 72,
+    "maintenanceSignal": 78,
+    "provenanceSignal": 82,
+    "freshnessSignal": 72,
+    "securitySignals": {
+      "knownVulnerabilities": 0,
+      "suspiciousPatterns": 0,
+      "injectionFindings": 0,
+      "exfiltrationSignals": 0,
+      "integrityAlerts": 0
+    },
+    "metadata": {
+      "catalogType": "skill",
+      "sourceConfidence": "vetted-curated",
+      "awesomeClaudeCodeId": "status-83779330",
+      "awesomeClaudeCodeCategory": "Status Lines",
+      "authorName": "rz1989s",
+      "license": "MIT",
+      "releaseVersion": "v2.21.5",
+      "sourceRegistryId": "awesome-claude-code",
+      "sourceType": "community-list"
+    }
+  },
+  {
+    "id": "skill:claude-code-system-prompts",
+    "kind": "skill",
+    "name": "Claude Code System Prompts",
+    "description": "All parts of Claude Code's system prompt, including builtin tool descriptions, sub agent prompts (Plan/Explore/Task), utility prompts (CLAUDE.md, compact, Bash cmd, security review, agent creation, etc.). Updated for each Claude Code version.",
+    "provider": "github",
+    "capabilities": [
+      "automation",
+      "docs",
+      "frontend",
+      "guardrails",
+      "orchestration",
+      "security"
+    ],
+    "compatibility": [
+      "claude-code"
+    ],
+    "source": "awesome-claude-code",
+    "lastSeenAt": "2026-03-23",
+    "install": {
+      "kind": "manual",
+      "instructions": "Visit the linked repository and follow its installation instructions.",
+      "url": "https://github.com/Piebald-AI/claude-code-system-prompts"
+    },
+    "adoptionSignal": 72,
+    "maintenanceSignal": 78,
+    "provenanceSignal": 82,
+    "freshnessSignal": 72,
+    "securitySignals": {
+      "knownVulnerabilities": 0,
+      "suspiciousPatterns": 0,
+      "injectionFindings": 0,
+      "exfiltrationSignals": 0,
+      "integrityAlerts": 0
+    },
+    "metadata": {
+      "catalogType": "skill",
+      "sourceConfidence": "vetted-curated",
+      "awesomeClaudeCodeId": "wf-b3c6f3e1",
+      "awesomeClaudeCodeCategory": "Workflows & Knowledge Guides",
+      "authorName": "Piebald AI",
+      "license": "MIT",
+      "releaseVersion": "v2.1.76",
+      "sourceRegistryId": "awesome-claude-code",
+      "sourceType": "community-list"
+    }
+  },
+  {
+    "id": "skill:claude-code-templates",
+    "kind": "skill",
+    "name": "Claude Code Templates",
+    "description": "Incredibly awesome collection of resources from every category in this list, presented with a neatly polished UI, great features like usage dashboard, analytics, and everything from slash commands to hooks to agents. An awesome companion for this awesome list.",
+    "provider": "github",
+    "capabilities": [
+      "frontend",
+      "orchestration"
+    ],
+    "compatibility": [
+      "claude-code"
+    ],
+    "source": "awesome-claude-code",
+    "lastSeenAt": "2026-03-23",
+    "install": {
+      "kind": "manual",
+      "instructions": "Visit the linked repository and follow its installation instructions.",
+      "url": "https://github.com/davila7/claude-code-templates"
+    },
+    "adoptionSignal": 72,
+    "maintenanceSignal": 78,
+    "provenanceSignal": 82,
+    "freshnessSignal": 72,
+    "securitySignals": {
+      "knownVulnerabilities": 0,
+      "suspiciousPatterns": 0,
+      "injectionFindings": 0,
+      "exfiltrationSignals": 0,
+      "integrityAlerts": 0
+    },
+    "metadata": {
+      "catalogType": "skill",
+      "sourceConfidence": "vetted-curated",
+      "awesomeClaudeCodeId": "tool-d95e578f",
+      "awesomeClaudeCodeCategory": "Tooling",
+      "authorName": "Daniel Avila",
+      "license": "MIT",
+      "releaseVersion": "v1.28.3",
+      "sourceRegistryId": "awesome-claude-code",
+      "sourceType": "community-list"
+    }
+  },
+  {
+    "id": "skill:claude-code-tips",
+    "kind": "skill",
+    "name": "Claude Code Tips",
+    "description": "A nice variety of 35+ brief but information-dense Claude Code tips covering voice input, system prompt patching, container workflows for risky tasks, conversation cloning(!), multi-model orchestration with Gemini CLI, and plenty more. Nice demos, working scripts, a plugin, I'd say this probably has a little something f",
+    "provider": "github",
+    "capabilities": [
+      "automation",
+      "docs",
+      "frontend",
+      "orchestration"
+    ],
+    "compatibility": [
+      "claude-code"
+    ],
+    "source": "awesome-claude-code",
+    "lastSeenAt": "2026-03-23",
+    "install": {
+      "kind": "manual",
+      "instructions": "Visit the linked repository and follow its installation instructions.",
+      "url": "https://github.com/ykdojo/claude-code-tips"
+    },
+    "adoptionSignal": 72,
+    "maintenanceSignal": 78,
+    "provenanceSignal": 82,
+    "freshnessSignal": 72,
+    "securitySignals": {
+      "knownVulnerabilities": 0,
+      "suspiciousPatterns": 0,
+      "injectionFindings": 0,
+      "exfiltrationSignals": 0,
+      "integrityAlerts": 0
+    },
+    "metadata": {
+      "catalogType": "skill",
+      "sourceConfidence": "vetted-curated",
+      "awesomeClaudeCodeId": "wf-cb2d350a",
+      "awesomeClaudeCodeCategory": "Workflows & Knowledge Guides",
+      "authorName": "ykdojo",
+      "license": "NOASSERTION",
+      "releaseVersion": "v0.26.0",
+      "sourceRegistryId": "awesome-claude-code",
+      "sourceType": "community-list"
+    }
+  },
+  {
+    "id": "skill:claude-code-tools",
+    "kind": "skill",
+    "name": "claude-code-tools",
+    "description": "Well-crafted toolset for session continuity, featuring skills/commands to avoid compaction and recover context across sessions with cross-agent handoff between Claude Code and Codex CLI. Includes a fast Rust/Tantivy-powered full-text session search (TUI for humans, skill/CLI for agents), tmux-cli skill + command for in",
+    "provider": "github",
+    "capabilities": [
+      "frontend",
+      "orchestration"
+    ],
+    "compatibility": [
+      "claude-code"
+    ],
+    "source": "awesome-claude-code",
+    "lastSeenAt": "2026-03-23",
+    "install": {
+      "kind": "manual",
+      "instructions": "Visit the linked repository and follow its installation instructions.",
+      "url": "https://github.com/pchalasani/claude-code-tools"
+    },
+    "adoptionSignal": 72,
+    "maintenanceSignal": 78,
+    "provenanceSignal": 82,
+    "freshnessSignal": 72,
+    "securitySignals": {
+      "knownVulnerabilities": 0,
+      "suspiciousPatterns": 0,
+      "injectionFindings": 0,
+      "exfiltrationSignals": 0,
+      "integrityAlerts": 0
+    },
+    "metadata": {
+      "catalogType": "skill",
+      "sourceConfidence": "vetted-curated",
+      "awesomeClaudeCodeId": "tool-3bb5a470",
+      "awesomeClaudeCodeCategory": "Tooling",
+      "authorName": "Prasad Chalasani",
+      "license": "MIT",
+      "releaseVersion": "v1.10.8",
+      "sourceRegistryId": "awesome-claude-code",
+      "sourceType": "community-list"
+    }
+  },
+  {
+    "id": "skill:claude-code-ultimate-guide",
+    "kind": "skill",
+    "name": "Claude Code Ultimate Guide",
+    "description": "A tremendous feat of documentation, this guide covers Claude Code from beginner to power user, with production-ready templates for Claude Code features, guides on agentic workflows, and a lot of great learning materials, including quizzes and a handy \"cheatsheet\". Whether it's the \"ultimate\" guide to Claude Code will b",
+    "provider": "github",
+    "capabilities": [
+      "automation",
+      "docs",
+      "frontend",
+      "orchestration"
+    ],
+    "compatibility": [
+      "claude-code"
+    ],
+    "source": "awesome-claude-code",
+    "lastSeenAt": "2026-03-23",
+    "install": {
+      "kind": "manual",
+      "instructions": "Visit the linked repository and follow its installation instructions.",
+      "url": "https://github.com/FlorianBruniaux/claude-code-ultimate-guide"
+    },
+    "adoptionSignal": 72,
+    "maintenanceSignal": 70,
+    "provenanceSignal": 82,
+    "freshnessSignal": 72,
+    "securitySignals": {
+      "knownVulnerabilities": 0,
+      "suspiciousPatterns": 0,
+      "injectionFindings": 0,
+      "exfiltrationSignals": 0,
+      "integrityAlerts": 0
+    },
+    "metadata": {
+      "catalogType": "skill",
+      "sourceConfidence": "vetted-curated",
+      "awesomeClaudeCodeId": "wf-918b0d98",
+      "awesomeClaudeCodeCategory": "Workflows & Knowledge Guides",
+      "authorName": "Florian BRUNIAUX",
+      "license": "CC-BY-SA-4.0",
+      "sourceRegistryId": "awesome-claude-code",
+      "sourceType": "community-list"
+    }
+  },
+  {
+    "id": "skill:claude-codepro",
+    "kind": "skill",
+    "name": "Claude CodePro",
+    "description": "Professional development environment for Claude Code with spec-driven workflow, TDD enforcement, cross-session memory, semantic search, quality hooks, and modular rules integration. A bit \"heavyweight\" but feature-packed and has wide coverage.",
+    "provider": "github",
+    "capabilities": [
+      "automation",
+      "docs",
+      "frontend"
+    ],
+    "compatibility": [
+      "claude-code"
+    ],
+    "source": "awesome-claude-code",
+    "lastSeenAt": "2026-03-23",
+    "install": {
+      "kind": "manual",
+      "instructions": "Visit the linked repository and follow its installation instructions.",
+      "url": "https://github.com/maxritter/claude-codepro"
+    },
+    "adoptionSignal": 72,
+    "maintenanceSignal": 78,
+    "provenanceSignal": 82,
+    "freshnessSignal": 72,
+    "securitySignals": {
+      "knownVulnerabilities": 0,
+      "suspiciousPatterns": 0,
+      "injectionFindings": 0,
+      "exfiltrationSignals": 0,
+      "integrityAlerts": 0
+    },
+    "metadata": {
+      "catalogType": "skill",
+      "sourceConfidence": "vetted-curated",
+      "awesomeClaudeCodeId": "wf-84b47071",
+      "awesomeClaudeCodeCategory": "Workflows & Knowledge Guides",
+      "authorName": "Max Ritter",
+      "license": "NOASSERTION",
+      "releaseVersion": "v7.5.7",
+      "sourceRegistryId": "awesome-claude-code",
+      "sourceType": "community-list"
+    }
+  },
+  {
+    "id": "skill:claude-codex-settings",
+    "kind": "skill",
+    "name": "Claude Codex Settings",
+    "description": "A well-organized, well-written set of plugins covering core developer activities, such as working with common cloud platforms like GitHub, Azure, MongoDB, and popular services such as Tavily, Playwright, and more. Clear, not overly-opinionated, and compatible with a few other providers.",
+    "provider": "github",
+    "capabilities": [
+      "data",
+      "orchestration"
+    ],
+    "compatibility": [
+      "claude-code"
+    ],
+    "source": "awesome-claude-code",
+    "lastSeenAt": "2026-03-23",
+    "install": {
+      "kind": "manual",
+      "instructions": "Visit the linked repository and follow its installation instructions.",
+      "url": "https://github.com/fcakyon/claude-codex-settings"
+    },
+    "adoptionSignal": 72,
+    "maintenanceSignal": 78,
+    "provenanceSignal": 82,
+    "freshnessSignal": 72,
+    "securitySignals": {
+      "knownVulnerabilities": 0,
+      "suspiciousPatterns": 0,
+      "injectionFindings": 0,
+      "exfiltrationSignals": 0,
+      "integrityAlerts": 0
+    },
+    "metadata": {
+      "catalogType": "skill",
+      "sourceConfidence": "vetted-curated",
+      "awesomeClaudeCodeId": "skill-50f919d5",
+      "awesomeClaudeCodeCategory": "Agent Skills",
+      "authorName": "fatih akyon",
+      "license": "Apache-2.0",
+      "releaseVersion": "v2.2.0",
+      "sourceRegistryId": "awesome-claude-code",
+      "sourceType": "community-list"
+    }
+  },
+  {
+    "id": "skill:claude-esp",
+    "kind": "skill",
+    "name": "claude-esp",
+    "description": "Go-based TUI that streams Claude Code's hidden output (thinking, tool calls, subagents) to a separate terminal. Watch multiple sessions simultaneously, filter by content type, and track background tasks. Ideal for debugging or understanding what Claude is doing under the hood without interrupting your main session.",
+    "provider": "github",
+    "capabilities": [
+      "frontend",
+      "guardrails",
+      "orchestration"
+    ],
+    "compatibility": [
+      "claude-code"
+    ],
+    "source": "awesome-claude-code",
+    "lastSeenAt": "2026-03-23",
+    "install": {
+      "kind": "manual",
+      "instructions": "Visit the linked repository and follow its installation instructions.",
+      "url": "https://github.com/phiat/claude-esp"
+    },
+    "adoptionSignal": 72,
+    "maintenanceSignal": 78,
+    "provenanceSignal": 82,
+    "freshnessSignal": 72,
+    "securitySignals": {
+      "knownVulnerabilities": 0,
+      "suspiciousPatterns": 0,
+      "injectionFindings": 0,
+      "exfiltrationSignals": 0,
+      "integrityAlerts": 0
+    },
+    "metadata": {
+      "catalogType": "skill",
+      "sourceConfidence": "vetted-curated",
+      "awesomeClaudeCodeId": "client-10858fb6",
+      "awesomeClaudeCodeCategory": "Alternative Clients",
+      "authorName": "phiat",
+      "license": "MIT",
+      "releaseVersion": "v0.3.1",
+      "sourceRegistryId": "awesome-claude-code",
+      "sourceType": "community-list"
+    }
+  },
+  {
     "id": "skill:claude-in-chrome-troubleshooting",
     "kind": "skill",
     "name": "claude-in-chrome-troubleshooting",
@@ -623,7 +2423,7 @@
       "node"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-22",
+    "lastSeenAt": "2026-03-23",
     "install": {
       "kind": "skill.sh",
       "target": "claude-in-chrome-troubleshooting",
@@ -652,6 +2452,723 @@
     }
   },
   {
+    "id": "skill:claude-mountaineering-skills",
+    "kind": "skill",
+    "name": "Claude Mountaineering Skills",
+    "description": "Claude Code skill that automates mountain route research for North American peaks. Aggregates data from 10+ mountaineering sources like Mountaineers.org, PeakBagger.com and SummitPost.com to generate detailed route beta reports with weather, avalanche conditions, and trip reports.",
+    "provider": "github",
+    "capabilities": [
+      "orchestration"
+    ],
+    "compatibility": [
+      "claude-code"
+    ],
+    "source": "awesome-claude-code",
+    "lastSeenAt": "2026-03-23",
+    "install": {
+      "kind": "manual",
+      "instructions": "Visit the linked repository and follow its installation instructions.",
+      "url": "https://github.com/dreamiurg/claude-mountaineering-skills"
+    },
+    "adoptionSignal": 72,
+    "maintenanceSignal": 78,
+    "provenanceSignal": 82,
+    "freshnessSignal": 72,
+    "securitySignals": {
+      "knownVulnerabilities": 0,
+      "suspiciousPatterns": 0,
+      "injectionFindings": 0,
+      "exfiltrationSignals": 0,
+      "integrityAlerts": 0
+    },
+    "metadata": {
+      "catalogType": "skill",
+      "sourceConfidence": "vetted-curated",
+      "awesomeClaudeCodeId": "skill-aeb4b7fa",
+      "awesomeClaudeCodeCategory": "Agent Skills",
+      "authorName": "Dmytro Gaivoronsky",
+      "license": "MIT",
+      "releaseVersion": "v4.0.2",
+      "sourceRegistryId": "awesome-claude-code",
+      "sourceType": "community-list"
+    }
+  },
+  {
+    "id": "skill:claude-powerline",
+    "kind": "skill",
+    "name": "claude-powerline",
+    "description": "A vim-style powerline statusline for Claude Code with real-time usage tracking, git integration, custom themes, and more",
+    "provider": "github",
+    "capabilities": [
+      "automation"
+    ],
+    "compatibility": [
+      "claude-code"
+    ],
+    "source": "awesome-claude-code",
+    "lastSeenAt": "2026-03-23",
+    "install": {
+      "kind": "manual",
+      "instructions": "Visit the linked repository and follow its installation instructions.",
+      "url": "https://github.com/Owloops/claude-powerline"
+    },
+    "adoptionSignal": 72,
+    "maintenanceSignal": 78,
+    "provenanceSignal": 82,
+    "freshnessSignal": 72,
+    "securitySignals": {
+      "knownVulnerabilities": 0,
+      "suspiciousPatterns": 0,
+      "injectionFindings": 0,
+      "exfiltrationSignals": 0,
+      "integrityAlerts": 0
+    },
+    "metadata": {
+      "catalogType": "skill",
+      "sourceConfidence": "vetted-curated",
+      "awesomeClaudeCodeId": "status-e3a9d274",
+      "awesomeClaudeCodeCategory": "Status Lines",
+      "authorName": "Owloops",
+      "license": "MIT",
+      "releaseVersion": "v1.19.6",
+      "sourceRegistryId": "awesome-claude-code",
+      "sourceType": "community-list"
+    }
+  },
+  {
+    "id": "skill:claude-rules-doctor",
+    "kind": "skill",
+    "name": "claude-rules-doctor",
+    "description": "CLI that detects dead `.claude/rules/` files by checking if `paths:` globs actually match files in your repo. Catches silent rule failures where renamed directories or typos in glob patterns cause rules to never apply. Features CI mode (exit 1 on dead rules), JSON output, and verbose mode showing matched files.",
+    "provider": "github",
+    "capabilities": [
+      "automation"
+    ],
+    "compatibility": [
+      "claude-code"
+    ],
+    "source": "awesome-claude-code",
+    "lastSeenAt": "2026-03-23",
+    "install": {
+      "kind": "manual",
+      "instructions": "Visit the linked repository and follow its installation instructions.",
+      "url": "https://github.com/nulone/claude-rules-doctor"
+    },
+    "adoptionSignal": 72,
+    "maintenanceSignal": 78,
+    "provenanceSignal": 82,
+    "freshnessSignal": 72,
+    "securitySignals": {
+      "knownVulnerabilities": 0,
+      "suspiciousPatterns": 0,
+      "injectionFindings": 0,
+      "exfiltrationSignals": 0,
+      "integrityAlerts": 0
+    },
+    "metadata": {
+      "catalogType": "skill",
+      "sourceConfidence": "vetted-curated",
+      "awesomeClaudeCodeId": "tool-df3ddc27",
+      "awesomeClaudeCodeCategory": "Tooling",
+      "authorName": "nulone",
+      "license": "MIT",
+      "releaseVersion": "v0.2.2",
+      "sourceRegistryId": "awesome-claude-code",
+      "sourceType": "community-list"
+    }
+  },
+  {
+    "id": "skill:claude-scientific-skills",
+    "kind": "skill",
+    "name": "Claude Scientific Skills",
+    "description": "\"A set of ready-to-use Agent Skills for research, science, engineering, analysis, finance and writing.\" That's their description - modest, simple. That's how you can tell this is really one of the best skills repos on GitHub. If you've ever thought about getting a PhD... just read all of these documents instead. Also I",
+    "provider": "github",
+    "capabilities": [
+      "automation",
+      "orchestration"
+    ],
+    "compatibility": [
+      "claude-code"
+    ],
+    "source": "awesome-claude-code",
+    "lastSeenAt": "2026-03-23",
+    "install": {
+      "kind": "manual",
+      "instructions": "Visit the linked repository and follow its installation instructions.",
+      "url": "https://github.com/K-Dense-AI/claude-scientific-skills"
+    },
+    "adoptionSignal": 72,
+    "maintenanceSignal": 78,
+    "provenanceSignal": 82,
+    "freshnessSignal": 72,
+    "securitySignals": {
+      "knownVulnerabilities": 0,
+      "suspiciousPatterns": 0,
+      "injectionFindings": 0,
+      "exfiltrationSignals": 0,
+      "integrityAlerts": 0
+    },
+    "metadata": {
+      "catalogType": "skill",
+      "sourceConfidence": "vetted-curated",
+      "awesomeClaudeCodeId": "skill-53ad2e70",
+      "awesomeClaudeCodeCategory": "Agent Skills",
+      "authorName": "K-Dense",
+      "license": "MIT",
+      "releaseVersion": "v2.27.0",
+      "sourceRegistryId": "awesome-claude-code",
+      "sourceType": "community-list"
+    }
+  },
+  {
+    "id": "skill:claude-session-restore",
+    "kind": "skill",
+    "name": "Claude Session Restore",
+    "description": "Efficiently restore context from previous Claude Code sessions by analyzing session files and git history. Features multi-factor data collection across numerous Claude Code capacities with time-based filtering. Uses tail-based parsing for efficient handling of large session files up to 2GB. Includes both a CLI tool for",
+    "provider": "github",
+    "capabilities": [
+      "automation"
+    ],
+    "compatibility": [
+      "claude-code"
+    ],
+    "source": "awesome-claude-code",
+    "lastSeenAt": "2026-03-23",
+    "install": {
+      "kind": "manual",
+      "instructions": "Visit the linked repository and follow its installation instructions.",
+      "url": "https://github.com/ZENG3LD/claude-session-restore"
+    },
+    "adoptionSignal": 72,
+    "maintenanceSignal": 70,
+    "provenanceSignal": 82,
+    "freshnessSignal": 72,
+    "securitySignals": {
+      "knownVulnerabilities": 0,
+      "suspiciousPatterns": 0,
+      "injectionFindings": 0,
+      "exfiltrationSignals": 0,
+      "integrityAlerts": 0
+    },
+    "metadata": {
+      "catalogType": "skill",
+      "sourceConfidence": "vetted-curated",
+      "awesomeClaudeCodeId": "tool-0b63bd5f",
+      "awesomeClaudeCodeCategory": "Tooling",
+      "authorName": "ZENG3LD",
+      "license": "NOASSERTION",
+      "sourceRegistryId": "awesome-claude-code",
+      "sourceType": "community-list"
+    }
+  },
+  {
+    "id": "skill:claude-squad",
+    "kind": "skill",
+    "name": "Claude Squad",
+    "description": "Claude Squad is a terminal app that manages multiple Claude Code, Codex (and other local agents including Aider) in separate workspaces, allowing you to work on multiple tasks simultaneously.",
+    "provider": "github",
+    "capabilities": [
+      "orchestration"
+    ],
+    "compatibility": [
+      "claude-code"
+    ],
+    "source": "awesome-claude-code",
+    "lastSeenAt": "2026-03-23",
+    "install": {
+      "kind": "manual",
+      "instructions": "Visit the linked repository and follow its installation instructions.",
+      "url": "https://github.com/smtg-ai/claude-squad"
+    },
+    "adoptionSignal": 72,
+    "maintenanceSignal": 78,
+    "provenanceSignal": 82,
+    "freshnessSignal": 72,
+    "securitySignals": {
+      "knownVulnerabilities": 0,
+      "suspiciousPatterns": 0,
+      "injectionFindings": 0,
+      "exfiltrationSignals": 0,
+      "integrityAlerts": 0
+    },
+    "metadata": {
+      "catalogType": "skill",
+      "sourceConfidence": "vetted-curated",
+      "awesomeClaudeCodeId": "tool-5d0685f2",
+      "awesomeClaudeCodeCategory": "Tooling",
+      "authorName": "smtg-ai",
+      "license": "AGPL-3.0",
+      "releaseVersion": "v1.0.17",
+      "sourceRegistryId": "awesome-claude-code",
+      "sourceType": "community-list"
+    }
+  },
+  {
+    "id": "skill:claude-starter-kit",
+    "kind": "skill",
+    "name": "claude-starter-kit",
+    "description": "This is a starter template repository designed to provide a complete development environment for Claude-Code with pre-configured MCP servers and tools for AI-powered development workflows. The repository is intentionally minimal, containing only configuration templates for three primary systems: Claude Code, Serena, an",
+    "provider": "github",
+    "capabilities": [
+      "automation",
+      "frontend"
+    ],
+    "compatibility": [
+      "claude-code"
+    ],
+    "source": "awesome-claude-code",
+    "lastSeenAt": "2026-03-23",
+    "install": {
+      "kind": "manual",
+      "instructions": "Visit the linked repository and follow its installation instructions.",
+      "url": "https://github.com/serpro69/claude-starter-kit"
+    },
+    "adoptionSignal": 72,
+    "maintenanceSignal": 78,
+    "provenanceSignal": 82,
+    "freshnessSignal": 72,
+    "securitySignals": {
+      "knownVulnerabilities": 0,
+      "suspiciousPatterns": 0,
+      "injectionFindings": 0,
+      "exfiltrationSignals": 0,
+      "integrityAlerts": 0
+    },
+    "metadata": {
+      "catalogType": "skill",
+      "sourceConfidence": "vetted-curated",
+      "awesomeClaudeCodeId": "tool-8b0193b7",
+      "awesomeClaudeCodeCategory": "Tooling",
+      "authorName": "serpro69",
+      "license": "MIT",
+      "releaseVersion": "v0.3.0",
+      "sourceRegistryId": "awesome-claude-code",
+      "sourceType": "community-list"
+    }
+  },
+  {
+    "id": "skill:claude-swarm",
+    "kind": "skill",
+    "name": "Claude Swarm",
+    "description": "Launch Claude Code session that is connected to a swarm of Claude Code Agents.",
+    "provider": "github",
+    "capabilities": [
+      "orchestration"
+    ],
+    "compatibility": [
+      "claude-code"
+    ],
+    "source": "awesome-claude-code",
+    "lastSeenAt": "2026-03-23",
+    "install": {
+      "kind": "manual",
+      "instructions": "Visit the linked repository and follow its installation instructions.",
+      "url": "https://github.com/parruda/claude-swarm"
+    },
+    "adoptionSignal": 72,
+    "maintenanceSignal": 78,
+    "provenanceSignal": 82,
+    "freshnessSignal": 72,
+    "securitySignals": {
+      "knownVulnerabilities": 0,
+      "suspiciousPatterns": 0,
+      "injectionFindings": 0,
+      "exfiltrationSignals": 0,
+      "integrityAlerts": 0
+    },
+    "metadata": {
+      "catalogType": "skill",
+      "sourceConfidence": "vetted-curated",
+      "awesomeClaudeCodeId": "tool-1af2fe4c",
+      "awesomeClaudeCodeCategory": "Tooling",
+      "authorName": "parruda",
+      "license": "MIT",
+      "releaseVersion": "swarm_sdk-v2.7.15",
+      "sourceRegistryId": "awesome-claude-code",
+      "sourceType": "community-list"
+    }
+  },
+  {
+    "id": "skill:claude-task-master",
+    "kind": "skill",
+    "name": "Claude Task Master",
+    "description": "A task management system for AI-driven development with Claude, designed to work seamlessly with Cursor AI.",
+    "provider": "github",
+    "capabilities": [
+      "frontend"
+    ],
+    "compatibility": [
+      "claude-code"
+    ],
+    "source": "awesome-claude-code",
+    "lastSeenAt": "2026-03-23",
+    "install": {
+      "kind": "manual",
+      "instructions": "Visit the linked repository and follow its installation instructions.",
+      "url": "https://github.com/eyaltoledano/claude-task-master"
+    },
+    "adoptionSignal": 72,
+    "maintenanceSignal": 78,
+    "provenanceSignal": 82,
+    "freshnessSignal": 72,
+    "securitySignals": {
+      "knownVulnerabilities": 0,
+      "suspiciousPatterns": 0,
+      "injectionFindings": 0,
+      "exfiltrationSignals": 0,
+      "integrityAlerts": 0
+    },
+    "metadata": {
+      "catalogType": "skill",
+      "sourceConfidence": "vetted-curated",
+      "awesomeClaudeCodeId": "tool-a1e3d643",
+      "awesomeClaudeCodeCategory": "Tooling",
+      "authorName": "eyaltoledano",
+      "license": "NOASSERTION",
+      "releaseVersion": "task-master-ai@0.43.0",
+      "sourceRegistryId": "awesome-claude-code",
+      "sourceType": "community-list"
+    }
+  },
+  {
+    "id": "skill:claude-tmux",
+    "kind": "skill",
+    "name": "claude-tmux",
+    "description": "Manage Claude Code within tmux. A tmux popup of all your Claude Code instances, enabling quick switching, status monitoring, session lifecycle management, with git worktree and pull request support.",
+    "provider": "github",
+    "capabilities": [
+      "frontend"
+    ],
+    "compatibility": [
+      "claude-code"
+    ],
+    "source": "awesome-claude-code",
+    "lastSeenAt": "2026-03-23",
+    "install": {
+      "kind": "manual",
+      "instructions": "Visit the linked repository and follow its installation instructions.",
+      "url": "https://github.com/nielsgroen/claude-tmux"
+    },
+    "adoptionSignal": 72,
+    "maintenanceSignal": 70,
+    "provenanceSignal": 82,
+    "freshnessSignal": 72,
+    "securitySignals": {
+      "knownVulnerabilities": 0,
+      "suspiciousPatterns": 0,
+      "injectionFindings": 0,
+      "exfiltrationSignals": 0,
+      "integrityAlerts": 0
+    },
+    "metadata": {
+      "catalogType": "skill",
+      "sourceConfidence": "vetted-curated",
+      "awesomeClaudeCodeId": "client-29b7453b",
+      "awesomeClaudeCodeCategory": "Alternative Clients",
+      "authorName": "Niels Groeneveld",
+      "license": "NOASSERTION",
+      "sourceRegistryId": "awesome-claude-code",
+      "sourceType": "community-list"
+    }
+  },
+  {
+    "id": "skill:claudectx",
+    "kind": "skill",
+    "name": "ClaudeCTX",
+    "description": "claudectx lets you switch your entire Claude Code configuration with a single command.",
+    "provider": "github",
+    "capabilities": [
+      "automation"
+    ],
+    "compatibility": [
+      "claude-code"
+    ],
+    "source": "awesome-claude-code",
+    "lastSeenAt": "2026-03-23",
+    "install": {
+      "kind": "manual",
+      "instructions": "Visit the linked repository and follow its installation instructions.",
+      "url": "https://github.com/foxj77/claudectx"
+    },
+    "adoptionSignal": 72,
+    "maintenanceSignal": 78,
+    "provenanceSignal": 82,
+    "freshnessSignal": 72,
+    "securitySignals": {
+      "knownVulnerabilities": 0,
+      "suspiciousPatterns": 0,
+      "injectionFindings": 0,
+      "exfiltrationSignals": 0,
+      "integrityAlerts": 0
+    },
+    "metadata": {
+      "catalogType": "skill",
+      "sourceConfidence": "vetted-curated",
+      "awesomeClaudeCodeId": "tool-7c53b5cb",
+      "awesomeClaudeCodeCategory": "Tooling",
+      "authorName": "John Fox",
+      "license": "MIT",
+      "releaseVersion": "v1.2.0",
+      "sourceRegistryId": "awesome-claude-code",
+      "sourceType": "community-list"
+    }
+  },
+  {
+    "id": "skill:claudekit",
+    "kind": "skill",
+    "name": "claudekit",
+    "description": "Impressive CLI toolkit providing auto-save checkpointing, code quality hooks, specification generation and execution, and 20+ specialized subagents including oracle (gpt-5), code-reviewer (6-aspect deep analysis), ai-sdk-expert (Vercel AI SDK), typescript-expert and many more for Claude Code workflows.",
+    "provider": "github",
+    "capabilities": [
+      "automation",
+      "guardrails",
+      "orchestration"
+    ],
+    "compatibility": [
+      "claude-code"
+    ],
+    "source": "awesome-claude-code",
+    "lastSeenAt": "2026-03-23",
+    "install": {
+      "kind": "manual",
+      "instructions": "Visit the linked repository and follow its installation instructions.",
+      "url": "https://github.com/carlrannaberg/claudekit"
+    },
+    "adoptionSignal": 72,
+    "maintenanceSignal": 78,
+    "provenanceSignal": 82,
+    "freshnessSignal": 72,
+    "securitySignals": {
+      "knownVulnerabilities": 0,
+      "suspiciousPatterns": 0,
+      "injectionFindings": 0,
+      "exfiltrationSignals": 0,
+      "integrityAlerts": 0
+    },
+    "metadata": {
+      "catalogType": "skill",
+      "sourceConfidence": "vetted-curated",
+      "awesomeClaudeCodeId": "tool-1cbdd0fb",
+      "awesomeClaudeCodeCategory": "Tooling",
+      "authorName": "Carl Rannaberg",
+      "license": "MIT",
+      "releaseVersion": "v0.9.4",
+      "sourceRegistryId": "awesome-claude-code",
+      "sourceType": "community-list"
+    }
+  },
+  {
+    "id": "skill:claudex",
+    "kind": "skill",
+    "name": "Claudex",
+    "description": "Claudex - A web-based browser for exploring your Claude Code conversation history across projects. Indexes your codebase for full-text search. Nice, easy-to-navigate UI. Simple dashboard interface for high-level analytics, and multiple export options as well. (And completely local w/ no telemetry!)",
+    "provider": "github",
+    "capabilities": [
+      "frontend"
+    ],
+    "compatibility": [
+      "claude-code"
+    ],
+    "source": "awesome-claude-code",
+    "lastSeenAt": "2026-03-23",
+    "install": {
+      "kind": "manual",
+      "instructions": "Visit the linked repository and follow its installation instructions.",
+      "url": "https://github.com/kunwar-shah/claudex"
+    },
+    "adoptionSignal": 72,
+    "maintenanceSignal": 78,
+    "provenanceSignal": 82,
+    "freshnessSignal": 72,
+    "securitySignals": {
+      "knownVulnerabilities": 0,
+      "suspiciousPatterns": 0,
+      "injectionFindings": 0,
+      "exfiltrationSignals": 0,
+      "integrityAlerts": 0
+    },
+    "metadata": {
+      "catalogType": "skill",
+      "sourceConfidence": "vetted-curated",
+      "awesomeClaudeCodeId": "tool-61d0c1d6",
+      "awesomeClaudeCodeCategory": "Tooling",
+      "authorName": "Kunwar Shah",
+      "license": "MIT",
+      "releaseVersion": "v1.3.0",
+      "sourceRegistryId": "awesome-claude-code",
+      "sourceType": "community-list"
+    }
+  },
+  {
+    "id": "skill:claudia-statusline",
+    "kind": "skill",
+    "name": "claudia-statusline",
+    "description": "High-performance Rust-based statusline for Claude Code with persistent stats tracking, progress bars, and optional cloud sync. Features SQLite-first persistence, git integration, context progress bars, burn rate calculation, XDG-compliant with theme support (dark/light, NO_COLOR).",
+    "provider": "github",
+    "capabilities": [
+      "data"
+    ],
+    "compatibility": [
+      "claude-code"
+    ],
+    "source": "awesome-claude-code",
+    "lastSeenAt": "2026-03-23",
+    "install": {
+      "kind": "manual",
+      "instructions": "Visit the linked repository and follow its installation instructions.",
+      "url": "https://github.com/hagan/claudia-statusline"
+    },
+    "adoptionSignal": 72,
+    "maintenanceSignal": 78,
+    "provenanceSignal": 82,
+    "freshnessSignal": 72,
+    "securitySignals": {
+      "knownVulnerabilities": 0,
+      "suspiciousPatterns": 0,
+      "injectionFindings": 0,
+      "exfiltrationSignals": 0,
+      "integrityAlerts": 0
+    },
+    "metadata": {
+      "catalogType": "skill",
+      "sourceConfidence": "vetted-curated",
+      "awesomeClaudeCodeId": "status-bb559460",
+      "awesomeClaudeCodeCategory": "Status Lines",
+      "authorName": "Hagan Franks",
+      "license": "MIT",
+      "releaseVersion": "v2.22.1",
+      "sourceRegistryId": "awesome-claude-code",
+      "sourceType": "community-list"
+    }
+  },
+  {
+    "id": "skill:claudio",
+    "kind": "skill",
+    "name": "Claudio",
+    "description": "A no-frills little library that adds delightful OS-native sounds to Claude Code via simple hooks. It really sparks joy.",
+    "provider": "github",
+    "capabilities": [
+      "automation"
+    ],
+    "compatibility": [
+      "claude-code"
+    ],
+    "source": "awesome-claude-code",
+    "lastSeenAt": "2026-03-23",
+    "install": {
+      "kind": "manual",
+      "instructions": "Visit the linked repository and follow its installation instructions.",
+      "url": "https://github.com/ctoth/claudio"
+    },
+    "adoptionSignal": 72,
+    "maintenanceSignal": 70,
+    "provenanceSignal": 82,
+    "freshnessSignal": 72,
+    "securitySignals": {
+      "knownVulnerabilities": 0,
+      "suspiciousPatterns": 0,
+      "injectionFindings": 0,
+      "exfiltrationSignals": 0,
+      "integrityAlerts": 0
+    },
+    "metadata": {
+      "catalogType": "skill",
+      "sourceConfidence": "vetted-curated",
+      "awesomeClaudeCodeId": "hook-9cfa9465",
+      "awesomeClaudeCodeCategory": "Hooks",
+      "authorName": "Christopher Toth",
+      "license": "NOT_FOUND",
+      "sourceRegistryId": "awesome-claude-code",
+      "sourceType": "community-list"
+    }
+  },
+  {
+    "id": "skill:claudix-claude-code-for-vscode",
+    "kind": "skill",
+    "name": "Claudix - Claude Code for VSCode",
+    "description": "A VSCode extension that brings Claude Code directly into your editor with interactive chat interface, session management, intelligent file operations, terminal execution, and real-time streaming responses. Built with Vue 3, TypeScript.",
+    "provider": "github",
+    "capabilities": [
+      "frontend"
+    ],
+    "compatibility": [
+      "claude-code"
+    ],
+    "source": "awesome-claude-code",
+    "lastSeenAt": "2026-03-23",
+    "install": {
+      "kind": "manual",
+      "instructions": "Visit the linked repository and follow its installation instructions.",
+      "url": "https://github.com/Haleclipse/Claudix"
+    },
+    "adoptionSignal": 72,
+    "maintenanceSignal": 78,
+    "provenanceSignal": 82,
+    "freshnessSignal": 72,
+    "securitySignals": {
+      "knownVulnerabilities": 0,
+      "suspiciousPatterns": 0,
+      "injectionFindings": 0,
+      "exfiltrationSignals": 0,
+      "integrityAlerts": 0
+    },
+    "metadata": {
+      "catalogType": "skill",
+      "sourceConfidence": "vetted-curated",
+      "awesomeClaudeCodeId": "tool-7e19bf77",
+      "awesomeClaudeCodeCategory": "Tooling",
+      "authorName": "Haleclipse",
+      "license": "AGPL-3.0",
+      "releaseVersion": "0.3.9-dev",
+      "sourceRegistryId": "awesome-claude-code",
+      "sourceType": "community-list"
+    }
+  },
+  {
+    "id": "skill:claudopro-directory",
+    "kind": "skill",
+    "name": "ClaudoPro Directory",
+    "description": "Well-crafted, wide selection of Claude Code hooks, slash commands, subagent files, and more, covering a range of specialized tasks and workflows. Better resources than your average \"Claude-template-for-everything\" site.",
+    "provider": "github",
+    "capabilities": [
+      "automation",
+      "docs",
+      "frontend",
+      "orchestration"
+    ],
+    "compatibility": [
+      "claude-code"
+    ],
+    "source": "awesome-claude-code",
+    "lastSeenAt": "2026-03-23",
+    "install": {
+      "kind": "manual",
+      "instructions": "Visit the linked repository and follow its installation instructions.",
+      "url": "https://github.com/JSONbored/claudepro-directory"
+    },
+    "adoptionSignal": 72,
+    "maintenanceSignal": 70,
+    "provenanceSignal": 82,
+    "freshnessSignal": 72,
+    "securitySignals": {
+      "knownVulnerabilities": 0,
+      "suspiciousPatterns": 0,
+      "injectionFindings": 0,
+      "exfiltrationSignals": 0,
+      "integrityAlerts": 0
+    },
+    "metadata": {
+      "catalogType": "skill",
+      "sourceConfidence": "vetted-curated",
+      "awesomeClaudeCodeId": "wf-666ef1b9",
+      "awesomeClaudeCodeCategory": "Workflows & Knowledge Guides",
+      "authorName": "ghost",
+      "license": "MIT",
+      "sourceRegistryId": "awesome-claude-code",
+      "sourceType": "community-list"
+    }
+  },
+  {
     "id": "skill:cloudflare-deploy",
     "kind": "skill",
     "name": "Cloudflare Deploy",
@@ -664,7 +3181,7 @@
       "general"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-22",
+    "lastSeenAt": "2026-03-23",
     "install": {
       "kind": "skill.sh",
       "target": "Cloudflare Deploy",
@@ -705,7 +3222,7 @@
       "node"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-22",
+    "lastSeenAt": "2026-03-23",
     "install": {
       "kind": "skill.sh",
       "target": "code-operations-skills",
@@ -734,6 +3251,94 @@
     }
   },
   {
+    "id": "skill:codex-skill",
+    "kind": "skill",
+    "name": "Codex Skill",
+    "description": "Enables users to prompt codex from claude code. Unlike the raw codex mcp server, this skill infers parameters such as model, reasoning effort, sandboxing from your prompt or asks you to specify them. It also simplifies continuing prior codex sessions so that codex can continue with the prior context.",
+    "provider": "github",
+    "capabilities": [
+      "automation",
+      "frontend",
+      "orchestration"
+    ],
+    "compatibility": [
+      "claude-code"
+    ],
+    "source": "awesome-claude-code",
+    "lastSeenAt": "2026-03-23",
+    "install": {
+      "kind": "manual",
+      "instructions": "Visit the linked repository and follow its installation instructions.",
+      "url": "https://github.com/skills-directory/skill-codex"
+    },
+    "adoptionSignal": 72,
+    "maintenanceSignal": 70,
+    "provenanceSignal": 82,
+    "freshnessSignal": 72,
+    "securitySignals": {
+      "knownVulnerabilities": 0,
+      "suspiciousPatterns": 0,
+      "injectionFindings": 0,
+      "exfiltrationSignals": 0,
+      "integrityAlerts": 0
+    },
+    "metadata": {
+      "catalogType": "skill",
+      "sourceConfidence": "vetted-curated",
+      "awesomeClaudeCodeId": "skill-faba0faa",
+      "awesomeClaudeCodeCategory": "Agent Skills",
+      "authorName": "klaudworks",
+      "license": "MIT",
+      "sourceRegistryId": "awesome-claude-code",
+      "sourceType": "community-list"
+    }
+  },
+  {
+    "id": "skill:compound-engineering-plugin",
+    "kind": "skill",
+    "name": "Compound Engineering Plugin",
+    "description": "A very pragmatic set of well-designed agents, skills, and commands, built around a discipline of turning past mistakes and errors into lessons and opportunities for future growth and improvement. Good documentation.",
+    "provider": "github",
+    "capabilities": [
+      "automation",
+      "docs",
+      "frontend",
+      "orchestration"
+    ],
+    "compatibility": [
+      "claude-code"
+    ],
+    "source": "awesome-claude-code",
+    "lastSeenAt": "2026-03-23",
+    "install": {
+      "kind": "manual",
+      "instructions": "Visit the linked repository and follow its installation instructions.",
+      "url": "https://github.com/EveryInc/compound-engineering-plugin"
+    },
+    "adoptionSignal": 72,
+    "maintenanceSignal": 78,
+    "provenanceSignal": 82,
+    "freshnessSignal": 72,
+    "securitySignals": {
+      "knownVulnerabilities": 0,
+      "suspiciousPatterns": 0,
+      "injectionFindings": 0,
+      "exfiltrationSignals": 0,
+      "integrityAlerts": 0
+    },
+    "metadata": {
+      "catalogType": "skill",
+      "sourceConfidence": "vetted-curated",
+      "awesomeClaudeCodeId": "skill-bff92ab6",
+      "awesomeClaudeCodeCategory": "Agent Skills",
+      "authorName": "EveryInc",
+      "license": "MIT",
+      "releaseVersion": "v2.37.0",
+      "sourceRegistryId": "awesome-claude-code",
+      "sourceType": "community-list"
+    }
+  },
+  {
     "id": "skill:constant-time-analysis",
     "kind": "skill",
     "name": "constant-time-analysis",
@@ -749,7 +3354,7 @@
       "node"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-22",
+    "lastSeenAt": "2026-03-23",
     "install": {
       "kind": "skill.sh",
       "target": "constant-time-analysis",
@@ -778,6 +3383,257 @@
     }
   },
   {
+    "id": "skill:container-use",
+    "kind": "skill",
+    "name": "Container Use",
+    "description": "Development environments for coding agents. Enable multiple agents to work safely and independently with your preferred stack.",
+    "provider": "github",
+    "capabilities": [
+      "orchestration"
+    ],
+    "compatibility": [
+      "claude-code"
+    ],
+    "source": "awesome-claude-code",
+    "lastSeenAt": "2026-03-23",
+    "install": {
+      "kind": "manual",
+      "instructions": "Visit the linked repository and follow its installation instructions.",
+      "url": "https://github.com/dagger/container-use"
+    },
+    "adoptionSignal": 72,
+    "maintenanceSignal": 78,
+    "provenanceSignal": 82,
+    "freshnessSignal": 72,
+    "securitySignals": {
+      "knownVulnerabilities": 0,
+      "suspiciousPatterns": 0,
+      "injectionFindings": 0,
+      "exfiltrationSignals": 0,
+      "integrityAlerts": 0
+    },
+    "metadata": {
+      "catalogType": "skill",
+      "sourceConfidence": "vetted-curated",
+      "awesomeClaudeCodeId": "tool-af235370",
+      "awesomeClaudeCodeCategory": "Tooling",
+      "authorName": "dagger",
+      "license": "Apache-2.0",
+      "releaseVersion": "v0.4.2",
+      "sourceRegistryId": "awesome-claude-code",
+      "sourceType": "community-list"
+    }
+  },
+  {
+    "id": "skill:context-engineering-kit",
+    "kind": "skill",
+    "name": "Context Engineering Kit",
+    "description": "Hand-crafted collection of advanced context engineering techniques and patterns with minimal token footprint focused on improving agent result quality.",
+    "provider": "github",
+    "capabilities": [
+      "orchestration"
+    ],
+    "compatibility": [
+      "claude-code"
+    ],
+    "source": "awesome-claude-code",
+    "lastSeenAt": "2026-03-23",
+    "install": {
+      "kind": "manual",
+      "instructions": "Visit the linked repository and follow its installation instructions.",
+      "url": "https://github.com/NeoLabHQ/context-engineering-kit"
+    },
+    "adoptionSignal": 72,
+    "maintenanceSignal": 78,
+    "provenanceSignal": 82,
+    "freshnessSignal": 72,
+    "securitySignals": {
+      "knownVulnerabilities": 0,
+      "suspiciousPatterns": 0,
+      "injectionFindings": 0,
+      "exfiltrationSignals": 0,
+      "integrityAlerts": 0
+    },
+    "metadata": {
+      "catalogType": "skill",
+      "sourceConfidence": "vetted-curated",
+      "awesomeClaudeCodeId": "skill-e5b92436",
+      "awesomeClaudeCodeCategory": "Agent Skills",
+      "authorName": "Vlad Goncharov",
+      "license": "GPL-3.0",
+      "releaseVersion": "v2.1.1",
+      "sourceRegistryId": "awesome-claude-code",
+      "sourceType": "community-list"
+    }
+  },
+  {
+    "id": "skill:contextkit",
+    "kind": "skill",
+    "name": "ContextKit",
+    "description": "A systematic development framework that transforms Claude Code into a proactive development partner. Features 4-phase planning methodology, specialized quality agents, and structured workflows that help AI produce production-ready code on first try.",
+    "provider": "github",
+    "capabilities": [
+      "automation",
+      "orchestration"
+    ],
+    "compatibility": [
+      "claude-code"
+    ],
+    "source": "awesome-claude-code",
+    "lastSeenAt": "2026-03-23",
+    "install": {
+      "kind": "manual",
+      "instructions": "Visit the linked repository and follow its installation instructions.",
+      "url": "https://github.com/FlineDev/ContextKit"
+    },
+    "adoptionSignal": 72,
+    "maintenanceSignal": 78,
+    "provenanceSignal": 82,
+    "freshnessSignal": 72,
+    "securitySignals": {
+      "knownVulnerabilities": 0,
+      "suspiciousPatterns": 0,
+      "injectionFindings": 0,
+      "exfiltrationSignals": 0,
+      "integrityAlerts": 0
+    },
+    "metadata": {
+      "catalogType": "skill",
+      "sourceConfidence": "vetted-curated",
+      "awesomeClaudeCodeId": "tool-b3562922",
+      "awesomeClaudeCodeCategory": "Tooling",
+      "authorName": "Cihat Gündüz",
+      "license": "MIT",
+      "releaseVersion": "0.2.0",
+      "sourceRegistryId": "awesome-claude-code",
+      "sourceType": "community-list"
+    }
+  },
+  {
+    "id": "skill:course-builder",
+    "kind": "skill",
+    "name": "Course Builder",
+    "description": "Enables real-time multiplayer capabilities for collaborative course creation with diverse tech stack integration and monorepo architecture using Turborepo.",
+    "provider": "github",
+    "capabilities": [
+      "frontend"
+    ],
+    "compatibility": [
+      "claude-code"
+    ],
+    "source": "awesome-claude-code",
+    "lastSeenAt": "2026-03-23",
+    "install": {
+      "kind": "manual",
+      "instructions": "Visit the linked repository and follow its installation instructions.",
+      "url": "https://github.com/badass-courses/course-builder/blob/main/CLAUDE.md"
+    },
+    "adoptionSignal": 72,
+    "maintenanceSignal": 70,
+    "provenanceSignal": 82,
+    "freshnessSignal": 72,
+    "securitySignals": {
+      "knownVulnerabilities": 0,
+      "suspiciousPatterns": 0,
+      "injectionFindings": 0,
+      "exfiltrationSignals": 0,
+      "integrityAlerts": 0
+    },
+    "metadata": {
+      "catalogType": "skill",
+      "sourceConfidence": "vetted-curated",
+      "awesomeClaudeCodeId": "claude-d0e5c826",
+      "awesomeClaudeCodeCategory": "CLAUDE.md Files",
+      "authorName": "badass-courses",
+      "license": "MIT",
+      "sourceRegistryId": "awesome-claude-code",
+      "sourceType": "community-list"
+    }
+  },
+  {
+    "id": "skill:create-docs",
+    "kind": "skill",
+    "name": "/create-docs",
+    "description": "Analyzes code structure and purpose to create comprehensive documentation detailing inputs/outputs, behavior, user interaction flows, and edge cases with error handling.",
+    "provider": "github",
+    "capabilities": [
+      "docs"
+    ],
+    "compatibility": [
+      "claude-code"
+    ],
+    "source": "awesome-claude-code",
+    "lastSeenAt": "2026-03-23",
+    "install": {
+      "kind": "manual",
+      "instructions": "Visit the linked repository and follow its installation instructions.",
+      "url": "https://github.com/jerseycheese/Narraitor/blob/feature/issue-227-ai-suggestions/.claude/commands/create-docs.md"
+    },
+    "adoptionSignal": 72,
+    "maintenanceSignal": 70,
+    "provenanceSignal": 82,
+    "freshnessSignal": 72,
+    "securitySignals": {
+      "knownVulnerabilities": 0,
+      "suspiciousPatterns": 0,
+      "injectionFindings": 0,
+      "exfiltrationSignals": 0,
+      "integrityAlerts": 0
+    },
+    "metadata": {
+      "catalogType": "skill",
+      "sourceConfidence": "vetted-curated",
+      "awesomeClaudeCodeId": "cmd-416793e8",
+      "awesomeClaudeCodeCategory": "Slash-Commands",
+      "authorName": "jerseycheese",
+      "license": "MIT",
+      "sourceRegistryId": "awesome-claude-code",
+      "sourceType": "community-list"
+    }
+  },
+  {
+    "id": "skill:crystal",
+    "kind": "skill",
+    "name": "crystal",
+    "description": "A full-fledged desktop application for orchestrating, monitoring, and interacting with Claude Code agents.",
+    "provider": "github",
+    "capabilities": [
+      "orchestration"
+    ],
+    "compatibility": [
+      "claude-code"
+    ],
+    "source": "awesome-claude-code",
+    "lastSeenAt": "2026-03-23",
+    "install": {
+      "kind": "manual",
+      "instructions": "Visit the linked repository and follow its installation instructions.",
+      "url": "https://github.com/stravu/crystal"
+    },
+    "adoptionSignal": 72,
+    "maintenanceSignal": 78,
+    "provenanceSignal": 82,
+    "freshnessSignal": 72,
+    "securitySignals": {
+      "knownVulnerabilities": 0,
+      "suspiciousPatterns": 0,
+      "injectionFindings": 0,
+      "exfiltrationSignals": 0,
+      "integrityAlerts": 0
+    },
+    "metadata": {
+      "catalogType": "skill",
+      "sourceConfidence": "vetted-curated",
+      "awesomeClaudeCodeId": "tool-1c31f36c",
+      "awesomeClaudeCodeCategory": "Alternative Clients",
+      "authorName": "stravu",
+      "license": "MIT",
+      "releaseVersion": "v0.3.5",
+      "sourceRegistryId": "awesome-claude-code",
+      "sourceType": "community-list"
+    }
+  },
+  {
     "id": "skill:culture-index",
     "kind": "skill",
     "name": "culture-index",
@@ -793,7 +3649,7 @@
       "node"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-22",
+    "lastSeenAt": "2026-03-23",
     "install": {
       "kind": "skill.sh",
       "target": "culture-index",
@@ -837,7 +3693,7 @@
       "node"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-22",
+    "lastSeenAt": "2026-03-23",
     "install": {
       "kind": "skill.sh",
       "target": "debug-buttercup",
@@ -881,7 +3737,7 @@
       "general"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-22",
+    "lastSeenAt": "2026-03-23",
     "install": {
       "kind": "skill.sh",
       "target": "deep-research",
@@ -921,7 +3777,7 @@
       "node"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-22",
+    "lastSeenAt": "2026-03-23",
     "install": {
       "kind": "skill.sh",
       "target": "dev-browser",
@@ -965,7 +3821,7 @@
       "node"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-22",
+    "lastSeenAt": "2026-03-23",
     "install": {
       "kind": "skill.sh",
       "target": "devcontainer-setup",
@@ -1007,7 +3863,7 @@
       "node"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-22",
+    "lastSeenAt": "2026-03-23",
     "install": {
       "kind": "skill.sh",
       "target": "Develop Web Game",
@@ -1049,7 +3905,7 @@
       "github"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-22",
+    "lastSeenAt": "2026-03-23",
     "install": {
       "kind": "skill.sh",
       "target": "differential-review",
@@ -1078,6 +3934,90 @@
     }
   },
   {
+    "id": "skill:dippy",
+    "kind": "skill",
+    "name": "Dippy",
+    "description": "Auto-approve safe bash commands using AST-based parsing, while prompting for destructive operations. Solves permission fatigue without disabling safety. Supports Claude Code, Gemini CLI, and Cursor.",
+    "provider": "github",
+    "capabilities": [
+      "automation"
+    ],
+    "compatibility": [
+      "claude-code"
+    ],
+    "source": "awesome-claude-code",
+    "lastSeenAt": "2026-03-23",
+    "install": {
+      "kind": "manual",
+      "instructions": "Visit the linked repository and follow its installation instructions.",
+      "url": "https://github.com/ldayton/Dippy"
+    },
+    "adoptionSignal": 72,
+    "maintenanceSignal": 78,
+    "provenanceSignal": 82,
+    "freshnessSignal": 72,
+    "securitySignals": {
+      "knownVulnerabilities": 0,
+      "suspiciousPatterns": 0,
+      "injectionFindings": 0,
+      "exfiltrationSignals": 0,
+      "integrityAlerts": 0
+    },
+    "metadata": {
+      "catalogType": "skill",
+      "sourceConfidence": "vetted-curated",
+      "awesomeClaudeCodeId": "hook-48393ed3",
+      "awesomeClaudeCodeCategory": "Hooks",
+      "authorName": "Lily Dayton",
+      "license": "MIT",
+      "releaseVersion": "v0.2.6",
+      "sourceRegistryId": "awesome-claude-code",
+      "sourceType": "community-list"
+    }
+  },
+  {
+    "id": "skill:do-issue",
+    "kind": "skill",
+    "name": "/do-issue",
+    "description": "Implements GitHub issues with manual review points, following a structured approach with issue number parameter and offering alternative automated mode for efficiency.",
+    "provider": "github",
+    "capabilities": [
+      "automation",
+      "guardrails"
+    ],
+    "compatibility": [
+      "claude-code"
+    ],
+    "source": "awesome-claude-code",
+    "lastSeenAt": "2026-03-23",
+    "install": {
+      "kind": "manual",
+      "instructions": "Visit the linked repository and follow its installation instructions.",
+      "url": "https://github.com/jerseycheese/Narraitor/blob/feature/issue-227-ai-suggestions/.claude/commands/do-issue.md"
+    },
+    "adoptionSignal": 72,
+    "maintenanceSignal": 70,
+    "provenanceSignal": 82,
+    "freshnessSignal": 72,
+    "securitySignals": {
+      "knownVulnerabilities": 0,
+      "suspiciousPatterns": 0,
+      "injectionFindings": 0,
+      "exfiltrationSignals": 0,
+      "integrityAlerts": 0
+    },
+    "metadata": {
+      "catalogType": "skill",
+      "sourceConfidence": "vetted-curated",
+      "awesomeClaudeCodeId": "cmd-2981aaf0",
+      "awesomeClaudeCodeCategory": "Slash-Commands",
+      "authorName": "jerseycheese",
+      "license": "MIT",
+      "sourceRegistryId": "awesome-claude-code",
+      "sourceType": "community-list"
+    }
+  },
+  {
     "id": "skill:doc",
     "kind": "skill",
     "name": "Doc",
@@ -1090,7 +4030,7 @@
       "general"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-22",
+    "lastSeenAt": "2026-03-23",
     "install": {
       "kind": "skill.sh",
       "target": "Doc",
@@ -1146,7 +4086,7 @@
       "node"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-22",
+    "lastSeenAt": "2026-03-23",
     "install": {
       "kind": "skill.sh",
       "target": "doc-coauthoring",
@@ -1194,7 +4134,7 @@
       "python"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-22",
+    "lastSeenAt": "2026-03-23",
     "install": {
       "kind": "skill.sh",
       "target": "docker-container-ops",
@@ -1234,7 +4174,7 @@
       "python"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-22",
+    "lastSeenAt": "2026-03-23",
     "install": {
       "kind": "skill.sh",
       "target": "docs-automation",
@@ -1277,7 +4217,7 @@
       "node"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-22",
+    "lastSeenAt": "2026-03-23",
     "install": {
       "kind": "skill.sh",
       "target": "docx",
@@ -1323,7 +4263,7 @@
       "node"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-22",
+    "lastSeenAt": "2026-03-23",
     "install": {
       "kind": "skill.sh",
       "target": "dwarf-expert",
@@ -1368,7 +4308,7 @@
       "node"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-22",
+    "lastSeenAt": "2026-03-23",
     "install": {
       "kind": "skill.sh",
       "target": "engineering-workflow-skills",
@@ -1412,7 +4352,7 @@
       "github"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-22",
+    "lastSeenAt": "2026-03-23",
     "install": {
       "kind": "skill.sh",
       "target": "entry-point-analyzer",
@@ -1441,6 +4381,49 @@
     }
   },
   {
+    "id": "skill:everything-claude-code",
+    "kind": "skill",
+    "name": "Everything Claude Code",
+    "description": "Top-notch, well-written resources covering \"just about everything\" from core engineering domains. What's nice about this \"everything-\" store is most of the resources have significant standalone value and unlike some all-encompassing frameworks, although you can opt in to the author's own specific workflow patterns if y",
+    "provider": "github",
+    "capabilities": [
+      "automation",
+      "orchestration"
+    ],
+    "compatibility": [
+      "claude-code"
+    ],
+    "source": "awesome-claude-code",
+    "lastSeenAt": "2026-03-23",
+    "install": {
+      "kind": "manual",
+      "instructions": "Visit the linked repository and follow its installation instructions.",
+      "url": "https://github.com/affaan-m/everything-claude-code"
+    },
+    "adoptionSignal": 72,
+    "maintenanceSignal": 78,
+    "provenanceSignal": 82,
+    "freshnessSignal": 72,
+    "securitySignals": {
+      "knownVulnerabilities": 0,
+      "suspiciousPatterns": 0,
+      "injectionFindings": 0,
+      "exfiltrationSignals": 0,
+      "integrityAlerts": 0
+    },
+    "metadata": {
+      "catalogType": "skill",
+      "sourceConfidence": "vetted-curated",
+      "awesomeClaudeCodeId": "skill-3b08df01",
+      "awesomeClaudeCodeCategory": "Agent Skills",
+      "authorName": "Affaan Mustafa",
+      "license": "MIT",
+      "releaseVersion": "v1.8.0",
+      "sourceRegistryId": "awesome-claude-code",
+      "sourceType": "community-list"
+    }
+  },
+  {
     "id": "skill:fast-web-scrape",
     "kind": "skill",
     "name": "Fast Web Scrape",
@@ -1454,7 +4437,7 @@
       "node"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-22",
+    "lastSeenAt": "2026-03-23",
     "install": {
       "kind": "skill.sh",
       "target": "fast-web-scrape",
@@ -1490,7 +4473,7 @@
       "general"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-22",
+    "lastSeenAt": "2026-03-23",
     "install": {
       "kind": "skill.sh",
       "target": "Figma",
@@ -1528,7 +4511,7 @@
       "general"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-22",
+    "lastSeenAt": "2026-03-23",
     "install": {
       "kind": "skill.sh",
       "target": "Figma Implement Design",
@@ -1572,7 +4555,7 @@
       "github"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-22",
+    "lastSeenAt": "2026-03-23",
     "install": {
       "kind": "skill.sh",
       "target": "firebase-apk-scanner",
@@ -1617,7 +4600,7 @@
       "github"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-22",
+    "lastSeenAt": "2026-03-23",
     "install": {
       "kind": "skill.sh",
       "target": "fp-check",
@@ -1674,7 +4657,7 @@
       "node"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-22",
+    "lastSeenAt": "2026-03-23",
     "install": {
       "kind": "skill.sh",
       "target": "frontend-design",
@@ -1717,7 +4700,7 @@
       "general"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-22",
+    "lastSeenAt": "2026-03-23",
     "install": {
       "kind": "skill.sh",
       "target": "Frontend Skill",
@@ -1743,6 +4726,49 @@
     }
   },
   {
+    "id": "skill:fullstack-dev-skills",
+    "kind": "skill",
+    "name": "Fullstack Dev Skills",
+    "description": "A comprehensive Claude Code plugin with 65 specialized skills covering full-stack development across a wide range of specific frameworks. Features 9 project workflow commands for Jira/Confluence integration and, notably, an interesting approach to context engineering via a `/common-ground` command that surfaces Claude'",
+    "provider": "github",
+    "capabilities": [
+      "automation",
+      "orchestration"
+    ],
+    "compatibility": [
+      "claude-code"
+    ],
+    "source": "awesome-claude-code",
+    "lastSeenAt": "2026-03-23",
+    "install": {
+      "kind": "manual",
+      "instructions": "Visit the linked repository and follow its installation instructions.",
+      "url": "https://github.com/jeffallan/claude-skills"
+    },
+    "adoptionSignal": 72,
+    "maintenanceSignal": 78,
+    "provenanceSignal": 82,
+    "freshnessSignal": 72,
+    "securitySignals": {
+      "knownVulnerabilities": 0,
+      "suspiciousPatterns": 0,
+      "injectionFindings": 0,
+      "exfiltrationSignals": 0,
+      "integrityAlerts": 0
+    },
+    "metadata": {
+      "catalogType": "skill",
+      "sourceConfidence": "vetted-curated",
+      "awesomeClaudeCodeId": "skill-d69e3bc4",
+      "awesomeClaudeCodeCategory": "Agent Skills",
+      "authorName": "jeffallan",
+      "license": "MIT",
+      "releaseVersion": "v0.4.10",
+      "sourceRegistryId": "awesome-claude-code",
+      "sourceType": "community-list"
+    }
+  },
+  {
     "id": "skill:gastown",
     "kind": "skill",
     "name": "gastown",
@@ -1759,7 +4785,7 @@
       "node"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-22",
+    "lastSeenAt": "2026-03-23",
     "install": {
       "kind": "skill.sh",
       "target": "gastown",
@@ -1788,6 +4814,47 @@
     }
   },
   {
+    "id": "skill:gen-alpha-slang",
+    "kind": "skill",
+    "name": "Gen-Alpha Slang",
+    "description": "This is really... different. I don't know what to say about this one. It does what it says on the tin. You might find it funny, you might want throw up. I'll just say candidly this is included strictly for its potentially comedic awesomeness.",
+    "provider": "github",
+    "capabilities": [
+      "automation"
+    ],
+    "compatibility": [
+      "claude-code"
+    ],
+    "source": "awesome-claude-code",
+    "lastSeenAt": "2026-03-23",
+    "install": {
+      "kind": "manual",
+      "instructions": "Visit the linked repository and follow its installation instructions.",
+      "url": "https://github.com/sjnims/gen-alpha-output-style"
+    },
+    "adoptionSignal": 72,
+    "maintenanceSignal": 70,
+    "provenanceSignal": 82,
+    "freshnessSignal": 72,
+    "securitySignals": {
+      "knownVulnerabilities": 0,
+      "suspiciousPatterns": 0,
+      "injectionFindings": 0,
+      "exfiltrationSignals": 0,
+      "integrityAlerts": 0
+    },
+    "metadata": {
+      "catalogType": "skill",
+      "sourceConfidence": "vetted-curated",
+      "awesomeClaudeCodeId": "output-ade86de0",
+      "awesomeClaudeCodeCategory": "Output Styles",
+      "authorName": "Steve Nims",
+      "license": "MIT",
+      "sourceRegistryId": "awesome-claude-code",
+      "sourceType": "community-list"
+    }
+  },
+  {
     "id": "skill:gh-address-comments",
     "kind": "skill",
     "name": "Gh Address Comments",
@@ -1801,7 +4868,7 @@
       "github"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-22",
+    "lastSeenAt": "2026-03-23",
     "install": {
       "kind": "skill.sh",
       "target": "Gh Address Comments",
@@ -1844,7 +4911,7 @@
       "node"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-22",
+    "lastSeenAt": "2026-03-23",
     "install": {
       "kind": "skill.sh",
       "target": "gh-cli",
@@ -1886,7 +4953,7 @@
       "github"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-22",
+    "lastSeenAt": "2026-03-23",
     "install": {
       "kind": "skill.sh",
       "target": "Gh Fix Ci",
@@ -1912,6 +4979,49 @@
     }
   },
   {
+    "id": "skill:giselle",
+    "kind": "skill",
+    "name": "Giselle",
+    "description": "Provides detailed build and test commands using pnpm and Vitest with strict code formatting requirements and comprehensive naming conventions for code consistency.",
+    "provider": "github",
+    "capabilities": [
+      "frontend",
+      "guardrails"
+    ],
+    "compatibility": [
+      "claude-code"
+    ],
+    "source": "awesome-claude-code",
+    "lastSeenAt": "2026-03-23",
+    "install": {
+      "kind": "manual",
+      "instructions": "Visit the linked repository and follow its installation instructions.",
+      "url": "https://github.com/giselles-ai/giselle/blob/main/CLAUDE.md"
+    },
+    "adoptionSignal": 72,
+    "maintenanceSignal": 78,
+    "provenanceSignal": 82,
+    "freshnessSignal": 72,
+    "securitySignals": {
+      "knownVulnerabilities": 0,
+      "suspiciousPatterns": 0,
+      "injectionFindings": 0,
+      "exfiltrationSignals": 0,
+      "integrityAlerts": 0
+    },
+    "metadata": {
+      "catalogType": "skill",
+      "sourceConfidence": "vetted-curated",
+      "awesomeClaudeCodeId": "claude-3ae444b3",
+      "awesomeClaudeCodeCategory": "CLAUDE.md Files",
+      "authorName": "giselles-ai",
+      "license": "Apache-2.0",
+      "releaseVersion": "v0.72.0",
+      "sourceRegistryId": "awesome-claude-code",
+      "sourceType": "community-list"
+    }
+  },
+  {
     "id": "skill:git-cleanup",
     "kind": "skill",
     "name": "git-cleanup",
@@ -1927,7 +5037,7 @@
       "node"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-22",
+    "lastSeenAt": "2026-03-23",
     "install": {
       "kind": "skill.sh",
       "target": "git-cleanup",
@@ -1972,7 +5082,7 @@
       "general"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-22",
+    "lastSeenAt": "2026-03-23",
     "install": {
       "kind": "skill.sh",
       "target": "google-workspace-skills",
@@ -1996,6 +5106,91 @@
     }
   },
   {
+    "id": "skill:happy-coder",
+    "kind": "skill",
+    "name": "Happy Coder",
+    "description": "Spawn and control multiple Claude Codes in parallel from your phone or desktop. Happy Coder runs Claude Code on your hardware, sends push notifications when Claude needs more input or permission, and costs nothing.",
+    "provider": "github",
+    "capabilities": [
+      "automation"
+    ],
+    "compatibility": [
+      "claude-code"
+    ],
+    "source": "awesome-claude-code",
+    "lastSeenAt": "2026-03-23",
+    "install": {
+      "kind": "manual",
+      "instructions": "Visit the linked repository and follow its installation instructions.",
+      "url": "https://github.com/slopus/happy"
+    },
+    "adoptionSignal": 72,
+    "maintenanceSignal": 70,
+    "provenanceSignal": 82,
+    "freshnessSignal": 72,
+    "securitySignals": {
+      "knownVulnerabilities": 0,
+      "suspiciousPatterns": 0,
+      "injectionFindings": 0,
+      "exfiltrationSignals": 0,
+      "integrityAlerts": 0
+    },
+    "metadata": {
+      "catalogType": "skill",
+      "sourceConfidence": "vetted-curated",
+      "awesomeClaudeCodeId": "tool-b4facb98",
+      "awesomeClaudeCodeCategory": "Tooling",
+      "authorName": "GrocerPublishAgent",
+      "license": "MIT",
+      "sourceRegistryId": "awesome-claude-code",
+      "sourceType": "community-list"
+    }
+  },
+  {
+    "id": "skill:hash",
+    "kind": "skill",
+    "name": "HASH",
+    "description": "Features comprehensive repository structure breakdown with strong emphasis on coding standards, detailed Rust documentation guidelines, and systematic PR review process.",
+    "provider": "github",
+    "capabilities": [
+      "docs",
+      "frontend",
+      "guardrails"
+    ],
+    "compatibility": [
+      "claude-code"
+    ],
+    "source": "awesome-claude-code",
+    "lastSeenAt": "2026-03-23",
+    "install": {
+      "kind": "manual",
+      "instructions": "Visit the linked repository and follow its installation instructions.",
+      "url": "https://github.com/hashintel/hash/blob/main/CLAUDE.md"
+    },
+    "adoptionSignal": 72,
+    "maintenanceSignal": 78,
+    "provenanceSignal": 82,
+    "freshnessSignal": 72,
+    "securitySignals": {
+      "knownVulnerabilities": 0,
+      "suspiciousPatterns": 0,
+      "injectionFindings": 0,
+      "exfiltrationSignals": 0,
+      "integrityAlerts": 0
+    },
+    "metadata": {
+      "catalogType": "skill",
+      "sourceConfidence": "vetted-curated",
+      "awesomeClaudeCodeId": "claude-b302b042",
+      "awesomeClaudeCodeCategory": "CLAUDE.md Files",
+      "authorName": "hashintel",
+      "license": "NOASSERTION",
+      "releaseVersion": "@hashintel/petrinaut@0.0.8",
+      "sourceRegistryId": "awesome-claude-code",
+      "sourceType": "community-list"
+    }
+  },
+  {
     "id": "skill:imagegen",
     "kind": "skill",
     "name": "Imagegen",
@@ -2008,7 +5203,7 @@
       "general"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-22",
+    "lastSeenAt": "2026-03-23",
     "install": {
       "kind": "skill.sh",
       "target": "Imagegen",
@@ -2049,7 +5244,7 @@
       "github"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-22",
+    "lastSeenAt": "2026-03-23",
     "install": {
       "kind": "skill.sh",
       "target": "insecure-defaults",
@@ -2106,7 +5301,7 @@
       "node"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-22",
+    "lastSeenAt": "2026-03-23",
     "install": {
       "kind": "skill.sh",
       "target": "internal-comms",
@@ -2149,7 +5344,7 @@
       "general"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-22",
+    "lastSeenAt": "2026-03-23",
     "install": {
       "kind": "skill.sh",
       "target": "Jupyter Notebook",
@@ -2192,7 +5387,7 @@
       "kubernetes"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-22",
+    "lastSeenAt": "2026-03-23",
     "install": {
       "kind": "skill.sh",
       "target": "kubernetes-ops",
@@ -2216,6 +5411,138 @@
     }
   },
   {
+    "id": "skill:langgraphjs",
+    "kind": "skill",
+    "name": "LangGraphJS",
+    "description": "Offers comprehensive build and test commands with detailed TypeScript style guidelines, layered library architecture, and monorepo structure using yarn workspaces.",
+    "provider": "github",
+    "capabilities": [
+      "docs",
+      "frontend",
+      "guardrails"
+    ],
+    "compatibility": [
+      "claude-code"
+    ],
+    "source": "awesome-claude-code",
+    "lastSeenAt": "2026-03-23",
+    "install": {
+      "kind": "manual",
+      "instructions": "Visit the linked repository and follow its installation instructions.",
+      "url": "https://github.com/langchain-ai/langgraphjs/blob/main/CLAUDE.md"
+    },
+    "adoptionSignal": 72,
+    "maintenanceSignal": 78,
+    "provenanceSignal": 82,
+    "freshnessSignal": 72,
+    "securitySignals": {
+      "knownVulnerabilities": 0,
+      "suspiciousPatterns": 0,
+      "injectionFindings": 0,
+      "exfiltrationSignals": 0,
+      "integrityAlerts": 0
+    },
+    "metadata": {
+      "catalogType": "skill",
+      "sourceConfidence": "vetted-curated",
+      "awesomeClaudeCodeId": "claude-2a18266c",
+      "awesomeClaudeCodeCategory": "CLAUDE.md Files",
+      "authorName": "langchain-ai",
+      "license": "MIT",
+      "releaseVersion": "@langchain/langgraph-sdk@1.7.2",
+      "sourceRegistryId": "awesome-claude-code",
+      "sourceType": "community-list"
+    }
+  },
+  {
+    "id": "skill:learn-claude-code",
+    "kind": "skill",
+    "name": "Learn Claude Code",
+    "description": "A really interesting analysis of how coding agents like Claude Code are designed. It attempts to break an agent down into its fundamental parts and reconstruct it with minimal code. Great learning resource. Final product is a rudimentary agent with skills, sub-agents, and a todo-list in roughly a few hundred lines of P",
+    "provider": "github",
+    "capabilities": [
+      "automation",
+      "docs",
+      "frontend",
+      "orchestration"
+    ],
+    "compatibility": [
+      "claude-code"
+    ],
+    "source": "awesome-claude-code",
+    "lastSeenAt": "2026-03-23",
+    "install": {
+      "kind": "manual",
+      "instructions": "Visit the linked repository and follow its installation instructions.",
+      "url": "https://github.com/shareAI-lab/learn-claude-code"
+    },
+    "adoptionSignal": 72,
+    "maintenanceSignal": 70,
+    "provenanceSignal": 82,
+    "freshnessSignal": 72,
+    "securitySignals": {
+      "knownVulnerabilities": 0,
+      "suspiciousPatterns": 0,
+      "injectionFindings": 0,
+      "exfiltrationSignals": 0,
+      "integrityAlerts": 0
+    },
+    "metadata": {
+      "catalogType": "skill",
+      "sourceConfidence": "vetted-curated",
+      "awesomeClaudeCodeId": "wf-98ee6249",
+      "awesomeClaudeCodeCategory": "Workflows & Knowledge Guides",
+      "authorName": "shareAI-Lab",
+      "license": "MIT",
+      "sourceRegistryId": "awesome-claude-code",
+      "sourceType": "community-list"
+    }
+  },
+  {
+    "id": "skill:learn-faster-kit",
+    "kind": "skill",
+    "name": "learn-faster-kit",
+    "description": "A creative educational framework for Claude Code, inspired by the \"FASTER\" approach to self-teaching. Ships with a variety of agents, slash commands, and tools that enable Claude Code to help you progress at your own pace, employing well-established pedagogical techniques like active learning and spaced repetition.",
+    "provider": "github",
+    "capabilities": [
+      "automation",
+      "docs",
+      "frontend",
+      "orchestration"
+    ],
+    "compatibility": [
+      "claude-code"
+    ],
+    "source": "awesome-claude-code",
+    "lastSeenAt": "2026-03-23",
+    "install": {
+      "kind": "manual",
+      "instructions": "Visit the linked repository and follow its installation instructions.",
+      "url": "https://github.com/cheukyin175/learn-faster-kit"
+    },
+    "adoptionSignal": 72,
+    "maintenanceSignal": 70,
+    "provenanceSignal": 82,
+    "freshnessSignal": 72,
+    "securitySignals": {
+      "knownVulnerabilities": 0,
+      "suspiciousPatterns": 0,
+      "injectionFindings": 0,
+      "exfiltrationSignals": 0,
+      "integrityAlerts": 0
+    },
+    "metadata": {
+      "catalogType": "skill",
+      "sourceConfidence": "vetted-curated",
+      "awesomeClaudeCodeId": "wf-a50134d3",
+      "awesomeClaudeCodeCategory": "Workflows & Knowledge Guides",
+      "authorName": "Hugo Lau",
+      "license": "MIT",
+      "sourceRegistryId": "awesome-claude-code",
+      "sourceType": "community-list"
+    }
+  },
+  {
     "id": "skill:let-fate-decide",
     "kind": "skill",
     "name": "let-fate-decide",
@@ -2232,7 +5559,7 @@
       "node"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-22",
+    "lastSeenAt": "2026-03-23",
     "install": {
       "kind": "skill.sh",
       "target": "let-fate-decide",
@@ -2274,7 +5601,7 @@
       "linear"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-22",
+    "lastSeenAt": "2026-03-23",
     "install": {
       "kind": "skill.sh",
       "target": "Linear",
@@ -2328,7 +5655,7 @@
       "node"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-22",
+    "lastSeenAt": "2026-03-23",
     "install": {
       "kind": "skill.sh",
       "target": "mcp-builder",
@@ -2359,6 +5686,49 @@
     }
   },
   {
+    "id": "skill:metabase",
+    "kind": "skill",
+    "name": "Metabase",
+    "description": "Details workflow for REPL-driven development in Clojure/ClojureScript with emphasis on incremental development, testing, and step-by-step approach for feature implementation.",
+    "provider": "github",
+    "capabilities": [
+      "automation",
+      "guardrails"
+    ],
+    "compatibility": [
+      "claude-code"
+    ],
+    "source": "awesome-claude-code",
+    "lastSeenAt": "2026-03-23",
+    "install": {
+      "kind": "manual",
+      "instructions": "Visit the linked repository and follow its installation instructions.",
+      "url": "https://github.com/metabase/metabase/blob/master/CLAUDE.md"
+    },
+    "adoptionSignal": 72,
+    "maintenanceSignal": 78,
+    "provenanceSignal": 82,
+    "freshnessSignal": 72,
+    "securitySignals": {
+      "knownVulnerabilities": 0,
+      "suspiciousPatterns": 0,
+      "injectionFindings": 0,
+      "exfiltrationSignals": 0,
+      "integrityAlerts": 0
+    },
+    "metadata": {
+      "catalogType": "skill",
+      "sourceConfidence": "vetted-curated",
+      "awesomeClaudeCodeId": "claude-38b6b458",
+      "awesomeClaudeCodeCategory": "CLAUDE.md Files",
+      "authorName": "metabase",
+      "license": "NOASSERTION",
+      "releaseVersion": "v0.59.2",
+      "sourceRegistryId": "awesome-claude-code",
+      "sourceType": "community-list"
+    }
+  },
+  {
     "id": "skill:modern-python",
     "kind": "skill",
     "name": "modern-python",
@@ -2374,7 +5744,7 @@
       "node"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-22",
+    "lastSeenAt": "2026-03-23",
     "install": {
       "kind": "skill.sh",
       "target": "modern-python",
@@ -2418,7 +5788,7 @@
       "node"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-22",
+    "lastSeenAt": "2026-03-23",
     "install": {
       "kind": "skill.sh",
       "target": "n8n-skills",
@@ -2466,7 +5836,7 @@
       "github"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-22",
+    "lastSeenAt": "2026-03-23",
     "install": {
       "kind": "skill.sh",
       "target": "neon-plugin",
@@ -2507,7 +5877,7 @@
       "general"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-22",
+    "lastSeenAt": "2026-03-23",
     "install": {
       "kind": "skill.sh",
       "target": "Netlify Deploy",
@@ -2546,7 +5916,7 @@
       "notion"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-22",
+    "lastSeenAt": "2026-03-23",
     "install": {
       "kind": "skill.sh",
       "target": "Notion Knowledge Capture",
@@ -2585,7 +5955,7 @@
       "notion"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-22",
+    "lastSeenAt": "2026-03-23",
     "install": {
       "kind": "skill.sh",
       "target": "Notion Meeting Intelligence",
@@ -2624,7 +5994,7 @@
       "notion"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-22",
+    "lastSeenAt": "2026-03-23",
     "install": {
       "kind": "skill.sh",
       "target": "Notion Research Documentation",
@@ -2663,7 +6033,7 @@
       "notion"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-22",
+    "lastSeenAt": "2026-03-23",
     "install": {
       "kind": "skill.sh",
       "target": "Notion Spec To Implementation",
@@ -2707,7 +6077,7 @@
       "python"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-22",
+    "lastSeenAt": "2026-03-23",
     "install": {
       "kind": "skill.sh",
       "target": "observability-incident-response",
@@ -2731,6 +6101,48 @@
     }
   },
   {
+    "id": "skill:omnara",
+    "kind": "skill",
+    "name": "Omnara",
+    "description": "A command center for AI agents that syncs Claude Code sessions across terminal, web, and mobile. Allows for remote monitoring, human-in-the-loop interaction, and team collaboration.",
+    "provider": "github",
+    "capabilities": [
+      "orchestration"
+    ],
+    "compatibility": [
+      "claude-code"
+    ],
+    "source": "awesome-claude-code",
+    "lastSeenAt": "2026-03-23",
+    "install": {
+      "kind": "manual",
+      "instructions": "Visit the linked repository and follow its installation instructions.",
+      "url": "https://github.com/omnara-ai/omnara"
+    },
+    "adoptionSignal": 72,
+    "maintenanceSignal": 78,
+    "provenanceSignal": 82,
+    "freshnessSignal": 72,
+    "securitySignals": {
+      "knownVulnerabilities": 0,
+      "suspiciousPatterns": 0,
+      "injectionFindings": 0,
+      "exfiltrationSignals": 0,
+      "integrityAlerts": 0
+    },
+    "metadata": {
+      "catalogType": "skill",
+      "sourceConfidence": "vetted-curated",
+      "awesomeClaudeCodeId": "client-b6c9db9e",
+      "awesomeClaudeCodeCategory": "Alternative Clients",
+      "authorName": "Ishaan Sehgal",
+      "license": "Apache-2.0",
+      "releaseVersion": "v1.7.0",
+      "sourceRegistryId": "awesome-claude-code",
+      "sourceType": "community-list"
+    }
+  },
+  {
     "id": "skill:open-source-maintainer",
     "kind": "skill",
     "name": "open-source-maintainer",
@@ -2748,7 +6160,7 @@
       "node"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-22",
+    "lastSeenAt": "2026-03-23",
     "install": {
       "kind": "skill.sh",
       "target": "open-source-maintainer",
@@ -2789,7 +6201,7 @@
       "general"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-22",
+    "lastSeenAt": "2026-03-23",
     "install": {
       "kind": "skill.sh",
       "target": "Openai Docs",
@@ -2831,7 +6243,7 @@
       "node"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-22",
+    "lastSeenAt": "2026-03-23",
     "install": {
       "kind": "skill.sh",
       "target": "orchestration",
@@ -2860,6 +6272,94 @@
     }
   },
   {
+    "id": "skill:pareto-mac",
+    "kind": "skill",
+    "name": "Pareto Mac",
+    "description": "Serves as development guide for Mac security audit tool with build instructions, contribution guidelines, testing procedures, and workflow documentation.",
+    "provider": "github",
+    "capabilities": [
+      "automation",
+      "docs",
+      "frontend",
+      "guardrails",
+      "security"
+    ],
+    "compatibility": [
+      "claude-code"
+    ],
+    "source": "awesome-claude-code",
+    "lastSeenAt": "2026-03-23",
+    "install": {
+      "kind": "manual",
+      "instructions": "Visit the linked repository and follow its installation instructions.",
+      "url": "https://github.com/ParetoSecurity/pareto-mac/blob/main/CLAUDE.md"
+    },
+    "adoptionSignal": 72,
+    "maintenanceSignal": 78,
+    "provenanceSignal": 82,
+    "freshnessSignal": 72,
+    "securitySignals": {
+      "knownVulnerabilities": 0,
+      "suspiciousPatterns": 0,
+      "injectionFindings": 0,
+      "exfiltrationSignals": 0,
+      "integrityAlerts": 0
+    },
+    "metadata": {
+      "catalogType": "skill",
+      "sourceConfidence": "vetted-curated",
+      "awesomeClaudeCodeId": "claude-5479b4e8",
+      "awesomeClaudeCodeCategory": "CLAUDE.md Files",
+      "authorName": "ParetoSecurity",
+      "license": "GPL-3.0",
+      "releaseVersion": "1.24.0",
+      "sourceRegistryId": "awesome-claude-code",
+      "sourceType": "community-list"
+    }
+  },
+  {
+    "id": "skill:parry",
+    "kind": "skill",
+    "name": "parry",
+    "description": "Prompt injection scanner for Claude Code hooks. Scans tool inputs and outputs for injection attacks, secrets, and data exfiltration attempts. [NOTE: Early development phase but worth a look.]",
+    "provider": "github",
+    "capabilities": [
+      "automation"
+    ],
+    "compatibility": [
+      "claude-code"
+    ],
+    "source": "awesome-claude-code",
+    "lastSeenAt": "2026-03-23",
+    "install": {
+      "kind": "manual",
+      "instructions": "Visit the linked repository and follow its installation instructions.",
+      "url": "https://github.com/vaporif/parry"
+    },
+    "adoptionSignal": 72,
+    "maintenanceSignal": 78,
+    "provenanceSignal": 82,
+    "freshnessSignal": 72,
+    "securitySignals": {
+      "knownVulnerabilities": 0,
+      "suspiciousPatterns": 0,
+      "injectionFindings": 0,
+      "exfiltrationSignals": 0,
+      "integrityAlerts": 0
+    },
+    "metadata": {
+      "catalogType": "skill",
+      "sourceConfidence": "vetted-curated",
+      "awesomeClaudeCodeId": "hook-c8d81568",
+      "awesomeClaudeCodeCategory": "Hooks",
+      "authorName": "Dmytro Onypko",
+      "license": "MIT",
+      "releaseVersion": "v0.1.0-alpha.2",
+      "sourceRegistryId": "awesome-claude-code",
+      "sourceType": "community-list"
+    }
+  },
+  {
     "id": "skill:pdf",
     "kind": "skill",
     "name": "Pdf",
@@ -2880,7 +6380,7 @@
       "node"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-22",
+    "lastSeenAt": "2026-03-23",
     "install": {
       "kind": "skill.sh",
       "target": "Pdf",
@@ -2912,6 +6412,49 @@
     }
   },
   {
+    "id": "skill:plannotator",
+    "kind": "skill",
+    "name": "Plannotator",
+    "description": "Interactive plan review UI that intercepts ExitPlanMode via hooks, letting users visually annotate plans with comments, deletions, and replacements before approving or denying with detailed feedback.",
+    "provider": "github",
+    "capabilities": [
+      "frontend",
+      "guardrails"
+    ],
+    "compatibility": [
+      "claude-code"
+    ],
+    "source": "awesome-claude-code",
+    "lastSeenAt": "2026-03-23",
+    "install": {
+      "kind": "manual",
+      "instructions": "Visit the linked repository and follow its installation instructions.",
+      "url": "https://github.com/backnotprop/plannotator"
+    },
+    "adoptionSignal": 72,
+    "maintenanceSignal": 78,
+    "provenanceSignal": 82,
+    "freshnessSignal": 72,
+    "securitySignals": {
+      "knownVulnerabilities": 0,
+      "suspiciousPatterns": 0,
+      "injectionFindings": 0,
+      "exfiltrationSignals": 0,
+      "integrityAlerts": 0
+    },
+    "metadata": {
+      "catalogType": "skill",
+      "sourceConfidence": "vetted-curated",
+      "awesomeClaudeCodeId": "hook-7dbcf415",
+      "awesomeClaudeCodeCategory": "Hooks",
+      "authorName": "backnotprop",
+      "license": "Apache-2.0",
+      "releaseVersion": "v0.12.0",
+      "sourceRegistryId": "awesome-claude-code",
+      "sourceType": "community-list"
+    }
+  },
+  {
     "id": "skill:playwright",
     "kind": "skill",
     "name": "Playwright",
@@ -2925,7 +6468,7 @@
       "node"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-22",
+    "lastSeenAt": "2026-03-23",
     "install": {
       "kind": "skill.sh",
       "target": "Playwright",
@@ -2964,7 +6507,7 @@
       "node"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-22",
+    "lastSeenAt": "2026-03-23",
     "install": {
       "kind": "skill.sh",
       "target": "Playwright Interactive",
@@ -3007,7 +6550,7 @@
       "python"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-22",
+    "lastSeenAt": "2026-03-23",
     "install": {
       "kind": "skill.sh",
       "target": "postgres-ops",
@@ -3050,7 +6593,7 @@
       "node"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-22",
+    "lastSeenAt": "2026-03-23",
     "install": {
       "kind": "skill.sh",
       "target": "pptx",
@@ -3081,6 +6624,47 @@
     }
   },
   {
+    "id": "skill:prd-generator",
+    "kind": "skill",
+    "name": "/prd-generator",
+    "description": "A Claude Code plugin that generates comprehensive Product Requirements Documents (PRDs) from conversation context. Invoke `/create-prd` after discussing requirements and it produces a complete PRD with all standard sections including Executive Summary, User Stories, MVP Scope, Architecture, Success Criteria, and Implem",
+    "provider": "github",
+    "capabilities": [
+      "frontend"
+    ],
+    "compatibility": [
+      "claude-code"
+    ],
+    "source": "awesome-claude-code",
+    "lastSeenAt": "2026-03-23",
+    "install": {
+      "kind": "manual",
+      "instructions": "Visit the linked repository and follow its installation instructions.",
+      "url": "https://github.com/dredozubov/prd-generator"
+    },
+    "adoptionSignal": 72,
+    "maintenanceSignal": 70,
+    "provenanceSignal": 82,
+    "freshnessSignal": 72,
+    "securitySignals": {
+      "knownVulnerabilities": 0,
+      "suspiciousPatterns": 0,
+      "injectionFindings": 0,
+      "exfiltrationSignals": 0,
+      "integrityAlerts": 0
+    },
+    "metadata": {
+      "catalogType": "skill",
+      "sourceConfidence": "vetted-curated",
+      "awesomeClaudeCodeId": "cmd-a8870199",
+      "awesomeClaudeCodeCategory": "Slash-Commands",
+      "authorName": "Denis Redozubov",
+      "license": "MIT",
+      "sourceRegistryId": "awesome-claude-code",
+      "sourceType": "community-list"
+    }
+  },
+  {
     "id": "skill:productivity-skills",
     "kind": "skill",
     "name": "productivity-skills",
@@ -3099,7 +6683,7 @@
       "node"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-22",
+    "lastSeenAt": "2026-03-23",
     "install": {
       "kind": "skill.sh",
       "target": "productivity-skills",
@@ -3128,6 +6712,50 @@
     }
   },
   {
+    "id": "skill:project-workflow-system",
+    "kind": "skill",
+    "name": "Project Workflow System",
+    "description": "A set of commands that provide a comprehensive workflow system for managing projects, including task management, code review, and deployment processes.",
+    "provider": "github",
+    "capabilities": [
+      "automation",
+      "docs",
+      "frontend",
+      "guardrails"
+    ],
+    "compatibility": [
+      "claude-code"
+    ],
+    "source": "awesome-claude-code",
+    "lastSeenAt": "2026-03-23",
+    "install": {
+      "kind": "manual",
+      "instructions": "Visit the linked repository and follow its installation instructions.",
+      "url": "https://github.com/harperreed/dotfiles/tree/master/.claude/commands"
+    },
+    "adoptionSignal": 72,
+    "maintenanceSignal": 70,
+    "provenanceSignal": 82,
+    "freshnessSignal": 72,
+    "securitySignals": {
+      "knownVulnerabilities": 0,
+      "suspiciousPatterns": 0,
+      "injectionFindings": 0,
+      "exfiltrationSignals": 0,
+      "integrityAlerts": 0
+    },
+    "metadata": {
+      "catalogType": "skill",
+      "sourceConfidence": "vetted-curated",
+      "awesomeClaudeCodeId": "wf-42a8d5a5",
+      "awesomeClaudeCodeCategory": "Workflows & Knowledge Guides",
+      "authorName": "harperreed",
+      "license": "NOT_FOUND",
+      "sourceRegistryId": "awesome-claude-code",
+      "sourceType": "community-list"
+    }
+  },
+  {
     "id": "skill:prompt-engineering",
     "kind": "skill",
     "name": "Prompt Engineering",
@@ -3143,7 +6771,7 @@
       "general"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-22",
+    "lastSeenAt": "2026-03-23",
     "install": {
       "kind": "skill.sh",
       "target": "prompt-engineering",
@@ -3181,7 +6809,7 @@
       "general"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-22",
+    "lastSeenAt": "2026-03-23",
     "install": {
       "kind": "skill.sh",
       "target": "property-based-testing",
@@ -3210,6 +6838,267 @@
     }
   },
   {
+    "id": "skill:ralph-for-claude-code",
+    "kind": "skill",
+    "name": "Ralph for Claude Code",
+    "description": "An autonomous AI development framework that enables Claude Code to work iteratively on projects until completion. Features intelligent exit detection, rate limiting, circuit breaker patterns, and comprehensive safety guardrails to prevent infinite loops and API overuse. Built with Bash, integrated with tmux for live mo",
+    "provider": "github",
+    "capabilities": [
+      "automation",
+      "docs",
+      "frontend",
+      "guardrails"
+    ],
+    "compatibility": [
+      "claude-code"
+    ],
+    "source": "awesome-claude-code",
+    "lastSeenAt": "2026-03-23",
+    "install": {
+      "kind": "manual",
+      "instructions": "Visit the linked repository and follow its installation instructions.",
+      "url": "https://github.com/frankbria/ralph-claude-code"
+    },
+    "adoptionSignal": 72,
+    "maintenanceSignal": 70,
+    "provenanceSignal": 82,
+    "freshnessSignal": 72,
+    "securitySignals": {
+      "knownVulnerabilities": 0,
+      "suspiciousPatterns": 0,
+      "injectionFindings": 0,
+      "exfiltrationSignals": 0,
+      "integrityAlerts": 0
+    },
+    "metadata": {
+      "catalogType": "skill",
+      "sourceConfidence": "vetted-curated",
+      "awesomeClaudeCodeId": "wf-8ceac0c4",
+      "awesomeClaudeCodeCategory": "Workflows & Knowledge Guides",
+      "authorName": "Frank Bria",
+      "license": "MIT",
+      "sourceRegistryId": "awesome-claude-code",
+      "sourceType": "community-list"
+    }
+  },
+  {
+    "id": "skill:ralph-orchestrator",
+    "kind": "skill",
+    "name": "ralph-orchestrator",
+    "description": "Ralph Orchestrator implements the simple but effective \"Ralph Wiggum\" technique for autonomous task completion, continuously running an AI agent against a prompt file until the task is marked as complete or limits are reached. This implementation provides a robust, well-tested, and feature-complete orchestration system",
+    "provider": "github",
+    "capabilities": [
+      "automation",
+      "docs",
+      "frontend",
+      "guardrails",
+      "orchestration"
+    ],
+    "compatibility": [
+      "claude-code"
+    ],
+    "source": "awesome-claude-code",
+    "lastSeenAt": "2026-03-23",
+    "install": {
+      "kind": "manual",
+      "instructions": "Visit the linked repository and follow its installation instructions.",
+      "url": "https://github.com/mikeyobrien/ralph-orchestrator"
+    },
+    "adoptionSignal": 72,
+    "maintenanceSignal": 78,
+    "provenanceSignal": 82,
+    "freshnessSignal": 72,
+    "securitySignals": {
+      "knownVulnerabilities": 0,
+      "suspiciousPatterns": 0,
+      "injectionFindings": 0,
+      "exfiltrationSignals": 0,
+      "integrityAlerts": 0
+    },
+    "metadata": {
+      "catalogType": "skill",
+      "sourceConfidence": "vetted-curated",
+      "awesomeClaudeCodeId": "wf-bc51a50b",
+      "awesomeClaudeCodeCategory": "Workflows & Knowledge Guides",
+      "authorName": "mikeyobrien",
+      "license": "MIT",
+      "releaseVersion": "v2.8.0",
+      "sourceRegistryId": "awesome-claude-code",
+      "sourceType": "community-list"
+    }
+  },
+  {
+    "id": "skill:ralph-wiggum-bdd",
+    "kind": "skill",
+    "name": "ralph-wiggum-bdd",
+    "description": "A standalone Bash script for Behavior-Driven Development with Ralph Wiggum Loop. In principle, while running unattended, the script can keep code and requirements in sync, but in practice it still requires interactive human supervision, so it supports both modes. The script is standalone and can be modified and committ",
+    "provider": "github",
+    "capabilities": [
+      "automation",
+      "docs",
+      "frontend"
+    ],
+    "compatibility": [
+      "claude-code"
+    ],
+    "source": "awesome-claude-code",
+    "lastSeenAt": "2026-03-23",
+    "install": {
+      "kind": "manual",
+      "instructions": "Visit the linked repository and follow its installation instructions.",
+      "url": "https://github.com/marcindulak/ralph-wiggum-bdd"
+    },
+    "adoptionSignal": 72,
+    "maintenanceSignal": 70,
+    "provenanceSignal": 82,
+    "freshnessSignal": 72,
+    "securitySignals": {
+      "knownVulnerabilities": 0,
+      "suspiciousPatterns": 0,
+      "injectionFindings": 0,
+      "exfiltrationSignals": 0,
+      "integrityAlerts": 0
+    },
+    "metadata": {
+      "catalogType": "skill",
+      "sourceConfidence": "vetted-curated",
+      "awesomeClaudeCodeId": "wf-316367ff",
+      "awesomeClaudeCodeCategory": "Workflows & Knowledge Guides",
+      "authorName": "marcindulak",
+      "license": "Apache-2.0",
+      "sourceRegistryId": "awesome-claude-code",
+      "sourceType": "community-list"
+    }
+  },
+  {
+    "id": "skill:ralph-wiggum-marketer",
+    "kind": "skill",
+    "name": "Ralph Wiggum Marketer",
+    "description": "A Claude Code plugin that provides an autonomous AI copywriter, integrating the Ralph loop with customized knowledge bases for market research agents. The agents do the research, Ralph writes the copy, you stay in bed. Whether or not you practice Ralph-Driven Development (RDD), I think these projects are interesting an",
+    "provider": "github",
+    "capabilities": [
+      "automation",
+      "docs",
+      "frontend",
+      "orchestration"
+    ],
+    "compatibility": [
+      "claude-code"
+    ],
+    "source": "awesome-claude-code",
+    "lastSeenAt": "2026-03-23",
+    "install": {
+      "kind": "manual",
+      "instructions": "Visit the linked repository and follow its installation instructions.",
+      "url": "https://github.com/muratcankoylan/ralph-wiggum-marketer"
+    },
+    "adoptionSignal": 72,
+    "maintenanceSignal": 70,
+    "provenanceSignal": 82,
+    "freshnessSignal": 72,
+    "securitySignals": {
+      "knownVulnerabilities": 0,
+      "suspiciousPatterns": 0,
+      "injectionFindings": 0,
+      "exfiltrationSignals": 0,
+      "integrityAlerts": 0
+    },
+    "metadata": {
+      "catalogType": "skill",
+      "sourceConfidence": "vetted-curated",
+      "awesomeClaudeCodeId": "wf-2fdeff7e",
+      "awesomeClaudeCodeCategory": "Workflows & Knowledge Guides",
+      "authorName": "Muratcan Koylan",
+      "license": "NOT_FOUND",
+      "sourceRegistryId": "awesome-claude-code",
+      "sourceType": "community-list"
+    }
+  },
+  {
+    "id": "skill:read-only-postgres",
+    "kind": "skill",
+    "name": "read-only-postgres",
+    "description": "Read-only PostgreSQL query skill for Claude Code. Executes SELECT/SHOW/EXPLAIN/WITH queries across configured databases with strict validation, timeouts, and row limits. Supports multiple connections with descriptions for database selection.",
+    "provider": "github",
+    "capabilities": [
+      "data",
+      "orchestration"
+    ],
+    "compatibility": [
+      "claude-code"
+    ],
+    "source": "awesome-claude-code",
+    "lastSeenAt": "2026-03-23",
+    "install": {
+      "kind": "manual",
+      "instructions": "Visit the linked repository and follow its installation instructions.",
+      "url": "https://github.com/jawwadfirdousi/agent-skills"
+    },
+    "adoptionSignal": 72,
+    "maintenanceSignal": 70,
+    "provenanceSignal": 82,
+    "freshnessSignal": 72,
+    "securitySignals": {
+      "knownVulnerabilities": 0,
+      "suspiciousPatterns": 0,
+      "injectionFindings": 0,
+      "exfiltrationSignals": 0,
+      "integrityAlerts": 0
+    },
+    "metadata": {
+      "catalogType": "skill",
+      "sourceConfidence": "vetted-curated",
+      "awesomeClaudeCodeId": "skill-cf9ee629",
+      "awesomeClaudeCodeCategory": "Agent Skills",
+      "authorName": "jawwadfirdousi",
+      "license": "NOT_FOUND",
+      "sourceRegistryId": "awesome-claude-code",
+      "sourceType": "community-list"
+    }
+  },
+  {
+    "id": "skill:recall",
+    "kind": "skill",
+    "name": "recall",
+    "description": "Full-text search your Claude Code sessions. Run `recall` in terminal, type to search, Enter to resume. Alternative to `claude --resume`.",
+    "provider": "github",
+    "capabilities": [
+      "automation"
+    ],
+    "compatibility": [
+      "claude-code"
+    ],
+    "source": "awesome-claude-code",
+    "lastSeenAt": "2026-03-23",
+    "install": {
+      "kind": "manual",
+      "instructions": "Visit the linked repository and follow its installation instructions.",
+      "url": "https://github.com/zippoxer/recall"
+    },
+    "adoptionSignal": 72,
+    "maintenanceSignal": 78,
+    "provenanceSignal": 82,
+    "freshnessSignal": 72,
+    "securitySignals": {
+      "knownVulnerabilities": 0,
+      "suspiciousPatterns": 0,
+      "injectionFindings": 0,
+      "exfiltrationSignals": 0,
+      "integrityAlerts": 0
+    },
+    "metadata": {
+      "catalogType": "skill",
+      "sourceConfidence": "vetted-curated",
+      "awesomeClaudeCodeId": "tool-6e6f1ae1",
+      "awesomeClaudeCodeCategory": "Tooling",
+      "authorName": "zippoxer",
+      "license": "MIT",
+      "releaseVersion": "v0.5.0",
+      "sourceRegistryId": "awesome-claude-code",
+      "sourceType": "community-list"
+    }
+  },
+  {
     "id": "skill:release-readiness",
     "kind": "skill",
     "name": "Release Readiness",
@@ -3226,7 +7115,7 @@
       "node"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-22",
+    "lastSeenAt": "2026-03-23",
     "install": {
       "kind": "skill.sh",
       "target": "release-readiness",
@@ -3264,7 +7153,7 @@
       "node"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-22",
+    "lastSeenAt": "2026-03-23",
     "install": {
       "kind": "skill.sh",
       "target": "remotion",
@@ -3300,7 +7189,7 @@
       "general"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-22",
+    "lastSeenAt": "2026-03-23",
     "install": {
       "kind": "skill.sh",
       "target": "Render Deploy",
@@ -3326,6 +7215,93 @@
     }
   },
   {
+    "id": "skill:riper-workflow",
+    "kind": "skill",
+    "name": "RIPER Workflow",
+    "description": "Structured development workflow enforcing separation between Research, Innovate, Plan, Execute, and Review phases. Features consolidated subagents for context-efficiency, branch-aware memory bank, and strict mode enforcement for guided development.",
+    "provider": "github",
+    "capabilities": [
+      "automation",
+      "docs",
+      "frontend",
+      "guardrails",
+      "orchestration"
+    ],
+    "compatibility": [
+      "claude-code"
+    ],
+    "source": "awesome-claude-code",
+    "lastSeenAt": "2026-03-23",
+    "install": {
+      "kind": "manual",
+      "instructions": "Visit the linked repository and follow its installation instructions.",
+      "url": "https://github.com/tony/claude-code-riper-5"
+    },
+    "adoptionSignal": 72,
+    "maintenanceSignal": 70,
+    "provenanceSignal": 82,
+    "freshnessSignal": 72,
+    "securitySignals": {
+      "knownVulnerabilities": 0,
+      "suspiciousPatterns": 0,
+      "injectionFindings": 0,
+      "exfiltrationSignals": 0,
+      "integrityAlerts": 0
+    },
+    "metadata": {
+      "catalogType": "skill",
+      "sourceConfidence": "vetted-curated",
+      "awesomeClaudeCodeId": "wf-291eeb4a",
+      "awesomeClaudeCodeCategory": "Workflows & Knowledge Guides",
+      "authorName": "Tony Narlock",
+      "license": "MIT",
+      "sourceRegistryId": "awesome-claude-code",
+      "sourceType": "community-list"
+    }
+  },
+  {
+    "id": "skill:rulesync",
+    "kind": "skill",
+    "name": "Rulesync",
+    "description": "A Node.js CLI tool that automatically generates configs (rules, ignore files, MCP servers, commands, and subagents) for various AI coding agents. Rulesync can convert configs between Claude Code and other AI agents in both directions.",
+    "provider": "github",
+    "capabilities": [
+      "orchestration"
+    ],
+    "compatibility": [
+      "claude-code"
+    ],
+    "source": "awesome-claude-code",
+    "lastSeenAt": "2026-03-23",
+    "install": {
+      "kind": "manual",
+      "instructions": "Visit the linked repository and follow its installation instructions.",
+      "url": "https://github.com/dyoshikawa/rulesync"
+    },
+    "adoptionSignal": 72,
+    "maintenanceSignal": 78,
+    "provenanceSignal": 82,
+    "freshnessSignal": 72,
+    "securitySignals": {
+      "knownVulnerabilities": 0,
+      "suspiciousPatterns": 0,
+      "injectionFindings": 0,
+      "exfiltrationSignals": 0,
+      "integrityAlerts": 0
+    },
+    "metadata": {
+      "catalogType": "skill",
+      "sourceConfidence": "vetted-curated",
+      "awesomeClaudeCodeId": "tool-5845fda0",
+      "awesomeClaudeCodeCategory": "Tooling",
+      "authorName": "dyoshikawa",
+      "license": "MIT",
+      "releaseVersion": "v7.18.2",
+      "sourceRegistryId": "awesome-claude-code",
+      "sourceType": "community-list"
+    }
+  },
+  {
     "id": "skill:screenshot",
     "kind": "skill",
     "name": "Screenshot",
@@ -3338,7 +7314,7 @@
       "general"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-22",
+    "lastSeenAt": "2026-03-23",
     "install": {
       "kind": "skill.sh",
       "target": "Screenshot",
@@ -3379,7 +7355,7 @@
       "node"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-22",
+    "lastSeenAt": "2026-03-23",
     "install": {
       "kind": "skill.sh",
       "target": "seatbelt-sandboxer",
@@ -3424,7 +7400,7 @@
       "node"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-22",
+    "lastSeenAt": "2026-03-23",
     "install": {
       "kind": "skill.sh",
       "target": "second-opinion",
@@ -3469,7 +7445,7 @@
       "python"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-22",
+    "lastSeenAt": "2026-03-23",
     "install": {
       "kind": "skill.sh",
       "target": "secure-prompting",
@@ -3505,7 +7481,7 @@
       "general"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-22",
+    "lastSeenAt": "2026-03-23",
     "install": {
       "kind": "skill.sh",
       "target": "Security Best Practices",
@@ -3543,7 +7519,7 @@
       "general"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-22",
+    "lastSeenAt": "2026-03-23",
     "install": {
       "kind": "skill.sh",
       "target": "Security Ownership Map",
@@ -3581,7 +7557,7 @@
       "general"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-22",
+    "lastSeenAt": "2026-03-23",
     "install": {
       "kind": "skill.sh",
       "target": "Security Threat Model",
@@ -3622,7 +7598,7 @@
       "github"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-22",
+    "lastSeenAt": "2026-03-23",
     "install": {
       "kind": "skill.sh",
       "target": "semgrep-rule-creator",
@@ -3666,7 +7642,7 @@
       "node"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-22",
+    "lastSeenAt": "2026-03-23",
     "install": {
       "kind": "skill.sh",
       "target": "semgrep-rule-variant-creator",
@@ -3707,7 +7683,7 @@
       "general"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-22",
+    "lastSeenAt": "2026-03-23",
     "install": {
       "kind": "skill.sh",
       "target": "Sentry",
@@ -3733,6 +7709,49 @@
     }
   },
   {
+    "id": "skill:sg-cars-trends-backend",
+    "kind": "skill",
+    "name": "SG Cars Trends Backend",
+    "description": "Provides comprehensive structure for TypeScript monorepo projects with detailed commands for development, testing, deployment, and AWS/Cloudflare integration.",
+    "provider": "github",
+    "capabilities": [
+      "automation",
+      "guardrails"
+    ],
+    "compatibility": [
+      "claude-code"
+    ],
+    "source": "awesome-claude-code",
+    "lastSeenAt": "2026-03-23",
+    "install": {
+      "kind": "manual",
+      "instructions": "Visit the linked repository and follow its installation instructions.",
+      "url": "https://github.com/sgcarstrends/backend/blob/main/CLAUDE.md"
+    },
+    "adoptionSignal": 72,
+    "maintenanceSignal": 78,
+    "provenanceSignal": 82,
+    "freshnessSignal": 72,
+    "securitySignals": {
+      "knownVulnerabilities": 0,
+      "suspiciousPatterns": 0,
+      "injectionFindings": 0,
+      "exfiltrationSignals": 0,
+      "integrityAlerts": 0
+    },
+    "metadata": {
+      "catalogType": "skill",
+      "sourceConfidence": "vetted-curated",
+      "awesomeClaudeCodeId": "claude-8ff859d0",
+      "awesomeClaudeCodeCategory": "CLAUDE.md Files",
+      "authorName": "sgcarstrends",
+      "license": "MIT",
+      "releaseVersion": "v4.64.0",
+      "sourceRegistryId": "awesome-claude-code",
+      "sourceType": "community-list"
+    }
+  },
+  {
     "id": "skill:sharp-edges",
     "kind": "skill",
     "name": "sharp-edges",
@@ -3748,7 +7767,7 @@
       "github"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-22",
+    "lastSeenAt": "2026-03-23",
     "install": {
       "kind": "skill.sh",
       "target": "sharp-edges",
@@ -3774,6 +7793,48 @@
       "marketplaceSource": "github",
       "rawVersion": "1.0.0",
       "githubUrl": "https://github.com/trailofbits/skills/tree/main/plugins/sharp-edges"
+    }
+  },
+  {
+    "id": "skill:shipping-real-code-w-claude",
+    "kind": "skill",
+    "name": "Shipping Real Code w/ Claude",
+    "description": "A detailed blog post explaining the author's process for shipping a product with Claude Code, including CLAUDE.md files and other interesting resources.",
+    "provider": "github",
+    "capabilities": [
+      "automation",
+      "docs",
+      "frontend"
+    ],
+    "compatibility": [
+      "claude-code"
+    ],
+    "source": "awesome-claude-code",
+    "lastSeenAt": "2026-03-23",
+    "install": {
+      "kind": "manual",
+      "instructions": "Visit the linked repository and follow its installation instructions."
+    },
+    "adoptionSignal": 72,
+    "maintenanceSignal": 62,
+    "provenanceSignal": 82,
+    "freshnessSignal": 60,
+    "securitySignals": {
+      "knownVulnerabilities": 0,
+      "suspiciousPatterns": 0,
+      "injectionFindings": 0,
+      "exfiltrationSignals": 0,
+      "integrityAlerts": 0
+    },
+    "metadata": {
+      "catalogType": "skill",
+      "sourceConfidence": "vetted-curated",
+      "awesomeClaudeCodeId": "wf-eee9a073",
+      "awesomeClaudeCodeCategory": "Workflows & Knowledge Guides",
+      "authorName": "Diwank",
+      "license": "NOT_FOUND",
+      "sourceRegistryId": "awesome-claude-code",
+      "sourceType": "community-list"
     }
   },
   {
@@ -3805,7 +7866,7 @@
       "node"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-22",
+    "lastSeenAt": "2026-03-23",
     "install": {
       "kind": "skill.sh",
       "target": "skill-creator",
@@ -3850,7 +7911,7 @@
       "general"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-22",
+    "lastSeenAt": "2026-03-23",
     "install": {
       "kind": "skill.sh",
       "target": "skill-improver",
@@ -3907,7 +7968,7 @@
       "node"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-22",
+    "lastSeenAt": "2026-03-23",
     "install": {
       "kind": "skill.sh",
       "target": "slack-gif-creator",
@@ -3950,7 +8011,7 @@
       "general"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-22",
+    "lastSeenAt": "2026-03-23",
     "install": {
       "kind": "skill.sh",
       "target": "Slides",
@@ -3988,7 +8049,7 @@
       "general"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-22",
+    "lastSeenAt": "2026-03-23",
     "install": {
       "kind": "skill.sh",
       "target": "Sora",
@@ -4031,7 +8092,7 @@
       "node"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-22",
+    "lastSeenAt": "2026-03-23",
     "install": {
       "kind": "skill.sh",
       "target": "spec-to-code-compliance",
@@ -4072,7 +8133,7 @@
       "general"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-22",
+    "lastSeenAt": "2026-03-23",
     "install": {
       "kind": "skill.sh",
       "target": "Speech",
@@ -4110,7 +8171,7 @@
       "general"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-22",
+    "lastSeenAt": "2026-03-23",
     "install": {
       "kind": "skill.sh",
       "target": "Spreadsheet",
@@ -4136,6 +8197,51 @@
     }
   },
   {
+    "id": "skill:spy",
+    "kind": "skill",
+    "name": "SPy",
+    "description": "Enforces strict coding conventions with comprehensive testing guidelines, multiple code compilation options, and backend-specific test decorators for targeted filtering.",
+    "provider": "github",
+    "capabilities": [
+      "automation",
+      "docs",
+      "frontend",
+      "guardrails"
+    ],
+    "compatibility": [
+      "claude-code"
+    ],
+    "source": "awesome-claude-code",
+    "lastSeenAt": "2026-03-23",
+    "install": {
+      "kind": "manual",
+      "instructions": "Visit the linked repository and follow its installation instructions.",
+      "url": "https://github.com/spylang/spy/blob/main/CLAUDE.md"
+    },
+    "adoptionSignal": 72,
+    "maintenanceSignal": 78,
+    "provenanceSignal": 82,
+    "freshnessSignal": 72,
+    "securitySignals": {
+      "knownVulnerabilities": 0,
+      "suspiciousPatterns": 0,
+      "injectionFindings": 0,
+      "exfiltrationSignals": 0,
+      "integrityAlerts": 0
+    },
+    "metadata": {
+      "catalogType": "skill",
+      "sourceConfidence": "vetted-curated",
+      "awesomeClaudeCodeId": "claude-28de7758",
+      "awesomeClaudeCodeCategory": "CLAUDE.md Files",
+      "authorName": "spylang",
+      "license": "MIT",
+      "releaseVersion": "v0.0.0",
+      "sourceRegistryId": "awesome-claude-code",
+      "sourceType": "community-list"
+    }
+  },
+  {
     "id": "skill:static-analysis",
     "kind": "skill",
     "name": "static-analysis",
@@ -4151,7 +8257,7 @@
       "github"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-22",
+    "lastSeenAt": "2026-03-23",
     "install": {
       "kind": "skill.sh",
       "target": "static-analysis",
@@ -4180,6 +8286,176 @@
     }
   },
   {
+    "id": "skill:stt-mcp-server-linux",
+    "kind": "skill",
+    "name": "stt-mcp-server-linux",
+    "description": "A push-to-talk speech transcription setup for Linux using a Python MCP server. Runs locally in Docker with no external API calls. Your speech is recorded, transcribed into text, and then sent to Claude running in a Tmux session.",
+    "provider": "github",
+    "capabilities": [
+      "automation"
+    ],
+    "compatibility": [
+      "claude-code"
+    ],
+    "source": "awesome-claude-code",
+    "lastSeenAt": "2026-03-23",
+    "install": {
+      "kind": "manual",
+      "instructions": "Visit the linked repository and follow its installation instructions.",
+      "url": "https://github.com/marcindulak/stt-mcp-server-linux"
+    },
+    "adoptionSignal": 72,
+    "maintenanceSignal": 70,
+    "provenanceSignal": 82,
+    "freshnessSignal": 72,
+    "securitySignals": {
+      "knownVulnerabilities": 0,
+      "suspiciousPatterns": 0,
+      "injectionFindings": 0,
+      "exfiltrationSignals": 0,
+      "integrityAlerts": 0
+    },
+    "metadata": {
+      "catalogType": "skill",
+      "sourceConfidence": "vetted-curated",
+      "awesomeClaudeCodeId": "tool-4a5cf064",
+      "awesomeClaudeCodeCategory": "Tooling",
+      "authorName": "marcindulak",
+      "license": "Apache-2.0",
+      "sourceRegistryId": "awesome-claude-code",
+      "sourceType": "community-list"
+    }
+  },
+  {
+    "id": "skill:sudocode",
+    "kind": "skill",
+    "name": "sudocode",
+    "description": "Lightweight agent orchestration dev tool that lives in your repo. Integrates with various specification frameworks. It's giving Jira.",
+    "provider": "github",
+    "capabilities": [
+      "automation",
+      "orchestration"
+    ],
+    "compatibility": [
+      "claude-code"
+    ],
+    "source": "awesome-claude-code",
+    "lastSeenAt": "2026-03-23",
+    "install": {
+      "kind": "manual",
+      "instructions": "Visit the linked repository and follow its installation instructions.",
+      "url": "https://github.com/sudocode-ai/sudocode"
+    },
+    "adoptionSignal": 72,
+    "maintenanceSignal": 78,
+    "provenanceSignal": 82,
+    "freshnessSignal": 72,
+    "securitySignals": {
+      "knownVulnerabilities": 0,
+      "suspiciousPatterns": 0,
+      "injectionFindings": 0,
+      "exfiltrationSignals": 0,
+      "integrityAlerts": 0
+    },
+    "metadata": {
+      "catalogType": "skill",
+      "sourceConfidence": "vetted-curated",
+      "awesomeClaudeCodeId": "tool-f660ade2",
+      "awesomeClaudeCodeCategory": "Tooling",
+      "authorName": "ssh-randy",
+      "license": "Apache-2.0",
+      "releaseVersion": "v0.1.26",
+      "sourceRegistryId": "awesome-claude-code",
+      "sourceType": "community-list"
+    }
+  },
+  {
+    "id": "skill:superclaude",
+    "kind": "skill",
+    "name": "SuperClaude",
+    "description": "A versatile configuration framework that enhances Claude Code with specialized commands, cognitive personas, and development methodologies, such as \"Introspection\" and \"Orchestration\".",
+    "provider": "github",
+    "capabilities": [
+      "automation",
+      "orchestration"
+    ],
+    "compatibility": [
+      "claude-code"
+    ],
+    "source": "awesome-claude-code",
+    "lastSeenAt": "2026-03-23",
+    "install": {
+      "kind": "manual",
+      "instructions": "Visit the linked repository and follow its installation instructions.",
+      "url": "https://github.com/SuperClaude-Org/SuperClaude_Framework"
+    },
+    "adoptionSignal": 72,
+    "maintenanceSignal": 78,
+    "provenanceSignal": 82,
+    "freshnessSignal": 72,
+    "securitySignals": {
+      "knownVulnerabilities": 0,
+      "suspiciousPatterns": 0,
+      "injectionFindings": 0,
+      "exfiltrationSignals": 0,
+      "integrityAlerts": 0
+    },
+    "metadata": {
+      "catalogType": "skill",
+      "sourceConfidence": "vetted-curated",
+      "awesomeClaudeCodeId": "tool-5f5d572e",
+      "awesomeClaudeCodeCategory": "Tooling",
+      "authorName": "SuperClaude-Org",
+      "license": "MIT",
+      "releaseVersion": "v4.2.0",
+      "sourceRegistryId": "awesome-claude-code",
+      "sourceType": "community-list"
+    }
+  },
+  {
+    "id": "skill:superpowers",
+    "kind": "skill",
+    "name": "Superpowers",
+    "description": "A strong bundle of core competencies for software engineering, with good coverage of a large portion of the SDLC - from planning, reviewing, testing, debugging... Well written, well organized, and adaptable. The author refers to them as \"superpowers\", but many of them are just consolidating engineering best practices -",
+    "provider": "github",
+    "capabilities": [
+      "automation",
+      "guardrails",
+      "orchestration"
+    ],
+    "compatibility": [
+      "claude-code"
+    ],
+    "source": "awesome-claude-code",
+    "lastSeenAt": "2026-03-23",
+    "install": {
+      "kind": "manual",
+      "instructions": "Visit the linked repository and follow its installation instructions.",
+      "url": "https://github.com/obra/superpowers"
+    },
+    "adoptionSignal": 72,
+    "maintenanceSignal": 70,
+    "provenanceSignal": 82,
+    "freshnessSignal": 72,
+    "securitySignals": {
+      "knownVulnerabilities": 0,
+      "suspiciousPatterns": 0,
+      "injectionFindings": 0,
+      "exfiltrationSignals": 0,
+      "integrityAlerts": 0
+    },
+    "metadata": {
+      "catalogType": "skill",
+      "sourceConfidence": "vetted-curated",
+      "awesomeClaudeCodeId": "skill-294cc93f",
+      "awesomeClaudeCodeCategory": "Agent Skills",
+      "authorName": "Jesse Vincent",
+      "license": "MIT",
+      "sourceRegistryId": "awesome-claude-code",
+      "sourceType": "community-list"
+    }
+  },
+  {
     "id": "skill:supply-chain-risk-auditor",
     "kind": "skill",
     "name": "supply-chain-risk-auditor",
@@ -4197,7 +8473,7 @@
       "node"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-22",
+    "lastSeenAt": "2026-03-23",
     "install": {
       "kind": "skill.sh",
       "target": "supply-chain-risk-auditor",
@@ -4226,6 +8502,133 @@
     }
   },
   {
+    "id": "skill:t-ches-claude-code-resources",
+    "kind": "skill",
+    "name": "TÂCHES Claude Code Resources",
+    "description": "A well-balanced, \"down-to-Earth\" set of sub agents, skills, and commands, that are well-organized, easy to read, and a healthy focus on \"meta\"-skills/agents, like \"skill-auditor\", hook creation, etc. - the kind of things you can adapt to your workflow, and not the other way around.",
+    "provider": "github",
+    "capabilities": [
+      "automation",
+      "orchestration",
+      "security"
+    ],
+    "compatibility": [
+      "claude-code"
+    ],
+    "source": "awesome-claude-code",
+    "lastSeenAt": "2026-03-23",
+    "install": {
+      "kind": "manual",
+      "instructions": "Visit the linked repository and follow its installation instructions.",
+      "url": "https://github.com/glittercowboy/taches-cc-resources"
+    },
+    "adoptionSignal": 72,
+    "maintenanceSignal": 70,
+    "provenanceSignal": 82,
+    "freshnessSignal": 72,
+    "securitySignals": {
+      "knownVulnerabilities": 0,
+      "suspiciousPatterns": 0,
+      "injectionFindings": 0,
+      "exfiltrationSignals": 0,
+      "integrityAlerts": 0
+    },
+    "metadata": {
+      "catalogType": "skill",
+      "sourceConfidence": "vetted-curated",
+      "awesomeClaudeCodeId": "skill-bc4e0f53",
+      "awesomeClaudeCodeCategory": "Agent Skills",
+      "authorName": "TÂCHES",
+      "license": "MIT",
+      "sourceRegistryId": "awesome-claude-code",
+      "sourceType": "community-list"
+    }
+  },
+  {
+    "id": "skill:tdd-guard",
+    "kind": "skill",
+    "name": "TDD Guard",
+    "description": "A hooks-driven system that monitors file operations in real-time and blocks changes that violate TDD principles.",
+    "provider": "github",
+    "capabilities": [
+      "automation"
+    ],
+    "compatibility": [
+      "claude-code"
+    ],
+    "source": "awesome-claude-code",
+    "lastSeenAt": "2026-03-23",
+    "install": {
+      "kind": "manual",
+      "instructions": "Visit the linked repository and follow its installation instructions.",
+      "url": "https://github.com/nizos/tdd-guard"
+    },
+    "adoptionSignal": 72,
+    "maintenanceSignal": 78,
+    "provenanceSignal": 82,
+    "freshnessSignal": 72,
+    "securitySignals": {
+      "knownVulnerabilities": 0,
+      "suspiciousPatterns": 0,
+      "injectionFindings": 0,
+      "exfiltrationSignals": 0,
+      "integrityAlerts": 0
+    },
+    "metadata": {
+      "catalogType": "skill",
+      "sourceConfidence": "vetted-curated",
+      "awesomeClaudeCodeId": "hook-2b995e52",
+      "awesomeClaudeCodeCategory": "Hooks",
+      "authorName": "Nizar Selander",
+      "license": "MIT",
+      "releaseVersion": "storybook-v0.1.0",
+      "sourceRegistryId": "awesome-claude-code",
+      "sourceType": "community-list"
+    }
+  },
+  {
+    "id": "skill:tdd-implement",
+    "kind": "skill",
+    "name": "/tdd-implement",
+    "description": "Implements Test-Driven Development by analyzing feature requirements, creating tests first (red), implementing minimal passing code (green), and refactoring while maintaining tests.",
+    "provider": "github",
+    "capabilities": [
+      "frontend",
+      "guardrails"
+    ],
+    "compatibility": [
+      "claude-code"
+    ],
+    "source": "awesome-claude-code",
+    "lastSeenAt": "2026-03-23",
+    "install": {
+      "kind": "manual",
+      "instructions": "Visit the linked repository and follow its installation instructions.",
+      "url": "https://github.com/jerseycheese/Narraitor/blob/feature/issue-227-ai-suggestions/.claude/commands/tdd-implement.md"
+    },
+    "adoptionSignal": 72,
+    "maintenanceSignal": 70,
+    "provenanceSignal": 82,
+    "freshnessSignal": 72,
+    "securitySignals": {
+      "knownVulnerabilities": 0,
+      "suspiciousPatterns": 0,
+      "injectionFindings": 0,
+      "exfiltrationSignals": 0,
+      "integrityAlerts": 0
+    },
+    "metadata": {
+      "catalogType": "skill",
+      "sourceConfidence": "vetted-curated",
+      "awesomeClaudeCodeId": "cmd-cccacca2",
+      "awesomeClaudeCodeCategory": "Slash-Commands",
+      "authorName": "jerseycheese",
+      "license": "MIT",
+      "sourceRegistryId": "awesome-claude-code",
+      "sourceType": "community-list"
+    }
+  },
+  {
     "id": "skill:terraform-guardrails",
     "kind": "skill",
     "name": "Terraform Guardrails",
@@ -4244,7 +8647,7 @@
       "general"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-22",
+    "lastSeenAt": "2026-03-23",
     "install": {
       "kind": "skill.sh",
       "target": "terraform-guardrails",
@@ -4285,7 +8688,7 @@
       "python"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-22",
+    "lastSeenAt": "2026-03-23",
     "install": {
       "kind": "skill.sh",
       "target": "test-driven-development",
@@ -4325,7 +8728,7 @@
       "github"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-22",
+    "lastSeenAt": "2026-03-23",
     "install": {
       "kind": "skill.sh",
       "target": "testing-handbook-skills",
@@ -4351,6 +8754,91 @@
       "marketplaceSource": "github",
       "rawVersion": "1.0.1",
       "githubUrl": "https://github.com/trailofbits/skills/tree/main/plugins/testing-handbook-skills"
+    }
+  },
+  {
+    "id": "skill:the-agentic-startup",
+    "kind": "skill",
+    "name": "The Agentic Startup",
+    "description": "Yet Another Claude Orchestrator - a collection of agents, commands, etc., for shipping production code - but I like this because it's comprehensive, well-written, and one of the few resources that actually uses Output Styles! +10 points!",
+    "provider": "github",
+    "capabilities": [
+      "orchestration"
+    ],
+    "compatibility": [
+      "claude-code"
+    ],
+    "source": "awesome-claude-code",
+    "lastSeenAt": "2026-03-23",
+    "install": {
+      "kind": "manual",
+      "instructions": "Visit the linked repository and follow its installation instructions.",
+      "url": "https://github.com/rsmdt/the-startup"
+    },
+    "adoptionSignal": 72,
+    "maintenanceSignal": 78,
+    "provenanceSignal": 82,
+    "freshnessSignal": 72,
+    "securitySignals": {
+      "knownVulnerabilities": 0,
+      "suspiciousPatterns": 0,
+      "injectionFindings": 0,
+      "exfiltrationSignals": 0,
+      "integrityAlerts": 0
+    },
+    "metadata": {
+      "catalogType": "skill",
+      "sourceConfidence": "vetted-curated",
+      "awesomeClaudeCodeId": "tool-9c3f497a",
+      "awesomeClaudeCodeCategory": "Tooling",
+      "authorName": "Rudolf Schmidt",
+      "license": "MIT",
+      "releaseVersion": "v3.4.0",
+      "sourceRegistryId": "awesome-claude-code",
+      "sourceType": "community-list"
+    }
+  },
+  {
+    "id": "skill:the-ralph-playbook",
+    "kind": "skill",
+    "name": "The Ralph Playbook",
+    "description": "A remarkably detailed and comprehensive guide to the Ralph Wiggum technique, featuring well-written theoretical commentary paired with practical guidelines and advice.",
+    "provider": "github",
+    "capabilities": [
+      "automation",
+      "docs",
+      "frontend"
+    ],
+    "compatibility": [
+      "claude-code"
+    ],
+    "source": "awesome-claude-code",
+    "lastSeenAt": "2026-03-23",
+    "install": {
+      "kind": "manual",
+      "instructions": "Visit the linked repository and follow its installation instructions.",
+      "url": "https://github.com/ClaytonFarr/ralph-playbook"
+    },
+    "adoptionSignal": 72,
+    "maintenanceSignal": 70,
+    "provenanceSignal": 82,
+    "freshnessSignal": 72,
+    "securitySignals": {
+      "knownVulnerabilities": 0,
+      "suspiciousPatterns": 0,
+      "injectionFindings": 0,
+      "exfiltrationSignals": 0,
+      "integrityAlerts": 0
+    },
+    "metadata": {
+      "catalogType": "skill",
+      "sourceConfidence": "vetted-curated",
+      "awesomeClaudeCodeId": "wf-aa051a6c",
+      "awesomeClaudeCodeCategory": "Workflows & Knowledge Guides",
+      "authorName": "Clayton Farr",
+      "license": "NOT_FOUND",
+      "sourceRegistryId": "awesome-claude-code",
+      "sourceType": "community-list"
     }
   },
   {
@@ -4382,7 +8870,7 @@
       "node"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-22",
+    "lastSeenAt": "2026-03-23",
     "install": {
       "kind": "skill.sh",
       "target": "theme-factory",
@@ -4429,7 +8917,7 @@
       "python"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-22",
+    "lastSeenAt": "2026-03-23",
     "install": {
       "kind": "skill.sh",
       "target": "threat-modeling-lite",
@@ -4453,6 +8941,49 @@
     }
   },
   {
+    "id": "skill:trail-of-bits-security-skills",
+    "kind": "skill",
+    "name": "Trail of Bits Security Skills",
+    "description": "A very professional collection of over a dozen security-focused skills for code auditing and vulnerability detection. Includes skills for static analysis with CodeQL and Semgrep, variant analysis across codebases, fix verification, and differential code review.",
+    "provider": "github",
+    "capabilities": [
+      "guardrails",
+      "orchestration",
+      "security"
+    ],
+    "compatibility": [
+      "claude-code"
+    ],
+    "source": "awesome-claude-code",
+    "lastSeenAt": "2026-03-23",
+    "install": {
+      "kind": "manual",
+      "instructions": "Visit the linked repository and follow its installation instructions.",
+      "url": "https://github.com/trailofbits/skills"
+    },
+    "adoptionSignal": 72,
+    "maintenanceSignal": 70,
+    "provenanceSignal": 82,
+    "freshnessSignal": 72,
+    "securitySignals": {
+      "knownVulnerabilities": 0,
+      "suspiciousPatterns": 0,
+      "injectionFindings": 0,
+      "exfiltrationSignals": 0,
+      "integrityAlerts": 0
+    },
+    "metadata": {
+      "catalogType": "skill",
+      "sourceConfidence": "vetted-curated",
+      "awesomeClaudeCodeId": "skill-17aac0cc",
+      "awesomeClaudeCodeCategory": "Agent Skills",
+      "authorName": "Trail of Bits",
+      "license": "CC-BY-SA-4.0",
+      "sourceRegistryId": "awesome-claude-code",
+      "sourceType": "community-list"
+    }
+  },
+  {
     "id": "skill:transcribe",
     "kind": "skill",
     "name": "Transcribe",
@@ -4465,7 +8996,7 @@
       "general"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-22",
+    "lastSeenAt": "2026-03-23",
     "install": {
       "kind": "skill.sh",
       "target": "Transcribe",
@@ -4491,6 +9022,91 @@
     }
   },
   {
+    "id": "skill:tsk-ai-agent-task-manager-and-sandbox",
+    "kind": "skill",
+    "name": "TSK - AI Agent Task Manager and Sandbox",
+    "description": "A Rust CLI tool that lets you delegate development tasks to AI agents running in sandboxed Docker environments. Multiple agents work in parallel, returning git branches for human review.",
+    "provider": "github",
+    "capabilities": [
+      "guardrails",
+      "orchestration"
+    ],
+    "compatibility": [
+      "claude-code"
+    ],
+    "source": "awesome-claude-code",
+    "lastSeenAt": "2026-03-23",
+    "install": {
+      "kind": "manual",
+      "instructions": "Visit the linked repository and follow its installation instructions.",
+      "url": "https://github.com/dtormoen/tsk"
+    },
+    "adoptionSignal": 72,
+    "maintenanceSignal": 78,
+    "provenanceSignal": 82,
+    "freshnessSignal": 72,
+    "securitySignals": {
+      "knownVulnerabilities": 0,
+      "suspiciousPatterns": 0,
+      "injectionFindings": 0,
+      "exfiltrationSignals": 0,
+      "integrityAlerts": 0
+    },
+    "metadata": {
+      "catalogType": "skill",
+      "sourceConfidence": "vetted-curated",
+      "awesomeClaudeCodeId": "tool-5fb873b1",
+      "awesomeClaudeCodeCategory": "Tooling",
+      "authorName": "dtormoen",
+      "license": "MIT",
+      "releaseVersion": "v0.10.4",
+      "sourceRegistryId": "awesome-claude-code",
+      "sourceType": "community-list"
+    }
+  },
+  {
+    "id": "skill:tweakcc",
+    "kind": "skill",
+    "name": "tweakcc",
+    "description": "Command-line tool to customize your Claude Code styling.",
+    "provider": "github",
+    "capabilities": [
+      "automation"
+    ],
+    "compatibility": [
+      "claude-code"
+    ],
+    "source": "awesome-claude-code",
+    "lastSeenAt": "2026-03-23",
+    "install": {
+      "kind": "manual",
+      "instructions": "Visit the linked repository and follow its installation instructions.",
+      "url": "https://github.com/Piebald-AI/tweakcc"
+    },
+    "adoptionSignal": 72,
+    "maintenanceSignal": 78,
+    "provenanceSignal": 82,
+    "freshnessSignal": 72,
+    "securitySignals": {
+      "knownVulnerabilities": 0,
+      "suspiciousPatterns": 0,
+      "injectionFindings": 0,
+      "exfiltrationSignals": 0,
+      "integrityAlerts": 0
+    },
+    "metadata": {
+      "catalogType": "skill",
+      "sourceConfidence": "vetted-curated",
+      "awesomeClaudeCodeId": "tool-8d2e7868",
+      "awesomeClaudeCodeCategory": "Tooling",
+      "authorName": "Piebald-AI",
+      "license": "MIT",
+      "releaseVersion": "v4.0.11",
+      "sourceRegistryId": "awesome-claude-code",
+      "sourceType": "community-list"
+    }
+  },
+  {
     "id": "skill:variant-analysis",
     "kind": "skill",
     "name": "variant-analysis",
@@ -4506,7 +9122,7 @@
       "node"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-22",
+    "lastSeenAt": "2026-03-23",
     "install": {
       "kind": "skill.sh",
       "target": "variant-analysis",
@@ -4547,7 +9163,7 @@
       "general"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-22",
+    "lastSeenAt": "2026-03-23",
     "install": {
       "kind": "skill.sh",
       "target": "Vercel Deploy",
@@ -4573,6 +9189,89 @@
     }
   },
   {
+    "id": "skill:vibe-log",
+    "kind": "skill",
+    "name": "Vibe-Log",
+    "description": "Analyzes your Claude Code prompts locally (using CC), provides intelligent session analysis and actionable strategic guidance - works in the statusline and produces very pretty HTML reports as well. Easy to install and remove.",
+    "provider": "github",
+    "capabilities": [
+      "frontend"
+    ],
+    "compatibility": [
+      "claude-code"
+    ],
+    "source": "awesome-claude-code",
+    "lastSeenAt": "2026-03-23",
+    "install": {
+      "kind": "manual",
+      "instructions": "Visit the linked repository and follow its installation instructions.",
+      "url": "https://github.com/vibe-log/vibe-log-cli"
+    },
+    "adoptionSignal": 72,
+    "maintenanceSignal": 78,
+    "provenanceSignal": 82,
+    "freshnessSignal": 72,
+    "securitySignals": {
+      "knownVulnerabilities": 0,
+      "suspiciousPatterns": 0,
+      "injectionFindings": 0,
+      "exfiltrationSignals": 0,
+      "integrityAlerts": 0
+    },
+    "metadata": {
+      "catalogType": "skill",
+      "sourceConfidence": "vetted-curated",
+      "awesomeClaudeCodeId": "tool-0b63c72c",
+      "awesomeClaudeCodeCategory": "Tooling",
+      "authorName": "Vibe-Log",
+      "license": "MIT",
+      "releaseVersion": "v0.8.6",
+      "sourceRegistryId": "awesome-claude-code",
+      "sourceType": "community-list"
+    }
+  },
+  {
+    "id": "skill:viberank",
+    "kind": "skill",
+    "name": "viberank",
+    "description": "A community-driven leaderboard tool that enables developers to visualize, track, and compete based on their Claude Code usage statistics. It features robust data analytics, GitHub OAuth, data validation, and user-friendly CLI/web submission methods.",
+    "provider": "github",
+    "capabilities": [
+      "automation"
+    ],
+    "compatibility": [
+      "claude-code"
+    ],
+    "source": "awesome-claude-code",
+    "lastSeenAt": "2026-03-23",
+    "install": {
+      "kind": "manual",
+      "instructions": "Visit the linked repository and follow its installation instructions.",
+      "url": "https://github.com/sculptdotfun/viberank"
+    },
+    "adoptionSignal": 72,
+    "maintenanceSignal": 70,
+    "provenanceSignal": 82,
+    "freshnessSignal": 72,
+    "securitySignals": {
+      "knownVulnerabilities": 0,
+      "suspiciousPatterns": 0,
+      "injectionFindings": 0,
+      "exfiltrationSignals": 0,
+      "integrityAlerts": 0
+    },
+    "metadata": {
+      "catalogType": "skill",
+      "sourceConfidence": "vetted-curated",
+      "awesomeClaudeCodeId": "tool-a375ba14",
+      "awesomeClaudeCodeCategory": "Tooling",
+      "authorName": "nikshepsvn",
+      "license": "MIT",
+      "sourceRegistryId": "awesome-claude-code",
+      "sourceType": "community-list"
+    }
+  },
+  {
     "id": "skill:visual-documentation-skills",
     "kind": "skill",
     "name": "visual-documentation-skills",
@@ -4587,7 +9286,7 @@
       "general"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-22",
+    "lastSeenAt": "2026-03-23",
     "install": {
       "kind": "skill.sh",
       "target": "visual-documentation-skills",
@@ -4613,6 +9312,90 @@
       "marketplaceSource": "github",
       "rawVersion": "1.0.0",
       "githubUrl": "https://github.com/mhattingpete/claude-skills-marketplace/tree/main/visual-documentation-plugin"
+    }
+  },
+  {
+    "id": "skill:viwo-cli",
+    "kind": "skill",
+    "name": "viwo-cli",
+    "description": "Run Claude Code in a Docker container with git worktrees as volume mounts to enable safer usage of `--dangerously-skip-permissions` for frictionless one-shotting prompts. Allows users to spin up multiple instances of Claude Code in the background easily with reduced permission fatigue.",
+    "provider": "github",
+    "capabilities": [
+      "automation"
+    ],
+    "compatibility": [
+      "claude-code"
+    ],
+    "source": "awesome-claude-code",
+    "lastSeenAt": "2026-03-23",
+    "install": {
+      "kind": "manual",
+      "instructions": "Visit the linked repository and follow its installation instructions.",
+      "url": "https://github.com/OverseedAI/viwo"
+    },
+    "adoptionSignal": 72,
+    "maintenanceSignal": 78,
+    "provenanceSignal": 82,
+    "freshnessSignal": 72,
+    "securitySignals": {
+      "knownVulnerabilities": 0,
+      "suspiciousPatterns": 0,
+      "injectionFindings": 0,
+      "exfiltrationSignals": 0,
+      "integrityAlerts": 0
+    },
+    "metadata": {
+      "catalogType": "skill",
+      "sourceConfidence": "vetted-curated",
+      "awesomeClaudeCodeId": "tool-fcf2812e",
+      "awesomeClaudeCodeCategory": "Tooling",
+      "authorName": "Hal Shin",
+      "license": "MIT",
+      "releaseVersion": "v0.5.0",
+      "sourceRegistryId": "awesome-claude-code",
+      "sourceType": "community-list"
+    }
+  },
+  {
+    "id": "skill:voicemode-mcp",
+    "kind": "skill",
+    "name": "VoiceMode MCP",
+    "description": "VoiceMode MCP brings natural conversations to Claude Code. It supports any OpenAI API compatible voice services and installs free and open source voice services (Whisper.cpp and Kokoro-FastAPI).",
+    "provider": "github",
+    "capabilities": [
+      "automation"
+    ],
+    "compatibility": [
+      "claude-code"
+    ],
+    "source": "awesome-claude-code",
+    "lastSeenAt": "2026-03-23",
+    "install": {
+      "kind": "manual",
+      "instructions": "Visit the linked repository and follow its installation instructions.",
+      "url": "https://github.com/mbailey/voicemode"
+    },
+    "adoptionSignal": 72,
+    "maintenanceSignal": 78,
+    "provenanceSignal": 82,
+    "freshnessSignal": 72,
+    "securitySignals": {
+      "knownVulnerabilities": 0,
+      "suspiciousPatterns": 0,
+      "injectionFindings": 0,
+      "exfiltrationSignals": 0,
+      "integrityAlerts": 0
+    },
+    "metadata": {
+      "catalogType": "skill",
+      "sourceConfidence": "vetted-curated",
+      "awesomeClaudeCodeId": "tool-1e4657fd",
+      "awesomeClaudeCodeCategory": "Tooling",
+      "authorName": "Mike Bailey",
+      "license": "MIT",
+      "releaseVersion": "v8.5.1",
+      "sourceRegistryId": "awesome-claude-code",
+      "sourceType": "community-list"
     }
   },
   {
@@ -4644,7 +9427,7 @@
       "node"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-22",
+    "lastSeenAt": "2026-03-23",
     "install": {
       "kind": "skill.sh",
       "target": "web-artifacts-builder",
@@ -4672,6 +9455,49 @@
       "rawVersion": "unknown",
       "bundledSkillPath": "skills/web-artifacts-builder",
       "githubUrl": "https://github.com/anthropics/skills/tree/main/skills/web-artifacts-builder"
+    }
+  },
+  {
+    "id": "skill:web-assets-generator-skill",
+    "kind": "skill",
+    "name": "Web Assets Generator Skill",
+    "description": "Easily generate web assets from Claude Code including favicons, app icons (PWA), and social media meta images (Open Graph) for Facebook, Twitter, WhatsApp, and LinkedIn. Handles image resizing, text-to-image generation, emojis, and provides proper HTML meta tags.",
+    "provider": "github",
+    "capabilities": [
+      "automation",
+      "frontend",
+      "orchestration"
+    ],
+    "compatibility": [
+      "claude-code"
+    ],
+    "source": "awesome-claude-code",
+    "lastSeenAt": "2026-03-23",
+    "install": {
+      "kind": "manual",
+      "instructions": "Visit the linked repository and follow its installation instructions.",
+      "url": "https://github.com/alonw0/web-asset-generator"
+    },
+    "adoptionSignal": 72,
+    "maintenanceSignal": 70,
+    "provenanceSignal": 82,
+    "freshnessSignal": 72,
+    "securitySignals": {
+      "knownVulnerabilities": 0,
+      "suspiciousPatterns": 0,
+      "injectionFindings": 0,
+      "exfiltrationSignals": 0,
+      "integrityAlerts": 0
+    },
+    "metadata": {
+      "catalogType": "skill",
+      "sourceConfidence": "vetted-curated",
+      "awesomeClaudeCodeId": "skill-1fc653a0",
+      "awesomeClaudeCodeCategory": "Agent Skills",
+      "authorName": "Alon Wolenitz",
+      "license": "MIT",
+      "sourceRegistryId": "awesome-claude-code",
+      "sourceType": "community-list"
     }
   },
   {
@@ -4703,7 +9529,7 @@
       "node"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-22",
+    "lastSeenAt": "2026-03-23",
     "install": {
       "kind": "skill.sh",
       "target": "webapp-testing",
@@ -4746,7 +9572,7 @@
       "general"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-22",
+    "lastSeenAt": "2026-03-23",
     "install": {
       "kind": "skill.sh",
       "target": "Winui App",
@@ -4790,7 +9616,7 @@
       "node"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-22",
+    "lastSeenAt": "2026-03-23",
     "install": {
       "kind": "skill.sh",
       "target": "workflow-skill-design",
@@ -4838,7 +9664,7 @@
       "node"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-22",
+    "lastSeenAt": "2026-03-23",
     "install": {
       "kind": "skill.sh",
       "target": "xlsx",
@@ -4884,7 +9710,7 @@
       "github"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-22",
+    "lastSeenAt": "2026-03-23",
     "install": {
       "kind": "skill.sh",
       "target": "yara-authoring",
@@ -4925,7 +9751,7 @@
       "general"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-22",
+    "lastSeenAt": "2026-03-23",
     "install": {
       "kind": "skill.sh",
       "target": "Yeet",
@@ -4967,7 +9793,7 @@
       "node"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-22",
+    "lastSeenAt": "2026-03-23",
     "install": {
       "kind": "skill.sh",
       "target": "zai-cli",
@@ -5011,7 +9837,7 @@
       "github"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-03-22",
+    "lastSeenAt": "2026-03-23",
     "install": {
       "kind": "skill.sh",
       "target": "zeroize-audit",
