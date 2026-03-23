@@ -49,10 +49,9 @@ You can:
 
 ## Prerequisites
 
-- Node.js `>=18.17`
-- npm
-- `skills` CLI or `npx` for modern skill installs
-- `skill.sh` is optional and only needed for some legacy `skill.sh`-style installs
+- Node.js `>=18.17` and npm
+
+Everything else (skills CLI, config, catalogs) is installed automatically by `plugscout setup`.
 
 ## Install PlugScout (v0.3.4)
 
