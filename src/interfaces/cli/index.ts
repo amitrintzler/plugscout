@@ -29,6 +29,7 @@ import { renderTable, scoreBar } from './formatters/table.js';
 import { printHint, printJson } from './output.js';
 import { hasFlag, readCsvList, readFlag, readKinds, readLimit, readSort, type SortKey } from './options.js';
 import { renderHomeScreen, renderInteractiveHome } from './ui/home.js';
+import { handleMcp } from './mcp.js';
 import { writeWebReport } from './ui/web-report.js';
 import {
   checkForUpdateNow,
@@ -74,7 +75,8 @@ const COMMAND_ALIASES: Record<string, string> = {
   quarantine: 'quarantine',
   upgrade: 'upgrade',
   setup: 'setup',
-  help: 'help'
+  help: 'help',
+  mcp: 'mcp',
 };
 
 export async function runCli(argv: string[]): Promise<void> {
@@ -149,6 +151,9 @@ export async function runCli(argv: string[]): Promise<void> {
     case 'setup':
       await handleSetup(rest);
       break;
+    case 'mcp':
+      await handleMcp(rest);
+      return;
     case 'help':
       printHelp();
       break;
