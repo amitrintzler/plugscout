@@ -1,4 +1,5 @@
 import { createReadStream, createWriteStream } from 'node:fs';
+import fs from 'node:fs/promises';
 import { Readable, Writable } from 'node:stream';
 
 import { Server } from '@modelcontextprotocol/sdk/server/index.js';
@@ -17,10 +18,12 @@ import {
   syncCatalogs,
 } from '../../api/index.js';
 import { installWithSkillSh } from '../../install/skillsh.js';
+import { getPackagePath } from '../../lib/paths.js';
+import { CatalogKindSchema } from '../../lib/validation/contracts.js';
 
-export function createMcpServer(): Server {
+export function createMcpServer(version = '0.0.0'): Server {
   const server = new Server(
-    { name: 'plugscout', version: '0.3.4' },
+    { name: 'plugscout', version },
     { capabilities: { tools: {} } }
   );
 
@@ -80,10 +83,10 @@ export function createMcpServer(): Server {
 
     if (name === 'search_catalog') {
       const { query, kind, provider, limit = 20 } = args as { query: string; kind?: string; provider?: string; limit?: number };
-      const VALID_KINDS = ['skill', 'mcp', 'claude-plugin', 'claude-connector', 'copilot-extension'] as const;
-      type ValidKind = (typeof VALID_KINDS)[number];
-      if (kind !== undefined && !VALID_KINDS.includes(kind as ValidKind)) {
-        return { content: [{ type: 'text', text: JSON.stringify({ error: 'INVALID_KIND', valid: VALID_KINDS, received: kind }) }] };
+      const validKinds = CatalogKindSchema.options;
+      type ValidKind = (typeof validKinds)[number];
+      if (kind !== undefined && !validKinds.includes(kind as ValidKind)) {
+        return { content: [{ type: 'text', text: JSON.stringify({ error: 'INVALID_KIND', valid: validKinds, received: kind }) }] };
       }
       const results = await searchCatalog(query, { kind: kind as ValidKind | undefined, provider, limit });
       return { content: [{ type: 'text', text: JSON.stringify(results) }] };
@@ -197,7 +200,13 @@ export async function startMcpServer(
   stdin: Readable = process.stdin,
   stdout: Writable = process.stdout
 ): Promise<() => Promise<void>> {
-  const server = createMcpServer();
+  let version = '0.0.0';
+  try {
+    const raw = await fs.readFile(getPackagePath('package.json'), 'utf8');
+    const pkg = JSON.parse(raw) as { version?: string };
+    version = pkg.version ?? '0.0.0';
+  } catch { /* fall back to 0.0.0 */ }
+  const server = createMcpServer(version);
   const transport = new StdioServerTransport(stdin, stdout);
   await server.connect(transport);
   return async () => server.close();

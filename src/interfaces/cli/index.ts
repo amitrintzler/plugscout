@@ -153,7 +153,7 @@ export async function runCli(argv: string[]): Promise<void> {
       break;
     case 'mcp':
       await handleMcp(rest);
-      return;
+      return; // intentional: MCP server is long-lived; update banner would corrupt JSON-RPC stream
     case 'help':
       printHelp();
       break;

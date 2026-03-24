@@ -1,4 +1,9 @@
-import { describe, expect, it } from 'vitest';
+import { describe, expect, it, vi } from 'vitest';
+
+vi.mock('../../src/catalog/sync.js', () => ({
+  syncCatalogs: vi.fn().mockResolvedValue({ items: [], staleRegistries: [] }),
+}));
+
 import {
   detectProjectSignals,
   recommend,
@@ -77,10 +82,10 @@ describe('isSetUp', () => {
 });
 
 describe('syncCatalogs wrapper', () => {
-  it('does not expose today parameter — accepts only options', () => {
+  it('does not expose today parameter — accepts only options', async () => {
     // TypeScript enforces this at compile time; runtime check verifies it is callable with no args
     expect(typeof syncCatalogs).toBe('function');
-    // syncCatalogs() with no args should not throw synchronously
-    expect(() => syncCatalogs()).not.toThrow();
+    // syncCatalogs() with no args should resolve (not reject)
+    await expect(syncCatalogs()).resolves.toBeDefined();
   });
 });

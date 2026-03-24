@@ -2,11 +2,11 @@ import fs from 'node:fs/promises';
 import { spawn } from 'node:child_process';
 import { createInterface } from 'node:readline';
 
-import { loadCatalogItems, loadQuarantine, loadWhitelist } from '../../../catalog/repository.js';
+import { loadQuarantine, loadWhitelist } from '../../../catalog/repository.js';
 import { getStaleRegistries, loadSyncState } from '../../../catalog/sync-state.js';
 import { getPackagePath } from '../../../lib/paths.js';
 import { colors } from '../formatters/colors.js';
-import { isSetUp, loadCatalogItems as loadCatalogItemsFromApi } from '../../../api/index.js';
+import { isSetUp, loadCatalogItems } from '../../../api/index.js';
 
 interface PackageMeta {
   name?: string;
@@ -170,7 +170,7 @@ export async function getMenuItems(): Promise<MenuItem[]> {
     ];
   }
 
-  const items = await loadCatalogItemsFromApi();
+  const items = await loadCatalogItems();
   const base: MenuItem[] = [
     {
       label: 'Scan my project',
