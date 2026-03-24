@@ -3,12 +3,16 @@ import {
   detectProjectSignals,
   recommend,
   assessRisk,
+  buildAssessment,
+  isBlockedTier,
+  mapRiskTier,
   searchCatalog,
   loadCatalogItems,
   loadCatalogItemById,
   syncCatalogs,
   loadSecurityPolicy,
   isSetUp,
+  PlugScoutError,
 } from '../../src/api/index.js';
 
 describe('API layer exports', () => {
@@ -46,6 +50,22 @@ describe('API layer exports', () => {
 
   it('exports isSetUp as a function', () => {
     expect(typeof isSetUp).toBe('function');
+  });
+
+  it('exports buildAssessment as a function', () => {
+    expect(typeof buildAssessment).toBe('function');
+  });
+
+  it('exports isBlockedTier as a function', () => {
+    expect(typeof isBlockedTier).toBe('function');
+  });
+
+  it('exports mapRiskTier as a function', () => {
+    expect(typeof mapRiskTier).toBe('function');
+  });
+
+  it('exports PlugScoutError as a class', () => {
+    expect(typeof PlugScoutError).toBe('function');
   });
 });
 
