@@ -8,6 +8,7 @@ import { loadItemInsights, loadRegistries, loadSecurityPolicy } from '../../conf
 import { syncCatalogs } from '../../catalog/sync.js';
 import { getStaleRegistries, loadSyncState } from '../../catalog/sync-state.js';
 import { loadCatalogItemById, loadCatalogItems, loadQuarantine, loadWhitelist } from '../../catalog/repository.js';
+import { computeSearchScore, searchCatalog } from '../../catalog/search.js';
 import { installToolkitDependencies } from '../../install/dependencies.js';
 import { installWithSkillSh } from '../../install/skillsh.js';
 import { recordItemReview } from '../../install/review-state.js';
@@ -604,14 +605,8 @@ async function handleSearch(args: string[]): Promise<void> {
     throw new Error('Usage: search <query>');
   }
 
-  const items = await loadCatalogItems();
-  const needle = query.toLowerCase();
-
-  const matches = items
-    .map((item) => ({ item, score: computeSearchScore(item, needle) }))
-    .filter((entry) => entry.score > 0)
-    .sort((a, b) => b.score - a.score || a.item.id.localeCompare(b.item.id))
-    .slice(0, 20);
+  const results = await searchCatalog(query, { limit: 20 });
+  const matches = results.map((item) => ({ item, score: computeSearchScore(item, query.toLowerCase()) }));
 
   if (matches.length === 0) {
     console.log(`No matches for "${query}".`);
@@ -1163,28 +1158,6 @@ async function exportRecommendations(
   await fs.writeFile(path.resolve(outputPath), content, 'utf8');
 }
 
-function computeSearchScore(item: CatalogItem, query: string): number {
-  let score = 0;
-
-  const id = item.id.toLowerCase();
-  const name = item.name.toLowerCase();
-  const capabilities = item.capabilities.map((capability) => capability.toLowerCase());
-
-  if (id === query) {
-    score += 120;
-  }
-  if (id.includes(query)) {
-    score += 60;
-  }
-  if (name.includes(query)) {
-    score += 50;
-  }
-  if (capabilities.some((capability) => capability.includes(query))) {
-    score += 30;
-  }
-
-  return score;
-}
 
 function printHelp(): void {
   console.log('PlugScout commands');
