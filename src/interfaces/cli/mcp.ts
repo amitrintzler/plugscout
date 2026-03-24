@@ -1,6 +1,6 @@
 import { createReadStream, createWriteStream } from 'node:fs';
 import fs from 'node:fs/promises';
-import { Readable, Writable } from 'node:stream';
+import type { Readable, Writable } from 'node:stream';
 
 import { Server } from '@modelcontextprotocol/sdk/server/index.js';
 import { StdioServerTransport } from '@modelcontextprotocol/sdk/server/stdio.js';
@@ -212,6 +212,7 @@ export async function startMcpServer(
   return async () => server.close();
 }
 
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 export async function handleMcp(_args: string[]): Promise<void> {
   await startMcpServer();
   // Keep process alive — MCP server runs until the client disconnects
