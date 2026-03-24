@@ -291,7 +291,7 @@ Expose the PlugScout catalog as MCP tools so AI assistants (Claude Desktop, Curs
 Add to `package.json` `dependencies`:
 
 ```json
-"@modelcontextprotocol/sdk": "^1.0.0"
+"@modelcontextprotocol/sdk": "^1.10.0"
 ```
 
 Use `StdioServerTransport` from `@modelcontextprotocol/sdk/server/stdio.js`. Minimum tested version: `^1.10.0` (pin to this floor to avoid pre-1.10 breaking changes in the SDK).
