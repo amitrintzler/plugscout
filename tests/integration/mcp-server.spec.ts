@@ -39,6 +39,28 @@ describe('MCP server tools', () => {
       await cleanup();
     }
   });
+
+  it('assess_item returns NOT_FOUND for unknown id', async () => {
+    const { client, cleanup } = await createTestClient();
+    try {
+      const result = await client.callTool({ name: 'assess_item', arguments: { id: 'mcp:does-not-exist-zzz' } });
+      const text = (result.content as [{ text: string }])[0].text;
+      expect(text).toContain('NOT_FOUND');
+    } finally {
+      await cleanup();
+    }
+  });
+
+  it('install_item returns error for unknown id', async () => {
+    const { client, cleanup } = await createTestClient();
+    try {
+      const result = await client.callTool({ name: 'install_item', arguments: { id: 'mcp:does-not-exist-zzz' } });
+      const parsed = JSON.parse((result.content as [{ text: string }])[0].text) as { status: string };
+      expect(parsed.status).toBe('error');
+    } finally {
+      await cleanup();
+    }
+  });
 });
 
 async function createTestClient() {

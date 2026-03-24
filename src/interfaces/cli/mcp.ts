@@ -80,7 +80,12 @@ export function createMcpServer(): Server {
 
     if (name === 'search_catalog') {
       const { query, kind, provider, limit = 20 } = args as { query: string; kind?: string; provider?: string; limit?: number };
-      const results = await searchCatalog(query, { kind: kind as never, provider, limit });
+      const VALID_KINDS = ['skill', 'mcp', 'claude-plugin', 'claude-connector', 'copilot-extension'] as const;
+      type ValidKind = (typeof VALID_KINDS)[number];
+      if (kind !== undefined && !VALID_KINDS.includes(kind as ValidKind)) {
+        return { content: [{ type: 'text', text: JSON.stringify({ error: 'INVALID_KIND', valid: VALID_KINDS, received: kind }) }] };
+      }
+      const results = await searchCatalog(query, { kind: kind as ValidKind | undefined, provider, limit });
       return { content: [{ type: 'text', text: JSON.stringify(results) }] };
     }
 
@@ -149,6 +154,13 @@ export function createMcpServer(): Server {
 
 async function promptViaTty(id: string, riskTier: string, riskScore: number): Promise<boolean> {
   return new Promise((resolve) => {
+    let resolved = false;
+    const settle = (value: boolean) => {
+      if (resolved) return;
+      resolved = true;
+      resolve(value);
+    };
+
     const tty = createWriteStream('/dev/tty');
     const ttyIn = createReadStream('/dev/tty');
 
@@ -156,7 +168,7 @@ async function promptViaTty(id: string, riskTier: string, riskScore: number): Pr
     const timeout = setTimeout(() => {
       ttyIn.destroy();
       tty.end();
-      resolve(false);
+      settle(false);
     }, 60_000);
 
     tty.write(`\nPlugScout install requested by AI assistant\n`);
@@ -169,13 +181,14 @@ async function promptViaTty(id: string, riskTier: string, riskScore: number): Pr
         clearTimeout(timeout);
         ttyIn.destroy();
         tty.end();
-        resolve(input.trim().toLowerCase() === 'y');
+        settle(input.trim().toLowerCase() === 'y');
       }
     });
 
     ttyIn.on('error', () => {
       clearTimeout(timeout);
-      resolve(false);
+      tty.end();
+      settle(false);
     });
   });
 }
