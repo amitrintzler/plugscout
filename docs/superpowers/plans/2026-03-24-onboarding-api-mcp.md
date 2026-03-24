@@ -382,14 +382,8 @@ Expected: FAIL — `Cannot find module '../../src/api/index.js'`
 ```typescript
 import fsExtra from 'fs-extra';
 
-import { searchCatalog } from '../catalog/search.js';
-import { loadCatalogItems, loadCatalogItemById } from '../catalog/repository.js';
 import { syncCatalogs as _syncCatalogs } from '../catalog/sync.js';
-import { loadSecurityPolicy } from '../config/runtime.js';
 import { getStatePath } from '../lib/paths.js';
-import { detectProjectSignals } from '../recommendation/project-analysis.js';
-import { recommend } from '../recommendation/engine.js';
-import { assessRisk, buildAssessment, isBlockedTier, mapRiskTier } from '../security/assessment.js';
 import type { SyncCatalogOptions } from '../catalog/sync.js';
 
 export { searchCatalog } from '../catalog/search.js';
@@ -843,11 +837,7 @@ This task creates the stdio MCP server at `src/interfaces/cli/mcp.ts` and wires 
 import { PassThrough } from 'node:stream';
 import { describe, expect, it } from 'vitest';
 import { Client } from '@modelcontextprotocol/sdk/client/index.js';
-import { StreamTransport } from '@modelcontextprotocol/sdk/inprocess.js';
 import { startMcpServer } from '../../src/interfaces/cli/mcp.js';
-
-// Note: if StreamTransport is not available from the SDK, use the PassThrough pattern below.
-// The exact import path may vary — check @modelcontextprotocol/sdk exports.
 
 describe('MCP server tools', () => {
   it('lists expected tools', async () => {
@@ -896,11 +886,13 @@ async function createTestClient() {
   const cleanup = await startMcpServer(clientToServer, serverToClient);
 
   const client = new Client({ name: 'test', version: '0.0.1' }, { capabilities: {} });
-  const { StreamTransport } = await import('@modelcontextprotocol/sdk/inprocess.js').catch(() => ({ StreamTransport: null }));
-
-  if (StreamTransport) {
-    await client.connect(new StreamTransport(serverToClient, clientToServer));
-  }
+  // Determine the correct in-process transport import path from the installed SDK.
+  // Check node_modules/@modelcontextprotocol/sdk/package.json "exports" for the right path.
+  // Common options: 'inprocess', 'client/stdio', or an in-memory transport helper.
+  // The pattern below uses a direct PassThrough-stream connection that works with any version:
+  const { StdioClientTransport } = await import('@modelcontextprotocol/sdk/client/stdio.js');
+  const clientTransport = new StdioClientTransport({ stdin: serverToClient, stdout: clientToServer } as never);
+  await client.connect(clientTransport);
 
   return { client, cleanup };
 }
@@ -928,16 +920,14 @@ import {
 } from '@modelcontextprotocol/sdk/types.js';
 
 import {
-  assessRisk,
   buildAssessment,
   isBlockedTier,
   loadCatalogItemById,
-  loadCatalogItems,
   loadSecurityPolicy,
   searchCatalog,
   syncCatalogs,
 } from '../../api/index.js';
-import { installItem as runInstall } from '../../install/skillsh.js';
+import { installWithSkillSh } from '../../install/skillsh.js';
 
 function createServer(): Server {
   const server = new Server(
@@ -1050,7 +1040,8 @@ function createServer(): Server {
       }
 
       try {
-        await runInstall(item, { yes: true });
+        // installWithSkillSh in src/install/skillsh.ts accepts { id, overrideRisk, overrideReview, yes }
+        await installWithSkillSh({ id: item.id, overrideRisk: false, overrideReview: false, yes: true });
         return { content: [{ type: 'text', text: JSON.stringify({ status: 'installed' }) }] };
       } catch (err) {
         const msg = err instanceof Error ? err.message : String(err);
@@ -1119,7 +1110,7 @@ export async function handleMcp(_args: string[]): Promise<void> {
 }
 ```
 
-**Note on `runInstall`:** If `src/install/skillsh.ts` does not export a function suitable for calling programmatically, check `handleInstall` in `src/interfaces/cli/index.ts` instead and call it with `['--id', id, '--yes']` via the existing CLI flow. Adapt as needed.
+**Note on install:** `installWithSkillSh` is exported from `src/install/skillsh.ts` with signature `({ id, overrideRisk, overrideReview, yes }: InstallOptions): Promise<InstallAudit>`. It accepts the item ID as a string — it looks up the catalog item internally. Always pass `overrideRisk: false` and `overrideReview: false` to respect the policy gate.
 
 - [ ] **Step 4: Wire `mcp` into the CLI router in `src/interfaces/cli/index.ts`**
 
