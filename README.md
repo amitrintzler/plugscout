@@ -22,11 +22,7 @@ PlugScout helps teams discover, score, and safely install Claude plugins, Claude
 
 ## See PlugScout in action
 
-<video src="https://github.com/amitrintzler/plugscout/releases/download/v0.3.4/framework-walkthrough.mp4"
-       controls
-       width="100%">
-  <a href="https://github.com/amitrintzler/plugscout/releases/download/v0.3.4/framework-walkthrough.mp4">Watch walkthrough video</a>
-</video>
+[![Watch the PlugScout walkthrough](https://github.com/amitrintzler/plugscout/releases/download/v0.3.4/framework-walkthrough-preview.gif)](https://github.com/amitrintzler/plugscout/releases/download/v0.3.4/framework-walkthrough.mp4)
 
 Quick links:
 - [Install](#install-plugscout-v034)
@@ -53,10 +49,9 @@ You can:
 
 ## Prerequisites
 
-- Node.js `>=18.17`
-- npm
-- `skills` CLI or `npx` for modern skill installs
-- `skill.sh` is optional and only needed for some legacy `skill.sh`-style installs
+- Node.js `>=18.17` and npm — that's it.
+
+**No manual setup required.** Run `plugscout setup` once and it takes care of everything else: installs required CLI dependencies, writes your config, and syncs all catalogs. You don't need to install or configure anything by hand.
 
 ## Install PlugScout (v0.3.4)
 

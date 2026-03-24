@@ -1,9 +1,12 @@
 import fs from 'node:fs/promises';
+import { spawn } from 'node:child_process';
+import { createInterface } from 'node:readline';
 
-import { loadCatalogItems, loadQuarantine, loadWhitelist } from '../../../catalog/repository.js';
+import { loadQuarantine, loadWhitelist } from '../../../catalog/repository.js';
 import { getStaleRegistries, loadSyncState } from '../../../catalog/sync-state.js';
 import { getPackagePath } from '../../../lib/paths.js';
 import { colors } from '../formatters/colors.js';
+import { isSetUp, loadCatalogItems } from '../../../api/index.js';
 
 interface PackageMeta {
   name?: string;
@@ -145,4 +148,176 @@ function colorIfTty(value: string, apply: (raw: string) => string): string {
     return value;
   }
   return apply(value);
+}
+
+export interface MenuItem {
+  label: string;
+  description: string;
+  command?: string[];   // argv to spawn; undefined = Exit
+  needsId?: boolean;    // if true, prompt for --id before spawning
+}
+
+export async function getMenuItems(): Promise<MenuItem[]> {
+  const setup = await isSetUp();
+  if (!setup) {
+    return [
+      {
+        label: 'Run setup now',
+        description: 'Installs prerequisites, writes config, syncs all catalogs\n        → plugscout setup  (takes ~30 seconds)',
+        command: ['setup'],
+      },
+      { label: 'Exit', description: '' },
+    ];
+  }
+
+  const items = await loadCatalogItems();
+  const base: MenuItem[] = [
+    {
+      label: 'Scan my project',
+      description: 'Detect your stack and list matching plugins, MCPs, and extensions\n        → plugscout scan --project . --format table',
+      command: ['scan', '--project', '.', '--format', 'table'],
+    },
+    {
+      label: 'Get recommendations',
+      description: 'Top safe picks ranked by fit + trust for your current directory\n        → plugscout recommend --project . --only-safe --limit 10',
+      command: ['recommend', '--project', '.', '--only-safe', '--limit', '10'],
+    },
+  ];
+
+  if (items.length > 0) {
+    base.push(
+      {
+        label: 'Inspect an item',
+        description: 'Show full risk profile, trust score, and install instructions\n        → plugscout show --id <id>  (prompts for ID)',
+        command: ['show'],
+        needsId: true,
+      },
+      {
+        label: 'Assess before installing',
+        description: 'Evaluate one candidate in detail — risk, policy, provenance\n        → plugscout assess --id <id>  (prompts for ID)',
+        command: ['assess'],
+        needsId: true,
+      },
+      {
+        label: 'Install an item',
+        description: 'Policy-gated install; blocks high/critical risk by default\n        → plugscout install --id <id> --yes  (prompts for ID)',
+        command: ['install', '--yes'],
+        needsId: true,
+      },
+      {
+        label: 'Sync catalogs',
+        description: 'Pull latest entries from all configured registries\n        → plugscout sync',
+        command: ['sync'],
+      }
+    );
+  }
+
+  base.push(
+    {
+      label: 'Open web report',
+      description: 'Readable HTML with score legend and decision cards — opens in browser\n        → plugscout web --open',
+      command: ['web', '--open'],
+    },
+    {
+      label: 'Check system health',
+      description: 'Verify prerequisites, catalog freshness, and config validity\n        → plugscout doctor',
+      command: ['doctor'],
+    },
+    { label: 'Exit', description: '' }
+  );
+
+  return base;
+}
+
+export async function renderInteractiveHome(): Promise<void> {
+  let menuItems: MenuItem[];
+  try {
+    menuItems = await getMenuItems();
+  } catch {
+    const screen = await renderHomeScreen();
+    process.stdout.write(screen + '\n');
+    return;
+  }
+
+  let selected = 0;
+  const ARROW_UP = '\u001b[A';
+  const ARROW_DOWN = '\u001b[B';
+  const ENTER = '\r';
+  const CTRL_C = '\u0003';
+
+  function render(firstRender: boolean): void {
+    if (!firstRender) {
+      process.stdout.write(`\x1b[${menuItems.length * 2}A\r`);
+    }
+    for (let i = 0; i < menuItems.length; i++) {
+      const item = menuItems[i];
+      const prefix = i === selected ? '  \u276f ' : '    ';
+      process.stdout.write(`\x1b[2K${prefix}${item.label}\n`);
+      if (item.description) {
+        const firstLine = item.description.split('\n')[0];
+        process.stdout.write(`\x1b[2K        \x1b[2m${firstLine}\x1b[0m\n`);
+      } else {
+        process.stdout.write(`\x1b[2K\n`);
+      }
+    }
+  }
+
+  process.stdout.write('\n');
+  process.stdin.setRawMode(true);
+  process.stdin.resume();
+  process.stdin.setEncoding('utf8');
+
+  render(true);
+
+  await new Promise<void>((resolve) => {
+    process.stdin.on('data', async function onKey(key: string) {
+      if (key === CTRL_C) {
+        process.stdin.removeListener('data', onKey);
+        process.stdin.setRawMode(false);
+        process.stdin.pause();
+        process.stdout.write('\n');
+        resolve();
+        return;
+      } else if (key === ARROW_UP) {
+        selected = (selected - 1 + menuItems.length) % menuItems.length;
+        render(false);
+      } else if (key === ARROW_DOWN) {
+        selected = (selected + 1) % menuItems.length;
+        render(false);
+      } else if (key === ENTER) {
+        process.stdin.removeListener('data', onKey);
+        process.stdin.setRawMode(false);
+        process.stdin.pause();
+        process.stdout.write('\n');
+
+        const item = menuItems[selected];
+        if (!item.command) {
+          resolve();
+          return;
+        }
+
+        let args = [...item.command];
+        if (item.needsId) {
+          const rl = createInterface({ input: process.stdin, output: process.stdout });
+          process.stdin.resume();
+          const id = await new Promise<string>((res) => {
+            rl.question('  Enter catalog ID: ', (answer) => {
+              rl.close();
+              res(answer.trim());
+            });
+          });
+          if (!id) {
+            resolve();
+            return;
+          }
+          args = [...args, '--id', id];
+        }
+
+        const cliPath = getPackagePath('dist/cli.js');
+        const child = spawn(process.execPath, [cliPath, ...args], { stdio: 'inherit' });
+        child.on('close', () => resolve());
+        child.on('error', () => resolve());
+      }
+    });
+  });
 }
