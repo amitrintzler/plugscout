@@ -74,6 +74,8 @@ The underlying function returns `{ items: CatalogItem[], staleRegistries: string
 
 **`searchCatalog` extraction:** The `computeSearchScore` function in `src/interfaces/cli/index.ts` is private. As part of this work, extract it to `src/catalog/search.ts` as an exported function. The `searchCatalog(query, opts?)` API function wraps it, filters catalog items by score > 0, and returns sorted results.
 
+After extraction, update the existing `handleSearch()` in `src/interfaces/cli/index.ts` to call `searchCatalog(query, { limit: 20 })` instead of the old private function — this preserves the current 20-result cap in the CLI command.
+
 `opts` type: `{ kind?: CatalogKind; provider?: string; limit?: number }`. Filtering by `kind` and `provider` is applied after scoring; `limit` caps the returned array. If no opts are provided, all matching items are returned.
 
 ### `isSetUp()` — determining first-run state
@@ -108,14 +110,13 @@ export type {
   Recommendation,
   SecurityPolicy,
   RankingPolicy,
-  SyncCatalogOptions,
 } from '../lib/validation/contracts.js';
 
 export type { ProjectSignals } from '../recommendation/project-analysis.js';
 export type { SyncCatalogOptions } from '../catalog/sync.js';
 ```
 
-(`SyncCatalogOptions` is already exported from `src/catalog/sync.ts`; `ProjectSignals` is from `src/recommendation/project-analysis.ts`. No changes to `contracts.ts` are needed.)
+(`SyncCatalogOptions` is exported from `src/catalog/sync.ts` only — it does **not** exist in `contracts.ts`. `ProjectSignals` is from `src/recommendation/project-analysis.ts`. No changes to `contracts.ts` are needed.)
 
 **No `PlugScoutTypes` namespace.** Just direct named type exports — simpler and idiomatic TypeScript.
 
@@ -251,21 +252,31 @@ Arrow keys emit `\u001b[A` (up) and `\u001b[B` (down). Enter emits `\r`. The men
 
 ### CLI router change
 
-In `src/interfaces/cli/index.ts`, the existing `case 'home':` branch (line 91) currently calls `renderHomeScreen()` and prints the result. Change it to:
+The `case 'home':` branch in `src/interfaces/cli/index.ts` (line 91) calls `handleHome()`, which is defined at line 164:
 
 ```typescript
-case 'home': {
+async function handleHome(): Promise<void> {
+  const output = await renderHomeScreen();
+  console.log(output);
+}
+```
+
+**Modify `handleHome()`** (not the switch case itself):
+
+```typescript
+async function handleHome(): Promise<void> {
   if (process.stdout.isTTY) {
     await renderInteractiveHome();
   } else {
-    const screen = await renderHomeScreen();
-    process.stdout.write(screen + '\n');
+    const output = await renderHomeScreen();
+    console.log(output);
   }
-  return;
 }
 ```
 
 (`'home'` is the default command when no arguments are passed — line 82: `const [rawCommand = 'home', ...rest] = filtered`.)
+
+**Non-TTY note:** In non-TTY mode (pipes, CI), `renderHomeScreen()` is always called unchanged regardless of state (States 1/2/3). The state-aware interactive display is TTY-only. `renderHomeScreen()` already handles zero catalog items gracefully by showing `items=0`.
 
 ---
 
@@ -283,7 +294,7 @@ Add to `package.json` `dependencies`:
 "@modelcontextprotocol/sdk": "^1.0.0"
 ```
 
-Use `StdioServerTransport` from `@modelcontextprotocol/sdk/server/stdio.js`.
+Use `StdioServerTransport` from `@modelcontextprotocol/sdk/server/stdio.js`. Minimum tested version: `^1.10.0` (pin to this floor to avoid pre-1.10 breaking changes in the SDK).
 
 ### Registration
 
@@ -324,17 +335,24 @@ New file: **`src/interfaces/cli/mcp.ts`** (following existing convention — int
 | `install_item` | `id: string` | `{ status: "installed" \| "cancelled" \| "blocked", detail?: string }` |
 | `sync_catalogs` | _(none)_ | `{ items_loaded: number, stale_registries: string[] }` (mapped from `syncCatalogs` return) |
 
-**`assess_item` augmentation:** `assessRisk(item)` returns `RiskAssessment` which includes `riskTier`. The MCP tool additionally calls `loadSecurityPolicy()` and `isBlockedTier(assessment.riskTier, policy)` from `src/security/assessment.ts`, then appends `install_allowed: !blocked` to the returned object.
+**`assess_item` augmentation:** Use `buildAssessment(item, policy)` (synchronous, from `src/security/assessment.ts`) with a single `await loadSecurityPolicy()` call to avoid the double policy load that would occur with `assessRisk` (which loads policy internally). The MCP tool does:
+
+```typescript
+const policy = await loadSecurityPolicy();
+const assessment = buildAssessment(item, policy);
+const blocked = isBlockedTier(assessment.riskTier, policy);
+return { ...assessment, install_allowed: !blocked };
+```
 
 **`sync_catalogs` return mapping:** The underlying `syncCatalogs()` returns `{ items: CatalogItem[], staleRegistries: string[] }`. The MCP tool maps this to `{ items_loaded: items.length, stale_registries: staleRegistries }`.
 
-All tools are implemented by calling the API layer functions from Section 1.
+All tools are implemented by calling the API layer functions from Section 1. **Null guard:** `get_item`, `assess_item`, and `install_item` must check whether `loadCatalogItemById` returns `null` and immediately return an MCP `NOT_FOUND` error before calling any downstream function.
 
 ### Human-in-the-loop install
 
 The MCP server uses stdio transport, which means **stdin and stdout are owned by the MCP protocol layer** — they cannot be used for user confirmation prompts.
 
-Instead, `install_item` reads from and writes to `/dev/tty` directly (Linux/macOS) or the console device on Windows:
+Instead, `install_item` reads from and writes to `/dev/tty` directly on Linux/macOS. Windows is out of scope for this feature — if `process.platform === 'win32'`, return `{ status: "cancelled", detail: "interactive confirmation not supported on Windows" }` without prompting. `/dev/tty` usage:
 
 ```typescript
 import { createReadStream, createWriteStream } from 'node:fs';
@@ -377,7 +395,7 @@ Flow:
 
 ## Testing
 
-- **API layer:** Unit tests in `src/api/__tests__/api.test.ts` — verify each export returns the correct shape, throws `PlugScoutError` on bad input, and produces no console output or `process.exit` calls
+- **API layer:** Unit tests split by logical group: `src/api/__tests__/search.test.ts` (searchCatalog + computeSearchScore), `src/api/__tests__/setup.test.ts` (isSetUp), `src/api/__tests__/sync.test.ts` (syncCatalogs wrapper). Each verifies return shape, `PlugScoutError` on bad input, and no console output / `process.exit` side effects.
 - **`isSetUp()`:** Unit test with a temp directory: no file → `false`, file present → `true`
 - **`searchCatalog`:** Unit test extracted `computeSearchScore` with fixture `CatalogItem` objects
 - **Home screen:** Unit tests for state detection logic (mock `isSetUp` and `loadCatalogItems`); integration test verifying the correct menu items appear per state in TTY mode
