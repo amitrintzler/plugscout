@@ -254,7 +254,8 @@ export async function renderInteractiveHome(): Promise<void> {
       const prefix = i === selected ? '  \u276f ' : '    ';
       process.stdout.write(`\x1b[2K${prefix}${item.label}\n`);
       if (item.description) {
-        process.stdout.write(`\x1b[2K        \x1b[2m${item.description}\x1b[0m\n`);
+        const firstLine = item.description.split('\n')[0];
+        process.stdout.write(`\x1b[2K        \x1b[2m${firstLine}\x1b[0m\n`);
       } else {
         process.stdout.write(`\x1b[2K\n`);
       }
@@ -271,10 +272,12 @@ export async function renderInteractiveHome(): Promise<void> {
   await new Promise<void>((resolve) => {
     process.stdin.on('data', async function onKey(key: string) {
       if (key === CTRL_C) {
+        process.stdin.removeListener('data', onKey);
         process.stdin.setRawMode(false);
         process.stdin.pause();
         process.stdout.write('\n');
-        process.exit(0);
+        resolve();
+        return;
       } else if (key === ARROW_UP) {
         selected = (selected - 1 + menuItems.length) % menuItems.length;
         render(false);
@@ -313,6 +316,7 @@ export async function renderInteractiveHome(): Promise<void> {
         const cliPath = getPackagePath('dist/cli.js');
         const child = spawn(process.execPath, [cliPath, ...args], { stdio: 'inherit' });
         child.on('close', () => resolve());
+        child.on('error', () => resolve());
       }
     });
   });
