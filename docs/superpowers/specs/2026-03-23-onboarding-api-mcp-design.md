@@ -57,29 +57,47 @@ Re-exports the following functions with stable, documented signatures. All retur
 | `searchCatalog(query, opts?)` | extracted from `computeSearchScore` (see below) | `src/interfaces/cli/index.ts` → new `src/catalog/search.ts` |
 | `loadCatalogItems()` | `loadCatalogItems` | `src/catalog/repository.ts` |
 | `loadCatalogItemById(id)` | `loadCatalogItemById` | `src/catalog/repository.ts` |
-| `syncCatalogs(options?)` | `syncCatalogs` | `src/catalog/sync.ts` |
+| `syncCatalogs(options?)` | wraps `syncCatalogs` (see note below) | `src/catalog/sync.ts` |
 | `loadSecurityPolicy()` | `loadSecurityPolicy` | `src/config/runtime.ts` |
-| `isSetUp()` | new function (see below) | `src/api/index.ts` |
 
-**`searchCatalog` extraction:** The `computeSearchScore` function in `src/interfaces/cli/index.ts` is private. As part of this work, extract it to `src/catalog/search.ts` as an exported function. The `searchCatalog(query, opts?)` API function wraps it, filters catalog items by score > 0, and returns sorted results.
-
-**`isSetUp()` implementation:**
+**`syncCatalogs` wrapper note:** The underlying `syncCatalogs` in `src/catalog/sync.ts` has the signature `syncCatalogs(today?, options?)` where `today` is an internal override used for testing. The API wrapper omits `today` and exposes only `options?`:
 
 ```typescript
-import fsExtra from 'fs-extra';
-import { getPackagePath } from '../lib/paths.js';
+import { syncCatalogs as _syncCatalogs, type SyncCatalogOptions } from '../catalog/sync.js';
 
-export async function isSetUp(): Promise<boolean> {
-  const configPath = getPackagePath('config/sources.json');
-  return fsExtra.pathExists(configPath);
+export async function syncCatalogs(options?: SyncCatalogOptions) {
+  return _syncCatalogs(undefined, options);
 }
 ```
 
-**No `hasPriorScan()` function.** There is no persistent scan history on disk. The home screen state distinction is binary: set-up or not set-up. State 3 (operational) is determined solely by `isSetUp()` returning true AND catalog items being present (i.e., `loadCatalogItems()` returns a non-empty array). See Section 2 for updated state logic.
+The underlying function returns `{ items: CatalogItem[], staleRegistries: string[] }`. The API wrapper re-exports this shape as-is.
+
+**`searchCatalog` extraction:** The `computeSearchScore` function in `src/interfaces/cli/index.ts` is private. As part of this work, extract it to `src/catalog/search.ts` as an exported function. The `searchCatalog(query, opts?)` API function wraps it, filters catalog items by score > 0, and returns sorted results.
+
+`opts` type: `{ kind?: CatalogKind; provider?: string; limit?: number }`. Filtering by `kind` and `provider` is applied after scoring; `limit` caps the returned array. If no opts are provided, all matching items are returned.
+
+### `isSetUp()` — determining first-run state
+
+`isSetUp()` is defined in `src/api/index.ts` and determines whether `plugscout setup` has been run. The setup command syncs catalogs and writes catalog data to disk at `getStatePath('data/catalog/items.json')` (via `loadCatalogItems()` / `saveCatalogItems()` in `src/catalog/repository.ts`). This file does **not** exist before setup. It is a runtime-state file, not a bundled file.
+
+```typescript
+import fsExtra from 'fs-extra';
+import { getStatePath } from '../lib/paths.js';
+
+export async function isSetUp(): Promise<boolean> {
+  const itemsPath = getStatePath('data/catalog/items.json');
+  return fsExtra.pathExists(itemsPath);
+}
+```
+
+This means `isSetUp()` and `(await loadCatalogItems()).length > 0` are closely related — both check presence of catalog data. The two-state split is:
+- `isSetUp() === false` → State 1 (no catalog file at all)
+- `isSetUp() === true` but items empty → State 2 (file exists but empty — unlikely in normal operation, but handled gracefully)
+- `isSetUp() === true` and items present → State 3 (operational)
 
 ### TypeScript types re-exported
 
-Re-export the following from `src/lib/validation/contracts.ts` through `src/api/index.ts` (type-only re-exports):
+Re-export from `src/api/index.ts` (type-only re-exports):
 
 ```typescript
 export type {
@@ -90,11 +108,14 @@ export type {
   Recommendation,
   SecurityPolicy,
   RankingPolicy,
-  ProjectSignals,   // from src/recommendation/project-analysis.ts
+  SyncCatalogOptions,
 } from '../lib/validation/contracts.js';
+
+export type { ProjectSignals } from '../recommendation/project-analysis.js';
+export type { SyncCatalogOptions } from '../catalog/sync.js';
 ```
 
-`ProjectSignals` comes from `src/recommendation/project-analysis.ts` (not contracts.ts) — import it separately and re-export.
+(`SyncCatalogOptions` is already exported from `src/catalog/sync.ts`; `ProjectSignals` is from `src/recommendation/project-analysis.ts`. No changes to `contracts.ts` are needed.)
 
 **No `PlugScoutTypes` namespace.** Just direct named type exports — simpler and idiomatic TypeScript.
 
@@ -127,10 +148,10 @@ When the user runs `plugscout` with no arguments, display an interactive arrow-k
 
 State is determined by two sequential checks at startup:
 
-1. `await isSetUp()` — checks if `config/sources.json` exists
+1. `await isSetUp()` — checks if `getStatePath('data/catalog/items.json')` exists
 2. If set up: `(await loadCatalogItems()).length > 0` — checks if any catalog items are loaded
 
-**State 1 — Not set up** (config file missing):
+**State 1 — Not set up** (catalog file missing):
 
 ```
 PlugScout v0.3.4
@@ -144,7 +165,7 @@ PlugScout v0.3.4
     Exit
 ```
 
-**State 2 — Set up, no catalog items** (config exists, catalog empty — e.g., sync not yet run):
+**State 2 — Set up, no catalog items** (catalog file exists but empty):
 
 ```
 PlugScout v0.3.4  ✓ Config loaded  ⚠ Catalog empty
@@ -168,7 +189,7 @@ PlugScout v0.3.4  ✓ Config loaded  ⚠ Catalog empty
     Exit
 ```
 
-**State 3 — Operational** (config exists + catalog has items):
+**State 3 — Operational** (catalog file exists with items):
 
 ```
 PlugScout v0.3.4  ✓ Catalogs: <N> items
@@ -220,21 +241,20 @@ process.stdin.on('data', handleKeypress);
 
 Arrow keys emit `\u001b[A` (up) and `\u001b[B` (down). Enter emits `\r`. The menu re-renders in place using `\x1b[<N>A` (cursor up) + `\x1b[2K` (clear line) sequences.
 
-- Non-TTY environments (e.g., pipes, CI): fall back to the existing `renderHomeScreen()` plain-text output from `src/interfaces/cli/ui/home.ts` — no interactive mode.
+- **Non-TTY environments** (e.g., pipes, CI): fall back to the existing `renderHomeScreen()` plain-text output from `src/interfaces/cli/ui/home.ts`. The non-TTY path always produces the existing rich dashboard — the state-aware interactive menu is TTY-only.
 - Items that need an ID (show, assess, install) switch to a text input prompt using `readline.createInterface` before spawning the command.
 - Selected option spawns the corresponding command via `child_process.spawn` with `stdio: 'inherit'` so output is visible in the same terminal.
 
 **File:** The existing `src/interfaces/cli/ui/home.ts` is **extended** (not replaced):
-- `renderHomeScreen()` remains for non-TTY / plain-text use
+- `renderHomeScreen()` remains for non-TTY / plain-text use (no changes)
 - New export `renderInteractiveHome()` handles TTY interactive mode
-- `src/interfaces/cli/index.ts` calls `renderInteractiveHome()` when `process.stdout.isTTY`, otherwise falls back to `renderHomeScreen()`
 
 ### CLI router change
 
-In `src/interfaces/cli/index.ts`, the existing `case ''` (no-args) branch already calls `renderHomeScreen()`. Change it to:
+In `src/interfaces/cli/index.ts`, the existing `case 'home':` branch (line 91) currently calls `renderHomeScreen()` and prints the result. Change it to:
 
 ```typescript
-case '': {
+case 'home': {
   if (process.stdout.isTTY) {
     await renderInteractiveHome();
   } else {
@@ -244,6 +264,8 @@ case '': {
   return;
 }
 ```
+
+(`'home'` is the default command when no arguments are passed — line 82: `const [rawCommand = 'home', ...rest] = filtered`.)
 
 ---
 
@@ -265,7 +287,11 @@ Use `StdioServerTransport` from `@modelcontextprotocol/sdk/server/stdio.js`.
 
 ### Registration
 
-Users add to their MCP config file (e.g., `~/.claude.json`, `~/.cursor/mcp.json`):
+Users add to their MCP host config. Example paths by platform:
+
+- **Claude Desktop (macOS):** `~/Library/Application Support/Claude/claude_desktop_config.json`
+- **Claude Desktop (Windows):** `%APPDATA%\Claude\claude_desktop_config.json`
+- **Cursor:** `.cursor/mcp.json` in the project root
 
 ```json
 {
@@ -283,20 +309,24 @@ Users add to their MCP config file (e.g., `~/.claude.json`, `~/.cursor/mcp.json`
 ### CLI router change
 
 In `src/interfaces/cli/index.ts`:
-1. Add `'mcp'` to `COMMAND_ALIASES`
+1. Add `mcp: 'mcp'` to `COMMAND_ALIASES`
 2. Add `case 'mcp':` branch that imports and calls `handleMcp(rest)`
 
-New file: **`src/interfaces/cli/mcp.ts`** (following existing convention — interface-layer files live in `src/interfaces/cli/`).
+New file: **`src/interfaces/cli/mcp.ts`** (following existing convention — interface-layer command handlers live in `src/interfaces/cli/`).
 
 ### Tools
 
 | Tool | Parameters | Returns |
 |------|-----------|---------|
-| `search_catalog` | `query: string, type?: string, provider?: string, limit?: number` | `CatalogItem[]` filtered by relevance score |
-| `get_item` | `id: string` | Full `CatalogItem` or error if not found |
-| `assess_item` | `id: string` | `RiskAssessment` with `tier`, `blocked`, `reasons[]`, `install_allowed` |
-| `install_item` | `id: string` | See human-in-the-loop flow below |
-| `sync_catalogs` | _(none)_ | `{ items_loaded: number, sources_updated: number, errors: string[] }` |
+| `search_catalog` | `query: string, kind?: CatalogKind, provider?: string, limit?: number` | `CatalogItem[]` filtered by relevance score (delegates to `searchCatalog` API) |
+| `get_item` | `id: string` | Full `CatalogItem` or MCP error if not found |
+| `assess_item` | `id: string` | `RiskAssessment` augmented with `install_allowed: boolean` (see note) |
+| `install_item` | `id: string` | `{ status: "installed" \| "cancelled" \| "blocked", detail?: string }` |
+| `sync_catalogs` | _(none)_ | `{ items_loaded: number, stale_registries: string[] }` (mapped from `syncCatalogs` return) |
+
+**`assess_item` augmentation:** `assessRisk(item)` returns `RiskAssessment` which includes `riskTier`. The MCP tool additionally calls `loadSecurityPolicy()` and `isBlockedTier(assessment.riskTier, policy)` from `src/security/assessment.ts`, then appends `install_allowed: !blocked` to the returned object.
+
+**`sync_catalogs` return mapping:** The underlying `syncCatalogs()` returns `{ items: CatalogItem[], staleRegistries: string[] }`. The MCP tool maps this to `{ items_loaded: items.length, stale_registries: staleRegistries }`.
 
 All tools are implemented by calling the API layer functions from Section 1.
 
@@ -313,16 +343,16 @@ const tty = createWriteStream('/dev/tty');
 const ttyIn = createReadStream('/dev/tty');
 
 tty.write(`\nPlugScout install requested by AI assistant\n`);
-tty.write(`Item: ${item.id} (risk: ${assessment.tier}/${item.securityScore})\n`);
+tty.write(`Item: ${item.id} (risk: ${assessment.riskTier}/${assessment.riskScore})\n`);
 tty.write(`Install command: ${installCmd}\n`);
 tty.write(`Confirm? [y/N]: `);
-// read one line from ttyIn...
+// read one line from ttyIn with 60-second timeout...
 ```
 
 Flow:
 1. AI calls `install_item` with an `id`
-2. MCP server loads the item, runs `assessRisk`, checks policy
-3. If blocked (high/critical risk): skip prompt entirely, return `{ status: "blocked", detail: "risk tier: <tier>" }`
+2. MCP server loads the item via `loadCatalogItemById`, runs `assessRisk`, checks `isBlockedTier`
+3. If blocked (high/critical risk): skip prompt entirely, return `{ status: "blocked", detail: "risk tier: <riskTier>" }`
 4. If install allowed: write confirmation prompt to `/dev/tty`, read response
 5. Timeout after 60 seconds → return `{ status: "cancelled", detail: "timeout" }`
 6. User types `y` → run install, return `{ status: "installed" }`
@@ -338,17 +368,17 @@ Flow:
 ## Error Handling
 
 - All API layer functions throw `PlugScoutError` (from `src/api/errors.ts`) for domain errors, not generic `Error`
-- Home screen catches errors from state detection and falls back to plain-text `renderHomeScreen()` output
+- Home screen catches errors from state detection and falls back to plain-text `renderHomeScreen()` output (State 3 level of detail is best-effort)
 - MCP tools return structured MCP error responses per SDK spec — no unhandled promise rejections
 - `install_item`: 60-second `/dev/tty` read timeout returns `{ status: "cancelled", detail: "timeout" }`
-- `searchCatalog`: if the extracted `computeSearchScore` is unavailable, returns empty array rather than throwing
+- `searchCatalog`: returns empty array on error rather than throwing (catalog may not be synced yet)
 
 ---
 
 ## Testing
 
 - **API layer:** Unit tests in `src/api/__tests__/api.test.ts` — verify each export returns the correct shape, throws `PlugScoutError` on bad input, and produces no console output or `process.exit` calls
-- **`isSetUp()`:** Unit test with a temp directory (file exists → true, missing → false)
-- **`searchCatalog`:** Unit test extracted `computeSearchScore` function with fixture items
-- **Home screen:** Unit tests for `renderInteractiveHome()` state detection logic; integration test verifying the correct menu items appear per state
-- **MCP server:** Integration tests using the `@modelcontextprotocol/sdk` in-process client/server pattern — instantiate `StdioServerTransport` with piped streams, call each tool, verify responses; `install_item` tested with a mocked `/dev/tty` write stream
+- **`isSetUp()`:** Unit test with a temp directory: no file → `false`, file present → `true`
+- **`searchCatalog`:** Unit test extracted `computeSearchScore` with fixture `CatalogItem` objects
+- **Home screen:** Unit tests for state detection logic (mock `isSetUp` and `loadCatalogItems`); integration test verifying the correct menu items appear per state in TTY mode
+- **MCP server:** Integration tests using the `@modelcontextprotocol/sdk` in-process client/server pattern. Tests create a pair of `PassThrough` streams and pass them to `StdioServerTransport` in place of `process.stdin`/`process.stdout`. The MCP SDK `Client` class connects to the same streams from the other side, calls each tool, and verifies the response shape. `install_item` is tested by replacing the `/dev/tty` write/read streams with `PassThrough` mocks injected via a test-only parameter.
