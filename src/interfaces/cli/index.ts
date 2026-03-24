@@ -28,7 +28,7 @@ import { colorRisk, colors } from './formatters/colors.js';
 import { renderTable, scoreBar } from './formatters/table.js';
 import { printHint, printJson } from './output.js';
 import { hasFlag, readCsvList, readFlag, readKinds, readLimit, readSort, type SortKey } from './options.js';
-import { renderHomeScreen } from './ui/home.js';
+import { renderHomeScreen, renderInteractiveHome } from './ui/home.js';
 import { writeWebReport } from './ui/web-report.js';
 import {
   checkForUpdateNow,
@@ -163,8 +163,12 @@ export async function runCli(argv: string[]): Promise<void> {
 }
 
 async function handleHome(): Promise<void> {
-  const output = await renderHomeScreen();
-  console.log(output);
+  if (process.stdout.isTTY) {
+    await renderInteractiveHome();
+  } else {
+    const output = await renderHomeScreen();
+    console.log(output);
+  }
 }
 
 async function handleAbout(): Promise<void> {
