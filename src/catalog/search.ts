@@ -17,6 +17,7 @@ export function computeSearchScore(item: CatalogItem, query: string): number {
   if (id === query) {
     score += 120;
   } else if (id.includes(query)) {
+    // else if: prevent exact matches from also scoring as partial matches
     score += 60;
   }
   if (name.includes(query)) {
