@@ -1,0 +1,11 @@
+[extend]
+useDefault = true
+
+# Catalog data files contain third-party tool descriptions that may include
+# strings like "28+ tokens" or "SAFE/CAUTION/AVOID verdicts" which trigger
+# the generic-api-key rule as false positives. These are not secrets.
+[allowlist]
+description = "Ignore third-party catalog data"
+paths = [
+  '''data/catalog/'''
+]
