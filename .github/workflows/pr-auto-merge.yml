@@ -32,6 +32,7 @@ jobs:
         with:
           script: |
             const run = context.payload.workflow_run;
+            const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
             const prs = run.pull_requests || [];
             if (!prs.length) {
               core.info('No PR attached to this workflow run.');
@@ -41,6 +42,7 @@ jobs:
             const owner = context.repo.owner;
             const repo = context.repo.repo;
             const prNumber = prs[0].number;
+            const runHeadSha = run.head_sha;
             const prResp = await github.rest.pulls.get({ owner, repo, pull_number: prNumber });
             const pr = prResp.data;
             const author = pr.user?.login || '';
@@ -62,59 +64,85 @@ jobs:
               return;
             }
 
-            const checkRuns = await github.paginate(github.rest.checks.listForRef, {
-              owner,
-              repo,
-              ref: pr.head.sha,
-              per_page: 100
-            });
-
-            const latestByName = new Map();
-            for (const check of checkRuns) {
-              if (!latestByName.has(check.name)) {
-                latestByName.set(check.name, check);
-              }
-            }
-            const latestChecks = Array.from(latestByName.values());
-
-            const failedConclusions = new Set(['failure', 'timed_out', 'cancelled', 'startup_failure', 'action_required']);
-            const failingChecks = latestChecks.filter(
-              (check) => check.status === 'completed' && failedConclusions.has(check.conclusion || '')
-            );
-            const pendingChecks = latestChecks.filter(
-              (check) => check.status !== 'completed' || check.conclusion == null
-            );
-
-            const combined = await github.rest.repos.getCombinedStatusForRef({
-              owner,
-              repo,
-              ref: pr.head.sha
-            });
-            const statusState = combined.data.state;
-
-            if (failingChecks.length || statusState === 'failure' || statusState === 'error') {
-              core.info(`PR #${prNumber} still failing checks; not merging.`);
+            if (pr.head.sha !== runHeadSha) {
+              core.info(`Skipping PR #${prNumber} because head SHA moved from ${runHeadSha} to ${pr.head.sha}.`);
               return;
             }
 
-            if (pendingChecks.length || statusState === 'pending') {
-              core.info(`PR #${prNumber} still has pending checks; not merging.`);
-              return;
-            }
+            const maxAttempts = 12;
+            const pollIntervalMs = 15000;
 
-            if (!latestChecks.length && combined.data.total_count === 0) {
-              core.info(`PR #${prNumber} has no checks yet; not merging.`);
-              return;
-            }
-
-            try {
-              await github.rest.pulls.merge({
+            const loadCheckState = async () => {
+              const checkRuns = await github.paginate(github.rest.checks.listForRef, {
                 owner,
                 repo,
-                pull_number: prNumber,
-                merge_method: 'squash'
+                ref: runHeadSha,
+                per_page: 100
               });
-              core.info(`Merged PR #${prNumber}.`);
-            } catch (error) {
-              core.warning(`Could not merge PR #${prNumber}: ${error.message}`);
+
+              const latestByName = new Map();
+              for (const check of checkRuns) {
+                if (!latestByName.has(check.name)) {
+                  latestByName.set(check.name, check);
+                }
+              }
+              const latestChecks = Array.from(latestByName.values());
+
+              const failedConclusions = new Set(['failure', 'timed_out', 'cancelled', 'startup_failure', 'action_required']);
+              const failingChecks = latestChecks.filter(
+                (check) => check.status === 'completed' && failedConclusions.has(check.conclusion || '')
+              );
+              const pendingChecks = latestChecks.filter(
+                (check) => check.status !== 'completed' || check.conclusion == null
+              );
+
+              const combined = await github.rest.repos.getCombinedStatusForRef({
+                owner,
+                repo,
+                ref: runHeadSha
+              });
+
+              return {
+                combinedState: combined.data.state,
+                latestChecks,
+                failingChecks,
+                pendingChecks,
+                totalCount: combined.data.total_count
+              };
+            };
+
+            for (let attempt = 1; attempt <= maxAttempts; attempt += 1) {
+              const { combinedState, failingChecks, pendingChecks, totalCount } = await loadCheckState();
+
+              if (failingChecks.length || combinedState === 'failure' || combinedState === 'error') {
+                core.info(`PR #${prNumber} still failing checks; not merging.`);
+                return;
+              }
+
+              if (!pendingChecks.length && combinedState !== 'pending') {
+                try {
+                  await github.rest.pulls.merge({
+                    owner,
+                    repo,
+                    pull_number: prNumber,
+                    merge_method: 'squash'
+                  });
+                  core.info(`Merged PR #${prNumber}.`);
+                } catch (error) {
+                  core.warning(`Could not merge PR #${prNumber}: ${error.message}`);
+                }
+                return;
+              }
+
+              if (!totalCount) {
+                core.info(`PR #${prNumber} has no checks yet; waiting for checks to appear.`);
+              } else {
+                core.info(`PR #${prNumber} still has pending checks; waiting (${attempt}/${maxAttempts}).`);
+              }
+
+              if (attempt < maxAttempts) {
+                await sleep(pollIntervalMs);
+              }
             }
+
+            core.info(`PR #${prNumber} still has pending checks after ${maxAttempts} attempts; not merging.`);
