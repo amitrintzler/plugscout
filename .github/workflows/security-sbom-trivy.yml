@@ -45,6 +45,7 @@ jobs:
           output: trivy-results.sarif
           severity: HIGH,CRITICAL
           ignore-unfixed: false
+          limit-severities-for-sarif: true
           exit-code: ${{ github.event_name == 'pull_request' && '1' || '0' }}
 
       - name: Run Trivy (JSON report)
