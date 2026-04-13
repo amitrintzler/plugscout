@@ -17,7 +17,7 @@
       "node"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-04-04",
+    "lastSeenAt": "2026-04-13",
     "install": {
       "kind": "skill.sh",
       "target": "agentic-actions-auditor",
@@ -61,7 +61,7 @@
       "claude-code"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-04-04",
+    "lastSeenAt": "2026-04-13",
     "install": {
       "kind": "skill.sh",
       "target": "Agentic Workflow Patterns",
@@ -100,7 +100,7 @@
       "claude-code"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-04-04",
+    "lastSeenAt": "2026-04-13",
     "install": {
       "kind": "skill.sh",
       "target": "AgentSys",
@@ -134,7 +134,7 @@
     "kind": "skill",
     "name": "agnix",
     "description": "A comprehensive linter for Claude Code agent files. Validate CLAUDE.md, AGENTS.md, SKILL.md, hooks, MCP, and more. Plugin for all major IDEs included, with auto-fixes.",
-    "provider": "github",
+    "provider": "openai",
     "capabilities": [
       "guardrails",
       "orchestration"
@@ -142,12 +142,12 @@
     "compatibility": [
       "claude-code"
     ],
-    "source": "awesome-claude-code",
-    "lastSeenAt": "2026-04-04",
+    "source": "community-skills-index",
+    "lastSeenAt": "2026-04-13",
     "install": {
-      "kind": "manual",
-      "instructions": "Visit the linked repository and follow its installation instructions.",
-      "url": "https://github.com/agent-sh/agnix"
+      "kind": "skill.sh",
+      "target": "agnix",
+      "args": []
     },
     "adoptionSignal": 72,
     "maintenanceSignal": 78,
@@ -161,15 +161,15 @@
       "integrityAlerts": 0
     },
     "metadata": {
-      "catalogType": "skill",
+      "sourceRegistryId": "awesome-claude-code",
+      "sourceType": "community-list",
       "sourceConfidence": "vetted-curated",
+      "catalogType": "skill",
       "awesomeClaudeCodeId": "tool-08ad1d8e",
       "awesomeClaudeCodeCategory": "Tooling",
       "authorName": "agent-sh",
       "license": "Apache-2.0",
-      "releaseVersion": "v0.16.5",
-      "sourceRegistryId": "awesome-claude-code",
-      "sourceType": "community-list"
+      "releaseVersion": "v0.16.5"
     }
   },
   {
@@ -185,7 +185,7 @@
       "claude-code"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-04-04",
+    "lastSeenAt": "2026-04-13",
     "install": {
       "kind": "skill.sh",
       "target": "AI Agent, AI Spy",
@@ -242,7 +242,7 @@
       "node"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-04-04",
+    "lastSeenAt": "2026-04-13",
     "install": {
       "kind": "skill.sh",
       "target": "algorithmic-art",
@@ -286,7 +286,7 @@
       "claude-code"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-04-04",
+    "lastSeenAt": "2026-04-13",
     "install": {
       "kind": "skill.sh",
       "target": "/analyze-issue",
@@ -329,7 +329,7 @@
       "claude-code"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-04-04",
+    "lastSeenAt": "2026-04-13",
     "install": {
       "kind": "skill.sh",
       "target": "Anthropic Documentation",
@@ -372,7 +372,7 @@
       "claude-code"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-04-04",
+    "lastSeenAt": "2026-04-13",
     "install": {
       "kind": "skill.sh",
       "target": "Anthropic Quickstarts",
@@ -416,7 +416,7 @@
       "node"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-04-04",
+    "lastSeenAt": "2026-04-13",
     "install": {
       "kind": "skill.sh",
       "target": "ask-questions-if-underspecified",
@@ -457,7 +457,7 @@
       "general"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-04-04",
+    "lastSeenAt": "2026-04-13",
     "install": {
       "kind": "skill.sh",
       "target": "Aspnet Core",
@@ -500,7 +500,7 @@
       "node"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-04-04",
+    "lastSeenAt": "2026-04-13",
     "install": {
       "kind": "skill.sh",
       "target": "audit-context-building",
@@ -542,7 +542,7 @@
       "claude-code"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-04-04",
+    "lastSeenAt": "2026-04-13",
     "install": {
       "kind": "skill.sh",
       "target": "Auto-Claude",
@@ -587,7 +587,7 @@
       "claude-code"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-04-04",
+    "lastSeenAt": "2026-04-13",
     "install": {
       "kind": "skill.sh",
       "target": "awesome-ralph",
@@ -630,7 +630,7 @@
       "claude-code"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-04-04",
+    "lastSeenAt": "2026-04-13",
     "install": {
       "kind": "skill.sh",
       "target": "AWS MCP Server",
@@ -677,7 +677,7 @@
       "serverless"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-04-04",
+    "lastSeenAt": "2026-04-13",
     "install": {
       "kind": "skill.sh",
       "target": "aws-platform-ops",
@@ -713,7 +713,7 @@
       "claude-code"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-04-04",
+    "lastSeenAt": "2026-04-13",
     "install": {
       "kind": "skill.sh",
       "target": "Basic Memory",
@@ -757,7 +757,7 @@
       "claude-code"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-04-04",
+    "lastSeenAt": "2026-04-13",
     "install": {
       "kind": "skill.sh",
       "target": "Blogging Platform Instructions",
@@ -799,7 +799,7 @@
       "claude-code"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-04-04",
+    "lastSeenAt": "2026-04-13",
     "install": {
       "kind": "skill.sh",
       "target": "Book Factory",
@@ -856,7 +856,7 @@
       "node"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-04-04",
+    "lastSeenAt": "2026-04-13",
     "install": {
       "kind": "skill.sh",
       "target": "brand-guidelines",
@@ -900,7 +900,7 @@
       "claude-code"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-04-04",
+    "lastSeenAt": "2026-04-13",
     "install": {
       "kind": "skill.sh",
       "target": "Britfix",
@@ -946,7 +946,7 @@
       "node"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-04-04",
+    "lastSeenAt": "2026-04-13",
     "install": {
       "kind": "skill.sh",
       "target": "building-secure-contracts",
@@ -990,7 +990,7 @@
       "github"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-04-04",
+    "lastSeenAt": "2026-04-13",
     "install": {
       "kind": "skill.sh",
       "target": "burpsuite-project-parser",
@@ -1047,7 +1047,7 @@
       "node"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-04-04",
+    "lastSeenAt": "2026-04-13",
     "install": {
       "kind": "skill.sh",
       "target": "canvas-design",
@@ -1092,7 +1092,7 @@
       "claude-code"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-04-04",
+    "lastSeenAt": "2026-04-13",
     "install": {
       "kind": "skill.sh",
       "target": "cc-devops-skills",
@@ -1134,7 +1134,7 @@
       "claude-code"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-04-04",
+    "lastSeenAt": "2026-04-13",
     "install": {
       "kind": "skill.sh",
       "target": "cc-tools",
@@ -1175,7 +1175,7 @@
       "claude-code"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-04-04",
+    "lastSeenAt": "2026-04-13",
     "install": {
       "kind": "skill.sh",
       "target": "CC Usage",
@@ -1218,7 +1218,7 @@
       "claude-code"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-04-04",
+    "lastSeenAt": "2026-04-13",
     "install": {
       "kind": "skill.sh",
       "target": "ccflare -> **better-ccflare**",
@@ -1248,6 +1248,48 @@
     }
   },
   {
+    "id": "skill:cchooks",
+    "kind": "skill",
+    "name": "cchooks",
+    "description": "A lightweight Python SDK with a clean API and good documentation; simplifies the process of writing hooks and integrating them into your codebase, providing a nice abstraction over the JSON configuration files.",
+    "provider": "github",
+    "capabilities": [
+      "docs"
+    ],
+    "compatibility": [
+      "claude-code"
+    ],
+    "source": "awesome-claude-code",
+    "lastSeenAt": "2026-04-13",
+    "install": {
+      "kind": "manual",
+      "instructions": "Visit the linked repository and follow its installation instructions.",
+      "url": "https://github.com/GowayLee/cchooks"
+    },
+    "adoptionSignal": 72,
+    "maintenanceSignal": 78,
+    "provenanceSignal": 82,
+    "freshnessSignal": 72,
+    "securitySignals": {
+      "knownVulnerabilities": 0,
+      "suspiciousPatterns": 0,
+      "injectionFindings": 0,
+      "exfiltrationSignals": 0,
+      "integrityAlerts": 0
+    },
+    "metadata": {
+      "catalogType": "skill",
+      "sourceConfidence": "vetted-curated",
+      "awesomeClaudeCodeId": "hook-26657310",
+      "awesomeClaudeCodeCategory": "Hooks",
+      "authorName": "GowayLee",
+      "license": "MIT",
+      "releaseVersion": "v0.1.5",
+      "sourceRegistryId": "awesome-claude-code",
+      "sourceType": "community-list"
+    }
+  },
+  {
     "id": "skill:ccometixline-claude-code-statusline",
     "kind": "skill",
     "name": "CCometixLine - Claude Code Statusline",
@@ -1260,7 +1302,7 @@
       "claude-code"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-04-04",
+    "lastSeenAt": "2026-04-13",
     "install": {
       "kind": "skill.sh",
       "target": "CCometixLine - Claude Code Statusline",
@@ -1302,7 +1344,7 @@
       "claude-code"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-04-04",
+    "lastSeenAt": "2026-04-13",
     "install": {
       "kind": "skill.sh",
       "target": "ccstatusline",
@@ -1343,7 +1385,7 @@
       "general"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-04-04",
+    "lastSeenAt": "2026-04-13",
     "install": {
       "kind": "skill.sh",
       "target": "Chatgpt Apps",
@@ -1385,7 +1427,7 @@
       "node"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-04-04",
+    "lastSeenAt": "2026-04-13",
     "install": {
       "kind": "skill.sh",
       "target": "ci-hardening",
@@ -1423,7 +1465,7 @@
       "claude-code"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-04-04",
+    "lastSeenAt": "2026-04-13",
     "install": {
       "kind": "skill.sh",
       "target": "Claudable",
@@ -1470,7 +1512,7 @@
       "node"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-04-04",
+    "lastSeenAt": "2026-04-13",
     "install": {
       "kind": "skill.sh",
       "target": "claude-api",
@@ -1501,6 +1543,52 @@
     }
   },
   {
+    "id": "skill:claude-code-agent-teams-exercises",
+    "kind": "skill",
+    "name": "Claude Code Agent Teams: Exercises",
+    "description": "Practical exercises for Claude Code Agent Teams - 6 exercises + 2 capstones covering team creation, task coordination, quality hooks, and parallel code review - good learning resource.",
+    "provider": "github",
+    "capabilities": [
+      "automation",
+      "docs",
+      "frontend",
+      "guardrails",
+      "orchestration"
+    ],
+    "compatibility": [
+      "claude-code"
+    ],
+    "source": "awesome-claude-code",
+    "lastSeenAt": "2026-04-13",
+    "install": {
+      "kind": "manual",
+      "instructions": "Visit the linked repository and follow its installation instructions.",
+      "url": "https://github.com/panaversity/claude-code-agent-teams-exercises"
+    },
+    "adoptionSignal": 72,
+    "maintenanceSignal": 78,
+    "provenanceSignal": 82,
+    "freshnessSignal": 72,
+    "securitySignals": {
+      "knownVulnerabilities": 0,
+      "suspiciousPatterns": 0,
+      "injectionFindings": 0,
+      "exfiltrationSignals": 0,
+      "integrityAlerts": 0
+    },
+    "metadata": {
+      "catalogType": "skill",
+      "sourceConfidence": "vetted-curated",
+      "awesomeClaudeCodeId": "wf-af11a176",
+      "awesomeClaudeCodeCategory": "Workflows & Knowledge Guides",
+      "authorName": "Panaversity",
+      "license": "NOT_FOUND",
+      "releaseVersion": "latest",
+      "sourceRegistryId": "awesome-claude-code",
+      "sourceType": "community-list"
+    }
+  },
+  {
     "id": "skill:claude-code-agents",
     "kind": "skill",
     "name": "Claude Code Agents",
@@ -1516,7 +1604,7 @@
       "claude-code"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-04-04",
+    "lastSeenAt": "2026-04-13",
     "install": {
       "kind": "skill.sh",
       "target": "Claude Code Agents",
@@ -1557,7 +1645,7 @@
       "claude-code"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-04-04",
+    "lastSeenAt": "2026-04-13",
     "install": {
       "kind": "skill.sh",
       "target": "Claude Code Chat",
@@ -1600,7 +1688,7 @@
       "claude-code"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-04-04",
+    "lastSeenAt": "2026-04-13",
     "install": {
       "kind": "skill.sh",
       "target": "claude-code-docs",
@@ -1644,7 +1732,7 @@
       "claude-code"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-04-04",
+    "lastSeenAt": "2026-04-13",
     "install": {
       "kind": "skill.sh",
       "target": "Claude Code Documentation Mirror",
@@ -1686,7 +1774,7 @@
       "claude-code"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-04-04",
+    "lastSeenAt": "2026-04-13",
     "install": {
       "kind": "skill.sh",
       "target": "claude-code.el",
@@ -1723,7 +1811,7 @@
       "claude-code"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-04-04",
+    "lastSeenAt": "2026-04-13",
     "install": {
       "kind": "skill.sh",
       "target": "Claude Code Flow",
@@ -1766,7 +1854,7 @@
       "claude-code"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-04-04",
+    "lastSeenAt": "2026-04-13",
     "install": {
       "kind": "skill.sh",
       "target": "Claude Code GitHub Actions",
@@ -1810,7 +1898,7 @@
       "claude-code"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-04-04",
+    "lastSeenAt": "2026-04-13",
     "install": {
       "kind": "skill.sh",
       "target": "Claude Code Handbook",
@@ -1851,7 +1939,7 @@
       "claude-code"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-04-04",
+    "lastSeenAt": "2026-04-13",
     "install": {
       "kind": "skill.sh",
       "target": "Claude Code Hook Comms (HCOM)",
@@ -1893,7 +1981,7 @@
       "claude-code"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-04-04",
+    "lastSeenAt": "2026-04-13",
     "install": {
       "kind": "skill.sh",
       "target": "claude-code-hooks-sdk",
@@ -1935,7 +2023,7 @@
       "claude-code"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-04-04",
+    "lastSeenAt": "2026-04-13",
     "install": {
       "kind": "skill.sh",
       "target": "claude-code-ide.el",
@@ -1976,7 +2064,7 @@
       "claude-code"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-04-04",
+    "lastSeenAt": "2026-04-13",
     "install": {
       "kind": "skill.sh",
       "target": "claude-code.nvim",
@@ -2010,7 +2098,7 @@
     "kind": "skill",
     "name": "Claude Code PM",
     "description": "Really comprehensive and feature-packed project-management workflow for Claude Code. Numerous specialized agents, slash-commands, and strong documentation.",
-    "provider": "github",
+    "provider": "openai",
     "capabilities": [
       "automation",
       "docs",
@@ -2020,12 +2108,12 @@
     "compatibility": [
       "claude-code"
     ],
-    "source": "awesome-claude-code",
-    "lastSeenAt": "2026-04-04",
+    "source": "community-skills-index",
+    "lastSeenAt": "2026-04-13",
     "install": {
-      "kind": "manual",
-      "instructions": "Visit the linked repository and follow its installation instructions.",
-      "url": "https://github.com/automazeio/ccpm"
+      "kind": "skill.sh",
+      "target": "Claude Code PM",
+      "args": []
     },
     "adoptionSignal": 72,
     "maintenanceSignal": 70,
@@ -2039,14 +2127,14 @@
       "integrityAlerts": 0
     },
     "metadata": {
-      "catalogType": "skill",
+      "sourceRegistryId": "awesome-claude-code",
+      "sourceType": "community-list",
       "sourceConfidence": "vetted-curated",
+      "catalogType": "skill",
       "awesomeClaudeCodeId": "wf-a59ba559",
       "awesomeClaudeCodeCategory": "Workflows & Knowledge Guides",
       "authorName": "Ran Aroussi",
-      "license": "MIT",
-      "sourceRegistryId": "awesome-claude-code",
-      "sourceType": "community-list"
+      "license": "MIT"
     }
   },
   {
@@ -2065,7 +2153,7 @@
       "claude-code"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-04-04",
+    "lastSeenAt": "2026-04-13",
     "install": {
       "kind": "skill.sh",
       "target": "Claude Code Repos Index",
@@ -2106,7 +2194,7 @@
       "claude-code"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-04-04",
+    "lastSeenAt": "2026-04-13",
     "install": {
       "kind": "skill.sh",
       "target": "claude-code-statusline",
@@ -2153,7 +2241,7 @@
       "claude-code"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-04-04",
+    "lastSeenAt": "2026-04-13",
     "install": {
       "kind": "skill.sh",
       "target": "Claude Code System Prompts",
@@ -2196,7 +2284,7 @@
       "claude-code"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-04-04",
+    "lastSeenAt": "2026-04-13",
     "install": {
       "kind": "skill.sh",
       "target": "Claude Code Templates",
@@ -2241,7 +2329,7 @@
       "claude-code"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-04-04",
+    "lastSeenAt": "2026-04-13",
     "install": {
       "kind": "skill.sh",
       "target": "Claude Code Tips",
@@ -2284,7 +2372,7 @@
       "claude-code"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-04-04",
+    "lastSeenAt": "2026-04-13",
     "install": {
       "kind": "skill.sh",
       "target": "claude-code-tools",
@@ -2329,7 +2417,7 @@
       "claude-code"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-04-04",
+    "lastSeenAt": "2026-04-13",
     "install": {
       "kind": "skill.sh",
       "target": "Claude Code Ultimate Guide",
@@ -2372,7 +2460,7 @@
       "claude-code"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-04-04",
+    "lastSeenAt": "2026-04-13",
     "install": {
       "kind": "skill.sh",
       "target": "Claude CodePro",
@@ -2415,7 +2503,7 @@
       "claude-code"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-04-04",
+    "lastSeenAt": "2026-04-13",
     "install": {
       "kind": "skill.sh",
       "target": "Claude Codex Settings",
@@ -2449,7 +2537,7 @@
     "kind": "skill",
     "name": "claude-devtools",
     "description": "A well-designed desktop app that provides detailed observability into your Claude Code sessions by analyzing the session logs. Provides turn-based context data across numerous categories, compaction visualization, subagent execution trees, and custom notification triggers. Easy to install, and nice visual design.",
-    "provider": "github",
+    "provider": "openai",
     "capabilities": [
       "frontend",
       "orchestration"
@@ -2457,12 +2545,12 @@
     "compatibility": [
       "claude-code"
     ],
-    "source": "awesome-claude-code",
-    "lastSeenAt": "2026-04-04",
+    "source": "community-skills-index",
+    "lastSeenAt": "2026-04-13",
     "install": {
-      "kind": "manual",
-      "instructions": "Visit the linked repository and follow its installation instructions.",
-      "url": "https://github.com/matt1398/claude-devtools"
+      "kind": "skill.sh",
+      "target": "claude-devtools",
+      "args": []
     },
     "adoptionSignal": 72,
     "maintenanceSignal": 78,
@@ -2476,15 +2564,15 @@
       "integrityAlerts": 0
     },
     "metadata": {
-      "catalogType": "skill",
+      "sourceRegistryId": "awesome-claude-code",
+      "sourceType": "community-list",
       "sourceConfidence": "vetted-curated",
+      "catalogType": "skill",
       "awesomeClaudeCodeId": "tool-e6553311",
       "awesomeClaudeCodeCategory": "Tooling",
       "authorName": "matt1398",
       "license": "MIT",
-      "releaseVersion": "v0.4.9",
-      "sourceRegistryId": "awesome-claude-code",
-      "sourceType": "community-list"
+      "releaseVersion": "v0.4.9"
     }
   },
   {
@@ -2502,7 +2590,7 @@
       "claude-code"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-04-04",
+    "lastSeenAt": "2026-04-13",
     "install": {
       "kind": "skill.sh",
       "target": "claude-esp",
@@ -2547,7 +2635,7 @@
       "node"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-04-04",
+    "lastSeenAt": "2026-04-13",
     "install": {
       "kind": "skill.sh",
       "target": "claude-in-chrome-troubleshooting",
@@ -2588,7 +2676,7 @@
       "claude-code"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-04-04",
+    "lastSeenAt": "2026-04-13",
     "install": {
       "kind": "skill.sh",
       "target": "Claude Mountaineering Skills",
@@ -2630,7 +2718,7 @@
       "claude-code"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-04-04",
+    "lastSeenAt": "2026-04-13",
     "install": {
       "kind": "skill.sh",
       "target": "claude-powerline",
@@ -2672,7 +2760,7 @@
       "claude-code"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-04-04",
+    "lastSeenAt": "2026-04-13",
     "install": {
       "kind": "skill.sh",
       "target": "claude-rules-doctor",
@@ -2715,7 +2803,7 @@
       "claude-code"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-04-04",
+    "lastSeenAt": "2026-04-13",
     "install": {
       "kind": "skill.sh",
       "target": "Claude Scientific Skills",
@@ -2757,7 +2845,7 @@
       "claude-code"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-04-04",
+    "lastSeenAt": "2026-04-13",
     "install": {
       "kind": "skill.sh",
       "target": "Claude Session Restore",
@@ -2798,7 +2886,7 @@
       "claude-code"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-04-04",
+    "lastSeenAt": "2026-04-13",
     "install": {
       "kind": "skill.sh",
       "target": "Claude Squad",
@@ -2841,7 +2929,7 @@
       "claude-code"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-04-04",
+    "lastSeenAt": "2026-04-13",
     "install": {
       "kind": "skill.sh",
       "target": "claude-starter-kit",
@@ -2877,7 +2965,7 @@
       "claude-code"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-04-04",
+    "lastSeenAt": "2026-04-13",
     "install": {
       "kind": "skill.sh",
       "target": "Claude Swarm",
@@ -2919,7 +3007,7 @@
       "claude-code"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-04-04",
+    "lastSeenAt": "2026-04-13",
     "install": {
       "kind": "skill.sh",
       "target": "Claude Task Master",
@@ -2961,7 +3049,7 @@
       "claude-code"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-04-04",
+    "lastSeenAt": "2026-04-13",
     "install": {
       "kind": "skill.sh",
       "target": "claude-tmux",
@@ -2994,7 +3082,7 @@
     "kind": "skill",
     "name": "claude-toolbox",
     "description": "This is a starter template repository designed to provide a complete development environment for Claude-Code with pre-configured MCP servers and tools for AI-powered development workflows. The repository is intentionally minimal, containing only configuration templates for three primary systems: Claude Code, Serena, an",
-    "provider": "github",
+    "provider": "openai",
     "capabilities": [
       "automation",
       "frontend"
@@ -3002,12 +3090,12 @@
     "compatibility": [
       "claude-code"
     ],
-    "source": "awesome-claude-code",
-    "lastSeenAt": "2026-04-04",
+    "source": "community-skills-index",
+    "lastSeenAt": "2026-04-13",
     "install": {
-      "kind": "manual",
-      "instructions": "Visit the linked repository and follow its installation instructions.",
-      "url": "https://github.com/serpro69/claude-toolbox"
+      "kind": "skill.sh",
+      "target": "claude-toolbox",
+      "args": []
     },
     "adoptionSignal": 72,
     "maintenanceSignal": 78,
@@ -3021,15 +3109,15 @@
       "integrityAlerts": 0
     },
     "metadata": {
-      "catalogType": "skill",
+      "sourceRegistryId": "awesome-claude-code",
+      "sourceType": "community-list",
       "sourceConfidence": "vetted-curated",
+      "catalogType": "skill",
       "awesomeClaudeCodeId": "tool-8b0193b7",
       "awesomeClaudeCodeCategory": "Tooling",
       "authorName": "serpro69",
-      "license": "MIT",
-      "releaseVersion": "v0.3.0",
-      "sourceRegistryId": "awesome-claude-code",
-      "sourceType": "community-list"
+      "license": "NOASSERTION",
+      "releaseVersion": "v0.3.0"
     }
   },
   {
@@ -3045,7 +3133,7 @@
       "claude-code"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-04-04",
+    "lastSeenAt": "2026-04-13",
     "install": {
       "kind": "skill.sh",
       "target": "ClaudeCTX",
@@ -3089,7 +3177,7 @@
       "claude-code"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-04-04",
+    "lastSeenAt": "2026-04-13",
     "install": {
       "kind": "skill.sh",
       "target": "claudekit",
@@ -3131,7 +3219,7 @@
       "claude-code"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-04-04",
+    "lastSeenAt": "2026-04-13",
     "install": {
       "kind": "skill.sh",
       "target": "Claudex",
@@ -3173,7 +3261,7 @@
       "claude-code"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-04-04",
+    "lastSeenAt": "2026-04-13",
     "install": {
       "kind": "skill.sh",
       "target": "claudia-statusline",
@@ -3215,7 +3303,7 @@
       "claude-code"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-04-04",
+    "lastSeenAt": "2026-04-13",
     "install": {
       "kind": "skill.sh",
       "target": "Claudio",
@@ -3256,7 +3344,7 @@
       "claude-code"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-04-04",
+    "lastSeenAt": "2026-04-13",
     "install": {
       "kind": "skill.sh",
       "target": "Claudix - Claude Code for VSCode",
@@ -3274,9 +3362,15 @@
       "integrityAlerts": 0
     },
     "metadata": {
-      "sourceRegistryId": "community-skills-index",
+      "sourceRegistryId": "awesome-claude-code",
       "sourceType": "community-list",
-      "sourceConfidence": "vetted-curated"
+      "sourceConfidence": "vetted-curated",
+      "catalogType": "skill",
+      "awesomeClaudeCodeId": "tool-7e19bf77",
+      "awesomeClaudeCodeCategory": "Tooling",
+      "authorName": "Haleclipse",
+      "license": "AGPL-3.0",
+      "releaseVersion": "0.3.9-dev"
     }
   },
   {
@@ -3295,7 +3389,7 @@
       "claude-code"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-04-04",
+    "lastSeenAt": "2026-04-13",
     "install": {
       "kind": "skill.sh",
       "target": "ClaudoPro Directory",
@@ -3313,9 +3407,52 @@
       "integrityAlerts": 0
     },
     "metadata": {
-      "sourceRegistryId": "community-skills-index",
+      "sourceRegistryId": "awesome-claude-code",
       "sourceType": "community-list",
-      "sourceConfidence": "vetted-curated"
+      "sourceConfidence": "vetted-curated",
+      "catalogType": "skill",
+      "awesomeClaudeCodeId": "wf-666ef1b9",
+      "awesomeClaudeCodeCategory": "Workflows & Knowledge Guides",
+      "authorName": "ghost",
+      "license": "MIT"
+    }
+  },
+  {
+    "id": "skill:cli-creator",
+    "kind": "skill",
+    "name": "Cli Creator",
+    "description": "OpenAI curated Codex skill: cli-creator.",
+    "provider": "openai",
+    "capabilities": [
+      "automation"
+    ],
+    "compatibility": [
+      "general"
+    ],
+    "source": "openai-skills-curated",
+    "lastSeenAt": "2026-04-13",
+    "install": {
+      "kind": "manual",
+      "instructions": "Install with skill-installer from openai/skills path skills/.curated/cli-creator",
+      "url": "https://github.com/openai/skills/tree/main/skills/.curated/cli-creator"
+    },
+    "adoptionSignal": 72,
+    "maintenanceSignal": 82,
+    "provenanceSignal": 96,
+    "freshnessSignal": 80,
+    "securitySignals": {
+      "knownVulnerabilities": 0,
+      "suspiciousPatterns": 0,
+      "injectionFindings": 0,
+      "exfiltrationSignals": 0,
+      "integrityAlerts": 0
+    },
+    "metadata": {
+      "githubPath": "skills/.curated/cli-creator",
+      "githubUrl": "https://github.com/openai/skills/tree/main/skills/.curated/cli-creator",
+      "sourceRegistryId": "openai-skills-curated",
+      "sourceType": "vendor-feed",
+      "sourceConfidence": "official"
     }
   },
   {
@@ -3331,7 +3468,7 @@
       "general"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-04-04",
+    "lastSeenAt": "2026-04-13",
     "install": {
       "kind": "skill.sh",
       "target": "Cloudflare Deploy",
@@ -3372,7 +3509,7 @@
       "node"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-04-04",
+    "lastSeenAt": "2026-04-13",
     "install": {
       "kind": "skill.sh",
       "target": "code-operations-skills",
@@ -3405,7 +3542,7 @@
     "kind": "skill",
     "name": "Codebase to Course",
     "description": "A Claude Code skill that turns any codebase into a beautiful, interactive single-page HTML course for non-technical vibe coders.",
-    "provider": "github",
+    "provider": "openai",
     "capabilities": [
       "frontend",
       "orchestration"
@@ -3413,12 +3550,12 @@
     "compatibility": [
       "claude-code"
     ],
-    "source": "awesome-claude-code",
-    "lastSeenAt": "2026-04-04",
+    "source": "community-skills-index",
+    "lastSeenAt": "2026-04-13",
     "install": {
-      "kind": "manual",
-      "instructions": "Visit the linked repository and follow its installation instructions.",
-      "url": "https://github.com/zarazhangrui/codebase-to-course"
+      "kind": "skill.sh",
+      "target": "Codebase to Course",
+      "args": []
     },
     "adoptionSignal": 72,
     "maintenanceSignal": 70,
@@ -3432,14 +3569,14 @@
       "integrityAlerts": 0
     },
     "metadata": {
-      "catalogType": "skill",
+      "sourceRegistryId": "awesome-claude-code",
+      "sourceType": "community-list",
       "sourceConfidence": "vetted-curated",
+      "catalogType": "skill",
       "awesomeClaudeCodeId": "skill-53792031",
       "awesomeClaudeCodeCategory": "Agent Skills",
       "authorName": "Zara Zhang",
-      "license": "No License / Not Specified",
-      "sourceRegistryId": "awesome-claude-code",
-      "sourceType": "community-list"
+      "license": "NOT_FOUND"
     }
   },
   {
@@ -3457,7 +3594,7 @@
       "claude-code"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-04-04",
+    "lastSeenAt": "2026-04-13",
     "install": {
       "kind": "skill.sh",
       "target": "Codex Skill",
@@ -3486,6 +3623,49 @@
     }
   },
   {
+    "id": "skill:comm",
+    "kind": "skill",
+    "name": "Comm",
+    "description": "Serves as a development reference for E2E-encrypted messaging applications with code organization architecture, security implementation details, and testing procedures.",
+    "provider": "github",
+    "capabilities": [
+      "guardrails",
+      "security"
+    ],
+    "compatibility": [
+      "claude-code"
+    ],
+    "source": "awesome-claude-code",
+    "lastSeenAt": "2026-04-13",
+    "install": {
+      "kind": "manual",
+      "instructions": "Visit the linked repository and follow its installation instructions.",
+      "url": "https://github.com/CommE2E/comm/blob/master/AGENTS.md"
+    },
+    "adoptionSignal": 72,
+    "maintenanceSignal": 78,
+    "provenanceSignal": 82,
+    "freshnessSignal": 72,
+    "securitySignals": {
+      "knownVulnerabilities": 0,
+      "suspiciousPatterns": 0,
+      "injectionFindings": 0,
+      "exfiltrationSignals": 0,
+      "integrityAlerts": 0
+    },
+    "metadata": {
+      "catalogType": "skill",
+      "sourceConfidence": "vetted-curated",
+      "awesomeClaudeCodeId": "claude-d8f940fa",
+      "awesomeClaudeCodeCategory": "CLAUDE.md Files",
+      "authorName": "CommE2E",
+      "license": "BSD-3-Clause",
+      "releaseVersion": "mobile-v1.0.562",
+      "sourceRegistryId": "awesome-claude-code",
+      "sourceType": "community-list"
+    }
+  },
+  {
     "id": "skill:compound-engineering-plugin",
     "kind": "skill",
     "name": "Compound Engineering Plugin",
@@ -3501,7 +3681,7 @@
       "claude-code"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-04-04",
+    "lastSeenAt": "2026-04-13",
     "install": {
       "kind": "skill.sh",
       "target": "Compound Engineering Plugin",
@@ -3546,7 +3726,7 @@
       "node"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-04-04",
+    "lastSeenAt": "2026-04-13",
     "install": {
       "kind": "skill.sh",
       "target": "constant-time-analysis",
@@ -3587,7 +3767,7 @@
       "claude-code"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-04-04",
+    "lastSeenAt": "2026-04-13",
     "install": {
       "kind": "skill.sh",
       "target": "Container Use",
@@ -3629,7 +3809,7 @@
       "claude-code"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-04-04",
+    "lastSeenAt": "2026-04-13",
     "install": {
       "kind": "skill.sh",
       "target": "Context Engineering Kit",
@@ -3672,7 +3852,7 @@
       "claude-code"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-04-04",
+    "lastSeenAt": "2026-04-13",
     "install": {
       "kind": "skill.sh",
       "target": "ContextKit",
@@ -3714,7 +3894,7 @@
       "claude-code"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-04-04",
+    "lastSeenAt": "2026-04-13",
     "install": {
       "kind": "skill.sh",
       "target": "Course Builder",
@@ -3750,7 +3930,7 @@
       "claude-code"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-04-04",
+    "lastSeenAt": "2026-04-13",
     "install": {
       "kind": "skill.sh",
       "target": "/create-docs",
@@ -3791,7 +3971,7 @@
       "claude-code"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-04-04",
+    "lastSeenAt": "2026-04-13",
     "install": {
       "kind": "skill.sh",
       "target": "crystal",
@@ -3836,7 +4016,7 @@
       "node"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-04-04",
+    "lastSeenAt": "2026-04-13",
     "install": {
       "kind": "skill.sh",
       "target": "culture-index",
@@ -3880,7 +4060,7 @@
       "node"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-04-04",
+    "lastSeenAt": "2026-04-13",
     "install": {
       "kind": "skill.sh",
       "target": "debug-buttercup",
@@ -3924,7 +4104,7 @@
       "general"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-04-04",
+    "lastSeenAt": "2026-04-13",
     "install": {
       "kind": "skill.sh",
       "target": "deep-research",
@@ -3964,7 +4144,7 @@
       "node"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-04-04",
+    "lastSeenAt": "2026-04-13",
     "install": {
       "kind": "skill.sh",
       "target": "dev-browser",
@@ -4008,7 +4188,7 @@
       "node"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-04-04",
+    "lastSeenAt": "2026-04-13",
     "install": {
       "kind": "skill.sh",
       "target": "devcontainer-setup",
@@ -4050,7 +4230,7 @@
       "node"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-04-04",
+    "lastSeenAt": "2026-04-13",
     "install": {
       "kind": "skill.sh",
       "target": "Develop Web Game",
@@ -4092,7 +4272,7 @@
       "github"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-04-04",
+    "lastSeenAt": "2026-04-13",
     "install": {
       "kind": "skill.sh",
       "target": "differential-review",
@@ -4125,7 +4305,7 @@
     "kind": "skill",
     "name": "dimensional-analysis",
     "description": "Annotates codebases with dimensional analysis comments documenting units, dimensions, and decimal scaling. Use when someone asks to annotate units in a codebase, perform a dimensional analysis, or find vulnerabilities in a DeFi protocol. Prevents dimensional mismatches and catches formula bugs early.",
-    "provider": "github",
+    "provider": "openai",
     "capabilities": [
       "automation"
     ],
@@ -4135,12 +4315,12 @@
       "general",
       "node"
     ],
-    "source": "trailofbits-skills-marketplace",
-    "lastSeenAt": "2026-04-04",
+    "source": "community-skills-index",
+    "lastSeenAt": "2026-04-13",
     "install": {
-      "kind": "manual",
-      "instructions": "Review the linked GitHub skill and follow its repository installation instructions.",
-      "url": "https://github.com/trailofbits/skills/tree/main/plugins/dimensional-analysis"
+      "kind": "skill.sh",
+      "target": "dimensional-analysis",
+      "args": []
     },
     "adoptionSignal": 58,
     "maintenanceSignal": 78,
@@ -4154,14 +4334,14 @@
       "integrityAlerts": 0
     },
     "metadata": {
+      "sourceRegistryId": "trailofbits-skills-marketplace",
+      "sourceType": "community-list",
+      "sourceConfidence": "vetted-curated",
       "catalogType": "skill",
       "marketplaceRegistry": "trailofbits-skills-marketplace",
       "marketplaceSource": "github",
       "rawVersion": "3.0.0",
-      "sourceConfidence": "vetted-curated",
-      "githubUrl": "https://github.com/trailofbits/skills/tree/main/plugins/dimensional-analysis",
-      "sourceRegistryId": "trailofbits-skills-marketplace",
-      "sourceType": "community-list"
+      "githubUrl": "https://github.com/trailofbits/skills/tree/main/plugins/dimensional-analysis"
     }
   },
   {
@@ -4177,7 +4357,7 @@
       "claude-code"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-04-04",
+    "lastSeenAt": "2026-04-13",
     "install": {
       "kind": "skill.sh",
       "target": "Dippy",
@@ -4220,7 +4400,7 @@
       "claude-code"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-04-04",
+    "lastSeenAt": "2026-04-13",
     "install": {
       "kind": "skill.sh",
       "target": "/do-issue",
@@ -4261,7 +4441,7 @@
       "general"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-04-04",
+    "lastSeenAt": "2026-04-13",
     "install": {
       "kind": "skill.sh",
       "target": "Doc",
@@ -4317,7 +4497,7 @@
       "node"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-04-04",
+    "lastSeenAt": "2026-04-13",
     "install": {
       "kind": "skill.sh",
       "target": "doc-coauthoring",
@@ -4365,7 +4545,7 @@
       "python"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-04-04",
+    "lastSeenAt": "2026-04-13",
     "install": {
       "kind": "skill.sh",
       "target": "docker-container-ops",
@@ -4405,7 +4585,7 @@
       "python"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-04-04",
+    "lastSeenAt": "2026-04-13",
     "install": {
       "kind": "skill.sh",
       "target": "docs-automation",
@@ -4448,7 +4628,7 @@
       "node"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-04-04",
+    "lastSeenAt": "2026-04-13",
     "install": {
       "kind": "skill.sh",
       "target": "docx",
@@ -4494,7 +4674,7 @@
       "node"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-04-04",
+    "lastSeenAt": "2026-04-13",
     "install": {
       "kind": "skill.sh",
       "target": "dwarf-expert",
@@ -4539,7 +4719,7 @@
       "node"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-04-04",
+    "lastSeenAt": "2026-04-13",
     "install": {
       "kind": "skill.sh",
       "target": "engineering-workflow-skills",
@@ -4583,7 +4763,7 @@
       "github"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-04-04",
+    "lastSeenAt": "2026-04-13",
     "install": {
       "kind": "skill.sh",
       "target": "entry-point-analyzer",
@@ -4625,7 +4805,7 @@
       "claude-code"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-04-04",
+    "lastSeenAt": "2026-04-13",
     "install": {
       "kind": "skill.sh",
       "target": "Everything Claude Code",
@@ -4668,7 +4848,7 @@
       "node"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-04-04",
+    "lastSeenAt": "2026-04-13",
     "install": {
       "kind": "skill.sh",
       "target": "fast-web-scrape",
@@ -4704,7 +4884,7 @@
       "general"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-04-04",
+    "lastSeenAt": "2026-04-13",
     "install": {
       "kind": "skill.sh",
       "target": "Figma",
@@ -4741,12 +4921,12 @@
     "compatibility": [
       "general"
     ],
-    "source": "openai-skills-curated",
-    "lastSeenAt": "2026-04-04",
+    "source": "community-skills-index",
+    "lastSeenAt": "2026-04-13",
     "install": {
-      "kind": "manual",
-      "instructions": "Install with skill-installer from openai/skills path skills/.curated/figma-code-connect-components",
-      "url": "https://github.com/openai/skills/tree/main/skills/.curated/figma-code-connect-components"
+      "kind": "skill.sh",
+      "target": "Figma Code Connect Components",
+      "args": []
     },
     "adoptionSignal": 72,
     "maintenanceSignal": 82,
@@ -4760,11 +4940,11 @@
       "integrityAlerts": 0
     },
     "metadata": {
-      "githubPath": "skills/.curated/figma-code-connect-components",
-      "githubUrl": "https://github.com/openai/skills/tree/main/skills/.curated/figma-code-connect-components",
       "sourceRegistryId": "openai-skills-curated",
       "sourceType": "vendor-feed",
-      "sourceConfidence": "official"
+      "sourceConfidence": "official",
+      "githubPath": "skills/.curated/figma-code-connect-components",
+      "githubUrl": "https://github.com/openai/skills/tree/main/skills/.curated/figma-code-connect-components"
     }
   },
   {
@@ -4779,12 +4959,12 @@
     "compatibility": [
       "general"
     ],
-    "source": "openai-skills-curated",
-    "lastSeenAt": "2026-04-04",
+    "source": "community-skills-index",
+    "lastSeenAt": "2026-04-13",
     "install": {
-      "kind": "manual",
-      "instructions": "Install with skill-installer from openai/skills path skills/.curated/figma-create-design-system-rules",
-      "url": "https://github.com/openai/skills/tree/main/skills/.curated/figma-create-design-system-rules"
+      "kind": "skill.sh",
+      "target": "Figma Create Design System Rules",
+      "args": []
     },
     "adoptionSignal": 72,
     "maintenanceSignal": 82,
@@ -4798,11 +4978,11 @@
       "integrityAlerts": 0
     },
     "metadata": {
-      "githubPath": "skills/.curated/figma-create-design-system-rules",
-      "githubUrl": "https://github.com/openai/skills/tree/main/skills/.curated/figma-create-design-system-rules",
       "sourceRegistryId": "openai-skills-curated",
       "sourceType": "vendor-feed",
-      "sourceConfidence": "official"
+      "sourceConfidence": "official",
+      "githubPath": "skills/.curated/figma-create-design-system-rules",
+      "githubUrl": "https://github.com/openai/skills/tree/main/skills/.curated/figma-create-design-system-rules"
     }
   },
   {
@@ -4817,12 +4997,12 @@
     "compatibility": [
       "general"
     ],
-    "source": "openai-skills-curated",
-    "lastSeenAt": "2026-04-04",
+    "source": "community-skills-index",
+    "lastSeenAt": "2026-04-13",
     "install": {
-      "kind": "manual",
-      "instructions": "Install with skill-installer from openai/skills path skills/.curated/figma-create-new-file",
-      "url": "https://github.com/openai/skills/tree/main/skills/.curated/figma-create-new-file"
+      "kind": "skill.sh",
+      "target": "Figma Create New File",
+      "args": []
     },
     "adoptionSignal": 72,
     "maintenanceSignal": 82,
@@ -4836,11 +5016,11 @@
       "integrityAlerts": 0
     },
     "metadata": {
-      "githubPath": "skills/.curated/figma-create-new-file",
-      "githubUrl": "https://github.com/openai/skills/tree/main/skills/.curated/figma-create-new-file",
       "sourceRegistryId": "openai-skills-curated",
       "sourceType": "vendor-feed",
-      "sourceConfidence": "official"
+      "sourceConfidence": "official",
+      "githubPath": "skills/.curated/figma-create-new-file",
+      "githubUrl": "https://github.com/openai/skills/tree/main/skills/.curated/figma-create-new-file"
     }
   },
   {
@@ -4855,12 +5035,12 @@
     "compatibility": [
       "general"
     ],
-    "source": "openai-skills-curated",
-    "lastSeenAt": "2026-04-04",
+    "source": "community-skills-index",
+    "lastSeenAt": "2026-04-13",
     "install": {
-      "kind": "manual",
-      "instructions": "Install with skill-installer from openai/skills path skills/.curated/figma-generate-design",
-      "url": "https://github.com/openai/skills/tree/main/skills/.curated/figma-generate-design"
+      "kind": "skill.sh",
+      "target": "Figma Generate Design",
+      "args": []
     },
     "adoptionSignal": 72,
     "maintenanceSignal": 82,
@@ -4874,11 +5054,11 @@
       "integrityAlerts": 0
     },
     "metadata": {
-      "githubPath": "skills/.curated/figma-generate-design",
-      "githubUrl": "https://github.com/openai/skills/tree/main/skills/.curated/figma-generate-design",
       "sourceRegistryId": "openai-skills-curated",
       "sourceType": "vendor-feed",
-      "sourceConfidence": "official"
+      "sourceConfidence": "official",
+      "githubPath": "skills/.curated/figma-generate-design",
+      "githubUrl": "https://github.com/openai/skills/tree/main/skills/.curated/figma-generate-design"
     }
   },
   {
@@ -4893,12 +5073,12 @@
     "compatibility": [
       "general"
     ],
-    "source": "openai-skills-curated",
-    "lastSeenAt": "2026-04-04",
+    "source": "community-skills-index",
+    "lastSeenAt": "2026-04-13",
     "install": {
-      "kind": "manual",
-      "instructions": "Install with skill-installer from openai/skills path skills/.curated/figma-generate-library",
-      "url": "https://github.com/openai/skills/tree/main/skills/.curated/figma-generate-library"
+      "kind": "skill.sh",
+      "target": "Figma Generate Library",
+      "args": []
     },
     "adoptionSignal": 72,
     "maintenanceSignal": 82,
@@ -4912,11 +5092,11 @@
       "integrityAlerts": 0
     },
     "metadata": {
-      "githubPath": "skills/.curated/figma-generate-library",
-      "githubUrl": "https://github.com/openai/skills/tree/main/skills/.curated/figma-generate-library",
       "sourceRegistryId": "openai-skills-curated",
       "sourceType": "vendor-feed",
-      "sourceConfidence": "official"
+      "sourceConfidence": "official",
+      "githubPath": "skills/.curated/figma-generate-library",
+      "githubUrl": "https://github.com/openai/skills/tree/main/skills/.curated/figma-generate-library"
     }
   },
   {
@@ -4932,7 +5112,7 @@
       "general"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-04-04",
+    "lastSeenAt": "2026-04-13",
     "install": {
       "kind": "skill.sh",
       "target": "Figma Implement Design",
@@ -4969,12 +5149,12 @@
     "compatibility": [
       "general"
     ],
-    "source": "openai-skills-curated",
-    "lastSeenAt": "2026-04-04",
+    "source": "community-skills-index",
+    "lastSeenAt": "2026-04-13",
     "install": {
-      "kind": "manual",
-      "instructions": "Install with skill-installer from openai/skills path skills/.curated/figma-use",
-      "url": "https://github.com/openai/skills/tree/main/skills/.curated/figma-use"
+      "kind": "skill.sh",
+      "target": "Figma Use",
+      "args": []
     },
     "adoptionSignal": 72,
     "maintenanceSignal": 82,
@@ -4988,11 +5168,11 @@
       "integrityAlerts": 0
     },
     "metadata": {
-      "githubPath": "skills/.curated/figma-use",
-      "githubUrl": "https://github.com/openai/skills/tree/main/skills/.curated/figma-use",
       "sourceRegistryId": "openai-skills-curated",
       "sourceType": "vendor-feed",
-      "sourceConfidence": "official"
+      "sourceConfidence": "official",
+      "githubPath": "skills/.curated/figma-use",
+      "githubUrl": "https://github.com/openai/skills/tree/main/skills/.curated/figma-use"
     }
   },
   {
@@ -5014,7 +5194,7 @@
       "github"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-04-04",
+    "lastSeenAt": "2026-04-13",
     "install": {
       "kind": "skill.sh",
       "target": "firebase-apk-scanner",
@@ -5059,7 +5239,7 @@
       "github"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-04-04",
+    "lastSeenAt": "2026-04-13",
     "install": {
       "kind": "skill.sh",
       "target": "fp-check",
@@ -5116,7 +5296,7 @@
       "node"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-04-04",
+    "lastSeenAt": "2026-04-13",
     "install": {
       "kind": "skill.sh",
       "target": "frontend-design",
@@ -5159,7 +5339,7 @@
       "general"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-04-04",
+    "lastSeenAt": "2026-04-13",
     "install": {
       "kind": "skill.sh",
       "target": "Frontend Skill",
@@ -5198,7 +5378,7 @@
       "claude-code"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-04-04",
+    "lastSeenAt": "2026-04-13",
     "install": {
       "kind": "skill.sh",
       "target": "Fullstack Dev Skills",
@@ -5244,7 +5424,7 @@
       "node"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-04-04",
+    "lastSeenAt": "2026-04-13",
     "install": {
       "kind": "skill.sh",
       "target": "gastown",
@@ -5285,7 +5465,7 @@
       "claude-code"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-04-04",
+    "lastSeenAt": "2026-04-13",
     "install": {
       "kind": "skill.sh",
       "target": "Gen-Alpha Slang",
@@ -5327,7 +5507,7 @@
       "github"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-04-04",
+    "lastSeenAt": "2026-04-13",
     "install": {
       "kind": "skill.sh",
       "target": "Gh Address Comments",
@@ -5370,7 +5550,7 @@
       "node"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-04-04",
+    "lastSeenAt": "2026-04-13",
     "install": {
       "kind": "skill.sh",
       "target": "gh-cli",
@@ -5412,7 +5592,7 @@
       "github"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-04-04",
+    "lastSeenAt": "2026-04-13",
     "install": {
       "kind": "skill.sh",
       "target": "Gh Fix Ci",
@@ -5451,7 +5631,7 @@
       "claude-code"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-04-04",
+    "lastSeenAt": "2026-04-13",
     "install": {
       "kind": "skill.sh",
       "target": "Giselle",
@@ -5469,15 +5649,9 @@
       "integrityAlerts": 0
     },
     "metadata": {
-      "sourceRegistryId": "awesome-claude-code",
+      "sourceRegistryId": "community-skills-index",
       "sourceType": "community-list",
-      "sourceConfidence": "vetted-curated",
-      "catalogType": "skill",
-      "awesomeClaudeCodeId": "claude-3ae444b3",
-      "awesomeClaudeCodeCategory": "CLAUDE.md Files",
-      "authorName": "giselles-ai",
-      "license": "Apache-2.0",
-      "releaseVersion": "v0.72.0"
+      "sourceConfidence": "vetted-curated"
     }
   },
   {
@@ -5496,7 +5670,7 @@
       "node"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-04-04",
+    "lastSeenAt": "2026-04-13",
     "install": {
       "kind": "skill.sh",
       "target": "git-cleanup",
@@ -5541,7 +5715,7 @@
       "general"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-04-04",
+    "lastSeenAt": "2026-04-13",
     "install": {
       "kind": "skill.sh",
       "target": "google-workspace-skills",
@@ -5577,7 +5751,7 @@
       "claude-code"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-04-04",
+    "lastSeenAt": "2026-04-13",
     "install": {
       "kind": "skill.sh",
       "target": "Happy Coder",
@@ -5606,6 +5780,50 @@
     }
   },
   {
+    "id": "skill:harness",
+    "kind": "skill",
+    "name": "Harness",
+    "description": "A meta-skill that designs domain-specific agent teams, defines specialized agents, and generates the skills they use. Resources are in Korean but can produce high-quality English-language output.",
+    "provider": "github",
+    "capabilities": [
+      "automation",
+      "docs",
+      "frontend",
+      "orchestration"
+    ],
+    "compatibility": [
+      "claude-code"
+    ],
+    "source": "awesome-claude-code",
+    "lastSeenAt": "2026-04-13",
+    "install": {
+      "kind": "manual",
+      "instructions": "Visit the linked repository and follow its installation instructions.",
+      "url": "https://github.com/revfactory/harness"
+    },
+    "adoptionSignal": 72,
+    "maintenanceSignal": 70,
+    "provenanceSignal": 82,
+    "freshnessSignal": 72,
+    "securitySignals": {
+      "knownVulnerabilities": 0,
+      "suspiciousPatterns": 0,
+      "injectionFindings": 0,
+      "exfiltrationSignals": 0,
+      "integrityAlerts": 0
+    },
+    "metadata": {
+      "catalogType": "skill",
+      "sourceConfidence": "vetted-curated",
+      "awesomeClaudeCodeId": "wf-38bb6a60",
+      "awesomeClaudeCodeCategory": "Workflows & Knowledge Guides",
+      "authorName": "revfactory",
+      "license": "Apache-2.0",
+      "sourceRegistryId": "awesome-claude-code",
+      "sourceType": "community-list"
+    }
+  },
+  {
     "id": "skill:hash",
     "kind": "skill",
     "name": "HASH",
@@ -5620,7 +5838,7 @@
       "claude-code"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-04-04",
+    "lastSeenAt": "2026-04-13",
     "install": {
       "kind": "skill.sh",
       "target": "HASH",
@@ -5656,7 +5874,7 @@
       "general"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-04-04",
+    "lastSeenAt": "2026-04-13",
     "install": {
       "kind": "skill.sh",
       "target": "Imagegen",
@@ -5697,7 +5915,7 @@
       "github"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-04-04",
+    "lastSeenAt": "2026-04-13",
     "install": {
       "kind": "skill.sh",
       "target": "insecure-defaults",
@@ -5754,7 +5972,7 @@
       "node"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-04-04",
+    "lastSeenAt": "2026-04-13",
     "install": {
       "kind": "skill.sh",
       "target": "internal-comms",
@@ -5789,7 +6007,7 @@
     "kind": "skill",
     "name": "JSBeeb",
     "description": "Provides development guide for JavaScript BBC Micro emulator with build and testing instructions, architecture documentation, and debugging workflows.",
-    "provider": "github",
+    "provider": "openai",
     "capabilities": [
       "automation",
       "docs",
@@ -5799,12 +6017,12 @@
     "compatibility": [
       "claude-code"
     ],
-    "source": "awesome-claude-code",
-    "lastSeenAt": "2026-04-04",
+    "source": "community-skills-index",
+    "lastSeenAt": "2026-04-13",
     "install": {
-      "kind": "manual",
-      "instructions": "Visit the linked repository and follow its installation instructions.",
-      "url": "https://github.com/mattgodbolt/jsbeeb/blob/main/CLAUDE.md"
+      "kind": "skill.sh",
+      "target": "JSBeeb",
+      "args": []
     },
     "adoptionSignal": 72,
     "maintenanceSignal": 78,
@@ -5818,15 +6036,15 @@
       "integrityAlerts": 0
     },
     "metadata": {
-      "catalogType": "skill",
+      "sourceRegistryId": "awesome-claude-code",
+      "sourceType": "community-list",
       "sourceConfidence": "vetted-curated",
+      "catalogType": "skill",
       "awesomeClaudeCodeId": "claude-1821727a",
       "awesomeClaudeCodeCategory": "CLAUDE.md Files",
       "authorName": "mattgodbolt",
       "license": "GPL-3.0",
-      "releaseVersion": "v1.4.0",
-      "sourceRegistryId": "awesome-claude-code",
-      "sourceType": "community-list"
+      "releaseVersion": "v1.4.0"
     }
   },
   {
@@ -5842,7 +6060,7 @@
       "general"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-04-04",
+    "lastSeenAt": "2026-04-13",
     "install": {
       "kind": "skill.sh",
       "target": "Jupyter Notebook",
@@ -5885,7 +6103,7 @@
       "kubernetes"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-04-04",
+    "lastSeenAt": "2026-04-13",
     "install": {
       "kind": "skill.sh",
       "target": "kubernetes-ops",
@@ -5923,7 +6141,7 @@
       "claude-code"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-04-04",
+    "lastSeenAt": "2026-04-13",
     "install": {
       "kind": "skill.sh",
       "target": "LangGraphJS",
@@ -5968,7 +6186,7 @@
       "claude-code"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-04-04",
+    "lastSeenAt": "2026-04-13",
     "install": {
       "kind": "skill.sh",
       "target": "Learn Claude Code",
@@ -6012,7 +6230,7 @@
       "claude-code"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-04-04",
+    "lastSeenAt": "2026-04-13",
     "install": {
       "kind": "skill.sh",
       "target": "learn-faster-kit",
@@ -6052,7 +6270,7 @@
       "node"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-04-04",
+    "lastSeenAt": "2026-04-13",
     "install": {
       "kind": "skill.sh",
       "target": "let-fate-decide",
@@ -6094,7 +6312,7 @@
       "linear"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-04-04",
+    "lastSeenAt": "2026-04-13",
     "install": {
       "kind": "skill.sh",
       "target": "Linear",
@@ -6148,7 +6366,7 @@
       "node"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-04-04",
+    "lastSeenAt": "2026-04-13",
     "install": {
       "kind": "skill.sh",
       "target": "mcp-builder",
@@ -6192,7 +6410,7 @@
       "claude-code"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-04-04",
+    "lastSeenAt": "2026-04-13",
     "install": {
       "kind": "skill.sh",
       "target": "Metabase",
@@ -6237,7 +6455,7 @@
       "node"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-04-04",
+    "lastSeenAt": "2026-04-13",
     "install": {
       "kind": "skill.sh",
       "target": "modern-python",
@@ -6270,7 +6488,7 @@
     "kind": "skill",
     "name": "mutation-testing",
     "description": "Configures mewt or muton mutation testing campaigns — scopes targets, tunes timeouts, and optimizes long-running runs. Use when the user mentions mewt, muton, mutation testing, or wants to configure or optimize a mutation testing campaign.",
-    "provider": "github",
+    "provider": "openai",
     "capabilities": [
       "guardrails"
     ],
@@ -6279,12 +6497,12 @@
       "codex",
       "general"
     ],
-    "source": "trailofbits-skills-marketplace",
-    "lastSeenAt": "2026-04-04",
+    "source": "community-skills-index",
+    "lastSeenAt": "2026-04-13",
     "install": {
-      "kind": "manual",
-      "instructions": "Review the linked GitHub skill and follow its repository installation instructions.",
-      "url": "https://github.com/trailofbits/skills/tree/main/plugins/mutation-testing"
+      "kind": "skill.sh",
+      "target": "mutation-testing",
+      "args": []
     },
     "adoptionSignal": 58,
     "maintenanceSignal": 78,
@@ -6298,14 +6516,14 @@
       "integrityAlerts": 0
     },
     "metadata": {
+      "sourceRegistryId": "trailofbits-skills-marketplace",
+      "sourceType": "community-list",
+      "sourceConfidence": "vetted-curated",
       "catalogType": "skill",
       "marketplaceRegistry": "trailofbits-skills-marketplace",
       "marketplaceSource": "github",
       "rawVersion": "1.0.0",
-      "sourceConfidence": "vetted-curated",
-      "githubUrl": "https://github.com/trailofbits/skills/tree/main/plugins/mutation-testing",
-      "sourceRegistryId": "trailofbits-skills-marketplace",
-      "sourceType": "community-list"
+      "githubUrl": "https://github.com/trailofbits/skills/tree/main/plugins/mutation-testing"
     }
   },
   {
@@ -6324,7 +6542,7 @@
       "node"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-04-04",
+    "lastSeenAt": "2026-04-13",
     "install": {
       "kind": "skill.sh",
       "target": "n8n-skills",
@@ -6372,7 +6590,7 @@
       "github"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-04-04",
+    "lastSeenAt": "2026-04-13",
     "install": {
       "kind": "skill.sh",
       "target": "neon-plugin",
@@ -6413,7 +6631,7 @@
       "general"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-04-04",
+    "lastSeenAt": "2026-04-13",
     "install": {
       "kind": "skill.sh",
       "target": "Netlify Deploy",
@@ -6452,7 +6670,7 @@
       "notion"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-04-04",
+    "lastSeenAt": "2026-04-13",
     "install": {
       "kind": "skill.sh",
       "target": "Notion Knowledge Capture",
@@ -6491,7 +6709,7 @@
       "notion"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-04-04",
+    "lastSeenAt": "2026-04-13",
     "install": {
       "kind": "skill.sh",
       "target": "Notion Meeting Intelligence",
@@ -6530,7 +6748,7 @@
       "notion"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-04-04",
+    "lastSeenAt": "2026-04-13",
     "install": {
       "kind": "skill.sh",
       "target": "Notion Research Documentation",
@@ -6569,7 +6787,7 @@
       "notion"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-04-04",
+    "lastSeenAt": "2026-04-13",
     "install": {
       "kind": "skill.sh",
       "target": "Notion Spec To Implementation",
@@ -6613,7 +6831,7 @@
       "python"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-04-04",
+    "lastSeenAt": "2026-04-13",
     "install": {
       "kind": "skill.sh",
       "target": "observability-incident-response",
@@ -6649,7 +6867,7 @@
       "claude-code"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-04-04",
+    "lastSeenAt": "2026-04-13",
     "install": {
       "kind": "skill.sh",
       "target": "Omnara",
@@ -6667,15 +6885,9 @@
       "integrityAlerts": 0
     },
     "metadata": {
-      "sourceRegistryId": "awesome-claude-code",
+      "sourceRegistryId": "community-skills-index",
       "sourceType": "community-list",
-      "sourceConfidence": "vetted-curated",
-      "catalogType": "skill",
-      "awesomeClaudeCodeId": "client-b6c9db9e",
-      "awesomeClaudeCodeCategory": "Alternative Clients",
-      "authorName": "Ishaan Sehgal",
-      "license": "Apache-2.0",
-      "releaseVersion": "v1.7.0"
+      "sourceConfidence": "vetted-curated"
     }
   },
   {
@@ -6696,7 +6908,7 @@
       "node"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-04-04",
+    "lastSeenAt": "2026-04-13",
     "install": {
       "kind": "skill.sh",
       "target": "open-source-maintainer",
@@ -6737,7 +6949,7 @@
       "general"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-04-04",
+    "lastSeenAt": "2026-04-13",
     "install": {
       "kind": "skill.sh",
       "target": "Openai Docs",
@@ -6779,7 +6991,7 @@
       "node"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-04-04",
+    "lastSeenAt": "2026-04-13",
     "install": {
       "kind": "skill.sh",
       "target": "orchestration",
@@ -6824,7 +7036,7 @@
       "claude-code"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-04-04",
+    "lastSeenAt": "2026-04-13",
     "install": {
       "kind": "skill.sh",
       "target": "Pareto Mac",
@@ -6866,7 +7078,7 @@
       "claude-code"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-04-04",
+    "lastSeenAt": "2026-04-13",
     "install": {
       "kind": "skill.sh",
       "target": "parry",
@@ -6916,7 +7128,7 @@
       "node"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-04-04",
+    "lastSeenAt": "2026-04-13",
     "install": {
       "kind": "skill.sh",
       "target": "Pdf",
@@ -6961,7 +7173,7 @@
       "claude-code"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-04-04",
+    "lastSeenAt": "2026-04-13",
     "install": {
       "kind": "skill.sh",
       "target": "Plannotator",
@@ -7004,7 +7216,7 @@
       "node"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-04-04",
+    "lastSeenAt": "2026-04-13",
     "install": {
       "kind": "skill.sh",
       "target": "Playwright",
@@ -7043,7 +7255,7 @@
       "node"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-04-04",
+    "lastSeenAt": "2026-04-13",
     "install": {
       "kind": "skill.sh",
       "target": "Playwright Interactive",
@@ -7086,7 +7298,7 @@
       "python"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-04-04",
+    "lastSeenAt": "2026-04-13",
     "install": {
       "kind": "skill.sh",
       "target": "postgres-ops",
@@ -7129,7 +7341,7 @@
       "node"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-04-04",
+    "lastSeenAt": "2026-04-13",
     "install": {
       "kind": "skill.sh",
       "target": "pptx",
@@ -7172,7 +7384,7 @@
       "claude-code"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-04-04",
+    "lastSeenAt": "2026-04-13",
     "install": {
       "kind": "skill.sh",
       "target": "/prd-generator",
@@ -7219,7 +7431,7 @@
       "node"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-04-04",
+    "lastSeenAt": "2026-04-13",
     "install": {
       "kind": "skill.sh",
       "target": "productivity-skills",
@@ -7263,7 +7475,7 @@
       "claude-code"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-04-04",
+    "lastSeenAt": "2026-04-13",
     "install": {
       "kind": "skill.sh",
       "target": "Project Workflow System",
@@ -7307,7 +7519,7 @@
       "general"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-04-04",
+    "lastSeenAt": "2026-04-13",
     "install": {
       "kind": "skill.sh",
       "target": "prompt-engineering",
@@ -7345,7 +7557,7 @@
       "general"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-04-04",
+    "lastSeenAt": "2026-04-13",
     "install": {
       "kind": "skill.sh",
       "target": "property-based-testing",
@@ -7389,7 +7601,7 @@
       "claude-code"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-04-04",
+    "lastSeenAt": "2026-04-13",
     "install": {
       "kind": "skill.sh",
       "target": "Ralph for Claude Code",
@@ -7434,7 +7646,7 @@
       "claude-code"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-04-04",
+    "lastSeenAt": "2026-04-13",
     "install": {
       "kind": "skill.sh",
       "target": "ralph-orchestrator",
@@ -7478,7 +7690,7 @@
       "claude-code"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-04-04",
+    "lastSeenAt": "2026-04-13",
     "install": {
       "kind": "skill.sh",
       "target": "ralph-wiggum-bdd",
@@ -7522,7 +7734,7 @@
       "claude-code"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-04-04",
+    "lastSeenAt": "2026-04-13",
     "install": {
       "kind": "skill.sh",
       "target": "Ralph Wiggum Marketer",
@@ -7564,7 +7776,7 @@
       "claude-code"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-04-04",
+    "lastSeenAt": "2026-04-13",
     "install": {
       "kind": "skill.sh",
       "target": "read-only-postgres",
@@ -7605,7 +7817,7 @@
       "claude-code"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-04-04",
+    "lastSeenAt": "2026-04-13",
     "install": {
       "kind": "skill.sh",
       "target": "recall",
@@ -7651,7 +7863,7 @@
       "node"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-04-04",
+    "lastSeenAt": "2026-04-13",
     "install": {
       "kind": "skill.sh",
       "target": "release-readiness",
@@ -7689,7 +7901,7 @@
       "node"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-04-04",
+    "lastSeenAt": "2026-04-13",
     "install": {
       "kind": "skill.sh",
       "target": "remotion",
@@ -7725,7 +7937,7 @@
       "general"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-04-04",
+    "lastSeenAt": "2026-04-13",
     "install": {
       "kind": "skill.sh",
       "target": "Render Deploy",
@@ -7767,7 +7979,7 @@
       "claude-code"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-04-04",
+    "lastSeenAt": "2026-04-13",
     "install": {
       "kind": "skill.sh",
       "target": "RIPER Workflow",
@@ -7800,7 +8012,7 @@
     "kind": "skill",
     "name": "Ruflo",
     "description": "An orchestration platform for deploying and coordinating multi-agent swarms. If I tried to go into detail it would probably crash my browser. An impressive feat of engineering that tries to cover everything and actually does a good job. Self-learning, autonomous multi-agent swarms, vector-based multi-layered memory, sy",
-    "provider": "github",
+    "provider": "openai",
     "capabilities": [
       "automation",
       "orchestration",
@@ -7809,12 +8021,12 @@
     "compatibility": [
       "claude-code"
     ],
-    "source": "awesome-claude-code",
-    "lastSeenAt": "2026-04-04",
+    "source": "community-skills-index",
+    "lastSeenAt": "2026-04-13",
     "install": {
-      "kind": "manual",
-      "instructions": "Visit the linked repository and follow its installation instructions.",
-      "url": "https://github.com/ruvnet/ruflo"
+      "kind": "skill.sh",
+      "target": "Ruflo",
+      "args": []
     },
     "adoptionSignal": 72,
     "maintenanceSignal": 78,
@@ -7828,15 +8040,15 @@
       "integrityAlerts": 0
     },
     "metadata": {
-      "catalogType": "skill",
+      "sourceRegistryId": "awesome-claude-code",
+      "sourceType": "community-list",
       "sourceConfidence": "vetted-curated",
+      "catalogType": "skill",
       "awesomeClaudeCodeId": "tool-81c0eeaf",
       "awesomeClaudeCodeCategory": "Tooling",
       "authorName": "rUv",
       "license": "MIT",
-      "releaseVersion": "v3.5.31",
-      "sourceRegistryId": "awesome-claude-code",
-      "sourceType": "community-list"
+      "releaseVersion": "v3.5.31"
     }
   },
   {
@@ -7852,7 +8064,7 @@
       "claude-code"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-04-04",
+    "lastSeenAt": "2026-04-13",
     "install": {
       "kind": "skill.sh",
       "target": "Rulesync",
@@ -7894,7 +8106,7 @@
       "general"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-04-04",
+    "lastSeenAt": "2026-04-13",
     "install": {
       "kind": "skill.sh",
       "target": "Screenshot",
@@ -7935,7 +8147,7 @@
       "node"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-04-04",
+    "lastSeenAt": "2026-04-13",
     "install": {
       "kind": "skill.sh",
       "target": "seatbelt-sandboxer",
@@ -7980,7 +8192,7 @@
       "node"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-04-04",
+    "lastSeenAt": "2026-04-13",
     "install": {
       "kind": "skill.sh",
       "target": "second-opinion",
@@ -8025,7 +8237,7 @@
       "python"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-04-04",
+    "lastSeenAt": "2026-04-13",
     "install": {
       "kind": "skill.sh",
       "target": "secure-prompting",
@@ -8061,7 +8273,7 @@
       "general"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-04-04",
+    "lastSeenAt": "2026-04-13",
     "install": {
       "kind": "skill.sh",
       "target": "Security Best Practices",
@@ -8099,7 +8311,7 @@
       "general"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-04-04",
+    "lastSeenAt": "2026-04-13",
     "install": {
       "kind": "skill.sh",
       "target": "Security Ownership Map",
@@ -8137,7 +8349,7 @@
       "general"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-04-04",
+    "lastSeenAt": "2026-04-13",
     "install": {
       "kind": "skill.sh",
       "target": "Security Threat Model",
@@ -8178,7 +8390,7 @@
       "github"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-04-04",
+    "lastSeenAt": "2026-04-13",
     "install": {
       "kind": "skill.sh",
       "target": "semgrep-rule-creator",
@@ -8222,7 +8434,7 @@
       "node"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-04-04",
+    "lastSeenAt": "2026-04-13",
     "install": {
       "kind": "skill.sh",
       "target": "semgrep-rule-variant-creator",
@@ -8263,7 +8475,7 @@
       "general"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-04-04",
+    "lastSeenAt": "2026-04-13",
     "install": {
       "kind": "skill.sh",
       "target": "Sentry",
@@ -8302,7 +8514,7 @@
       "claude-code"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-04-04",
+    "lastSeenAt": "2026-04-13",
     "install": {
       "kind": "skill.sh",
       "target": "SG Cars Trends Backend",
@@ -8347,7 +8559,7 @@
       "github"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-04-04",
+    "lastSeenAt": "2026-04-13",
     "install": {
       "kind": "skill.sh",
       "target": "sharp-edges",
@@ -8390,7 +8602,7 @@
       "claude-code"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-04-04",
+    "lastSeenAt": "2026-04-13",
     "install": {
       "kind": "skill.sh",
       "target": "Shipping Real Code w/ Claude",
@@ -8447,7 +8659,7 @@
       "node"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-04-04",
+    "lastSeenAt": "2026-04-13",
     "install": {
       "kind": "skill.sh",
       "target": "skill-creator",
@@ -8492,7 +8704,7 @@
       "general"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-04-04",
+    "lastSeenAt": "2026-04-13",
     "install": {
       "kind": "skill.sh",
       "target": "skill-improver",
@@ -8549,7 +8761,7 @@
       "node"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-04-04",
+    "lastSeenAt": "2026-04-13",
     "install": {
       "kind": "skill.sh",
       "target": "slack-gif-creator",
@@ -8592,7 +8804,7 @@
       "general"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-04-04",
+    "lastSeenAt": "2026-04-13",
     "install": {
       "kind": "skill.sh",
       "target": "Slides",
@@ -8630,7 +8842,7 @@
       "general"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-04-04",
+    "lastSeenAt": "2026-04-13",
     "install": {
       "kind": "skill.sh",
       "target": "Sora",
@@ -8673,7 +8885,7 @@
       "node"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-04-04",
+    "lastSeenAt": "2026-04-13",
     "install": {
       "kind": "skill.sh",
       "target": "spec-to-code-compliance",
@@ -8714,7 +8926,7 @@
       "general"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-04-04",
+    "lastSeenAt": "2026-04-13",
     "install": {
       "kind": "skill.sh",
       "target": "Speech",
@@ -8752,7 +8964,7 @@
       "general"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-04-04",
+    "lastSeenAt": "2026-04-13",
     "install": {
       "kind": "skill.sh",
       "target": "Spreadsheet",
@@ -8793,7 +9005,7 @@
       "claude-code"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-04-04",
+    "lastSeenAt": "2026-04-13",
     "install": {
       "kind": "skill.sh",
       "target": "SPy",
@@ -8832,7 +9044,7 @@
       "github"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-04-04",
+    "lastSeenAt": "2026-04-13",
     "install": {
       "kind": "skill.sh",
       "target": "static-analysis",
@@ -8873,7 +9085,7 @@
       "claude-code"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-04-04",
+    "lastSeenAt": "2026-04-13",
     "install": {
       "kind": "skill.sh",
       "target": "stt-mcp-server-linux",
@@ -8891,14 +9103,9 @@
       "integrityAlerts": 0
     },
     "metadata": {
-      "sourceRegistryId": "awesome-claude-code",
+      "sourceRegistryId": "community-skills-index",
       "sourceType": "community-list",
-      "sourceConfidence": "vetted-curated",
-      "catalogType": "skill",
-      "awesomeClaudeCodeId": "tool-4a5cf064",
-      "awesomeClaudeCodeCategory": "Tooling",
-      "authorName": "marcindulak",
-      "license": "Apache-2.0"
+      "sourceConfidence": "vetted-curated"
     }
   },
   {
@@ -8915,7 +9122,7 @@
       "claude-code"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-04-04",
+    "lastSeenAt": "2026-04-13",
     "install": {
       "kind": "skill.sh",
       "target": "sudocode",
@@ -8958,7 +9165,7 @@
       "claude-code"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-04-04",
+    "lastSeenAt": "2026-04-13",
     "install": {
       "kind": "skill.sh",
       "target": "SuperClaude",
@@ -9002,7 +9209,7 @@
       "claude-code"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-04-04",
+    "lastSeenAt": "2026-04-13",
     "install": {
       "kind": "skill.sh",
       "target": "Superpowers",
@@ -9048,7 +9255,7 @@
       "node"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-04-04",
+    "lastSeenAt": "2026-04-13",
     "install": {
       "kind": "skill.sh",
       "target": "supply-chain-risk-auditor",
@@ -9091,7 +9298,7 @@
       "claude-code"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-04-04",
+    "lastSeenAt": "2026-04-13",
     "install": {
       "kind": "skill.sh",
       "target": "TÂCHES Claude Code Resources",
@@ -9132,7 +9339,7 @@
       "claude-code"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-04-04",
+    "lastSeenAt": "2026-04-13",
     "install": {
       "kind": "skill.sh",
       "target": "TDD Guard",
@@ -9175,7 +9382,7 @@
       "claude-code"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-04-04",
+    "lastSeenAt": "2026-04-13",
     "install": {
       "kind": "skill.sh",
       "target": "/tdd-implement",
@@ -9222,7 +9429,7 @@
       "general"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-04-04",
+    "lastSeenAt": "2026-04-13",
     "install": {
       "kind": "skill.sh",
       "target": "terraform-guardrails",
@@ -9263,7 +9470,7 @@
       "python"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-04-04",
+    "lastSeenAt": "2026-04-13",
     "install": {
       "kind": "skill.sh",
       "target": "test-driven-development",
@@ -9303,7 +9510,7 @@
       "github"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-04-04",
+    "lastSeenAt": "2026-04-13",
     "install": {
       "kind": "skill.sh",
       "target": "testing-handbook-skills",
@@ -9344,7 +9551,7 @@
       "claude-code"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-04-04",
+    "lastSeenAt": "2026-04-13",
     "install": {
       "kind": "skill.sh",
       "target": "The Agentic Startup",
@@ -9388,7 +9595,7 @@
       "claude-code"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-04-04",
+    "lastSeenAt": "2026-04-13",
     "install": {
       "kind": "skill.sh",
       "target": "The Ralph Playbook",
@@ -9445,7 +9652,7 @@
       "node"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-04-04",
+    "lastSeenAt": "2026-04-13",
     "install": {
       "kind": "skill.sh",
       "target": "theme-factory",
@@ -9492,7 +9699,7 @@
       "python"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-04-04",
+    "lastSeenAt": "2026-04-13",
     "install": {
       "kind": "skill.sh",
       "target": "threat-modeling-lite",
@@ -9530,7 +9737,7 @@
       "claude-code"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-04-04",
+    "lastSeenAt": "2026-04-13",
     "install": {
       "kind": "skill.sh",
       "target": "Trail of Bits Security Skills",
@@ -9563,7 +9770,7 @@
     "kind": "skill",
     "name": "trailmark",
     "description": "Builds multi-language source code graphs for security analysis: call graphs, attack surface mapping, blast radius, taint propagation, complexity hotspots, and entry point enumeration. Generates Mermaid diagrams (call graphs, class hierarchies, dependency maps, heatmaps). Compares code graph snapshots for structural dif",
-    "provider": "github",
+    "provider": "openai",
     "capabilities": [
       "automation",
       "docs",
@@ -9576,12 +9783,12 @@
       "github",
       "node"
     ],
-    "source": "trailofbits-skills-marketplace",
-    "lastSeenAt": "2026-04-04",
+    "source": "community-skills-index",
+    "lastSeenAt": "2026-04-13",
     "install": {
-      "kind": "manual",
-      "instructions": "Review the linked GitHub skill and follow its repository installation instructions.",
-      "url": "https://github.com/trailofbits/skills/tree/main/plugins/trailmark"
+      "kind": "skill.sh",
+      "target": "trailmark",
+      "args": []
     },
     "adoptionSignal": 58,
     "maintenanceSignal": 78,
@@ -9595,14 +9802,14 @@
       "integrityAlerts": 0
     },
     "metadata": {
+      "sourceRegistryId": "trailofbits-skills-marketplace",
+      "sourceType": "community-list",
+      "sourceConfidence": "vetted-curated",
       "catalogType": "skill",
       "marketplaceRegistry": "trailofbits-skills-marketplace",
       "marketplaceSource": "github",
       "rawVersion": "0.8.0",
-      "sourceConfidence": "vetted-curated",
-      "githubUrl": "https://github.com/trailofbits/skills/tree/main/plugins/trailmark",
-      "sourceRegistryId": "trailofbits-skills-marketplace",
-      "sourceType": "community-list"
+      "githubUrl": "https://github.com/trailofbits/skills/tree/main/plugins/trailmark"
     }
   },
   {
@@ -9618,7 +9825,7 @@
       "general"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-04-04",
+    "lastSeenAt": "2026-04-13",
     "install": {
       "kind": "skill.sh",
       "target": "Transcribe",
@@ -9657,7 +9864,7 @@
       "claude-code"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-04-04",
+    "lastSeenAt": "2026-04-13",
     "install": {
       "kind": "skill.sh",
       "target": "TSK - AI Agent Task Manager and Sandbox",
@@ -9699,7 +9906,7 @@
       "claude-code"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-04-04",
+    "lastSeenAt": "2026-04-13",
     "install": {
       "kind": "skill.sh",
       "target": "tweakcc",
@@ -9744,7 +9951,7 @@
       "node"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-04-04",
+    "lastSeenAt": "2026-04-13",
     "install": {
       "kind": "skill.sh",
       "target": "variant-analysis",
@@ -9785,7 +9992,7 @@
       "general"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-04-04",
+    "lastSeenAt": "2026-04-13",
     "install": {
       "kind": "skill.sh",
       "target": "Vercel Deploy",
@@ -9823,7 +10030,7 @@
       "claude-code"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-04-04",
+    "lastSeenAt": "2026-04-13",
     "install": {
       "kind": "skill.sh",
       "target": "Vibe-Log",
@@ -9859,7 +10066,7 @@
       "claude-code"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-04-04",
+    "lastSeenAt": "2026-04-13",
     "install": {
       "kind": "skill.sh",
       "target": "viberank",
@@ -9902,7 +10109,7 @@
       "general"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-04-04",
+    "lastSeenAt": "2026-04-13",
     "install": {
       "kind": "skill.sh",
       "target": "visual-documentation-skills",
@@ -9943,7 +10150,7 @@
       "claude-code"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-04-04",
+    "lastSeenAt": "2026-04-13",
     "install": {
       "kind": "skill.sh",
       "target": "viwo-cli",
@@ -9985,7 +10192,7 @@
       "claude-code"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-04-04",
+    "lastSeenAt": "2026-04-13",
     "install": {
       "kind": "skill.sh",
       "target": "VoiceMode MCP",
@@ -10043,7 +10250,7 @@
       "node"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-04-04",
+    "lastSeenAt": "2026-04-13",
     "install": {
       "kind": "skill.sh",
       "target": "web-artifacts-builder",
@@ -10088,7 +10295,7 @@
       "claude-code"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-04-04",
+    "lastSeenAt": "2026-04-13",
     "install": {
       "kind": "skill.sh",
       "target": "Web Assets Generator Skill",
@@ -10145,7 +10352,7 @@
       "node"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-04-04",
+    "lastSeenAt": "2026-04-13",
     "install": {
       "kind": "skill.sh",
       "target": "webapp-testing",
@@ -10188,7 +10395,7 @@
       "general"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-04-04",
+    "lastSeenAt": "2026-04-13",
     "install": {
       "kind": "skill.sh",
       "target": "Winui App",
@@ -10232,7 +10439,7 @@
       "node"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-04-04",
+    "lastSeenAt": "2026-04-13",
     "install": {
       "kind": "skill.sh",
       "target": "workflow-skill-design",
@@ -10280,7 +10487,7 @@
       "node"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-04-04",
+    "lastSeenAt": "2026-04-13",
     "install": {
       "kind": "skill.sh",
       "target": "xlsx",
@@ -10326,7 +10533,7 @@
       "github"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-04-04",
+    "lastSeenAt": "2026-04-13",
     "install": {
       "kind": "skill.sh",
       "target": "yara-authoring",
@@ -10367,7 +10574,7 @@
       "general"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-04-04",
+    "lastSeenAt": "2026-04-13",
     "install": {
       "kind": "skill.sh",
       "target": "Yeet",
@@ -10409,7 +10616,7 @@
       "node"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-04-04",
+    "lastSeenAt": "2026-04-13",
     "install": {
       "kind": "skill.sh",
       "target": "zai-cli",
@@ -10453,7 +10660,7 @@
       "github"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-04-04",
+    "lastSeenAt": "2026-04-13",
     "install": {
       "kind": "skill.sh",
       "target": "zeroize-audit",
