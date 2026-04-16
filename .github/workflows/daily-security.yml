@@ -37,9 +37,6 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Sync latest catalog
-        run: npm run sync
-
       - name: Verify whitelist
         run: npm run dev -- whitelist verify --allow-failures
 
@@ -87,7 +84,7 @@ jobs:
           title: "chore(security): daily quarantine update"
           body: |
             Automated daily security verification updated whitelist/quarantine state.
-            - Synced catalog
+            - Verified whitelist against current catalog
             - Re-ran whitelist risk/injection checks
             - Applied quarantine for failing entries
           branch: chore/daily-security-quarantine
