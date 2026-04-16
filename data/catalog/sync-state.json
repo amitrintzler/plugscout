@@ -1,65 +1,65 @@
 {
   "registries": {
     "community-skills-index": {
-      "lastSuccessfulSyncAt": "2026-04-15T04:46:17.620Z"
+      "lastSuccessfulSyncAt": "2026-04-16T04:52:22.416Z"
     },
     "public-mcp-directory": {
-      "lastSuccessfulSyncAt": "2026-04-15T04:46:27.405Z",
+      "lastSuccessfulSyncAt": "2026-04-16T04:52:36.521Z",
       "lastUpdatedSince": "2026-02-25T14:46:42.122Z"
     },
     "official-claude-plugins": {
-      "lastSuccessfulSyncAt": "2026-04-15T04:46:28.002Z"
+      "lastSuccessfulSyncAt": "2026-04-16T04:52:37.865Z"
     },
     "official-copilot-extensions": {
-      "lastSuccessfulSyncAt": "2026-04-15T04:46:28.171Z"
+      "lastSuccessfulSyncAt": "2026-04-16T04:52:38.642Z"
     },
     "openai-skills-curated": {
-      "lastSuccessfulSyncAt": "2026-04-15T04:46:27.471Z"
+      "lastSuccessfulSyncAt": "2026-04-16T04:52:36.818Z"
     },
     "github-copilot-plugins-official": {
-      "lastSuccessfulSyncAt": "2026-04-15T04:46:28.197Z"
+      "lastSuccessfulSyncAt": "2026-04-16T04:52:38.761Z"
     },
     "github-awesome-copilot-marketplace": {
-      "lastSuccessfulSyncAt": "2026-04-15T04:46:28.206Z"
+      "lastSuccessfulSyncAt": "2026-04-16T04:52:38.873Z"
     },
     "anthropic-claude-connectors-scrape": {
-      "lastSuccessfulSyncAt": "2026-04-15T04:46:28.311Z"
+      "lastSuccessfulSyncAt": "2026-04-16T04:52:39.056Z"
     },
     "github-curated-industry-skills": {
-      "lastSuccessfulSyncAt": "2026-04-15T04:46:17.621Z"
+      "lastSuccessfulSyncAt": "2026-04-16T04:52:22.416Z"
     },
     "anthropic-skills": {
-      "lastSuccessfulSyncAt": "2026-04-15T04:46:27.533Z"
+      "lastSuccessfulSyncAt": "2026-04-16T04:52:36.980Z"
     },
     "github-n-skills-marketplace": {
-      "lastSuccessfulSyncAt": "2026-04-15T04:46:27.582Z"
+      "lastSuccessfulSyncAt": "2026-04-16T04:52:37.126Z"
     },
     "trailofbits-skills-marketplace": {
-      "lastSuccessfulSyncAt": "2026-04-15T04:46:27.617Z"
+      "lastSuccessfulSyncAt": "2026-04-16T04:52:37.278Z"
     },
     "github-mhattingpete-claude-skills": {
-      "lastSuccessfulSyncAt": "2026-04-15T04:46:27.646Z"
+      "lastSuccessfulSyncAt": "2026-04-16T04:52:37.436Z"
     },
     "github-neon-ai-rules": {
-      "lastSuccessfulSyncAt": "2026-04-15T04:46:27.698Z"
+      "lastSuccessfulSyncAt": "2026-04-16T04:52:37.619Z"
     },
     "anthropic-claude-plugins-official-github": {
-      "lastSuccessfulSyncAt": "2026-04-15T04:46:28.017Z"
+      "lastSuccessfulSyncAt": "2026-04-16T04:52:37.977Z"
     },
     "anthropic-knowledge-work-plugins": {
-      "lastSuccessfulSyncAt": "2026-04-15T04:46:28.052Z"
+      "lastSuccessfulSyncAt": "2026-04-16T04:52:38.147Z"
     },
     "anthropic-financial-services-plugins": {
-      "lastSuccessfulSyncAt": "2026-04-15T04:46:28.092Z"
+      "lastSuccessfulSyncAt": "2026-04-16T04:52:38.308Z"
     },
     "github-docker-claude-plugins": {
-      "lastSuccessfulSyncAt": "2026-04-15T04:46:28.135Z"
+      "lastSuccessfulSyncAt": "2026-04-16T04:52:38.484Z"
     },
     "github-pleaseai-claude-code-plugins": {
-      "lastSuccessfulSyncAt": "2026-04-15T04:46:28.171Z"
+      "lastSuccessfulSyncAt": "2026-04-16T04:52:38.642Z"
     },
     "awesome-claude-code": {
-      "lastSuccessfulSyncAt": "2026-04-15T04:46:28.364Z"
+      "lastSuccessfulSyncAt": "2026-04-16T04:52:39.218Z"
     }
   }
 }
