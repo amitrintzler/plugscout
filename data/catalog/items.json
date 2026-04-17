@@ -274521,19 +274521,19 @@
     "kind": "skill",
     "name": "claude-pace",
     "description": "A lightweight Bash + jq statusline for Claude Code that displays rate limit pace delta (burn rate vs. time remaining), 5h/7d usage percentage, context window usage, git branch and diff stats. Compares current consumption rate against time remaining in each rate limit window to indicate whether quota is being used faste",
-    "provider": "openai",
+    "provider": "github",
     "capabilities": [
       "automation"
     ],
     "compatibility": [
       "claude-code"
     ],
-    "source": "community-skills-index",
+    "source": "awesome-claude-code",
     "lastSeenAt": "2026-04-17",
     "install": {
-      "kind": "skill.sh",
-      "target": "claude-pace",
-      "args": []
+      "kind": "manual",
+      "instructions": "Visit the linked repository and follow its installation instructions.",
+      "url": "https://github.com/Astro-Han/claude-pace"
     },
     "adoptionSignal": 72,
     "maintenanceSignal": 78,
