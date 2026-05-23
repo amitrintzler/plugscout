@@ -146,6 +146,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GH_PAT }}
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
@@ -157,30 +159,32 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Build
-        run: npm run build
-
-      - name: Check if version already published
-        id: check
+      - name: Auto-bump patch version if already published
         run: |
           VERSION=$(node -p "require('./package.json').version")
           NAME=$(node -p "require('./package.json').name")
           if npm view "${NAME}@${VERSION}" version >/dev/null 2>&1; then
-            echo "already_published=true" >> "$GITHUB_OUTPUT"
-            echo "Version ${VERSION} already on npm — skipping publish."
+            git config user.name "github-actions[bot]"
+            git config user.email "github-actions[bot]@users.noreply.github.com"
+            npm version patch --no-git-tag-version
+            NEW_VERSION=$(node -p "require('./package.json').version")
+            git add package.json package-lock.json
+            git commit -m "chore(release): bump version to ${NEW_VERSION} [skip ci]"
+            git push
+            echo "Bumped ${VERSION} → ${NEW_VERSION}"
           else
-            echo "already_published=false" >> "$GITHUB_OUTPUT"
-            echo "Version ${VERSION} not yet published — will publish."
+            echo "Version ${VERSION} is new — publishing as-is"
           fi
 
+      - name: Build
+        run: npm run build
+
       - name: Publish
-        if: steps.check.outputs.already_published == 'false'
         run: npm publish --access public
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
       - name: Create GitHub release
-        if: steps.check.outputs.already_published == 'false'
         env:
           GH_TOKEN: ${{ secrets.GH_PAT }}
         run: |
@@ -195,10 +199,6 @@ jobs:
           VERSION=$(node -p "require('./package.json').version")
           {
             echo "## Publish"
-            if [ "${{ steps.check.outputs.already_published }}" = "true" ]; then
-              echo "- Version ${VERSION} already published — skipped"
-            else
-              echo "- Published v${VERSION} to npm"
-              echo "- Created GitHub release v${VERSION}"
-            fi
+            echo "- Published v${VERSION} to npm"
+            echo "- Created GitHub release v${VERSION}"
           } >> "$GITHUB_STEP_SUMMARY"

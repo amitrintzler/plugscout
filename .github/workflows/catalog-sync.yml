@@ -63,15 +63,6 @@ jobs:
             fs.appendFileSync(process.env.GITHUB_STEP_SUMMARY, lines.join("\\n") + "\\n");
           '
 
-      - name: Bump patch version if catalog changed
-        run: |
-          if git diff --quiet data/catalog data/quarantine data/whitelist; then
-            echo "No catalog changes — skipping version bump"
-          else
-            npm version patch --no-git-tag-version
-            echo "Bumped to $(node -p "require('./package.json').version")"
-          fi
-
       - name: Create catalog sync PR
         id: create_pr
         continue-on-error: true
@@ -91,5 +82,3 @@ jobs:
             data/catalog
             data/quarantine
             data/whitelist
-            package.json
-            package-lock.json
