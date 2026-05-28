@@ -239,6 +239,9 @@ export async function renderInteractiveHome(): Promise<void> {
     return;
   }
 
+  const screen = await renderHomeScreen();
+  process.stdout.write(screen + '\n\n');
+
   let selected = 0;
   const ARROW_UP = '\u001b[A';
   const ARROW_DOWN = '\u001b[B';
