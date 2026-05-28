@@ -27,7 +27,13 @@ const KIND_ALIASES: Record<string, CatalogKind> = {
   'copilot extensions': 'copilot-extension',
   extension: 'copilot-extension',
   extensions: 'copilot-extension',
-  copilot: 'copilot-extension'
+  copilot: 'copilot-extension',
+  'cursor-extension': 'cursor-extension',
+  'cursor-extensions': 'cursor-extension',
+  cursor: 'cursor-extension',
+  'gemini-extension': 'gemini-extension',
+  'gemini-extensions': 'gemini-extension',
+  gemini: 'gemini-extension'
 };
 
 export function readFlag(args: string[], flag: string): string | undefined {
@@ -66,7 +72,7 @@ export function normalizeKind(raw: string): CatalogKind {
     return CatalogKindSchema.parse(normalized);
   } catch {
     throw new Error(
-      `Invalid --kind value: ${raw}. Expected one of: skill, mcp, claude-plugin, claude-connector, copilot-extension. Aliases also supported: skills, mcps, plugins, connectors, extensions.`
+      `Invalid --kind value: ${raw}. Expected one of: skill, mcp, claude-plugin, claude-connector, copilot-extension, cursor-extension, gemini-extension. Aliases also supported: skills, mcps, plugins, connectors, extensions, cursor, gemini.`
     );
   }
 }

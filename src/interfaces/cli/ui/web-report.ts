@@ -237,13 +237,15 @@ function renderHtml(
 <body>
   <div class="wrap">
     <h1>PlugScout Web Report</h1>
-    <p class="sub">Claude plugins · Claude connectors · Copilot extensions · Skills · MCP servers</p>
+    <p class="sub">Claude plugins · Claude connectors · Copilot extensions · Cursor extensions · Gemini extensions · Skills · MCP servers</p>
 
     <div class="stat-cards">
       <div class="stat-card"><div class="k">Total</div><div class="v">${stats.totalItems}</div></div>
       <div class="stat-card"><div class="k">Plugins</div><div class="v">${kindCounts['claude-plugin']}</div></div>
       <div class="stat-card"><div class="k">Connectors</div><div class="v">${kindCounts['claude-connector']}</div></div>
       <div class="stat-card"><div class="k">Copilot Ext</div><div class="v">${kindCounts['copilot-extension']}</div></div>
+      <div class="stat-card"><div class="k">Cursor Ext</div><div class="v">${kindCounts['cursor-extension']}</div></div>
+      <div class="stat-card"><div class="k">Gemini Ext</div><div class="v">${kindCounts['gemini-extension']}</div></div>
       <div class="stat-card"><div class="k">Skills</div><div class="v">${kindCounts.skill}</div></div>
       <div class="stat-card"><div class="k">MCP Servers</div><div class="v">${kindCounts.mcp}</div></div>
       <div class="stat-card"><div class="k">Whitelist / Quarantine</div><div class="v">${stats.whitelist} / ${stats.quarantined}</div></div>
@@ -264,6 +266,8 @@ function renderHtml(
         <option value="claude-plugin">Claude plugin</option>
         <option value="claude-connector">Claude connector</option>
         <option value="copilot-extension">Copilot extension</option>
+        <option value="cursor-extension">Cursor extension</option>
+        <option value="gemini-extension">Gemini extension</option>
         <option value="skill">Skill</option>
         <option value="mcp">MCP server</option>
       </select>
@@ -499,7 +503,9 @@ function countByKind(items: CatalogItem[]): Record<CatalogKind, number> {
       mcp: 0,
       'claude-plugin': 0,
       'claude-connector': 0,
-      'copilot-extension': 0
+      'copilot-extension': 0,
+      'cursor-extension': 0,
+      'gemini-extension': 0
     }
   );
 }

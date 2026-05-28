@@ -155,7 +155,7 @@ describe('cli ux behaviors', () => {
 
     const configRaw = await fs.readFile(path.join(testProject, '.skills-mcps.json'), 'utf8');
     const config = JSON.parse(configRaw) as { defaultKinds?: string[] };
-    expect(config.defaultKinds).toEqual(['skill', 'mcp', 'claude-plugin', 'claude-connector', 'copilot-extension']);
+    expect(config.defaultKinds).toEqual(['skill', 'mcp', 'claude-plugin', 'claude-connector', 'copilot-extension', 'cursor-extension', 'gemini-extension']);
     expect(output.joined()).toContain('Risk scale (lower is safer):');
   });
 

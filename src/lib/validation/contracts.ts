@@ -5,7 +5,7 @@ const isoDate = z
   .regex(/^(19|20|21)\d{2}-[01]\d-[0-3]\d$/, 'Expected ISO date (YYYY-MM-DD)');
 
 export const RiskTierSchema = z.enum(['low', 'medium', 'high', 'critical']);
-export const CatalogKindSchema = z.enum(['skill', 'mcp', 'claude-plugin', 'claude-connector', 'copilot-extension']);
+export const CatalogKindSchema = z.enum(['skill', 'mcp', 'claude-plugin', 'claude-connector', 'copilot-extension', 'cursor-extension', 'gemini-extension']);
 
 const SecuritySignalsSchema = z
   .object({
@@ -149,7 +149,9 @@ export const RegistrySchema = z.object({
       'copilot-extensions-v0.1',
       'copilot-plugin-marketplace-v1',
       'claude-connectors-scrape-v1',
-      'awesome-claude-code-v1'
+      'awesome-claude-code-v1',
+      'cursor-extensions-v1',
+      'gemini-extensions-v1'
     ])
     .default('direct'),
   enabled: z.boolean().default(true),

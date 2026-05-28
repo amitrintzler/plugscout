@@ -1,10 +1,12 @@
 import { spawnSync } from 'node:child_process';
 import path from 'node:path';
+import os from 'node:os';
 import fs from 'node:fs/promises';
 
 import { getStaleRegistries, loadSyncState } from '../../catalog/sync-state.js';
 import { loadCatalogItems } from '../../catalog/repository.js';
 import { hasLegacySkillSh, resolveSkillsRuntime } from '../../install/dependencies.js';
+import { getClientMcpConfigStatus } from './client-setup.js';
 import type { DoctorCheckResult } from './types.js';
 
 export async function runDoctorChecks(projectPath = '.'): Promise<DoctorCheckResult[]> {
@@ -72,6 +74,43 @@ export async function runDoctorChecks(projectPath = '.'): Promise<DoctorCheckRes
       message: '.skills-mcps.json missing or invalid',
       suggestion: 'Run: npm run dev -- init'
     });
+  }
+
+  // Cursor IDE check
+  const cursorInstalled =
+    spawnSync('which', ['cursor'], { encoding: 'utf8' }).status === 0 ||
+    await fs.access(path.join(os.homedir(), '.cursor')).then(() => true).catch(() => false);
+  checks.push(
+    cursorInstalled
+      ? { name: 'Cursor IDE', status: 'pass', message: 'Cursor detected' }
+      : { name: 'Cursor IDE', status: 'warn', message: 'Cursor not detected', suggestion: 'Install Cursor from https://cursor.sh' }
+  );
+
+  // Gemini CLI check
+  checks.push(checkBinary('gemini', { suggestion: 'Install Gemini CLI: npm install -g @google/gemini-cli' }));
+
+  // Cursor MCP config check
+  try {
+    const cursorStatus = await getClientMcpConfigStatus('cursor', 'user');
+    checks.push(
+      cursorStatus.configured
+        ? { name: 'Cursor MCP config', status: 'pass', message: `plugscout wired in ${cursorStatus.configPath}` }
+        : { name: 'Cursor MCP config', status: 'warn', message: 'plugscout not in Cursor MCP config', suggestion: 'Run: plugscout client setup --client cursor' }
+    );
+  } catch {
+    checks.push({ name: 'Cursor MCP config', status: 'warn', message: 'Could not read Cursor MCP config', suggestion: 'Run: plugscout client setup --client cursor' });
+  }
+
+  // Gemini MCP config check
+  try {
+    const geminiStatus = await getClientMcpConfigStatus('gemini', 'user');
+    checks.push(
+      geminiStatus.configured
+        ? { name: 'Gemini MCP config', status: 'pass', message: `plugscout wired in ${geminiStatus.configPath}` }
+        : { name: 'Gemini MCP config', status: 'warn', message: 'plugscout not in Gemini MCP config', suggestion: 'Run: plugscout client setup --client gemini' }
+    );
+  } catch {
+    checks.push({ name: 'Gemini MCP config', status: 'warn', message: 'Could not read Gemini MCP config', suggestion: 'Run: plugscout client setup --client gemini' });
   }
 
   return checks;

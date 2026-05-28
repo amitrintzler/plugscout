@@ -41,6 +41,26 @@
         "mode": "daily",
         "rateLimitPerMinute": 90
       }
+    },
+    {
+      "id": "cursor",
+      "enabled": true,
+      "officialOnly": false,
+      "trustLevel": "medium",
+      "poll": {
+        "mode": "manual",
+        "rateLimitPerMinute": 60
+      }
+    },
+    {
+      "id": "google",
+      "enabled": true,
+      "officialOnly": true,
+      "trustLevel": "high",
+      "poll": {
+        "mode": "daily",
+        "rateLimitPerMinute": 60
+      }
     }
   ]
 }

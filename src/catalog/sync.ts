@@ -69,7 +69,7 @@ export async function syncCatalogs(
 
   const kindCounts = countByKind(mergedItems);
   logger.info(
-    `Synced ${mergedItems.length} items (${kindCounts.skill} skills, ${kindCounts.mcp} MCPs, ${kindCounts['claude-plugin']} Claude plugins, ${kindCounts['claude-connector']} Claude connectors, ${kindCounts['copilot-extension']} Copilot extensions)`
+    `Synced ${mergedItems.length} items (${kindCounts.skill} skills, ${kindCounts.mcp} MCPs, ${kindCounts['claude-plugin']} Claude plugins, ${kindCounts['claude-connector']} Claude connectors, ${kindCounts['copilot-extension']} Copilot extensions, ${kindCounts['cursor-extension']} Cursor extensions, ${kindCounts['gemini-extension']} Gemini extensions)`
   );
 
   const staleRegistries = getStaleRegistries(syncState);
@@ -125,7 +125,9 @@ function normalizeId(id: string, kind: CatalogKind): string {
     mcp: 'mcp',
     'claude-plugin': 'claude-plugin',
     'claude-connector': 'claude-connector',
-    'copilot-extension': 'copilot-extension'
+    'copilot-extension': 'copilot-extension',
+    'cursor-extension': 'cursor-extension',
+    'gemini-extension': 'gemini-extension'
   };
 
   return `${prefixMap[kind]}:${id.replace(/^([a-z-]+):/, '')}`;
@@ -143,6 +145,12 @@ function inferProviderFromKind(kind: CatalogKind): string {
   }
   if (kind === 'copilot-extension') {
     return 'github';
+  }
+  if (kind === 'cursor-extension') {
+    return 'cursor';
+  }
+  if (kind === 'gemini-extension') {
+    return 'google';
   }
   return 'openai';
 }
@@ -193,7 +201,9 @@ function countByKind(items: CatalogItem[]): Record<CatalogKind, number> {
       mcp: 0,
       'claude-plugin': 0,
       'claude-connector': 0,
-      'copilot-extension': 0
+      'copilot-extension': 0,
+      'cursor-extension': 0,
+      'gemini-extension': 0
     }
   );
 }

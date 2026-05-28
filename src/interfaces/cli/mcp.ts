@@ -36,7 +36,7 @@ export function createMcpServer(version = '0.0.0'): Server {
           type: 'object',
           properties: {
             query: { type: 'string', description: 'Search term' },
-            kind: { type: 'string', description: 'Filter by kind: skill, mcp, claude-plugin, claude-connector, copilot-extension' },
+            kind: { type: 'string', description: 'Filter by kind: skill, mcp, claude-plugin, claude-connector, copilot-extension, cursor-extension, gemini-extension' },
             provider: { type: 'string', description: 'Filter by provider' },
             limit: { type: 'number', description: 'Max results (default: 20)' },
           },

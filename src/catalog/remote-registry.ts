@@ -201,6 +201,12 @@ function defaultCatalogKeyByKind(kind: Registry['kind']): string {
   if (kind === 'copilot-extension') {
     return 'extensions';
   }
+  if (kind === 'cursor-extension') {
+    return 'extensions';
+  }
+  if (kind === 'gemini-extension') {
+    return 'extensions';
+  }
   return 'skills';
 }
 
@@ -283,5 +289,12 @@ function validateRemoteHost(registry: Registry): void {
 }
 
 function requiresSafeHostAllowlist(kind: Registry['kind']): boolean {
-  return kind === 'claude-plugin' || kind === 'claude-connector' || kind === 'copilot-extension' || kind === 'mcp';
+  return (
+    kind === 'claude-plugin' ||
+    kind === 'claude-connector' ||
+    kind === 'copilot-extension' ||
+    kind === 'cursor-extension' ||
+    kind === 'gemini-extension' ||
+    kind === 'mcp'
+  );
 }

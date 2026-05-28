@@ -77,6 +77,7 @@ const COMMAND_ALIASES: Record<string, string> = {
   setup: 'setup',
   help: 'help',
   mcp: 'mcp',
+  client: 'client',
 };
 
 export async function runCli(argv: string[]): Promise<void> {
@@ -154,6 +155,9 @@ export async function runCli(argv: string[]): Promise<void> {
     case 'mcp':
       await handleMcp(rest);
       return; // intentional: MCP server is long-lived; update banner would corrupt JSON-RPC stream
+    case 'client':
+      await handleClient(rest);
+      break;
     case 'help':
       printHelp();
       break;
@@ -187,7 +191,7 @@ async function handleAbout(): Promise<void> {
   if (pkg.author) {
     console.log(`Author: ${pkg.author}`);
   }
-  console.log('Scope: Claude plugins, Claude connectors, Copilot extensions, Skills, MCP servers');
+  console.log('Scope: Claude plugins, Claude connectors, Copilot extensions, Cursor extensions, Gemini extensions, Skills, MCP servers');
   console.log('Ranking: trust-first (fit + trust - risk penalties + freshness bonus)');
   console.log('Meaning: top/recommend output is repo-aware guidance, not a global popularity leaderboard.');
   console.log('Install discipline: review each suggestion, check provenance and risk, and do not install blindly from rank alone.');
@@ -215,7 +219,7 @@ async function handleStatus(args: string[]): Promise<void> {
   console.log('Catalog Status');
   console.log(`Items: ${items.length}`);
   console.log(
-    `Kinds: skill=${kindCounts.get('skill') ?? 0}, mcp=${kindCounts.get('mcp') ?? 0}, claude-plugin=${kindCounts.get('claude-plugin') ?? 0}, claude-connector=${kindCounts.get('claude-connector') ?? 0}, copilot-extension=${kindCounts.get('copilot-extension') ?? 0}`
+    `Kinds: skill=${kindCounts.get('skill') ?? 0}, mcp=${kindCounts.get('mcp') ?? 0}, claude-plugin=${kindCounts.get('claude-plugin') ?? 0}, claude-connector=${kindCounts.get('claude-connector') ?? 0}, copilot-extension=${kindCounts.get('copilot-extension') ?? 0}, cursor-extension=${kindCounts.get('cursor-extension') ?? 0}, gemini-extension=${kindCounts.get('gemini-extension') ?? 0}`
   );
   console.log(
     `Providers: ${Array.from(providerCounts.entries())
@@ -262,7 +266,7 @@ async function handleInit(args: string[]): Promise<void> {
   const [items, policy] = await Promise.all([loadCatalogItems(), loadSecurityPolicy()]);
   const providers = Array.from(new Set(items.map((item) => item.provider))).sort((a, b) => a.localeCompare(b));
 
-  const defaultKinds: CatalogKind[] = ['skill', 'mcp', 'claude-plugin', 'claude-connector', 'copilot-extension'];
+  const defaultKinds: CatalogKind[] = ['skill', 'mcp', 'claude-plugin', 'claude-connector', 'copilot-extension', 'cursor-extension', 'gemini-extension'];
 
   const defaults: LocalCliConfig = {
     defaultKinds,
@@ -349,7 +353,7 @@ async function handleSetup(args: string[]): Promise<void> {
   console.log('Step 2/3: Initializing local config...');
   const [items, policy] = await Promise.all([loadCatalogItems(), loadSecurityPolicy()]);
   const providers = Array.from(new Set(items.map((item) => item.provider))).sort((a, b) => a.localeCompare(b));
-  const defaultKinds: CatalogKind[] = ['skill', 'mcp', 'claude-plugin', 'claude-connector', 'copilot-extension'];
+  const defaultKinds: CatalogKind[] = ['skill', 'mcp', 'claude-plugin', 'claude-connector', 'copilot-extension', 'cursor-extension', 'gemini-extension'];
   const defaults = {
     defaultKinds,
     defaultProviders: providers,
@@ -1018,6 +1022,38 @@ async function handleQuarantine(args: string[]): Promise<void> {
   console.log(renderJson(result));
 }
 
+async function handleClient(args: string[]): Promise<void> {
+  const subcommand = args[0];
+  if (subcommand !== 'setup') {
+    throw new Error('Usage: client setup --client cursor|gemini [--scope user|project] [--force]');
+  }
+
+  const clientFlag = readFlag(args, '--client');
+  if (clientFlag !== 'cursor' && clientFlag !== 'gemini') {
+    throw new Error('Usage: client setup --client cursor|gemini');
+  }
+
+  const scopeFlag = readFlag(args, '--scope') ?? 'user';
+  if (scopeFlag !== 'user' && scopeFlag !== 'project') {
+    throw new Error('--scope must be user or project');
+  }
+
+  if (clientFlag === 'gemini' && scopeFlag === 'project') {
+    logger.warn('Gemini CLI only supports user scope; falling back to user scope.');
+  }
+
+  const force = hasFlag(args, '--force');
+  const { writeClientMcpConfig } = await import('./client-setup.js');
+  const result = await writeClientMcpConfig({ client: clientFlag, scope: scopeFlag as 'user' | 'project', force });
+
+  if (result.status === 'already-configured') {
+    console.log(`plugscout already configured in ${result.configPath}`);
+  } else {
+    console.log(`plugscout MCP config written: ${result.configPath}`);
+    printHint(`Restart ${clientFlag === 'cursor' ? 'Cursor IDE' : 'Gemini CLI'} for the change to take effect.`);
+  }
+}
+
 async function handleUpgrade(args: string[]): Promise<void> {
   const subcommand = args[0] ?? 'check';
   if (subcommand !== 'check') {
@@ -1176,7 +1212,7 @@ function printHelp(): void {
   console.log('  init [--project .]');
   console.log('  doctor [--project .] [--install-deps]');
   console.log('  status [--verbose]');
-  console.log('  sync [--kind skill,mcp,claude-plugin,claude-connector,copilot-extension] [--dry-run]');
+  console.log('  sync [--kind skill,mcp,claude-plugin,claude-connector,copilot-extension,cursor-extension,gemini-extension] [--dry-run]');
   console.log('');
   console.log('Explore');
   console.log('  list [--kind ...] [--provider ...] [--risk-tier low|medium|high|critical] [--blocked true|false] [--search q] [--limit n] [--sort name|risk|trust] [--format json|table] [--readable] [--details]');
@@ -1201,6 +1237,7 @@ function printHelp(): void {
   console.log('Other');
   console.log('  about');
   console.log('  web [--out .plugscout/report.html] [--kind ...] [--limit n] [--open]');
+  console.log('  client setup --client cursor|gemini [--scope user|project] [--force]');
   console.log('  upgrade check');
   console.log('  help');
   console.log('');
@@ -1210,11 +1247,18 @@ function printHelp(): void {
   console.log('  plugins -> claude-plugin');
   console.log('  connectors -> claude-connector');
   console.log('  extensions, copilot -> copilot-extension');
+  console.log('  cursor, cursor-extensions -> cursor-extension');
+  console.log('  gemini, gemini-extensions -> gemini-extension');
   console.log('');
   console.log('Examples');
   console.log('  plugscout recommend --project . --only-safe --limit 10');
+  console.log('  plugscout list --kind cursor --limit 15');
+  console.log('  plugscout list --kind gemini --limit 11');
   console.log('  plugscout list --kind connectors --limit 10');
   console.log('  plugscout show --id claude-connector:asana');
+  console.log('  plugscout client setup --client cursor');
+  console.log('  plugscout client setup --client gemini');
+  console.log('  plugscout sync --kind cursor-extension,gemini-extension');
   console.log('');
   console.log('Global options');
   console.log('  --no-update-check');
@@ -1230,7 +1274,7 @@ async function loadLocalCliConfig(projectRoot: string): Promise<LocalCliConfig |
     }
 
     return {
-      defaultKinds: Array.isArray(parsed.defaultKinds) ? parsed.defaultKinds : ['skill', 'mcp', 'claude-plugin', 'claude-connector', 'copilot-extension'],
+      defaultKinds: Array.isArray(parsed.defaultKinds) ? parsed.defaultKinds : ['skill', 'mcp', 'claude-plugin', 'claude-connector', 'copilot-extension', 'cursor-extension', 'gemini-extension'],
       defaultProviders: Array.isArray(parsed.defaultProviders) ? parsed.defaultProviders : [],
       riskPosture: parsed.riskPosture,
       outputStyle: parsed.outputStyle === 'json' ? 'json' : 'rich-table',
