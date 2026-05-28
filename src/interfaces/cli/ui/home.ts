@@ -265,7 +265,8 @@ export async function renderInteractiveHome(): Promise<void> {
     }
   }
 
-  while (true) {
+  let running = true;
+  while (running) {
     process.stdout.write('\n');
     process.stdin.setRawMode(true);
     process.stdin.resume();
@@ -322,17 +323,18 @@ export async function renderInteractiveHome(): Promise<void> {
       });
     });
 
-    if (action.exit) break;
-
-    if (action.args) {
-      const cliPath = getPackagePath('dist/cli.js');
-      await new Promise<void>((done) => {
-        const child = spawn(process.execPath, [cliPath, ...action.args!], { stdio: 'inherit' });
-        child.on('close', () => done());
-        child.on('error', () => done());
-      });
+    if (action.exit) {
+      running = false;
+    } else {
+      if (action.args) {
+        const cliPath = getPackagePath('dist/cli.js');
+        await new Promise<void>((done) => {
+          const child = spawn(process.execPath, [cliPath, ...action.args!], { stdio: 'inherit' });
+          child.on('close', () => done());
+          child.on('error', () => done());
+        });
+      }
+      process.stdout.write('\n');
     }
-
-    process.stdout.write('\n');
   }
 }
