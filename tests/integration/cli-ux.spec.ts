@@ -335,10 +335,9 @@ describe('cli ux behaviors', () => {
     const html = await fs.readFile(reportPath, 'utf8');
     expect(output.joined()).toContain('Web report written:');
     expect(html).toContain('PlugScout Web Report');
-    expect(html).toContain('Top Claude Plugins');
-    expect(html).toContain('Top Claude Connectors');
-    expect(html).toContain('How to read scores');
-    expect(html).toContain('Decision details per item');
+    expect(html).toContain('detail-card');
+    expect(html).toContain('filter-bar');
+    expect(html).toContain('applyFilters');
   });
 
   it('handles upgrade check states using mocked release responses', async () => {

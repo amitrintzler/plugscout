@@ -69,12 +69,8 @@ function renderHtml(
   policy: SecurityPolicy
 ): string {
   const kindCounts = countByKind(rows.map((entry) => entry.item));
-  const topClaude = rows.filter((entry) => entry.item.kind === 'claude-plugin').slice(0, 15);
-  const topConnectors = rows.filter((entry) => entry.item.kind === 'claude-connector').slice(0, 15);
-  const topCopilot = rows.filter((entry) => entry.item.kind === 'copilot-extension').slice(0, 15);
-  const allRows = rows.slice(0, 120);
-  const detailRows = rows.slice(0, 80);
   const riskScale = escapeHtml(formatRiskScale(policy));
+  const cardsJson = rows.map((entry) => renderDetailCard(entry, policy)).join('\n');
 
   return `<!doctype html>
 <html lang="en">
@@ -106,13 +102,13 @@ function renderHtml(
     .wrap { max-width: 1460px; margin: 0 auto; }
     h1 { margin: 0 0 8px; font-size: 34px; }
     .sub { color: var(--muted); margin: 0 0 22px; }
-    .cards {
+    .stat-cards {
       display: grid;
-      grid-template-columns: repeat(3, minmax(180px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
       gap: 12px;
       margin-bottom: 18px;
     }
-    .card {
+    .stat-card {
       background: var(--panel);
       border: 1px solid var(--line);
       border-radius: 12px;
@@ -120,30 +116,71 @@ function renderHtml(
     }
     .k { color: var(--muted); font-size: 12px; text-transform: uppercase; letter-spacing: 0.05em; }
     .v { font-size: 26px; font-weight: 700; margin-top: 4px; }
-    .section {
-      margin-top: 18px;
+    .legend {
+      margin-bottom: 18px;
       background: var(--panel);
       border: 1px solid var(--line);
       border-radius: 12px;
-      overflow: hidden;
-    }
-    .section-body { padding: 14px 16px; }
-    .section h2 {
-      margin: 0;
       padding: 14px 16px;
-      font-size: 18px;
-      border-bottom: 1px solid var(--line);
-      color: var(--accent);
+      font-size: 13px;
+      color: var(--muted);
     }
-    table { width: 100%; border-collapse: collapse; }
-    th, td {
-      text-align: left;
-      padding: 10px 12px;
-      border-bottom: 1px solid #1d2a41;
-      vertical-align: top;
-      word-break: break-word;
+    /* Filter bar */
+    .filter-bar {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      padding: 14px 16px;
+      margin-bottom: 18px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      align-items: center;
     }
-    th { color: var(--muted); font-size: 12px; text-transform: uppercase; letter-spacing: 0.04em; }
+    .filter-bar input, .filter-bar select {
+      background: #060f1d;
+      border: 1px solid #2a3d5c;
+      border-radius: 8px;
+      color: var(--text);
+      padding: 7px 10px;
+      font-size: 13px;
+      outline: none;
+    }
+    .filter-bar input { flex: 1; min-width: 160px; }
+    .filter-bar input::placeholder { color: var(--muted); }
+    .filter-bar select:focus, .filter-bar input:focus { border-color: var(--accent); }
+    #result-count { color: var(--muted); font-size: 13px; margin-left: auto; white-space: nowrap; }
+    /* Grid */
+    .detail-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+      gap: 12px;
+    }
+    /* Cards */
+    .detail-card {
+      border: 1px solid #243654;
+      border-radius: 10px;
+      background: #081121;
+      overflow: hidden;
+      transition: border-color 0.15s;
+    }
+    .detail-card:hover { border-color: #3a5a8a; }
+    .card-header {
+      padding: 14px;
+      cursor: pointer;
+      user-select: none;
+    }
+    .card-header:hover { background: rgba(255,255,255,0.03); }
+    .card-title-row {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 8px;
+      margin-bottom: 4px;
+    }
+    .title { margin: 0; font-size: 16px; line-height: 1.3; }
+    .meta { color: var(--muted); font-size: 12px; font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; margin-bottom: 8px; }
+    .pill-row { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 8px; }
     .pill {
       display: inline-block;
       border-radius: 999px;
@@ -156,39 +193,7 @@ function renderHtml(
     .ok { color: var(--ok); border-color: #166534; }
     .warn { color: var(--warn); border-color: #854d0e; }
     .bad { color: var(--bad); border-color: #7f1d1d; }
-    .mono { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; font-size: 13px; }
-    .detail-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
-      gap: 12px;
-      padding: 14px;
-    }
-    .detail-card {
-      border: 1px solid #243654;
-      border-radius: 10px;
-      background: #081121;
-      padding: 12px;
-    }
-    .detail-head {
-      display: flex;
-      align-items: flex-start;
-      justify-content: space-between;
-      gap: 10px;
-      margin-bottom: 8px;
-    }
-    .title {
-      margin: 0;
-      font-size: 16px;
-      line-height: 1.3;
-    }
-    .meta {
-      color: var(--muted);
-      font-size: 12px;
-      margin-top: 4px;
-    }
-    .line { margin-top: 8px; color: var(--text); }
-    .line .label { color: var(--muted); }
-    .chips { margin-top: 8px; display: flex; flex-wrap: wrap; gap: 6px; }
+    .chips { display: flex; flex-wrap: wrap; gap: 5px; }
     .chip {
       border: 1px solid #2f476b;
       border-radius: 999px;
@@ -196,123 +201,143 @@ function renderHtml(
       color: #c9dbf5;
       font-size: 12px;
     }
+    .expand-hint {
+      font-size: 11px;
+      color: #4a6a94;
+      margin-top: 8px;
+      text-align: right;
+    }
+    .detail-card.expanded .expand-hint { display: none; }
+    /* Expanded body */
+    .card-body {
+      display: none;
+      padding: 0 14px 14px;
+      border-top: 1px solid #1a2c44;
+    }
+    .detail-card.expanded .card-body { display: block; }
+    .line { margin-top: 9px; color: var(--text); font-size: 14px; }
+    .line .label { color: var(--muted); }
     .link { color: #93c5fd; text-decoration: none; }
     .link:hover { text-decoration: underline; }
+    .mono { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; font-size: 13px; }
     pre {
-      margin: 8px 0 0;
+      margin: 10px 0 0;
       padding: 9px 10px;
       border: 1px solid #243654;
       border-radius: 8px;
       background: #060f1d;
       overflow-x: auto;
       color: #dbeafe;
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+      font-size: 13px;
     }
+    .hidden { display: none !important; }
   </style>
 </head>
 <body>
   <div class="wrap">
     <h1>PlugScout Web Report</h1>
-    <p class="sub">Readable catalog view for Claude plugins, Claude connectors, Copilot extensions, Skills, and MCP servers.</p>
-    <div class="cards">
-      <div class="card"><div class="k">Items</div><div class="v">${stats.totalItems}</div></div>
-      <div class="card"><div class="k">Claude Plugins</div><div class="v">${kindCounts['claude-plugin']}</div></div>
-      <div class="card"><div class="k">Claude Connectors</div><div class="v">${kindCounts['claude-connector']}</div></div>
-      <div class="card"><div class="k">Copilot Extensions</div><div class="v">${kindCounts['copilot-extension']}</div></div>
-      <div class="card"><div class="k">Skills</div><div class="v">${kindCounts.skill}</div></div>
-      <div class="card"><div class="k">MCP Servers</div><div class="v">${kindCounts.mcp}</div></div>
-      <div class="card"><div class="k">Whitelist / Quarantine</div><div class="v">${stats.whitelist} / ${stats.quarantined}</div></div>
+    <p class="sub">Claude plugins · Claude connectors · Copilot extensions · Skills · MCP servers</p>
+
+    <div class="stat-cards">
+      <div class="stat-card"><div class="k">Total</div><div class="v">${stats.totalItems}</div></div>
+      <div class="stat-card"><div class="k">Plugins</div><div class="v">${kindCounts['claude-plugin']}</div></div>
+      <div class="stat-card"><div class="k">Connectors</div><div class="v">${kindCounts['claude-connector']}</div></div>
+      <div class="stat-card"><div class="k">Copilot Ext</div><div class="v">${kindCounts['copilot-extension']}</div></div>
+      <div class="stat-card"><div class="k">Skills</div><div class="v">${kindCounts.skill}</div></div>
+      <div class="stat-card"><div class="k">MCP Servers</div><div class="v">${kindCounts.mcp}</div></div>
+      <div class="stat-card"><div class="k">Whitelist / Quarantine</div><div class="v">${stats.whitelist} / ${stats.quarantined}</div></div>
     </div>
-    <section class="section">
-      <h2>How to read scores</h2>
-      <div class="section-body">
-        <div><span class="pill ok">trust</span> 0-100, higher is better.</div>
-        <div style="margin-top:6px;"><span class="pill warn">risk</span> 0-100, lower is safer. ${riskScale}</div>
-        <div style="margin-top:6px;"><span class="pill bad">blocked</span> means policy high/critical risk or quarantined.</div>
-      </div>
-    </section>
-    ${renderTableSection('Top Claude Plugins', topClaude)}
-    ${renderTableSection('Top Claude Connectors', topConnectors)}
-    ${renderTableSection('Top Copilot Extensions', topCopilot)}
-    ${renderTableSection('Catalog Snapshot', allRows)}
-    ${renderDetailSection('Decision details per item', detailRows, policy)}
+
+    <div class="legend">
+      <strong>Scores:</strong>
+      Trust 0–100 (higher = more trustworthy) &nbsp;·&nbsp;
+      Risk 0–100 (lower = safer) &nbsp;·&nbsp;
+      ${riskScale} &nbsp;·&nbsp;
+      <span style="color:var(--bad)">blocked</span> = high/critical risk or quarantined
+    </div>
+
+    <div class="filter-bar">
+      <input id="search" type="text" placeholder="Search by name or ID…" oninput="applyFilters()" />
+      <select id="kind-filter" onchange="applyFilters()">
+        <option value="">All kinds</option>
+        <option value="claude-plugin">Claude plugin</option>
+        <option value="claude-connector">Claude connector</option>
+        <option value="copilot-extension">Copilot extension</option>
+        <option value="skill">Skill</option>
+        <option value="mcp">MCP server</option>
+      </select>
+      <select id="risk-filter" onchange="applyFilters()">
+        <option value="">All risk tiers</option>
+        <option value="low">Low</option>
+        <option value="medium">Medium</option>
+        <option value="high">High</option>
+        <option value="critical">Critical</option>
+      </select>
+      <select id="status-filter" onchange="applyFilters()">
+        <option value="">All statuses</option>
+        <option value="allowed">Allowed</option>
+        <option value="approved">Approved</option>
+        <option value="blocked">Blocked</option>
+      </select>
+      <select id="sort-by" onchange="applyFilters()">
+        <option value="name">Sort: Name A–Z</option>
+        <option value="trust-desc">Sort: Trust ↓</option>
+        <option value="risk-asc">Sort: Risk ↑ (safest first)</option>
+        <option value="risk-desc">Sort: Risk ↓ (riskiest first)</option>
+      </select>
+      <span id="result-count"></span>
+    </div>
+
+    <div class="detail-grid" id="card-grid">
+      ${cardsJson}
+    </div>
   </div>
+
+  <script>
+    function toggleCard(header) {
+      header.closest('.detail-card').classList.toggle('expanded');
+    }
+
+    function applyFilters() {
+      const search = document.getElementById('search').value.toLowerCase().trim();
+      const kind = document.getElementById('kind-filter').value;
+      const risk = document.getElementById('risk-filter').value;
+      const status = document.getElementById('status-filter').value;
+      const sort = document.getElementById('sort-by').value;
+
+      const grid = document.getElementById('card-grid');
+      const cards = Array.from(grid.querySelectorAll('.detail-card'));
+
+      let visible = 0;
+      cards.forEach(card => {
+        const matchSearch = !search || card.dataset.search.includes(search);
+        const matchKind = !kind || card.dataset.kind === kind;
+        const matchRisk = !risk || card.dataset.risk === risk;
+        const matchStatus = !status || card.dataset.status === status;
+        const show = matchSearch && matchKind && matchRisk && matchStatus;
+        card.classList.toggle('hidden', !show);
+        if (show) visible++;
+      });
+
+      document.getElementById('result-count').textContent = 'Showing ' + visible + ' of ' + cards.length;
+
+      const shown = cards.filter(c => !c.classList.contains('hidden'));
+      shown.sort((a, b) => {
+        if (sort === 'name') return a.dataset.name.localeCompare(b.dataset.name);
+        if (sort === 'trust-desc') return Number(b.dataset.trust) - Number(a.dataset.trust);
+        if (sort === 'risk-asc') return Number(a.dataset.riskscore) - Number(b.dataset.riskscore);
+        if (sort === 'risk-desc') return Number(b.dataset.riskscore) - Number(a.dataset.riskscore);
+        return a.dataset.name.localeCompare(b.dataset.name);
+      });
+      shown.forEach(card => grid.appendChild(card));
+    }
+
+    // Initial count
+    applyFilters();
+  </script>
 </body>
 </html>`;
-}
-
-function renderTableSection(
-  title: string,
-  rows: Array<{
-    item: CatalogItem;
-    assessment: RiskAssessment;
-    blocked: boolean;
-    approved: boolean;
-    insight?: ItemInsight;
-  }>
-): string {
-  return `<section class="section">
-  <h2>${escapeHtml(title)}</h2>
-  <table>
-    <thead>
-      <tr>
-        <th>ID</th>
-        <th>Name</th>
-        <th>Kind</th>
-        <th>Provider</th>
-        <th>Trust</th>
-        <th>Source</th>
-        <th>Confidence</th>
-        <th>Risk</th>
-        <th>Status</th>
-      </tr>
-    </thead>
-    <tbody>
-      ${rows
-        .map((entry) => {
-          const metadata = asMetadata(entry.item.metadata);
-          const confidence = stringOr(metadata.sourceConfidence, 'official');
-          const trustScore = computeTrustScore(entry.item);
-          const riskClass =
-            entry.assessment.riskTier === 'low'
-              ? 'ok'
-              : entry.assessment.riskTier === 'medium'
-                ? 'warn'
-                : 'bad';
-          return `<tr>
-            <td class="mono">${escapeHtml(entry.item.id)}</td>
-            <td>${escapeHtml(entry.item.name)}</td>
-            <td>${escapeHtml(entry.item.kind)}</td>
-            <td>${escapeHtml(entry.item.provider)}</td>
-            <td><span class="pill">${trustScore.toFixed(0)}</span></td>
-            <td>${escapeHtml(entry.item.source)}</td>
-            <td><span class="pill">${escapeHtml(confidence)}</span></td>
-            <td><span class="pill ${riskClass}">${escapeHtml(entry.assessment.riskTier)} (${entry.assessment.riskScore.toFixed(0)})</span></td>
-            <td>${entry.blocked ? '<span class="pill bad">blocked</span>' : entry.approved ? '<span class="pill ok">approved</span>' : '<span class="pill ok">allowed</span>'}</td>
-          </tr>`;
-        })
-        .join('\n')}
-    </tbody>
-  </table>
-</section>`;
-}
-
-function renderDetailSection(
-  title: string,
-  rows: Array<{
-    item: CatalogItem;
-    assessment: RiskAssessment;
-    blocked: boolean;
-    approved: boolean;
-    insight?: ItemInsight;
-  }>,
-  policy: SecurityPolicy
-): string {
-  return `<section class="section">
-  <h2>${escapeHtml(title)}</h2>
-  <div class="detail-grid">
-    ${rows.map((entry) => renderDetailCard(entry, policy)).join('\n')}
-  </div>
-</section>`;
 }
 
 function renderDetailCard(
@@ -332,58 +357,66 @@ function renderDetailCard(
   const sourceRepo = typeof metadata.sourceRepo === 'string' ? metadata.sourceRepo : '';
   const sourcePage = typeof metadata.sourcePage === 'string' ? metadata.sourcePage : '';
   const status = entry.blocked ? 'blocked' : entry.approved ? 'approved' : 'allowed';
+  const statusClass = entry.blocked ? 'bad' : 'ok';
   const installHint = buildInstallHint(entry.item);
   const bestFor = entry.insight?.bestFor ?? [];
   const tradeoffs = entry.insight?.tradeoffs ?? [];
+  const benefitSummary = entry.insight?.benefitSummary ?? '';
 
-  return `<article class="detail-card">
-    <div class="detail-head">
-      <div>
+  const riskClass =
+    entry.assessment.riskTier === 'low'
+      ? 'ok'
+      : entry.assessment.riskTier === 'medium'
+        ? 'warn'
+        : 'bad';
+
+  const searchKey = escapeHtml(`${entry.item.id} ${entry.item.name} ${entry.item.capabilities.join(' ')}`.toLowerCase());
+
+  const previewChips = entry.item.capabilities
+    .slice(0, 3)
+    .map((cap) => `<span class="chip">${escapeHtml(cap)}</span>`)
+    .join('');
+  const allChips = entry.item.capabilities.length > 0
+    ? entry.item.capabilities.map((cap) => `<span class="chip">${escapeHtml(cap)}</span>`).join('')
+    : '<span class="chip">no capability tags</span>';
+
+  return `<article class="detail-card"
+    data-search="${searchKey}"
+    data-kind="${escapeHtml(entry.item.kind)}"
+    data-risk="${escapeHtml(entry.assessment.riskTier)}"
+    data-status="${escapeHtml(status)}"
+    data-name="${escapeHtml(entry.item.name.toLowerCase())}"
+    data-trust="${trustScore.toFixed(0)}"
+    data-riskscore="${entry.assessment.riskScore.toFixed(0)}">
+    <div class="card-header" onclick="toggleCard(this)">
+      <div class="card-title-row">
         <h3 class="title">${escapeHtml(entry.item.name)}</h3>
-        <div class="meta mono">${escapeHtml(entry.item.id)}</div>
-      </div>
-      <div>
         <span class="pill">${escapeHtml(entry.item.kind)}</span>
       </div>
+      <div class="meta">${escapeHtml(entry.item.id)}</div>
+      <div class="pill-row">
+        <span class="pill">trust: ${trustScore.toFixed(0)}</span>
+        <span class="pill ${riskClass}">risk: ${escapeHtml(entry.assessment.riskTier)} (${entry.assessment.riskScore.toFixed(0)})</span>
+        <span class="pill ${statusClass}">${escapeHtml(status)}</span>
+      </div>
+      ${previewChips ? `<div class="chips">${previewChips}</div>` : ''}
+      <div class="expand-hint">▼ click for details</div>
     </div>
-    <div class="line">${escapeHtml(entry.item.description)}</div>
-    <div class="line"><span class="label">Decision:</span> trust ${trustScore.toFixed(0)}/100 (${escapeHtml(describeTrustBand(trustScore))}), risk ${entry.assessment.riskScore.toFixed(0)}/100 (${escapeHtml(entry.assessment.riskTier)}; ${escapeHtml(describeRiskBand(entry.assessment.riskScore, policy))}), status ${escapeHtml(status)}.</div>
-    <div class="line"><span class="label">Risk reasons:</span> ${escapeHtml(entry.assessment.reasons.join('; '))}</div>
-    <div class="line"><span class="label">Provenance:</span> provider=${escapeHtml(entry.item.provider)} source=${escapeHtml(entry.item.source)} confidence=${escapeHtml(confidence)} catalog=${escapeHtml(catalogType)}</div>
-    ${
-      sourceRepo
-        ? `<div class="line"><span class="label">Source repo:</span> <a class="link" href="${escapeHtml(sourceRepo)}">${escapeHtml(sourceRepo)}</a></div>`
-        : ''
-    }
-    ${
-      sourcePage
-        ? `<div class="line"><span class="label">Source page:</span> <a class="link" href="${escapeHtml(sourcePage)}">${escapeHtml(sourcePage)}</a></div>`
-        : ''
-    }
-    ${
-      bestFor.length > 0
-        ? `<div class="line"><span class="label">Best for:</span> ${escapeHtml(bestFor.join('; '))}</div>`
-        : ''
-    }
-    ${
-      tradeoffs.length > 0
-        ? `<div class="line"><span class="label">Tradeoffs:</span> ${escapeHtml(tradeoffs.join('; '))}</div>`
-        : ''
-    }
-    <div class="chips">${renderChips(entry.item.capabilities)}</div>
-    <pre class="mono">${escapeHtml(installHint)}</pre>
+    <div class="card-body">
+      <div class="line">${escapeHtml(entry.item.description)}</div>
+      ${benefitSummary ? `<div class="line"><span class="label">What it does:</span> ${escapeHtml(benefitSummary)}</div>` : ''}
+      ${bestFor.length > 0 ? `<div class="line"><span class="label">Best for:</span> ${escapeHtml(bestFor.join('; '))}</div>` : ''}
+      ${tradeoffs.length > 0 ? `<div class="line"><span class="label">Tradeoffs:</span> ${escapeHtml(tradeoffs.join('; '))}</div>` : ''}
+      <div class="line"><span class="label">Capabilities:</span></div>
+      <div class="chips" style="margin-top:6px">${allChips}</div>
+      <div class="line"><span class="label">Decision:</span> trust ${trustScore.toFixed(0)}/100 (${escapeHtml(describeTrustBand(trustScore))}), risk ${entry.assessment.riskScore.toFixed(0)}/100 (${escapeHtml(entry.assessment.riskTier)}; ${escapeHtml(describeRiskBand(entry.assessment.riskScore, policy))}), status ${escapeHtml(status)}.</div>
+      <div class="line"><span class="label">Risk reasons:</span> ${escapeHtml(entry.assessment.reasons.join('; '))}</div>
+      <div class="line"><span class="label">Provenance:</span> provider=${escapeHtml(entry.item.provider)} source=${escapeHtml(entry.item.source)} confidence=${escapeHtml(confidence)} catalog=${escapeHtml(catalogType)}</div>
+      ${sourceRepo ? `<div class="line"><span class="label">Source repo:</span> <a class="link" href="${escapeHtml(sourceRepo)}" target="_blank" rel="noopener">${escapeHtml(sourceRepo)}</a></div>` : ''}
+      ${sourcePage ? `<div class="line"><span class="label">Source page:</span> <a class="link" href="${escapeHtml(sourcePage)}" target="_blank" rel="noopener">${escapeHtml(sourcePage)}</a></div>` : ''}
+      <pre class="mono">${escapeHtml(installHint)}</pre>
+    </div>
   </article>`;
-}
-
-function renderChips(values: string[]): string {
-  if (values.length === 0) {
-    return '<span class="chip">no capability tags</span>';
-  }
-
-  return values
-    .slice(0, 8)
-    .map((value) => `<span class="chip">${escapeHtml(value)}</span>`)
-    .join('');
 }
 
 function buildInstallHint(item: CatalogItem): string {

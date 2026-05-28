@@ -265,62 +265,74 @@ export async function renderInteractiveHome(): Promise<void> {
     }
   }
 
-  process.stdout.write('\n');
-  process.stdin.setRawMode(true);
-  process.stdin.resume();
-  process.stdin.setEncoding('utf8');
+  while (true) {
+    process.stdout.write('\n');
+    process.stdin.setRawMode(true);
+    process.stdin.resume();
+    process.stdin.setEncoding('utf8');
 
-  render(true);
+    render(true);
 
-  await new Promise<void>((resolve) => {
-    process.stdin.on('data', async function onKey(key: string) {
-      if (key === CTRL_C) {
-        process.stdin.removeListener('data', onKey);
-        process.stdin.setRawMode(false);
-        process.stdin.pause();
-        process.stdout.write('\n');
-        resolve();
-        return;
-      } else if (key === ARROW_UP) {
-        selected = (selected - 1 + menuItems.length) % menuItems.length;
-        render(false);
-      } else if (key === ARROW_DOWN) {
-        selected = (selected + 1) % menuItems.length;
-        render(false);
-      } else if (key === ENTER) {
-        process.stdin.removeListener('data', onKey);
-        process.stdin.setRawMode(false);
-        process.stdin.pause();
-        process.stdout.write('\n');
-
-        const item = menuItems[selected];
-        if (!item.command) {
-          resolve();
+    const action = await new Promise<{ exit: boolean; args?: string[] }>((resolve) => {
+      process.stdin.on('data', async function onKey(key: string) {
+        if (key === CTRL_C) {
+          process.stdin.removeListener('data', onKey);
+          process.stdin.setRawMode(false);
+          process.stdin.pause();
+          process.stdout.write('\n');
+          resolve({ exit: true });
           return;
-        }
+        } else if (key === ARROW_UP) {
+          selected = (selected - 1 + menuItems.length) % menuItems.length;
+          render(false);
+        } else if (key === ARROW_DOWN) {
+          selected = (selected + 1) % menuItems.length;
+          render(false);
+        } else if (key === ENTER) {
+          process.stdin.removeListener('data', onKey);
+          process.stdin.setRawMode(false);
+          process.stdin.pause();
+          process.stdout.write('\n');
 
-        let args = [...item.command];
-        if (item.needsId) {
-          const rl = createInterface({ input: process.stdin, output: process.stdout });
-          process.stdin.resume();
-          const id = await new Promise<string>((res) => {
-            rl.question('  Enter catalog ID: ', (answer) => {
-              rl.close();
-              res(answer.trim());
-            });
-          });
-          if (!id) {
-            resolve();
+          const item = menuItems[selected];
+          if (!item.command) {
+            resolve({ exit: true });
             return;
           }
-          args = [...args, '--id', id];
-        }
 
-        const cliPath = getPackagePath('dist/cli.js');
-        const child = spawn(process.execPath, [cliPath, ...args], { stdio: 'inherit' });
-        child.on('close', () => resolve());
-        child.on('error', () => resolve());
-      }
+          let args = [...item.command];
+          if (item.needsId) {
+            const rl = createInterface({ input: process.stdin, output: process.stdout });
+            process.stdin.resume();
+            const id = await new Promise<string>((res) => {
+              rl.question('  Enter catalog ID: ', (answer) => {
+                rl.close();
+                res(answer.trim());
+              });
+            });
+            if (!id) {
+              resolve({ exit: false });
+              return;
+            }
+            args = [...args, '--id', id];
+          }
+
+          resolve({ exit: false, args });
+        }
+      });
     });
-  });
+
+    if (action.exit) break;
+
+    if (action.args) {
+      const cliPath = getPackagePath('dist/cli.js');
+      await new Promise<void>((done) => {
+        const child = spawn(process.execPath, [cliPath, ...action.args!], { stdio: 'inherit' });
+        child.on('close', () => done());
+        child.on('error', () => done());
+      });
+    }
+
+    process.stdout.write('\n');
+  }
 }
