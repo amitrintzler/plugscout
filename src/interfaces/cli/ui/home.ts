@@ -267,6 +267,7 @@ export async function renderInteractiveHome(): Promise<void> {
   function physicalLines(text: string): number {
     const cols = process.stdout.columns || 80;
     // Strip ANSI codes before measuring display width
+    // eslint-disable-next-line no-control-regex
     const plain = text.replace(/\x1b\[[^m]*m/g, '');
     if (plain.length === 0) return 1;
     return Math.max(1, Math.ceil(plain.length / cols));
