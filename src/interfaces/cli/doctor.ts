@@ -6,7 +6,7 @@ import fs from 'node:fs/promises';
 import { getStaleRegistries, loadSyncState } from '../../catalog/sync-state.js';
 import { loadCatalogItems } from '../../catalog/repository.js';
 import { hasLegacySkillSh, resolveSkillsRuntime } from '../../install/dependencies.js';
-import { getClientMcpConfigStatus } from './client-setup.js';
+import { getClientMcpConfigStatus, CLIENT_DEFS } from './client-setup.js';
 import type { DoctorCheckResult } from './types.js';
 
 export async function runDoctorChecks(projectPath = '.'): Promise<DoctorCheckResult[]> {
@@ -111,6 +111,82 @@ export async function runDoctorChecks(projectPath = '.'): Promise<DoctorCheckRes
     );
   } catch {
     checks.push({ name: 'Gemini MCP config', status: 'warn', message: 'Could not read Gemini MCP config', suggestion: 'Run: plugscout client setup --client gemini' });
+  }
+
+  // Claude Desktop check
+  const claudeDesktopConfigPath = CLIENT_DEFS['claude-desktop'].getConfigPath('user');
+  const claudeDesktopPresent =
+    spawnSync('which', ['claude'], { encoding: 'utf8' }).status === 0 ||
+    await fs.access(path.dirname(claudeDesktopConfigPath)).then(() => true).catch(() => false) ||
+    await fs.access(path.join('/', 'Applications', 'Claude.app')).then(() => true).catch(() => false);
+  checks.push(
+    claudeDesktopPresent
+      ? { name: 'Claude Desktop', status: 'pass', message: 'Claude Desktop detected' }
+      : { name: 'Claude Desktop', status: 'warn', message: 'Claude Desktop not detected', suggestion: 'Install from https://claude.ai/download' }
+  );
+
+  // Claude Desktop MCP config check
+  try {
+    const claudeStatus = await getClientMcpConfigStatus('claude-desktop', 'user');
+    checks.push(
+      claudeStatus.configured
+        ? { name: 'Claude Desktop MCP', status: 'pass', message: `plugscout wired in ${claudeStatus.configPath}` }
+        : { name: 'Claude Desktop MCP', status: 'warn', message: 'plugscout not in Claude Desktop config', suggestion: 'Run: plugscout client setup --client claude-desktop' }
+    );
+  } catch {
+    checks.push({ name: 'Claude Desktop MCP', status: 'warn', message: 'Could not read Claude Desktop config', suggestion: 'Run: plugscout client setup --client claude-desktop' });
+  }
+
+  // Windsurf check
+  checks.push(checkBinary('windsurf', { suggestion: 'Install Windsurf from https://windsurf.ai' }));
+
+  // Windsurf MCP config check
+  try {
+    const windsurfStatus = await getClientMcpConfigStatus('windsurf', 'user');
+    checks.push(
+      windsurfStatus.configured
+        ? { name: 'Windsurf MCP config', status: 'pass', message: `plugscout wired in ${windsurfStatus.configPath}` }
+        : { name: 'Windsurf MCP config', status: 'warn', message: 'plugscout not in Windsurf MCP config', suggestion: 'Run: plugscout client setup --client windsurf' }
+    );
+  } catch {
+    checks.push({ name: 'Windsurf MCP config', status: 'warn', message: 'Could not read Windsurf MCP config', suggestion: 'Run: plugscout client setup --client windsurf' });
+  }
+
+  // OpenCode check
+  checks.push(checkBinary('opencode', { suggestion: 'Install OpenCode: npm install -g opencode-ai' }));
+
+  // OpenCode MCP config check
+  try {
+    const opencodeStatus = await getClientMcpConfigStatus('opencode', 'user');
+    checks.push(
+      opencodeStatus.configured
+        ? { name: 'OpenCode MCP config', status: 'pass', message: `plugscout wired in ${opencodeStatus.configPath}` }
+        : { name: 'OpenCode MCP config', status: 'warn', message: 'plugscout not in OpenCode config', suggestion: 'Run: plugscout client setup --client opencode' }
+    );
+  } catch {
+    checks.push({ name: 'OpenCode MCP config', status: 'warn', message: 'Could not read OpenCode config', suggestion: 'Run: plugscout client setup --client opencode' });
+  }
+
+  // Zed check
+  const zedInstalled =
+    spawnSync('which', ['zed'], { encoding: 'utf8' }).status === 0 ||
+    await fs.access(path.join('/', 'Applications', 'Zed.app')).then(() => true).catch(() => false);
+  checks.push(
+    zedInstalled
+      ? { name: 'Zed', status: 'pass', message: 'Zed detected' }
+      : { name: 'Zed', status: 'warn', message: 'Zed not detected', suggestion: 'Install Zed from https://zed.dev' }
+  );
+
+  // Zed MCP config check
+  try {
+    const zedStatus = await getClientMcpConfigStatus('zed', 'user');
+    checks.push(
+      zedStatus.configured
+        ? { name: 'Zed MCP config', status: 'pass', message: `plugscout wired in ${zedStatus.configPath}` }
+        : { name: 'Zed MCP config', status: 'warn', message: 'plugscout not in Zed settings', suggestion: 'Run: plugscout client setup --client zed' }
+    );
+  } catch {
+    checks.push({ name: 'Zed MCP config', status: 'warn', message: 'Could not read Zed settings', suggestion: 'Run: plugscout client setup --client zed' });
   }
 
   return checks;

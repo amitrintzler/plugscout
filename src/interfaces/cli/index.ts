@@ -1025,12 +1025,13 @@ async function handleQuarantine(args: string[]): Promise<void> {
 async function handleClient(args: string[]): Promise<void> {
   const subcommand = args[0];
   if (subcommand !== 'setup') {
-    throw new Error('Usage: client setup --client cursor|gemini [--scope user|project] [--force]');
+    throw new Error('Usage: client setup --client cursor|gemini|claude-desktop|windsurf|opencode|zed [--scope user|project] [--force]');
   }
 
+  const { writeClientMcpConfig, CLIENT_DEFS, VALID_CLIENT_KINDS } = await import('./client-setup.js');
   const clientFlag = readFlag(args, '--client');
-  if (clientFlag !== 'cursor' && clientFlag !== 'gemini') {
-    throw new Error('Usage: client setup --client cursor|gemini');
+  if (!clientFlag || !VALID_CLIENT_KINDS.includes(clientFlag as (typeof VALID_CLIENT_KINDS)[number])) {
+    throw new Error(`Usage: client setup --client ${VALID_CLIENT_KINDS.join('|')}`);
   }
 
   const scopeFlag = readFlag(args, '--scope') ?? 'user';
@@ -1038,19 +1039,23 @@ async function handleClient(args: string[]): Promise<void> {
     throw new Error('--scope must be user or project');
   }
 
-  if (clientFlag === 'gemini' && scopeFlag === 'project') {
-    logger.warn('Gemini CLI only supports user scope; falling back to user scope.');
+  const def = CLIENT_DEFS[clientFlag as keyof typeof CLIENT_DEFS];
+  if (!def.supportsProjectScope && scopeFlag === 'project') {
+    logger.warn(`${def.label} only supports user scope; falling back to user scope.`);
   }
 
   const force = hasFlag(args, '--force');
-  const { writeClientMcpConfig } = await import('./client-setup.js');
-  const result = await writeClientMcpConfig({ client: clientFlag, scope: scopeFlag as 'user' | 'project', force });
+  const result = await writeClientMcpConfig({
+    client: clientFlag as keyof typeof CLIENT_DEFS,
+    scope: scopeFlag as 'user' | 'project',
+    force
+  });
 
   if (result.status === 'already-configured') {
     console.log(`plugscout already configured in ${result.configPath}`);
   } else {
     console.log(`plugscout MCP config written: ${result.configPath}`);
-    printHint(`Restart ${clientFlag === 'cursor' ? 'Cursor IDE' : 'Gemini CLI'} for the change to take effect.`);
+    printHint(`Restart ${def.label} for the change to take effect.`);
   }
 }
 
@@ -1237,7 +1242,7 @@ function printHelp(): void {
   console.log('Other');
   console.log('  about');
   console.log('  web [--out .plugscout/report.html] [--kind ...] [--limit n] [--open]');
-  console.log('  client setup --client cursor|gemini [--scope user|project] [--force]');
+  console.log('  client setup --client cursor|gemini|claude-desktop|windsurf|opencode|zed [--scope user|project] [--force]');
   console.log('  upgrade check');
   console.log('  help');
   console.log('');
@@ -1258,6 +1263,10 @@ function printHelp(): void {
   console.log('  plugscout show --id claude-connector:asana');
   console.log('  plugscout client setup --client cursor');
   console.log('  plugscout client setup --client gemini');
+  console.log('  plugscout client setup --client claude-desktop');
+  console.log('  plugscout client setup --client windsurf');
+  console.log('  plugscout client setup --client opencode');
+  console.log('  plugscout client setup --client zed');
   console.log('  plugscout sync --kind cursor-extension,gemini-extension');
   console.log('');
   console.log('Global options');
