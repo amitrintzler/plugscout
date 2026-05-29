@@ -1,6 +1,7 @@
 import path from 'node:path';
 import fs from 'node:fs/promises';
 import { createInterface } from 'node:readline/promises';
+import { moveCursor, clearScreenDown } from 'node:readline';
 import { spawn } from 'node:child_process';
 import { stdin, stdout } from 'node:process';
 
@@ -561,6 +562,8 @@ async function handleList(args: string[]): Promise<void> {
   if (details) {
     console.log(renderCatalogDecisionDetails(filtered, policy, insights));
   }
+
+  await promptResultBrowser(filtered.map((e) => ({id: e.item.id, name: e.item.name})));
 }
 
 async function handleShow(args: string[]): Promise<void> {
@@ -649,6 +652,7 @@ async function handleSearch(args: string[]): Promise<void> {
   );
 
   printHint('Use `show --id <catalog-id>` for full detail.');
+  await promptResultBrowser(matches.map((e) => ({id: e.item.id, name: e.item.name})));
 }
 
 async function handleExplain(args: string[]): Promise<void> {
@@ -734,15 +738,20 @@ async function handleScan(args: string[]): Promise<void> {
     return;
   }
 
-  console.log('Repository Scan');
-  console.log(`Archetype: ${scan.inferredArchetype}`);
-  console.log(`Confidence: ${scan.inferenceConfidence}%`);
-  console.log(`Stack: ${scan.stack.join(', ') || 'none'}`);
-  console.log(`Compatibility tags: ${scan.compatibilityTags.join(', ') || 'none'}`);
-  console.log(`Inferred capabilities: ${scan.inferredCapabilities.join(', ') || 'none'}`);
+  const resolvedProject = path.resolve(project);
+  const relProject = path.relative(process.cwd(), resolvedProject) || '.';
+  const confidenceLabel = scan.inferenceConfidence >= 80 ? 'high' : scan.inferenceConfidence >= 50 ? 'medium' : 'low';
+
+  console.log(`Scanned: ${relProject}  (${resolvedProject})`);
+  console.log('');
+  console.log(`  Archetype:    ${scan.inferredArchetype}  (confidence ${scan.inferenceConfidence}% — ${confidenceLabel})`);
+  console.log(`  Stack:        ${scan.stack.join(', ') || 'none detected'}`);
+  console.log(`  Capabilities: ${scan.inferredCapabilities.join(', ') || 'none inferred'}`);
+  console.log(`  Tags:         ${scan.compatibilityTags.join(', ') || 'none'}`);
   console.log('');
 
   if (scan.archetypeScores.length > 0) {
+    console.log('Archetype match scores (how well your project fits each pattern):');
     console.log(
       renderTable(
         [
@@ -759,14 +768,16 @@ async function handleScan(args: string[]): Promise<void> {
   }
 
   if (scan.scanEvidence.length > 0) {
-    console.log('Evidence');
-    scan.scanEvidence.slice(0, 16).forEach((line) => console.log(`- ${line}`));
+    console.log(`Evidence — ${scan.scanEvidence.length} signal(s) found in ${relProject}:`);
+    scan.scanEvidence.slice(0, 16).forEach((line) => console.log(`  - ${line}`));
     if (scan.scanEvidence.length > 16) {
-      console.log(`- ...and ${scan.scanEvidence.length - 16} more`);
+      console.log(`  - ...and ${scan.scanEvidence.length - 16} more`);
     }
+    console.log('');
   }
 
-  printHint('Use `recommend --project . --explain-scan` to turn scan signals into ranked recommendations.');
+  printHint(`Next: plugscout recommend --project ${relProject} --only-safe --limit 10`);
+  printHint('Add --explain-scan to see how these signals shape recommendations.');
 }
 
 async function handleTop(args: string[]): Promise<void> {
@@ -798,6 +809,8 @@ async function handleTop(args: string[]): Promise<void> {
     const catalogMap = new Map(catalogItems.map((item) => [item.id, item]));
     console.log(renderRecommendationDecisionDetails(safe, catalogMap, policy, insights));
   }
+
+  await promptResultBrowser(safe.map((e) => ({id: e.id, name: ''})));
 }
 
 async function handleSync(args: string[]): Promise<void> {
@@ -917,6 +930,10 @@ async function handleRecommend(args: string[]): Promise<void> {
   }
 
   printHint('Next: run `show --id <catalog-id>` or `install --id <catalog-id> --yes`.');
+
+  if (format !== 'json') {
+    await promptResultBrowser(ranked.map((e) => ({id: e.id, name: ''})));
+  }
 }
 
 async function handleWeb(args: string[]): Promise<void> {
@@ -1337,6 +1354,91 @@ function describeRiskPosture(posture: LocalCliConfig['riskPosture']): string {
   }
 
   return 'show full catalog/recommendation set, including blocked items with flags.';
+}
+
+async function promptResultBrowser(entries: Array<{id: string; name: string}>): Promise<void> {
+  if (!process.stdout.isTTY || entries.length === 0) return;
+
+  const WINDOW = 8;
+  let selected = 0;
+  let linesDrawn = 0;
+
+  const ARROW_UP = '[A';
+  const ARROW_DOWN = '[B';
+  const ENTER = '\r';
+  const CTRL_C = '';
+  const Q = 'q';
+  const ESC = '\x1b';
+
+  function visibleStart(): number {
+    return Math.max(0, Math.min(selected - Math.floor(WINDOW / 2), entries.length - WINDOW));
+  }
+
+  function renderBrowser(firstRender: boolean): void {
+    if (!firstRender) {
+      moveCursor(process.stdout, 0, -linesDrawn);
+      clearScreenDown(process.stdout);
+    }
+    let drawn = 0;
+    const start = visibleStart();
+    const end = Math.min(start + WINDOW, entries.length);
+    for (let i = start; i < end; i++) {
+      const prefix = i === selected ? '  ❯ ' : '    ';
+      const nameSuffix = entries[i].name ? `  ${entries[i].name}` : '';
+      const line = `${prefix}${entries[i].id}${nameSuffix}`;
+      process.stdout.write(`${line}\n`);
+      drawn += 1;
+    }
+    if (entries.length > WINDOW) {
+      process.stdout.write(`\x1b[2m    (${selected + 1}/${entries.length})\x1b[0m\n`);
+      drawn += 1;
+    }
+    linesDrawn = drawn;
+  }
+
+  let firstLoop = true;
+  while (true) {
+    if (firstLoop) {
+      process.stdout.write('\x1b[2m  Inspect results: ↑↓ navigate  ⏎ inspect  q skip\x1b[0m\n\n');
+      firstLoop = false;
+    } else {
+      process.stdout.write('\n\x1b[2m  Inspect another: ↑↓ navigate  ⏎ inspect  q skip\x1b[0m\n\n');
+    }
+    linesDrawn = 0;
+    process.stdin.setRawMode(true);
+    process.stdin.resume();
+    process.stdin.setEncoding('utf8');
+    renderBrowser(true);
+
+    const action = await new Promise<{exit: boolean; id?: string}>((resolve) => {
+      process.stdin.on('data', function onKey(key: string) {
+        if (key === CTRL_C || key === Q || key === ESC) {
+          process.stdin.removeListener('data', onKey);
+          process.stdin.setRawMode(false);
+          process.stdin.pause();
+          process.stdout.write('\n');
+          resolve({exit: true});
+        } else if (key === ARROW_UP) {
+          selected = (selected - 1 + entries.length) % entries.length;
+          renderBrowser(false);
+        } else if (key === ARROW_DOWN) {
+          selected = (selected + 1) % entries.length;
+          renderBrowser(false);
+        } else if (key === ENTER) {
+          process.stdin.removeListener('data', onKey);
+          process.stdin.setRawMode(false);
+          process.stdin.pause();
+          process.stdout.write('\n');
+          resolve({exit: false, id: entries[selected].id});
+        }
+      });
+    });
+
+    if (action.exit) break;
+    if (action.id) {
+      await handleShow(['--id', action.id]);
+    }
+  }
 }
 
 function normalizeCommand(raw: string): string | null {
