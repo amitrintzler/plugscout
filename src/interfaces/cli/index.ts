@@ -32,9 +32,11 @@ import { renderHomeScreen, renderInteractiveHome } from './ui/home.js';
 import { handleMcp } from './mcp.js';
 import { writeWebReport } from './ui/web-report.js';
 import {
+  applyUpdate,
   checkForUpdateNow,
   maybeNotifyAboutUpdate,
   RELEASE_DOWNLOAD_URL,
+  type ApplyUpdateResult,
   type UpdateCheckResult
 } from './update-check.js';
 
@@ -1061,12 +1063,37 @@ async function handleClient(args: string[]): Promise<void> {
 
 async function handleUpgrade(args: string[]): Promise<void> {
   const subcommand = args[0] ?? 'check';
+
+  if (subcommand === 'apply') {
+    const result = await applyUpdate();
+    renderApplyResult(result);
+    return;
+  }
+
   if (subcommand !== 'check') {
-    throw new Error('Usage: upgrade check');
+    throw new Error('Usage: upgrade check | upgrade apply');
   }
 
   const result = await checkForUpdateNow();
   renderUpgradeResult(result);
+}
+
+function renderApplyResult(result: ApplyUpdateResult): void {
+  if (result.status === 'upgraded') {
+    console.log(`PlugScout upgraded: v${result.fromVersion} -> v${result.toVersion}`);
+    return;
+  }
+  if (result.status === 'already-latest') {
+    console.log(`PlugScout is already up to date (v${result.currentVersion}).`);
+    return;
+  }
+  if (result.status === 'no-release') {
+    console.log('No published release found yet.');
+    console.log(`Releases: ${RELEASE_DOWNLOAD_URL}`);
+    return;
+  }
+  console.log(`Upgrade failed: ${result.detail}`);
+  console.log(`Manual install: npm install -g @shnitzel/plugscout@latest`);
 }
 
 function renderUpgradeResult(result: UpdateCheckResult): void {
@@ -1090,7 +1117,7 @@ function renderUpgradeResult(result: UpdateCheckResult): void {
   }
 
   console.log(`New PlugScout version available: v${result.currentVersion} -> v${result.latestVersion}`);
-  console.log(`Download: ${RELEASE_DOWNLOAD_URL}`);
+  console.log(`Upgrade: plugscout upgrade apply   |   Download: ${RELEASE_DOWNLOAD_URL}`);
 }
 
 function sortRecommendations(recommendations: Recommendation[], sort: SortKey): Recommendation[] {
@@ -1244,6 +1271,7 @@ function printHelp(): void {
   console.log('  web [--out .plugscout/report.html] [--kind ...] [--limit n] [--open]');
   console.log('  client setup --client cursor|gemini|claude-desktop|windsurf|opencode|zed [--scope user|project] [--force]');
   console.log('  upgrade check');
+  console.log('  upgrade apply                  auto-install latest version via npm');
   console.log('  help');
   console.log('');
   console.log('Kind aliases');

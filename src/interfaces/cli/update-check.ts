@@ -1,4 +1,5 @@
 import fs from 'node:fs/promises';
+import { spawnSync } from 'node:child_process';
 
 import semver from 'semver';
 
@@ -129,7 +130,7 @@ export async function maybeNotifyAboutUpdate(options: { disableAutoCheck?: boole
   }
 
   console.log(`New PlugScout version available: v${currentVersion} -> v${state.latestVersion}`);
-  console.log(`Download: ${RELEASE_DOWNLOAD_URL}`);
+  console.log(`Upgrade: plugscout upgrade apply   |   Download: ${RELEASE_DOWNLOAD_URL}`);
 
   await saveUpdateCheckState({
     ...state,
@@ -169,6 +170,43 @@ export async function checkForUpdateNow(): Promise<UpdateCheckResult> {
   }
 
   return { status: 'up-to-date', currentVersion, latestVersion: result.latestVersion };
+}
+
+export type ApplyUpdateResult =
+  | { status: 'upgraded'; fromVersion: string; toVersion: string }
+  | { status: 'already-latest'; currentVersion: string; latestVersion: string }
+  | { status: 'no-release'; currentVersion: string }
+  | { status: 'error'; currentVersion: string; detail: string };
+
+export async function applyUpdate(): Promise<ApplyUpdateResult> {
+  const currentVersion = await loadCurrentVersion();
+  const release = await lookupLatestReleaseVersion();
+
+  if (release.status === 'error') {
+    return { status: 'error', currentVersion, detail: 'Could not reach GitHub releases API.' };
+  }
+  if (release.status === 'no-release') {
+    return { status: 'no-release', currentVersion };
+  }
+  if (!isVersionNewer(release.latestVersion, currentVersion)) {
+    return { status: 'already-latest', currentVersion, latestVersion: release.latestVersion };
+  }
+
+  const pkg = '@shnitzel/plugscout@latest';
+  const result = spawnSync('npm', ['install', '-g', pkg], { stdio: 'inherit' });
+  if (result.status !== 0) {
+    return { status: 'error', currentVersion, detail: `npm install -g ${pkg} exited with ${result.status ?? 'signal'}` };
+  }
+
+  await saveUpdateCheckState({
+    ...(await loadUpdateCheckState()),
+    source: 'github-releases',
+    lastCheckedAt: new Date().toISOString(),
+    latestVersion: release.latestVersion,
+    lastNotifiedVersion: release.latestVersion
+  });
+
+  return { status: 'upgraded', fromVersion: currentVersion, toVersion: release.latestVersion };
 }
 
 async function lookupLatestReleaseVersion(): Promise<ReleaseLookupResult> {
