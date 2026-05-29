@@ -23,7 +23,8 @@ export async function writeWebReport(options: WebReportOptions): Promise<{
     loadSecurityPolicy(),
     loadItemInsights()
   ]);
-  const filtered = filterByKinds(items, options.kinds).slice(0, options.limit);
+  const allFiltered = filterByKinds(items, options.kinds);
+  const filtered = allFiltered.slice(0, options.limit);
   const quarantineIds = new Set(quarantine.map((entry) => entry.id));
   const rows = filtered.map((item) => {
     const assessment = buildAssessment(item, policy);
@@ -34,8 +35,10 @@ export async function writeWebReport(options: WebReportOptions): Promise<{
 
   const html = renderHtml(
     rows,
+    allFiltered,
     {
-      totalItems: filtered.length,
+      totalItems: allFiltered.length,
+      shownItems: filtered.length,
       whitelist: whitelist.size,
       quarantined: quarantine.length
     },
@@ -65,10 +68,11 @@ function renderHtml(
     approved: boolean;
     insight?: ItemInsight;
   }>,
-  stats: { totalItems: number; whitelist: number; quarantined: number },
+  allItems: CatalogItem[],
+  stats: { totalItems: number; shownItems: number; whitelist: number; quarantined: number },
   policy: SecurityPolicy
 ): string {
-  const kindCounts = countByKind(rows.map((entry) => entry.item));
+  const kindCounts = countByKind(allItems);
   const riskScale = escapeHtml(formatRiskScale(policy));
   const cardsJson = rows.map((entry) => renderDetailCard(entry, policy)).join('\n');
 
@@ -238,9 +242,10 @@ function renderHtml(
   <div class="wrap">
     <h1>PlugScout Web Report</h1>
     <p class="sub">Claude plugins · Claude connectors · Copilot extensions · Cursor extensions · Gemini extensions · Skills · MCP servers</p>
+    ${stats.shownItems < stats.totalItems ? `<p class="sub" style="color:var(--muted)">Showing ${stats.shownItems.toLocaleString()} of ${stats.totalItems.toLocaleString()} catalog items · counts below reflect full catalog</p>` : ''}
 
     <div class="stat-cards">
-      <div class="stat-card"><div class="k">Total</div><div class="v">${stats.totalItems}</div></div>
+      <div class="stat-card"><div class="k">Total</div><div class="v">${stats.totalItems.toLocaleString()}</div></div>
       <div class="stat-card"><div class="k">Plugins</div><div class="v">${kindCounts['claude-plugin']}</div></div>
       <div class="stat-card"><div class="k">Connectors</div><div class="v">${kindCounts['claude-connector']}</div></div>
       <div class="stat-card"><div class="k">Copilot Ext</div><div class="v">${kindCounts['copilot-extension']}</div></div>
