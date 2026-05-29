@@ -1396,8 +1396,10 @@ async function promptResultBrowser(entries: Array<{id: string; name: string}>): 
     linesDrawn = drawn;
   }
 
+  // eslint-disable-next-line prefer-const
+  let running = true;
   let firstLoop = true;
-  while (true) {
+  while (running) {
     if (firstLoop) {
       process.stdout.write('\x1b[2m  Inspect results: ↑↓ navigate  ⏎ inspect  q skip\x1b[0m\n\n');
       firstLoop = false;
@@ -1434,8 +1436,9 @@ async function promptResultBrowser(entries: Array<{id: string; name: string}>): 
       });
     });
 
-    if (action.exit) break;
-    if (action.id) {
+    if (action.exit) {
+      running = false;
+    } else if (action.id) {
       await handleShow(['--id', action.id]);
     }
   }
