@@ -2022,17 +2022,137 @@
         {
           "id": "cursor-extension:github-copilot",
           "name": "GitHub Copilot",
-          "description": "AI pair programmer that suggests code completions and generates functions from comments.",
-          "capabilities": ["code-completion", "automation", "prompting"],
-          "compatibility": ["cursor", "node", "python", "general"],
+          "description": "AI pair programmer with inline code completions and multi-line suggestions trained on public code.",
+          "capabilities": [
+            "code-completion",
+            "automation",
+            "ai"
+          ],
+          "compatibility": [
+            "cursor",
+            "node",
+            "python",
+            "general"
+          ],
           "install": {
             "kind": "manual",
-            "instructions": "Install from Cursor Extensions marketplace: search 'GitHub Copilot'.",
+            "instructions": "Install from Cursor Extensions: search 'GitHub Copilot'.",
             "url": "https://marketplace.visualstudio.com/items?itemName=GitHub.copilot"
           },
+          "adoptionSignal": 97,
+          "maintenanceSignal": 93,
+          "provenanceSignal": 99,
+          "freshnessSignal": 95,
+          "securitySignals": {
+            "knownVulnerabilities": 0,
+            "suspiciousPatterns": 0,
+            "injectionFindings": 0,
+            "exfiltrationSignals": 0,
+            "integrityAlerts": 0
+          },
+          "metadata": {
+            "vsixId": "GitHub.copilot",
+            "sourceConfidence": "official"
+          }
+        },
+        {
+          "id": "cursor-extension:github-copilot-chat",
+          "name": "GitHub Copilot Chat",
+          "description": "Inline AI chat and agent mode for asking questions, editing, and generating code with context.",
+          "capabilities": [
+            "ai",
+            "chat",
+            "code-generation",
+            "agent"
+          ],
+          "compatibility": [
+            "cursor",
+            "node",
+            "python",
+            "general"
+          ],
+          "install": {
+            "kind": "manual",
+            "instructions": "Install from Cursor Extensions: search 'GitHub Copilot Chat'.",
+            "url": "https://marketplace.visualstudio.com/items?itemName=GitHub.copilot-chat"
+          },
           "adoptionSignal": 95,
-          "maintenanceSignal": 90,
-          "provenanceSignal": 98,
+          "maintenanceSignal": 92,
+          "provenanceSignal": 99,
+          "freshnessSignal": 95,
+          "securitySignals": {
+            "knownVulnerabilities": 0,
+            "suspiciousPatterns": 0,
+            "injectionFindings": 0,
+            "exfiltrationSignals": 0,
+            "integrityAlerts": 0
+          },
+          "metadata": {
+            "vsixId": "GitHub.copilot-chat",
+            "sourceConfidence": "official"
+          }
+        },
+        {
+          "id": "cursor-extension:claude-code",
+          "name": "Claude Code",
+          "description": "Anthropic's AI coding assistant with full codebase context, multi-file editing, and refactoring via Claude models.",
+          "capabilities": [
+            "ai",
+            "code-generation",
+            "editing",
+            "agent"
+          ],
+          "compatibility": [
+            "cursor",
+            "node",
+            "python",
+            "general"
+          ],
+          "install": {
+            "kind": "manual",
+            "instructions": "Install from Cursor Extensions: search 'Claude Code'.",
+            "url": "https://marketplace.visualstudio.com/items?itemName=Anthropic.claude-code"
+          },
+          "adoptionSignal": 88,
+          "maintenanceSignal": 92,
+          "provenanceSignal": 99,
+          "freshnessSignal": 96,
+          "securitySignals": {
+            "knownVulnerabilities": 0,
+            "suspiciousPatterns": 0,
+            "injectionFindings": 0,
+            "exfiltrationSignals": 0,
+            "integrityAlerts": 0
+          },
+          "metadata": {
+            "vsixId": "Anthropic.claude-code",
+            "sourceConfidence": "official"
+          }
+        },
+        {
+          "id": "cursor-extension:continue",
+          "name": "Continue",
+          "description": "Open-source AI coding assistant with customizable models, MCP tool support, and context providers.",
+          "capabilities": [
+            "ai",
+            "autocomplete",
+            "chat",
+            "mcp"
+          ],
+          "compatibility": [
+            "cursor",
+            "node",
+            "python",
+            "general"
+          ],
+          "install": {
+            "kind": "manual",
+            "instructions": "Install from Cursor Extensions: search 'Continue'.",
+            "url": "https://marketplace.visualstudio.com/items?itemName=Continue.continue"
+          },
+          "adoptionSignal": 82,
+          "maintenanceSignal": 88,
+          "provenanceSignal": 90,
           "freshnessSignal": 92,
           "securitySignals": {
             "knownVulnerabilities": 0,
@@ -2041,20 +2161,413 @@
             "exfiltrationSignals": 0,
             "integrityAlerts": 0
           },
-          "metadata": { "vsixId": "GitHub.copilot" }
+          "metadata": {
+            "vsixId": "Continue.continue",
+            "sourceConfidence": "official"
+          }
         },
         {
           "id": "cursor-extension:prettier",
           "name": "Prettier - Code Formatter",
-          "description": "Opinionated code formatter supporting JS, TS, CSS, HTML, JSON, and more.",
-          "capabilities": ["formatting", "automation"],
-          "compatibility": ["cursor", "node", "general"],
+          "description": "Opinionated code formatter for JS, TS, CSS, HTML, JSON, Markdown \u2014 69M installs.",
+          "capabilities": [
+            "formatting",
+            "code-style"
+          ],
+          "compatibility": [
+            "cursor",
+            "node",
+            "general"
+          ],
           "install": {
             "kind": "manual",
-            "instructions": "Install from Cursor Extensions marketplace: search 'Prettier'.",
+            "instructions": "Install from Cursor Extensions: search 'Prettier'.",
             "url": "https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode"
           },
-          "adoptionSignal": 94,
+          "adoptionSignal": 97,
+          "maintenanceSignal": 90,
+          "provenanceSignal": 96,
+          "freshnessSignal": 91,
+          "securitySignals": {
+            "knownVulnerabilities": 0,
+            "suspiciousPatterns": 0,
+            "injectionFindings": 0,
+            "exfiltrationSignals": 0,
+            "integrityAlerts": 0
+          },
+          "metadata": {
+            "vsixId": "esbenp.prettier-vscode",
+            "sourceConfidence": "official"
+          }
+        },
+        {
+          "id": "cursor-extension:eslint",
+          "name": "ESLint",
+          "description": "Integrates ESLint linting into the editor with project rule enforcement and auto-fix \u2014 51M installs.",
+          "capabilities": [
+            "linting",
+            "code-quality",
+            "javascript"
+          ],
+          "compatibility": [
+            "cursor",
+            "node",
+            "general"
+          ],
+          "install": {
+            "kind": "manual",
+            "instructions": "Install from Cursor Extensions: search 'ESLint'.",
+            "url": "https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint"
+          },
+          "adoptionSignal": 96,
+          "maintenanceSignal": 89,
+          "provenanceSignal": 97,
+          "freshnessSignal": 90,
+          "securitySignals": {
+            "knownVulnerabilities": 0,
+            "suspiciousPatterns": 0,
+            "injectionFindings": 0,
+            "exfiltrationSignals": 0,
+            "integrityAlerts": 0
+          },
+          "metadata": {
+            "vsixId": "dbaeumer.vscode-eslint",
+            "sourceConfidence": "official"
+          }
+        },
+        {
+          "id": "cursor-extension:python",
+          "name": "Python",
+          "description": "Full Python support: IntelliSense, debugging, linting, formatting, testing \u2014 220M installs.",
+          "capabilities": [
+            "language",
+            "linting",
+            "debugging",
+            "testing"
+          ],
+          "compatibility": [
+            "cursor",
+            "python"
+          ],
+          "install": {
+            "kind": "manual",
+            "instructions": "Install from Cursor Extensions: search 'Python' by Microsoft.",
+            "url": "https://marketplace.visualstudio.com/items?itemName=ms-python.python"
+          },
+          "adoptionSignal": 98,
+          "maintenanceSignal": 95,
+          "provenanceSignal": 99,
+          "freshnessSignal": 94,
+          "securitySignals": {
+            "knownVulnerabilities": 0,
+            "suspiciousPatterns": 0,
+            "injectionFindings": 0,
+            "exfiltrationSignals": 0,
+            "integrityAlerts": 0
+          },
+          "metadata": {
+            "vsixId": "ms-python.python",
+            "sourceConfidence": "official"
+          }
+        },
+        {
+          "id": "cursor-extension:pylance",
+          "name": "Pylance",
+          "description": "Fast, feature-rich Python language server with type checking (Pyright-based) \u2014 188M installs.",
+          "capabilities": [
+            "language",
+            "type-checking",
+            "autocomplete"
+          ],
+          "compatibility": [
+            "cursor",
+            "python"
+          ],
+          "install": {
+            "kind": "manual",
+            "instructions": "Install from Cursor Extensions: search 'Pylance'.",
+            "url": "https://marketplace.visualstudio.com/items?itemName=ms-python.vscode-pylance"
+          },
+          "adoptionSignal": 97,
+          "maintenanceSignal": 95,
+          "provenanceSignal": 99,
+          "freshnessSignal": 93,
+          "securitySignals": {
+            "knownVulnerabilities": 0,
+            "suspiciousPatterns": 0,
+            "injectionFindings": 0,
+            "exfiltrationSignals": 0,
+            "integrityAlerts": 0
+          },
+          "metadata": {
+            "vsixId": "ms-python.vscode-pylance",
+            "sourceConfidence": "official"
+          }
+        },
+        {
+          "id": "cursor-extension:jupyter",
+          "name": "Jupyter",
+          "description": "Jupyter notebook support with interactive computing, cell execution, and IntelliSense \u2014 105M installs.",
+          "capabilities": [
+            "notebooks",
+            "data-science",
+            "interactive"
+          ],
+          "compatibility": [
+            "cursor",
+            "python"
+          ],
+          "install": {
+            "kind": "manual",
+            "instructions": "Install from Cursor Extensions: search 'Jupyter' by Microsoft.",
+            "url": "https://marketplace.visualstudio.com/items?itemName=ms-toolsai.jupyter"
+          },
+          "adoptionSignal": 95,
+          "maintenanceSignal": 93,
+          "provenanceSignal": 99,
+          "freshnessSignal": 92,
+          "securitySignals": {
+            "knownVulnerabilities": 0,
+            "suspiciousPatterns": 0,
+            "injectionFindings": 0,
+            "exfiltrationSignals": 0,
+            "integrityAlerts": 0
+          },
+          "metadata": {
+            "vsixId": "ms-toolsai.jupyter",
+            "sourceConfidence": "official"
+          }
+        },
+        {
+          "id": "cursor-extension:gitlens",
+          "name": "GitLens",
+          "description": "Supercharged Git: blame annotations, commit history, branch visualization, code authorship \u2014 50M installs.",
+          "capabilities": [
+            "git",
+            "blame",
+            "history",
+            "collaboration"
+          ],
+          "compatibility": [
+            "cursor",
+            "general"
+          ],
+          "install": {
+            "kind": "manual",
+            "instructions": "Install from Cursor Extensions: search 'GitLens'.",
+            "url": "https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens"
+          },
+          "adoptionSignal": 95,
+          "maintenanceSignal": 91,
+          "provenanceSignal": 94,
+          "freshnessSignal": 90,
+          "securitySignals": {
+            "knownVulnerabilities": 0,
+            "suspiciousPatterns": 0,
+            "injectionFindings": 0,
+            "exfiltrationSignals": 0,
+            "integrityAlerts": 0
+          },
+          "metadata": {
+            "vsixId": "eamodio.gitlens",
+            "sourceConfidence": "official"
+          }
+        },
+        {
+          "id": "cursor-extension:git-graph",
+          "name": "Git Graph",
+          "description": "Interactive visual graph of commits, branches, and merges with one-click history exploration \u2014 14M installs.",
+          "capabilities": [
+            "git",
+            "visualization",
+            "history"
+          ],
+          "compatibility": [
+            "cursor",
+            "general"
+          ],
+          "install": {
+            "kind": "manual",
+            "instructions": "Install from Cursor Extensions: search 'Git Graph'.",
+            "url": "https://marketplace.visualstudio.com/items?itemName=mhutchie.git-graph"
+          },
+          "adoptionSignal": 90,
+          "maintenanceSignal": 82,
+          "provenanceSignal": 88,
+          "freshnessSignal": 83,
+          "securitySignals": {
+            "knownVulnerabilities": 0,
+            "suspiciousPatterns": 0,
+            "injectionFindings": 0,
+            "exfiltrationSignals": 0,
+            "integrityAlerts": 0
+          },
+          "metadata": {
+            "vsixId": "mhutchie.git-graph",
+            "sourceConfidence": "official"
+          }
+        },
+        {
+          "id": "cursor-extension:github-pull-requests",
+          "name": "GitHub Pull Requests",
+          "description": "Create, manage, and review GitHub PRs and issues without leaving the editor \u2014 35M installs.",
+          "capabilities": [
+            "git",
+            "github",
+            "pr-review",
+            "collaboration"
+          ],
+          "compatibility": [
+            "cursor",
+            "github",
+            "general"
+          ],
+          "install": {
+            "kind": "manual",
+            "instructions": "Install from Cursor Extensions: search 'GitHub Pull Requests'.",
+            "url": "https://marketplace.visualstudio.com/items?itemName=GitHub.vscode-pull-request-github"
+          },
+          "adoptionSignal": 93,
+          "maintenanceSignal": 92,
+          "provenanceSignal": 99,
+          "freshnessSignal": 93,
+          "securitySignals": {
+            "knownVulnerabilities": 0,
+            "suspiciousPatterns": 0,
+            "injectionFindings": 0,
+            "exfiltrationSignals": 0,
+            "integrityAlerts": 0
+          },
+          "metadata": {
+            "vsixId": "GitHub.vscode-pull-request-github",
+            "sourceConfidence": "official"
+          }
+        },
+        {
+          "id": "cursor-extension:docker",
+          "name": "Docker",
+          "description": "Container management, Dockerfile/Compose syntax, build and run Docker containers from the editor \u2014 51M installs.",
+          "capabilities": [
+            "containers",
+            "devops",
+            "docker"
+          ],
+          "compatibility": [
+            "cursor",
+            "node",
+            "python",
+            "general"
+          ],
+          "install": {
+            "kind": "manual",
+            "instructions": "Install from Cursor Extensions: search 'Docker' by Microsoft.",
+            "url": "https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-docker"
+          },
+          "adoptionSignal": 95,
+          "maintenanceSignal": 92,
+          "provenanceSignal": 99,
+          "freshnessSignal": 91,
+          "securitySignals": {
+            "knownVulnerabilities": 0,
+            "suspiciousPatterns": 0,
+            "injectionFindings": 0,
+            "exfiltrationSignals": 0,
+            "integrityAlerts": 0
+          },
+          "metadata": {
+            "vsixId": "ms-azuretools.vscode-docker",
+            "sourceConfidence": "official"
+          }
+        },
+        {
+          "id": "cursor-extension:remote-containers",
+          "name": "Dev Containers",
+          "description": "Open any folder inside a Docker container for fully reproducible, isolated dev environments \u2014 39M installs.",
+          "capabilities": [
+            "containers",
+            "remote",
+            "devops"
+          ],
+          "compatibility": [
+            "cursor",
+            "docker",
+            "general"
+          ],
+          "install": {
+            "kind": "manual",
+            "instructions": "Install from Cursor Extensions: search 'Dev Containers'.",
+            "url": "https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers"
+          },
+          "adoptionSignal": 92,
+          "maintenanceSignal": 93,
+          "provenanceSignal": 99,
+          "freshnessSignal": 92,
+          "securitySignals": {
+            "knownVulnerabilities": 0,
+            "suspiciousPatterns": 0,
+            "injectionFindings": 0,
+            "exfiltrationSignals": 0,
+            "integrityAlerts": 0
+          },
+          "metadata": {
+            "vsixId": "ms-vscode-remote.remote-containers",
+            "sourceConfidence": "official"
+          }
+        },
+        {
+          "id": "cursor-extension:remote-ssh",
+          "name": "Remote - SSH",
+          "description": "Edit files on remote machines over SSH as if they were local \u2014 35M installs.",
+          "capabilities": [
+            "remote",
+            "ssh",
+            "dev-environments"
+          ],
+          "compatibility": [
+            "cursor",
+            "general"
+          ],
+          "install": {
+            "kind": "manual",
+            "instructions": "Install from Cursor Extensions: search 'Remote - SSH'.",
+            "url": "https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-ssh"
+          },
+          "adoptionSignal": 92,
+          "maintenanceSignal": 92,
+          "provenanceSignal": 99,
+          "freshnessSignal": 91,
+          "securitySignals": {
+            "knownVulnerabilities": 0,
+            "suspiciousPatterns": 0,
+            "injectionFindings": 0,
+            "exfiltrationSignals": 0,
+            "integrityAlerts": 0
+          },
+          "metadata": {
+            "vsixId": "ms-vscode-remote.remote-ssh",
+            "sourceConfidence": "official"
+          }
+        },
+        {
+          "id": "cursor-extension:tailwind-intellisense",
+          "name": "Tailwind CSS IntelliSense",
+          "description": "Autocomplete, hover previews, and linting for Tailwind CSS utility classes \u2014 14M installs.",
+          "capabilities": [
+            "frontend",
+            "css",
+            "autocomplete"
+          ],
+          "compatibility": [
+            "cursor",
+            "node",
+            "general"
+          ],
+          "install": {
+            "kind": "manual",
+            "instructions": "Install from Cursor Extensions: search 'Tailwind CSS IntelliSense'.",
+            "url": "https://marketplace.visualstudio.com/items?itemName=bradlc.vscode-tailwindcss"
+          },
+          "adoptionSignal": 89,
           "maintenanceSignal": 88,
           "provenanceSignal": 95,
           "freshnessSignal": 90,
@@ -2065,23 +2578,33 @@
             "exfiltrationSignals": 0,
             "integrityAlerts": 0
           },
-          "metadata": { "vsixId": "esbenp.prettier-vscode" }
+          "metadata": {
+            "vsixId": "bradlc.vscode-tailwindcss",
+            "sourceConfidence": "official"
+          }
         },
         {
-          "id": "cursor-extension:eslint",
-          "name": "ESLint",
-          "description": "Integrates ESLint into VS Code / Cursor for real-time JavaScript and TypeScript linting.",
-          "capabilities": ["linting", "guardrails", "code-scanning"],
-          "compatibility": ["cursor", "node", "general"],
+          "id": "cursor-extension:error-lens",
+          "name": "Error Lens",
+          "description": "Shows errors, warnings, and hints inline at the relevant code line as you type \u2014 9M installs.",
+          "capabilities": [
+            "linting",
+            "code-quality",
+            "debugging"
+          ],
+          "compatibility": [
+            "cursor",
+            "general"
+          ],
           "install": {
             "kind": "manual",
-            "instructions": "Install from Cursor Extensions marketplace: search 'ESLint'.",
-            "url": "https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint"
+            "instructions": "Install from Cursor Extensions: search 'Error Lens'.",
+            "url": "https://marketplace.visualstudio.com/items?itemName=usernamehw.errorlens"
           },
-          "adoptionSignal": 93,
-          "maintenanceSignal": 87,
-          "provenanceSignal": 95,
-          "freshnessSignal": 89,
+          "adoptionSignal": 87,
+          "maintenanceSignal": 83,
+          "provenanceSignal": 88,
+          "freshnessSignal": 85,
           "securitySignals": {
             "knownVulnerabilities": 0,
             "suspiciousPatterns": 0,
@@ -2089,46 +2612,66 @@
             "exfiltrationSignals": 0,
             "integrityAlerts": 0
           },
-          "metadata": { "vsixId": "dbaeumer.vscode-eslint" }
+          "metadata": {
+            "vsixId": "usernamehw.errorlens",
+            "sourceConfidence": "official"
+          }
         },
         {
-          "id": "cursor-extension:gitlens",
-          "name": "GitLens — Git supercharged",
-          "description": "Supercharge Git inside Cursor with blame, history, code authorship, and repository insights.",
-          "capabilities": ["search", "automation", "docs"],
-          "compatibility": ["cursor", "general"],
+          "id": "cursor-extension:thunder-client",
+          "name": "Thunder Client",
+          "description": "Lightweight REST API client and HTTP test runner built into the editor \u2014 7M installs.",
+          "capabilities": [
+            "api-testing",
+            "rest",
+            "http"
+          ],
+          "compatibility": [
+            "cursor",
+            "node",
+            "general"
+          ],
           "install": {
             "kind": "manual",
-            "instructions": "Install from Cursor Extensions marketplace: search 'GitLens'.",
-            "url": "https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens"
+            "instructions": "Install from Cursor Extensions: search 'Thunder Client'.",
+            "url": "https://marketplace.visualstudio.com/items?itemName=rangav.vscode-thunder-client"
+          },
+          "adoptionSignal": 86,
+          "maintenanceSignal": 82,
+          "provenanceSignal": 87,
+          "freshnessSignal": 84,
+          "securitySignals": {
+            "knownVulnerabilities": 0,
+            "suspiciousPatterns": 0,
+            "injectionFindings": 0,
+            "exfiltrationSignals": 0,
+            "integrityAlerts": 0
+          },
+          "metadata": {
+            "vsixId": "rangav.vscode-thunder-client",
+            "sourceConfidence": "official"
+          }
+        },
+        {
+          "id": "cursor-extension:code-spell-checker",
+          "name": "Code Spell Checker",
+          "description": "Catches spelling errors in code identifiers, comments, and strings \u2014 17M installs.",
+          "capabilities": [
+            "spell-check",
+            "code-quality"
+          ],
+          "compatibility": [
+            "cursor",
+            "general"
+          ],
+          "install": {
+            "kind": "manual",
+            "instructions": "Install from Cursor Extensions: search 'Code Spell Checker'.",
+            "url": "https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker"
           },
           "adoptionSignal": 91,
-          "maintenanceSignal": 88,
-          "provenanceSignal": 93,
-          "freshnessSignal": 88,
-          "securitySignals": {
-            "knownVulnerabilities": 0,
-            "suspiciousPatterns": 0,
-            "injectionFindings": 0,
-            "exfiltrationSignals": 0,
-            "integrityAlerts": 0
-          },
-          "metadata": { "vsixId": "eamodio.gitlens" }
-        },
-        {
-          "id": "cursor-extension:docker",
-          "name": "Docker",
-          "description": "Manage Docker containers, images, volumes, and registries from within Cursor.",
-          "capabilities": ["automation", "guardrails"],
-          "compatibility": ["cursor", "container", "general"],
-          "install": {
-            "kind": "manual",
-            "instructions": "Install from Cursor Extensions marketplace: search 'Docker'.",
-            "url": "https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-docker"
-          },
-          "adoptionSignal": 89,
-          "maintenanceSignal": 85,
-          "provenanceSignal": 96,
+          "maintenanceSignal": 86,
+          "provenanceSignal": 89,
           "freshnessSignal": 87,
           "securitySignals": {
             "knownVulnerabilities": 0,
@@ -2137,239 +2680,33 @@
             "exfiltrationSignals": 0,
             "integrityAlerts": 0
           },
-          "metadata": { "vsixId": "ms-azuretools.vscode-docker" }
+          "metadata": {
+            "vsixId": "streetsidesoftware.code-spell-checker",
+            "sourceConfidence": "official"
+          }
         },
         {
-          "id": "cursor-extension:python",
-          "name": "Python",
-          "description": "Full Python language support: IntelliSense, linting, debugging, and Jupyter notebooks.",
-          "capabilities": ["code-completion", "linting", "automation"],
-          "compatibility": ["cursor", "python", "general"],
+          "id": "cursor-extension:pretty-ts-errors",
+          "name": "Pretty TypeScript Errors",
+          "description": "Reformats complex TypeScript compiler errors into readable, human-friendly messages \u2014 2M installs.",
+          "capabilities": [
+            "typescript",
+            "debugging",
+            "dx"
+          ],
+          "compatibility": [
+            "cursor",
+            "node"
+          ],
           "install": {
             "kind": "manual",
-            "instructions": "Install from Cursor Extensions marketplace: search 'Python'.",
-            "url": "https://marketplace.visualstudio.com/items?itemName=ms-python.python"
-          },
-          "adoptionSignal": 92,
-          "maintenanceSignal": 90,
-          "provenanceSignal": 97,
-          "freshnessSignal": 91,
-          "securitySignals": {
-            "knownVulnerabilities": 0,
-            "suspiciousPatterns": 0,
-            "injectionFindings": 0,
-            "exfiltrationSignals": 0,
-            "integrityAlerts": 0
-          },
-          "metadata": { "vsixId": "ms-python.python" }
-        },
-        {
-          "id": "cursor-extension:remote-ssh",
-          "name": "Remote - SSH",
-          "description": "Open any folder on a remote machine using SSH and use Cursor as your full development environment.",
-          "capabilities": ["automation", "search"],
-          "compatibility": ["cursor", "cloud", "general"],
-          "install": {
-            "kind": "manual",
-            "instructions": "Install from Cursor Extensions marketplace: search 'Remote - SSH'.",
-            "url": "https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-ssh"
-          },
-          "adoptionSignal": 86,
-          "maintenanceSignal": 84,
-          "provenanceSignal": 97,
-          "freshnessSignal": 85,
-          "securitySignals": {
-            "knownVulnerabilities": 0,
-            "suspiciousPatterns": 0,
-            "injectionFindings": 0,
-            "exfiltrationSignals": 0,
-            "integrityAlerts": 0
-          },
-          "metadata": { "vsixId": "ms-vscode-remote.remote-ssh" }
-        },
-        {
-          "id": "cursor-extension:thunder-client",
-          "name": "Thunder Client",
-          "description": "Lightweight REST API client for testing APIs directly inside Cursor.",
-          "capabilities": ["automation", "search"],
-          "compatibility": ["cursor", "node", "general"],
-          "install": {
-            "kind": "manual",
-            "instructions": "Install from Cursor Extensions marketplace: search 'Thunder Client'.",
-            "url": "https://marketplace.visualstudio.com/items?itemName=rangav.vscode-thunder-client"
+            "instructions": "Install from Cursor Extensions: search 'Pretty TypeScript Errors'.",
+            "url": "https://marketplace.visualstudio.com/items?itemName=yoavbls.pretty-ts-errors"
           },
           "adoptionSignal": 82,
-          "maintenanceSignal": 79,
-          "provenanceSignal": 88,
-          "freshnessSignal": 81,
-          "securitySignals": {
-            "knownVulnerabilities": 0,
-            "suspiciousPatterns": 0,
-            "injectionFindings": 0,
-            "exfiltrationSignals": 0,
-            "integrityAlerts": 0
-          },
-          "metadata": { "vsixId": "rangav.vscode-thunder-client" }
-        },
-        {
-          "id": "cursor-extension:tailwind-intellisense",
-          "name": "Tailwind CSS IntelliSense",
-          "description": "Intelligent Tailwind CSS tooling with autocomplete, syntax highlighting, and linting.",
-          "capabilities": ["code-completion", "linting"],
-          "compatibility": ["cursor", "node", "general"],
-          "install": {
-            "kind": "manual",
-            "instructions": "Install from Cursor Extensions marketplace: search 'Tailwind CSS IntelliSense'.",
-            "url": "https://marketplace.visualstudio.com/items?itemName=bradlc.vscode-tailwindcss"
-          },
-          "adoptionSignal": 87,
-          "maintenanceSignal": 85,
-          "provenanceSignal": 92,
-          "freshnessSignal": 86,
-          "securitySignals": {
-            "knownVulnerabilities": 0,
-            "suspiciousPatterns": 0,
-            "injectionFindings": 0,
-            "exfiltrationSignals": 0,
-            "integrityAlerts": 0
-          },
-          "metadata": { "vsixId": "bradlc.vscode-tailwindcss" }
-        },
-        {
-          "id": "cursor-extension:error-lens",
-          "name": "Error Lens",
-          "description": "Improve highlighting of errors, warnings, and info messages with inline diagnostics.",
-          "capabilities": ["linting", "guardrails"],
-          "compatibility": ["cursor", "general"],
-          "install": {
-            "kind": "manual",
-            "instructions": "Install from Cursor Extensions marketplace: search 'Error Lens'.",
-            "url": "https://marketplace.visualstudio.com/items?itemName=usernamehw.errorlens"
-          },
-          "adoptionSignal": 84,
           "maintenanceSignal": 80,
-          "provenanceSignal": 88,
-          "freshnessSignal": 83,
-          "securitySignals": {
-            "knownVulnerabilities": 0,
-            "suspiciousPatterns": 0,
-            "injectionFindings": 0,
-            "exfiltrationSignals": 0,
-            "integrityAlerts": 0
-          },
-          "metadata": { "vsixId": "usernamehw.errorlens" }
-        },
-        {
-          "id": "cursor-extension:prisma",
-          "name": "Prisma",
-          "description": "Official Prisma extension with schema syntax highlighting, formatting, and jump-to-definition.",
-          "capabilities": ["code-completion", "formatting"],
-          "compatibility": ["cursor", "node", "postgresql", "general"],
-          "install": {
-            "kind": "manual",
-            "instructions": "Install from Cursor Extensions marketplace: search 'Prisma'.",
-            "url": "https://marketplace.visualstudio.com/items?itemName=Prisma.prisma"
-          },
-          "adoptionSignal": 80,
-          "maintenanceSignal": 82,
-          "provenanceSignal": 92,
-          "freshnessSignal": 80,
-          "securitySignals": {
-            "knownVulnerabilities": 0,
-            "suspiciousPatterns": 0,
-            "injectionFindings": 0,
-            "exfiltrationSignals": 0,
-            "integrityAlerts": 0
-          },
-          "metadata": { "vsixId": "Prisma.prisma" }
-        },
-        {
-          "id": "cursor-extension:markdownlint",
-          "name": "markdownlint",
-          "description": "Markdown linting and style checking for consistent documentation.",
-          "capabilities": ["linting", "guardrails", "docs"],
-          "compatibility": ["cursor", "general"],
-          "install": {
-            "kind": "manual",
-            "instructions": "Install from Cursor Extensions marketplace: search 'markdownlint'.",
-            "url": "https://marketplace.visualstudio.com/items?itemName=DavidAnson.vscode-markdownlint"
-          },
-          "adoptionSignal": 79,
-          "maintenanceSignal": 81,
-          "provenanceSignal": 90,
-          "freshnessSignal": 80,
-          "securitySignals": {
-            "knownVulnerabilities": 0,
-            "suspiciousPatterns": 0,
-            "injectionFindings": 0,
-            "exfiltrationSignals": 0,
-            "integrityAlerts": 0
-          },
-          "metadata": { "vsixId": "DavidAnson.vscode-markdownlint" }
-        },
-        {
-          "id": "cursor-extension:vscode-icons",
-          "name": "vscode-icons",
-          "description": "Brings icons to the Explorer panel for better file type visualization in Cursor.",
-          "capabilities": ["productivity"],
-          "compatibility": ["cursor", "general"],
-          "install": {
-            "kind": "manual",
-            "instructions": "Install from Cursor Extensions marketplace: search 'vscode-icons'.",
-            "url": "https://marketplace.visualstudio.com/items?itemName=vscode-icons-team.vscode-icons"
-          },
-          "adoptionSignal": 88,
-          "maintenanceSignal": 84,
-          "provenanceSignal": 89,
-          "freshnessSignal": 85,
-          "securitySignals": {
-            "knownVulnerabilities": 0,
-            "suspiciousPatterns": 0,
-            "injectionFindings": 0,
-            "exfiltrationSignals": 0,
-            "integrityAlerts": 0
-          },
-          "metadata": { "vsixId": "vscode-icons-team.vscode-icons" }
-        },
-        {
-          "id": "cursor-extension:path-intellisense",
-          "name": "Path Intellisense",
-          "description": "Autocompletes filenames and directory paths as you type import statements.",
-          "capabilities": ["code-completion", "productivity"],
-          "compatibility": ["cursor", "node", "general"],
-          "install": {
-            "kind": "manual",
-            "instructions": "Install from Cursor Extensions marketplace: search 'Path Intellisense'.",
-            "url": "https://marketplace.visualstudio.com/items?itemName=christian-kohler.path-intellisense"
-          },
-          "adoptionSignal": 83,
-          "maintenanceSignal": 78,
-          "provenanceSignal": 88,
-          "freshnessSignal": 81,
-          "securitySignals": {
-            "knownVulnerabilities": 0,
-            "suspiciousPatterns": 0,
-            "injectionFindings": 0,
-            "exfiltrationSignals": 0,
-            "integrityAlerts": 0
-          },
-          "metadata": { "vsixId": "christian-kohler.path-intellisense" }
-        },
-        {
-          "id": "cursor-extension:todo-highlight",
-          "name": "TODO Highlight",
-          "description": "Highlight TODO, FIXME, and other annotations in your code to keep track of open tasks.",
-          "capabilities": ["guardrails", "productivity"],
-          "compatibility": ["cursor", "general"],
-          "install": {
-            "kind": "manual",
-            "instructions": "Install from Cursor Extensions marketplace: search 'TODO Highlight'.",
-            "url": "https://marketplace.visualstudio.com/items?itemName=wayou.vscode-todo-highlight"
-          },
-          "adoptionSignal": 78,
-          "maintenanceSignal": 72,
           "provenanceSignal": 86,
-          "freshnessSignal": 76,
+          "freshnessSignal": 84,
           "securitySignals": {
             "knownVulnerabilities": 0,
             "suspiciousPatterns": 0,
@@ -2377,7 +2714,10 @@
             "exfiltrationSignals": 0,
             "integrityAlerts": 0
           },
-          "metadata": { "vsixId": "wayou.vscode-todo-highlight" }
+          "metadata": {
+            "vsixId": "yoavbls.pretty-ts-errors",
+            "sourceConfidence": "official"
+          }
         }
       ]
     },
@@ -2392,18 +2732,25 @@
         {
           "id": "gemini-extension:filesystem",
           "name": "Filesystem MCP Server",
-          "description": "Read and write local files via the Model Context Protocol from Gemini CLI.",
-          "capabilities": ["file-read", "file-write", "search"],
-          "compatibility": ["gemini", "gemini-cli", "node"],
+          "description": "Secure file read/write operations scoped to allowed directories via Model Context Protocol.",
+          "capabilities": [
+            "file-read",
+            "file-write",
+            "directory-management"
+          ],
+          "compatibility": [
+            "gemini",
+            "gemini-cli",
+            "node"
+          ],
           "install": {
             "kind": "manual",
-            "instructions": "Add to ~/.gemini/settings.json under mcpServers: { \"filesystem\": { \"command\": \"npx\", \"args\": [\"-y\", \"@modelcontextprotocol/server-filesystem\"] } }",
-            "url": "https://www.npmjs.com/package/@modelcontextprotocol/server-filesystem"
+            "instructions": "Add to ~/.gemini/settings.json: {\"filesystem\":{\"command\":\"npx\",\"args\":[\"-y\",\"@modelcontextprotocol/server-filesystem\",\"/path\"]}}"
           },
-          "adoptionSignal": 88,
-          "maintenanceSignal": 86,
-          "provenanceSignal": 95,
-          "freshnessSignal": 84,
+          "adoptionSignal": 92,
+          "maintenanceSignal": 90,
+          "provenanceSignal": 98,
+          "freshnessSignal": 88,
           "securitySignals": {
             "knownVulnerabilities": 0,
             "suspiciousPatterns": 1,
@@ -2411,23 +2758,33 @@
             "exfiltrationSignals": 0,
             "integrityAlerts": 0
           },
-          "metadata": { "npmPackage": "@modelcontextprotocol/server-filesystem" }
+          "metadata": {
+            "npmPackage": "@modelcontextprotocol/server-filesystem",
+            "sourceConfidence": "official"
+          }
         },
         {
-          "id": "gemini-extension:github",
-          "name": "GitHub MCP Server",
-          "description": "Search code, manage issues and PRs, and access repository data from Gemini CLI.",
-          "capabilities": ["search", "automation", "code-scanning"],
-          "compatibility": ["gemini", "gemini-cli", "node", "github"],
+          "id": "gemini-extension:memory",
+          "name": "Memory MCP Server",
+          "description": "Knowledge-graph-based persistent memory that stores and retrieves facts across Gemini CLI sessions.",
+          "capabilities": [
+            "memory",
+            "knowledge-graph",
+            "persistence"
+          ],
+          "compatibility": [
+            "gemini",
+            "gemini-cli",
+            "node"
+          ],
           "install": {
             "kind": "manual",
-            "instructions": "Add to ~/.gemini/settings.json under mcpServers: { \"github\": { \"command\": \"npx\", \"args\": [\"-y\", \"@modelcontextprotocol/server-github\"] } }",
-            "url": "https://www.npmjs.com/package/@modelcontextprotocol/server-github"
+            "instructions": "Add to ~/.gemini/settings.json: {\"memory\":{\"command\":\"npx\",\"args\":[\"-y\",\"@modelcontextprotocol/server-memory\"]}}"
           },
-          "adoptionSignal": 86,
-          "maintenanceSignal": 84,
-          "provenanceSignal": 95,
-          "freshnessSignal": 85,
+          "adoptionSignal": 87,
+          "maintenanceSignal": 88,
+          "provenanceSignal": 98,
+          "freshnessSignal": 87,
           "securitySignals": {
             "knownVulnerabilities": 0,
             "suspiciousPatterns": 0,
@@ -2435,22 +2792,409 @@
             "exfiltrationSignals": 0,
             "integrityAlerts": 0
           },
-          "metadata": { "npmPackage": "@modelcontextprotocol/server-github" }
+          "metadata": {
+            "npmPackage": "@modelcontextprotocol/server-memory",
+            "sourceConfidence": "official"
+          }
+        },
+        {
+          "id": "gemini-extension:fetch",
+          "name": "Fetch MCP Server",
+          "description": "Fetches web URLs and converts HTML to clean Markdown for LLM consumption \u2014 real-time web access.",
+          "capabilities": [
+            "web-fetch",
+            "content-conversion",
+            "research"
+          ],
+          "compatibility": [
+            "gemini",
+            "gemini-cli",
+            "node"
+          ],
+          "install": {
+            "kind": "manual",
+            "instructions": "Add to ~/.gemini/settings.json: {\"fetch\":{\"command\":\"npx\",\"args\":[\"-y\",\"@modelcontextprotocol/server-fetch\"]}}"
+          },
+          "adoptionSignal": 88,
+          "maintenanceSignal": 90,
+          "provenanceSignal": 98,
+          "freshnessSignal": 90,
+          "securitySignals": {
+            "knownVulnerabilities": 0,
+            "suspiciousPatterns": 0,
+            "injectionFindings": 0,
+            "exfiltrationSignals": 0,
+            "integrityAlerts": 0
+          },
+          "metadata": {
+            "npmPackage": "@modelcontextprotocol/server-fetch",
+            "sourceConfidence": "official"
+          }
+        },
+        {
+          "id": "gemini-extension:sequential-thinking",
+          "name": "Sequential Thinking MCP Server",
+          "description": "Structured multi-step problem decomposition and branching reasoning for complex tasks.",
+          "capabilities": [
+            "reasoning",
+            "planning",
+            "metacognition"
+          ],
+          "compatibility": [
+            "gemini",
+            "gemini-cli",
+            "node"
+          ],
+          "install": {
+            "kind": "manual",
+            "instructions": "Add to ~/.gemini/settings.json: {\"sequential-thinking\":{\"command\":\"npx\",\"args\":[\"-y\",\"@modelcontextprotocol/server-sequential-thinking\"]}}"
+          },
+          "adoptionSignal": 84,
+          "maintenanceSignal": 87,
+          "provenanceSignal": 97,
+          "freshnessSignal": 86,
+          "securitySignals": {
+            "knownVulnerabilities": 0,
+            "suspiciousPatterns": 0,
+            "injectionFindings": 0,
+            "exfiltrationSignals": 0,
+            "integrityAlerts": 0
+          },
+          "metadata": {
+            "npmPackage": "@modelcontextprotocol/server-sequential-thinking",
+            "sourceConfidence": "official"
+          }
+        },
+        {
+          "id": "gemini-extension:context7",
+          "name": "Context7 MCP Server",
+          "description": "Retrieves current, version-specific library docs and code examples on demand \u2014 890K weekly npm downloads.",
+          "capabilities": [
+            "docs-lookup",
+            "code-examples",
+            "library-context"
+          ],
+          "compatibility": [
+            "gemini",
+            "gemini-cli",
+            "node"
+          ],
+          "install": {
+            "kind": "manual",
+            "instructions": "Add to ~/.gemini/settings.json: {\"context7\":{\"command\":\"npx\",\"args\":[\"-y\",\"@upstash/context7-mcp@latest\"]}}"
+          },
+          "adoptionSignal": 93,
+          "maintenanceSignal": 91,
+          "provenanceSignal": 90,
+          "freshnessSignal": 96,
+          "securitySignals": {
+            "knownVulnerabilities": 0,
+            "suspiciousPatterns": 0,
+            "injectionFindings": 0,
+            "exfiltrationSignals": 0,
+            "integrityAlerts": 0
+          },
+          "metadata": {
+            "npmPackage": "@upstash/context7-mcp",
+            "sourceConfidence": "official"
+          }
+        },
+        {
+          "id": "gemini-extension:playwright",
+          "name": "Playwright MCP Server",
+          "description": "Browser automation via accessibility trees: navigate, click, fill forms, screenshot \u2014 official Microsoft MCP.",
+          "capabilities": [
+            "browser-automation",
+            "ui-testing",
+            "scraping"
+          ],
+          "compatibility": [
+            "gemini",
+            "gemini-cli",
+            "node"
+          ],
+          "install": {
+            "kind": "manual",
+            "instructions": "Add to ~/.gemini/settings.json: {\"playwright\":{\"command\":\"npx\",\"args\":[\"@playwright/mcp@latest\"]}}"
+          },
+          "adoptionSignal": 90,
+          "maintenanceSignal": 93,
+          "provenanceSignal": 97,
+          "freshnessSignal": 95,
+          "securitySignals": {
+            "knownVulnerabilities": 0,
+            "suspiciousPatterns": 0,
+            "injectionFindings": 0,
+            "exfiltrationSignals": 0,
+            "integrityAlerts": 0
+          },
+          "metadata": {
+            "npmPackage": "@playwright/mcp",
+            "sourceConfidence": "official"
+          }
+        },
+        {
+          "id": "gemini-extension:github",
+          "name": "GitHub MCP Server",
+          "description": "Full GitHub API: repos, PRs, issues, code search, workflow triggers \u2014 28K+ GitHub stars, official GitHub.",
+          "capabilities": [
+            "github",
+            "pr-management",
+            "code-search",
+            "ci-cd"
+          ],
+          "compatibility": [
+            "gemini",
+            "gemini-cli",
+            "node",
+            "github"
+          ],
+          "install": {
+            "kind": "manual",
+            "instructions": "Add to ~/.gemini/settings.json: {\"github\":{\"command\":\"npx\",\"args\":[\"-y\",\"@modelcontextprotocol/server-github\"]}} with GITHUB_PERSONAL_ACCESS_TOKEN env var"
+          },
+          "adoptionSignal": 91,
+          "maintenanceSignal": 92,
+          "provenanceSignal": 98,
+          "freshnessSignal": 94,
+          "securitySignals": {
+            "knownVulnerabilities": 0,
+            "suspiciousPatterns": 0,
+            "injectionFindings": 0,
+            "exfiltrationSignals": 0,
+            "integrityAlerts": 0
+          },
+          "metadata": {
+            "npmPackage": "@modelcontextprotocol/server-github",
+            "sourceConfidence": "official"
+          }
+        },
+        {
+          "id": "gemini-extension:firecrawl",
+          "name": "Firecrawl MCP Server",
+          "description": "Converts URLs to clean Markdown, web crawling, and structured data extraction \u2014 8,800 weekly npm downloads.",
+          "capabilities": [
+            "web-scraping",
+            "crawling",
+            "content-extraction"
+          ],
+          "compatibility": [
+            "gemini",
+            "gemini-cli",
+            "node"
+          ],
+          "install": {
+            "kind": "manual",
+            "instructions": "Add to ~/.gemini/settings.json: {\"firecrawl\":{\"command\":\"npx\",\"args\":[\"-y\",\"firecrawl-mcp\"]}} with FIRECRAWL_API_KEY env var"
+          },
+          "adoptionSignal": 80,
+          "maintenanceSignal": 83,
+          "provenanceSignal": 84,
+          "freshnessSignal": 88,
+          "securitySignals": {
+            "knownVulnerabilities": 0,
+            "suspiciousPatterns": 0,
+            "injectionFindings": 0,
+            "exfiltrationSignals": 0,
+            "integrityAlerts": 0
+          },
+          "metadata": {
+            "npmPackage": "firecrawl-mcp",
+            "sourceConfidence": "official"
+          }
+        },
+        {
+          "id": "gemini-extension:exa",
+          "name": "Exa MCP Server",
+          "description": "Semantic neural search across the web with source ranking and full content retrieval via Exa AI.",
+          "capabilities": [
+            "semantic-search",
+            "web-search",
+            "research"
+          ],
+          "compatibility": [
+            "gemini",
+            "gemini-cli",
+            "node"
+          ],
+          "install": {
+            "kind": "manual",
+            "instructions": "Add to ~/.gemini/settings.json: {\"exa\":{\"command\":\"npx\",\"args\":[\"-y\",\"exa-mcp-server\"]}} with EXA_API_KEY env var"
+          },
+          "adoptionSignal": 78,
+          "maintenanceSignal": 82,
+          "provenanceSignal": 83,
+          "freshnessSignal": 86,
+          "securitySignals": {
+            "knownVulnerabilities": 0,
+            "suspiciousPatterns": 0,
+            "injectionFindings": 0,
+            "exfiltrationSignals": 0,
+            "integrityAlerts": 0
+          },
+          "metadata": {
+            "npmPackage": "exa-mcp-server",
+            "sourceConfidence": "official"
+          }
+        },
+        {
+          "id": "gemini-extension:postgres",
+          "name": "PostgreSQL MCP Server",
+          "description": "Read-only PostgreSQL query execution with schema inspection from Gemini CLI.",
+          "capabilities": [
+            "database",
+            "sql",
+            "schema-inspection"
+          ],
+          "compatibility": [
+            "gemini",
+            "gemini-cli",
+            "node"
+          ],
+          "install": {
+            "kind": "manual",
+            "instructions": "Add to ~/.gemini/settings.json: {\"postgres\":{\"command\":\"npx\",\"args\":[\"-y\",\"@modelcontextprotocol/server-postgres\",\"<connection-string>\"]}}"
+          },
+          "adoptionSignal": 82,
+          "maintenanceSignal": 84,
+          "provenanceSignal": 97,
+          "freshnessSignal": 82,
+          "securitySignals": {
+            "knownVulnerabilities": 0,
+            "suspiciousPatterns": 0,
+            "injectionFindings": 0,
+            "exfiltrationSignals": 1,
+            "integrityAlerts": 0
+          },
+          "metadata": {
+            "npmPackage": "@modelcontextprotocol/server-postgres",
+            "sourceConfidence": "official"
+          }
+        },
+        {
+          "id": "gemini-extension:supabase",
+          "name": "Supabase MCP Server",
+          "description": "Access Supabase Postgres, edge functions, and storage with RLS awareness \u2014 official Supabase MCP.",
+          "capabilities": [
+            "database",
+            "postgres",
+            "storage",
+            "auth"
+          ],
+          "compatibility": [
+            "gemini",
+            "gemini-cli",
+            "node"
+          ],
+          "install": {
+            "kind": "manual",
+            "instructions": "Add to ~/.gemini/settings.json: {\"supabase\":{\"command\":\"npx\",\"args\":[\"-y\",\"@supabase/mcp-server-supabase\",\"--access-token\",\"<token>\"]}}"
+          },
+          "adoptionSignal": 80,
+          "maintenanceSignal": 86,
+          "provenanceSignal": 93,
+          "freshnessSignal": 90,
+          "securitySignals": {
+            "knownVulnerabilities": 0,
+            "suspiciousPatterns": 0,
+            "injectionFindings": 0,
+            "exfiltrationSignals": 1,
+            "integrityAlerts": 0
+          },
+          "metadata": {
+            "npmPackage": "@supabase/mcp-server-supabase",
+            "sourceConfidence": "official"
+          }
         },
         {
           "id": "gemini-extension:brave-search",
           "name": "Brave Search MCP Server",
-          "description": "Web and local search via the Brave Search API from Gemini CLI.",
-          "capabilities": ["search", "automation"],
-          "compatibility": ["gemini", "gemini-cli", "node", "general"],
+          "description": "Web and local search via Brave's independent search index \u2014 privacy-respecting, no Google tracking.",
+          "capabilities": [
+            "web-search",
+            "local-search",
+            "research"
+          ],
+          "compatibility": [
+            "gemini",
+            "gemini-cli",
+            "node"
+          ],
           "install": {
             "kind": "manual",
-            "instructions": "Add to ~/.gemini/settings.json under mcpServers: { \"brave-search\": { \"command\": \"npx\", \"args\": [\"-y\", \"@modelcontextprotocol/server-brave-search\"] } }",
-            "url": "https://www.npmjs.com/package/@modelcontextprotocol/server-brave-search"
+            "instructions": "Add to ~/.gemini/settings.json: {\"brave-search\":{\"command\":\"npx\",\"args\":[\"-y\",\"@modelcontextprotocol/server-brave-search\"]}} with BRAVE_API_KEY env var"
           },
           "adoptionSignal": 83,
-          "maintenanceSignal": 81,
-          "provenanceSignal": 93,
+          "maintenanceSignal": 84,
+          "provenanceSignal": 97,
+          "freshnessSignal": 84,
+          "securitySignals": {
+            "knownVulnerabilities": 0,
+            "suspiciousPatterns": 0,
+            "injectionFindings": 0,
+            "exfiltrationSignals": 0,
+            "integrityAlerts": 0
+          },
+          "metadata": {
+            "npmPackage": "@modelcontextprotocol/server-brave-search",
+            "sourceConfidence": "official"
+          }
+        },
+        {
+          "id": "gemini-extension:puppeteer",
+          "name": "Puppeteer MCP Server",
+          "description": "Browser automation and screenshot capture using Puppeteer headless Chrome via MCP.",
+          "capabilities": [
+            "browser-automation",
+            "scraping",
+            "screenshots"
+          ],
+          "compatibility": [
+            "gemini",
+            "gemini-cli",
+            "node"
+          ],
+          "install": {
+            "kind": "manual",
+            "instructions": "Add to ~/.gemini/settings.json: {\"puppeteer\":{\"command\":\"npx\",\"args\":[\"-y\",\"@modelcontextprotocol/server-puppeteer\"]}}"
+          },
+          "adoptionSignal": 80,
+          "maintenanceSignal": 82,
+          "provenanceSignal": 96,
+          "freshnessSignal": 80,
+          "securitySignals": {
+            "knownVulnerabilities": 0,
+            "suspiciousPatterns": 1,
+            "injectionFindings": 0,
+            "exfiltrationSignals": 0,
+            "integrityAlerts": 0
+          },
+          "metadata": {
+            "npmPackage": "@modelcontextprotocol/server-puppeteer",
+            "sourceConfidence": "official"
+          }
+        },
+        {
+          "id": "gemini-extension:slack",
+          "name": "Slack MCP Server",
+          "description": "Send messages, read channel history, and manage Slack workspaces from Gemini CLI.",
+          "capabilities": [
+            "messaging",
+            "team-communication",
+            "automation"
+          ],
+          "compatibility": [
+            "gemini",
+            "gemini-cli",
+            "node"
+          ],
+          "install": {
+            "kind": "manual",
+            "instructions": "Add to ~/.gemini/settings.json: {\"slack\":{\"command\":\"npx\",\"args\":[\"-y\",\"@modelcontextprotocol/server-slack\"]}} with SLACK_BOT_TOKEN env var"
+          },
+          "adoptionSignal": 81,
+          "maintenanceSignal": 83,
+          "provenanceSignal": 96,
           "freshnessSignal": 82,
           "securitySignals": {
             "knownVulnerabilities": 0,
@@ -2459,22 +3203,134 @@
             "exfiltrationSignals": 0,
             "integrityAlerts": 0
           },
-          "metadata": { "npmPackage": "@modelcontextprotocol/server-brave-search" }
+          "metadata": {
+            "npmPackage": "@modelcontextprotocol/server-slack",
+            "sourceConfidence": "official"
+          }
         },
         {
-          "id": "gemini-extension:sequential-thinking",
-          "name": "Sequential Thinking MCP Server",
-          "description": "Structured step-by-step reasoning tool for complex problem decomposition in Gemini CLI.",
-          "capabilities": ["prompting", "automation"],
-          "compatibility": ["gemini", "gemini-cli", "node", "general"],
+          "id": "gemini-extension:sentry",
+          "name": "Sentry MCP Server",
+          "description": "Real-time error tracking, stack traces, issue correlation, and release data from Sentry \u2014 official Sentry MCP.",
+          "capabilities": [
+            "error-tracking",
+            "observability",
+            "debugging"
+          ],
+          "compatibility": [
+            "gemini",
+            "gemini-cli",
+            "node"
+          ],
           "install": {
             "kind": "manual",
-            "instructions": "Add to ~/.gemini/settings.json under mcpServers: { \"sequential-thinking\": { \"command\": \"npx\", \"args\": [\"-y\", \"@modelcontextprotocol/server-sequential-thinking\"] } }",
-            "url": "https://www.npmjs.com/package/@modelcontextprotocol/server-sequential-thinking"
+            "instructions": "Add to ~/.gemini/settings.json: {\"sentry\":{\"command\":\"npx\",\"args\":[\"-y\",\"@sentry/mcp-server\"]}} with SENTRY_AUTH_TOKEN env var"
           },
-          "adoptionSignal": 80,
-          "maintenanceSignal": 82,
-          "provenanceSignal": 93,
+          "adoptionSignal": 79,
+          "maintenanceSignal": 85,
+          "provenanceSignal": 92,
+          "freshnessSignal": 88,
+          "securitySignals": {
+            "knownVulnerabilities": 0,
+            "suspiciousPatterns": 0,
+            "injectionFindings": 0,
+            "exfiltrationSignals": 0,
+            "integrityAlerts": 0
+          },
+          "metadata": {
+            "npmPackage": "@sentry/mcp-server",
+            "sourceConfidence": "official"
+          }
+        },
+        {
+          "id": "gemini-extension:notion",
+          "name": "Notion MCP Server",
+          "description": "Read and write Notion pages, databases, and search workspace content \u2014 official Notion MCP.",
+          "capabilities": [
+            "knowledge-base",
+            "documents",
+            "search"
+          ],
+          "compatibility": [
+            "gemini",
+            "gemini-cli",
+            "node"
+          ],
+          "install": {
+            "kind": "manual",
+            "instructions": "Add to ~/.gemini/settings.json: {\"notion\":{\"command\":\"npx\",\"args\":[\"-y\",\"@notionhq/notion-mcp-server\"]}} with OPENAPI_MCP_HEADERS for auth"
+          },
+          "adoptionSignal": 78,
+          "maintenanceSignal": 84,
+          "provenanceSignal": 91,
+          "freshnessSignal": 87,
+          "securitySignals": {
+            "knownVulnerabilities": 0,
+            "suspiciousPatterns": 0,
+            "injectionFindings": 0,
+            "exfiltrationSignals": 0,
+            "integrityAlerts": 0
+          },
+          "metadata": {
+            "npmPackage": "@notionhq/notion-mcp-server",
+            "sourceConfidence": "official"
+          }
+        },
+        {
+          "id": "gemini-extension:linear",
+          "name": "Linear MCP Server",
+          "description": "Create, update, and query Linear issues, projects, and teams from Gemini CLI.",
+          "capabilities": [
+            "project-management",
+            "issue-tracking",
+            "automation"
+          ],
+          "compatibility": [
+            "gemini",
+            "gemini-cli",
+            "node"
+          ],
+          "install": {
+            "kind": "manual",
+            "instructions": "Add to ~/.gemini/settings.json: {\"linear\":{\"command\":\"npx\",\"args\":[\"-y\",\"linear-mcp-server\"]}} with LINEAR_API_KEY env var"
+          },
+          "adoptionSignal": 76,
+          "maintenanceSignal": 80,
+          "provenanceSignal": 87,
+          "freshnessSignal": 82,
+          "securitySignals": {
+            "knownVulnerabilities": 0,
+            "suspiciousPatterns": 0,
+            "injectionFindings": 0,
+            "exfiltrationSignals": 0,
+            "integrityAlerts": 0
+          },
+          "metadata": {
+            "npmPackage": "linear-mcp-server",
+            "sourceConfidence": "official"
+          }
+        },
+        {
+          "id": "gemini-extension:google-maps",
+          "name": "Google Maps MCP Server",
+          "description": "Geocoding, directions, places search, and distance matrix via Google Maps API.",
+          "capabilities": [
+            "maps",
+            "geocoding",
+            "search"
+          ],
+          "compatibility": [
+            "gemini",
+            "gemini-cli",
+            "node"
+          ],
+          "install": {
+            "kind": "manual",
+            "instructions": "Add to ~/.gemini/settings.json: {\"google-maps\":{\"command\":\"npx\",\"args\":[\"-y\",\"@modelcontextprotocol/server-google-maps\"]}} with GOOGLE_MAPS_API_KEY env var"
+          },
+          "adoptionSignal": 74,
+          "maintenanceSignal": 78,
+          "provenanceSignal": 97,
           "freshnessSignal": 80,
           "securitySignals": {
             "knownVulnerabilities": 0,
@@ -2483,175 +3339,10 @@
             "exfiltrationSignals": 0,
             "integrityAlerts": 0
           },
-          "metadata": { "npmPackage": "@modelcontextprotocol/server-sequential-thinking" }
-        },
-        {
-          "id": "gemini-extension:postgres",
-          "name": "PostgreSQL MCP Server",
-          "description": "Query and explore PostgreSQL databases directly from Gemini CLI.",
-          "capabilities": ["search", "automation"],
-          "compatibility": ["gemini", "gemini-cli", "node", "postgresql"],
-          "install": {
-            "kind": "manual",
-            "instructions": "Add to ~/.gemini/settings.json under mcpServers: { \"postgres\": { \"command\": \"npx\", \"args\": [\"-y\", \"@modelcontextprotocol/server-postgres\"] } }",
-            "url": "https://www.npmjs.com/package/@modelcontextprotocol/server-postgres"
-          },
-          "adoptionSignal": 82,
-          "maintenanceSignal": 80,
-          "provenanceSignal": 93,
-          "freshnessSignal": 81,
-          "securitySignals": {
-            "knownVulnerabilities": 0,
-            "suspiciousPatterns": 0,
-            "injectionFindings": 0,
-            "exfiltrationSignals": 0,
-            "integrityAlerts": 0
-          },
-          "metadata": { "npmPackage": "@modelcontextprotocol/server-postgres" }
-        },
-        {
-          "id": "gemini-extension:memory",
-          "name": "Memory MCP Server",
-          "description": "Persistent key-value memory store enabling Gemini CLI to remember facts across sessions.",
-          "capabilities": ["automation", "prompting"],
-          "compatibility": ["gemini", "gemini-cli", "node", "general"],
-          "install": {
-            "kind": "manual",
-            "instructions": "Add to ~/.gemini/settings.json under mcpServers: { \"memory\": { \"command\": \"npx\", \"args\": [\"-y\", \"@modelcontextprotocol/server-memory\"] } }",
-            "url": "https://www.npmjs.com/package/@modelcontextprotocol/server-memory"
-          },
-          "adoptionSignal": 81,
-          "maintenanceSignal": 83,
-          "provenanceSignal": 93,
-          "freshnessSignal": 82,
-          "securitySignals": {
-            "knownVulnerabilities": 0,
-            "suspiciousPatterns": 0,
-            "injectionFindings": 0,
-            "exfiltrationSignals": 0,
-            "integrityAlerts": 0
-          },
-          "metadata": { "npmPackage": "@modelcontextprotocol/server-memory" }
-        },
-        {
-          "id": "gemini-extension:puppeteer",
-          "name": "Puppeteer MCP Server",
-          "description": "Browser automation and web scraping using Puppeteer from Gemini CLI.",
-          "capabilities": ["browser-control", "automation", "search"],
-          "compatibility": ["gemini", "gemini-cli", "node"],
-          "install": {
-            "kind": "manual",
-            "instructions": "Add to ~/.gemini/settings.json under mcpServers: { \"puppeteer\": { \"command\": \"npx\", \"args\": [\"-y\", \"@modelcontextprotocol/server-puppeteer\"] } }",
-            "url": "https://www.npmjs.com/package/@modelcontextprotocol/server-puppeteer"
-          },
-          "adoptionSignal": 78,
-          "maintenanceSignal": 76,
-          "provenanceSignal": 91,
-          "freshnessSignal": 78,
-          "securitySignals": {
-            "knownVulnerabilities": 0,
-            "suspiciousPatterns": 1,
-            "injectionFindings": 0,
-            "exfiltrationSignals": 0,
-            "integrityAlerts": 0
-          },
-          "metadata": { "npmPackage": "@modelcontextprotocol/server-puppeteer" }
-        },
-        {
-          "id": "gemini-extension:slack",
-          "name": "Slack MCP Server",
-          "description": "Read messages, search channels, and post to Slack from Gemini CLI.",
-          "capabilities": ["automation", "search", "productivity"],
-          "compatibility": ["gemini", "gemini-cli", "node", "general"],
-          "install": {
-            "kind": "manual",
-            "instructions": "Add to ~/.gemini/settings.json under mcpServers: { \"slack\": { \"command\": \"npx\", \"args\": [\"-y\", \"@modelcontextprotocol/server-slack\"] } }",
-            "url": "https://www.npmjs.com/package/@modelcontextprotocol/server-slack"
-          },
-          "adoptionSignal": 79,
-          "maintenanceSignal": 77,
-          "provenanceSignal": 91,
-          "freshnessSignal": 79,
-          "securitySignals": {
-            "knownVulnerabilities": 0,
-            "suspiciousPatterns": 0,
-            "injectionFindings": 0,
-            "exfiltrationSignals": 0,
-            "integrityAlerts": 0
-          },
-          "metadata": { "npmPackage": "@modelcontextprotocol/server-slack" }
-        },
-        {
-          "id": "gemini-extension:google-maps",
-          "name": "Google Maps MCP Server",
-          "description": "Geocoding, directions, and place search via Google Maps API from Gemini CLI.",
-          "capabilities": ["search", "automation"],
-          "compatibility": ["gemini", "gemini-cli", "node", "general"],
-          "install": {
-            "kind": "manual",
-            "instructions": "Add to ~/.gemini/settings.json under mcpServers: { \"google-maps\": { \"command\": \"npx\", \"args\": [\"-y\", \"@modelcontextprotocol/server-google-maps\"] } }",
-            "url": "https://www.npmjs.com/package/@modelcontextprotocol/server-google-maps"
-          },
-          "adoptionSignal": 76,
-          "maintenanceSignal": 78,
-          "provenanceSignal": 91,
-          "freshnessSignal": 77,
-          "securitySignals": {
-            "knownVulnerabilities": 0,
-            "suspiciousPatterns": 0,
-            "injectionFindings": 0,
-            "exfiltrationSignals": 0,
-            "integrityAlerts": 0
-          },
-          "metadata": { "npmPackage": "@modelcontextprotocol/server-google-maps" }
-        },
-        {
-          "id": "gemini-extension:sentry",
-          "name": "Sentry MCP Server",
-          "description": "Retrieve Sentry issues, events, and error details from Gemini CLI.",
-          "capabilities": ["search", "automation", "security"],
-          "compatibility": ["gemini", "gemini-cli", "node", "general"],
-          "install": {
-            "kind": "manual",
-            "instructions": "Add to ~/.gemini/settings.json under mcpServers: { \"sentry\": { \"command\": \"npx\", \"args\": [\"-y\", \"@modelcontextprotocol/server-sentry\"] } }",
-            "url": "https://www.npmjs.com/package/@modelcontextprotocol/server-sentry"
-          },
-          "adoptionSignal": 77,
-          "maintenanceSignal": 79,
-          "provenanceSignal": 91,
-          "freshnessSignal": 78,
-          "securitySignals": {
-            "knownVulnerabilities": 0,
-            "suspiciousPatterns": 0,
-            "injectionFindings": 0,
-            "exfiltrationSignals": 0,
-            "integrityAlerts": 0
-          },
-          "metadata": { "npmPackage": "@modelcontextprotocol/server-sentry" }
-        },
-        {
-          "id": "gemini-extension:linear",
-          "name": "Linear MCP Server",
-          "description": "Manage Linear issues, projects, and cycles from Gemini CLI.",
-          "capabilities": ["tickets", "automation", "search"],
-          "compatibility": ["gemini", "gemini-cli", "node", "general"],
-          "install": {
-            "kind": "manual",
-            "instructions": "Add to ~/.gemini/settings.json under mcpServers: { \"linear\": { \"command\": \"npx\", \"args\": [\"-y\", \"@modelcontextprotocol/server-linear\"] } }",
-            "url": "https://www.npmjs.com/package/@modelcontextprotocol/server-linear"
-          },
-          "adoptionSignal": 75,
-          "maintenanceSignal": 77,
-          "provenanceSignal": 89,
-          "freshnessSignal": 76,
-          "securitySignals": {
-            "knownVulnerabilities": 0,
-            "suspiciousPatterns": 0,
-            "injectionFindings": 0,
-            "exfiltrationSignals": 0,
-            "integrityAlerts": 0
-          },
-          "metadata": { "npmPackage": "@modelcontextprotocol/server-linear" }
+          "metadata": {
+            "npmPackage": "@modelcontextprotocol/server-google-maps",
+            "sourceConfidence": "official"
+          }
         }
       ]
     }
