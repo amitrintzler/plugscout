@@ -250,17 +250,19 @@ export async function renderInteractiveHome(): Promise<void> {
 
   function render(firstRender: boolean): void {
     if (!firstRender) {
-      process.stdout.write(`\x1b[${menuItems.length * 2}A\r`);
+      // Restore saved cursor position and clear everything below it.
+      // This avoids line-count arithmetic that breaks when descriptions wrap.
+      process.stdout.write('\x1b[u\x1b[0J');
     }
     for (let i = 0; i < menuItems.length; i++) {
       const item = menuItems[i];
       const prefix = i === selected ? '  \u276f ' : '    ';
-      process.stdout.write(`\x1b[2K${prefix}${item.label}\n`);
+      process.stdout.write(`${prefix}${item.label}\n`);
       if (item.description) {
         const firstLine = item.description.split('\n')[0];
-        process.stdout.write(`\x1b[2K        \x1b[2m${firstLine}\x1b[0m\n`);
+        process.stdout.write(`        \x1b[2m${firstLine}\x1b[0m\n`);
       } else {
-        process.stdout.write(`\x1b[2K\n`);
+        process.stdout.write('\n');
       }
     }
   }
@@ -268,6 +270,7 @@ export async function renderInteractiveHome(): Promise<void> {
   let running = true;
   while (running) {
     process.stdout.write('\n');
+    process.stdout.write('\x1b[s'); // save cursor — used by render(false) to redraw in-place
     process.stdin.setRawMode(true);
     process.stdin.resume();
     process.stdin.setEncoding('utf8');
