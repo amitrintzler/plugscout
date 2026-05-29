@@ -1,6 +1,6 @@
 import fs from 'node:fs/promises';
 import { spawn } from 'node:child_process';
-import { createInterface } from 'node:readline';
+import { createInterface, moveCursor, clearScreenDown } from 'node:readline';
 
 import { loadQuarantine, loadWhitelist } from '../../../catalog/repository.js';
 import { getStaleRegistries, loadSyncState } from '../../../catalog/sync-state.js';
@@ -255,34 +255,51 @@ export async function renderInteractiveHome(): Promise<void> {
   process.stdout.write(screen + '\n\n');
 
   let selected = 0;
-  const ARROW_UP = '\u001b[A';
-  const ARROW_DOWN = '\u001b[B';
+  const ARROW_UP = '[A';
+  const ARROW_DOWN = '[B';
   const ENTER = '\r';
-  const CTRL_C = '\u0003';
+  const CTRL_C = '';
+
+  // Physical lines written by the last render call — used to move the cursor
+  // back up accurately regardless of terminal width / line wrapping.
+  let linesDrawn = 0;
+
+  function physicalLines(text: string): number {
+    const cols = process.stdout.columns || 80;
+    // Strip ANSI codes before measuring display width
+    const plain = text.replace(/\x1b\[[^m]*m/g, '');
+    if (plain.length === 0) return 1;
+    return Math.max(1, Math.ceil(plain.length / cols));
+  }
 
   function render(firstRender: boolean): void {
     if (!firstRender) {
-      // Restore saved cursor position and clear everything below it.
-      // This avoids line-count arithmetic that breaks when descriptions wrap.
-      process.stdout.write('\x1b[u\x1b[0J');
+      moveCursor(process.stdout, 0, -linesDrawn);
+      clearScreenDown(process.stdout);
     }
+    let drawn = 0;
     for (let i = 0; i < menuItems.length; i++) {
       const item = menuItems[i];
-      const prefix = i === selected ? '  \u276f ' : '    ';
-      process.stdout.write(`${prefix}${item.label}\n`);
+      const prefix = i === selected ? '  ❯ ' : '    ';
+      const labelLine = `${prefix}${item.label}`;
+      process.stdout.write(`${labelLine}\n`);
+      drawn += physicalLines(labelLine);
       if (item.description) {
         const firstLine = item.description.split('\n')[0];
-        process.stdout.write(`        \x1b[2m${firstLine}\x1b[0m\n`);
+        const descLine = `        ${firstLine}`;
+        process.stdout.write(`\x1b[2m${descLine}\x1b[0m\n`);
+        drawn += physicalLines(descLine);
       } else {
         process.stdout.write('\n');
+        drawn += 1;
       }
     }
+    linesDrawn = drawn;
   }
 
   let running = true;
   while (running) {
     process.stdout.write('\n');
-    process.stdout.write('\x1b[s'); // save cursor — used by render(false) to redraw in-place
     process.stdin.setRawMode(true);
     process.stdin.resume();
     process.stdin.setEncoding('utf8');
