@@ -1,0 +1,71 @@
+name: npm version cleanup
+
+on:
+  workflow_run:
+    workflows: ["CI"]
+    types: [completed]
+    branches: [main]
+  workflow_dispatch:
+    inputs:
+      keep:
+        description: 'Number of latest versions to keep'
+        required: false
+        default: '10'
+
+jobs:
+  cleanup:
+    name: Deprecate old npm versions
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    if: ${{ github.event_name == 'workflow_dispatch' || github.event.workflow_run.conclusion == 'success' }}
+
+    steps:
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          registry-url: https://registry.npmjs.org
+
+      - name: Deprecate old versions
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+          KEEP: ${{ github.event.inputs.keep || '10' }}
+        run: |
+          PACKAGE=$(node -e "process.stdout.write('@shnitzel/plugscout')")
+          echo "Package: $PACKAGE  Keep: $KEEP"
+
+          # Fetch all published versions, sorted newest-first by semver
+          VERSIONS=$(npm view "$PACKAGE" versions --json 2>/dev/null | \
+            node -e "
+              const data = require('fs').readFileSync('/dev/stdin','utf8');
+              const vs = JSON.parse(data);
+              const semver = (v) => v.split('.').map(Number);
+              const cmp = (a,b) => {
+                const [a1,a2,a3] = semver(a), [b1,b2,b3] = semver(b);
+                return b1-a1 || b2-a2 || b3-a3;
+              };
+              vs.sort(cmp);
+              console.log(vs.join('\n'));
+            ")
+
+          TOTAL=$(echo "$VERSIONS" | wc -l | tr -d ' ')
+          echo "Total versions: $TOTAL"
+
+          if [ "$TOTAL" -le "$KEEP" ]; then
+            echo "Only $TOTAL versions published — nothing to deprecate."
+            exit 0
+          fi
+
+          TO_DEPRECATE=$(echo "$VERSIONS" | tail -n "+$((KEEP + 1))")
+          echo "Versions to deprecate:"
+          echo "$TO_DEPRECATE"
+
+          while IFS= read -r VERSION; do
+            [ -z "$VERSION" ] && continue
+            echo "Deprecating $PACKAGE@$VERSION"
+            npm deprecate "$PACKAGE@$VERSION" \
+              "Superseded — install the latest: npm install -g $PACKAGE@latest" \
+              || echo "Warning: could not deprecate $VERSION (may be already deprecated)"
+          done <<< "$TO_DEPRECATE"
+
+          echo "Done. Kept $KEEP most recent versions active."

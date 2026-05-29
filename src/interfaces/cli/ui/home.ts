@@ -15,8 +15,11 @@ interface PackageMeta {
 }
 
 export async function renderHomeScreen(): Promise<string> {
+  const termCols = process.stdout.columns ?? 80;
+  const useCompact = termCols < 82;
+
   const [logo, pkg, catalogStats, runtimeStats] = await Promise.all([
-    readLogo(),
+    readLogo(useCompact),
     readPackageMeta(),
     readCatalogStats(),
     readRuntimeStats()
@@ -30,45 +33,76 @@ export async function renderHomeScreen(): Promise<string> {
     .replace('{{author}}', author || 'unknown');
   lines.push(colorIfTty(renderedLogo.trimEnd(), colors.cyan));
   lines.push('');
-  lines.push('Discover and safely install Claude plugins, Claude connectors, Copilot extensions, Skills, and MCP servers.');
+  lines.push(colorIfTty('Discover and safely install Claude plugins, connectors,', colors.dim));
+  lines.push(colorIfTty('Copilot/Cursor/Gemini extensions, Skills, and MCP servers.', colors.dim));
   lines.push('');
+
   lines.push(colorIfTty('Catalog', colors.bold));
   lines.push(
-    `- items=${catalogStats.items} skill=${catalogStats.skill} mcp=${catalogStats.mcp} claude-plugin=${catalogStats.claudePlugin} claude-connector=${catalogStats.claudeConnector} copilot-extension=${catalogStats.copilotExtension}`
+    colorIfTty(
+      `  items=${catalogStats.items}  skill=${catalogStats.skill}  mcp=${catalogStats.mcp}  claude-plugin=${catalogStats.claudePlugin}  claude-connector=${catalogStats.claudeConnector}`,
+      colors.dim
+    )
   );
   lines.push(
-    `- stale-registries=${runtimeStats.staleRegistries} whitelist=${runtimeStats.whitelist} quarantined=${runtimeStats.quarantined}`
+    colorIfTty(
+      `  copilot-extension=${catalogStats.copilotExtension}  cursor-extension=${catalogStats.cursorExtension}  gemini-extension=${catalogStats.geminiExtension}`,
+      colors.dim
+    )
+  );
+  lines.push(
+    colorIfTty(
+      `  stale-registries=${runtimeStats.staleRegistries}  whitelist=${runtimeStats.whitelist}  quarantined=${runtimeStats.quarantined}`,
+      colors.dim
+    )
   );
   lines.push('');
+
   lines.push(colorIfTty('Quick actions', colors.bold));
-  lines.push('- plugscout doctor');
-  lines.push('- plugscout status --verbose');
-  lines.push('- plugscout recommend --project . --only-safe --limit 10');
-  lines.push('- plugscout sync --dry-run');
-  lines.push('- plugscout help');
+  for (const cmd of [
+    'plugscout doctor',
+    'plugscout status --verbose',
+    'plugscout recommend --project . --only-safe --limit 10',
+    'plugscout sync --dry-run',
+    'plugscout help',
+  ]) {
+    lines.push(`  ${colorIfTty(cmd, colors.green)}`);
+  }
   lines.push('');
+
   lines.push(colorIfTty('Examples', colors.bold));
-  lines.push('- plugscout list --kind connectors --limit 10');
-  lines.push('- plugscout search github');
-  lines.push('- plugscout show --id claude-connector:asana');
+  for (const cmd of [
+    'plugscout list --kind connectors --limit 10',
+    'plugscout list --kind cursor --limit 15',
+    'plugscout search github',
+    'plugscout show --id claude-connector:asana',
+  ]) {
+    lines.push(`  ${colorIfTty(cmd, colors.green)}`);
+  }
   lines.push('');
+
   lines.push(colorIfTty('Kind aliases', colors.bold));
-  lines.push('- skills, mcps, plugins, connectors, extensions');
+  lines.push(colorIfTty('  skills · mcps · plugins · connectors · extensions · cursor · gemini', colors.dim));
   lines.push('');
+
   lines.push(colorIfTty('Ranking meaning', colors.bold));
-  lines.push('- `top` and `recommend` are repo-aware suggestions, not global popularity charts.');
-  lines.push('- score = fit + trust + freshness - security - blocked');
-  lines.push('- higher score means a better match for this repo under current policy');
-  lines.push('- review each suggestion before installing; do not install blindly from rank alone');
+  lines.push(colorIfTty('  top/recommend output is repo-aware suggestions, not a global popularity chart', colors.dim));
+  lines.push(colorIfTty('  score = fit + trust + freshness - security - blocked', colors.dim));
+  lines.push(colorIfTty('  review before installing — do not install blindly from rank alone', colors.dim));
 
   return lines.join('\n');
 }
 
-async function readLogo(): Promise<string> {
+async function readLogo(compact = false): Promise<string> {
+  const file = compact ? 'assets/cli/logo-compact.txt' : 'assets/cli/logo.txt';
   try {
-    return await fs.readFile(getPackagePath('assets/cli/logo.txt'), 'utf8');
+    return await fs.readFile(getPackagePath(file), 'utf8');
   } catch {
-    return 'PlugScout';
+    try {
+      return await fs.readFile(getPackagePath('assets/cli/logo.txt'), 'utf8');
+    } catch {
+      return 'PlugScout';
+    }
   }
 }
 
@@ -88,46 +122,24 @@ async function readCatalogStats(): Promise<{
   claudePlugin: number;
   claudeConnector: number;
   copilotExtension: number;
+  cursorExtension: number;
+  geminiExtension: number;
 }> {
   const items = await loadCatalogItems();
-  let skill = 0;
-  let mcp = 0;
-  let claudePlugin = 0;
-  let claudeConnector = 0;
-  let copilotExtension = 0;
+  let skill = 0, mcp = 0, claudePlugin = 0, claudeConnector = 0;
+  let copilotExtension = 0, cursorExtension = 0, geminiExtension = 0;
 
   items.forEach((item) => {
-    if (item.kind === 'skill') {
-      skill += 1;
-      return;
-    }
-
-    if (item.kind === 'mcp') {
-      mcp += 1;
-      return;
-    }
-
-    if (item.kind === 'claude-plugin') {
-      claudePlugin += 1;
-      return;
-    }
-
-    if (item.kind === 'claude-connector') {
-      claudeConnector += 1;
-      return;
-    }
-
-    copilotExtension += 1;
+    if (item.kind === 'skill') { skill += 1; }
+    else if (item.kind === 'mcp') { mcp += 1; }
+    else if (item.kind === 'claude-plugin') { claudePlugin += 1; }
+    else if (item.kind === 'claude-connector') { claudeConnector += 1; }
+    else if (item.kind === 'cursor-extension') { cursorExtension += 1; }
+    else if (item.kind === 'gemini-extension') { geminiExtension += 1; }
+    else { copilotExtension += 1; }
   });
 
-  return {
-    items: items.length,
-    skill,
-    mcp,
-    claudePlugin,
-    claudeConnector,
-    copilotExtension
-  };
+  return { items: items.length, skill, mcp, claudePlugin, claudeConnector, copilotExtension, cursorExtension, geminiExtension };
 }
 
 async function readRuntimeStats(): Promise<{

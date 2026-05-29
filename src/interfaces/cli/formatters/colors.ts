@@ -13,7 +13,8 @@ export const colors = {
   red: (value: string) => wrap(31, value),
   cyan: (value: string) => wrap(36, value),
   gray: (value: string) => wrap(90, value),
-  bold: (value: string) => wrap(1, value)
+  bold: (value: string) => wrap(1, value),
+  dim: (value: string) => wrap(2, value)
 };
 
 export function colorRisk(tier: string, value: string): string {
