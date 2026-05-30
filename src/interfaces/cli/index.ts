@@ -1367,9 +1367,6 @@ async function promptResultBrowser(entries: Array<{id: string; name: string}>): 
   const CTRL_C = '';
   const Q = 'q';
 
-  function isUp(key: string): boolean { return key === '[A' || key === '\x1b[A'; }
-  function isDown(key: string): boolean { return key === '[B' || key === '\x1b[B'; }
-
   function visibleStart(): number {
     return Math.max(0, Math.min(selected - Math.floor(WINDOW / 2), entries.length - WINDOW));
   }
@@ -1413,27 +1410,59 @@ async function promptResultBrowser(entries: Array<{id: string; name: string}>): 
     renderBrowser(true);
 
     const action = await new Promise<{exit: boolean; id?: string}>((resolve) => {
-      process.stdin.on('data', function onKey(key: string) {
+      let escTimer: ReturnType<typeof setTimeout> | null = null;
+      let pendingEsc = false;
+
+      function doExit(): void {
+        if (escTimer) { clearTimeout(escTimer); escTimer = null; }
+        process.stdin.removeListener('data', onKey);
+        process.stdin.setRawMode(false);
+        process.stdin.pause();
+        process.stdout.write('\n');
+        resolve({exit: true});
+      }
+
+      function onKey(key: string): void {
+        // Handle second byte of a split escape sequence (e.g. \x1b then [A)
+        if (pendingEsc) {
+          pendingEsc = false;
+          if (escTimer) { clearTimeout(escTimer); escTimer = null; }
+          if (key === '[A') { selected = (selected - 1 + entries.length) % entries.length; renderBrowser(false); return; }
+          if (key === '[B') { selected = (selected + 1) % entries.length; renderBrowser(false); return; }
+          // Standalone Esc followed by something unexpected — still exit
+          doExit();
+          return;
+        }
+
         if (key === CTRL_C || key === Q) {
-          process.stdin.removeListener('data', onKey);
-          process.stdin.setRawMode(false);
-          process.stdin.pause();
-          process.stdout.write('\n');
-          resolve({exit: true});
-        } else if (isUp(key)) {
+          doExit();
+        } else if (key === '\x1b[A' || key === '\x1bOA') {
+          // Single-chunk arrow up (most terminals)
           selected = (selected - 1 + entries.length) % entries.length;
           renderBrowser(false);
-        } else if (isDown(key)) {
+        } else if (key === '\x1b[B' || key === '\x1bOB') {
+          // Single-chunk arrow down (most terminals)
           selected = (selected + 1) % entries.length;
           renderBrowser(false);
+        } else if (key === '\x1b') {
+          // Could be standalone Esc or first byte of split arrow sequence
+          pendingEsc = true;
+          escTimer = setTimeout(() => {
+            pendingEsc = false;
+            escTimer = null;
+            doExit();
+          }, 40);
         } else if (key === ENTER) {
+          if (escTimer) { clearTimeout(escTimer); escTimer = null; }
           process.stdin.removeListener('data', onKey);
           process.stdin.setRawMode(false);
           process.stdin.pause();
           process.stdout.write('\n');
           resolve({exit: false, id: entries[selected].id});
         }
-      });
+      }
+
+      process.stdin.on('data', onKey);
     });
 
     if (action.exit) {
