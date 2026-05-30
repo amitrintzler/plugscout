@@ -1,6 +1,6 @@
 {
   "name": "@shnitzel/plugscout",
-  "version": "0.3.24",
+  "version": "0.3.25",
   "description": "Claude plugins + Claude connectors + Copilot extensions + Skills + MCP security intelligence framework",
   "private": false,
   "type": "module",
