@@ -497,10 +497,7 @@ function renderDetailCard(
     insight?: ItemInsight;
   }
 ): string {
-  const metadata = asMetadata(entry.item.metadata);
   const trustScore = computeTrustScore(entry.item);
-  const sourceRepo = typeof metadata.sourceRepo === 'string' ? metadata.sourceRepo : '';
-  const sourcePage = typeof metadata.sourcePage === 'string' ? metadata.sourcePage : '';
   const status = entry.blocked ? 'blocked' : entry.approved ? 'approved' : 'allowed';
   const statusClass = entry.blocked ? 'bad' : 'ok';
   const installHint = buildInstallHint(entry.item);
@@ -519,9 +516,6 @@ function renderDetailCard(
   const bodyId = `body-${safeId}`;
   const searchKey = escapeHtml(`${entry.item.id} ${entry.item.name} ${entry.item.capabilities.join(' ')}`.toLowerCase());
   const plugscoutCmd = `plugscout install --id ${entry.item.id} --yes`;
-  const isManualUrl = entry.item.install.kind === 'manual' && typeof (entry.item.install as Record<string, unknown>).url === 'string' && String((entry.item.install as Record<string, unknown>).url).startsWith('http');
-  const manualUrl = isManualUrl ? String((entry.item.install as Record<string, unknown>).url) : '';
-
   const previewChips = entry.item.capabilities
     .slice(0, 3)
     .map((cap) => `<span class="chip">${escapeHtml(cap)}</span>`)
@@ -565,9 +559,7 @@ function renderDetailCard(
       </div>
       ${entry.assessment.reasons.length > 0 ? `<div class="line"><span class="label">Risk signals: </span>${escapeHtml(entry.assessment.reasons.join(' · '))}</div>` : ''}
       <div class="line"><span class="label">Provider:</span> ${escapeHtml(entry.item.provider)} &nbsp;·&nbsp; <span class="label">Source:</span> ${escapeHtml(entry.item.source)}</div>
-      ${sourceRepo ? `<div class="line"><span class="label">Repo: </span><a class="link" href="${escapeHtml(sourceRepo)}" target="_blank" rel="noopener noreferrer">${escapeHtml(sourceRepo)}</a></div>` : ''}
-      ${sourcePage ? `<div class="line"><span class="label">Page: </span><a class="link" href="${escapeHtml(sourcePage)}" target="_blank" rel="noopener noreferrer">${escapeHtml(sourcePage)}</a></div>` : ''}
-      ${isManualUrl ? `<div class="line"><span class="label">Install page: </span><a class="link" href="${escapeHtml(manualUrl)}" target="_blank" rel="noopener noreferrer">${escapeHtml(manualUrl)}</a></div>` : ''}
+      ${buildItemLinks(entry.item).map(l => `<div class="line"><span class="label">${escapeHtml(l.label)}: </span><a class="link" href="${escapeHtml(l.url)}" target="_blank" rel="noopener noreferrer">${escapeHtml(l.url)}</a></div>`).join('')}
       <div class="install-block">
         <div class="install-header">
           <span class="install-label">Install command</span>
@@ -624,6 +616,44 @@ function asMetadata(value: unknown): Record<string, unknown> {
   return value as Record<string, unknown>;
 }
 
+function buildItemLinks(item: CatalogItem): Array<{label: string; url: string}> {
+  const meta = asMetadata(item.metadata);
+  const links: Array<{label: string; url: string}> = [];
+  const seen = new Set<string>();
+
+  function add(label: string, url: unknown): void {
+    if (typeof url !== 'string' || !url.startsWith('http')) return;
+    if (seen.has(url)) return;
+    seen.add(url);
+    links.push({ label, url });
+  }
+
+  if (item.kind === 'cursor-extension') {
+    const vsixId = meta.vsixId;
+    if (typeof vsixId === 'string') {
+      add('Marketplace', `https://marketplace.visualstudio.com/items?itemName=${vsixId}`);
+    }
+  }
+  if (item.kind === 'gemini-extension') {
+    const pkg = meta.npmPackage;
+    if (typeof pkg === 'string') {
+      add('npm', `https://www.npmjs.com/package/${encodeURIComponent(pkg)}`);
+    }
+  }
+
+  add('Install page', (item.install as Record<string, unknown>).url);
+  add('Repository', meta.repositoryUrl);
+  add('Repository', meta.githubUrl);
+  if (typeof meta.sourceRepo === 'string' && meta.sourceRepo.startsWith('http')) {
+    add('Repository', meta.sourceRepo);
+  } else if (typeof meta.sourceRepo === 'string' && meta.sourceRepo.includes('/')) {
+    add('Repository', `https://github.com/${meta.sourceRepo}`);
+  }
+  add('Website', meta.websiteUrl);
+  add('Source page', meta.sourcePage);
+
+  return links;
+}
 
 function escapeHtml(value: string): string {
   return value

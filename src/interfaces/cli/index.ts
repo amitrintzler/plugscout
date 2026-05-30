@@ -606,14 +606,12 @@ async function handleShow(args: string[]): Promise<void> {
   console.log(
     `Provenance: source=${item.source} catalogType=${getCatalogType(item)} confidence=${getSourceConfidence(item)}`
   );
-  const metadata = getItemMetadata(item);
-  const sourceRepo = typeof metadata.sourceRepo === 'string' ? metadata.sourceRepo : undefined;
-  const sourcePage = typeof metadata.sourcePage === 'string' ? metadata.sourcePage : undefined;
-  if (sourceRepo) {
-    console.log(`Source repo: ${sourceRepo}`);
-  }
-  if (sourcePage) {
-    console.log(`Source page: ${sourcePage}`);
+  const links = buildItemLinks(item);
+  if (links.length > 0) {
+    console.log('\nLinks:');
+    for (const link of links) {
+      console.log(`  ${link.label}: ${link.url}`);
+    }
   }
 }
 
@@ -975,6 +973,14 @@ async function handleAssess(args: string[]): Promise<void> {
   console.log(renderJson(assessment));
   await recordItemReview(found.id, 'assess');
   printHint(`Risk scale (lower is safer): ${formatRiskScale(policy)}`);
+
+  const links = buildItemLinks(found);
+  if (links.length > 0) {
+    console.log('\nLinks:');
+    for (const link of links) {
+      console.log(`  ${link.label}: ${link.url}`);
+    }
+  }
 }
 
 async function handleInstall(args: string[]): Promise<void> {
@@ -1716,4 +1722,49 @@ function getSourceConfidence(item: CatalogItem): string {
     return value;
   }
   return 'official';
+}
+
+function buildItemLinks(item: CatalogItem): Array<{label: string; url: string}> {
+  const meta = getItemMetadata(item);
+  const links: Array<{label: string; url: string}> = [];
+  const seen = new Set<string>();
+
+  function add(label: string, url: unknown): void {
+    if (typeof url !== 'string' || !url.startsWith('http')) return;
+    if (seen.has(url)) return;
+    seen.add(url);
+    links.push({ label, url });
+  }
+
+  // Kind-specific derived URLs first (most useful)
+  if (item.kind === 'cursor-extension') {
+    const vsixId = meta.vsixId;
+    if (typeof vsixId === 'string') {
+      add('Marketplace', `https://marketplace.visualstudio.com/items?itemName=${vsixId}`);
+    }
+  }
+  if (item.kind === 'gemini-extension') {
+    const pkg = meta.npmPackage;
+    if (typeof pkg === 'string') {
+      add('npm', `https://www.npmjs.com/package/${encodeURIComponent(pkg)}`);
+    }
+  }
+
+  // install.url is the most direct link for the user
+  add('Install page', (item.install as Record<string, unknown>).url);
+
+  // Metadata links — priority order
+  add('Repository', meta.repositoryUrl);
+  add('Repository', meta.githubUrl);
+  add('Repository', meta.sourceRepo?.toString().startsWith('http') ? meta.sourceRepo : undefined);
+  add('Website', meta.websiteUrl);
+  add('Source page', meta.sourcePage);
+
+  // GitHub shorthand (e.g. "github/awesome-copilot") → full URL
+  if (typeof meta.sourceRepo === 'string' && !meta.sourceRepo.startsWith('http')) {
+    const ghUrl = `https://github.com/${meta.sourceRepo}`;
+    add('Repository', ghUrl);
+  }
+
+  return links;
 }
