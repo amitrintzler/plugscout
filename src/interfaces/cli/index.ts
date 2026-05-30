@@ -1359,38 +1359,21 @@ function describeRiskPosture(posture: LocalCliConfig['riskPosture']): string {
 async function promptResultBrowser(entries: Array<{id: string; name: string}>): Promise<void> {
   if (!process.stdout.isTTY || entries.length === 0) return;
 
-  const WINDOW = 8;
   let selected = 0;
-  let linesDrawn = 0;
 
   const ENTER = '\r';
   const CTRL_C = '';
   const Q = 'q';
 
-  function visibleStart(): number {
-    return Math.max(0, Math.min(selected - Math.floor(WINDOW / 2), entries.length - WINDOW));
-  }
-
-  function renderBrowser(firstRender: boolean): void {
+  // Single-line navigator — no second table. The rendered results above are the reference.
+  function renderNavigator(firstRender: boolean): void {
     if (!firstRender) {
-      moveCursor(process.stdout, 0, -linesDrawn);
+      moveCursor(process.stdout, 0, -1);
       clearScreenDown(process.stdout);
     }
-    let drawn = 0;
-    const start = visibleStart();
-    const end = Math.min(start + WINDOW, entries.length);
-    for (let i = start; i < end; i++) {
-      const prefix = i === selected ? '  ❯ ' : '    ';
-      const nameSuffix = entries[i].name ? `  ${entries[i].name}` : '';
-      const line = `${prefix}${entries[i].id}${nameSuffix}`;
-      process.stdout.write(`${line}\n`);
-      drawn += 1;
-    }
-    if (entries.length > WINDOW) {
-      process.stdout.write(`\x1b[2m    (${selected + 1}/${entries.length})\x1b[0m\n`);
-      drawn += 1;
-    }
-    linesDrawn = drawn;
+    const entry = entries[selected];
+    const label = entry.name ? `${entry.id}  \x1b[90m${entry.name}\x1b[0m` : entry.id;
+    process.stdout.write(`  \x1b[36m❯\x1b[0m  ${label}  \x1b[90m(${selected + 1}/${entries.length})\x1b[0m\n`);
   }
 
   // eslint-disable-next-line prefer-const
@@ -1398,16 +1381,15 @@ async function promptResultBrowser(entries: Array<{id: string; name: string}>): 
   let firstLoop = true;
   while (running) {
     if (firstLoop) {
-      process.stdout.write('\x1b[2m  Inspect results: ↑↓ navigate  ⏎ inspect  q skip\x1b[0m\n\n');
+      process.stdout.write('\x1b[90m  ↑↓ navigate  ⏎ inspect  q/Esc skip\x1b[0m\n');
       firstLoop = false;
     } else {
-      process.stdout.write('\n\x1b[2m  Inspect another: ↑↓ navigate  ⏎ inspect  q skip\x1b[0m\n\n');
+      process.stdout.write('\x1b[90m  ↑↓ navigate  ⏎ inspect another  q/Esc done\x1b[0m\n');
     }
-    linesDrawn = 0;
     process.stdin.setRawMode(true);
     process.stdin.resume();
     process.stdin.setEncoding('utf8');
-    renderBrowser(true);
+    renderNavigator(true);
 
     const action = await new Promise<{exit: boolean; id?: string}>((resolve) => {
       let escTimer: ReturnType<typeof setTimeout> | null = null;
@@ -1427,8 +1409,8 @@ async function promptResultBrowser(entries: Array<{id: string; name: string}>): 
         if (pendingEsc) {
           pendingEsc = false;
           if (escTimer) { clearTimeout(escTimer); escTimer = null; }
-          if (key === '[A') { selected = (selected - 1 + entries.length) % entries.length; renderBrowser(false); return; }
-          if (key === '[B') { selected = (selected + 1) % entries.length; renderBrowser(false); return; }
+          if (key === '[A') { selected = (selected - 1 + entries.length) % entries.length; renderNavigator(false); return; }
+          if (key === '[B') { selected = (selected + 1) % entries.length; renderNavigator(false); return; }
           // Standalone Esc followed by something unexpected — still exit
           doExit();
           return;
@@ -1439,11 +1421,11 @@ async function promptResultBrowser(entries: Array<{id: string; name: string}>): 
         } else if (key === '\x1b[A' || key === '\x1bOA') {
           // Single-chunk arrow up (most terminals)
           selected = (selected - 1 + entries.length) % entries.length;
-          renderBrowser(false);
+          renderNavigator(false);
         } else if (key === '\x1b[B' || key === '\x1bOB') {
           // Single-chunk arrow down (most terminals)
           selected = (selected + 1) % entries.length;
-          renderBrowser(false);
+          renderNavigator(false);
         } else if (key === '\x1b') {
           // Could be standalone Esc or first byte of split arrow sequence
           pendingEsc = true;

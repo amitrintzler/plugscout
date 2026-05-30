@@ -66,7 +66,7 @@ export async function renderHomeScreen(): Promise<string> {
     'plugscout sync --dry-run',
     'plugscout help',
   ]) {
-    lines.push(`  ${colorIfTty(cmd, colors.green)}`);
+    lines.push(`  ${colorIfTty(cmd, colors.cyan)}`);
   }
   lines.push('');
 
@@ -77,7 +77,7 @@ export async function renderHomeScreen(): Promise<string> {
     'plugscout search github',
     'plugscout show --id claude-connector:asana',
   ]) {
-    lines.push(`  ${colorIfTty(cmd, colors.green)}`);
+    lines.push(`  ${colorIfTty(cmd, colors.cyan)}`);
   }
   lines.push('');
 
@@ -339,7 +339,7 @@ export async function renderInteractiveHome(): Promise<void> {
             const rl = createInterface({ input: process.stdin, output: process.stdout });
             process.stdin.resume();
             const id = await new Promise<string>((res) => {
-              rl.question('  Enter catalog ID: ', (answer) => {
+              rl.question('  Catalog ID (e.g. mcp:github, skill:code-review, cursor-extension:gitlens): ', (answer) => {
                 rl.close();
                 res(answer.trim());
               });
