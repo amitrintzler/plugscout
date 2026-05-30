@@ -1363,12 +1363,12 @@ async function promptResultBrowser(entries: Array<{id: string; name: string}>): 
   let selected = 0;
   let linesDrawn = 0;
 
-  const ARROW_UP = '[A';
-  const ARROW_DOWN = '[B';
   const ENTER = '\r';
   const CTRL_C = '';
   const Q = 'q';
-  const ESC = '\x1b';
+
+  function isUp(key: string): boolean { return key === '[A' || key === '\x1b[A'; }
+  function isDown(key: string): boolean { return key === '[B' || key === '\x1b[B'; }
 
   function visibleStart(): number {
     return Math.max(0, Math.min(selected - Math.floor(WINDOW / 2), entries.length - WINDOW));
@@ -1414,16 +1414,16 @@ async function promptResultBrowser(entries: Array<{id: string; name: string}>): 
 
     const action = await new Promise<{exit: boolean; id?: string}>((resolve) => {
       process.stdin.on('data', function onKey(key: string) {
-        if (key === CTRL_C || key === Q || key === ESC) {
+        if (key === CTRL_C || key === Q) {
           process.stdin.removeListener('data', onKey);
           process.stdin.setRawMode(false);
           process.stdin.pause();
           process.stdout.write('\n');
           resolve({exit: true});
-        } else if (key === ARROW_UP) {
+        } else if (isUp(key)) {
           selected = (selected - 1 + entries.length) % entries.length;
           renderBrowser(false);
-        } else if (key === ARROW_DOWN) {
+        } else if (isDown(key)) {
           selected = (selected + 1) % entries.length;
           renderBrowser(false);
         } else if (key === ENTER) {
