@@ -55,7 +55,7 @@
     {
       "id": "google",
       "enabled": true,
-      "officialOnly": true,
+      "officialOnly": false,
       "trustLevel": "high",
       "poll": {
         "mode": "daily",

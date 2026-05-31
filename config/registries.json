@@ -2726,7 +2726,7 @@
         "timeoutMs": 10000,
         "fallbackToLocal": true,
         "provider": "cursor",
-        "official": false,
+        "official": true,
         "licenseHint": "community"
       }
     },
@@ -3360,7 +3360,7 @@
         "timeoutMs": 10000,
         "fallbackToLocal": true,
         "provider": "google",
-        "official": false,
+        "official": true,
         "licenseHint": "community"
       }
     }
