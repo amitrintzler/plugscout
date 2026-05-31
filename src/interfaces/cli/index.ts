@@ -564,7 +564,7 @@ async function handleList(args: string[]): Promise<void> {
     console.log(renderCatalogDecisionDetails(filtered, policy, insights));
   }
 
-  await promptResultBrowser(filtered.map((e) => ({id: e.item.id, name: e.item.name})));
+  await promptResultBrowser(filtered.map((e) => ({id: e.item.id, name: e.item.name, url: buildItemLinks(e.item)[0]?.url})));
 }
 
 async function handleShow(args: string[]): Promise<void> {
@@ -663,7 +663,7 @@ async function handleSearch(args: string[]): Promise<void> {
   );
 
   printHint('Use `show --id <catalog-id>` for full detail.');
-  await promptResultBrowser(matches.map((e) => ({id: e.item.id, name: e.item.name})));
+  await promptResultBrowser(matches.map((e) => ({id: e.item.id, name: e.item.name, url: buildItemLinks(e.item)[0]?.url})));
 }
 
 async function handleExplain(args: string[]): Promise<void> {
@@ -815,13 +815,17 @@ async function handleTop(args: string[]): Promise<void> {
   printHint('Review each suggestion before installing. Do not install blindly from rank alone.');
   printHint(`Risk scale (lower is safer): ${formatRiskScale(policy)}`);
   printHint('Use `show --id <catalog-id>` or `assess --id <catalog-id>` for deep inspection.');
+  const topCatalogItems = await loadCatalogItems();
+  const topCatalogMap = new Map(topCatalogItems.map((item) => [item.id, item]));
   if (details) {
-    const [catalogItems, insights] = await Promise.all([loadCatalogItems(), loadItemInsights()]);
-    const catalogMap = new Map(catalogItems.map((item) => [item.id, item]));
-    console.log(renderRecommendationDecisionDetails(safe, catalogMap, policy, insights));
+    const insights = await loadItemInsights();
+    console.log(renderRecommendationDecisionDetails(safe, topCatalogMap, policy, insights));
   }
 
-  await promptResultBrowser(safe.map((e) => ({id: e.id, name: ''})));
+  await promptResultBrowser(safe.map((e) => {
+    const item = topCatalogMap.get(e.id);
+    return {id: e.id, name: '', url: item ? buildItemLinks(item)[0]?.url : undefined};
+  }));
 }
 
 async function handleSync(args: string[]): Promise<void> {
@@ -943,7 +947,12 @@ async function handleRecommend(args: string[]): Promise<void> {
   printHint('Next: run `show --id <catalog-id>` or `install --id <catalog-id> --yes`.');
 
   if (format !== 'json') {
-    await promptResultBrowser(ranked.map((e) => ({id: e.id, name: ''})));
+    const recCatalogItems = await loadCatalogItems();
+    const recCatalogMap = new Map(recCatalogItems.map((item) => [item.id, item]));
+    await promptResultBrowser(ranked.map((e) => {
+      const item = recCatalogMap.get(e.id);
+      return {id: e.id, name: '', url: item ? buildItemLinks(item)[0]?.url : undefined};
+    }));
   }
 }
 
@@ -1386,7 +1395,7 @@ function describeRiskPosture(posture: LocalCliConfig['riskPosture']): string {
   return 'show full catalog/recommendation set, including blocked items with flags.';
 }
 
-async function promptResultBrowser(entries: Array<{id: string; name: string}>): Promise<void> {
+async function promptResultBrowser(entries: Array<{id: string; name: string; url?: string}>): Promise<void> {
   if (!process.stdout.isTTY || entries.length === 0) return;
 
   let selected = 0;
@@ -1395,15 +1404,16 @@ async function promptResultBrowser(entries: Array<{id: string; name: string}>): 
   const CTRL_C = '';
   const Q = 'q';
 
-  // Single-line navigator — no second table. The rendered results above are the reference.
+  // Two-line navigator: id/name line + url line (blank if none). Always writes 2 lines so cursor math is stable.
   function renderNavigator(firstRender: boolean): void {
     if (!firstRender) {
-      moveCursor(process.stdout, 0, -1);
+      moveCursor(process.stdout, 0, -2);
       clearScreenDown(process.stdout);
     }
     const entry = entries[selected];
     const label = entry.name ? `${entry.id}  \x1b[90m${entry.name}\x1b[0m` : entry.id;
     process.stdout.write(`  \x1b[36m❯\x1b[0m  ${label}  \x1b[90m(${selected + 1}/${entries.length})\x1b[0m\n`);
+    process.stdout.write(entry.url ? `     \x1b[90m${entry.url}\x1b[0m\n` : '\n');
   }
 
   // eslint-disable-next-line prefer-const
