@@ -831,6 +831,7 @@ async function handleTop(args: string[]): Promise<void> {
 async function handleSync(args: string[]): Promise<void> {
   const kinds = readKinds(args);
   const dryRun = hasFlag(args, '--dry-run');
+  const force = hasFlag(args, '--force');
 
   if (dryRun) {
     const registries = await loadRegistries();
@@ -843,7 +844,12 @@ async function handleSync(args: string[]): Promise<void> {
     return;
   }
 
-  const result = await syncCatalogs(undefined, { kinds });
+  console.log('Syncing catalogs…');
+  const result = await syncCatalogs(undefined, {
+    kinds,
+    force,
+    onProgress: (msg) => process.stdout.write(`${msg}\n`),
+  });
 
   if (result.staleRegistries.length > 0) {
     logger.warn(`Stale registries: ${result.staleRegistries.join(', ')}`);

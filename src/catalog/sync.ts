@@ -12,11 +12,16 @@ import {
   setUpdatedSince
 } from './sync-state.js';
 
-import { saveCatalogItems, saveLegacyCatalogViews } from './repository.js';
+import { loadCatalogItems, saveCatalogItems, saveLegacyCatalogViews } from './repository.js';
 
 export interface SyncCatalogOptions {
   kinds?: CatalogKind[];
+  force?: boolean;
+  onProgress?: (msg: string) => void;
 }
+
+// Skip remote fetch for registries synced within this window (unless --force)
+const FRESH_REGISTRY_TTL_MS = 6 * 60 * 60 * 1000; // 6 hours
 
 export async function syncCatalogs(
   today = new Date().toISOString().slice(0, 10),
@@ -26,11 +31,24 @@ export async function syncCatalogs(
   staleRegistries: string[];
 }> {
   const effectiveToday = process.env.SKILLS_MCPS_SYNC_TODAY || today;
-  const [registries, providers] = await Promise.all([loadRegistries(), loadProviders()]);
+  const [registries, providers, existingItems] = await Promise.all([
+    loadRegistries(),
+    loadProviders(),
+    loadCatalogItems().catch(() => [] as CatalogItem[]),
+  ]);
   let syncState = await loadSyncState();
+
+  // Index existing items by source registry for reuse when skipping fresh registries
+  const existingBySource = new Map<string, CatalogItem[]>();
+  for (const item of existingItems) {
+    const list = existingBySource.get(item.source) ?? [];
+    list.push(item);
+    existingBySource.set(item.source, list);
+  }
 
   const selectedKinds = options.kinds?.length ? new Set(options.kinds) : null;
   const allItems: CatalogItem[] = [];
+  const progress = options.onProgress ?? (() => undefined);
 
   for (const registry of registries) {
     if (selectedKinds && !selectedKinds.has(registry.kind)) {
@@ -44,6 +62,21 @@ export async function syncCatalogs(
         continue;
       }
     }
+
+    // Skip recently-synced remote registries unless --force — reuse cached items
+    if (!options.force && registry.remote) {
+      const lastSync = syncState.registries[registry.id]?.lastSuccessfulSyncAt;
+      if (lastSync && Date.now() - new Date(lastSync).getTime() < FRESH_REGISTRY_TTL_MS) {
+        const cached = existingBySource.get(registry.id) ?? [];
+        if (cached.length > 0) {
+          allItems.push(...cached);
+          progress(`  ↩ ${registry.id} (${cached.length} cached)`);
+          continue;
+        }
+      }
+    }
+
+    progress(`  ↓ ${registry.id} (${registry.kind})…`);
 
     const updatedSince = registry.remote?.supportsUpdatedSince ? getUpdatedSince(syncState, registry.id) : undefined;
 
