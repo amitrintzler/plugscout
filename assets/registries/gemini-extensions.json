@@ -1,0 +1,617 @@
+[
+  {
+    "id": "gemini-extension:filesystem",
+    "name": "Filesystem MCP Server",
+    "description": "Secure file read/write operations scoped to allowed directories via Model Context Protocol.",
+    "capabilities": [
+      "file-read",
+      "file-write",
+      "directory-management"
+    ],
+    "compatibility": [
+      "gemini",
+      "gemini-cli",
+      "node"
+    ],
+    "install": {
+      "kind": "manual",
+      "instructions": "Add to ~/.gemini/settings.json: {\"filesystem\":{\"command\":\"npx\",\"args\":[\"-y\",\"@modelcontextprotocol/server-filesystem\",\"/path\"]}}"
+    },
+    "adoptionSignal": 92,
+    "maintenanceSignal": 90,
+    "provenanceSignal": 98,
+    "freshnessSignal": 88,
+    "securitySignals": {
+      "knownVulnerabilities": 0,
+      "suspiciousPatterns": 1,
+      "injectionFindings": 0,
+      "exfiltrationSignals": 0,
+      "integrityAlerts": 0
+    },
+    "metadata": {
+      "npmPackage": "@modelcontextprotocol/server-filesystem",
+      "sourceConfidence": "official"
+    }
+  },
+  {
+    "id": "gemini-extension:memory",
+    "name": "Memory MCP Server",
+    "description": "Knowledge-graph-based persistent memory that stores and retrieves facts across Gemini CLI sessions.",
+    "capabilities": [
+      "memory",
+      "knowledge-graph",
+      "persistence"
+    ],
+    "compatibility": [
+      "gemini",
+      "gemini-cli",
+      "node"
+    ],
+    "install": {
+      "kind": "manual",
+      "instructions": "Add to ~/.gemini/settings.json: {\"memory\":{\"command\":\"npx\",\"args\":[\"-y\",\"@modelcontextprotocol/server-memory\"]}}"
+    },
+    "adoptionSignal": 87,
+    "maintenanceSignal": 88,
+    "provenanceSignal": 98,
+    "freshnessSignal": 87,
+    "securitySignals": {
+      "knownVulnerabilities": 0,
+      "suspiciousPatterns": 0,
+      "injectionFindings": 0,
+      "exfiltrationSignals": 0,
+      "integrityAlerts": 0
+    },
+    "metadata": {
+      "npmPackage": "@modelcontextprotocol/server-memory",
+      "sourceConfidence": "official"
+    }
+  },
+  {
+    "id": "gemini-extension:fetch",
+    "name": "Fetch MCP Server",
+    "description": "Fetches web URLs and converts HTML to clean Markdown for LLM consumption — real-time web access.",
+    "capabilities": [
+      "web-fetch",
+      "content-conversion",
+      "research"
+    ],
+    "compatibility": [
+      "gemini",
+      "gemini-cli",
+      "node"
+    ],
+    "install": {
+      "kind": "manual",
+      "instructions": "Add to ~/.gemini/settings.json: {\"fetch\":{\"command\":\"npx\",\"args\":[\"-y\",\"@modelcontextprotocol/server-fetch\"]}}"
+    },
+    "adoptionSignal": 88,
+    "maintenanceSignal": 90,
+    "provenanceSignal": 98,
+    "freshnessSignal": 90,
+    "securitySignals": {
+      "knownVulnerabilities": 0,
+      "suspiciousPatterns": 0,
+      "injectionFindings": 0,
+      "exfiltrationSignals": 0,
+      "integrityAlerts": 0
+    },
+    "metadata": {
+      "npmPackage": "@modelcontextprotocol/server-fetch",
+      "sourceConfidence": "official"
+    }
+  },
+  {
+    "id": "gemini-extension:sequential-thinking",
+    "name": "Sequential Thinking MCP Server",
+    "description": "Structured multi-step problem decomposition and branching reasoning for complex tasks.",
+    "capabilities": [
+      "reasoning",
+      "planning",
+      "metacognition"
+    ],
+    "compatibility": [
+      "gemini",
+      "gemini-cli",
+      "node"
+    ],
+    "install": {
+      "kind": "manual",
+      "instructions": "Add to ~/.gemini/settings.json: {\"sequential-thinking\":{\"command\":\"npx\",\"args\":[\"-y\",\"@modelcontextprotocol/server-sequential-thinking\"]}}"
+    },
+    "adoptionSignal": 84,
+    "maintenanceSignal": 87,
+    "provenanceSignal": 97,
+    "freshnessSignal": 86,
+    "securitySignals": {
+      "knownVulnerabilities": 0,
+      "suspiciousPatterns": 0,
+      "injectionFindings": 0,
+      "exfiltrationSignals": 0,
+      "integrityAlerts": 0
+    },
+    "metadata": {
+      "npmPackage": "@modelcontextprotocol/server-sequential-thinking",
+      "sourceConfidence": "official"
+    }
+  },
+  {
+    "id": "gemini-extension:context7",
+    "name": "Context7 MCP Server",
+    "description": "Retrieves current, version-specific library docs and code examples on demand — 890K weekly npm downloads.",
+    "capabilities": [
+      "docs-lookup",
+      "code-examples",
+      "library-context"
+    ],
+    "compatibility": [
+      "gemini",
+      "gemini-cli",
+      "node"
+    ],
+    "install": {
+      "kind": "manual",
+      "instructions": "Add to ~/.gemini/settings.json: {\"context7\":{\"command\":\"npx\",\"args\":[\"-y\",\"@upstash/context7-mcp@latest\"]}}"
+    },
+    "adoptionSignal": 93,
+    "maintenanceSignal": 91,
+    "provenanceSignal": 90,
+    "freshnessSignal": 96,
+    "securitySignals": {
+      "knownVulnerabilities": 0,
+      "suspiciousPatterns": 0,
+      "injectionFindings": 0,
+      "exfiltrationSignals": 0,
+      "integrityAlerts": 0
+    },
+    "metadata": {
+      "npmPackage": "@upstash/context7-mcp",
+      "sourceConfidence": "official"
+    }
+  },
+  {
+    "id": "gemini-extension:playwright",
+    "name": "Playwright MCP Server",
+    "description": "Browser automation via accessibility trees: navigate, click, fill forms, screenshot — official Microsoft MCP.",
+    "capabilities": [
+      "browser-automation",
+      "ui-testing",
+      "scraping"
+    ],
+    "compatibility": [
+      "gemini",
+      "gemini-cli",
+      "node"
+    ],
+    "install": {
+      "kind": "manual",
+      "instructions": "Add to ~/.gemini/settings.json: {\"playwright\":{\"command\":\"npx\",\"args\":[\"@playwright/mcp@latest\"]}}"
+    },
+    "adoptionSignal": 90,
+    "maintenanceSignal": 93,
+    "provenanceSignal": 97,
+    "freshnessSignal": 95,
+    "securitySignals": {
+      "knownVulnerabilities": 0,
+      "suspiciousPatterns": 0,
+      "injectionFindings": 0,
+      "exfiltrationSignals": 0,
+      "integrityAlerts": 0
+    },
+    "metadata": {
+      "npmPackage": "@playwright/mcp",
+      "sourceConfidence": "official"
+    }
+  },
+  {
+    "id": "gemini-extension:github",
+    "name": "GitHub MCP Server",
+    "description": "Full GitHub API: repos, PRs, issues, code search, workflow triggers — 28K+ GitHub stars, official GitHub.",
+    "capabilities": [
+      "github",
+      "pr-management",
+      "code-search",
+      "ci-cd"
+    ],
+    "compatibility": [
+      "gemini",
+      "gemini-cli",
+      "node",
+      "github"
+    ],
+    "install": {
+      "kind": "manual",
+      "instructions": "Add to ~/.gemini/settings.json: {\"github\":{\"command\":\"npx\",\"args\":[\"-y\",\"@modelcontextprotocol/server-github\"]}} with GITHUB_PERSONAL_ACCESS_TOKEN env var"
+    },
+    "adoptionSignal": 91,
+    "maintenanceSignal": 92,
+    "provenanceSignal": 98,
+    "freshnessSignal": 94,
+    "securitySignals": {
+      "knownVulnerabilities": 0,
+      "suspiciousPatterns": 0,
+      "injectionFindings": 0,
+      "exfiltrationSignals": 0,
+      "integrityAlerts": 0
+    },
+    "metadata": {
+      "npmPackage": "@modelcontextprotocol/server-github",
+      "sourceConfidence": "official"
+    }
+  },
+  {
+    "id": "gemini-extension:firecrawl",
+    "name": "Firecrawl MCP Server",
+    "description": "Converts URLs to clean Markdown, web crawling, and structured data extraction — 8,800 weekly npm downloads.",
+    "capabilities": [
+      "web-scraping",
+      "crawling",
+      "content-extraction"
+    ],
+    "compatibility": [
+      "gemini",
+      "gemini-cli",
+      "node"
+    ],
+    "install": {
+      "kind": "manual",
+      "instructions": "Add to ~/.gemini/settings.json: {\"firecrawl\":{\"command\":\"npx\",\"args\":[\"-y\",\"firecrawl-mcp\"]}} with FIRECRAWL_API_KEY env var"
+    },
+    "adoptionSignal": 80,
+    "maintenanceSignal": 83,
+    "provenanceSignal": 84,
+    "freshnessSignal": 88,
+    "securitySignals": {
+      "knownVulnerabilities": 0,
+      "suspiciousPatterns": 0,
+      "injectionFindings": 0,
+      "exfiltrationSignals": 0,
+      "integrityAlerts": 0
+    },
+    "metadata": {
+      "npmPackage": "firecrawl-mcp",
+      "sourceConfidence": "official"
+    }
+  },
+  {
+    "id": "gemini-extension:exa",
+    "name": "Exa MCP Server",
+    "description": "Semantic neural search across the web with source ranking and full content retrieval via Exa AI.",
+    "capabilities": [
+      "semantic-search",
+      "web-search",
+      "research"
+    ],
+    "compatibility": [
+      "gemini",
+      "gemini-cli",
+      "node"
+    ],
+    "install": {
+      "kind": "manual",
+      "instructions": "Add to ~/.gemini/settings.json: {\"exa\":{\"command\":\"npx\",\"args\":[\"-y\",\"exa-mcp-server\"]}} with EXA_API_KEY env var"
+    },
+    "adoptionSignal": 78,
+    "maintenanceSignal": 82,
+    "provenanceSignal": 83,
+    "freshnessSignal": 86,
+    "securitySignals": {
+      "knownVulnerabilities": 0,
+      "suspiciousPatterns": 0,
+      "injectionFindings": 0,
+      "exfiltrationSignals": 0,
+      "integrityAlerts": 0
+    },
+    "metadata": {
+      "npmPackage": "exa-mcp-server",
+      "sourceConfidence": "official"
+    }
+  },
+  {
+    "id": "gemini-extension:postgres",
+    "name": "PostgreSQL MCP Server",
+    "description": "Read-only PostgreSQL query execution with schema inspection from Gemini CLI.",
+    "capabilities": [
+      "database",
+      "sql",
+      "schema-inspection"
+    ],
+    "compatibility": [
+      "gemini",
+      "gemini-cli",
+      "node"
+    ],
+    "install": {
+      "kind": "manual",
+      "instructions": "Add to ~/.gemini/settings.json: {\"postgres\":{\"command\":\"npx\",\"args\":[\"-y\",\"@modelcontextprotocol/server-postgres\",\"<connection-string>\"]}}"
+    },
+    "adoptionSignal": 82,
+    "maintenanceSignal": 84,
+    "provenanceSignal": 97,
+    "freshnessSignal": 82,
+    "securitySignals": {
+      "knownVulnerabilities": 0,
+      "suspiciousPatterns": 0,
+      "injectionFindings": 0,
+      "exfiltrationSignals": 1,
+      "integrityAlerts": 0
+    },
+    "metadata": {
+      "npmPackage": "@modelcontextprotocol/server-postgres",
+      "sourceConfidence": "official"
+    }
+  },
+  {
+    "id": "gemini-extension:supabase",
+    "name": "Supabase MCP Server",
+    "description": "Access Supabase Postgres, edge functions, and storage with RLS awareness — official Supabase MCP.",
+    "capabilities": [
+      "database",
+      "postgres",
+      "storage",
+      "auth"
+    ],
+    "compatibility": [
+      "gemini",
+      "gemini-cli",
+      "node"
+    ],
+    "install": {
+      "kind": "manual",
+      "instructions": "Add to ~/.gemini/settings.json: {\"supabase\":{\"command\":\"npx\",\"args\":[\"-y\",\"@supabase/mcp-server-supabase\",\"--access-token\",\"<token>\"]}}"
+    },
+    "adoptionSignal": 80,
+    "maintenanceSignal": 86,
+    "provenanceSignal": 93,
+    "freshnessSignal": 90,
+    "securitySignals": {
+      "knownVulnerabilities": 0,
+      "suspiciousPatterns": 0,
+      "injectionFindings": 0,
+      "exfiltrationSignals": 1,
+      "integrityAlerts": 0
+    },
+    "metadata": {
+      "npmPackage": "@supabase/mcp-server-supabase",
+      "sourceConfidence": "official"
+    }
+  },
+  {
+    "id": "gemini-extension:brave-search",
+    "name": "Brave Search MCP Server",
+    "description": "Web and local search via Brave's independent search index — privacy-respecting, no Google tracking.",
+    "capabilities": [
+      "web-search",
+      "local-search",
+      "research"
+    ],
+    "compatibility": [
+      "gemini",
+      "gemini-cli",
+      "node"
+    ],
+    "install": {
+      "kind": "manual",
+      "instructions": "Add to ~/.gemini/settings.json: {\"brave-search\":{\"command\":\"npx\",\"args\":[\"-y\",\"@modelcontextprotocol/server-brave-search\"]}} with BRAVE_API_KEY env var"
+    },
+    "adoptionSignal": 83,
+    "maintenanceSignal": 84,
+    "provenanceSignal": 97,
+    "freshnessSignal": 84,
+    "securitySignals": {
+      "knownVulnerabilities": 0,
+      "suspiciousPatterns": 0,
+      "injectionFindings": 0,
+      "exfiltrationSignals": 0,
+      "integrityAlerts": 0
+    },
+    "metadata": {
+      "npmPackage": "@modelcontextprotocol/server-brave-search",
+      "sourceConfidence": "official"
+    }
+  },
+  {
+    "id": "gemini-extension:puppeteer",
+    "name": "Puppeteer MCP Server",
+    "description": "Browser automation and screenshot capture using Puppeteer headless Chrome via MCP.",
+    "capabilities": [
+      "browser-automation",
+      "scraping",
+      "screenshots"
+    ],
+    "compatibility": [
+      "gemini",
+      "gemini-cli",
+      "node"
+    ],
+    "install": {
+      "kind": "manual",
+      "instructions": "Add to ~/.gemini/settings.json: {\"puppeteer\":{\"command\":\"npx\",\"args\":[\"-y\",\"@modelcontextprotocol/server-puppeteer\"]}}"
+    },
+    "adoptionSignal": 80,
+    "maintenanceSignal": 82,
+    "provenanceSignal": 96,
+    "freshnessSignal": 80,
+    "securitySignals": {
+      "knownVulnerabilities": 0,
+      "suspiciousPatterns": 1,
+      "injectionFindings": 0,
+      "exfiltrationSignals": 0,
+      "integrityAlerts": 0
+    },
+    "metadata": {
+      "npmPackage": "@modelcontextprotocol/server-puppeteer",
+      "sourceConfidence": "official"
+    }
+  },
+  {
+    "id": "gemini-extension:slack",
+    "name": "Slack MCP Server",
+    "description": "Send messages, read channel history, and manage Slack workspaces from Gemini CLI.",
+    "capabilities": [
+      "messaging",
+      "team-communication",
+      "automation"
+    ],
+    "compatibility": [
+      "gemini",
+      "gemini-cli",
+      "node"
+    ],
+    "install": {
+      "kind": "manual",
+      "instructions": "Add to ~/.gemini/settings.json: {\"slack\":{\"command\":\"npx\",\"args\":[\"-y\",\"@modelcontextprotocol/server-slack\"]}} with SLACK_BOT_TOKEN env var"
+    },
+    "adoptionSignal": 81,
+    "maintenanceSignal": 83,
+    "provenanceSignal": 96,
+    "freshnessSignal": 82,
+    "securitySignals": {
+      "knownVulnerabilities": 0,
+      "suspiciousPatterns": 0,
+      "injectionFindings": 0,
+      "exfiltrationSignals": 0,
+      "integrityAlerts": 0
+    },
+    "metadata": {
+      "npmPackage": "@modelcontextprotocol/server-slack",
+      "sourceConfidence": "official"
+    }
+  },
+  {
+    "id": "gemini-extension:sentry",
+    "name": "Sentry MCP Server",
+    "description": "Real-time error tracking, stack traces, issue correlation, and release data from Sentry — official Sentry MCP.",
+    "capabilities": [
+      "error-tracking",
+      "observability",
+      "debugging"
+    ],
+    "compatibility": [
+      "gemini",
+      "gemini-cli",
+      "node"
+    ],
+    "install": {
+      "kind": "manual",
+      "instructions": "Add to ~/.gemini/settings.json: {\"sentry\":{\"command\":\"npx\",\"args\":[\"-y\",\"@sentry/mcp-server\"]}} with SENTRY_AUTH_TOKEN env var"
+    },
+    "adoptionSignal": 79,
+    "maintenanceSignal": 85,
+    "provenanceSignal": 92,
+    "freshnessSignal": 88,
+    "securitySignals": {
+      "knownVulnerabilities": 0,
+      "suspiciousPatterns": 0,
+      "injectionFindings": 0,
+      "exfiltrationSignals": 0,
+      "integrityAlerts": 0
+    },
+    "metadata": {
+      "npmPackage": "@sentry/mcp-server",
+      "sourceConfidence": "official"
+    }
+  },
+  {
+    "id": "gemini-extension:notion",
+    "name": "Notion MCP Server",
+    "description": "Read and write Notion pages, databases, and search workspace content — official Notion MCP.",
+    "capabilities": [
+      "knowledge-base",
+      "documents",
+      "search"
+    ],
+    "compatibility": [
+      "gemini",
+      "gemini-cli",
+      "node"
+    ],
+    "install": {
+      "kind": "manual",
+      "instructions": "Add to ~/.gemini/settings.json: {\"notion\":{\"command\":\"npx\",\"args\":[\"-y\",\"@notionhq/notion-mcp-server\"]}} with OPENAPI_MCP_HEADERS for auth"
+    },
+    "adoptionSignal": 78,
+    "maintenanceSignal": 84,
+    "provenanceSignal": 91,
+    "freshnessSignal": 87,
+    "securitySignals": {
+      "knownVulnerabilities": 0,
+      "suspiciousPatterns": 0,
+      "injectionFindings": 0,
+      "exfiltrationSignals": 0,
+      "integrityAlerts": 0
+    },
+    "metadata": {
+      "npmPackage": "@notionhq/notion-mcp-server",
+      "sourceConfidence": "official"
+    }
+  },
+  {
+    "id": "gemini-extension:linear",
+    "name": "Linear MCP Server",
+    "description": "Create, update, and query Linear issues, projects, and teams from Gemini CLI.",
+    "capabilities": [
+      "project-management",
+      "issue-tracking",
+      "automation"
+    ],
+    "compatibility": [
+      "gemini",
+      "gemini-cli",
+      "node"
+    ],
+    "install": {
+      "kind": "manual",
+      "instructions": "Add to ~/.gemini/settings.json: {\"linear\":{\"command\":\"npx\",\"args\":[\"-y\",\"linear-mcp-server\"]}} with LINEAR_API_KEY env var"
+    },
+    "adoptionSignal": 76,
+    "maintenanceSignal": 80,
+    "provenanceSignal": 87,
+    "freshnessSignal": 82,
+    "securitySignals": {
+      "knownVulnerabilities": 0,
+      "suspiciousPatterns": 0,
+      "injectionFindings": 0,
+      "exfiltrationSignals": 0,
+      "integrityAlerts": 0
+    },
+    "metadata": {
+      "npmPackage": "linear-mcp-server",
+      "sourceConfidence": "official"
+    }
+  },
+  {
+    "id": "gemini-extension:google-maps",
+    "name": "Google Maps MCP Server",
+    "description": "Geocoding, directions, places search, and distance matrix via Google Maps API.",
+    "capabilities": [
+      "maps",
+      "geocoding",
+      "search"
+    ],
+    "compatibility": [
+      "gemini",
+      "gemini-cli",
+      "node"
+    ],
+    "install": {
+      "kind": "manual",
+      "instructions": "Add to ~/.gemini/settings.json: {\"google-maps\":{\"command\":\"npx\",\"args\":[\"-y\",\"@modelcontextprotocol/server-google-maps\"]}} with GOOGLE_MAPS_API_KEY env var"
+    },
+    "adoptionSignal": 74,
+    "maintenanceSignal": 78,
+    "provenanceSignal": 97,
+    "freshnessSignal": 80,
+    "securitySignals": {
+      "knownVulnerabilities": 0,
+      "suspiciousPatterns": 0,
+      "injectionFindings": 0,
+      "exfiltrationSignals": 0,
+      "integrityAlerts": 0
+    },
+    "metadata": {
+      "npmPackage": "@modelcontextprotocol/server-google-maps",
+      "sourceConfidence": "official"
+    }
+  }
+]

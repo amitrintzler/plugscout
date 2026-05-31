@@ -2169,7 +2169,7 @@
         {
           "id": "cursor-extension:prettier",
           "name": "Prettier - Code Formatter",
-          "description": "Opinionated code formatter for JS, TS, CSS, HTML, JSON, Markdown \u2014 69M installs.",
+          "description": "Opinionated code formatter for JS, TS, CSS, HTML, JSON, Markdown — 69M installs.",
           "capabilities": [
             "formatting",
             "code-style"
@@ -2203,7 +2203,7 @@
         {
           "id": "cursor-extension:eslint",
           "name": "ESLint",
-          "description": "Integrates ESLint linting into the editor with project rule enforcement and auto-fix \u2014 51M installs.",
+          "description": "Integrates ESLint linting into the editor with project rule enforcement and auto-fix — 51M installs.",
           "capabilities": [
             "linting",
             "code-quality",
@@ -2238,7 +2238,7 @@
         {
           "id": "cursor-extension:python",
           "name": "Python",
-          "description": "Full Python support: IntelliSense, debugging, linting, formatting, testing \u2014 220M installs.",
+          "description": "Full Python support: IntelliSense, debugging, linting, formatting, testing — 220M installs.",
           "capabilities": [
             "language",
             "linting",
@@ -2273,7 +2273,7 @@
         {
           "id": "cursor-extension:pylance",
           "name": "Pylance",
-          "description": "Fast, feature-rich Python language server with type checking (Pyright-based) \u2014 188M installs.",
+          "description": "Fast, feature-rich Python language server with type checking (Pyright-based) — 188M installs.",
           "capabilities": [
             "language",
             "type-checking",
@@ -2307,7 +2307,7 @@
         {
           "id": "cursor-extension:jupyter",
           "name": "Jupyter",
-          "description": "Jupyter notebook support with interactive computing, cell execution, and IntelliSense \u2014 105M installs.",
+          "description": "Jupyter notebook support with interactive computing, cell execution, and IntelliSense — 105M installs.",
           "capabilities": [
             "notebooks",
             "data-science",
@@ -2341,7 +2341,7 @@
         {
           "id": "cursor-extension:gitlens",
           "name": "GitLens",
-          "description": "Supercharged Git: blame annotations, commit history, branch visualization, code authorship \u2014 50M installs.",
+          "description": "Supercharged Git: blame annotations, commit history, branch visualization, code authorship — 50M installs.",
           "capabilities": [
             "git",
             "blame",
@@ -2376,7 +2376,7 @@
         {
           "id": "cursor-extension:git-graph",
           "name": "Git Graph",
-          "description": "Interactive visual graph of commits, branches, and merges with one-click history exploration \u2014 14M installs.",
+          "description": "Interactive visual graph of commits, branches, and merges with one-click history exploration — 14M installs.",
           "capabilities": [
             "git",
             "visualization",
@@ -2410,7 +2410,7 @@
         {
           "id": "cursor-extension:github-pull-requests",
           "name": "GitHub Pull Requests",
-          "description": "Create, manage, and review GitHub PRs and issues without leaving the editor \u2014 35M installs.",
+          "description": "Create, manage, and review GitHub PRs and issues without leaving the editor — 35M installs.",
           "capabilities": [
             "git",
             "github",
@@ -2446,7 +2446,7 @@
         {
           "id": "cursor-extension:docker",
           "name": "Docker",
-          "description": "Container management, Dockerfile/Compose syntax, build and run Docker containers from the editor \u2014 51M installs.",
+          "description": "Container management, Dockerfile/Compose syntax, build and run Docker containers from the editor — 51M installs.",
           "capabilities": [
             "containers",
             "devops",
@@ -2482,7 +2482,7 @@
         {
           "id": "cursor-extension:remote-containers",
           "name": "Dev Containers",
-          "description": "Open any folder inside a Docker container for fully reproducible, isolated dev environments \u2014 39M installs.",
+          "description": "Open any folder inside a Docker container for fully reproducible, isolated dev environments — 39M installs.",
           "capabilities": [
             "containers",
             "remote",
@@ -2517,7 +2517,7 @@
         {
           "id": "cursor-extension:remote-ssh",
           "name": "Remote - SSH",
-          "description": "Edit files on remote machines over SSH as if they were local \u2014 35M installs.",
+          "description": "Edit files on remote machines over SSH as if they were local — 35M installs.",
           "capabilities": [
             "remote",
             "ssh",
@@ -2551,7 +2551,7 @@
         {
           "id": "cursor-extension:tailwind-intellisense",
           "name": "Tailwind CSS IntelliSense",
-          "description": "Autocomplete, hover previews, and linting for Tailwind CSS utility classes \u2014 14M installs.",
+          "description": "Autocomplete, hover previews, and linting for Tailwind CSS utility classes — 14M installs.",
           "capabilities": [
             "frontend",
             "css",
@@ -2586,7 +2586,7 @@
         {
           "id": "cursor-extension:error-lens",
           "name": "Error Lens",
-          "description": "Shows errors, warnings, and hints inline at the relevant code line as you type \u2014 9M installs.",
+          "description": "Shows errors, warnings, and hints inline at the relevant code line as you type — 9M installs.",
           "capabilities": [
             "linting",
             "code-quality",
@@ -2620,7 +2620,7 @@
         {
           "id": "cursor-extension:thunder-client",
           "name": "Thunder Client",
-          "description": "Lightweight REST API client and HTTP test runner built into the editor \u2014 7M installs.",
+          "description": "Lightweight REST API client and HTTP test runner built into the editor — 7M installs.",
           "capabilities": [
             "api-testing",
             "rest",
@@ -2655,7 +2655,7 @@
         {
           "id": "cursor-extension:code-spell-checker",
           "name": "Code Spell Checker",
-          "description": "Catches spelling errors in code identifiers, comments, and strings \u2014 17M installs.",
+          "description": "Catches spelling errors in code identifiers, comments, and strings — 17M installs.",
           "capabilities": [
             "spell-check",
             "code-quality"
@@ -2688,7 +2688,7 @@
         {
           "id": "cursor-extension:pretty-ts-errors",
           "name": "Pretty TypeScript Errors",
-          "description": "Reformats complex TypeScript compiler errors into readable, human-friendly messages \u2014 2M installs.",
+          "description": "Reformats complex TypeScript compiler errors into readable, human-friendly messages — 2M installs.",
           "capabilities": [
             "typescript",
             "debugging",
@@ -2719,7 +2719,16 @@
             "sourceConfidence": "official"
           }
         }
-      ]
+      ],
+      "remote": {
+        "url": "https://raw.githubusercontent.com/amitrintzler/plugscout/main/assets/registries/cursor-extensions.json",
+        "format": "json-array",
+        "timeoutMs": 10000,
+        "fallbackToLocal": true,
+        "provider": "cursor",
+        "official": false,
+        "licenseHint": "community"
+      }
     },
     {
       "id": "curated-gemini-extensions",
@@ -2800,7 +2809,7 @@
         {
           "id": "gemini-extension:fetch",
           "name": "Fetch MCP Server",
-          "description": "Fetches web URLs and converts HTML to clean Markdown for LLM consumption \u2014 real-time web access.",
+          "description": "Fetches web URLs and converts HTML to clean Markdown for LLM consumption — real-time web access.",
           "capabilities": [
             "web-fetch",
             "content-conversion",
@@ -2868,7 +2877,7 @@
         {
           "id": "gemini-extension:context7",
           "name": "Context7 MCP Server",
-          "description": "Retrieves current, version-specific library docs and code examples on demand \u2014 890K weekly npm downloads.",
+          "description": "Retrieves current, version-specific library docs and code examples on demand — 890K weekly npm downloads.",
           "capabilities": [
             "docs-lookup",
             "code-examples",
@@ -2902,7 +2911,7 @@
         {
           "id": "gemini-extension:playwright",
           "name": "Playwright MCP Server",
-          "description": "Browser automation via accessibility trees: navigate, click, fill forms, screenshot \u2014 official Microsoft MCP.",
+          "description": "Browser automation via accessibility trees: navigate, click, fill forms, screenshot — official Microsoft MCP.",
           "capabilities": [
             "browser-automation",
             "ui-testing",
@@ -2936,7 +2945,7 @@
         {
           "id": "gemini-extension:github",
           "name": "GitHub MCP Server",
-          "description": "Full GitHub API: repos, PRs, issues, code search, workflow triggers \u2014 28K+ GitHub stars, official GitHub.",
+          "description": "Full GitHub API: repos, PRs, issues, code search, workflow triggers — 28K+ GitHub stars, official GitHub.",
           "capabilities": [
             "github",
             "pr-management",
@@ -2972,7 +2981,7 @@
         {
           "id": "gemini-extension:firecrawl",
           "name": "Firecrawl MCP Server",
-          "description": "Converts URLs to clean Markdown, web crawling, and structured data extraction \u2014 8,800 weekly npm downloads.",
+          "description": "Converts URLs to clean Markdown, web crawling, and structured data extraction — 8,800 weekly npm downloads.",
           "capabilities": [
             "web-scraping",
             "crawling",
@@ -3074,7 +3083,7 @@
         {
           "id": "gemini-extension:supabase",
           "name": "Supabase MCP Server",
-          "description": "Access Supabase Postgres, edge functions, and storage with RLS awareness \u2014 official Supabase MCP.",
+          "description": "Access Supabase Postgres, edge functions, and storage with RLS awareness — official Supabase MCP.",
           "capabilities": [
             "database",
             "postgres",
@@ -3109,7 +3118,7 @@
         {
           "id": "gemini-extension:brave-search",
           "name": "Brave Search MCP Server",
-          "description": "Web and local search via Brave's independent search index \u2014 privacy-respecting, no Google tracking.",
+          "description": "Web and local search via Brave's independent search index — privacy-respecting, no Google tracking.",
           "capabilities": [
             "web-search",
             "local-search",
@@ -3211,7 +3220,7 @@
         {
           "id": "gemini-extension:sentry",
           "name": "Sentry MCP Server",
-          "description": "Real-time error tracking, stack traces, issue correlation, and release data from Sentry \u2014 official Sentry MCP.",
+          "description": "Real-time error tracking, stack traces, issue correlation, and release data from Sentry — official Sentry MCP.",
           "capabilities": [
             "error-tracking",
             "observability",
@@ -3245,7 +3254,7 @@
         {
           "id": "gemini-extension:notion",
           "name": "Notion MCP Server",
-          "description": "Read and write Notion pages, databases, and search workspace content \u2014 official Notion MCP.",
+          "description": "Read and write Notion pages, databases, and search workspace content — official Notion MCP.",
           "capabilities": [
             "knowledge-base",
             "documents",
@@ -3344,7 +3353,16 @@
             "sourceConfidence": "official"
           }
         }
-      ]
+      ],
+      "remote": {
+        "url": "https://raw.githubusercontent.com/amitrintzler/plugscout/main/assets/registries/gemini-extensions.json",
+        "format": "json-array",
+        "timeoutMs": 10000,
+        "fallbackToLocal": true,
+        "provider": "google",
+        "official": false,
+        "licenseHint": "community"
+      }
     }
   ]
 }

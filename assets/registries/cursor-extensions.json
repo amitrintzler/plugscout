@@ -1,0 +1,702 @@
+[
+  {
+    "id": "cursor-extension:github-copilot",
+    "name": "GitHub Copilot",
+    "description": "AI pair programmer with inline code completions and multi-line suggestions trained on public code.",
+    "capabilities": [
+      "code-completion",
+      "automation",
+      "ai"
+    ],
+    "compatibility": [
+      "cursor",
+      "node",
+      "python",
+      "general"
+    ],
+    "install": {
+      "kind": "manual",
+      "instructions": "Install from Cursor Extensions: search 'GitHub Copilot'.",
+      "url": "https://marketplace.visualstudio.com/items?itemName=GitHub.copilot"
+    },
+    "adoptionSignal": 97,
+    "maintenanceSignal": 93,
+    "provenanceSignal": 99,
+    "freshnessSignal": 95,
+    "securitySignals": {
+      "knownVulnerabilities": 0,
+      "suspiciousPatterns": 0,
+      "injectionFindings": 0,
+      "exfiltrationSignals": 0,
+      "integrityAlerts": 0
+    },
+    "metadata": {
+      "vsixId": "GitHub.copilot",
+      "sourceConfidence": "official"
+    }
+  },
+  {
+    "id": "cursor-extension:github-copilot-chat",
+    "name": "GitHub Copilot Chat",
+    "description": "Inline AI chat and agent mode for asking questions, editing, and generating code with context.",
+    "capabilities": [
+      "ai",
+      "chat",
+      "code-generation",
+      "agent"
+    ],
+    "compatibility": [
+      "cursor",
+      "node",
+      "python",
+      "general"
+    ],
+    "install": {
+      "kind": "manual",
+      "instructions": "Install from Cursor Extensions: search 'GitHub Copilot Chat'.",
+      "url": "https://marketplace.visualstudio.com/items?itemName=GitHub.copilot-chat"
+    },
+    "adoptionSignal": 95,
+    "maintenanceSignal": 92,
+    "provenanceSignal": 99,
+    "freshnessSignal": 95,
+    "securitySignals": {
+      "knownVulnerabilities": 0,
+      "suspiciousPatterns": 0,
+      "injectionFindings": 0,
+      "exfiltrationSignals": 0,
+      "integrityAlerts": 0
+    },
+    "metadata": {
+      "vsixId": "GitHub.copilot-chat",
+      "sourceConfidence": "official"
+    }
+  },
+  {
+    "id": "cursor-extension:claude-code",
+    "name": "Claude Code",
+    "description": "Anthropic's AI coding assistant with full codebase context, multi-file editing, and refactoring via Claude models.",
+    "capabilities": [
+      "ai",
+      "code-generation",
+      "editing",
+      "agent"
+    ],
+    "compatibility": [
+      "cursor",
+      "node",
+      "python",
+      "general"
+    ],
+    "install": {
+      "kind": "manual",
+      "instructions": "Install from Cursor Extensions: search 'Claude Code'.",
+      "url": "https://marketplace.visualstudio.com/items?itemName=Anthropic.claude-code"
+    },
+    "adoptionSignal": 88,
+    "maintenanceSignal": 92,
+    "provenanceSignal": 99,
+    "freshnessSignal": 96,
+    "securitySignals": {
+      "knownVulnerabilities": 0,
+      "suspiciousPatterns": 0,
+      "injectionFindings": 0,
+      "exfiltrationSignals": 0,
+      "integrityAlerts": 0
+    },
+    "metadata": {
+      "vsixId": "Anthropic.claude-code",
+      "sourceConfidence": "official"
+    }
+  },
+  {
+    "id": "cursor-extension:continue",
+    "name": "Continue",
+    "description": "Open-source AI coding assistant with customizable models, MCP tool support, and context providers.",
+    "capabilities": [
+      "ai",
+      "autocomplete",
+      "chat",
+      "mcp"
+    ],
+    "compatibility": [
+      "cursor",
+      "node",
+      "python",
+      "general"
+    ],
+    "install": {
+      "kind": "manual",
+      "instructions": "Install from Cursor Extensions: search 'Continue'.",
+      "url": "https://marketplace.visualstudio.com/items?itemName=Continue.continue"
+    },
+    "adoptionSignal": 82,
+    "maintenanceSignal": 88,
+    "provenanceSignal": 90,
+    "freshnessSignal": 92,
+    "securitySignals": {
+      "knownVulnerabilities": 0,
+      "suspiciousPatterns": 0,
+      "injectionFindings": 0,
+      "exfiltrationSignals": 0,
+      "integrityAlerts": 0
+    },
+    "metadata": {
+      "vsixId": "Continue.continue",
+      "sourceConfidence": "official"
+    }
+  },
+  {
+    "id": "cursor-extension:prettier",
+    "name": "Prettier - Code Formatter",
+    "description": "Opinionated code formatter for JS, TS, CSS, HTML, JSON, Markdown — 69M installs.",
+    "capabilities": [
+      "formatting",
+      "code-style"
+    ],
+    "compatibility": [
+      "cursor",
+      "node",
+      "general"
+    ],
+    "install": {
+      "kind": "manual",
+      "instructions": "Install from Cursor Extensions: search 'Prettier'.",
+      "url": "https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode"
+    },
+    "adoptionSignal": 97,
+    "maintenanceSignal": 90,
+    "provenanceSignal": 96,
+    "freshnessSignal": 91,
+    "securitySignals": {
+      "knownVulnerabilities": 0,
+      "suspiciousPatterns": 0,
+      "injectionFindings": 0,
+      "exfiltrationSignals": 0,
+      "integrityAlerts": 0
+    },
+    "metadata": {
+      "vsixId": "esbenp.prettier-vscode",
+      "sourceConfidence": "official"
+    }
+  },
+  {
+    "id": "cursor-extension:eslint",
+    "name": "ESLint",
+    "description": "Integrates ESLint linting into the editor with project rule enforcement and auto-fix — 51M installs.",
+    "capabilities": [
+      "linting",
+      "code-quality",
+      "javascript"
+    ],
+    "compatibility": [
+      "cursor",
+      "node",
+      "general"
+    ],
+    "install": {
+      "kind": "manual",
+      "instructions": "Install from Cursor Extensions: search 'ESLint'.",
+      "url": "https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint"
+    },
+    "adoptionSignal": 96,
+    "maintenanceSignal": 89,
+    "provenanceSignal": 97,
+    "freshnessSignal": 90,
+    "securitySignals": {
+      "knownVulnerabilities": 0,
+      "suspiciousPatterns": 0,
+      "injectionFindings": 0,
+      "exfiltrationSignals": 0,
+      "integrityAlerts": 0
+    },
+    "metadata": {
+      "vsixId": "dbaeumer.vscode-eslint",
+      "sourceConfidence": "official"
+    }
+  },
+  {
+    "id": "cursor-extension:python",
+    "name": "Python",
+    "description": "Full Python support: IntelliSense, debugging, linting, formatting, testing — 220M installs.",
+    "capabilities": [
+      "language",
+      "linting",
+      "debugging",
+      "testing"
+    ],
+    "compatibility": [
+      "cursor",
+      "python"
+    ],
+    "install": {
+      "kind": "manual",
+      "instructions": "Install from Cursor Extensions: search 'Python' by Microsoft.",
+      "url": "https://marketplace.visualstudio.com/items?itemName=ms-python.python"
+    },
+    "adoptionSignal": 98,
+    "maintenanceSignal": 95,
+    "provenanceSignal": 99,
+    "freshnessSignal": 94,
+    "securitySignals": {
+      "knownVulnerabilities": 0,
+      "suspiciousPatterns": 0,
+      "injectionFindings": 0,
+      "exfiltrationSignals": 0,
+      "integrityAlerts": 0
+    },
+    "metadata": {
+      "vsixId": "ms-python.python",
+      "sourceConfidence": "official"
+    }
+  },
+  {
+    "id": "cursor-extension:pylance",
+    "name": "Pylance",
+    "description": "Fast, feature-rich Python language server with type checking (Pyright-based) — 188M installs.",
+    "capabilities": [
+      "language",
+      "type-checking",
+      "autocomplete"
+    ],
+    "compatibility": [
+      "cursor",
+      "python"
+    ],
+    "install": {
+      "kind": "manual",
+      "instructions": "Install from Cursor Extensions: search 'Pylance'.",
+      "url": "https://marketplace.visualstudio.com/items?itemName=ms-python.vscode-pylance"
+    },
+    "adoptionSignal": 97,
+    "maintenanceSignal": 95,
+    "provenanceSignal": 99,
+    "freshnessSignal": 93,
+    "securitySignals": {
+      "knownVulnerabilities": 0,
+      "suspiciousPatterns": 0,
+      "injectionFindings": 0,
+      "exfiltrationSignals": 0,
+      "integrityAlerts": 0
+    },
+    "metadata": {
+      "vsixId": "ms-python.vscode-pylance",
+      "sourceConfidence": "official"
+    }
+  },
+  {
+    "id": "cursor-extension:jupyter",
+    "name": "Jupyter",
+    "description": "Jupyter notebook support with interactive computing, cell execution, and IntelliSense — 105M installs.",
+    "capabilities": [
+      "notebooks",
+      "data-science",
+      "interactive"
+    ],
+    "compatibility": [
+      "cursor",
+      "python"
+    ],
+    "install": {
+      "kind": "manual",
+      "instructions": "Install from Cursor Extensions: search 'Jupyter' by Microsoft.",
+      "url": "https://marketplace.visualstudio.com/items?itemName=ms-toolsai.jupyter"
+    },
+    "adoptionSignal": 95,
+    "maintenanceSignal": 93,
+    "provenanceSignal": 99,
+    "freshnessSignal": 92,
+    "securitySignals": {
+      "knownVulnerabilities": 0,
+      "suspiciousPatterns": 0,
+      "injectionFindings": 0,
+      "exfiltrationSignals": 0,
+      "integrityAlerts": 0
+    },
+    "metadata": {
+      "vsixId": "ms-toolsai.jupyter",
+      "sourceConfidence": "official"
+    }
+  },
+  {
+    "id": "cursor-extension:gitlens",
+    "name": "GitLens",
+    "description": "Supercharged Git: blame annotations, commit history, branch visualization, code authorship — 50M installs.",
+    "capabilities": [
+      "git",
+      "blame",
+      "history",
+      "collaboration"
+    ],
+    "compatibility": [
+      "cursor",
+      "general"
+    ],
+    "install": {
+      "kind": "manual",
+      "instructions": "Install from Cursor Extensions: search 'GitLens'.",
+      "url": "https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens"
+    },
+    "adoptionSignal": 95,
+    "maintenanceSignal": 91,
+    "provenanceSignal": 94,
+    "freshnessSignal": 90,
+    "securitySignals": {
+      "knownVulnerabilities": 0,
+      "suspiciousPatterns": 0,
+      "injectionFindings": 0,
+      "exfiltrationSignals": 0,
+      "integrityAlerts": 0
+    },
+    "metadata": {
+      "vsixId": "eamodio.gitlens",
+      "sourceConfidence": "official"
+    }
+  },
+  {
+    "id": "cursor-extension:git-graph",
+    "name": "Git Graph",
+    "description": "Interactive visual graph of commits, branches, and merges with one-click history exploration — 14M installs.",
+    "capabilities": [
+      "git",
+      "visualization",
+      "history"
+    ],
+    "compatibility": [
+      "cursor",
+      "general"
+    ],
+    "install": {
+      "kind": "manual",
+      "instructions": "Install from Cursor Extensions: search 'Git Graph'.",
+      "url": "https://marketplace.visualstudio.com/items?itemName=mhutchie.git-graph"
+    },
+    "adoptionSignal": 90,
+    "maintenanceSignal": 82,
+    "provenanceSignal": 88,
+    "freshnessSignal": 83,
+    "securitySignals": {
+      "knownVulnerabilities": 0,
+      "suspiciousPatterns": 0,
+      "injectionFindings": 0,
+      "exfiltrationSignals": 0,
+      "integrityAlerts": 0
+    },
+    "metadata": {
+      "vsixId": "mhutchie.git-graph",
+      "sourceConfidence": "official"
+    }
+  },
+  {
+    "id": "cursor-extension:github-pull-requests",
+    "name": "GitHub Pull Requests",
+    "description": "Create, manage, and review GitHub PRs and issues without leaving the editor — 35M installs.",
+    "capabilities": [
+      "git",
+      "github",
+      "pr-review",
+      "collaboration"
+    ],
+    "compatibility": [
+      "cursor",
+      "github",
+      "general"
+    ],
+    "install": {
+      "kind": "manual",
+      "instructions": "Install from Cursor Extensions: search 'GitHub Pull Requests'.",
+      "url": "https://marketplace.visualstudio.com/items?itemName=GitHub.vscode-pull-request-github"
+    },
+    "adoptionSignal": 93,
+    "maintenanceSignal": 92,
+    "provenanceSignal": 99,
+    "freshnessSignal": 93,
+    "securitySignals": {
+      "knownVulnerabilities": 0,
+      "suspiciousPatterns": 0,
+      "injectionFindings": 0,
+      "exfiltrationSignals": 0,
+      "integrityAlerts": 0
+    },
+    "metadata": {
+      "vsixId": "GitHub.vscode-pull-request-github",
+      "sourceConfidence": "official"
+    }
+  },
+  {
+    "id": "cursor-extension:docker",
+    "name": "Docker",
+    "description": "Container management, Dockerfile/Compose syntax, build and run Docker containers from the editor — 51M installs.",
+    "capabilities": [
+      "containers",
+      "devops",
+      "docker"
+    ],
+    "compatibility": [
+      "cursor",
+      "node",
+      "python",
+      "general"
+    ],
+    "install": {
+      "kind": "manual",
+      "instructions": "Install from Cursor Extensions: search 'Docker' by Microsoft.",
+      "url": "https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-docker"
+    },
+    "adoptionSignal": 95,
+    "maintenanceSignal": 92,
+    "provenanceSignal": 99,
+    "freshnessSignal": 91,
+    "securitySignals": {
+      "knownVulnerabilities": 0,
+      "suspiciousPatterns": 0,
+      "injectionFindings": 0,
+      "exfiltrationSignals": 0,
+      "integrityAlerts": 0
+    },
+    "metadata": {
+      "vsixId": "ms-azuretools.vscode-docker",
+      "sourceConfidence": "official"
+    }
+  },
+  {
+    "id": "cursor-extension:remote-containers",
+    "name": "Dev Containers",
+    "description": "Open any folder inside a Docker container for fully reproducible, isolated dev environments — 39M installs.",
+    "capabilities": [
+      "containers",
+      "remote",
+      "devops"
+    ],
+    "compatibility": [
+      "cursor",
+      "docker",
+      "general"
+    ],
+    "install": {
+      "kind": "manual",
+      "instructions": "Install from Cursor Extensions: search 'Dev Containers'.",
+      "url": "https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers"
+    },
+    "adoptionSignal": 92,
+    "maintenanceSignal": 93,
+    "provenanceSignal": 99,
+    "freshnessSignal": 92,
+    "securitySignals": {
+      "knownVulnerabilities": 0,
+      "suspiciousPatterns": 0,
+      "injectionFindings": 0,
+      "exfiltrationSignals": 0,
+      "integrityAlerts": 0
+    },
+    "metadata": {
+      "vsixId": "ms-vscode-remote.remote-containers",
+      "sourceConfidence": "official"
+    }
+  },
+  {
+    "id": "cursor-extension:remote-ssh",
+    "name": "Remote - SSH",
+    "description": "Edit files on remote machines over SSH as if they were local — 35M installs.",
+    "capabilities": [
+      "remote",
+      "ssh",
+      "dev-environments"
+    ],
+    "compatibility": [
+      "cursor",
+      "general"
+    ],
+    "install": {
+      "kind": "manual",
+      "instructions": "Install from Cursor Extensions: search 'Remote - SSH'.",
+      "url": "https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-ssh"
+    },
+    "adoptionSignal": 92,
+    "maintenanceSignal": 92,
+    "provenanceSignal": 99,
+    "freshnessSignal": 91,
+    "securitySignals": {
+      "knownVulnerabilities": 0,
+      "suspiciousPatterns": 0,
+      "injectionFindings": 0,
+      "exfiltrationSignals": 0,
+      "integrityAlerts": 0
+    },
+    "metadata": {
+      "vsixId": "ms-vscode-remote.remote-ssh",
+      "sourceConfidence": "official"
+    }
+  },
+  {
+    "id": "cursor-extension:tailwind-intellisense",
+    "name": "Tailwind CSS IntelliSense",
+    "description": "Autocomplete, hover previews, and linting for Tailwind CSS utility classes — 14M installs.",
+    "capabilities": [
+      "frontend",
+      "css",
+      "autocomplete"
+    ],
+    "compatibility": [
+      "cursor",
+      "node",
+      "general"
+    ],
+    "install": {
+      "kind": "manual",
+      "instructions": "Install from Cursor Extensions: search 'Tailwind CSS IntelliSense'.",
+      "url": "https://marketplace.visualstudio.com/items?itemName=bradlc.vscode-tailwindcss"
+    },
+    "adoptionSignal": 89,
+    "maintenanceSignal": 88,
+    "provenanceSignal": 95,
+    "freshnessSignal": 90,
+    "securitySignals": {
+      "knownVulnerabilities": 0,
+      "suspiciousPatterns": 0,
+      "injectionFindings": 0,
+      "exfiltrationSignals": 0,
+      "integrityAlerts": 0
+    },
+    "metadata": {
+      "vsixId": "bradlc.vscode-tailwindcss",
+      "sourceConfidence": "official"
+    }
+  },
+  {
+    "id": "cursor-extension:error-lens",
+    "name": "Error Lens",
+    "description": "Shows errors, warnings, and hints inline at the relevant code line as you type — 9M installs.",
+    "capabilities": [
+      "linting",
+      "code-quality",
+      "debugging"
+    ],
+    "compatibility": [
+      "cursor",
+      "general"
+    ],
+    "install": {
+      "kind": "manual",
+      "instructions": "Install from Cursor Extensions: search 'Error Lens'.",
+      "url": "https://marketplace.visualstudio.com/items?itemName=usernamehw.errorlens"
+    },
+    "adoptionSignal": 87,
+    "maintenanceSignal": 83,
+    "provenanceSignal": 88,
+    "freshnessSignal": 85,
+    "securitySignals": {
+      "knownVulnerabilities": 0,
+      "suspiciousPatterns": 0,
+      "injectionFindings": 0,
+      "exfiltrationSignals": 0,
+      "integrityAlerts": 0
+    },
+    "metadata": {
+      "vsixId": "usernamehw.errorlens",
+      "sourceConfidence": "official"
+    }
+  },
+  {
+    "id": "cursor-extension:thunder-client",
+    "name": "Thunder Client",
+    "description": "Lightweight REST API client and HTTP test runner built into the editor — 7M installs.",
+    "capabilities": [
+      "api-testing",
+      "rest",
+      "http"
+    ],
+    "compatibility": [
+      "cursor",
+      "node",
+      "general"
+    ],
+    "install": {
+      "kind": "manual",
+      "instructions": "Install from Cursor Extensions: search 'Thunder Client'.",
+      "url": "https://marketplace.visualstudio.com/items?itemName=rangav.vscode-thunder-client"
+    },
+    "adoptionSignal": 86,
+    "maintenanceSignal": 82,
+    "provenanceSignal": 87,
+    "freshnessSignal": 84,
+    "securitySignals": {
+      "knownVulnerabilities": 0,
+      "suspiciousPatterns": 0,
+      "injectionFindings": 0,
+      "exfiltrationSignals": 0,
+      "integrityAlerts": 0
+    },
+    "metadata": {
+      "vsixId": "rangav.vscode-thunder-client",
+      "sourceConfidence": "official"
+    }
+  },
+  {
+    "id": "cursor-extension:code-spell-checker",
+    "name": "Code Spell Checker",
+    "description": "Catches spelling errors in code identifiers, comments, and strings — 17M installs.",
+    "capabilities": [
+      "spell-check",
+      "code-quality"
+    ],
+    "compatibility": [
+      "cursor",
+      "general"
+    ],
+    "install": {
+      "kind": "manual",
+      "instructions": "Install from Cursor Extensions: search 'Code Spell Checker'.",
+      "url": "https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker"
+    },
+    "adoptionSignal": 91,
+    "maintenanceSignal": 86,
+    "provenanceSignal": 89,
+    "freshnessSignal": 87,
+    "securitySignals": {
+      "knownVulnerabilities": 0,
+      "suspiciousPatterns": 0,
+      "injectionFindings": 0,
+      "exfiltrationSignals": 0,
+      "integrityAlerts": 0
+    },
+    "metadata": {
+      "vsixId": "streetsidesoftware.code-spell-checker",
+      "sourceConfidence": "official"
+    }
+  },
+  {
+    "id": "cursor-extension:pretty-ts-errors",
+    "name": "Pretty TypeScript Errors",
+    "description": "Reformats complex TypeScript compiler errors into readable, human-friendly messages — 2M installs.",
+    "capabilities": [
+      "typescript",
+      "debugging",
+      "dx"
+    ],
+    "compatibility": [
+      "cursor",
+      "node"
+    ],
+    "install": {
+      "kind": "manual",
+      "instructions": "Install from Cursor Extensions: search 'Pretty TypeScript Errors'.",
+      "url": "https://marketplace.visualstudio.com/items?itemName=yoavbls.pretty-ts-errors"
+    },
+    "adoptionSignal": 82,
+    "maintenanceSignal": 80,
+    "provenanceSignal": 86,
+    "freshnessSignal": 84,
+    "securitySignals": {
+      "knownVulnerabilities": 0,
+      "suspiciousPatterns": 0,
+      "injectionFindings": 0,
+      "exfiltrationSignals": 0,
+      "integrityAlerts": 0
+    },
+    "metadata": {
+      "vsixId": "yoavbls.pretty-ts-errors",
+      "sourceConfidence": "official"
+    }
+  }
+]
