@@ -2,8 +2,6 @@ import fs from 'node:fs/promises';
 import { spawn } from 'node:child_process';
 import { createInterface, moveCursor, clearScreenDown } from 'node:readline';
 
-import { loadQuarantine, loadWhitelist } from '../../../catalog/repository.js';
-import { getStaleRegistries, loadSyncState } from '../../../catalog/sync-state.js';
 import { getPackagePath } from '../../../lib/paths.js';
 import { colors } from '../formatters/colors.js';
 import { isSetUp, loadCatalogItems } from '../../../api/index.js';
@@ -18,11 +16,10 @@ export async function renderHomeScreen(): Promise<string> {
   const termCols = process.stdout.columns ?? 80;
   const useCompact = termCols < 82;
 
-  const [logo, pkg, catalogStats, runtimeStats] = await Promise.all([
+  const [logo, pkg, catalogStats] = await Promise.all([
     readLogo(useCompact),
     readPackageMeta(),
     readCatalogStats(),
-    readRuntimeStats()
   ]);
 
   const lines: string[] = [];
@@ -47,12 +44,6 @@ export async function renderHomeScreen(): Promise<string> {
   lines.push(
     colorIfTty(
       `  copilot-extension=${catalogStats.copilotExtension}  cursor-extension=${catalogStats.cursorExtension}  gemini-extension=${catalogStats.geminiExtension}`,
-      colors.dim
-    )
-  );
-  lines.push(
-    colorIfTty(
-      `  stale-registries=${runtimeStats.staleRegistries}  whitelist=${runtimeStats.whitelist}  quarantined=${runtimeStats.quarantined}`,
       colors.dim
     )
   );
@@ -140,19 +131,6 @@ async function readCatalogStats(): Promise<{
   });
 
   return { items: items.length, skill, mcp, claudePlugin, claudeConnector, copilotExtension, cursorExtension, geminiExtension };
-}
-
-async function readRuntimeStats(): Promise<{
-  staleRegistries: number;
-  whitelist: number;
-  quarantined: number;
-}> {
-  const [syncState, whitelist, quarantine] = await Promise.all([loadSyncState(), loadWhitelist(), loadQuarantine()]);
-  return {
-    staleRegistries: getStaleRegistries(syncState).length,
-    whitelist: whitelist.size,
-    quarantined: quarantine.length
-  };
 }
 
 function colorIfTty(value: string, apply: (raw: string) => string): string {

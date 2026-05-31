@@ -1784,6 +1784,14 @@ function buildItemLinks(item: CatalogItem): Array<{label: string; url: string}> 
     }
   }
 
+  // MCP items: io.github.<owner>/<repo> ID pattern → derive GitHub URL
+  if (item.kind === 'mcp' && item.id.startsWith('mcp:io.github.')) {
+    const ownerRepo = item.id.slice('mcp:io.github.'.length);
+    if (ownerRepo.includes('/')) {
+      add('Repository', `https://github.com/${ownerRepo}`);
+    }
+  }
+
   // install.url is the most direct link for the user
   add('Install page', (item.install as Record<string, unknown>).url);
 

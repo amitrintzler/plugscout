@@ -640,6 +640,12 @@ function buildItemLinks(item: CatalogItem): Array<{label: string; url: string}> 
       add('npm', `https://www.npmjs.com/package/${encodeURIComponent(pkg)}`);
     }
   }
+  if (item.kind === 'mcp' && item.id.startsWith('mcp:io.github.')) {
+    const ownerRepo = item.id.slice('mcp:io.github.'.length);
+    if (ownerRepo.includes('/')) {
+      add('Repository', `https://github.com/${ownerRepo}`);
+    }
+  }
 
   add('Install page', (item.install as Record<string, unknown>).url);
   add('Repository', meta.repositoryUrl);
