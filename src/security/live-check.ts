@@ -137,8 +137,16 @@ async function checkNpmRegistry(pkg: string): Promise<LiveCheckResult> {
   }
 }
 
-async function checkVscodeMarketplace(vsixId: string): Promise<LiveCheckResult> {
+interface MarketplaceCheckResult {
+  result: LiveCheckResult;
+  repositoryUrl?: string;
+}
+
+async function checkVscodeMarketplace(vsixId: string): Promise<MarketplaceCheckResult> {
   const checkedAt = new Date().toISOString();
+  const error = (status: LiveCheckResult['status'], text?: string): MarketplaceCheckResult => ({
+    result: { source: 'vscode-marketplace', label: 'VS Code Marketplace', status, findings: text ? [{ severity: 'info' as const, text }] : [], checkedAt },
+  });
   try {
     const res = await fetchWithTimeout(
       'https://marketplace.visualstudio.com/_apis/public/gallery/extensionquery',
@@ -151,19 +159,22 @@ async function checkVscodeMarketplace(vsixId: string): Promise<LiveCheckResult> 
         },
         body: JSON.stringify({
           filters: [{ criteria: [{ filterType: 7, value: vsixId }] }],
-          flags: 0x200 | 0x100 | 0x20, // statistics + assetUri + excludeNonValidated
+          // statistics (0x200) + assetUri (0x100) + excludeNonValidated (0x20) + versionProperties (0x10)
+          flags: 0x200 | 0x100 | 0x20 | 0x10,
         }),
       },
       8000
     );
-    if (!res.ok) {
-      return { source: 'vscode-marketplace', label: 'VS Code Marketplace', status: 'error', findings: [], checkedAt };
-    }
+    if (!res.ok) return error('error');
     const data = await res.json() as {
       results?: Array<{
         extensions?: Array<{
           publisher: { isDomainVerified?: boolean };
-          versions?: Array<{ version: string; lastUpdated: string }>;
+          versions?: Array<{
+            version: string;
+            lastUpdated: string;
+            properties?: Array<{ key: string; value: string }>;
+          }>;
           statistics?: Array<{ statisticName: string; value: number }>;
         }>;
       }>;
@@ -171,11 +182,22 @@ async function checkVscodeMarketplace(vsixId: string): Promise<LiveCheckResult> 
     const ext = data.results?.[0]?.extensions?.[0];
     if (!ext) {
       return {
-        source: 'vscode-marketplace', label: 'VS Code Marketplace', status: 'unavailable',
-        findings: [{ severity: 'warn', text: 'Extension not found in marketplace — may have been removed' }],
-        checkedAt,
+        result: {
+          source: 'vscode-marketplace', label: 'VS Code Marketplace', status: 'unavailable',
+          findings: [{ severity: 'warn', text: 'Extension not found in marketplace — may have been removed' }],
+          checkedAt,
+        },
       };
     }
+
+    // Extract GitHub repository URL from version properties
+    const props = ext.versions?.[0]?.properties ?? [];
+    const repoProp = props.find(p =>
+      p.key === 'Microsoft.VisualStudio.Services.Links.Source' ||
+      p.key === 'Microsoft.VisualStudio.Services.Links.GitHub'
+    );
+    const repositoryUrl = repoProp?.value?.includes('github.com') ? repoProp.value : undefined;
+
     const findings: LiveFinding[] = [];
     const verified = ext.publisher.isDomainVerified ?? false;
     const latest = ext.versions?.[0];
@@ -192,12 +214,15 @@ async function checkVscodeMarketplace(vsixId: string): Promise<LiveCheckResult> 
       findings.push({ severity: 'info', text: `${installs.toLocaleString()} installs` });
     }
     return {
-      source: 'vscode-marketplace', label: 'VS Code Marketplace',
-      status: verified ? 'clean' : 'flagged',
-      findings, checkedAt,
+      result: {
+        source: 'vscode-marketplace', label: 'VS Code Marketplace',
+        status: verified ? 'clean' : 'flagged',
+        findings, checkedAt,
+      },
+      repositoryUrl,
     };
   } catch {
-    return { source: 'vscode-marketplace', label: 'VS Code Marketplace', status: 'error', findings: [{ severity: 'info', text: 'Check timed out' }], checkedAt };
+    return error('error', 'Check timed out');
   }
 }
 
@@ -307,16 +332,23 @@ export async function runLiveChecks(item: CatalogItem, opts: { noCache?: boolean
     checks.push(checkNpmRegistry(npmPkg));
   }
 
+  // cursor-extension: marketplace first (to extract repo URL), then github check if found
+  const cursorMarketplaceResults: LiveCheckResult[] = [];
   if (item.kind === 'cursor-extension') {
     const vsixId = typeof meta.vsixId === 'string' ? meta.vsixId : null;
     if (vsixId) {
-      checks.push(checkVscodeMarketplace(vsixId));
+      const mkt = await checkVscodeMarketplace(vsixId);
+      cursorMarketplaceResults.push(mkt.result);
+      const ghOwnerRepo = mkt.repositoryUrl ? extractGithubOwnerRepo(mkt.repositoryUrl) : findGithubOwnerRepo(item, meta);
+      if (ghOwnerRepo) {
+        checks.push(checkGithubRepo(ghOwnerRepo));
+      }
     }
-  }
-
-  const ghOwnerRepo = findGithubOwnerRepo(item, meta);
-  if (ghOwnerRepo) {
-    checks.push(checkGithubRepo(ghOwnerRepo));
+  } else {
+    const ghOwnerRepo = findGithubOwnerRepo(item, meta);
+    if (ghOwnerRepo) {
+      checks.push(checkGithubRepo(ghOwnerRepo));
+    }
   }
 
   if (item.kind === 'claude-plugin' || item.kind === 'claude-connector') {
@@ -326,9 +358,9 @@ export async function runLiveChecks(item: CatalogItem, opts: { noCache?: boolean
     }
   }
 
-  if (checks.length === 0) return [];
+  const results = [...cursorMarketplaceResults, ...(checks.length > 0 ? await Promise.all(checks) : [])];
+  if (results.length === 0) return [];
 
-  const results = await Promise.all(checks);
   await writeCache(item.id, results);
   return results;
 }
