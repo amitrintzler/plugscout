@@ -20,6 +20,7 @@ import { detectProjectSignals } from '../../recommendation/project-analysis.js';
 import { recommend } from '../../recommendation/engine.js';
 import { loadRequirementsProfile } from '../../recommendation/requirements.js';
 import { assessRisk, buildAssessment } from '../../security/assessment.js';
+import { runLiveChecks, formatLiveChecks } from '../../security/live-check.js';
 import { applyQuarantineFromReport, verifyWhitelist } from '../../security/whitelist.js';
 import { runDoctorChecks } from './doctor.js';
 import { renderCsv } from './formatters/csv.js';
@@ -571,6 +572,7 @@ async function handleShow(args: string[]): Promise<void> {
   if (!id) {
     throw new Error('Usage: show --id <catalog-id>');
   }
+  const noLive = hasFlag(args, '--no-live');
 
   const [item, whitelist, quarantine, insights] = await Promise.all([
     loadCatalogItemById(id),
@@ -606,11 +608,22 @@ async function handleShow(args: string[]): Promise<void> {
   console.log(
     `Provenance: source=${item.source} catalogType=${getCatalogType(item)} confidence=${getSourceConfidence(item)}`
   );
+
   const links = buildItemLinks(item);
   if (links.length > 0) {
     console.log('\nLinks:');
     for (const link of links) {
       console.log(`  ${link.label}: ${link.url}`);
+    }
+  }
+
+  if (!noLive) {
+    process.stdout.write('\x1b[90mRunning live checks…\x1b[0m\r');
+    const liveResults = await runLiveChecks(item);
+    process.stdout.write('                        \r');
+    const liveOutput = formatLiveChecks(liveResults);
+    if (liveOutput) {
+      console.log(liveOutput);
     }
   }
 }
@@ -963,6 +976,7 @@ async function handleAssess(args: string[]): Promise<void> {
   if (!id) {
     throw new Error('Missing --id for assess');
   }
+  const noLive = hasFlag(args, '--no-live');
 
   const found = await loadCatalogItemById(id);
   if (!found) {
@@ -979,6 +993,16 @@ async function handleAssess(args: string[]): Promise<void> {
     console.log('\nLinks:');
     for (const link of links) {
       console.log(`  ${link.label}: ${link.url}`);
+    }
+  }
+
+  if (!noLive) {
+    process.stdout.write('\x1b[90mRunning live checks…\x1b[0m\r');
+    const liveResults = await runLiveChecks(found);
+    process.stdout.write('                        \r');
+    const liveOutput = formatLiveChecks(liveResults);
+    if (liveOutput) {
+      console.log(liveOutput);
     }
   }
 }
