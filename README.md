@@ -18,16 +18,18 @@
   <a href="https://github.com/amitrintzler/plugscout/actions/workflows/catalog-sync.yml"><img alt="Catalog Sync (Scheduled)" src="https://img.shields.io/badge/catalog%20sync-scheduled-0ea5e9" /></a>
 </p>
 
-PlugScout helps teams discover, score, and safely install Claude plugins, Claude connectors, Copilot extensions, Skills, and MCP servers with policy-aware risk controls.
+PlugScout helps teams discover, score, and safely install Claude plugins, Claude connectors, Copilot extensions, Cursor extensions, Gemini extensions, Skills, and MCP servers with policy-aware risk controls.
 
 ## See PlugScout in action
 
 [![Watch the PlugScout walkthrough](https://github.com/amitrintzler/plugscout/releases/download/v0.3.4/framework-walkthrough-preview.gif)](https://github.com/amitrintzler/plugscout/releases/download/v0.3.4/framework-walkthrough.mp4)
 
 Quick links:
-- [Install](#install-plugscout-v034)
+- [Install](#install-plugscout)
 - [Quick Start](#quick-start-2-minute-path)
 - [Core Commands](#core-commands)
+- [Live Security Checks](#live-security-checks)
+- [Client Setup](#client-setup-cursor-gemini-claude)
 - [Safety Model](#safety-model)
 - [Docs](#where-to-go-next)
 
@@ -36,9 +38,11 @@ Quick links:
 PlugScout is a Node.js CLI that unifies multiple AI tooling ecosystems into one searchable catalog and applies trust/risk policy before installation.
 
 You can:
-- Discover Claude plugins, Claude connectors, Copilot extensions, Skills, and MCP servers from one place.
+- Discover Claude plugins, Claude connectors, Copilot extensions, Cursor extensions, Gemini extensions, Skills, and MCP servers from one place.
 - Score candidates using trust-first ranking.
+- Run live security checks: OSV vulnerability database, npm deprecation, VS Code Marketplace, GitHub repo health.
 - Enforce install gates using whitelist + quarantine policy.
+- Wire PlugScout as an MCP tool into Cursor, Gemini CLI, Claude Desktop, and other AI clients.
 - Run continuous checks in CI and scheduled workflows.
 
 ## Who this is for
@@ -53,7 +57,7 @@ You can:
 
 **No manual setup required.** Run `plugscout setup` once and it takes care of everything else: installs required CLI dependencies, writes your config, and syncs all catalogs. You don't need to install or configure anything by hand.
 
-## Install PlugScout (v0.3.4)
+## Install PlugScout
 
 **Global install (recommended):**
 
@@ -62,22 +66,16 @@ npm install -g @shnitzel/plugscout
 plugscout setup
 ```
 
-`plugscout setup` is a single command that installs prerequisites, writes default config, and syncs all catalogs. No extra steps needed.
+`plugscout setup` installs prerequisites, writes default config, and syncs all catalogs. No extra steps needed.
 
 **From source:**
 
 ```bash
 git clone https://github.com/amitrintzler/plugscout.git plugscout
 cd plugscout
-git checkout v0.3.4
+git checkout $(git describe --tags --abbrev=0)
 npm install
 npm run setup
-```
-
-Install newest release tag instead of pinning `v0.3.4`:
-
-```bash
-git checkout $(git describe --tags --abbrev=0)
 ```
 
 ## Your first scan (30 seconds)
@@ -153,6 +151,54 @@ claude-plugin:repo-threat-...     claude-plugin       anthropic   low(0)    fals
 skill:ci-hardening                skill               openai      low(0)    false
 ```
 
+## Live Security Checks
+
+`plugscout show` and `plugscout assess` run real-time checks against external sources when displaying an item:
+
+| Source | What's checked |
+| --- | --- |
+| OSV.dev | Known CVEs for npm packages |
+| npm registry | Package deprecation status + latest version |
+| VS Code Marketplace | Publisher domain verification, install count, last updated (cursor-extension) |
+| GitHub | Repository archived / disabled / last push date |
+| Install URL | HTTP reachability (claude-plugin / claude-connector) |
+
+Results are cached for 1–6 hours. Skip them with `--no-live`:
+
+```bash
+plugscout show --id mcp:filesystem           # with live checks (default)
+plugscout show --id mcp:filesystem --no-live # skip network checks
+```
+
+## Client Setup (Cursor, Gemini, Claude)
+
+Wire PlugScout as an MCP tool into your AI client so you can search and assess items from inside the assistant:
+
+```bash
+plugscout client setup --client cursor          # writes ~/.cursor/mcp.json
+plugscout client setup --client gemini          # writes ~/.gemini/settings.json
+plugscout client setup --client claude-desktop  # writes Claude Desktop config
+plugscout client setup --client windsurf        # writes ~/.windsurf/mcp.json
+plugscout client setup --client opencode        # writes ~/.opencode/mcp.json
+plugscout client setup --client zed             # writes ~/.config/zed/settings.json
+
+# Project-scoped (Cursor only):
+plugscout client setup --client cursor --scope project   # writes .cursor/mcp.json
+```
+
+After setup, the assistant can call `search_catalog`, `get_item`, and `list_catalog` directly. Run `plugscout doctor` to verify the config was detected.
+
+## Sync
+
+Pull latest entries from all registries:
+
+```bash
+plugscout sync               # skip registries synced within the last 6 hours
+plugscout sync --force       # re-fetch everything regardless of cache age
+```
+
+Cursor and Gemini extension lists are served from `raw.githubusercontent.com` and auto-update on each sync.
+
 ## Core Commands
 
 | Command | Purpose |
@@ -178,7 +224,20 @@ Packaged CLI-only commands:
 - `plugscout` (home screen)
 - `plugscout upgrade check`
 - `plugscout web --open` (readable browser report)
+- `plugscout client setup --client <cursor|gemini|claude-desktop|windsurf|opencode|zed>` (wire PlugScout as MCP tool)
 - `plugscout <command> --no-update-check` (skip daily auto-check for the current run)
+
+**Kind aliases** (`--kind` flag accepts short names):
+
+| Alias | Resolves to |
+| --- | --- |
+| `skills` | `skill` |
+| `mcps` | `mcp` |
+| `plugins` | `claude-plugin` |
+| `connectors` | `claude-connector` |
+| `extensions` | `copilot-extension` |
+| `cursor`, `cursor-extensions` | `cursor-extension` |
+| `gemini`, `gemini-extensions` | `gemini-extension` |
 
 Full command reference: [`docs/cli-reference.md`](docs/cli-reference.md)
 
@@ -202,18 +261,30 @@ Whitelist and quarantine state are enforced in recommendation and install flows,
 
 Security deep-dive: [`docs/security/README.md`](docs/security/README.md)
 
-## Plugin and Connector Catalog Sources
+## Catalog Sources
 
-- Claude plugins: `https://claude.com/plugins` (scraped with sanitization + host allowlist guards)
-- Claude connectors: `https://claude.com/connectors` (scraped with sanitization + host allowlist guards)
-- Anthropic GitHub plugin manifests: `anthropics/claude-plugins-official`, `anthropics/knowledge-work-plugins`, `anthropics/financial-services-plugins`
-- GitHub skills marketplaces: `numman-ali/n-skills`, `mhattingpete/claude-skills-marketplace`, `neondatabase-labs/ai-rules`
+**Claude plugins / connectors:**
+- `https://claude.com/plugins` and `https://claude.com/connectors` (scraped with sanitization + host allowlist guards)
+- Anthropic GitHub manifests: `anthropics/claude-plugins-official`, `anthropics/knowledge-work-plugins`, `anthropics/financial-services-plugins`
 - GitHub Claude Code plugin marketplaces: `docker/claude-plugins`, `pleaseai/claude-code-plugins`
-- Copilot plugins (official): `https://raw.githubusercontent.com/github/copilot-plugins/main/.github/plugin/marketplace.json`
-- Copilot plugins (curated): `https://raw.githubusercontent.com/github/awesome-copilot/main/.github/plugin/marketplace.json`
+
+**Skills:**
+- `numman-ali/n-skills`, `mhattingpete/claude-skills-marketplace`, `neondatabase-labs/ai-rules`
+
+**Copilot extensions:**
+- Official: `https://raw.githubusercontent.com/github/copilot-plugins/main/.github/plugin/marketplace.json`
+- Curated: `https://raw.githubusercontent.com/github/awesome-copilot/main/.github/plugin/marketplace.json`
+
+**Cursor extensions:**
+- Curated list served from this repository (`assets/registries/cursor-extensions.json`) — auto-updated on each sync
+
+**Gemini extensions:**
+- Curated MCP servers for Gemini CLI, served from this repository (`assets/registries/gemini-extensions.json`) — auto-updated on each sync
+
+**MCP servers:**
+- Public MCP directory (10k+ entries)
 
 Legacy endpoints returning `404` are not used for sync anymore:
-
 - `https://api.anthropic.com/v1/plugins/catalog`
 - `https://api.github.com/copilot/extensions/catalog`
 
