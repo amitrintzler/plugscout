@@ -21,7 +21,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        node: [18, 20]
+        node: [20, 22]
 
     steps:
       - name: Checkout
@@ -86,7 +86,7 @@ jobs:
         run: |
           {
             echo "## CI Summary"
-            echo "- Lint/Test/Build: passed on Node 18 and 20"
+            echo "- Lint/Test/Build: passed on Node 20 and 22"
             echo "- Policy verification: passed"
             echo "- Offline sync reproducibility: checked (advisory on PRs)"
           } >> "$GITHUB_STEP_SUMMARY"
