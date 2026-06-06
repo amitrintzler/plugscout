@@ -151,7 +151,8 @@ export const RegistrySchema = z.object({
       'claude-connectors-scrape-v1',
       'awesome-claude-code-v1',
       'cursor-extensions-v1',
-      'gemini-extensions-v1'
+      'gemini-extensions-v1',
+      'agentskills-il-v1'
     ])
     .default('direct'),
   enabled: z.boolean().default(true),

@@ -3363,6 +3363,21 @@
         "official": true,
         "licenseHint": "community"
       }
+    },
+    {
+      "id": "agentskills-il",
+      "kind": "skill",
+      "adapter": "agentskills-il-v1",
+      "sourceType": "vendor-feed",
+      "officialOnly": false,
+      "entries": [],
+      "remote": {
+        "url": "https://raw.githubusercontent.com/amitrintzler/plugscout/main/assets/registries/agentskills-il.json",
+        "format": "json-array",
+        "timeoutMs": 15000,
+        "fallbackToLocal": true,
+        "provider": "skills-il"
+      }
     }
   ]
 }

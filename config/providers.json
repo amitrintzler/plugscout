@@ -61,6 +61,16 @@
         "mode": "daily",
         "rateLimitPerMinute": 60
       }
+    },
+    {
+      "id": "skills-il",
+      "enabled": true,
+      "officialOnly": false,
+      "trustLevel": "medium",
+      "poll": {
+        "mode": "daily",
+        "rateLimitPerMinute": 60
+      }
     }
   ]
 }
