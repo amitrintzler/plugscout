@@ -9,3 +9,12 @@ data/security-reports/*
 !data/security-reports/audits/
 data/security-reports/audits/*
 !data/security-reports/audits/.gitkeep
+
+# IDE and local tool configs
+.cursor/
+.playwright-mcp/
+.plugscout/
+
+# Personal/internal docs not for public repo
+ONBOARDING.md
+docs/superpowers/

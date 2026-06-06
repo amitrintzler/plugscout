@@ -78,7 +78,7 @@ npm install
 npm run setup
 ```
 
-## Your first scan (30 seconds)
+## Your first scan
 
 ```bash
 plugscout setup                                         # install deps, write config, sync catalogs
@@ -97,7 +97,7 @@ skill:secure-prompting            skill               openai      low(0)    fals
 
 Review any result with `plugscout show --id <id>`, then install with `plugscout install --id <id> --yes`.
 
-## Quick Start (2-minute path)
+## Quick Start
 
 ```bash
 npm install -g @shnitzel/plugscout
@@ -196,6 +196,8 @@ Pull latest entries from all registries:
 plugscout sync               # skip registries synced within the last 6 hours
 plugscout sync --force       # re-fetch everything regardless of cache age
 ```
+
+**First sync timing:** The MCP registry (`registry.modelcontextprotocol.io`) contains 10,000+ servers and is fetched in paginated batches. The first full sync takes 5–8 minutes. Subsequent syncs are cached for 6 hours and complete in seconds. Progress is printed per page so you can see it working.
 
 Cursor and Gemini extension lists are served from `raw.githubusercontent.com` and auto-update on each sync.
 
