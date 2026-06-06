@@ -2,8 +2,26 @@ import { dedupe, extractStringArray, readNestedString, readString } from './shar
 
 export function adaptMcpRegistryEntries(sourceId: string, entries: unknown[]): unknown[] {
   return entries
+    .filter((entry) => isMcpEntryLatest(entry))
     .map((entry) => mapMcpRegistryEntry(sourceId, entry))
     .filter((entry): entry is Record<string, unknown> => entry !== null);
+}
+
+function isMcpEntryLatest(entry: unknown): boolean {
+  if (!entry || typeof entry !== 'object' || Array.isArray(entry)) {
+    return true;
+  }
+  const record = entry as Record<string, unknown>;
+  const meta = record._meta;
+  if (!meta || typeof meta !== 'object' || Array.isArray(meta)) {
+    return true;
+  }
+  const official = (meta as Record<string, unknown>)['io.modelcontextprotocol.registry/official'];
+  if (!official || typeof official !== 'object' || Array.isArray(official)) {
+    return true;
+  }
+  const isLatest = (official as Record<string, unknown>).isLatest;
+  return isLatest !== false;
 }
 
 function mapMcpRegistryEntry(sourceId: string, entry: unknown): Record<string, unknown> | null {

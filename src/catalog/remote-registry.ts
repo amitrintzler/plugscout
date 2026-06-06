@@ -28,7 +28,7 @@ const SAFE_REMOTE_HOSTS = [
 
 export async function resolveRegistryEntries(
   registry: Registry,
-  options: { updatedSince?: string } = {},
+  options: { updatedSince?: string; onProgress?: (msg: string) => void } = {},
   fetchImpl: FetchLike = fetch as unknown as FetchLike
 ): Promise<ResolvedRegistryEntries> {
   if (process.env.SKILLS_MCPS_SYNC_OFFLINE === '1') {
@@ -50,7 +50,7 @@ export async function resolveRegistryEntries(
   }
 
   try {
-    const parsed = await fetchRemoteRegistryEntries(registry, options, fetchImpl);
+    const parsed = await fetchRemoteRegistryEntries(registry, options, fetchImpl, options.onProgress);
 
     if (parsed.length === 0 && registry.entries.length > 0) {
       const level = options.updatedSince ? 'info' : 'warn';
@@ -77,7 +77,8 @@ export async function resolveRegistryEntries(
 export async function fetchRemoteRegistryEntries(
   registry: Registry,
   options: { updatedSince?: string } = {},
-  fetchImpl: FetchLike = fetch as unknown as FetchLike
+  fetchImpl: FetchLike = fetch as unknown as FetchLike,
+  onProgress?: (msg: string) => void
 ): Promise<unknown[]> {
   if (!registry.remote) {
     throw new Error(`Registry ${registry.id} has no remote definition`);
@@ -87,8 +88,10 @@ export async function fetchRemoteRegistryEntries(
 
   const allEntries: unknown[] = [];
   let cursor: string | undefined;
+  let page = 0;
 
   do {
+    page++;
     const payload = await fetchRemoteRegistryPayload(registry, fetchImpl, {
       cursor,
       updatedSince: options.updatedSince
@@ -96,6 +99,9 @@ export async function fetchRemoteRegistryEntries(
     const parsed = extractEntries(payload, registry.remote.format, registry.remote.entryPath, registry.kind);
     allEntries.push(...parsed);
     cursor = resolveNextCursor(payload, registry.remote.pagination?.nextCursorPath);
+    if (cursor && onProgress) {
+      onProgress(`  ↓ ${registry.id} page ${page + 1}… (${allEntries.length} so far)`);
+    }
   } while (cursor && registry.remote.pagination);
 
   return allEntries;

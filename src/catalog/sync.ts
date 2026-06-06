@@ -80,7 +80,7 @@ export async function syncCatalogs(
 
     const updatedSince = registry.remote?.supportsUpdatedSince ? getUpdatedSince(syncState, registry.id) : undefined;
 
-    const resolved = await resolveRegistryEntries(registry, { updatedSince });
+    const resolved = await resolveRegistryEntries(registry, { updatedSince, onProgress: progress });
     const adaptedEntries = resolved.source === 'remote' ? adaptRegistryEntries(registry, resolved.entries) : resolved.entries;
     // Always include curated local entries so they persist even when remote succeeds
     const curatedEntries = resolved.source === 'remote' ? registry.entries : [];
