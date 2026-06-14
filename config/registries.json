@@ -1072,6 +1072,7 @@
         "format": "json-array",
         "timeoutMs": 10000,
         "fallbackToLocal": true,
+        "authEnv": "GITHUB_TOKEN",
         "provider": "openai",
         "official": true,
         "licenseHint": "vendor"

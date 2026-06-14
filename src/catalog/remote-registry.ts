@@ -63,11 +63,17 @@ export async function resolveRegistryEntries(
 
     return { entries: parsed, source: 'remote' };
   } catch (error) {
-    if (registry.remote.fallbackToLocal && registry.entries.length > 0) {
+    if (registry.remote.fallbackToLocal) {
+      if (registry.entries.length > 0) {
+        logger.warn(
+          `Remote registry ${registry.id} fetch failed (${summarizeError(error)}); using ${registry.entries.length} local fallback entries`
+        );
+        return { entries: registry.entries, source: 'local' };
+      }
       logger.warn(
-        `Remote registry ${registry.id} fetch failed (${summarizeError(error)}); using ${registry.entries.length} local fallback entries`
+        `Remote registry ${registry.id} fetch failed (${summarizeError(error)}); no local fallback entries, skipping`
       );
-      return { entries: registry.entries, source: 'local' };
+      return { entries: [], source: 'local' };
     }
 
     throw error;
