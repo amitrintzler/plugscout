@@ -17,7 +17,7 @@
       "node"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "agentic-actions-auditor",
@@ -61,7 +61,7 @@
       "claude-code"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "Agentic Workflow Patterns",
@@ -105,7 +105,7 @@
       "windsurf"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "AI Agents for Everyone",
@@ -164,7 +164,7 @@
       "windsurf"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "BOI Economic Data",
@@ -224,7 +224,7 @@
       "windsurf"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "Cardcom Payment Gateway",
@@ -285,7 +285,7 @@
       "windsurf"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "Cloudinary Assets",
@@ -345,7 +345,7 @@
       "windsurf"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "GitHub Actions for Israeli Teams",
@@ -405,7 +405,7 @@
       "windsurf"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "Green Invoice (Morning)",
@@ -468,7 +468,7 @@
       "windsurf"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "Grow Payment Gateway (Meshulam)",
@@ -531,7 +531,7 @@
       "windsurf"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "GWS Hebrew Email Automation",
@@ -591,7 +591,7 @@
       "windsurf"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "GWS Israeli Business Sheets",
@@ -651,7 +651,7 @@
       "windsurf"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "Hashavshevet Data Tools",
@@ -710,7 +710,7 @@
       "windsurf"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "Hebrew Chatbot Builder",
@@ -768,7 +768,7 @@
       "windsurf"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "Hebrew Content Writer",
@@ -829,7 +829,7 @@
       "windsurf"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "Hebrew Document Generator",
@@ -888,7 +888,7 @@
       "windsurf"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "Hebrew i18n",
@@ -948,7 +948,7 @@
       "windsurf"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "Hebrew Legal Research",
@@ -1009,7 +1009,7 @@
       "openai"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "Hebrew LLM Eval Suite",
@@ -1074,7 +1074,7 @@
       "openai"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "Hebrew ML Datasets Navigator",
@@ -1138,7 +1138,7 @@
       "windsurf"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "Hebrew Nlp Toolkit",
@@ -1199,7 +1199,7 @@
       "windsurf"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "Hebrew Ocr Forms",
@@ -1261,7 +1261,7 @@
       "windsurf"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "Hebrew Podcast Post-Production Kit",
@@ -1322,7 +1322,7 @@
       "windsurf"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "Hebrew RTL Best Practices",
@@ -1382,7 +1382,7 @@
       "windsurf"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "Hebrew SEO & GEO Toolkit",
@@ -1440,7 +1440,7 @@
       "general"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "Hebrew Survey Builder",
@@ -1501,7 +1501,7 @@
       "windsurf"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "Hebrew Tailwind Preset",
@@ -1560,7 +1560,7 @@
       "windsurf"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "Hebrew Voice Bot Builder",
@@ -1624,7 +1624,7 @@
       "windsurf"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "HyperFrames Best Practices",
@@ -1689,7 +1689,7 @@
       "windsurf"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "IDF Date Converter",
@@ -1749,7 +1749,7 @@
       "windsurf"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "IL Invoice Organizer",
@@ -1808,7 +1808,7 @@
       "windsurf"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "Israel Gov Api",
@@ -1874,7 +1874,7 @@
       "windsurf"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "Israeli Academic Scholarships",
@@ -1941,7 +1941,7 @@
       "windsurf"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "Israeli Accessibility Compliance",
@@ -2001,7 +2001,7 @@
       "windsurf"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "Israeli Address Autocomplete",
@@ -2062,7 +2062,7 @@
       "windsurf"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "Israeli Agritech Advisor",
@@ -2125,7 +2125,7 @@
       "openai"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "Israeli AI Compliance Kit",
@@ -2190,7 +2190,7 @@
       "windsurf"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "Israeli Aliyah Customs Shipment Planner",
@@ -2254,7 +2254,7 @@
       "windsurf"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "Israeli Aliyah Navigator",
@@ -2317,7 +2317,7 @@
       "windsurf"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "Israeli Annual Reports",
@@ -2377,7 +2377,7 @@
       "windsurf"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "Israeli Apartment Hunting",
@@ -2437,7 +2437,7 @@
       "windsurf"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "Israeli AppSec Scanner",
@@ -2496,7 +2496,7 @@
       "windsurf"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "Israeli Arnona Optimizer",
@@ -2555,7 +2555,7 @@
       "windsurf"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "Israeli ASO",
@@ -2614,7 +2614,7 @@
       "windsurf"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "Israeli Bagrut & Psychometric",
@@ -2672,7 +2672,7 @@
       "windsurf"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "Israeli Bank Connector",
@@ -2731,7 +2731,7 @@
       "windsurf"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "Israeli Bank Reconciliation",
@@ -2790,7 +2790,7 @@
       "windsurf"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "Israeli Bituach Leumi",
@@ -2849,7 +2849,7 @@
       "windsurf"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "Israeli Bookkeeping Automation",
@@ -2909,7 +2909,7 @@
       "windsurf"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "Israeli Budget Planner",
@@ -2968,7 +2968,7 @@
       "windsurf"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "Israeli Bureaucracy Decoder",
@@ -3033,7 +3033,7 @@
       "windsurf"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "Israeli Business War Compensation",
@@ -3099,7 +3099,7 @@
       "windsurf"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "Israeli Chatbot Analytics",
@@ -3161,7 +3161,7 @@
       "windsurf"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "Israeli Childcare Navigator",
@@ -3225,7 +3225,7 @@
       "windsurf"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "Israeli Client Payment Chaser",
@@ -3288,7 +3288,7 @@
       "windsurf"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "Israeli Cloud Cost Comparator",
@@ -3348,7 +3348,7 @@
       "windsurf"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "Israeli Company Lookup",
@@ -3407,7 +3407,7 @@
       "windsurf"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "Israeli Content Marketing",
@@ -3468,7 +3468,7 @@
       "windsurf"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "Israeli Corporate Tax Strategy",
@@ -3528,7 +3528,7 @@
       "windsurf"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "Israeli Crypto Tax Reporter",
@@ -3587,7 +3587,7 @@
       "windsurf"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "Israeli Customer Support Automator",
@@ -3647,7 +3647,7 @@
       "windsurf"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "Israeli Customs Duty Calculator",
@@ -3707,7 +3707,7 @@
       "windsurf"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "Israeli CV Builder",
@@ -3765,7 +3765,7 @@
       "windsurf"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "Israeli Cyber Regulations",
@@ -3824,7 +3824,7 @@
       "windsurf"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "Israeli Cybersecurity Ops",
@@ -3903,7 +3903,7 @@
       "windsurf"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "Israeli Digital Nomad Navigator",
@@ -3988,7 +3988,7 @@
       "windsurf"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "Israeli Discharged Soldier Navigator",
@@ -4054,7 +4054,7 @@
       "windsurf"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "Israeli Drug Database",
@@ -4114,7 +4114,7 @@
       "windsurf"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "Israeli E Invoice",
@@ -4177,7 +4177,7 @@
       "windsurf"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "Israeli E-Commerce Compliance",
@@ -4241,7 +4241,7 @@
       "windsurf"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "Israeli Education System",
@@ -4304,7 +4304,7 @@
       "windsurf"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "Israeli Elder Care Navigator",
@@ -4369,7 +4369,7 @@
       "windsurf"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "Israeli Election Data",
@@ -4433,7 +4433,7 @@
       "windsurf"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "Israeli Email Sequences",
@@ -4493,7 +4493,7 @@
       "windsurf"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "Israeli Emergency Guide",
@@ -4557,7 +4557,7 @@
       "windsurf"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "Israeli Employee Tax Refund",
@@ -4621,7 +4621,7 @@
       "windsurf"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "Israeli Employment Contract Reviewer",
@@ -4682,7 +4682,7 @@
       "windsurf"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "Israeli Employment Contracts",
@@ -4743,7 +4743,7 @@
       "windsurf"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "Israeli Expense Categorizer",
@@ -4803,7 +4803,7 @@
       "windsurf"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "Israeli Export Shipping Kit",
@@ -4864,7 +4864,7 @@
       "windsurf"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "Israeli Claim & Fact Verifier",
@@ -4925,7 +4925,7 @@
       "windsurf"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "Israeli Fertility Treatment Guide",
@@ -4985,7 +4985,7 @@
       "windsurf"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "Israeli Financial Reports",
@@ -5044,7 +5044,7 @@
       "windsurf"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "Israeli Fines Fighter",
@@ -5104,7 +5104,7 @@
       "windsurf"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "Israeli Flight Finder",
@@ -5166,7 +5166,7 @@
       "windsurf"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "Israeli Food Business Compliance Guide",
@@ -5227,7 +5227,7 @@
       "windsurf"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "Israeli Freelancer Operations",
@@ -5284,7 +5284,7 @@
       "windsurf"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "The Israeli Freelancer Year: Strategic Calendar",
@@ -5344,7 +5344,7 @@
       "windsurf"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "Israeli Genealogy Researcher",
@@ -5409,7 +5409,7 @@
       "windsurf"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "Israeli Gov Form Automator",
@@ -5474,7 +5474,7 @@
       "windsurf"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "Israeli Grocery Price Intelligence",
@@ -5536,7 +5536,7 @@
       "windsurf"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "Israeli Heritage Explorer",
@@ -5598,7 +5598,7 @@
       "windsurf"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "Israeli HMO Navigator",
@@ -5658,7 +5658,7 @@
       "windsurf"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "Israeli HR Recruitment Automator",
@@ -5717,7 +5717,7 @@
       "windsurf"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "Israeli ID Validator",
@@ -5776,7 +5776,7 @@
       "windsurf"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "Israeli Insurance Comparator",
@@ -5837,7 +5837,7 @@
       "windsurf"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "Israeli Job Market",
@@ -5900,7 +5900,7 @@
       "windsurf"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "Israeli Land Tenders",
@@ -5960,7 +5960,7 @@
       "windsurf"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "Israeli LinkedIn Strategy",
@@ -6025,7 +6025,7 @@
       "windsurf"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "Israeli Lone Soldier Rights",
@@ -6092,7 +6092,7 @@
       "windsurf"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "Israeli Market Fit Analyzer",
@@ -6153,7 +6153,7 @@
       "windsurf"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "Israeli Marketplace Seller",
@@ -6214,7 +6214,7 @@
       "windsurf"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "Israeli Media Authenticity Verifier",
@@ -6275,7 +6275,7 @@
       "windsurf"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "Israeli Mental Health Navigator",
@@ -6339,7 +6339,7 @@
       "windsurf"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "Israeli Miluim Manager",
@@ -6403,7 +6403,7 @@
       "windsurf"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "Israeli Mortgage Comparator",
@@ -6464,7 +6464,7 @@
       "windsurf"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "Israeli Nutrition Planner",
@@ -6532,7 +6532,7 @@
       "windsurf"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "Israeli Oncology Navigator",
@@ -6598,7 +6598,7 @@
       "windsurf"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "Israeli Paid Ads",
@@ -6657,7 +6657,7 @@
       "general"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "Israeli Patent Guide",
@@ -6719,7 +6719,7 @@
       "windsurf"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "Israeli Payment Orchestrator",
@@ -6779,7 +6779,7 @@
       "windsurf"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "Israeli Payroll Calculator",
@@ -6846,7 +6846,7 @@
       "windsurf"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "Israeli Pension Advisor",
@@ -6909,7 +6909,7 @@
       "windsurf"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "The Israeli Pension System, Decoded",
@@ -6965,7 +6965,7 @@
       "windsurf"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "Israeli Daily Reference Guide",
@@ -7024,7 +7024,7 @@
       "windsurf"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "Israeli Phone Formatter",
@@ -7082,7 +7082,7 @@
       "windsurf"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "Israeli Postgres Toolkit",
@@ -7143,7 +7143,7 @@
       "windsurf"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "Israeli Price Quote Generator",
@@ -7208,7 +7208,7 @@
       "windsurf"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "Israeli Privacy Shield",
@@ -7269,7 +7269,7 @@
       "windsurf"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "Israeli Product Launch",
@@ -7328,7 +7328,7 @@
       "windsurf"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "Israeli Product Price Comparator",
@@ -7389,7 +7389,7 @@
       "windsurf"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "Israeli Public Transit",
@@ -7450,7 +7450,7 @@
       "windsurf"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "Israeli Real Estate",
@@ -7510,7 +7510,7 @@
       "windsurf"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "Israeli Receipt Scanner",
@@ -7575,7 +7575,7 @@
       "windsurf"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "Israeli Relocation Abroad Navigator",
@@ -7640,7 +7640,7 @@
       "windsurf"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "Israeli Rental Agreements",
@@ -7700,7 +7700,7 @@
       "windsurf"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "Israeli Restaurant Operations",
@@ -7764,7 +7764,7 @@
       "windsurf"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "Israeli Returning Resident Customs & Vehicle Planner",
@@ -7832,7 +7832,7 @@
       "windsurf"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "Israeli Returning Resident Navigator",
@@ -7898,7 +7898,7 @@
       "windsurf"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "Israeli Shelter Guide",
@@ -7961,7 +7961,7 @@
       "windsurf"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "Israeli Shipping Manager",
@@ -8020,7 +8020,7 @@
       "windsurf"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "Israeli Small Claims Court",
@@ -8080,7 +8080,7 @@
       "windsurf"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "Israeli Smart Saver",
@@ -8140,7 +8140,7 @@
       "windsurf"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "Israeli Sms Gateway",
@@ -8200,7 +8200,7 @@
       "windsurf"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "Israeli Social Content",
@@ -8259,7 +8259,7 @@
       "windsurf"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "Israeli Spreadsheets",
@@ -8319,7 +8319,7 @@
       "windsurf"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "Israeli Standards Import Checker",
@@ -8381,7 +8381,7 @@
       "windsurf"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "Israeli Startup Toolkit",
@@ -8443,7 +8443,7 @@
       "windsurf"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "Israeli Statistics",
@@ -8506,7 +8506,7 @@
       "windsurf"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "Israeli Stock Options Tax Calculator",
@@ -8569,7 +8569,7 @@
       "windsurf"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "Israeli Tax Returns",
@@ -8630,7 +8630,7 @@
       "windsurf"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "Israeli Tax Withholding",
@@ -8689,7 +8689,7 @@
       "windsurf"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "Israeli Tech Interview Prep",
@@ -8747,7 +8747,7 @@
       "windsurf"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "Israeli Tech Salary Negotiator",
@@ -8806,7 +8806,7 @@
       "windsurf"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "Israeli Telecom Comparator",
@@ -8867,7 +8867,7 @@
       "windsurf"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "Israeli Telegram Business Bot",
@@ -8930,7 +8930,7 @@
       "windsurf"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "Israeli Tender Proposal Builder",
@@ -8996,7 +8996,7 @@
       "windsurf"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "Israeli Toshav Chozer Vatik Tax Planner",
@@ -9061,7 +9061,7 @@
       "windsurf"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "Israeli Travel Planner",
@@ -9120,7 +9120,7 @@
       "windsurf"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "Israeli UI Design System",
@@ -9181,7 +9181,7 @@
       "windsurf"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "Israeli Unemployment Benefits Navigator",
@@ -9245,7 +9245,7 @@
       "windsurf"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "Israeli Utility & Telecom Rates Comparator",
@@ -9307,7 +9307,7 @@
       "windsurf"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "Israeli VAT Reporting",
@@ -9366,7 +9366,7 @@
       "windsurf"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "Israeli Vehicle Manager",
@@ -9429,7 +9429,7 @@
       "windsurf"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "Israeli War Damage Claims",
@@ -9494,7 +9494,7 @@
       "windsurf"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "Israeli Wedding Planning Guide",
@@ -9557,7 +9557,7 @@
       "windsurf"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "Israeli Whatsapp Business",
@@ -9618,7 +9618,7 @@
       "windsurf"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "Israeli Workplace Rights Navigator",
@@ -9682,7 +9682,7 @@
       "windsurf"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "JFrog DevOps",
@@ -9748,7 +9748,7 @@
       "windsurf"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "Make.com Israeli Automations",
@@ -9807,7 +9807,7 @@
       "windsurf"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "Making Aliyah: Your First 90 Days",
@@ -9862,7 +9862,7 @@
       "windsurf"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "Miluim Rights and Money",
@@ -9921,7 +9921,7 @@
       "windsurf"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "Monday Com Workflows",
@@ -9987,7 +9987,7 @@
       "windsurf"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "n8n Hebrew Workflows",
@@ -10057,7 +10057,7 @@
       "windsurf"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "open-slide Best Practices",
@@ -10119,7 +10119,7 @@
       "github"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "Pelecard Payment Gateway",
@@ -10180,7 +10180,7 @@
       "windsurf"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "Pikud HaOref Safety Protocols",
@@ -10242,7 +10242,7 @@
       "windsurf"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "Presentation Generator",
@@ -10307,7 +10307,7 @@
       "windsurf"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "Remotion Best Practices",
@@ -10371,7 +10371,7 @@
       "windsurf"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "Shabbat Aware Scheduler",
@@ -10429,7 +10429,7 @@
       "windsurf"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "Shekel Currency Converter",
@@ -10488,7 +10488,7 @@
       "windsurf"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "Skills-IL Skill Creator",
@@ -10548,7 +10548,7 @@
       "windsurf"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "TASE Stock Analysis",
@@ -10610,7 +10610,7 @@
       "windsurf"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "Telegram Bot Builder",
@@ -10672,7 +10672,7 @@
       "windsurf"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "Tranzila Payment Gateway",
@@ -10730,7 +10730,7 @@
       "general"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "video-use Best Practices (Hebrew)",
@@ -10789,7 +10789,7 @@
       "windsurf"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "Writing Your First Agent Skill",
@@ -10847,7 +10847,7 @@
       "windsurf"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "Zapier Israeli Integrations",
@@ -10899,7 +10899,7 @@
       "claude-code"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "AgentSys",
@@ -10942,7 +10942,7 @@
       "claude-code"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "agnix",
@@ -10984,7 +10984,7 @@
       "claude-code"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "AI Agent, AI Spy",
@@ -11041,7 +11041,7 @@
       "node"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "algorithmic-art",
@@ -11085,7 +11085,7 @@
       "claude-code"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "/analyze-issue",
@@ -11128,7 +11128,7 @@
       "claude-code"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "Anthropic Documentation",
@@ -11171,7 +11171,7 @@
       "claude-code"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "Anthropic Quickstarts",
@@ -11215,7 +11215,7 @@
       "node"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "ask-questions-if-underspecified",
@@ -11256,7 +11256,7 @@
       "general"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "Aspnet Core",
@@ -11299,7 +11299,7 @@
       "node"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "audit-context-building",
@@ -11341,7 +11341,7 @@
       "claude-code"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "Auto-Claude",
@@ -11386,7 +11386,7 @@
       "claude-code"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "awesome-ralph",
@@ -11429,7 +11429,7 @@
       "claude-code"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "AWS MCP Server",
@@ -11476,7 +11476,7 @@
       "serverless"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "aws-platform-ops",
@@ -11512,7 +11512,7 @@
       "claude-code"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "Basic Memory",
@@ -11556,7 +11556,7 @@
       "claude-code"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "Blogging Platform Instructions",
@@ -11598,7 +11598,7 @@
       "claude-code"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "Book Factory",
@@ -11655,7 +11655,7 @@
       "node"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "brand-guidelines",
@@ -11699,7 +11699,7 @@
       "claude-code"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "Britfix",
@@ -11745,7 +11745,7 @@
       "node"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "building-secure-contracts",
@@ -11789,7 +11789,7 @@
       "github"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "burpsuite-project-parser",
@@ -11836,7 +11836,7 @@
       "node"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "c-review",
@@ -11893,7 +11893,7 @@
       "node"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "canvas-design",
@@ -11938,7 +11938,7 @@
       "claude-code"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "cc-devops-skills",
@@ -11980,7 +11980,7 @@
       "claude-code"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "cc-tools",
@@ -12021,7 +12021,7 @@
       "claude-code"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "CC Usage",
@@ -12064,7 +12064,7 @@
       "claude-code"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "ccflare -> **better-ccflare**",
@@ -12106,7 +12106,7 @@
       "claude-code"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "cchooks",
@@ -12148,7 +12148,7 @@
       "claude-code"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "CCometixLine - Claude Code Statusline",
@@ -12190,7 +12190,7 @@
       "claude-code"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "ccstatusline",
@@ -12231,7 +12231,7 @@
       "claude-code"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "ccxray",
@@ -12273,7 +12273,7 @@
       "general"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "Chatgpt Apps",
@@ -12315,7 +12315,7 @@
       "node"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "ci-hardening",
@@ -12353,7 +12353,7 @@
       "claude-code"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "Claudable",
@@ -12400,7 +12400,7 @@
       "node"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "claude-api",
@@ -12447,7 +12447,7 @@
       "claude-code"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "Claude Code Agent Teams: Exercises",
@@ -12492,7 +12492,7 @@
       "claude-code"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "Claude Code Agents",
@@ -12533,7 +12533,7 @@
       "claude-code"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "Claude Code Chat",
@@ -12576,7 +12576,7 @@
       "claude-code"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "claude-code-docs",
@@ -12620,7 +12620,7 @@
       "claude-code"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "Claude Code Documentation Mirror",
@@ -12662,7 +12662,7 @@
       "claude-code"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "claude-code.el",
@@ -12699,7 +12699,7 @@
       "claude-code"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "Claude Code Flow",
@@ -12742,7 +12742,7 @@
       "claude-code"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "Claude Code GitHub Actions",
@@ -12786,7 +12786,7 @@
       "claude-code"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "Claude Code Handbook",
@@ -12827,7 +12827,7 @@
       "claude-code"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "Claude Code Hook Comms (HCOM)",
@@ -12869,7 +12869,7 @@
       "claude-code"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "claude-code-hooks-sdk",
@@ -12911,7 +12911,7 @@
       "claude-code"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "claude-code-ide.el",
@@ -12952,7 +12952,7 @@
       "claude-code"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "claude-code.nvim",
@@ -12997,7 +12997,7 @@
       "claude-code"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "Claude Code PM",
@@ -13041,7 +13041,7 @@
       "claude-code"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "Claude Code Repos Index",
@@ -13082,7 +13082,7 @@
       "claude-code"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "claude-code-statusline",
@@ -13129,7 +13129,7 @@
       "claude-code"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "Claude Code System Prompts",
@@ -13172,7 +13172,7 @@
       "claude-code"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "Claude Code Templates",
@@ -13217,7 +13217,7 @@
       "claude-code"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "Claude Code Tips",
@@ -13260,7 +13260,7 @@
       "claude-code"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "claude-code-tools",
@@ -13305,7 +13305,7 @@
       "claude-code"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "Claude Code Ultimate Guide",
@@ -13348,7 +13348,7 @@
       "claude-code"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "Claude CodePro",
@@ -13391,7 +13391,7 @@
       "claude-code"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "Claude Codex Settings",
@@ -13434,7 +13434,7 @@
       "claude-code"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "claude-devtools",
@@ -13478,7 +13478,7 @@
       "claude-code"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "claude-esp",
@@ -13520,7 +13520,7 @@
       "claude-code"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "Claude HUD",
@@ -13565,7 +13565,7 @@
       "node"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "claude-in-chrome-troubleshooting",
@@ -13606,7 +13606,7 @@
       "claude-code"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "Claude Mountaineering Skills",
@@ -13648,7 +13648,7 @@
       "claude-code"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "claude-pace",
@@ -13690,7 +13690,7 @@
       "claude-code"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "claude-powerline",
@@ -13732,7 +13732,7 @@
       "claude-code"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "claude-rules-doctor",
@@ -13775,7 +13775,7 @@
       "claude-code"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "Claude Scientific Skills",
@@ -13817,7 +13817,7 @@
       "claude-code"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "Claude Session Restore",
@@ -13858,7 +13858,7 @@
       "claude-code"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "Claude Squad",
@@ -13901,7 +13901,7 @@
       "claude-code"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "claude-starter-kit",
@@ -13937,7 +13937,7 @@
       "claude-code"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "Claude Swarm",
@@ -13979,7 +13979,7 @@
       "claude-code"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "Claude Task Master",
@@ -14021,7 +14021,7 @@
       "claude-code"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "claude-tmux",
@@ -14063,7 +14063,7 @@
       "claude-code"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "claude-toolbox",
@@ -14105,7 +14105,7 @@
       "claude-code"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "ClaudeCTX",
@@ -14149,7 +14149,7 @@
       "claude-code"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "claudekit",
@@ -14191,7 +14191,7 @@
       "claude-code"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "Claudex",
@@ -14233,7 +14233,7 @@
       "claude-code"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "claudia-statusline",
@@ -14275,7 +14275,7 @@
       "claude-code"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "Claudio",
@@ -14316,7 +14316,7 @@
       "claude-code"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "Claudix - Claude Code for VSCode",
@@ -14361,7 +14361,7 @@
       "claude-code"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "ClaudoPro Directory",
@@ -14402,7 +14402,7 @@
       "claude-code"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "Clawd on Desk",
@@ -14444,7 +14444,7 @@
       "general"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "Cli Creator",
@@ -14482,7 +14482,7 @@
       "general"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "Cloudflare Deploy",
@@ -14523,7 +14523,7 @@
       "node"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "code-operations-skills",
@@ -14565,7 +14565,7 @@
       "claude-code"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "Codebase to Course",
@@ -14608,7 +14608,7 @@
       "claude-code"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "Codex Skill",
@@ -14650,7 +14650,7 @@
       "claude-code"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "Comm",
@@ -14695,7 +14695,7 @@
       "claude-code"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "Compound Engineering Plugin",
@@ -14740,7 +14740,7 @@
       "node"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "constant-time-analysis",
@@ -14781,7 +14781,7 @@
       "claude-code"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "Container Use",
@@ -14823,7 +14823,7 @@
       "claude-code"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "Context Engineering Kit",
@@ -14866,7 +14866,7 @@
       "claude-code"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "ContextKit",
@@ -14908,7 +14908,7 @@
       "claude-code"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "Course Builder",
@@ -14944,7 +14944,7 @@
       "claude-code"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "/create-docs",
@@ -14985,7 +14985,7 @@
       "claude-code"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "crystal",
@@ -15030,7 +15030,7 @@
       "node"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "culture-index",
@@ -15074,7 +15074,7 @@
       "node"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "debug-buttercup",
@@ -15118,7 +15118,7 @@
       "general"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "deep-research",
@@ -15154,7 +15154,7 @@
       "general"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "Define Goal",
@@ -15196,7 +15196,7 @@
       "node"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "dev-browser",
@@ -15240,7 +15240,7 @@
       "node"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "devcontainer-setup",
@@ -15282,7 +15282,7 @@
       "node"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "Develop Web Game",
@@ -15322,7 +15322,7 @@
       "github"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "differential-review",
@@ -15366,7 +15366,7 @@
       "node"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "dimensional-analysis",
@@ -15407,7 +15407,7 @@
       "claude-code"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "Dippy",
@@ -15450,7 +15450,7 @@
       "claude-code"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "/do-issue",
@@ -15491,7 +15491,7 @@
       "general"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "Doc",
@@ -15545,7 +15545,7 @@
       "node"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "doc-coauthoring",
@@ -15593,7 +15593,7 @@
       "python"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "docker-container-ops",
@@ -15633,7 +15633,7 @@
       "python"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "docs-automation",
@@ -15676,7 +15676,7 @@
       "node"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "docx",
@@ -15722,7 +15722,7 @@
       "node"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "dwarf-expert",
@@ -15767,7 +15767,7 @@
       "claude-code"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "Encyclopedia of Agentic Coding Patterns",
@@ -15812,7 +15812,7 @@
       "node"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "engineering-workflow-skills",
@@ -15856,7 +15856,7 @@
       "github"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "entry-point-analyzer",
@@ -15898,7 +15898,7 @@
       "claude-code"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "Everything Claude Code",
@@ -15941,7 +15941,7 @@
       "node"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "fast-web-scrape",
@@ -15977,7 +15977,7 @@
       "general"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "Figma",
@@ -16015,7 +16015,7 @@
       "general"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "Figma Code Connect Components",
@@ -16053,7 +16053,7 @@
       "general"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "Figma Create Design System Rules",
@@ -16091,7 +16091,7 @@
       "general"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "Figma Create New File",
@@ -16129,7 +16129,7 @@
       "general"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "Figma Generate Design",
@@ -16167,7 +16167,7 @@
       "general"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "Figma Generate Library",
@@ -16205,7 +16205,7 @@
       "general"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "Figma Implement Design",
@@ -16243,7 +16243,7 @@
       "general"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "Figma Use",
@@ -16287,7 +16287,7 @@
       "github"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "firebase-apk-scanner",
@@ -16332,7 +16332,7 @@
       "github"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "fp-check",
@@ -16389,7 +16389,7 @@
       "node"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "frontend-design",
@@ -16432,7 +16432,7 @@
       "general"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "Frontend Skill",
@@ -16469,7 +16469,7 @@
       "claude-code"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "Fullstack Dev Skills",
@@ -16515,7 +16515,7 @@
       "node"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "gastown",
@@ -16556,7 +16556,7 @@
       "claude-code"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "Gen-Alpha Slang",
@@ -16598,7 +16598,7 @@
       "github"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "Gh Address Comments",
@@ -16641,7 +16641,7 @@
       "node"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "gh-cli",
@@ -16683,7 +16683,7 @@
       "github"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "Gh Fix Ci",
@@ -16722,7 +16722,7 @@
       "claude-code"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "Giselle",
@@ -16761,7 +16761,7 @@
       "node"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "git-cleanup",
@@ -16806,7 +16806,7 @@
       "general"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "google-workspace-skills",
@@ -16842,7 +16842,7 @@
       "claude-code"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "Happy Coder",
@@ -16886,7 +16886,7 @@
       "claude-code"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "Harness",
@@ -16929,7 +16929,7 @@
       "claude-code"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "HASH",
@@ -16965,7 +16965,7 @@
       "general"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "Hatch Pet",
@@ -17003,7 +17003,7 @@
       "general"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "Imagegen",
@@ -17042,7 +17042,7 @@
       "github"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "insecure-defaults",
@@ -17099,7 +17099,7 @@
       "node"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "internal-comms",
@@ -17145,7 +17145,7 @@
       "claude-code"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "JSBeeb",
@@ -17187,7 +17187,7 @@
       "general"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "Jupyter Notebook",
@@ -17230,7 +17230,7 @@
       "kubernetes"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "kubernetes-ops",
@@ -17268,7 +17268,7 @@
       "claude-code"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "LangGraphJS",
@@ -17313,7 +17313,7 @@
       "claude-code"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "Learn Claude Code",
@@ -17357,7 +17357,7 @@
       "claude-code"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "learn-faster-kit",
@@ -17397,7 +17397,7 @@
       "node"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "let-fate-decide",
@@ -17439,7 +17439,7 @@
       "linear"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "Linear",
@@ -17493,7 +17493,7 @@
       "node"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "mcp-builder",
@@ -17537,7 +17537,7 @@
       "claude-code"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "Metabase",
@@ -17579,7 +17579,7 @@
       "general"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "Migrate To Codex",
@@ -17620,7 +17620,7 @@
       "node"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "modern-python",
@@ -17663,7 +17663,7 @@
       "general"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "mutation-testing",
@@ -17707,7 +17707,7 @@
       "node"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "n8n-skills",
@@ -17755,7 +17755,7 @@
       "github"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "neon-plugin",
@@ -17796,7 +17796,7 @@
       "general"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "Netlify Deploy",
@@ -17835,7 +17835,7 @@
       "notion"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "Notion Knowledge Capture",
@@ -17874,7 +17874,7 @@
       "notion"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "Notion Meeting Intelligence",
@@ -17913,7 +17913,7 @@
       "notion"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "Notion Research Documentation",
@@ -17952,7 +17952,7 @@
       "notion"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "Notion Spec To Implementation",
@@ -17996,7 +17996,7 @@
       "python"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "observability-incident-response",
@@ -18032,7 +18032,7 @@
       "claude-code"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "Omnara",
@@ -18073,7 +18073,7 @@
       "node"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "open-source-maintainer",
@@ -18114,7 +18114,7 @@
       "general"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "Openai Docs",
@@ -18156,7 +18156,7 @@
       "node"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "orchestration",
@@ -18201,7 +18201,7 @@
       "claude-code"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "Pareto Mac",
@@ -18243,7 +18243,7 @@
       "claude-code"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "parry",
@@ -18293,7 +18293,7 @@
       "node"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "Pdf",
@@ -18338,7 +18338,7 @@
       "claude-code"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "Plannotator",
@@ -18381,7 +18381,7 @@
       "node"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "Playwright",
@@ -18420,7 +18420,7 @@
       "node"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "Playwright Interactive",
@@ -18463,7 +18463,7 @@
       "python"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "postgres-ops",
@@ -18506,7 +18506,7 @@
       "node"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "pptx",
@@ -18549,7 +18549,7 @@
       "claude-code"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "/prd-generator",
@@ -18596,7 +18596,7 @@
       "node"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "productivity-skills",
@@ -18640,7 +18640,7 @@
       "claude-code"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "Project Workflow System",
@@ -18684,7 +18684,7 @@
       "general"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "prompt-engineering",
@@ -18722,7 +18722,7 @@
       "general"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "property-based-testing",
@@ -18766,7 +18766,7 @@
       "claude-code"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "Ralph for Claude Code",
@@ -18811,7 +18811,7 @@
       "claude-code"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "ralph-orchestrator",
@@ -18855,7 +18855,7 @@
       "claude-code"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "ralph-wiggum-bdd",
@@ -18899,7 +18899,7 @@
       "claude-code"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "Ralph Wiggum Marketer",
@@ -18941,7 +18941,7 @@
       "claude-code"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "read-only-postgres",
@@ -18982,7 +18982,7 @@
       "claude-code"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "recall",
@@ -19028,7 +19028,7 @@
       "node"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "release-readiness",
@@ -19066,7 +19066,7 @@
       "node"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "remotion",
@@ -19102,7 +19102,7 @@
       "general"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "Render Deploy",
@@ -19144,7 +19144,7 @@
       "claude-code"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "RIPER Workflow",
@@ -19187,7 +19187,7 @@
       "claude-code"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "Ruflo",
@@ -19229,7 +19229,7 @@
       "claude-code"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "Rulesync",
@@ -19271,7 +19271,7 @@
       "general"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "Screenshot",
@@ -19312,7 +19312,7 @@
       "node"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "seatbelt-sandboxer",
@@ -19357,7 +19357,7 @@
       "node"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "second-opinion",
@@ -19402,7 +19402,7 @@
       "python"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "secure-prompting",
@@ -19438,7 +19438,7 @@
       "general"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "Security Best Practices",
@@ -19476,7 +19476,7 @@
       "general"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "Security Ownership Map",
@@ -19514,7 +19514,7 @@
       "general"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "Security Threat Model",
@@ -19555,7 +19555,7 @@
       "github"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "semgrep-rule-creator",
@@ -19599,7 +19599,7 @@
       "node"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "semgrep-rule-variant-creator",
@@ -19640,7 +19640,7 @@
       "general"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "Sentry",
@@ -19679,7 +19679,7 @@
       "claude-code"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "SG Cars Trends Backend",
@@ -19724,7 +19724,7 @@
       "github"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "sharp-edges",
@@ -19767,7 +19767,7 @@
       "claude-code"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "Shipping Real Code w/ Claude",
@@ -19824,7 +19824,7 @@
       "node"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "skill-creator",
@@ -19869,7 +19869,7 @@
       "general"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "skill-improver",
@@ -19926,7 +19926,7 @@
       "node"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "slack-gif-creator",
@@ -19969,7 +19969,7 @@
       "general"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "Slides",
@@ -20005,7 +20005,7 @@
       "general"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "Sora",
@@ -20046,7 +20046,7 @@
       "node"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "spec-to-code-compliance",
@@ -20087,7 +20087,7 @@
       "general"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "Speech",
@@ -20125,7 +20125,7 @@
       "general"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "Spreadsheet",
@@ -20164,7 +20164,7 @@
       "claude-code"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "SPy",
@@ -20203,7 +20203,7 @@
       "github"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "static-analysis",
@@ -20244,7 +20244,7 @@
       "claude-code"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "stt-mcp-server-linux",
@@ -20281,7 +20281,7 @@
       "claude-code"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "sudocode",
@@ -20324,7 +20324,7 @@
       "claude-code"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "SuperClaude",
@@ -20368,7 +20368,7 @@
       "claude-code"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "Superpowers",
@@ -20414,7 +20414,7 @@
       "node"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "supply-chain-risk-auditor",
@@ -20457,7 +20457,7 @@
       "claude-code"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "TÂCHES Claude Code Resources",
@@ -20498,7 +20498,7 @@
       "claude-code"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "TDD Guard",
@@ -20541,7 +20541,7 @@
       "claude-code"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "/tdd-implement",
@@ -20588,7 +20588,7 @@
       "general"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "terraform-guardrails",
@@ -20629,7 +20629,7 @@
       "python"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "test-driven-development",
@@ -20669,7 +20669,7 @@
       "github"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "testing-handbook-skills",
@@ -20710,7 +20710,7 @@
       "claude-code"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "The Agentic Startup",
@@ -20754,7 +20754,7 @@
       "claude-code"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "The Ralph Playbook",
@@ -20811,7 +20811,7 @@
       "node"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "theme-factory",
@@ -20858,7 +20858,7 @@
       "python"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "threat-modeling-lite",
@@ -20896,7 +20896,7 @@
       "claude-code"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "Trail of Bits Security Skills",
@@ -20943,7 +20943,7 @@
       "node"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "trailmark",
@@ -20984,7 +20984,7 @@
       "general"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "Transcribe",
@@ -21023,7 +21023,7 @@
       "claude-code"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "TSK - AI Agent Task Manager and Sandbox",
@@ -21065,7 +21065,7 @@
       "claude-code"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "tweakcc",
@@ -21110,7 +21110,7 @@
       "node"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "variant-analysis",
@@ -21151,7 +21151,7 @@
       "general"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "Vercel Deploy",
@@ -21189,7 +21189,7 @@
       "claude-code"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "Vibe-Log",
@@ -21225,7 +21225,7 @@
       "claude-code"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "viberank",
@@ -21268,7 +21268,7 @@
       "general"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "visual-documentation-skills",
@@ -21309,7 +21309,7 @@
       "claude-code"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "viwo-cli",
@@ -21351,7 +21351,7 @@
       "claude-code"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "VoiceMode MCP",
@@ -21409,7 +21409,7 @@
       "node"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "web-artifacts-builder",
@@ -21454,7 +21454,7 @@
       "claude-code"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "Web Assets Generator Skill",
@@ -21511,7 +21511,7 @@
       "node"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "webapp-testing",
@@ -21554,7 +21554,7 @@
       "general"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "Winui App",
@@ -21598,7 +21598,7 @@
       "node"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "workflow-skill-design",
@@ -21646,7 +21646,7 @@
       "node"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "xlsx",
@@ -21692,7 +21692,7 @@
       "github"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "yara-authoring",
@@ -21733,7 +21733,7 @@
       "general"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "Yeet",
@@ -21775,7 +21775,7 @@
       "node"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "zai-cli",
@@ -21819,7 +21819,7 @@
       "github"
     ],
     "source": "community-skills-index",
-    "lastSeenAt": "2026-06-14",
+    "lastSeenAt": "2026-06-19",
     "install": {
       "kind": "skill.sh",
       "target": "zeroize-audit",
